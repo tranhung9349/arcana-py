@@ -1,0 +1,279 @@
+[
+  {
+    "id": "probe-12-adaptive",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "probe-12-adaptive",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "DEVELOPMENT_QUESTION_VARIANT",
+      "topic": "GENERAL",
+      "question": "Tháng này tôi nên ưu tiên hành nào để công việc tốt hơn?",
+      "signals": [
+        "MIXED",
+        "CLIMATE_CONFLICT",
+        "CANDIDATE_STRUCTURE",
+        "NATAL_ONLY"
+      ],
+      "facts": [
+        {
+          "id": "bazi-09-priority:f1",
+          "text": "Phù ức tạm gợi ý Thủy; Điều hậu sơ bộ gợi ý Hỏa, climate_conflict=true."
+        },
+        {
+          "id": "bazi-09-priority:f2",
+          "text": "Mùa không trợ Nhật chủ, có căn và can Ấn; sức Nhật chủ MIXED, hướng hợp nhất UNRESOLVED."
+        },
+        {
+          "id": "bazi-09-priority:f3",
+          "text": "Có ứng viên cách cục từ tháng; thành bại và Tướng thần chưa được đánh giá đầy đủ."
+        }
+      ],
+      "findings": [
+        {
+          "id": "bazi-09-priority:finding",
+          "text": "Điểm cần giải trước là vì sao hai nhánh đề xuất khác hành, chứ chưa phải chọn một hành để áp dụng. Nền mạnh yếu còn có dấu trái chiều và cách cục cũng mới là ứng viên, nên chưa có kết luận hợp nhất.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "bazi-09-priority:f1",
+            "bazi-09-priority:f2",
+            "bazi-09-priority:f3"
+          ],
+          "evidence_refs": [
+            "dtt:context",
+            "ziping:climate",
+            "ziping:assistant"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ziping:climate",
+          "title": "Tử Bình Chân Thuyên · Phối khí hậu",
+          "text": "論命惟以月令用神爲主，然亦須配氣候而互參之。",
+          "sha256": "1209ff3ce05b85b9baa67f4c860796b283cf384826917002e02873c72682a4f7",
+          "url": "https://www.donglishuzhai.net/chapter/3727.html",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        },
+        {
+          "id": "dtt:context",
+          "title": "Nhậm Thiết Tiều · Địch Thiên Tủy Xiển Vi · Tri mệnh",
+          "text": "察其衰旺，究其顺悖，审其进退，论其喜忌，是谓理会。",
+          "sha256": "34abf428d050f23d50929f6bbee6810242068a31b72289076558dd8cd69ba475",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2600158",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "ziping:assistant",
+          "title": "Tử Bình Chân Thuyên · Luận Tướng thần khẩn yếu",
+          "text": "要而言之，凡全局之格，賴此一字而成者，均謂之相也。",
+          "sha256": "84b1212eebf0bf1cc3a9eeb6f77fa3022b51d629cdcad7fff64f8379eef62379",
+          "url": "https://www.donglishuzhai.net/chapter/3728.html",
+          "kind": "PRIMARY_TEXT"
+        }
+      ],
+      "limitations": [
+        "Chưa có kết luận hợp nhất phù ức, Điều hậu và thành bại cách cục."
+      ]
+    },
+    "required_review_checks": [
+      "Mở bằng phạm vi thời điểm còn thiếu; không dùng tháng này làm vận đã tính.",
+      "Giữ riêng hai nhánh khác hướng và điều kiện cách cục."
+    ],
+    "evaluation_kind": "QUESTION_VARIANT_SAME_SYNTHETIC_FACTS_NOT_INDEPENDENT_HOLDOUT",
+    "forbidden_conclusions": [
+      "Cam kết kết quả hoặc thời điểm chưa được tính."
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "probe-13-adaptive",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "probe-13-adaptive",
+      "method": "MAIHOA_INTERNAL",
+      "analysis_profile": "DEVELOPMENT_QUESTION_VARIANT",
+      "topic": "PLANNING",
+      "question": "So sánh hai khóa học A và B giúp tôi?",
+      "signals": [
+        "USE_GENERATES_BODY"
+      ],
+      "facts": [
+        {
+          "id": "maihoa-06-comparison:f1",
+          "text": "Quẻ đang lưu cho việc triển khai A: Thể Cấn Thổ, Dụng Ly Hỏa sinh Thể, FAVOURABLE."
+        },
+        {
+          "id": "maihoa-06-comparison:f2",
+          "text": "Hai Hỗ cùng hành Thể và Biến sinh Thể, đều được finding ghi FAVOURABLE."
+        },
+        {
+          "id": "maihoa-06-comparison:f3",
+          "text": "Không có dữ kiện hoặc finding riêng của B; chưa có thông tin chi phí hay ứng kỳ."
+        }
+      ],
+      "findings": [
+        {
+          "id": "maihoa-06-comparison:finding",
+          "text": "Quẻ hiện tại cho A có các quan hệ cùng chiều thuận, nhưng chưa đủ để nói A hơn B. Phương án B chưa có phần phân tích riêng nên phép so sánh vẫn thiếu một phía.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "maihoa-06-comparison:f1",
+            "maihoa-06-comparison:f2",
+            "maihoa-06-comparison:f3"
+          ],
+          "evidence_refs": [
+            "mh:context",
+            "mh:sequence"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "mh:sequence",
+          "title": "Mai Hoa Dịch Số · Diễn tiến Hỗ và Biến",
+          "text": "用吉變凶者，先吉後凶；用凶變吉者，先凶後吉。",
+          "sha256": "5cc5bfa3eca79356bb093eed612e9d159994440f342f3ac33260cecfb41787fe",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        },
+        {
+          "id": "mh:context",
+          "title": "Mai Hoa Dịch Số · Láng giềng gõ cửa mượn vật",
+          "text": "推數又須明理，為卜占之切要也。",
+          "sha256": "498fc0b45aee256aff9d694e882d75d43ce3d46c0d22dfd601704750e6f7657b",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2690596",
+          "kind": "PRIMARY_TEXT"
+        }
+      ],
+      "limitations": [
+        "Chỉ có phần đọc cho A; chưa có căn cứ so B hoặc luận thời điểm chuyển phương án."
+      ]
+    },
+    "required_review_checks": [
+      "Chỉ có dữ kiện A, không lấy Hỗ/Biến của A gán cho B.",
+      "Không suy chi phí, chất lượng hoặc nội dung khóa học."
+    ],
+    "evaluation_kind": "QUESTION_VARIANT_SAME_SYNTHETIC_FACTS_NOT_INDEPENDENT_HOLDOUT",
+    "forbidden_conclusions": [
+      "Cam kết kết quả hoặc thời điểm chưa được tính."
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "probe-14-adaptive",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "probe-14-adaptive",
+      "method": "LIUYAO_NAJIA",
+      "analysis_profile": "DEVELOPMENT_QUESTION_VARIANT",
+      "topic": "WEALTH",
+      "question": "Bao giờ khoản tiền đó đến?",
+      "signals": [
+        "PROVISIONAL_USE",
+        "DAY_MONTH_MIXED"
+      ],
+      "facts": [
+        {
+          "id": "liuyao-05-provisional:f1",
+          "text": "Thê tài tại L2 Thổ đang tạm chọn làm Dụng; selection=PROVISIONAL vì các ứng viên chưa được phân định hoàn toàn."
+        },
+        {
+          "id": "liuyao-05-provisional:f2",
+          "text": "L2 được ngày Hỏa sinh nhưng tháng Mộc khắc, tĩnh; phần tổng hợp giữ điều kiện trái chiều."
+        },
+        {
+          "id": "liuyao-05-provisional:f3",
+          "text": "Không có kết luận cứu giải hoặc thời điểm nhận tiền; chưa có xác nhận bên thanh toán."
+        }
+      ],
+      "findings": [
+        {
+          "id": "liuyao-05-provisional:finding",
+          "text": "Theo hào Tài đang tạm chọn, có dấu được ngày nâng đỡ nhưng vẫn gặp sức ép từ tháng. Vì lựa chọn Dụng chưa chốt và hai mặt còn cùng tồn tại, chưa thể xác nhận khoản tiền sẽ được nhận.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "liuyao-05-provisional:f1",
+            "liuyao-05-provisional:f2",
+            "liuyao-05-provisional:f3"
+          ],
+          "evidence_refs": [
+            "ly:roles",
+            "ly:two_uses",
+            "ly:day",
+            "ly:month"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ly:roles",
+          "title": "Tăng San Bốc Dịch · Nguyên thần và Kỵ thần",
+          "text": "元神，生用神之神卽爲元神。忌神克用神之爻也。",
+          "sha256": "ba52cc71432f8a081822ebd4df9034e48a8f68340cf339150307f8284d4815f8",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100299",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "ly:month",
+          "title": "Tăng San Bốc Dịch · Nguyệt tướng",
+          "text": "月將卽是月建又爲月令。掌一月之權，司三旬之令。",
+          "sha256": "6933a79f007770c732c5dc3bb9712be0e2e4506e62b4b7196208492ca011b94d",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100331",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "ly:day",
+          "title": "Tăng San Bốc Dịch · Nhật thần",
+          "text": "沖旺相之靜爻，旣爲暗動，沖衰弱之靜爻爲日破",
+          "sha256": "6d3623a2834828ff428848f02004e0e4a04a4fd8aa45ee083674f8a2fe7a984e",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100338",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        },
+        {
+          "id": "ly:two_uses",
+          "title": "Tăng San Bốc Dịch · Lưỡng hiện chương",
+          "text": "余得騐者，多有應乎旬空月破，舍其不空而用旬空，舍其不破而用月破。",
+          "sha256": "070ad9affdabd1970f64a87508a15674c9df639ed08c8b5c2d7e1ae029e5e3e7",
+          "url": "https://www.shidianguji.com/zh/book/XYXZSBY/chapter/1lzxsny7db6rt",
+          "kind": "PRIMARY_TEXT"
+        }
+      ],
+      "limitations": [
+        "Dụng mới tạm chọn; chưa có cứu giải đầy đủ, ứng kỳ hoặc xác nhận thanh toán."
+      ]
+    },
+    "required_review_checks": [
+      "Giữ Dụng tạm chọn, không chốt tiền đến.",
+      "Không đổi xung/ngày tháng thành lịch khi chưa có ứng kỳ."
+    ],
+    "evaluation_kind": "QUESTION_VARIANT_SAME_SYNTHETIC_FACTS_NOT_INDEPENDENT_HOLDOUT",
+    "forbidden_conclusions": [
+      "Cam kết kết quả hoặc thời điểm chưa được tính."
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  }
+]

@@ -1,0 +1,3157 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 19,
+  "filesSkipped": [
+    "data/date_calendar/almanac_2024_2030.json.gz",
+    "docs/research/calendar_sources/nasa-phases1901.html",
+    "docs/research/calendar_sources/nasa-phases2001.html",
+    "web/index.html",
+    "web/style.css"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 19,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 9,
+      "failed": 0,
+      "skipped": 10
+    }
+  },
+  "results": [
+    {
+      "path": "calendar_adapter/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 80,
+      "nonEmptyLines": 54,
+      "sections": [
+        {
+          "heading": "Adapter lịch Việt Nam UTC+7 — bản thử nghiệm",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "Chạy thử",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Giao diện Python",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "Kiểm tra đã chạy",
+          "level": 2,
+          "line": 54
+        },
+        {
+          "heading": "Giới hạn để ghép vào hệ thống",
+          "level": 2,
+          "line": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "data/date_calendar/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 26,
+      "nonEmptyLines": 17,
+      "sections": [
+        {
+          "heading": "Corpus lịch cho MVP 2",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "data/date_calendar/manifest.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 35,
+      "nonEmptyLines": 35,
+      "sections": [
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "provider",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "provider_version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "corpus_path",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "sha256",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "uncompressed_sha256",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "provider_sources",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "day_count",
+          "level": 1,
+          "line": 22
+        },
+        {
+          "heading": "hour_count",
+          "level": 1,
+          "line": 23
+        },
+        {
+          "heading": "jie_count",
+          "level": 1,
+          "line": 24
+        },
+        {
+          "heading": "public_range_utc7",
+          "level": 1,
+          "line": 25
+        },
+        {
+          "heading": "raw_tokens",
+          "level": 1,
+          "line": 29
+        },
+        {
+          "heading": "coverage_note",
+          "level": 1,
+          "line": 34
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "data/reference/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 12,
+      "nonEmptyLines": 7,
+      "sections": [
+        {
+          "heading": "Nguồn được khóa cho MVP 1",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "data/reference/manifest.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 46,
+      "nonEmptyLines": 46,
+      "sections": [
+        {
+          "heading": "tinix_commit",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "iching_commit",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "files",
+          "level": 1,
+          "line": 4
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 110,
+      "nonEmptyLines": 108,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "docs/prompts/vietnamese_interpretation_v1.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 62,
+      "nonEmptyLines": 46,
+      "sections": [
+        {
+          "heading": "Prompt luận giải Việt ngữ — MVP 1",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "System prompt",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Dữ liệu và kết quả",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "Nhãn Disclaimer do ứng dụng chèn cố định",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "Kiểm định trước khi hiển thị",
+          "level": 2,
+          "line": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "randomyst/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "research_tools/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 60,
+      "nonEmptyLines": 36,
+      "sections": [
+        {
+          "heading": "Khảo sát chọn ngày MVP 2",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Các script kiểm chứng logic MVP 1",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "Phân bố trọng số hàm mũ",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Kiểm tra schema/prompt",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "Sau khi chốt bản chạy",
+          "level": 2,
+          "line": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "research_tools/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "research_tools/legacy_time_engine.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 124,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "noaa_eot_minutes",
+          "startLine": 22,
+          "endLine": 31,
+          "params": [
+            "instant"
+          ]
+        },
+        {
+          "name": "longitude_error_from_radius",
+          "startLine": 34,
+          "endLine": 44,
+          "params": [
+            "latitude",
+            "radius_m"
+          ]
+        },
+        {
+          "name": "solar_clock",
+          "startLine": 47,
+          "endLine": 81,
+          "params": [
+            "civil",
+            "location",
+            "clock_uncertainty_seconds"
+          ]
+        },
+        {
+          "name": "jie_for_year",
+          "startLine": 85,
+          "endLine": 94,
+          "params": [
+            "year"
+          ]
+        },
+        {
+          "name": "solar_month",
+          "startLine": 97,
+          "endLine": 105,
+          "params": [
+            "instant"
+          ]
+        },
+        {
+          "name": "pillars",
+          "startLine": 108,
+          "endLine": 124,
+          "params": [
+            "civil",
+            "tst"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "noaa_eot_minutes",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "longitude_error_from_radius",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "solar_clock",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "jie_for_year",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "solar_month",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "pillars",
+          "line": 108,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "noaa_eot_minutes",
+          "callee": "instant.astimezone",
+          "lineNumber": 28
+        },
+        {
+          "caller": "noaa_eot_minutes",
+          "callee": "isleap",
+          "lineNumber": 30
+        },
+        {
+          "caller": "noaa_eot_minutes",
+          "callee": "utc.timetuple",
+          "lineNumber": 30
+        },
+        {
+          "caller": "noaa_eot_minutes",
+          "callee": "cos",
+          "lineNumber": 31
+        },
+        {
+          "caller": "noaa_eot_minutes",
+          "callee": "sin",
+          "lineNumber": 31
+        },
+        {
+          "caller": "noaa_eot_minutes",
+          "callee": "cos",
+          "lineNumber": 31
+        },
+        {
+          "caller": "noaa_eot_minutes",
+          "callee": "sin",
+          "lineNumber": 31
+        },
+        {
+          "caller": "longitude_error_from_radius",
+          "callee": "abs",
+          "lineNumber": 38
+        },
+        {
+          "caller": "longitude_error_from_radius",
+          "callee": "radians",
+          "lineNumber": 41
+        },
+        {
+          "caller": "longitude_error_from_radius",
+          "callee": "sqrt",
+          "lineNumber": 42
+        },
+        {
+          "caller": "longitude_error_from_radius",
+          "callee": "sin",
+          "lineNumber": 42
+        },
+        {
+          "caller": "longitude_error_from_radius",
+          "callee": "cos",
+          "lineNumber": 43
+        },
+        {
+          "caller": "longitude_error_from_radius",
+          "callee": "min",
+          "lineNumber": 44
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "round",
+          "lineNumber": 48
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "noaa_eot_minutes",
+          "lineNumber": 50
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "civil.replace",
+          "lineNumber": 51
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "timedelta",
+          "lineNumber": 51
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "longitude_error_from_radius",
+          "lineNumber": 54
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "missing.append",
+          "lineNumber": 57
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "missing.append",
+          "lineNumber": 59
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "missing.append",
+          "lineNumber": 61
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "abs",
+          "lineNumber": 62
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "min",
+          "lineNumber": 68
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "abs",
+          "lineNumber": 68
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "range",
+          "lineNumber": 68
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "civil.isoformat",
+          "lineNumber": 70
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "civil.astimezone(timezone.utc).isoformat",
+          "lineNumber": 70
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "civil.astimezone",
+          "lineNumber": 70
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "tst.isoformat",
+          "lineNumber": 71
+        },
+        {
+          "caller": "solar_clock",
+          "callee": "location.model_dump",
+          "lineNumber": 75
+        },
+        {
+          "caller": "jie_for_year",
+          "callee": "range",
+          "lineNumber": 87
+        },
+        {
+          "caller": "jie_for_year",
+          "callee": "astronomy.SearchSunLongitude",
+          "lineNumber": 89
+        },
+        {
+          "caller": "jie_for_year",
+          "callee": "astronomy.Time.Make",
+          "lineNumber": 89
+        },
+        {
+          "caller": "jie_for_year",
+          "callee": "RuntimeError",
+          "lineNumber": 91
+        },
+        {
+          "caller": "jie_for_year",
+          "callee": "found.Utc().replace",
+          "lineNumber": 92
+        },
+        {
+          "caller": "jie_for_year",
+          "callee": "found.Utc",
+          "lineNumber": 92
+        },
+        {
+          "caller": "jie_for_year",
+          "callee": "events.append",
+          "lineNumber": 93
+        },
+        {
+          "caller": "jie_for_year",
+          "callee": "tuple",
+          "lineNumber": 94
+        },
+        {
+          "caller": "solar_month",
+          "callee": "instant.astimezone",
+          "lineNumber": 98
+        },
+        {
+          "caller": "solar_month",
+          "callee": "jie_for_year",
+          "lineNumber": 99
+        },
+        {
+          "caller": "solar_month",
+          "callee": "jie_for_year",
+          "lineNumber": 99
+        },
+        {
+          "caller": "solar_month",
+          "callee": "max",
+          "lineNumber": 100
+        },
+        {
+          "caller": "solar_month",
+          "callee": "jie_for_year",
+          "lineNumber": 101
+        },
+        {
+          "caller": "solar_month",
+          "callee": "start.isoformat",
+          "lineNumber": 104
+        },
+        {
+          "caller": "pillars",
+          "callee": "solar_month",
+          "lineNumber": 109
+        },
+        {
+          "caller": "pillars",
+          "callee": "(tst + timedelta(hours=1)).date",
+          "lineNumber": 114
+        },
+        {
+          "caller": "pillars",
+          "callee": "timedelta",
+          "lineNumber": 114
+        },
+        {
+          "caller": "pillars",
+          "callee": "effective_date.toordinal",
+          "lineNumber": 115
+        },
+        {
+          "caller": "pillars",
+          "callee": "list",
+          "lineNumber": 120
+        },
+        {
+          "caller": "pillars",
+          "callee": "list",
+          "lineNumber": 120
+        },
+        {
+          "caller": "pillars",
+          "callee": "effective_date.isoformat",
+          "lineNumber": 121
+        },
+        {
+          "caller": "pillars",
+          "callee": "zip",
+          "lineNumber": 124
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "research_tools/validate_interpretation_examples.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 81,
+      "nonEmptyLines": 71,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 20,
+          "endLine": 77,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT / f\"schemas/interpretation_{kind}.schema.json\").read_text",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "Draft202012Validator.check_schema",
+          "lineNumber": 25
+        },
+        {
+          "caller": "main",
+          "callee": "Draft202012Validator",
+          "lineNumber": 26
+        },
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT / f\"schemas/examples/interpretation_{kind}.example.json\").read_text",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "validators[kind].validate",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 31
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 31
+        },
+        {
+          "caller": "main",
+          "callee": "all",
+          "lineNumber": 33
+        },
+        {
+          "caller": "main",
+          "callee": "all",
+          "lineNumber": 35
+        },
+        {
+          "caller": "main",
+          "callee": "list",
+          "lineNumber": 47
+        },
+        {
+          "caller": "main",
+          "callee": "copy.deepcopy",
+          "lineNumber": 52
+        },
+        {
+          "caller": "main",
+          "callee": "invalid.append",
+          "lineNumber": 54
+        },
+        {
+          "caller": "main",
+          "callee": "copy.deepcopy",
+          "lineNumber": 55
+        },
+        {
+          "caller": "main",
+          "callee": "invalid.append",
+          "lineNumber": 57
+        },
+        {
+          "caller": "main",
+          "callee": "copy.deepcopy",
+          "lineNumber": 58
+        },
+        {
+          "caller": "main",
+          "callee": "invalid.append",
+          "lineNumber": 60
+        },
+        {
+          "caller": "main",
+          "callee": "copy.deepcopy",
+          "lineNumber": 61
+        },
+        {
+          "caller": "main",
+          "callee": "invalid.append",
+          "lineNumber": 63
+        },
+        {
+          "caller": "main",
+          "callee": "copy.deepcopy",
+          "lineNumber": 64
+        },
+        {
+          "caller": "main",
+          "callee": "invalid.append",
+          "lineNumber": 66
+        },
+        {
+          "caller": "main",
+          "callee": "copy.deepcopy",
+          "lineNumber": 67
+        },
+        {
+          "caller": "main",
+          "callee": "invalid.append",
+          "lineNumber": 69
+        },
+        {
+          "caller": "main",
+          "callee": "validators[kind].validate",
+          "lineNumber": 72
+        },
+        {
+          "caller": "main",
+          "callee": "AssertionError",
+          "lineNumber": 75
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 76
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 76
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 77
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "schemas/examples/interpretation_context.example.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 148,
+      "nonEmptyLines": 148,
+      "sections": [
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "context_id",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "question",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "computed_facts",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "display_hexagrams",
+          "level": 1,
+          "line": 72
+        },
+        {
+          "heading": "evidence",
+          "level": 1,
+          "line": 103
+        },
+        {
+          "heading": "source_gaps",
+          "level": 1,
+          "line": 137
+        },
+        {
+          "heading": "warnings",
+          "level": 1,
+          "line": 143
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "schemas/examples/interpretation_response.example.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 40,
+      "nonEmptyLines": 40,
+      "sections": [
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "context_id",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "summary",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "translations",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "interpretations",
+          "level": 1,
+          "line": 25
+        },
+        {
+          "heading": "limitations",
+          "level": 1,
+          "line": 35
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "scripts/astronomy_smoke_audit.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 37,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/build_explanation_data.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 58,
+      "functions": [
+        {
+          "name": "digest",
+          "startLine": 16,
+          "endLine": 17,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "build",
+          "startLine": 20,
+          "endLine": 62,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "digest",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "build",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "digest",
+          "callee": "hashlib.sha256(text.encode()).hexdigest",
+          "lineNumber": 17
+        },
+        {
+          "caller": "digest",
+          "callee": "hashlib.sha256",
+          "lineNumber": 17
+        },
+        {
+          "caller": "digest",
+          "callee": "text.encode",
+          "lineNumber": 17
+        },
+        {
+          "caller": "build",
+          "callee": "json.loads",
+          "lineNumber": 21
+        },
+        {
+          "caller": "build",
+          "callee": "(REFERENCE / \"manifest.json\").read_text",
+          "lineNumber": 21
+        },
+        {
+          "caller": "build",
+          "callee": "hashlib.sha256((REFERENCE / item[\"path\"]).read_bytes()).hexdigest",
+          "lineNumber": 23
+        },
+        {
+          "caller": "build",
+          "callee": "hashlib.sha256",
+          "lineNumber": 23
+        },
+        {
+          "caller": "build",
+          "callee": "(REFERENCE / item[\"path\"]).read_bytes",
+          "lineNumber": 23
+        },
+        {
+          "caller": "build",
+          "callee": "RuntimeError",
+          "lineNumber": 24
+        },
+        {
+          "caller": "build",
+          "callee": "subprocess.run",
+          "lineNumber": 30
+        },
+        {
+          "caller": "build",
+          "callee": "str",
+          "lineNumber": 30
+        },
+        {
+          "caller": "build",
+          "callee": "sources.values",
+          "lineNumber": 30
+        },
+        {
+          "caller": "build",
+          "callee": "json.loads",
+          "lineNumber": 32
+        },
+        {
+          "caller": "build",
+          "callee": "len",
+          "lineNumber": 33
+        },
+        {
+          "caller": "build",
+          "callee": "RuntimeError",
+          "lineNumber": 34
+        },
+        {
+          "caller": "build",
+          "callee": "data.update",
+          "lineNumber": 35
+        },
+        {
+          "caller": "build",
+          "callee": "hashlib.sha256((REFERENCE / path).read_bytes()).hexdigest",
+          "lineNumber": 37
+        },
+        {
+          "caller": "build",
+          "callee": "hashlib.sha256",
+          "lineNumber": 37
+        },
+        {
+          "caller": "build",
+          "callee": "(REFERENCE / path).read_bytes",
+          "lineNumber": 37
+        },
+        {
+          "caller": "build",
+          "callee": "sources.items",
+          "lineNumber": 38
+        },
+        {
+          "caller": "build",
+          "callee": "path.removeprefix",
+          "lineNumber": 39
+        },
+        {
+          "caller": "build",
+          "callee": "sources.items",
+          "lineNumber": 40
+        },
+        {
+          "caller": "build",
+          "callee": "target.write_text",
+          "lineNumber": 42
+        },
+        {
+          "caller": "build",
+          "callee": "json.dumps",
+          "lineNumber": 42
+        },
+        {
+          "caller": "build",
+          "callee": "json.loads",
+          "lineNumber": 44
+        },
+        {
+          "caller": "build",
+          "callee": "draft_path.read_text",
+          "lineNumber": 44
+        },
+        {
+          "caller": "build",
+          "callee": "RuntimeError",
+          "lineNumber": 46
+        },
+        {
+          "caller": "build",
+          "callee": "json.loads",
+          "lineNumber": 47
+        },
+        {
+          "caller": "build",
+          "callee": "(REFERENCE / \"open-iching/iching.json\").read_text",
+          "lineNumber": 47
+        },
+        {
+          "caller": "build",
+          "callee": "set",
+          "lineNumber": 48
+        },
+        {
+          "caller": "build",
+          "callee": "len",
+          "lineNumber": 48
+        },
+        {
+          "caller": "build",
+          "callee": "RuntimeError",
+          "lineNumber": 49
+        },
+        {
+          "caller": "build",
+          "callee": "len",
+          "lineNumber": 52
+        },
+        {
+          "caller": "build",
+          "callee": "RuntimeError",
+          "lineNumber": 53
+        },
+        {
+          "caller": "build",
+          "callee": "digest",
+          "lineNumber": 54
+        },
+        {
+          "caller": "build",
+          "callee": "digest",
+          "lineNumber": 55
+        },
+        {
+          "caller": "build",
+          "callee": "next",
+          "lineNumber": 55
+        },
+        {
+          "caller": "build",
+          "callee": "range",
+          "lineNumber": 56
+        },
+        {
+          "caller": "build",
+          "callee": "row.get",
+          "lineNumber": 57
+        },
+        {
+          "caller": "build",
+          "callee": "RuntimeError",
+          "lineNumber": 58
+        },
+        {
+          "caller": "build",
+          "callee": "draft_path.write_text",
+          "lineNumber": 60
+        },
+        {
+          "caller": "build",
+          "callee": "json.dumps",
+          "lineNumber": 60
+        },
+        {
+          "caller": "build",
+          "callee": "print",
+          "lineNumber": 61
+        },
+        {
+          "caller": "build",
+          "callee": "json.dumps",
+          "lineNumber": 61
+        },
+        {
+          "caller": "build",
+          "callee": "len",
+          "lineNumber": 61
+        },
+        {
+          "caller": "build",
+          "callee": "len",
+          "lineNumber": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/run_mvp.sh",
+      "language": "shell",
+      "fileCategory": "script",
+      "totalLines": 9,
+      "nonEmptyLines": 9,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "web/app.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 122,
+      "nonEmptyLines": 122,
+      "functions": [
+        {
+          "name": "$",
+          "startLine": 1,
+          "endLine": 1,
+          "params": []
+        },
+        {
+          "name": "vnNow",
+          "startLine": 4,
+          "endLine": 4,
+          "params": []
+        },
+        {
+          "name": "civil",
+          "startLine": 5,
+          "endLine": 5,
+          "params": []
+        },
+        {
+          "name": "setBusy",
+          "startLine": 7,
+          "endLine": 7,
+          "params": [
+            "busy"
+          ]
+        },
+        {
+          "name": "appendText",
+          "startLine": 8,
+          "endLine": 8,
+          "params": [
+            "parent",
+            "tag",
+            "value",
+            "className"
+          ]
+        },
+        {
+          "name": "render",
+          "startLine": 9,
+          "endLine": 30,
+          "params": [
+            "result"
+          ]
+        },
+        {
+          "name": "sourceLink",
+          "startLine": 31,
+          "endLine": 34,
+          "params": [
+            "parent",
+            "item"
+          ]
+        },
+        {
+          "name": "sourceCard",
+          "startLine": 35,
+          "endLine": 42,
+          "params": [
+            "parent",
+            "item"
+          ]
+        },
+        {
+          "name": "renderExplanation",
+          "startLine": 43,
+          "endLine": 72,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "loadExplanation",
+          "startLine": 73,
+          "endLine": 91,
+          "params": [
+            "requestId"
+          ]
+        },
+        {
+          "name": "selectReadingTab",
+          "startLine": 93,
+          "endLine": 93,
+          "params": [
+            "tab"
+          ]
+        },
+        {
+          "name": "openSavedDraw",
+          "startLine": 96,
+          "endLine": 101,
+          "params": [
+            "requestId"
+          ]
+        },
+        {
+          "name": "history",
+          "startLine": 102,
+          "endLine": 102,
+          "params": []
+        },
+        {
+          "name": "send",
+          "startLine": 103,
+          "endLine": 108,
+          "params": [
+            "payload"
+          ]
+        },
+        {
+          "name": "perform",
+          "startLine": 109,
+          "endLine": 121,
+          "params": [
+            "makeNew"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "$",
+          "callee": "document.getElementById",
+          "lineNumber": 1
+        },
+        {
+          "caller": "vnNow",
+          "callee": "new Date(Date.now()+7*3600000).toISOString().slice",
+          "lineNumber": 4
+        },
+        {
+          "caller": "vnNow",
+          "callee": "new Date(Date.now()+7*3600000).toISOString",
+          "lineNumber": 4
+        },
+        {
+          "caller": "vnNow",
+          "callee": "Date.now",
+          "lineNumber": 4
+        },
+        {
+          "caller": "civil",
+          "callee": "$",
+          "lineNumber": 5
+        },
+        {
+          "caller": "setBusy",
+          "callee": "$",
+          "lineNumber": 7
+        },
+        {
+          "caller": "appendText",
+          "callee": "document.createElement",
+          "lineNumber": 8
+        },
+        {
+          "caller": "appendText",
+          "callee": "parent.appendChild",
+          "lineNumber": 8
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 11
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 11
+        },
+        {
+          "caller": "render",
+          "callee": "$('numbers').replaceChildren",
+          "lineNumber": 11
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 11
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 12
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 12
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 13
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 14
+        },
+        {
+          "caller": "render",
+          "callee": "result.score.toFixed",
+          "lineNumber": 14
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 14
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 14
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 14
+        },
+        {
+          "caller": "render",
+          "callee": "$('warnings').replaceChildren",
+          "lineNumber": 15
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 15
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 15
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 15
+        },
+        {
+          "caller": "render",
+          "callee": "$('context-summary').replaceChildren",
+          "lineNumber": 16
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 16
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 17
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 17
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 18
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 18
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 19
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 19
+        },
+        {
+          "caller": "render",
+          "callee": "Object.values(m.variables).join",
+          "lineNumber": 19
+        },
+        {
+          "caller": "render",
+          "callee": "Object.values",
+          "lineNumber": 19
+        },
+        {
+          "caller": "render",
+          "callee": "t.g_cap.toFixed",
+          "lineNumber": 19
+        },
+        {
+          "caller": "render",
+          "callee": "$('times').replaceChildren",
+          "lineNumber": 20
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 20
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 21
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 21
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 21
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 21
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 22
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 22
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 23
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 23
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 25
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 25
+        },
+        {
+          "caller": "render",
+          "callee": "$('display-hexagrams').replaceChildren",
+          "lineNumber": 26
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 26
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 26
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 26
+        },
+        {
+          "caller": "render",
+          "callee": "$('evidence').replaceChildren",
+          "lineNumber": 27
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 27
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 27
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 27
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 27
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 27
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 27
+        },
+        {
+          "caller": "render",
+          "callee": "appendText",
+          "lineNumber": 28
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 28
+        },
+        {
+          "caller": "render",
+          "callee": "$",
+          "lineNumber": 29
+        },
+        {
+          "caller": "render",
+          "callee": "JSON.stringify",
+          "lineNumber": 29
+        },
+        {
+          "caller": "sourceLink",
+          "callee": "appendText",
+          "lineNumber": 32
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "appendText",
+          "lineNumber": 36
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "appendText",
+          "lineNumber": 36
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "appendText",
+          "lineNumber": 38
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "appendText",
+          "lineNumber": 39
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "appendText",
+          "lineNumber": 39
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "appendText",
+          "lineNumber": 39
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "sourceLink",
+          "lineNumber": 39
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "appendText",
+          "lineNumber": 40
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "appendText",
+          "lineNumber": 40
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "appendText",
+          "lineNumber": 40
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "appendText",
+          "lineNumber": 41
+        },
+        {
+          "caller": "sourceCard",
+          "callee": "sourceLink",
+          "lineNumber": 41
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$('hexagram-heading').replaceChildren",
+          "lineNumber": 45
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 45
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 45
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 45
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 45
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 45
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$('hexagram-overview').replaceChildren",
+          "lineNumber": 46
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 46
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 46
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 46
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 46
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 46
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$('relation-explanation').replaceChildren",
+          "lineNumber": 56
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 56
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 56
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 56
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 57
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 57
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 58
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 58
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$('translated-evidence').replaceChildren",
+          "lineNumber": 59
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 59
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$('commentaries').replaceChildren",
+          "lineNumber": 59
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 59
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$('source-gaps').replaceChildren",
+          "lineNumber": 59
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 59
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "sourceCard",
+          "lineNumber": 60
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 60
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 60
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 61
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 61
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$('bazi-facts').replaceChildren",
+          "lineNumber": 62
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 62
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 62
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 62
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 62
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 62
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 63
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 63
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 64
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 64
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "b.dung_than.join",
+          "lineNumber": 64
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "b.hy_than.join",
+          "lineNumber": 64
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "b.ky_than.join",
+          "lineNumber": 64
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$('bazi-evidence').replaceChildren",
+          "lineNumber": 65
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 65
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "sourceCard",
+          "lineNumber": 65
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 65
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 65
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 65
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$('display-explanations').replaceChildren",
+          "lineNumber": 66
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 66
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 68
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 68
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 68
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 68
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "appendText",
+          "lineNumber": 68
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "sourceCard",
+          "lineNumber": 68
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 70
+        },
+        {
+          "caller": "renderExplanation",
+          "callee": "$",
+          "lineNumber": 71
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "explanationAbort.abort",
+          "lineNumber": 74
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "setTimeout",
+          "lineNumber": 76
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "controller.abort",
+          "lineNumber": 76
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "$",
+          "lineNumber": 77
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "$",
+          "lineNumber": 77
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "$('display-explanations').replaceChildren",
+          "lineNumber": 78
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "$",
+          "lineNumber": 78
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "$",
+          "lineNumber": 78
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "fetch",
+          "lineNumber": 80
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "encodeURIComponent",
+          "lineNumber": 80
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "response.json",
+          "lineNumber": 81
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "renderExplanation",
+          "lineNumber": 85
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "$",
+          "lineNumber": 88
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "$",
+          "lineNumber": 89
+        },
+        {
+          "caller": "loadExplanation",
+          "callee": "clearTimeout",
+          "lineNumber": 90
+        },
+        {
+          "caller": "selectReadingTab",
+          "callee": "item.setAttribute",
+          "lineNumber": 93
+        },
+        {
+          "caller": "selectReadingTab",
+          "callee": "String",
+          "lineNumber": 93
+        },
+        {
+          "caller": "selectReadingTab",
+          "callee": "$",
+          "lineNumber": 93
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "$",
+          "lineNumber": 97
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "setBusy",
+          "lineNumber": 97
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "fetch",
+          "lineNumber": 98
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "encodeURIComponent",
+          "lineNumber": 98
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "AbortSignal.timeout",
+          "lineNumber": 98
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "response.json",
+          "lineNumber": 98
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "render",
+          "lineNumber": 98
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "loadExplanation",
+          "lineNumber": 98
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "$",
+          "lineNumber": 98
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "$",
+          "lineNumber": 99
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "$",
+          "lineNumber": 99
+        },
+        {
+          "caller": "openSavedDraw",
+          "callee": "setBusy",
+          "lineNumber": 100
+        },
+        {
+          "caller": "history",
+          "callee": "fetch",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "response.json",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "$('history').replaceChildren",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "$",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "appendText",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "$",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "appendText",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "d.numbers.join",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "button.setAttribute",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "d.numbers.join",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "button.addEventListener",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "openSavedDraw",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "appendText",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "appendText",
+          "lineNumber": 102
+        },
+        {
+          "caller": "history",
+          "callee": "new Date(d.created_at).toLocaleString",
+          "lineNumber": 102
+        },
+        {
+          "caller": "send",
+          "callee": "$",
+          "lineNumber": 104
+        },
+        {
+          "caller": "send",
+          "callee": "fetch",
+          "lineNumber": 105
+        },
+        {
+          "caller": "send",
+          "callee": "JSON.stringify",
+          "lineNumber": 105
+        },
+        {
+          "caller": "send",
+          "callee": "AbortSignal.timeout",
+          "lineNumber": 105
+        },
+        {
+          "caller": "send",
+          "callee": "response.json",
+          "lineNumber": 106
+        },
+        {
+          "caller": "send",
+          "callee": "data.error.fields.map(f=>f.field+': '+f.message).join",
+          "lineNumber": 106
+        },
+        {
+          "caller": "send",
+          "callee": "data.error.fields.map",
+          "lineNumber": 106
+        },
+        {
+          "caller": "send",
+          "callee": "render",
+          "lineNumber": 107
+        },
+        {
+          "caller": "send",
+          "callee": "loadExplanation",
+          "lineNumber": 107
+        },
+        {
+          "caller": "send",
+          "callee": "$",
+          "lineNumber": 107
+        },
+        {
+          "caller": "send",
+          "callee": "$",
+          "lineNumber": 107
+        },
+        {
+          "caller": "send",
+          "callee": "history",
+          "lineNumber": 107
+        },
+        {
+          "caller": "perform",
+          "callee": "$",
+          "lineNumber": 110
+        },
+        {
+          "caller": "perform",
+          "callee": "setBusy",
+          "lineNumber": 110
+        },
+        {
+          "caller": "perform",
+          "callee": "$",
+          "lineNumber": 113
+        },
+        {
+          "caller": "perform",
+          "callee": "vnNow",
+          "lineNumber": 113
+        },
+        {
+          "caller": "perform",
+          "callee": "civil",
+          "lineNumber": 113
+        },
+        {
+          "caller": "perform",
+          "callee": "civil",
+          "lineNumber": 114
+        },
+        {
+          "caller": "perform",
+          "callee": "$",
+          "lineNumber": 115
+        },
+        {
+          "caller": "perform",
+          "callee": "$",
+          "lineNumber": 115
+        },
+        {
+          "caller": "perform",
+          "callee": "crypto.randomUUID",
+          "lineNumber": 116
+        },
+        {
+          "caller": "perform",
+          "callee": "send",
+          "lineNumber": 118
+        },
+        {
+          "caller": "perform",
+          "callee": "$",
+          "lineNumber": 119
+        },
+        {
+          "caller": "perform",
+          "callee": "$",
+          "lineNumber": 119
+        },
+        {
+          "caller": "perform",
+          "callee": "$",
+          "lineNumber": 119
+        },
+        {
+          "caller": "perform",
+          "callee": "$",
+          "lineNumber": 119
+        },
+        {
+          "caller": "perform",
+          "callee": "setBusy",
+          "lineNumber": 120
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 15,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "web/dates.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 161,
+      "nonEmptyLines": 161,
+      "callGraph": [
+        {
+          "caller": "el",
+          "callee": "document.getElementById",
+          "lineNumber": 3
+        },
+        {
+          "caller": "text",
+          "callee": "document.createElement",
+          "lineNumber": 5
+        },
+        {
+          "caller": "text",
+          "callee": "parent.appendChild",
+          "lineNumber": 5
+        },
+        {
+          "caller": "subjectName",
+          "callee": "query?.subjects.findIndex",
+          "lineNumber": 15
+        },
+        {
+          "caller": "subjectName",
+          "callee": "subjectLabel",
+          "lineNumber": 16
+        },
+        {
+          "caller": "exclusionName",
+          "callee": "value.startsWith",
+          "lineNumber": 18
+        },
+        {
+          "caller": "exclusionName",
+          "callee": "subjectName(value.split(':')[1]).toLowerCase",
+          "lineNumber": 18
+        },
+        {
+          "caller": "exclusionName",
+          "callee": "subjectName",
+          "lineNumber": 18
+        },
+        {
+          "caller": "exclusionName",
+          "callee": "value.split",
+          "lineNumber": 18
+        },
+        {
+          "caller": "gradeLabel",
+          "callee": "activity.toLowerCase",
+          "lineNumber": 19
+        },
+        {
+          "caller": "updateSubjectLabels",
+          "callee": "el",
+          "lineNumber": 27
+        },
+        {
+          "caller": "updateSubjectLabels",
+          "callee": "el",
+          "lineNumber": 28
+        },
+        {
+          "caller": "updateSubjectLabels",
+          "callee": "el",
+          "lineNumber": 28
+        },
+        {
+          "caller": "updateSubjectLabels",
+          "callee": "el",
+          "lineNumber": 29
+        },
+        {
+          "caller": "updateSubjectLabels",
+          "callee": "subjectLabel",
+          "lineNumber": 29
+        },
+        {
+          "caller": "updateSubjectLabels",
+          "callee": "el",
+          "lineNumber": 30
+        },
+        {
+          "caller": "updateSubjectLabels",
+          "callee": "subjectLabel",
+          "lineNumber": 30
+        },
+        {
+          "caller": "clock",
+          "callee": "value.slice",
+          "lineNumber": 39
+        },
+        {
+          "caller": "clock",
+          "callee": "value.slice",
+          "lineNumber": 39
+        },
+        {
+          "caller": "clock",
+          "callee": "value.slice",
+          "lineNumber": 39
+        },
+        {
+          "caller": "windowLabel",
+          "callee": "w.end_at.slice",
+          "lineNumber": 41
+        },
+        {
+          "caller": "windowLabel",
+          "callee": "w.start_at.slice",
+          "lineNumber": 41
+        },
+        {
+          "caller": "windowLabel",
+          "callee": "clock",
+          "lineNumber": 41
+        },
+        {
+          "caller": "windowLabel",
+          "callee": "clock",
+          "lineNumber": 42
+        },
+        {
+          "caller": "subject",
+          "callee": "el",
+          "lineNumber": 45
+        },
+        {
+          "caller": "subject",
+          "callee": "el",
+          "lineNumber": 47
+        },
+        {
+          "caller": "subject",
+          "callee": "el",
+          "lineNumber": 47
+        },
+        {
+          "caller": "subject",
+          "callee": "Number",
+          "lineNumber": 49
+        },
+        {
+          "caller": "fetchDates",
+          "callee": "fetch",
+          "lineNumber": 53
+        },
+        {
+          "caller": "fetchDates",
+          "callee": "JSON.stringify",
+          "lineNumber": 53
+        },
+        {
+          "caller": "fetchDates",
+          "callee": "response.json",
+          "lineNumber": 54
+        },
+        {
+          "caller": "fetchDates",
+          "callee": "data.error?.fields?.map(f=>' '+f.message.replace(/^Value error, /,'')).join",
+          "lineNumber": 55
+        },
+        {
+          "caller": "fetchDates",
+          "callee": "data.error?.fields?.map",
+          "lineNumber": 55
+        },
+        {
+          "caller": "fetchDates",
+          "callee": "f.message.replace",
+          "lineNumber": 55
+        },
+        {
+          "caller": "render",
+          "callee": "el",
+          "lineNumber": 59
+        },
+        {
+          "caller": "render",
+          "callee": "el",
+          "lineNumber": 59
+        },
+        {
+          "caller": "render",
+          "callee": "el",
+          "lineNumber": 60
+        },
+        {
+          "caller": "render",
+          "callee": "data.activity_name.toLowerCase",
+          "lineNumber": 60
+        },
+        {
+          "caller": "render",
+          "callee": "el",
+          "lineNumber": 61
+        },
+        {
+          "caller": "render",
+          "callee": "el('date-profile-summary').replaceChildren",
+          "lineNumber": 62
+        },
+        {
+          "caller": "render",
+          "callee": "el",
+          "lineNumber": 62
+        },
+        {
+          "caller": "render",
+          "callee": "text",
+          "lineNumber": 63
+        },
+        {
+          "caller": "render",
+          "callee": "el",
+          "lineNumber": 63
+        },
+        {
+          "caller": "render",
+          "callee": "subjectName",
+          "lineNumber": 63
+        },
+        {
+          "caller": "render",
+          "callee": "p.hy.join",
+          "lineNumber": 63
+        },
+        {
+          "caller": "render",
+          "callee": "p.ky.join",
+          "lineNumber": 63
+        },
+        {
+          "caller": "render",
+          "callee": "text",
+          "lineNumber": 64
+        },
+        {
+          "caller": "render",
+          "callee": "el",
+          "lineNumber": 64
+        },
+        {
+          "caller": "render",
+          "callee": "subjectName",
+          "lineNumber": 64
+        },
+        {
+          "caller": "render",
+          "callee": "data.days.filter",
+          "lineNumber": 65
+        },
+        {
+          "caller": "render",
+          "callee": "el",
+          "lineNumber": 66
+        },
+        {
+          "caller": "render",
+          "callee": "data.activity_name.toLowerCase",
+          "lineNumber": 66
+        },
+        {
+          "caller": "render",
+          "callee": "el('date-grid').replaceChildren",
+          "lineNumber": 67
+        },
+        {
+          "caller": "render",
+          "callee": "el",
+          "lineNumber": 67
+        },
+        {
+          "caller": "render",
+          "callee": "text",
+          "lineNumber": 69
+        },
+        {
+          "caller": "render",
+          "callee": "el",
+          "lineNumber": 69
+        },
+        {
+          "caller": "render",
+          "callee": "(day.grade||'UNKNOWN').toLowerCase",
+          "lineNumber": 69
+        },
+        {
+          "caller": "render",
+          "callee": "text",
+          "lineNumber": 70
+        },
+        {
+          "caller": "render",
+          "callee": "day.date.slice",
+          "lineNumber": 70
+        },
+        {
+          "caller": "render",
+          "callee": "day.date.slice",
+          "lineNumber": 70
+        },
+        {
+          "caller": "render",
+          "callee": "gradeLabel",
+          "lineNumber": 71
+        },
+        {
+          "caller": "render",
+          "callee": "text",
+          "lineNumber": 72
+        },
+        {
+          "caller": "render",
+          "callee": "text",
+          "lineNumber": 74
+        },
+        {
+          "caller": "render",
+          "callee": "text",
+          "lineNumber": 75
+        },
+        {
+          "caller": "render",
+          "callee": "button.setAttribute",
+          "lineNumber": 77
+        },
+        {
+          "caller": "render",
+          "callee": "[day.date,label,`${count} khung giờ đẹp`].join",
+          "lineNumber": 77
+        },
+        {
+          "caller": "render",
+          "callee": "button.setAttribute",
+          "lineNumber": 78
+        },
+        {
+          "caller": "render",
+          "callee": "button.setAttribute",
+          "lineNumber": 78
+        },
+        {
+          "caller": "render",
+          "callee": "button.addEventListener",
+          "lineNumber": 79
+        },
+        {
+          "caller": "render",
+          "callee": "openDatePopup",
+          "lineNumber": 79
+        },
+        {
+          "caller": "resetPopup",
+          "callee": "detailController?.abort",
+          "lineNumber": 83
+        },
+        {
+          "caller": "resetPopup",
+          "callee": "document.body.classList.remove",
+          "lineNumber": 84
+        },
+        {
+          "caller": "closePopup",
+          "callee": "resetPopup",
+          "lineNumber": 87
+        },
+        {
+          "caller": "closePopup",
+          "callee": "el",
+          "lineNumber": 88
+        },
+        {
+          "caller": "closePopup",
+          "callee": "el('date-popup').close",
+          "lineNumber": 88
+        },
+        {
+          "caller": "closePopup",
+          "callee": "el",
+          "lineNumber": 88
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "resetPopup",
+          "lineNumber": 92
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 93
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "day.date.split('-').reverse().join",
+          "lineNumber": 93
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "day.date.split('-').reverse",
+          "lineNumber": 93
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "day.date.split",
+          "lineNumber": 93
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 95
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "gradeLabel",
+          "lineNumber": 95
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "activityName.toLowerCase",
+          "lineNumber": 95
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el('date-good-hours').replaceChildren",
+          "lineNumber": 96
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 96
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "text",
+          "lineNumber": 97
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 97
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "windowLabel",
+          "lineNumber": 97
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 98
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 98
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 99
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 100
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 100
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el('date-detail-body').replaceChildren",
+          "lineNumber": 100
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 100
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 101
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "document.body.classList.add",
+          "lineNumber": 102
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 103
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el('date-popup').showModal",
+          "lineNumber": 103
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 103
+        },
+        {
+          "caller": "openDatePopup",
+          "callee": "el",
+          "lineNumber": 104
+        },
+        {
+          "caller": "detail",
+          "callee": "el",
+          "lineNumber": 109
+        },
+        {
+          "caller": "detail",
+          "callee": "el",
+          "lineNumber": 110
+        },
+        {
+          "caller": "detail",
+          "callee": "el('date-detail-body').replaceChildren",
+          "lineNumber": 110
+        },
+        {
+          "caller": "detail",
+          "callee": "el",
+          "lineNumber": 110
+        },
+        {
+          "caller": "detail",
+          "callee": "fetchDates",
+          "lineNumber": 112
+        },
+        {
+          "caller": "detail",
+          "callee": "el",
+          "lineNumber": 115
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 117
+        },
+        {
+          "caller": "detail",
+          "callee": "el",
+          "lineNumber": 117
+        },
+        {
+          "caller": "detail",
+          "callee": "(w.grade||'UNKNOWN').toLowerCase",
+          "lineNumber": 117
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 118
+        },
+        {
+          "caller": "detail",
+          "callee": "windowLabel",
+          "lineNumber": 118
+        },
+        {
+          "caller": "detail",
+          "callee": "gradeLabel",
+          "lineNumber": 118
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 119
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 120
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 121
+        },
+        {
+          "caller": "detail",
+          "callee": "w.hard_exclusions.map(exclusionName).join",
+          "lineNumber": 121
+        },
+        {
+          "caller": "detail",
+          "callee": "w.hard_exclusions.map",
+          "lineNumber": 121
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 122
+        },
+        {
+          "caller": "detail",
+          "callee": "subjectName",
+          "lineNumber": 122
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 123
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 123
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 124
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 125
+        },
+        {
+          "caller": "detail",
+          "callee": "w.facts.day_yi.join",
+          "lineNumber": 125
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 125
+        },
+        {
+          "caller": "detail",
+          "callee": "w.facts.day_ji.join",
+          "lineNumber": 125
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 126
+        },
+        {
+          "caller": "detail",
+          "callee": "w.facts.hour_yi.join",
+          "lineNumber": 126
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 126
+        },
+        {
+          "caller": "detail",
+          "callee": "w.facts.hour_ji.join",
+          "lineNumber": 126
+        },
+        {
+          "caller": "detail",
+          "callee": "text",
+          "lineNumber": 128
+        },
+        {
+          "caller": "detail",
+          "callee": "el",
+          "lineNumber": 128
+        },
+        {
+          "caller": "detail",
+          "callee": "el",
+          "lineNumber": 130
+        },
+        {
+          "caller": "detail",
+          "callee": "el",
+          "lineNumber": 130
+        },
+        {
+          "caller": "isBackdrop",
+          "callee": "el('date-popup').getBoundingClientRect",
+          "lineNumber": 143
+        },
+        {
+          "caller": "isBackdrop",
+          "callee": "el",
+          "lineNumber": 143
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

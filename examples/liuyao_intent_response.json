@@ -1,0 +1,37 @@
+{
+  "rules_version": "liuyao-question-intent-2026-10-26-v1",
+  "question_sha256": "8257e9f439899998d198a600382c4837bea4f392e0fdf61c3ccd8f216105a003",
+  "selected_topic": "CAREER",
+  "status": "CONFLICT",
+  "suggested_topic": "WEALTH",
+  "candidates": [
+    {
+      "topic": "WEALTH",
+      "label": "Tài lộc · giao dịch",
+      "target": "Thê tài",
+      "intent_labels": [
+        "Khoản nợ · thu hồi hoặc thanh toán"
+      ],
+      "terms": [
+        "khoản nợ"
+      ],
+      "evidence_level": "SPECIFIC_PHRASE"
+    }
+  ],
+  "matches": [
+    {
+      "rule_id": "WEALTH_DEBT",
+      "topic": "WEALTH",
+      "label": "Khoản nợ · thu hồi hoặc thanh toán",
+      "term": "khoản nợ",
+      "disposition": "INTENT"
+    }
+  ],
+  "needs_review": true,
+  "message": "Câu hỏi gợi ý Tài lộc · giao dịch, khác chủ đề Công việc · vị trí đang chọn. Chọn gợi ý hoặc xác nhận giữ chủ đề hiện tại.",
+  "notes": [
+    "Nhận diện theo cụm từ tiếng Việt có hoặc không dấu; đây là gợi ý theo quy tắc, chưa hiểu mọi ngữ cảnh như con người.",
+    "Chủ đề được chọn và Lục thân chỉ định luôn được giữ; nhận diện không tự đổi Dụng thần.",
+    "Nếu câu hỏi có nhiều nhóm ý hoặc khác chủ đề, cần chọn lại hoặc xác nhận giữ phạm vi trước khi luận."
+  ]
+}

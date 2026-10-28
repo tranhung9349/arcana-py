@@ -1,0 +1,77 @@
+{
+  "research_date": "2026-10-26",
+  "repositories": [
+    {
+      "name": "tinix-bazi",
+      "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+      "has_static_vietnamese_interpretation": true,
+      "has_ai_consultation_service": true,
+      "service_path": "backendjs/src/services/openrouter.service.js",
+      "imported_ai_service_into_arcana": false,
+      "prompt_methods": [
+        "buildSystemPrompt",
+        "buildUserPrompt"
+      ],
+      "source_bound_input_output_fewshot_pack_found": false,
+      "license_observation": "README says MIT; LICENSE at this exact commit returned 404."
+    },
+    {
+      "name": "open-iching",
+      "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+      "primary_role": "Structured Chinese text and commentaries",
+      "vietnamese_interpretation_found_in_imported_corpus": false,
+      "source_gaps": [
+        "Hexagram 32 Tuan text missing"
+      ],
+      "textual_difference": {
+        "hexagram_id": 1,
+        "line": 2,
+        "github_text_fragment": "见龙再田",
+        "comparison_text_fragment": "見龍在田",
+        "comparison_url": "https://zh.wikisource.org/w/index.php?oldid=2404991"
+      },
+      "license_observation": "Pinned Readme.md states learning/exchange and non-commercial use."
+    }
+  ],
+  "public_download_metadata": [
+    {
+      "id": "tinix_readme",
+      "url": "https://raw.githubusercontent.com/vhphuoc1102/tinix-bazi/80ff4463d0397c1b11db76f38d880255f55558bc/README.md",
+      "bytes": 22348,
+      "sha256": "df51993d49e4f51ef4415cc14eebb3ec0c495defd109b6346c1a567d37447946"
+    },
+    {
+      "id": "tinix_license",
+      "url": "https://raw.githubusercontent.com/vhphuoc1102/tinix-bazi/80ff4463d0397c1b11db76f38d880255f55558bc/LICENSE",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "iching_readme",
+      "url": "https://raw.githubusercontent.com/john-walks-slow/open-iching/4c5f00f8cb62c6e0d2471243d28150b473ef592f/Readme.md",
+      "bytes": 3620,
+      "sha256": "ff32319a7c9478d6a2995341641f298cac8df7604dfc7054b14142ed74132358"
+    },
+    {
+      "id": "tinix_tree",
+      "url": "https://api.github.com/repos/vhphuoc1102/tinix-bazi/git/trees/80ff4463d0397c1b11db76f38d880255f55558bc?recursive=1",
+      "bytes": 61630,
+      "sha256": "d159aae49fdb0886b0235d6f229a5a197b0355818369b9dff0421524e090755b"
+    },
+    {
+      "id": "tinix_ai_service",
+      "url": "https://raw.githubusercontent.com/vhphuoc1102/tinix-bazi/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/services/openrouter.service.js",
+      "bytes": 37957,
+      "sha256": "8e00b76ce6aebd1111df1d4b4d7581028359ebdd6b8c76e41f5947e470549323"
+    }
+  ],
+  "ziping_capture": {
+    "method": "Indexed primary-text pages verified with web search",
+    "direct_download_result": "Host timed out for chapters 3721, 3722, 3727",
+    "edition_pinned": false,
+    "saved_short_excerpt_count": 3
+  },
+  "user_birth_data_sent_to_research_sources": false,
+  "runtime_changed": false,
+  "modern_prose_copied_into_fewshot_examples": false,
+  "report": "docs/research/interpretation_sources_fewshot_v2.md"
+}

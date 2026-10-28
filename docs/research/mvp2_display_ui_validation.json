@@ -1,0 +1,39 @@
+{
+  "checked_at_utc": "2026-10-14T17:03:17+00:00",
+  "url": "http://127.0.0.1:8766/",
+  "database_scope": "Existing temporary local preview SQLite; synthetic profiles only; no draw submission",
+  "checks": {
+    "opening_form_uses_gia_chu": true,
+    "opening_summary_warning_detail_use_gia_chu": true,
+    "marriage_form_and_results_use_two_duong_su_roles": true,
+    "travel_form_and_results_use_nguoi_xuat_hanh": true,
+    "travel_hides_second_profile": true,
+    "changing_form_activity_keeps_old_result_roles_until_new_search": true,
+    "all_six_good_intervals_visible_on_day_tile_in_chronological_order": true,
+    "tile_has_more_than_top_three_intervals": true,
+    "old_minutes_label_absent": true,
+    "raw_subject_ids_absent_from_visible_text": true,
+    "detail_uses_same_hour_and_subject_labels": true,
+    "utc7_ranges_and_utc8_hour_name_policy_visible": true
+  },
+  "fixture": {
+    "activity": "BUSINESS_OPENING",
+    "birth": "1994-10-08T05:00:00+07:00",
+    "override_dung_than": "Thổ",
+    "date": "2026-12-29",
+    "allowed_hours": [
+      "06:00",
+      "22:00"
+    ],
+    "visible_good_hours": [
+      "Giờ Thìn - Từ 06:00 đến 08:00",
+      "Giờ Tỵ - Từ 08:00 đến 10:00",
+      "Giờ Ngọ - Từ 10:00 đến 12:00",
+      "Giờ Thân - Từ 14:00 đến 16:00",
+      "Giờ Dậu - Từ 16:00 đến 18:00",
+      "Giờ Tuất - Từ 18:00 đến 20:00"
+    ]
+  },
+  "screenshot": "docs/research/mvp2_display_ui.jpg",
+  "scope": "Manual browser smoke in the existing 690px viewport; no exhaustive device matrix. Scores and categories use the existing product v1 policy; new categories are research only."
+}

@@ -1,0 +1,981 @@
+{
+  "schema_version": "date-rules-v2",
+  "rules_version": "mvp2-dates-2026-10-25-v2",
+  "provider_version": "1.4.8",
+  "calendar_policy": "BEIJING_CIVIL_UTC8",
+  "major_taboo_basis": "CANDIDATE_EXACT_JIE_MONTH_AND_SECT1_DAY",
+  "disabled_rules": [
+    "TAM_NUONG"
+  ],
+  "sources": [
+    {
+      "source_id": "6TAIL_CORPUS",
+      "path": "data/date_calendar/almanac_2024_2030.json.gz",
+      "sha256": "a046dbf8187bd7bd6b8e3208118f6b584f5d9f3541e663422d69c30ff586ef28",
+      "url": "https://github.com/6tail/lunar-python",
+      "basis": "Pinned 1.4.8 raw Yi/Ji; month on Jie civil date, day at midnight Beijing"
+    },
+    {
+      "source_id": "TINIX_MONTH_TABLES",
+      "path": "data/reference/tinix-bazi/shensha.js",
+      "sha256": "75aa8af1464fef4183addb384afe9f7d5375f3c2abb09958b20b98d1b42ab2fe",
+      "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/shensha.js",
+      "basis": "Pinned natal tables; product explicitly applies candidate exact Jie month / sect1 day, not a validated ancient date-selection method"
+    },
+    {
+      "source_id": "PRODUCT_PERSONAL_POLICY",
+      "path": "randomyst/bazi.py",
+      "sha256": "d0ab6d26d8cbb389d052e85616ef2b12f3facf132c596d152d35e6fc41c44297",
+      "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/ngu_hanh.js",
+      "basis": "Numeric natal analysis port; date element penalties and clash policy are product rules v1"
+    },
+    {
+      "source_id": "PRODUCT_ACTIVITY_POLICY",
+      "path": "randomyst/date_activities.py",
+      "sha256": "08ea7e732f3758a82213d6d528841c03a9b97617a3ddeae235a8aad2e11d87fd",
+      "url": "/api/v2/auspicious-dates/rules",
+      "basis": "Versioned product activity scope, roles and capability; not expert-certified traditional rules"
+    }
+  ],
+  "activity_registry_version": "major-events-2026-10-25-v2",
+  "groups": [
+    {
+      "group_id": "MARRIAGE_FAMILY",
+      "name": "Hôn nhân, gia thất"
+    },
+    {
+      "group_id": "HOME_RESIDENCE",
+      "name": "An cư, chỗ ở"
+    },
+    {
+      "group_id": "BUILDING_RENOVATION",
+      "name": "Xây dựng, tu tạo"
+    },
+    {
+      "group_id": "BUSINESS_ASSETS",
+      "name": "Kinh doanh, tài sản"
+    },
+    {
+      "group_id": "CAREER_EDUCATION",
+      "name": "Công danh, học nghiệp"
+    },
+    {
+      "group_id": "MAJOR_TRAVEL",
+      "name": "Xuất hành trọng yếu"
+    },
+    {
+      "group_id": "FAMILY_RITES",
+      "name": "Gia tiên, lễ nghi"
+    }
+  ],
+  "activities": [
+    {
+      "activity": "MARRIAGE",
+      "name": "Thành hôn",
+      "provider_token": "嫁娶",
+      "subject_count": 2,
+      "group_id": "MARRIAGE_FAMILY",
+      "provider_hour_token": "嫁娶",
+      "subject_roles": [
+        "Đương sự thứ nhất",
+        "Đương sự thứ hai"
+      ],
+      "hour_evaluation_mode": "LEGACY_V1",
+      "rule_profile": "LEGACY_V1",
+      "event_anchor": "Bắt đầu nghi thức thành hôn.",
+      "scope_note": "Nhập hồ sơ hai đương sự; lễ ngỏ lời và đính ước được tra riêng.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "BETROTHAL_NACAI",
+      "name": "Nạp thái — lễ ngỏ lời",
+      "provider_token": "纳采",
+      "subject_count": 2,
+      "group_id": "MARRIAGE_FAMILY",
+      "provider_hour_token": null,
+      "subject_roles": [
+        "Đương sự thứ nhất",
+        "Đương sự thứ hai"
+      ],
+      "hour_evaluation_mode": "DAY_ONLY",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Bắt đầu lễ nạp thái, ngỏ lời kết hôn.",
+      "scope_note": "Chọn khi gia đình thực hiện lễ nạp thái; phạm vi này chưa bao gồm mọi nghi thức ăn hỏi.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "BETROTHAL_COVENANT",
+      "name": "Đính ước",
+      "provider_token": "订盟",
+      "subject_count": 2,
+      "group_id": "MARRIAGE_FAMILY",
+      "provider_hour_token": null,
+      "subject_roles": [
+        "Đương sự thứ nhất",
+        "Đương sự thứ hai"
+      ],
+      "hour_evaluation_mode": "DAY_ONLY",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Bắt đầu nghi thức xác lập đính ước.",
+      "scope_note": "Xét lễ đính ước của hai đương sự; chọn Thành hôn cho nghi thức cưới.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "HOME_ENTRY",
+      "name": "Nhập trạch",
+      "provider_token": "入宅",
+      "subject_count": 1,
+      "group_id": "HOME_RESIDENCE",
+      "provider_hour_token": "入宅",
+      "subject_roles": [
+        "Gia chủ"
+      ],
+      "hour_evaluation_mode": "DIRECT_YI_JI",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Bắt đầu nghi thức vào ở tại nơi cư trú mới.",
+      "scope_note": "Xét lịch và hồ sơ gia chủ; phương vị và bố trí nhà chưa được đánh giá.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "RELOCATION",
+      "name": "Chuyển nơi cư trú",
+      "provider_token": "移徙",
+      "subject_count": 1,
+      "group_id": "HOME_RESIDENCE",
+      "provider_hour_token": "移徙",
+      "subject_roles": [
+        "Người chủ trì chuyển cư"
+      ],
+      "hour_evaluation_mode": "DIRECT_YI_JI",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Bắt đầu chuyển cư theo mốc đã chọn.",
+      "scope_note": "Nhập người đứng việc chuyển cư. Kết quả áp dụng hồ sơ này; nghi thức nhập trạch tra riêng.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "LAND_BREAKING",
+      "name": "Động thổ xây dựng",
+      "provider_token": "动土",
+      "subject_count": 1,
+      "group_id": "BUILDING_RENOVATION",
+      "provider_hour_token": null,
+      "subject_roles": [
+        "Chủ sự xây dựng"
+      ],
+      "hour_evaluation_mode": "DAY_ONLY",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Bắt đầu động thổ công trình.",
+      "scope_note": "Xét ngày khởi công động thổ xây dựng; phương vị, thế đất và phần mộ nằm ngoài phạm vi.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "RENOVATION",
+      "name": "Tu tạo, sửa chữa lớn",
+      "provider_token": "修造",
+      "subject_count": 1,
+      "group_id": "BUILDING_RENOVATION",
+      "provider_hour_token": "修造",
+      "subject_roles": [
+        "Chủ sự tu tạo"
+      ],
+      "hour_evaluation_mode": "DIRECT_YI_JI",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Khởi công hạng mục tu tạo đã xác định.",
+      "scope_note": "Xét hạng mục sửa chữa lớn; động thổ tra riêng. Phương vị công trình chưa được đánh giá.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "ROOF_BEAM",
+      "name": "Thượng lương — gác đòn nóc",
+      "provider_token": "上梁",
+      "subject_count": 1,
+      "group_id": "BUILDING_RENOVATION",
+      "provider_hour_token": null,
+      "subject_roles": [
+        "Chủ sự xây dựng"
+      ],
+      "hour_evaluation_mode": "DAY_ONLY",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Đặt đòn nóc hoặc dầm nóc theo nghi thức thượng lương.",
+      "scope_note": "Áp dụng mốc gác đòn nóc; các hình thức cất nóc khác cần xác định nghi thức tương ứng.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "BUSINESS_OPENING",
+      "name": "Khai trương",
+      "provider_token": "开市",
+      "subject_count": 1,
+      "group_id": "BUSINESS_ASSETS",
+      "provider_hour_token": "开市",
+      "subject_roles": [
+        "Chủ sự kinh doanh"
+      ],
+      "hour_evaluation_mode": "LEGACY_V1",
+      "rule_profile": "LEGACY_V1",
+      "event_anchor": "Bắt đầu khai trương hoặc mở bán.",
+      "scope_note": "Nhập người đứng việc kinh doanh; ký văn khế và giao dịch được tra riêng.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "CONTRACT_RITE",
+      "name": "Lập văn khế — ký kết mua bán",
+      "provider_token": "立券",
+      "subject_count": 1,
+      "group_id": "BUSINESS_ASSETS",
+      "provider_hour_token": null,
+      "subject_roles": [
+        "Người đứng giao kết"
+      ],
+      "hour_evaluation_mode": "DAY_ONLY",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Xác lập văn khế mua bán.",
+      "scope_note": "Xét mốc giao kết mua bán và hồ sơ phía đương sự đã nhập; hợp đồng lao động hoặc hợp tác khác chưa được xét.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "TRADE",
+      "name": "Giao dịch tài sản lớn",
+      "provider_token": "交易",
+      "subject_count": 1,
+      "group_id": "BUSINESS_ASSETS",
+      "provider_hour_token": "交易",
+      "subject_roles": [
+        "Người đứng giao dịch"
+      ],
+      "hour_evaluation_mode": "DIRECT_YI_JI",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Bắt đầu bước mua bán hoặc giao nhận được chọn.",
+      "scope_note": "Chọn một bước cụ thể; mốc ký văn khế và nhập trạch được tra riêng. Kết quả áp dụng đương sự đã nhập.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "PROPERTY_ACQUISITION",
+      "name": "Mua nhà đất — điền sản",
+      "provider_token": "置产",
+      "subject_count": 1,
+      "group_id": "BUSINESS_ASSETS",
+      "provider_hour_token": null,
+      "subject_roles": [
+        "Người tạo lập điền sản"
+      ],
+      "hour_evaluation_mode": "DAY_ONLY",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Mua hoặc nhận chuyển giao nhà đất trong giao dịch mua bán.",
+      "scope_note": "Chọn Lập văn khế khi tra mốc ký kết, hoặc Nhập trạch khi tra mốc vào ở.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "RECEIVE_ASSETS",
+      "name": "Nạp tài — thu nhận tài vật",
+      "provider_token": "纳财",
+      "subject_count": 1,
+      "group_id": "BUSINESS_ASSETS",
+      "provider_hour_token": null,
+      "subject_roles": [
+        "Người thu nhận tài vật"
+      ],
+      "hour_evaluation_mode": "DAY_ONLY",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Thu nhận tài vật quan trọng theo mốc đã chọn.",
+      "scope_note": "Xét mốc thu tài vật; chưa đánh giá đầu tư, vay vốn hoặc cơ may tiền bạc nói chung.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "START_JOB",
+      "name": "Nhậm chức, nhận nhiệm vụ",
+      "provider_token": "赴任",
+      "subject_count": 1,
+      "group_id": "CAREER_EDUCATION",
+      "provider_hour_token": "赴任",
+      "subject_roles": [
+        "Người nhậm chức"
+      ],
+      "hour_evaluation_mode": "DIRECT_YI_JI",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Bắt đầu nhận chức trách hoặc nhiệm vụ được bổ nhiệm.",
+      "scope_note": "Phạm vi là nhậm chức; lịch nguồn có ít ngày đề cập việc này. Chưa mở rộng sang mọi ngày đầu đi làm.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "START_EDUCATION",
+      "name": "Nhập học",
+      "provider_token": "入学",
+      "subject_count": 1,
+      "group_id": "CAREER_EDUCATION",
+      "provider_hour_token": null,
+      "subject_roles": [
+        "Người nhập học"
+      ],
+      "hour_evaluation_mode": "DAY_ONLY",
+      "rule_profile": "CONSTRUCTIVE_V2",
+      "event_anchor": "Bắt đầu nhập học tại mốc có thể chủ động chọn.",
+      "scope_note": "Nhập hồ sơ người học, kể cả khi người thao tác là phụ huynh; thi tuyển và phỏng vấn nằm ngoài phạm vi.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "TRAVEL",
+      "name": "Xuất hành",
+      "provider_token": "出行",
+      "subject_count": 1,
+      "group_id": "MAJOR_TRAVEL",
+      "provider_hour_token": "出行",
+      "subject_roles": [
+        "Người xuất hành"
+      ],
+      "hour_evaluation_mode": "LEGACY_V1",
+      "rule_profile": "LEGACY_V1",
+      "event_anchor": "Bắt đầu chuyến đi trọng yếu.",
+      "scope_note": "Áp dụng thời điểm khởi hành và hồ sơ người đi; hướng xuất hành chưa được xét.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "ANCESTOR_RITE",
+      "name": "Tế lễ gia tiên",
+      "provider_token": "祭祀",
+      "subject_count": 1,
+      "group_id": "FAMILY_RITES",
+      "provider_hour_token": "祭祀",
+      "subject_roles": [
+        "Người chủ lễ"
+      ],
+      "hour_evaluation_mode": "DIRECT_YI_JI",
+      "rule_profile": "RITUAL_V2",
+      "event_anchor": "Bắt đầu lễ gia tiên có thể chủ động chọn ngày.",
+      "scope_note": "Nhập người chủ lễ. Các ngày giỗ cố định tiếp tục theo lệ gia đình.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "INCENSE_INSTALLATION",
+      "name": "An hương",
+      "provider_token": "安香",
+      "subject_count": 1,
+      "group_id": "FAMILY_RITES",
+      "provider_hour_token": null,
+      "subject_roles": [
+        "Người chủ lễ"
+      ],
+      "hour_evaluation_mode": "DAY_ONLY",
+      "rule_profile": "RITUAL_V2",
+      "event_anchor": "Bắt đầu nghi thức an hương đã xác định.",
+      "scope_note": "Xét lịch và hồ sơ người chủ lễ cho nghi thức an hương; cách an vị, phương hướng và bố trí thờ tự chưa được đánh giá.",
+      "enabled": true,
+      "tier": "CORE",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "activity": "BED_SETUP",
+      "name": "An sàng — đặt giường",
+      "provider_token": "安床",
+      "subject_count": 1,
+      "group_id": "HOME_RESIDENCE",
+      "provider_hour_token": "安床",
+      "subject_roles": [
+        "Gia chủ"
+      ],
+      "hour_evaluation_mode": "DIRECT_YI_JI",
+      "rule_profile": "DEFERRED",
+      "event_anchor": "Đặt giường theo nghi thức.",
+      "scope_note": "Chưa bật: cần tách vai trò an sàng trong an cư và trong hôn lễ.",
+      "enabled": false,
+      "tier": "CONTEXTUAL",
+      "review_status": "NOT_ENABLED"
+    },
+    {
+      "activity": "DEMOLITION",
+      "name": "Tháo dỡ",
+      "provider_token": "拆卸",
+      "subject_count": 1,
+      "group_id": "BUILDING_RENOVATION",
+      "provider_hour_token": null,
+      "subject_roles": [
+        "Chủ sự công trình"
+      ],
+      "hour_evaluation_mode": "DAY_ONLY",
+      "rule_profile": "DEFERRED",
+      "event_anchor": "Khởi công tháo dỡ.",
+      "scope_note": "Chưa bật: cần bộ luật riêng và duyệt phạm vi phá nhà/tháo dỡ.",
+      "enabled": false,
+      "tier": "CONTEXTUAL",
+      "review_status": "NOT_ENABLED"
+    },
+    {
+      "activity": "PRAYER",
+      "name": "Cầu phúc",
+      "provider_token": "祈福",
+      "subject_count": 1,
+      "group_id": "FAMILY_RITES",
+      "provider_hour_token": "祈福",
+      "subject_roles": [
+        "Người chủ lễ"
+      ],
+      "hour_evaluation_mode": "DIRECT_YI_JI",
+      "rule_profile": "DEFERRED",
+      "event_anchor": "Bắt đầu lễ cầu phúc.",
+      "scope_note": "Chưa bật: cần xác định nghi thức và phạm vi luật riêng.",
+      "enabled": false,
+      "tier": "CONTEXTUAL",
+      "review_status": "NOT_ENABLED"
+    }
+  ],
+  "month_tables": {
+    "sat_chu": [
+      2,
+      9,
+      5,
+      0,
+      7,
+      3,
+      8,
+      10,
+      4,
+      11,
+      1,
+      6
+    ],
+    "tho_tu": [
+      3,
+      9,
+      10,
+      4,
+      11,
+      5,
+      0,
+      6,
+      1,
+      7,
+      2,
+      8
+    ],
+    "nguyet_pha": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "scoring": {
+    "base": 100,
+    "good_threshold": 75,
+    "normal_threshold": 45,
+    "day_not_listed_penalty": 15,
+    "hour_not_listed_penalty": 5,
+    "personal_element_penalties": {
+      "PRIMARY": 0,
+      "HY": 2,
+      "NEUTRAL": 5,
+      "KY": 10
+    },
+    "personal_clash_blocks": true
+  },
+  "day_scoring": {
+    "base": 100,
+    "good_threshold": 80,
+    "normal_threshold": 50,
+    "day_not_listed_penalty": 15,
+    "hour_not_listed_penalty": 0,
+    "personal_element_penalties": {
+      "PRIMARY": 0,
+      "HY": 2,
+      "NEUTRAL": 5,
+      "KY": 10
+    },
+    "personal_clash_blocks": true
+  },
+  "rules": [
+    {
+      "rule_id": "HAC_DAO",
+      "enabled": true,
+      "when": {
+        "fact": "calendar_class",
+        "equals": "HAC_DAO"
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL",
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION",
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "PENALTY",
+      "points": 15,
+      "dedupe_group": "HAC_DAO",
+      "message": "Ngày thuộc Hắc Đạo theo provider.",
+      "source_id": "6TAIL_CORPUS",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "DAY_SAME",
+      "enabled": true,
+      "when": {
+        "fact": "day_relation",
+        "equals": "SAME"
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL",
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION",
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "PENALTY",
+      "points": 5,
+      "dedupe_group": "DAY_SAME",
+      "message": "Can và Chi ngày cùng hành.",
+      "source_id": "6TAIL_CORPUS",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "DAY_BRANCH_GENERATES_STEM",
+      "enabled": true,
+      "when": {
+        "fact": "day_relation",
+        "equals": "BRANCH_GENERATES_STEM"
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL",
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION",
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "PENALTY",
+      "points": 10,
+      "dedupe_group": "DAY_BRANCH_GENERATES_STEM",
+      "message": "Chi ngày sinh Can ngày.",
+      "source_id": "6TAIL_CORPUS",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "DAY_STEM_CONTROLS_BRANCH",
+      "enabled": true,
+      "when": {
+        "fact": "day_relation",
+        "equals": "STEM_CONTROLS_BRANCH"
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL",
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION",
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "PENALTY",
+      "points": 15,
+      "dedupe_group": "DAY_STEM_CONTROLS_BRANCH",
+      "message": "Can ngày khắc Chi ngày.",
+      "source_id": "6TAIL_CORPUS",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "DAY_BRANCH_CONTROLS_STEM",
+      "enabled": true,
+      "when": {
+        "fact": "day_relation",
+        "equals": "BRANCH_CONTROLS_STEM"
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL",
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION",
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "PENALTY",
+      "points": 20,
+      "dedupe_group": "DAY_BRANCH_CONTROLS_STEM",
+      "message": "Chi ngày khắc Can ngày.",
+      "source_id": "6TAIL_CORPUS",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "NO_AMBIENT_SUPPORT",
+      "enabled": true,
+      "when": {
+        "fact": "ambient_support",
+        "equals": "NONE"
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL",
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION",
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "PENALTY",
+      "points": 5,
+      "dedupe_group": "NO_AMBIENT_SUPPORT",
+      "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+      "source_id": "6TAIL_CORPUS",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "YEAR_CLASH",
+      "enabled": true,
+      "when": {
+        "fact": "year_clash",
+        "equals": true
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL",
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION",
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "PENALTY",
+      "points": 15,
+      "dedupe_group": "YEAR_CLASH",
+      "message": "Chi ngày xung chi năm ứng viên.",
+      "source_id": "6TAIL_CORPUS",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "SAT_CHU",
+      "enabled": true,
+      "when": {
+        "fact": "sat_chu",
+        "equals": true
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "BLOCK",
+      "points": null,
+      "dedupe_group": "SAT_CHU",
+      "message": "Trúng Sát Chủ theo bảng và quy ước của sản phẩm.",
+      "source_id": "TINIX_MONTH_TABLES",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "THO_TU",
+      "enabled": true,
+      "when": {
+        "fact": "tho_tu",
+        "equals": true
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "BLOCK",
+      "points": null,
+      "dedupe_group": "THO_TU",
+      "message": "Trúng Thọ Tử theo bảng và quy ước của sản phẩm.",
+      "source_id": "TINIX_MONTH_TABLES",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "NGUYET_PHA",
+      "enabled": true,
+      "when": {
+        "fact": "nguyet_pha",
+        "equals": true
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "BLOCK",
+      "points": null,
+      "dedupe_group": "MONTH_CLASH",
+      "message": "Chi ngày xung chi tháng ứng viên (Nguyệt Phá).",
+      "source_id": "TINIX_MONTH_TABLES",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "TAM_NUONG",
+      "enabled": false,
+      "when": {
+        "fact": "tam_nuong",
+        "equals": true
+      },
+      "activity_scope": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL",
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION",
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "WARN",
+      "points": null,
+      "dedupe_group": "TAM_NUONG",
+      "message": "Tam Nương chưa nằm trong phạm vi đánh giá.",
+      "source_id": "",
+      "review_status": "NOT_ENABLED"
+    },
+    {
+      "rule_id": "SAT_CHU_V2_NOTE",
+      "enabled": true,
+      "when": {
+        "fact": "sat_chu",
+        "equals": true
+      },
+      "activity_scope": [
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION",
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "WARN",
+      "points": null,
+      "dedupe_group": "SAT_CHU",
+      "message": "Sát Chủ theo bảng tham khảo; dùng cảnh báo cho việc này.",
+      "source_id": "TINIX_MONTH_TABLES",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "THO_TU_V2_NOTE",
+      "enabled": true,
+      "when": {
+        "fact": "tho_tu",
+        "equals": true
+      },
+      "activity_scope": [
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION",
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "WARN",
+      "points": null,
+      "dedupe_group": "THO_TU",
+      "message": "Thọ Tử theo bảng tham khảo; dùng cảnh báo cho việc này.",
+      "source_id": "TINIX_MONTH_TABLES",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "NGUYET_PHA_V2",
+      "enabled": true,
+      "when": {
+        "fact": "nguyet_pha",
+        "equals": true
+      },
+      "activity_scope": [
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "LAND_BREAKING",
+        "RENOVATION",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "TRADE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_JOB",
+        "START_EDUCATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "BLOCK",
+      "points": null,
+      "dedupe_group": "MONTH_CLASH",
+      "message": "Chi ngày xung chi tháng ứng viên; loại theo policy việc kiến tạo.",
+      "source_id": "PRODUCT_ACTIVITY_POLICY",
+      "review_status": "PRODUCT_POLICY"
+    },
+    {
+      "rule_id": "NGUYET_PHA_V2_NOTE",
+      "enabled": true,
+      "when": {
+        "fact": "nguyet_pha",
+        "equals": true
+      },
+      "activity_scope": [
+        "ANCESTOR_RITE",
+        "INCENSE_INSTALLATION"
+      ],
+      "subject_scope": "GENERAL",
+      "effect": "WARN",
+      "points": null,
+      "dedupe_group": "MONTH_CLASH",
+      "message": "Chi ngày xung chi tháng ứng viên; cảnh báo tham khảo cho nghi lễ.",
+      "source_id": "PRODUCT_ACTIVITY_POLICY",
+      "review_status": "PRODUCT_POLICY"
+    }
+  ]
+}

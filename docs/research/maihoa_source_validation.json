@@ -1,0 +1,35 @@
+{
+  "checked_date_utc7": "2026-10-25",
+  "rules_version": "maihoa-source-2026-10-25-v1",
+  "corpus_version": "maihoa-wikisource-2026-10-25-v1",
+  "sha256": {
+    "config/maihoa_rules.json": "68346dabb2135b62ed2ebb57c4b0721929b94cff45d756c35779f48dfa6c8823",
+    "randomyst/maihoa.py": "b4e61dab816e82543c089428ad257b0a5242e65bb116c5d5b313d9122c514fba",
+    "randomyst/maihoa_service.py": "cbbb42025bfbce2024ad351964fab69dc35ebc198ff23c70dbdb91ff35eac0a2",
+    "randomyst/maihoa_models.py": "9771512fbbba5df80d4f2c34a79c583cb9193309b91746d126eb6daf4a6d1fb0",
+    "data/reference/maihoa/manifest.json": "b760bdfc43ef0c75d848962d50626c8cda7eea61d49daa0fa1e34aa9cdc78c48",
+    "data/reference/maihoa/compiled.json": "83a4173523889810c54270b1600de2983a11fcdfe50151f38594310f9afa40a2"
+  },
+  "source_revisions_verified": 3,
+  "bound_evidence_quotes": 52,
+  "topic_relation_entries": 30,
+  "auxiliary_relation_entries": 5,
+  "integer_input_tuples_audited": 51840,
+  "original_hexagrams": 64,
+  "distinct_original_moving_states": 192,
+  "source_mutual_differs_from_legacy_tuples": 672,
+  "casting_unchanged_except_source_mutual_policy": true,
+  "real_time_representatives": 192,
+  "topic_readings_schema_validated": 1152,
+  "last_representative_timestamp": "2026-01-29T12:00:00+07:00",
+  "database_accessed": false,
+  "api_called": false,
+  "number_generation_called": false,
+  "predictive_accuracy_tested": false,
+  "expert_semantic_review_completed": false,
+  "limitations": [
+    "Exhaustive tuples are arithmetic coverage, not calendar frequencies.",
+    "Topic/schema coverage verifies implementation, not truth of divination.",
+    "Season precedence, timezone and leap-month handling remain declared product conventions."
+  ]
+}

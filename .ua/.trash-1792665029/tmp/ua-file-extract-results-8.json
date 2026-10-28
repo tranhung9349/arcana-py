@@ -1,0 +1,197 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": "config/interpretation_disclaimers.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 9,
+      "nonEmptyLines": 9,
+      "sections": [
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "inserted_by",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "llm_may_modify",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "messages",
+          "level": 1,
+          "line": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "config/mvp1_rules.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 112,
+      "nonEmptyLines": 112,
+      "sections": [
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "confirmation_date",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "calendar",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "maihoa",
+          "level": 1,
+          "line": 23
+        },
+        {
+          "heading": "numbers",
+          "level": 1,
+          "line": 42
+        },
+        {
+          "heading": "remediation",
+          "level": 1,
+          "line": 50
+        },
+        {
+          "heading": "evaluation",
+          "level": 1,
+          "line": 57
+        },
+        {
+          "heading": "exponential_weights",
+          "level": 1,
+          "line": 68
+        },
+        {
+          "heading": "vietnamese_interpretation",
+          "level": 1,
+          "line": 85
+        },
+        {
+          "heading": "generation",
+          "level": 1,
+          "line": 93
+        },
+        {
+          "heading": "casting_time",
+          "level": 1,
+          "line": 107
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "config/mvp2_date_rules.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 333,
+      "nonEmptyLines": 333,
+      "sections": [
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "provider_version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "calendar_policy",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "major_taboo_basis",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "disabled_rules",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "sources",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "activities",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "month_tables",
+          "level": 1,
+          "line": 53
+        },
+        {
+          "heading": "scoring",
+          "level": 1,
+          "line": 97
+        },
+        {
+          "heading": "rules",
+          "level": 1,
+          "line": 111
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    }
+  ]
+}

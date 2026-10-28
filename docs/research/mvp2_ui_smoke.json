@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-10-12T13:11:28.700410+00:00",
+  "url": "http://127.0.0.1:8766/",
+  "database_scope": "Temporary preview SQLite; synthetic profiles only; no draw submission",
+  "checks": {
+    "draw_date_mode_switch": true,
+    "marriage_shows_second_profile": true,
+    "marriage_93_day_grid": true,
+    "range_over_93_shows_validation_error": true,
+    "opening_31_day_grid": true,
+    "good_label_scoped_to_activity": true,
+    "detail_for_oct_13_0800_1000_good_75": true,
+    "calendar_class_and_officer_separate": true,
+    "source_links_present": true,
+    "tam_nuong_coverage_visible": true
+  },
+  "screenshot": "docs/research/mvp2_ui_smoke.jpg",
+  "scope": "Manual browser smoke at default in-app browser viewport; not an exhaustive browser/device matrix."
+}

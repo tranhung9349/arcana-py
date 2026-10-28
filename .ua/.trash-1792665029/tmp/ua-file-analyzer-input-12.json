@@ -1,0 +1,6 @@
+{"projectRoot":"/Users/tranduyhung/Work/randomyst_numbers","batchFiles":[
+{"path":"docs/archive/draw_request_v3.json","language":"json","sizeLines":20,"fileCategory":"config"},
+{"path":"docs/archive/draw_response_v3.json","language":"json","sizeLines":1148,"fileCategory":"config"},
+{"path":"docs/archive/logic_plan_mvp1_v3.md","language":"markdown","sizeLines":834,"fileCategory":"docs"},
+{"path":"docs/archive/logic_plan_mvp2_pre_r1.md","language":"markdown","sizeLines":240,"fileCategory":"docs"}],
+"batchImportData":{"docs/archive/draw_request_v3.json":[],"docs/archive/draw_response_v3.json":[],"docs/archive/logic_plan_mvp1_v3.md":[],"docs/archive/logic_plan_mvp2_pre_r1.md":[]}}

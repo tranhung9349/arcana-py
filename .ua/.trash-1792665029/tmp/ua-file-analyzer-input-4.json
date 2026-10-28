@@ -1,0 +1,19 @@
+{
+  "projectRoot": "/Users/tranduyhung/Work/randomyst_numbers",
+  "batchFiles": [
+    {"path": "data/reference/tinix-bazi/ganzhi.js", "language": "javascript", "sizeLines": 292, "fileCategory": "code"},
+    {"path": "data/reference/tinix-bazi/ganzhi_data.js", "language": "javascript", "sizeLines": 1106, "fileCategory": "code"},
+    {"path": "data/reference/tinix-bazi/geju.js", "language": "javascript", "sizeLines": 112, "fileCategory": "code"},
+    {"path": "data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js", "language": "javascript", "sizeLines": 273, "fileCategory": "code"},
+    {"path": "data/reference/tinix-bazi/phan_tich/ngu_hanh.js", "language": "javascript", "sizeLines": 320, "fileCategory": "code"},
+    {"path": "data/reference/tinix-bazi/shensha.js", "language": "javascript", "sizeLines": 800, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "data/reference/tinix-bazi/ganzhi.js": ["data/reference/tinix-bazi/ganzhi_data.js"],
+    "data/reference/tinix-bazi/ganzhi_data.js": [],
+    "data/reference/tinix-bazi/geju.js": ["data/reference/tinix-bazi/ganzhi.js"],
+    "data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js": [],
+    "data/reference/tinix-bazi/phan_tich/ngu_hanh.js": ["data/reference/tinix-bazi/ganzhi.js","data/reference/tinix-bazi/geju.js","data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js"],
+    "data/reference/tinix-bazi/shensha.js": ["data/reference/tinix-bazi/ganzhi.js"]
+  }
+}

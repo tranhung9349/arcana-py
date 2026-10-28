@@ -1,0 +1,127 @@
+{
+  "$defs": {
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "const": "AI_INTERPRETATION",
+          "default": "AI_INTERPRETATION",
+          "title": "Label",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 1400,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "fact_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Fact Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "fact_refs",
+        "evidence_refs"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "PracticalOption": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "MODERN_APPLICATION",
+          "title": "Kind",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 800,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "fact_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Fact Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "text",
+        "fact_refs"
+      ],
+      "title": "PracticalOption",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "plain-reading-response-v2",
+      "default": "plain-reading-response-v2",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "context_id": {
+      "title": "Context Id",
+      "type": "string"
+    },
+    "summary": {
+      "$ref": "#/$defs/Claim"
+    },
+    "analysis": {
+      "items": {
+        "$ref": "#/$defs/Claim"
+      },
+      "maxItems": 4,
+      "minItems": 2,
+      "title": "Analysis",
+      "type": "array"
+    },
+    "practical_options": {
+      "items": {
+        "$ref": "#/$defs/PracticalOption"
+      },
+      "maxItems": 2,
+      "minItems": 1,
+      "title": "Practical Options",
+      "type": "array"
+    },
+    "limits": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Limits",
+      "type": "array"
+    }
+  },
+  "required": [
+    "context_id",
+    "summary",
+    "analysis",
+    "practical_options",
+    "limits"
+  ],
+  "title": "Response",
+  "type": "object"
+}

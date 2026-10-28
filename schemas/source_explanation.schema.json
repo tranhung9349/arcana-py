@@ -1,0 +1,690 @@
+{
+  "$defs": {
+    "BaziExplanation": {
+      "additionalProperties": false,
+      "properties": {
+        "day_master": {
+          "title": "Day Master",
+          "type": "string"
+        },
+        "structure": {
+          "title": "Structure",
+          "type": "string"
+        },
+        "strength": {
+          "title": "Strength",
+          "type": "string"
+        },
+        "primary_used": {
+          "enum": [
+            "Mộc",
+            "Hỏa",
+            "Thổ",
+            "Kim",
+            "Thủy"
+          ],
+          "title": "Primary Used",
+          "type": "string"
+        },
+        "primary_calculated": {
+          "enum": [
+            "Mộc",
+            "Hỏa",
+            "Thổ",
+            "Kim",
+            "Thủy"
+          ],
+          "title": "Primary Calculated",
+          "type": "string"
+        },
+        "overridden": {
+          "title": "Overridden",
+          "type": "boolean"
+        },
+        "dung_than": {
+          "items": {
+            "enum": [
+              "Mộc",
+              "Hỏa",
+              "Thổ",
+              "Kim",
+              "Thủy"
+            ],
+            "type": "string"
+          },
+          "title": "Dung Than",
+          "type": "array"
+        },
+        "hy_than": {
+          "items": {
+            "enum": [
+              "Mộc",
+              "Hỏa",
+              "Thổ",
+              "Kim",
+              "Thủy"
+            ],
+            "type": "string"
+          },
+          "title": "Hy Than",
+          "type": "array"
+        },
+        "ky_than": {
+          "items": {
+            "enum": [
+              "Mộc",
+              "Hỏa",
+              "Thổ",
+              "Kim",
+              "Thủy"
+            ],
+            "type": "string"
+          },
+          "title": "Ky Than",
+          "type": "array"
+        },
+        "birth_season": {
+          "title": "Birth Season",
+          "type": "string"
+        },
+        "cards": {
+          "items": {
+            "$ref": "#/$defs/SourceCard"
+          },
+          "title": "Cards",
+          "type": "array"
+        },
+        "source_gaps": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Source Gaps",
+          "type": "array"
+        }
+      },
+      "required": [
+        "day_master",
+        "structure",
+        "strength",
+        "primary_used",
+        "primary_calculated",
+        "overridden",
+        "dung_than",
+        "hy_than",
+        "ky_than",
+        "birth_season",
+        "cards",
+        "source_gaps"
+      ],
+      "title": "BaziExplanation",
+      "type": "object"
+    },
+    "DisplayExplanations": {
+      "additionalProperties": false,
+      "properties": {
+        "mutual": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HexagramExplanation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "changed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HexagramExplanation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "mutual",
+        "changed"
+      ],
+      "title": "DisplayExplanations",
+      "type": "object"
+    },
+    "DrawDeepReadings": {
+      "additionalProperties": false,
+      "properties": {
+        "bazi": {
+          "$ref": "#/$defs/ModuleReading"
+        },
+        "maihoa": {
+          "$ref": "#/$defs/ModuleReading"
+        }
+      },
+      "required": [
+        "bazi",
+        "maihoa"
+      ],
+      "title": "DrawDeepReadings",
+      "type": "object"
+    },
+    "HexagramExplanation": {
+      "additionalProperties": false,
+      "properties": {
+        "hexagram_id": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Hexagram Id",
+          "type": "integer"
+        },
+        "name_zh": {
+          "title": "Name Zh",
+          "type": "string"
+        },
+        "name_vi": {
+          "title": "Name Vi",
+          "type": "string"
+        },
+        "symbol": {
+          "title": "Symbol",
+          "type": "string"
+        },
+        "moving_line": {
+          "anyOf": [
+            {
+              "maximum": 6,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Moving Line"
+        },
+        "overview": {
+          "$ref": "#/$defs/SourceOverview"
+        },
+        "cards": {
+          "items": {
+            "$ref": "#/$defs/SourceCard"
+          },
+          "title": "Cards",
+          "type": "array"
+        },
+        "source_gaps": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Source Gaps",
+          "type": "array"
+        }
+      },
+      "required": [
+        "hexagram_id",
+        "name_zh",
+        "name_vi",
+        "symbol",
+        "moving_line",
+        "overview",
+        "cards",
+        "source_gaps"
+      ],
+      "title": "HexagramExplanation",
+      "type": "object"
+    },
+    "ModuleReading": {
+      "additionalProperties": false,
+      "properties": {
+        "module": {
+          "enum": [
+            "BAZI",
+            "MAIHOA"
+          ],
+          "title": "Module",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "sections": {
+          "items": {
+            "$ref": "#/$defs/ReadingSection"
+          },
+          "minItems": 1,
+          "title": "Sections",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/ReadingEvidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "facts": {
+          "additionalProperties": true,
+          "title": "Facts",
+          "type": "object"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "provenance": {
+          "const": "RULE_BASED_INTERPRETATION",
+          "default": "RULE_BASED_INTERPRETATION",
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "module",
+        "version",
+        "title",
+        "summary",
+        "sections",
+        "evidence",
+        "facts",
+        "limitations"
+      ],
+      "title": "ModuleReading",
+      "type": "object"
+    },
+    "ReadingEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "SOURCE_ORIGINAL",
+            "SAVED_FACT",
+            "IMPLEMENTATION_RULE"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "kind",
+        "title",
+        "text"
+      ],
+      "title": "ReadingEvidence",
+      "type": "object"
+    },
+    "ReadingSection": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "references": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "References",
+          "type": "array"
+        }
+      },
+      "required": [
+        "title",
+        "text",
+        "references"
+      ],
+      "title": "ReadingSection",
+      "type": "object"
+    },
+    "SourceCard": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text_type": {
+          "title": "Text Type",
+          "type": "string"
+        },
+        "language": {
+          "enum": [
+            "zh",
+            "vi"
+          ],
+          "title": "Language",
+          "type": "string"
+        },
+        "label": {
+          "const": "SOURCE_ORIGINAL",
+          "title": "Label",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceReference"
+        },
+        "translation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTranslation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "evidence_id",
+        "title",
+        "text_type",
+        "language",
+        "label",
+        "text",
+        "source",
+        "translation"
+      ],
+      "title": "SourceCard",
+      "type": "object"
+    },
+    "SourceOverview": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "const": "AI_INTERPRETATION",
+          "title": "Label",
+          "type": "string"
+        },
+        "language": {
+          "const": "vi",
+          "title": "Language",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "UNREVIEWED",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "references": {
+          "items": {
+            "type": "string"
+          },
+          "title": "References",
+          "type": "array"
+        }
+      },
+      "required": [
+        "label",
+        "language",
+        "text",
+        "review_status",
+        "references"
+      ],
+      "title": "SourceOverview",
+      "type": "object"
+    },
+    "SourceReference": {
+      "additionalProperties": false,
+      "properties": {
+        "repository": {
+          "enum": [
+            "john-walks-slow/open-iching",
+            "vhphuoc1102/tinix-bazi"
+          ],
+          "title": "Repository",
+          "type": "string"
+        },
+        "commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Commit",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "repository",
+        "commit",
+        "path",
+        "key",
+        "url"
+      ],
+      "title": "SourceReference",
+      "type": "object"
+    },
+    "SourceTranslation": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "const": "AI_TRANSLATION",
+          "title": "Label",
+          "type": "string"
+        },
+        "language": {
+          "const": "vi",
+          "title": "Language",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "UNREVIEWED",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "references": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 1,
+          "minItems": 1,
+          "title": "References",
+          "type": "array"
+        },
+        "source_text_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Text Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "language",
+        "text",
+        "review_status",
+        "version",
+        "references",
+        "source_text_sha256"
+      ],
+      "title": "SourceTranslation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "source-explanation-v1",
+        "source-explanation-v2"
+      ],
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "context_id": {
+      "format": "uuid",
+      "title": "Context Id",
+      "type": "string"
+    },
+    "rules_version": {
+      "title": "Rules Version",
+      "type": "string"
+    },
+    "corpus_version": {
+      "title": "Corpus Version",
+      "type": "string"
+    },
+    "model_called": {
+      "const": false,
+      "title": "Model Called",
+      "type": "boolean"
+    },
+    "affects_generation": {
+      "const": false,
+      "title": "Affects Generation",
+      "type": "boolean"
+    },
+    "affects_evaluation": {
+      "const": false,
+      "title": "Affects Evaluation",
+      "type": "boolean"
+    },
+    "original": {
+      "$ref": "#/$defs/HexagramExplanation"
+    },
+    "bazi": {
+      "$ref": "#/$defs/BaziExplanation"
+    },
+    "display_hexagrams": {
+      "$ref": "#/$defs/DisplayExplanations"
+    },
+    "relation": {
+      "additionalProperties": true,
+      "title": "Relation",
+      "type": "object"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "type": "string"
+    },
+    "readings": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/DrawDeepReadings"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "schema_version",
+    "context_id",
+    "rules_version",
+    "corpus_version",
+    "model_called",
+    "affects_generation",
+    "affects_evaluation",
+    "original",
+    "bazi",
+    "display_hexagrams",
+    "relation",
+    "limitations",
+    "disclaimer"
+  ],
+  "title": "SourceExplanation",
+  "type": "object",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "source-explanation-v2"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "readings"
+        ],
+        "properties": {
+          "readings": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  ]
+}

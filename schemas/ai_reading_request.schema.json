@@ -1,0 +1,195 @@
+{
+  "$defs": {
+    "AnalysisContext": {
+      "additionalProperties": false,
+      "properties": {
+        "topic": {
+          "default": "GENERAL",
+          "enum": [
+            "GENERAL",
+            "WEALTH",
+            "CAREER",
+            "DOCUMENT",
+            "PARENTS",
+            "CHILDREN",
+            "SIBLINGS",
+            "PARTNERSHIP"
+          ],
+          "title": "Topic",
+          "type": "string"
+        },
+        "use_relative": {
+          "anyOf": [
+            {
+              "enum": [
+                "Phụ mẫu",
+                "Huynh đệ",
+                "Tử tôn",
+                "Thê tài",
+                "Quan quỷ"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Use Relative"
+        },
+        "focus_line": {
+          "anyOf": [
+            {
+              "maximum": 6,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Focus Line"
+        },
+        "intent_mode": {
+          "default": "TOPIC_ONLY",
+          "enum": [
+            "TOPIC_ONLY",
+            "COMBINED"
+          ],
+          "title": "Intent Mode",
+          "type": "string"
+        },
+        "intent_acknowledged": {
+          "default": false,
+          "title": "Intent Acknowledged",
+          "type": "boolean"
+        }
+      },
+      "title": "AnalysisContext",
+      "type": "object"
+    },
+    "SignedSnapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "DRAW",
+            "BAZI",
+            "BAZI_READING",
+            "MAIHOA",
+            "COINS",
+            "LIUYAO",
+            "DATE"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "data": {
+          "additionalProperties": true,
+          "title": "Data",
+          "type": "object"
+        },
+        "signature": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Signature",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "data",
+        "signature"
+      ],
+      "title": "SignedSnapshot",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "method": {
+      "enum": [
+        "BAZI",
+        "MAIHOA",
+        "LIUYAO",
+        "DATE"
+      ],
+      "title": "Method",
+      "type": "string"
+    },
+    "consultation_id": {
+      "format": "uuid",
+      "title": "Consultation Id",
+      "type": "string"
+    },
+    "consultation": {
+      "$ref": "#/$defs/SignedSnapshot"
+    },
+    "bazi_reading": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SignedSnapshot"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "analysis": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SignedSnapshot"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "bazi_reading_id": {
+      "anyOf": [
+        {
+          "format": "uuid",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Bazi Reading Id"
+    },
+    "analysis_context": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/AnalysisContext"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "analysis_rules_sha256": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Analysis Rules Sha256"
+    }
+  },
+  "required": [
+    "method",
+    "consultation_id",
+    "consultation"
+  ],
+  "title": "AIReadingRequest",
+  "type": "object"
+}

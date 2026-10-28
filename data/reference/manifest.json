@@ -1,0 +1,46 @@
+{
+  "tinix_commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+  "iching_commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+  "files": [
+    {
+      "path": "tinix-bazi/ganzhi.js",
+      "sha256": "d2f3db7c3c7a720b66e879cf85f377b28ac6b86df0b9bffaf020ea5f352d5bd8"
+    },
+    {
+      "path": "tinix-bazi/geju.js",
+      "sha256": "f8848a27dbeeedf9fee77d85fa7c94f918f68094d9fd6cc6c5b51cf289badb69"
+    },
+    {
+      "path": "tinix-bazi/phan_tich/ngu_hanh.js",
+      "sha256": "3efb4f7b131c5ffa7475eb32e53bd0b662ee1deb9541a5e4f03207a0bfe4942b"
+    },
+    {
+      "path": "tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+      "sha256": "3d0d7b87dfb141859f8b6e55d0abebc6f0ec4d8d30dafc0c05faac432b0bf739"
+    },
+    {
+      "path": "tinix-bazi/shensha.js",
+      "sha256": "75aa8af1464fef4183addb384afe9f7d5375f3c2abb09958b20b98d1b42ab2fe"
+    },
+    {
+      "path": "open-iching/iching.json",
+      "sha256": "7fe029a32c51f2da39d702f8064825262cfd3a7d004353738cd893b0a017ab10"
+    },
+    {
+      "path": "open-iching/tuan.json",
+      "sha256": "14453a0ef7d3b1dc05e65c0d272dd97104375ba315364b70105353ada73d1668"
+    },
+    {
+      "path": "open-iching/xiang.json",
+      "sha256": "e346a62a41107f35f7e33955cf018b11749d80781847e681a088c2ee3412cc98"
+    },
+    {
+      "path": "tinix-bazi/ganzhi_data.js",
+      "sha256": "836e4d49f46bb87f39b3b086f15798205cbc0c5cc13a1cd9a07b3ba56fb70ca5"
+    },
+    {
+      "path": "tinix-bazi/phan_tich/data/dich_thien_tuy_data.js",
+      "sha256": "1108468d1d0a286d197567f11ee6965d63c5bba663502d995c596f25feae7bb8"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-10-26T23:47:42.636817+00:00",
+  "provider": {
+    "configured": true,
+    "model": "deepseek-v4.1-flash",
+    "provider_host": "rexapf.com"
+  },
+  "synthetic_data_only": true,
+  "results": [
+    {
+      "method": "BAZI",
+      "consultation_id": "381711a8-5e4a-42f7-9935-2063dfaad195",
+      "ai_reading_id": "1f250120fa22a65daf96e4a593287a7d60d2ded0f26c2bd10140ba31a6589b3c",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "9ca437ab5fa558442e7fc4b3e5c02ed6f6d702981ebe7ad35a473c60006dbb10",
+      "case_ids": [
+        "bazi-07-study",
+        "bazi-03-mixed"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 15111,
+        "completion_tokens": 6068,
+        "total_tokens": 21179
+      },
+      "generation_passes": 1,
+      "generate_seconds": 22.172,
+      "cache_replay_ms": 40.155,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Điểm đáng chú ý nhất cho việc học là ghép phần tiếp nhận với một đầu ra tự làm, đồng thời giữ áp lực ở mức có thể kiểm tra. Lá số có cả nhóm Ấn, Thực Thương và Quan Sát nhưng khí thế đan xen, hướng điều tiết chưa chốt, nên chưa thể nói cách học nào là tối ưu cho bạn.",
+      "prompt_version": "plain-vietnamese-2026-10-27-v3.2"
+    },
+    {
+      "method": "MAIHOA",
+      "consultation_id": "338ea908-a663-437e-9113-6c6d6ccca155",
+      "ai_reading_id": "0929fb4993c8cae366ac1f5b8d81259655061df213b8760f28d1c51b18f4be95",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "18b4334293e055b397a033b9d42589fc83a6f67f78109227564b9e0d776cbf52",
+      "case_ids": [
+        "maihoa-01-support",
+        "maihoa-04-sequence"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 15811,
+        "completion_tokens": 5648,
+        "total_tokens": 21459
+      },
+      "generation_passes": 1,
+      "generate_seconds": 20.618,
+      "cache_replay_ms": 18.524,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Các quan hệ đầu, giữa và cuối đều được ghi theo chiều thuận, nên kế hoạch học thêm có nền thuận. Điều cần chuẩn bị kỹ là nhịp duy trì và mốc kiểm tra, vì độ mạnh của Thể chưa xác định và các nhận định vẫn còn điều kiện.",
+      "prompt_version": "plain-vietnamese-2026-10-27-v3.2"
+    },
+    {
+      "method": "LIUYAO",
+      "consultation_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+      "ai_reading_id": "ed3d303cde861e1c25d430f0542fc7924db3f297cab2423defb49866738baae9",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "ea05f15c802916f3c0cb61c07500130b1ac1b2ef614d3ce4fb36b880a081755e",
+      "case_ids": [
+        "liuyao-04-document",
+        "liuyao-01-money"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 14077,
+        "completion_tokens": 3416,
+        "total_tokens": 17493
+      },
+      "generation_passes": 1,
+      "generate_seconds": 16.131,
+      "cache_replay_ms": 19.681,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Hào đại diện bản đề cương được tháng và ngày nâng đỡ, nhưng hào của bạn đang động, còn nằm trong Tuần Không và bị hồi đầu khắc. Vì vậy điều cần rà soát trước là phần việc và khả năng theo tới bước cuối của chính bạn; quẻ chưa xác nhận nội dung đề cương đã đúng hay sẽ được chấp nhận.",
+      "prompt_version": "plain-vietnamese-2026-10-27-v3.2"
+    }
+  ]
+}

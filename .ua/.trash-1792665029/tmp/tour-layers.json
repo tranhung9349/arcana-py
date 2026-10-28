@@ -1,0 +1,52 @@
+[
+ {
+  "id": "layer:ui",
+  "name": "Giao diện gieo và tra ngày",
+  "description": "Trang index.html tiếng Việt cùng app.js/dates.js/style.css thu giờ UTC+7, gọi API gieo/đọc phiên và tra ngày, rồi hiển thị bộ sáu số, thẻ nguồn, lưới ngày và popup liệt kê đủ khung giờ GOOD."
+ },
+ {
+  "id": "layer:api-storage",
+  "name": "API cục bộ và SQLite",
+  "description": "Ứng dụng FastAPI trong randomyst/api.py phục vụ web cùng tám route v1/v2, điều phối gieo số và tra ngày, còn storage.py lưu response gieo bất biến theo UUID/hash payload vào bảng draws; tra ngày không ghi draws."
+ },
+ {
+  "id": "layer:calendar-divination",
+  "name": "Lịch Bắc Kinh, Bát Tự và Mai Hoa",
+  "description": "time_engine.py quy đổi cùng instant UTC+7 sang lịch Bắc Kinh UTC+8 qua lunar-python 1.4.8 đã ghim, bazi.py port logic tinix để phân tích Bát Tự và maihoa.py lập quẻ Mai Hoa Y/M/D/H."
+ },
+ {
+  "id": "layer:generation-scoring",
+  "name": "Điều phối gieo, trọng số và nghiệm thu",
+  "description": "NumberEngine khóa ngữ cảnh phiên rồi sinh và chấm bộ sáu số 00–45 bằng sampler tích trọng số, kèm quota hành, giải sát và retry theo luật MVP 1."
+ },
+ {
+  "id": "layer:date-search",
+  "name": "Tra ngày theo việc và hồ sơ",
+  "description": "Nhánh MVP 2 gồm contract/schema, corpus Yi/Ji raw 2024–2030 đã ghim, builder và engine tất định dựng hồ sơ sinh, chia interval, áp policy ứng viên v1 cho cưới hỏi/khai trương/xuất hành rồi trả gate, điểm và khung giờ với Tam Nương tắt."
+ },
+ {
+  "id": "layer:readonly-explanation",
+  "name": "Giải thích chỉ đọc và hợp đồng LLM",
+  "description": "Corpus nghĩa Việt 64 quẻ/Bát Tự gắn SHA-256, schema source-explanation và disclaimer phục vụ đọc lại lời giải phiên đã lưu; prompt, schema, fixture và validator luận giải LLM tương lai nằm riêng ở đây và runtime chưa gọi model."
+ },
+ {
+  "id": "layer:pinned-sources",
+  "name": "Hai nguồn tham chiếu đã ghim",
+  "description": "Snapshot open-iching cung cấp kinh văn Hán còn tinix-bazi cung cấp mã JS và bảng tham chiếu; manifest khóa commit/SHA-256 để port, build và kiểm nguồn thay vì thực thi JS trong runtime Python."
+ },
+ {
+  "id": "layer:policy-operations",
+  "name": "Luật, tài liệu và môi trường chạy",
+  "description": "Model hợp đồng gieo dùng chung, cấu hình mvp1_rules/dân gian, dependency, script run_mvp.sh cùng README, đặc tả và bàn giao MVP 1/MVP 2 hướng dẫn validate, vận hành và bảo trì ứng dụng local."
+ },
+ {
+  "id": "layer:verification",
+  "name": "Kiểm thử, thí nghiệm và bằng chứng",
+  "description": "Unittest, smoke HTTP/UI, audit lịch Bắc Kinh/port Bát Tự, thí nghiệm trọng số mũ và khảo sát khả thi MVP 2 cùng báo cáo docs/research và fixture examples kiểm bất biến, tính tất định và provenance của hai luồng."
+ },
+ {
+  "id": "layer:legacy-research",
+  "name": "Lịch Việt, vị trí và nghiên cứu lưu trữ",
+  "description": "Adapter lịch Việt UTC+7, engine TST/EoT cũ, định vị IP, nguồn NASA, audit thiên văn/ranh lịch v3 cùng đặc tả và proposal MVP 2 trước R1 được giữ để tái lập lịch sử, tách khỏi runtime Bắc Kinh hiện hành."
+ }
+]

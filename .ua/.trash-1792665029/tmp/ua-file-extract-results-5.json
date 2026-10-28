@@ -1,0 +1,1967 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 5,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "calendar_adapter/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 3,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "calendar_adapter/__main__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 32,
+      "nonEmptyLines": 26,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 10,
+          "endLine": 28,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 11
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_subparsers",
+          "lineNumber": 12
+        },
+        {
+          "caller": "main",
+          "callee": "commands.add_parser",
+          "lineNumber": 13
+        },
+        {
+          "caller": "main",
+          "callee": "convert.add_argument",
+          "lineNumber": 14
+        },
+        {
+          "caller": "main",
+          "callee": "commands.add_parser",
+          "lineNumber": 15
+        },
+        {
+          "caller": "main",
+          "callee": "resolve.add_argument",
+          "lineNumber": 16
+        },
+        {
+          "caller": "main",
+          "callee": "resolve.add_argument",
+          "lineNumber": 17
+        },
+        {
+          "caller": "main",
+          "callee": "resolve.add_argument",
+          "lineNumber": 18
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 19
+        },
+        {
+          "caller": "main",
+          "callee": "VietnameseCalendar().describe",
+          "lineNumber": 22
+        },
+        {
+          "caller": "main",
+          "callee": "VietnameseCalendar",
+          "lineNumber": 22
+        },
+        {
+          "caller": "main",
+          "callee": "resolve_maihoa",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 25
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 25
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "SystemExit",
+          "lineNumber": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "calendar_adapter/audit.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 169,
+      "nonEmptyLines": 151,
+      "functions": [
+        {
+          "name": "read_moons",
+          "startLine": 45,
+          "endLine": 68,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "structural_check",
+          "startLine": 71,
+          "endLine": 96,
+          "params": [
+            "calendar"
+          ]
+        },
+        {
+          "name": "audit",
+          "startLine": 99,
+          "endLine": 151,
+          "params": [
+            "reference_paths"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 154,
+          "endLine": 165,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "_PreText",
+          "startLine": 25,
+          "endLine": 42,
+          "methods": [
+            "__init__",
+            "handle_starttag",
+            "handle_endtag",
+            "handle_data"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_PreText",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "read_moons",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "structural_check",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "audit",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 154,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 27
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 27
+        },
+        {
+          "caller": "handle_endtag",
+          "callee": "self.parts.append",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handle_data",
+          "callee": "self.parts.append",
+          "lineNumber": 42
+        },
+        {
+          "caller": "read_moons",
+          "callee": "_PreText",
+          "lineNumber": 46
+        },
+        {
+          "caller": "read_moons",
+          "callee": "parser.feed",
+          "lineNumber": 47
+        },
+        {
+          "caller": "read_moons",
+          "callee": "path.read_text",
+          "lineNumber": 47
+        },
+        {
+          "caller": "read_moons",
+          "callee": "enumerate",
+          "lineNumber": 48
+        },
+        {
+          "caller": "read_moons",
+          "callee": "\"Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec\".split",
+          "lineNumber": 48
+        },
+        {
+          "caller": "read_moons",
+          "callee": "\"\".join(parser.parts).splitlines",
+          "lineNumber": 51
+        },
+        {
+          "caller": "read_moons",
+          "callee": "\"\".join",
+          "lineNumber": 51
+        },
+        {
+          "caller": "read_moons",
+          "callee": "re.match",
+          "lineNumber": 52
+        },
+        {
+          "caller": "read_moons",
+          "callee": "int",
+          "lineNumber": 54
+        },
+        {
+          "caller": "read_moons",
+          "callee": "re.search",
+          "lineNumber": 56
+        },
+        {
+          "caller": "read_moons",
+          "callee": "ValueError",
+          "lineNumber": 59
+        },
+        {
+          "caller": "read_moons",
+          "callee": "result.append",
+          "lineNumber": 60
+        },
+        {
+          "caller": "read_moons",
+          "callee": "datetime",
+          "lineNumber": 60
+        },
+        {
+          "caller": "read_moons",
+          "callee": "int",
+          "lineNumber": 60
+        },
+        {
+          "caller": "read_moons",
+          "callee": "int",
+          "lineNumber": 60
+        },
+        {
+          "caller": "read_moons",
+          "callee": "int",
+          "lineNumber": 60
+        },
+        {
+          "caller": "read_moons",
+          "callee": "len",
+          "lineNumber": 61
+        },
+        {
+          "caller": "read_moons",
+          "callee": "sorted",
+          "lineNumber": 61
+        },
+        {
+          "caller": "read_moons",
+          "callee": "set",
+          "lineNumber": 61
+        },
+        {
+          "caller": "read_moons",
+          "callee": "ValueError",
+          "lineNumber": 62
+        },
+        {
+          "caller": "read_moons",
+          "callee": "counts.get",
+          "lineNumber": 65
+        },
+        {
+          "caller": "read_moons",
+          "callee": "len",
+          "lineNumber": 66
+        },
+        {
+          "caller": "read_moons",
+          "callee": "any",
+          "lineNumber": 66
+        },
+        {
+          "caller": "read_moons",
+          "callee": "counts.values",
+          "lineNumber": 66
+        },
+        {
+          "caller": "read_moons",
+          "callee": "ValueError",
+          "lineNumber": 67
+        },
+        {
+          "caller": "structural_check",
+          "callee": "calendar.to_lunar",
+          "lineNumber": 78
+        },
+        {
+          "caller": "structural_check",
+          "callee": "calendar.to_solar",
+          "lineNumber": 79
+        },
+        {
+          "caller": "structural_check",
+          "callee": "errors.append",
+          "lineNumber": 80
+        },
+        {
+          "caller": "structural_check",
+          "callee": "current.isoformat",
+          "lineNumber": 80
+        },
+        {
+          "caller": "structural_check",
+          "callee": "int",
+          "lineNumber": 89
+        },
+        {
+          "caller": "structural_check",
+          "callee": "errors.append",
+          "lineNumber": 92
+        },
+        {
+          "caller": "structural_check",
+          "callee": "current.isoformat",
+          "lineNumber": 92
+        },
+        {
+          "caller": "structural_check",
+          "callee": "timedelta",
+          "lineNumber": 95
+        },
+        {
+          "caller": "audit",
+          "callee": "VietnameseCalendar",
+          "lineNumber": 100
+        },
+        {
+          "caller": "audit",
+          "callee": "LOOKUP_START.isoformat",
+          "lineNumber": 101
+        },
+        {
+          "caller": "audit",
+          "callee": "LOOKUP_END.isoformat",
+          "lineNumber": 101
+        },
+        {
+          "caller": "audit",
+          "callee": "structural_check",
+          "lineNumber": 101
+        },
+        {
+          "caller": "audit",
+          "callee": "references.extend",
+          "lineNumber": 104
+        },
+        {
+          "caller": "audit",
+          "callee": "read_moons",
+          "lineNumber": 104
+        },
+        {
+          "caller": "audit",
+          "callee": "sorted",
+          "lineNumber": 105
+        },
+        {
+          "caller": "audit",
+          "callee": "set",
+          "lineNumber": 105
+        },
+        {
+          "caller": "audit",
+          "callee": "ValueError",
+          "lineNumber": 106
+        },
+        {
+          "caller": "audit",
+          "callee": "timedelta",
+          "lineNumber": 112
+        },
+        {
+          "caller": "audit",
+          "callee": "local.date",
+          "lineNumber": 113
+        },
+        {
+          "caller": "audit",
+          "callee": "round",
+          "lineNumber": 116
+        },
+        {
+          "caller": "audit",
+          "callee": "_jdn",
+          "lineNumber": 116
+        },
+        {
+          "caller": "audit",
+          "callee": "local.date",
+          "lineNumber": 116
+        },
+        {
+          "caller": "audit",
+          "callee": "date.fromordinal",
+          "lineNumber": 117
+        },
+        {
+          "caller": "audit",
+          "callee": "_new_moon_day",
+          "lineNumber": 117
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime",
+          "lineNumber": 118
+        },
+        {
+          "caller": "audit",
+          "callee": "timedelta",
+          "lineNumber": 118
+        },
+        {
+          "caller": "audit",
+          "callee": "_new_moon_jd",
+          "lineNumber": 118
+        },
+        {
+          "caller": "audit",
+          "callee": "abs",
+          "lineNumber": 119
+        },
+        {
+          "caller": "audit",
+          "callee": "(predicted_ut - reference_ut).total_seconds",
+          "lineNumber": 119
+        },
+        {
+          "caller": "audit",
+          "callee": "max",
+          "lineNumber": 120
+        },
+        {
+          "caller": "audit",
+          "callee": "calendar.to_lunar",
+          "lineNumber": 121
+        },
+        {
+          "caller": "audit",
+          "callee": "local.date",
+          "lineNumber": 121
+        },
+        {
+          "caller": "audit",
+          "callee": "reference_ut.isoformat",
+          "lineNumber": 122
+        },
+        {
+          "caller": "audit",
+          "callee": "local.date().isoformat",
+          "lineNumber": 122
+        },
+        {
+          "caller": "audit",
+          "callee": "local.date",
+          "lineNumber": 122
+        },
+        {
+          "caller": "audit",
+          "callee": "predicted_date.isoformat",
+          "lineNumber": 122
+        },
+        {
+          "caller": "audit",
+          "callee": "asdict",
+          "lineNumber": 122
+        },
+        {
+          "caller": "audit",
+          "callee": "round",
+          "lineNumber": 122
+        },
+        {
+          "caller": "audit",
+          "callee": "local.date",
+          "lineNumber": 123
+        },
+        {
+          "caller": "audit",
+          "callee": "errors.append",
+          "lineNumber": 124
+        },
+        {
+          "caller": "audit",
+          "callee": "min",
+          "lineNumber": 129
+        },
+        {
+          "caller": "audit",
+          "callee": "midnight_reviews.append",
+          "lineNumber": 130
+        },
+        {
+          "caller": "audit",
+          "callee": "(reference_ut + timedelta(hours=8)).date",
+          "lineNumber": 131
+        },
+        {
+          "caller": "audit",
+          "callee": "timedelta",
+          "lineNumber": 131
+        },
+        {
+          "caller": "audit",
+          "callee": "local.date",
+          "lineNumber": 132
+        },
+        {
+          "caller": "audit",
+          "callee": "utc8_differences.append",
+          "lineNumber": 133
+        },
+        {
+          "caller": "audit",
+          "callee": "reference_ut.isoformat",
+          "lineNumber": 133
+        },
+        {
+          "caller": "audit",
+          "callee": "local.date().isoformat",
+          "lineNumber": 133
+        },
+        {
+          "caller": "audit",
+          "callee": "local.date",
+          "lineNumber": 133
+        },
+        {
+          "caller": "audit",
+          "callee": "other_date.isoformat",
+          "lineNumber": 133
+        },
+        {
+          "caller": "audit",
+          "callee": "hashlib.sha256(path.read_bytes()).hexdigest",
+          "lineNumber": 137
+        },
+        {
+          "caller": "audit",
+          "callee": "hashlib.sha256",
+          "lineNumber": 137
+        },
+        {
+          "caller": "audit",
+          "callee": "path.read_bytes",
+          "lineNumber": 137
+        },
+        {
+          "caller": "audit",
+          "callee": "round",
+          "lineNumber": 144
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 155
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 156
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 157
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 158
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 159
+        },
+        {
+          "caller": "main",
+          "callee": "audit",
+          "lineNumber": 160
+        },
+        {
+          "caller": "main",
+          "callee": "args.output.parent.mkdir",
+          "lineNumber": 161
+        },
+        {
+          "caller": "main",
+          "callee": "args.output.write_text",
+          "lineNumber": 162
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 162
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 163
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 163
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 163
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 163
+        },
+        {
+          "caller": "main",
+          "callee": "SystemExit",
+          "lineNumber": 165
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "calendar_adapter/vietnamese.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 253,
+      "nonEmptyLines": 217,
+      "functions": [
+        {
+          "name": "_jdn",
+          "startLine": 51,
+          "endLine": 53,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "_date_from_jdn",
+          "startLine": 56,
+          "endLine": 57,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "_new_moon_jd",
+          "startLine": 61,
+          "endLine": 84,
+          "params": [
+            "k"
+          ]
+        },
+        {
+          "name": "_new_moon_day",
+          "startLine": 87,
+          "endLine": 88,
+          "params": [
+            "k",
+            "offset_hours"
+          ]
+        },
+        {
+          "name": "_principal_term_sector",
+          "startLine": 91,
+          "endLine": 100,
+          "params": [
+            "jdn",
+            "offset_hours"
+          ]
+        },
+        {
+          "name": "_month_eleven_start",
+          "startLine": 104,
+          "endLine": 109,
+          "params": [
+            "year",
+            "offset_hours"
+          ]
+        },
+        {
+          "name": "_leap_offset",
+          "startLine": 113,
+          "endLine": 121,
+          "params": [
+            "month_eleven_start",
+            "offset_hours"
+          ]
+        },
+        {
+          "name": "_solar_to_lunar",
+          "startLine": 124,
+          "endLine": 151,
+          "params": [
+            "value",
+            "offset_hours"
+          ]
+        },
+        {
+          "name": "resolve_maihoa",
+          "startLine": 216,
+          "endLine": 253,
+          "params": [
+            "civil_datetime",
+            "true_solar_datetime",
+            "kind"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CalendarError",
+          "startLine": 23,
+          "endLine": 28,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        },
+        {
+          "name": "LunarDate",
+          "startLine": 32,
+          "endLine": 48,
+          "methods": [
+            "__post_init__",
+            "year_branch_index"
+          ],
+          "properties": [
+            "year",
+            "month",
+            "day",
+            "is_leap_month"
+          ]
+        },
+        {
+          "name": "VietnameseCalendar",
+          "startLine": 154,
+          "endLine": 213,
+          "methods": [
+            "_validate_date",
+            "to_lunar",
+            "to_solar",
+            "describe"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CalendarError",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "LunarDate",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "_jdn",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "_date_from_jdn",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "_new_moon_jd",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "_new_moon_day",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "_principal_term_sector",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "_month_eleven_start",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "_leap_offset",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "_solar_to_lunar",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "VietnameseCalendar",
+          "line": 154,
+          "isDefault": false
+        },
+        {
+          "name": "resolve_maihoa",
+          "line": 216,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 27
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 27
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "any",
+          "lineNumber": 39
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "type",
+          "lineNumber": 39
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "CalendarError",
+          "lineNumber": 40
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "CalendarError",
+          "lineNumber": 42
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "type",
+          "lineNumber": 43
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "CalendarError",
+          "lineNumber": 44
+        },
+        {
+          "caller": "_jdn",
+          "callee": "value.toordinal",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_date_from_jdn",
+          "callee": "date.fromordinal",
+          "lineNumber": 57
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 71
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 77
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 78
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 79
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 80
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 81
+        },
+        {
+          "caller": "_new_moon_jd",
+          "callee": "sin",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_new_moon_day",
+          "callee": "floor",
+          "lineNumber": 88
+        },
+        {
+          "caller": "_new_moon_day",
+          "callee": "_new_moon_jd",
+          "lineNumber": 88
+        },
+        {
+          "caller": "_principal_term_sector",
+          "callee": "sin",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_principal_term_sector",
+          "callee": "sin",
+          "lineNumber": 99
+        },
+        {
+          "caller": "_principal_term_sector",
+          "callee": "sin",
+          "lineNumber": 99
+        },
+        {
+          "caller": "_principal_term_sector",
+          "callee": "floor",
+          "lineNumber": 100
+        },
+        {
+          "caller": "_month_eleven_start",
+          "callee": "floor",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_month_eleven_start",
+          "callee": "_jdn",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_month_eleven_start",
+          "callee": "date",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_month_eleven_start",
+          "callee": "_new_moon_day",
+          "lineNumber": 106
+        },
+        {
+          "caller": "_month_eleven_start",
+          "callee": "_principal_term_sector",
+          "lineNumber": 107
+        },
+        {
+          "caller": "_month_eleven_start",
+          "callee": "_new_moon_day",
+          "lineNumber": 108
+        },
+        {
+          "caller": "_leap_offset",
+          "callee": "floor",
+          "lineNumber": 114
+        },
+        {
+          "caller": "_leap_offset",
+          "callee": "_principal_term_sector",
+          "lineNumber": 115
+        },
+        {
+          "caller": "_leap_offset",
+          "callee": "_new_moon_day",
+          "lineNumber": 115
+        },
+        {
+          "caller": "_leap_offset",
+          "callee": "range",
+          "lineNumber": 116
+        },
+        {
+          "caller": "_leap_offset",
+          "callee": "_principal_term_sector",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_leap_offset",
+          "callee": "_new_moon_day",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_leap_offset",
+          "callee": "CalendarError",
+          "lineNumber": 121
+        },
+        {
+          "caller": "_solar_to_lunar",
+          "callee": "_jdn",
+          "lineNumber": 126
+        },
+        {
+          "caller": "_solar_to_lunar",
+          "callee": "floor",
+          "lineNumber": 127
+        },
+        {
+          "caller": "_solar_to_lunar",
+          "callee": "_new_moon_day",
+          "lineNumber": 128
+        },
+        {
+          "caller": "_solar_to_lunar",
+          "callee": "_new_moon_day",
+          "lineNumber": 130
+        },
+        {
+          "caller": "_solar_to_lunar",
+          "callee": "_month_eleven_start",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_solar_to_lunar",
+          "callee": "_month_eleven_start",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_solar_to_lunar",
+          "callee": "_month_eleven_start",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_solar_to_lunar",
+          "callee": "floor",
+          "lineNumber": 139
+        },
+        {
+          "caller": "_solar_to_lunar",
+          "callee": "_leap_offset",
+          "lineNumber": 143
+        },
+        {
+          "caller": "_solar_to_lunar",
+          "callee": "LunarDate",
+          "lineNumber": 151
+        },
+        {
+          "caller": "_validate_date",
+          "callee": "type",
+          "lineNumber": 163
+        },
+        {
+          "caller": "_validate_date",
+          "callee": "CalendarError",
+          "lineNumber": 164
+        },
+        {
+          "caller": "_validate_date",
+          "callee": "CalendarError",
+          "lineNumber": 166
+        },
+        {
+          "caller": "to_lunar",
+          "callee": "self._validate_date",
+          "lineNumber": 169
+        },
+        {
+          "caller": "to_lunar",
+          "callee": "_solar_to_lunar",
+          "lineNumber": 170
+        },
+        {
+          "caller": "to_solar",
+          "callee": "isinstance",
+          "lineNumber": 173
+        },
+        {
+          "caller": "to_solar",
+          "callee": "CalendarError",
+          "lineNumber": 174
+        },
+        {
+          "caller": "to_solar",
+          "callee": "CalendarError",
+          "lineNumber": 176
+        },
+        {
+          "caller": "to_solar",
+          "callee": "_month_eleven_start",
+          "lineNumber": 178
+        },
+        {
+          "caller": "to_solar",
+          "callee": "_month_eleven_start",
+          "lineNumber": 179
+        },
+        {
+          "caller": "to_solar",
+          "callee": "_month_eleven_start",
+          "lineNumber": 181
+        },
+        {
+          "caller": "to_solar",
+          "callee": "_month_eleven_start",
+          "lineNumber": 182
+        },
+        {
+          "caller": "to_solar",
+          "callee": "floor",
+          "lineNumber": 183
+        },
+        {
+          "caller": "to_solar",
+          "callee": "_leap_offset",
+          "lineNumber": 186
+        },
+        {
+          "caller": "to_solar",
+          "callee": "CalendarError",
+          "lineNumber": 189
+        },
+        {
+          "caller": "to_solar",
+          "callee": "CalendarError",
+          "lineNumber": 193
+        },
+        {
+          "caller": "to_solar",
+          "callee": "_date_from_jdn",
+          "lineNumber": 194
+        },
+        {
+          "caller": "to_solar",
+          "callee": "_new_moon_day",
+          "lineNumber": 194
+        },
+        {
+          "caller": "to_solar",
+          "callee": "self._validate_date",
+          "lineNumber": 195
+        },
+        {
+          "caller": "to_solar",
+          "callee": "self.to_lunar",
+          "lineNumber": 197
+        },
+        {
+          "caller": "to_solar",
+          "callee": "CalendarError",
+          "lineNumber": 198
+        },
+        {
+          "caller": "describe",
+          "callee": "self.to_lunar",
+          "lineNumber": 202
+        },
+        {
+          "caller": "describe",
+          "callee": "value.isoformat",
+          "lineNumber": 204
+        },
+        {
+          "caller": "describe",
+          "callee": "asdict",
+          "lineNumber": 205
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "CalendarError",
+          "lineNumber": 223
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "isinstance",
+          "lineNumber": 224
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "civil_datetime.utcoffset",
+          "lineNumber": 224
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "timedelta",
+          "lineNumber": 224
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "CalendarError",
+          "lineNumber": 225
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "CalendarError",
+          "lineNumber": 228
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "isinstance",
+          "lineNumber": 229
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "CalendarError",
+          "lineNumber": 230
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "(true_solar_datetime - civil_datetime.replace(tzinfo=None)).total_seconds",
+          "lineNumber": 233
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "civil_datetime.replace",
+          "lineNumber": 233
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "isfinite",
+          "lineNumber": 234
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "CalendarError",
+          "lineNumber": 235
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "(true_solar_datetime + timedelta(hours=1)).date",
+          "lineNumber": 236
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "timedelta",
+          "lineNumber": 236
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "VietnameseCalendar",
+          "lineNumber": 237
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "calendar.to_lunar",
+          "lineNumber": 238
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "civil_datetime.isoformat",
+          "lineNumber": 242
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "civil_datetime.astimezone(timezone.utc).isoformat().replace",
+          "lineNumber": 243
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "civil_datetime.astimezone(timezone.utc).isoformat",
+          "lineNumber": 243
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "civil_datetime.astimezone",
+          "lineNumber": 243
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "true_solar_datetime.isoformat",
+          "lineNumber": 244
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "effective_date.isoformat",
+          "lineNumber": 245
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "asdict",
+          "lineNumber": 246
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "calendar.to_lunar",
+          "lineNumber": 246
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "civil_datetime.date",
+          "lineNumber": 246
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "asdict",
+          "lineNumber": 247
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 12,
+        "functionCount": 9,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "tests/test_vietnamese_calendar.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 71,
+      "classes": [
+        {
+          "name": "CalendarTests",
+          "startLine": 12,
+          "endLine": 86,
+          "methods": [
+            "setUp",
+            "assert_code",
+            "test_published_hnd_1984_dates",
+            "test_published_hnd_2004_leap_month",
+            "test_utc7_and_utc8_differ_away_from_midnight",
+            "test_buffer_endpoints_round_trip",
+            "test_outside_internal_buffer",
+            "test_invalid_lunar_days_and_leap_months",
+            "test_input_types",
+            "test_month_end_rolls_all_fields_at_23",
+            "test_tst_boundary_not_civil_clock_boundary",
+            "test_upstream_tst_may_cross_input_year_bounds",
+            "test_input_range_rejected_before_tst",
+            "test_timezone_and_tst_are_separate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CalendarTests",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setUp",
+          "callee": "VietnameseCalendar",
+          "lineNumber": 14
+        },
+        {
+          "caller": "assert_code",
+          "callee": "self.assertRaises",
+          "lineNumber": 17
+        },
+        {
+          "caller": "assert_code",
+          "callee": "operation",
+          "lineNumber": 18
+        },
+        {
+          "caller": "assert_code",
+          "callee": "self.assertEqual",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "self.assertEqual",
+          "lineNumber": 23
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "self.calendar.to_lunar",
+          "lineNumber": 23
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "date",
+          "lineNumber": 23
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "LunarDate",
+          "lineNumber": 23
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "self.assertEqual",
+          "lineNumber": 24
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "self.calendar.to_lunar",
+          "lineNumber": 24
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "date",
+          "lineNumber": 24
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "LunarDate",
+          "lineNumber": 24
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "self.assertEqual",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "self.calendar.to_lunar",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "date",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_published_hnd_1984_dates",
+          "callee": "LunarDate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "self.assertEqual",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "self.calendar.to_lunar",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "date",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "LunarDate",
+          "lineNumber": 28
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "self.assertEqual",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "self.calendar.to_lunar",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "date",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "LunarDate",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "self.assertEqual",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "self.calendar.to_lunar",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "date",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_published_hnd_2004_leap_month",
+          "callee": "LunarDate",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "self.assertEqual",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "self.calendar.to_lunar",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "date",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "self.assertEqual",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "_solar_to_lunar",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "date",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "self.assertEqual",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "self.calendar.to_lunar",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "date",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "self.assertEqual",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "_solar_to_lunar",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_utc7_and_utc8_differ_away_from_midnight",
+          "callee": "date",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_buffer_endpoints_round_trip",
+          "callee": "date",
+          "lineNumber": 40
+        },
+        {
+          "caller": "test_buffer_endpoints_round_trip",
+          "callee": "date",
+          "lineNumber": 40
+        },
+        {
+          "caller": "test_buffer_endpoints_round_trip",
+          "callee": "self.subTest",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_buffer_endpoints_round_trip",
+          "callee": "self.assertEqual",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_buffer_endpoints_round_trip",
+          "callee": "self.calendar.to_solar",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_buffer_endpoints_round_trip",
+          "callee": "self.calendar.to_lunar",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_outside_internal_buffer",
+          "callee": "date",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_outside_internal_buffer",
+          "callee": "date",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_outside_internal_buffer",
+          "callee": "self.assert_code",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_invalid_lunar_days_and_leap_months",
+          "callee": "self.assert_code",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_invalid_lunar_days_and_leap_months",
+          "callee": "LunarDate",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_invalid_lunar_days_and_leap_months",
+          "callee": "self.assert_code",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_invalid_lunar_days_and_leap_months",
+          "callee": "LunarDate",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_invalid_lunar_days_and_leap_months",
+          "callee": "self.assert_code",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_invalid_lunar_days_and_leap_months",
+          "callee": "LunarDate",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_input_types",
+          "callee": "self.assert_code",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_input_types",
+          "callee": "self.assert_code",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_input_types",
+          "callee": "self.assert_code",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_input_types",
+          "callee": "datetime",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_month_end_rolls_all_fields_at_23",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_month_end_rolls_all_fields_at_23",
+          "callee": "resolve_maihoa",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_month_end_rolls_all_fields_at_23",
+          "callee": "datetime",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_month_end_rolls_all_fields_at_23",
+          "callee": "self.assertEqual",
+          "lineNumber": 61
+        },
+        {
+          "caller": "test_month_end_rolls_all_fields_at_23",
+          "callee": "self.assertEqual",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_month_end_rolls_all_fields_at_23",
+          "callee": "self.assertEqual",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_month_end_rolls_all_fields_at_23",
+          "callee": "self.assertEqual",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_tst_boundary_not_civil_clock_boundary",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_tst_boundary_not_civil_clock_boundary",
+          "callee": "resolve_maihoa",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_tst_boundary_not_civil_clock_boundary",
+          "callee": "datetime",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_tst_boundary_not_civil_clock_boundary",
+          "callee": "self.assertEqual",
+          "lineNumber": 69
+        },
+        {
+          "caller": "test_tst_boundary_not_civil_clock_boundary",
+          "callee": "self.assertEqual",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_upstream_tst_may_cross_input_year_bounds",
+          "callee": "resolve_maihoa",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_upstream_tst_may_cross_input_year_bounds",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_upstream_tst_may_cross_input_year_bounds",
+          "callee": "datetime",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_upstream_tst_may_cross_input_year_bounds",
+          "callee": "self.assertEqual",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_upstream_tst_may_cross_input_year_bounds",
+          "callee": "resolve_maihoa",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_upstream_tst_may_cross_input_year_bounds",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_upstream_tst_may_cross_input_year_bounds",
+          "callee": "datetime",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_upstream_tst_may_cross_input_year_bounds",
+          "callee": "self.assertEqual",
+          "lineNumber": 76
+        },
+        {
+          "caller": "test_input_range_rejected_before_tst",
+          "callee": "self.assert_code",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_input_range_rejected_before_tst",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_input_range_rejected_before_tst",
+          "callee": "datetime",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_input_range_rejected_before_tst",
+          "callee": "self.assert_code",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_input_range_rejected_before_tst",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_input_range_rejected_before_tst",
+          "callee": "datetime",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "self.assert_code",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "datetime",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "datetime",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "self.assert_code",
+          "lineNumber": 84
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 84
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "datetime",
+          "lineNumber": 84
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "self.assert_code",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "self.assert_code",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_timezone_and_tst_are_separate",
+          "callee": "datetime",
+          "lineNumber": 86
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

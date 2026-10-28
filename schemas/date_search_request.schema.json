@@ -1,0 +1,291 @@
+{
+  "$defs": {
+    "AllowedHours": {
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "default": "00:00:00",
+          "format": "time",
+          "title": "Start",
+          "type": "string"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "format": "time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        }
+      },
+      "title": "AllowedHours",
+      "type": "object"
+    },
+    "Birth": {
+      "additionalProperties": false,
+      "properties": {
+        "civil_datetime": {
+          "format": "date-time",
+          "title": "Civil Datetime",
+          "type": "string"
+        },
+        "location": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Location"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "clock_uncertainty_seconds": {
+          "anyOf": [
+            {
+              "maximum": 86400,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Clock Uncertainty Seconds"
+        },
+        "override_dung_than": {
+          "anyOf": [
+            {
+              "enum": [
+                "Mộc",
+                "Hỏa",
+                "Thổ",
+                "Kim",
+                "Thủy"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Override Dung Than"
+        }
+      },
+      "required": [
+        "civil_datetime"
+      ],
+      "title": "Birth",
+      "type": "object"
+    },
+    "DateRange": {
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "format": "date",
+          "title": "Start",
+          "type": "string"
+        },
+        "end": {
+          "format": "date",
+          "title": "End",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "title": "DateRange",
+      "type": "object"
+    },
+    "DateSubject": {
+      "additionalProperties": false,
+      "properties": {
+        "subject_id": {
+          "maxLength": 40,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Subject Id",
+          "type": "string"
+        },
+        "birth": {
+          "$ref": "#/$defs/Birth"
+        }
+      },
+      "required": [
+        "subject_id",
+        "birth"
+      ],
+      "title": "DateSubject",
+      "type": "object"
+    },
+    "Location": {
+      "additionalProperties": false,
+      "properties": {
+        "longitude": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Longitude",
+          "type": "number"
+        },
+        "latitude": {
+          "anyOf": [
+            {
+              "maximum": 90,
+              "minimum": -90,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Latitude"
+        },
+        "source": {
+          "default": "MANUAL",
+          "enum": [
+            "MANUAL",
+            "DEVICE",
+            "IP",
+            "DEFAULT"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "accuracy_m": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Accuracy M"
+        },
+        "longitude_uncertainty_degrees": {
+          "anyOf": [
+            {
+              "maximum": 180,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Longitude Uncertainty Degrees"
+        },
+        "acquired_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Acquired At"
+        },
+        "fallback_reason": {
+          "anyOf": [
+            {
+              "maxLength": 200,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fallback Reason"
+        }
+      },
+      "required": [
+        "longitude"
+      ],
+      "title": "Location",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "activity": {
+      "enum": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "RENOVATION",
+        "TRADE",
+        "LAND_BREAKING",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_EDUCATION",
+        "START_JOB",
+        "ANCESTOR_RITE",
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "INCENSE_INSTALLATION",
+        "BED_SETUP",
+        "DEMOLITION",
+        "PRAYER"
+      ],
+      "title": "Activity",
+      "type": "string"
+    },
+    "subjects": {
+      "items": {
+        "$ref": "#/$defs/DateSubject"
+      },
+      "maxItems": 2,
+      "minItems": 1,
+      "title": "Subjects",
+      "type": "array"
+    },
+    "date_range": {
+      "$ref": "#/$defs/DateRange"
+    },
+    "allowed_weekdays": {
+      "items": {
+        "type": "integer"
+      },
+      "maxItems": 7,
+      "minItems": 1,
+      "title": "Allowed Weekdays",
+      "type": "array"
+    },
+    "allowed_hours": {
+      "$ref": "#/$defs/AllowedHours"
+    },
+    "include_details": {
+      "default": false,
+      "title": "Include Details",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "activity",
+    "subjects",
+    "date_range"
+  ],
+  "title": "DateSearchRequest",
+  "type": "object"
+}

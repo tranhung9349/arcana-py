@@ -1,0 +1,591 @@
+{
+ "nodes": [
+  {
+   "id": "file:calendar_adapter/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "filePath": "calendar_adapter/__init__.py",
+   "summary": "Barrel của gói calendar_adapter (adapter lịch Việt Nam UTC+7 thử nghiệm của quy tắc v3 cũ), re-export CalendarError, LunarDate, VietnameseCalendar và resolve_maihoa; chỉ giữ để tái lập nghiên cứu, ứng dụng runtime không import.",
+   "tags": [
+    "entry-point",
+    "barrel",
+    "legacy",
+    "calendar"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:calendar_adapter/__main__.py",
+   "type": "file",
+   "name": "__main__.py",
+   "filePath": "calendar_adapter/__main__.py",
+   "summary": "Điểm vào CLI `python -m calendar_adapter` để thử adapter v3 cũ: lệnh `date` đổi ngày dương sang âm lịch Việt Nam, lệnh `maihoa` ánh xạ giờ dân sự và giờ mặt trời thực (TST) sang biến Y/M/D/H của Mai Hoa, in kết quả JSON.",
+   "tags": [
+    "entry-point",
+    "cli",
+    "legacy",
+    "calendar"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:calendar_adapter/audit.py",
+   "type": "file",
+   "name": "audit.py",
+   "filePath": "calendar_adapter/audit.py",
+   "summary": "Script kiểm toán offline cho adapter lịch Việt Nam cũ: quét cấu trúc toàn dải tra cứu và so sánh ngày sóc dự đoán với bảng pha trăng NASA (Espenak) đã tải về, xuất báo cáo JSON và luôn đánh dấu production_ready=False.",
+   "tags": [
+    "validation",
+    "audit",
+    "legacy",
+    "astronomy",
+    "script"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:calendar_adapter/vietnamese.py",
+   "type": "file",
+   "name": "vietnamese.py",
+   "filePath": "calendar_adapter/vietnamese.py",
+   "summary": "Lõi adapter lịch âm Việt Nam UTC+7 thử nghiệm của quy tắc v3 cũ, theo thuật toán rút gọn của Hồ Ngọc Đức: tính sóc, trung khí xấp xỉ, tháng nhuận, chuyển đổi dương↔âm trong dải 1949–2031 và ánh xạ TST sang biến Mai Hoa. Không còn được ứng dụng runtime (dùng lịch Bắc Kinh UTC+8 qua lunar-python) import.",
+   "tags": [
+    "legacy",
+    "calendar",
+    "astronomy",
+    "data-model",
+    "validation"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Dùng @dataclass(frozen=True) với __post_init__ để kiểm tra kiểu nghiêm ngặt (type(v) is int) và @lru_cache cho các mốc tháng 11 âm lịch tốn kém tính toán."
+  },
+  {
+   "id": "file:tests/test_vietnamese_calendar.py",
+   "type": "file",
+   "name": "test_vietnamese_calendar.py",
+   "filePath": "tests/test_vietnamese_calendar.py",
+   "summary": "Bộ test unittest hồi quy cho adapter lịch Việt Nam v3 đã lưu trữ (không phải lịch của ứng dụng): kiểm tra ngày công bố của Hồ Ngọc Đức, tháng nhuận 2004, khác biệt UTC+7/UTC+8, biên dải tra cứu, kiểu đầu vào và ranh giới TST.",
+   "tags": [
+    "test",
+    "legacy",
+    "calendar",
+    "regression"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:calendar_adapter/__main__.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "calendar_adapter/__main__.py",
+   "lineRange": [
+    10,
+    28
+   ],
+   "summary": "Dựng argparse với hai subcommand `date` và `maihoa`, gọi VietnameseCalendar.describe hoặc resolve_maihoa rồi in JSON; bắt CalendarError để in mã lỗi và thoát với mã 2.",
+   "tags": [
+    "entry-point",
+    "cli",
+    "serialization"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:calendar_adapter/audit.py:_PreText",
+   "type": "class",
+   "name": "_PreText",
+   "filePath": "calendar_adapter/audit.py",
+   "lineRange": [
+    25,
+    42
+   ],
+   "summary": "HTMLParser nội bộ chỉ gom văn bản bên trong thẻ <pre> của trang bảng pha trăng NASA.",
+   "tags": [
+    "utility",
+    "parser",
+    "html"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:calendar_adapter/audit.py:read_moons",
+   "type": "function",
+   "name": "read_moons",
+   "filePath": "calendar_adapter/audit.py",
+   "lineRange": [
+    45,
+    68
+   ],
+   "summary": "Đọc file HTML bảng pha trăng NASA, trích các thời điểm trăng mới (UT) thành danh sách datetime đã sắp xếp.",
+   "tags": [
+    "parser",
+    "astronomy",
+    "utility"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:calendar_adapter/audit.py:structural_check",
+   "type": "function",
+   "name": "structural_check",
+   "filePath": "calendar_adapter/audit.py",
+   "lineRange": [
+    71,
+    96
+   ],
+   "summary": "Duyệt từng ngày trong dải tra cứu để kiểm tra tính nhất quán cấu trúc của chuyển đổi dương↔âm (ngày liên tiếp, round-trip) và thu thập lỗi.",
+   "tags": [
+    "validation",
+    "audit",
+    "calendar"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:calendar_adapter/audit.py:audit",
+   "type": "function",
+   "name": "audit",
+   "filePath": "calendar_adapter/audit.py",
+   "lineRange": [
+    99,
+    151
+   ],
+   "summary": "Tạo báo cáo kiểm toán: chạy structural_check, so sánh ngày sóc dự đoán với mốc NASA theo UTC+7, ghi lệch phút, ca gần nửa đêm cần xem tay và các ngày khác biệt UTC+7/UTC+8.",
+   "tags": [
+    "audit",
+    "validation",
+    "astronomy",
+    "reporting"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:calendar_adapter/audit.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "calendar_adapter/audit.py",
+   "lineRange": [
+    154,
+    165
+   ],
+   "summary": "CLI nhận đường dẫn hai bảng NASA 1901/2001 và file output, ghi báo cáo JSON, in tóm tắt và thoát mã 1 nếu có lỗi hoặc mismatch.",
+   "tags": [
+    "entry-point",
+    "cli",
+    "audit"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:calendar_adapter/vietnamese.py:CalendarError",
+   "type": "class",
+   "name": "CalendarError",
+   "filePath": "calendar_adapter/vietnamese.py",
+   "lineRange": [
+    23,
+    28
+   ],
+   "summary": "Ngoại lệ kế thừa ValueError mang mã lỗi máy-đọc ổn định (code) cho lỗi đầu vào hoặc tra cứu lịch.",
+   "tags": [
+    "error-handling",
+    "exception",
+    "type-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:calendar_adapter/vietnamese.py:LunarDate",
+   "type": "class",
+   "name": "LunarDate",
+   "filePath": "calendar_adapter/vietnamese.py",
+   "lineRange": [
+    32,
+    48
+   ],
+   "summary": "Dataclass bất biến biểu diễn ngày âm lịch (năm, tháng, ngày, cờ tháng nhuận), kiểm tra kiểu và phạm vi, cung cấp chỉ số chi năm.",
+   "tags": [
+    "data-model",
+    "immutable",
+    "validation",
+    "calendar"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:calendar_adapter/vietnamese.py:VietnameseCalendar",
+   "type": "class",
+   "name": "VietnameseCalendar",
+   "filePath": "calendar_adapter/vietnamese.py",
+   "lineRange": [
+    154,
+    213
+   ],
+   "summary": "Bộ chuyển đổi lịch cố định UTC+7 trong dải 1949-12-01–2031-01-31: to_lunar, to_solar (kiểm tra tháng nhuận và ngày 30 không tồn tại) và describe trả về dict mô tả kèm algorithm_id, trạng thái EXPERIMENTAL.",
+   "tags": [
+    "service",
+    "calendar",
+    "conversion",
+    "legacy"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:calendar_adapter/vietnamese.py:_new_moon_jd",
+   "type": "function",
+   "name": "_new_moon_jd",
+   "filePath": "calendar_adapter/vietnamese.py",
+   "lineRange": [
+    61,
+    84
+   ],
+   "summary": "Tính Julian Day của lần sóc thứ k theo công thức xấp xỉ Meeus.",
+   "tags": [
+    "astronomy",
+    "utility",
+    "calculation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:calendar_adapter/vietnamese.py:_principal_term_sector",
+   "type": "function",
+   "name": "_principal_term_sector",
+   "filePath": "calendar_adapter/vietnamese.py",
+   "lineRange": [
+    91,
+    100
+   ],
+   "summary": "Tính cung 30 độ hoàng kinh mặt trời tại nửa đêm địa phương để xác định trung khí xấp xỉ (không phải bộ giải tiết khí chính xác).",
+   "tags": [
+    "astronomy",
+    "utility",
+    "calculation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:calendar_adapter/vietnamese.py:_solar_to_lunar",
+   "type": "function",
+   "name": "_solar_to_lunar",
+   "filePath": "calendar_adapter/vietnamese.py",
+   "lineRange": [
+    124,
+    151
+   ],
+   "summary": "Bộ chuyển đổi nội bộ từ ngày dương sang LunarDate theo múi giờ (mặc định UTC+7, UTC+8 chỉ để so sánh chẩn đoán), xử lý tháng 11 làm mốc và tháng nhuận.",
+   "tags": [
+    "calendar",
+    "conversion",
+    "calculation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:calendar_adapter/vietnamese.py:resolve_maihoa",
+   "type": "function",
+   "name": "resolve_maihoa",
+   "filePath": "calendar_adapter/vietnamese.py",
+   "lineRange": [
+    216,
+    253
+   ],
+   "summary": "Kiểm tra giờ dân sự +07:00 và giờ mặt trời thực (TST) naive do upstream cung cấp, tính ngày hiệu lực (giờ Tý bắt đầu 23h) và trả về biến Mai Hoa Y/M/D/H cùng metadata.",
+   "tags": [
+    "calendar",
+    "validation",
+    "mai-hoa",
+    "legacy"
+   ],
+   "complexity": "moderate"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:calendar_adapter/__main__.py",
+   "target": "function:calendar_adapter/__main__.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/__main__.py",
+   "target": "function:calendar_adapter/__main__.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:calendar_adapter/audit.py",
+   "target": "class:calendar_adapter/audit.py:_PreText",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/audit.py",
+   "target": "function:calendar_adapter/audit.py:read_moons",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/audit.py",
+   "target": "function:calendar_adapter/audit.py:read_moons",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:calendar_adapter/audit.py",
+   "target": "function:calendar_adapter/audit.py:structural_check",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/audit.py",
+   "target": "function:calendar_adapter/audit.py:structural_check",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:calendar_adapter/audit.py",
+   "target": "function:calendar_adapter/audit.py:audit",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/audit.py",
+   "target": "function:calendar_adapter/audit.py:audit",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:calendar_adapter/audit.py",
+   "target": "function:calendar_adapter/audit.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/audit.py",
+   "target": "function:calendar_adapter/audit.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "class:calendar_adapter/vietnamese.py:CalendarError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "class:calendar_adapter/vietnamese.py:CalendarError",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "class:calendar_adapter/vietnamese.py:LunarDate",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "class:calendar_adapter/vietnamese.py:LunarDate",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "class:calendar_adapter/vietnamese.py:VietnameseCalendar",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "class:calendar_adapter/vietnamese.py:VietnameseCalendar",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "function:calendar_adapter/vietnamese.py:_new_moon_jd",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "function:calendar_adapter/vietnamese.py:_principal_term_sector",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "function:calendar_adapter/vietnamese.py:_solar_to_lunar",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "function:calendar_adapter/vietnamese.py:resolve_maihoa",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "function:calendar_adapter/vietnamese.py:resolve_maihoa",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:calendar_adapter/__init__.py",
+   "target": "file:calendar_adapter/vietnamese.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:calendar_adapter/__main__.py",
+   "target": "file:calendar_adapter/vietnamese.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:calendar_adapter/audit.py",
+   "target": "file:calendar_adapter/vietnamese.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_vietnamese_calendar.py",
+   "target": "file:calendar_adapter/__init__.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_vietnamese_calendar.py",
+   "target": "file:calendar_adapter/vietnamese.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "function:calendar_adapter/__main__.py:main",
+   "target": "class:calendar_adapter/vietnamese.py:VietnameseCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:calendar_adapter/__main__.py:main",
+   "target": "function:calendar_adapter/vietnamese.py:resolve_maihoa",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:calendar_adapter/audit.py:structural_check",
+   "target": "class:calendar_adapter/vietnamese.py:VietnameseCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:calendar_adapter/audit.py:audit",
+   "target": "class:calendar_adapter/vietnamese.py:VietnameseCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:calendar_adapter/audit.py:audit",
+   "target": "function:calendar_adapter/vietnamese.py:_new_moon_jd",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:calendar_adapter/audit.py:audit",
+   "target": "function:calendar_adapter/audit.py:structural_check",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:calendar_adapter/audit.py:audit",
+   "target": "function:calendar_adapter/audit.py:read_moons",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:calendar_adapter/audit.py:main",
+   "target": "function:calendar_adapter/audit.py:audit",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:calendar_adapter/audit.py:read_moons",
+   "target": "class:calendar_adapter/audit.py:_PreText",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:calendar_adapter/vietnamese.py:VietnameseCalendar",
+   "target": "function:calendar_adapter/vietnamese.py:_solar_to_lunar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:calendar_adapter/vietnamese.py:resolve_maihoa",
+   "target": "class:calendar_adapter/vietnamese.py:VietnameseCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:calendar_adapter/vietnamese.py:_solar_to_lunar",
+   "target": "class:calendar_adapter/vietnamese.py:LunarDate",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:calendar_adapter/vietnamese.py",
+   "target": "file:tests/test_vietnamese_calendar.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:calendar_adapter/__init__.py",
+   "target": "file:tests/test_vietnamese_calendar.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

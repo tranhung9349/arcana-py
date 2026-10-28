@@ -1,0 +1,137 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": "data/interpretation/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 9,
+      "nonEmptyLines": 7,
+      "sections": [
+        {
+          "heading": "Corpus hiển thị v1",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "data/interpretation/iching_vi_draft.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1609,
+      "nonEmptyLines": 1609,
+      "sections": [
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "label",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "review_status",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "source_commit",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "description",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "hexagrams",
+          "level": 1,
+          "line": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "data/interpretation/tinix_vi.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 195,
+      "nonEmptyLines": 195,
+      "sections": [
+        {
+          "heading": "stems",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "structures",
+          "level": 1,
+          "line": 104
+        },
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 184
+        },
+        {
+          "heading": "label",
+          "level": 1,
+          "line": 185
+        },
+        {
+          "heading": "source_commit",
+          "level": 1,
+          "line": 186
+        },
+        {
+          "heading": "source_sha256",
+          "level": 1,
+          "line": 187
+        },
+        {
+          "heading": "source_paths",
+          "level": 1,
+          "line": 191
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    }
+  ]
+}

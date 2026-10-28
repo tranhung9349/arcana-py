@@ -1,0 +1,207 @@
+{
+  "checked_at_utc": "2026-10-11T14:56:58.827030+00:00",
+  "rules_version": "mvp1-logic-2026-10-11-v4",
+  "status": "RUNNABLE_LOCAL_MVP",
+  "calendar": {
+    "algorithm_id": "6tail-chinese-utc8-v1",
+    "provider": "lunar-python",
+    "installed_version": "1.4.8",
+    "source_url": "https://github.com/6tail/lunar-python",
+    "input_offset_minutes": 420,
+    "calendar_offset_minutes": 480,
+    "convert_same_utc_instant": true,
+    "maihoa_day_boundary": "00:00_BEIJING",
+    "bazi_day_boundary": "23:00_BEIJING",
+    "bazi_sect": 1,
+    "tst_or_eot_used": false,
+    "location_used": false,
+    "vn_adapter_imported_by_runtime": false,
+    "validation_scope": "Library integration and selected published calendar dates; not independent astronomical certification"
+  },
+  "tests": {
+    "total_passed": 43,
+    "failed": 0,
+    "active_mvp_tests": 31,
+    "archived_v3_adapter_tests": 12,
+    "elapsed_seconds": 3.119,
+    "boundary_cases": [
+      "10:00 VN -> 11:00 Beijing / Ngo",
+      "12 hour branches at one second before and at boundary",
+      "midnight Beijing / Chinese New Year YMD rollover",
+      "23:00 Beijing changes H but not lunar date",
+      "leap 6th month 2025",
+      "Lap Xuan library second boundary",
+      "valid VN year 2030 maps into Beijing 2031",
+      "coordinates do not change calendar/weights/numbers",
+      "v3 replay preserved, new UUID uses v4"
+    ],
+    "generation_contexts_checked": 125,
+    "generation_samples_checked": 750,
+    "same_clock_pillar_integration_cases": 100
+  },
+  "source_fixtures": [
+    {
+      "source": "Hong Kong Observatory",
+      "url": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2024e.pdf",
+      "dates": [
+        "2024-02-09 lunar 2023/12/30",
+        "2024-02-10 lunar 2024/1/1"
+      ]
+    },
+    {
+      "source": "Hong Kong Observatory",
+      "url": "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2025e.txt",
+      "dates": [
+        "2025-06-25 starts lunar month 6",
+        "2025-07-25 starts repeated lunar month 6"
+      ]
+    }
+  ],
+  "range_audit": {
+    "rules_version": "mvp1-logic-2026-10-11-v4",
+    "provider": "lunar-python==1.4.8",
+    "civil_range": [
+      "1950-01-01",
+      "2030-12-31"
+    ],
+    "days_checked": 29585,
+    "roundtrip_mismatches": [],
+    "scope": "Same-library roundtrip and integration; not independent astronomy validation",
+    "full_range_independent_calendar_verified": false,
+    "time_engine_sha256": "260e47e96650c0e167e8b091396f3515fc8899204a09fb3c0f792bcf0147b83a"
+  },
+  "bazi_port": {
+    "cases": 1000,
+    "mismatches": 0,
+    "decision_branches": 10,
+    "scope": "Same supplied four pillars; not an independent calendar or Bazi correctness proof",
+    "source_commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+    "report": "docs/research/bazi_python_port_validation.json"
+  },
+  "live_http": {
+    "health": {
+      "status": "ok",
+      "mvp": 1,
+      "pool": [
+        0,
+        45
+      ],
+      "set_size": 6,
+      "beta": 2,
+      "rules_version": "mvp1-logic-2026-10-11-v4",
+      "calendar": {
+        "implementation": "randomyst/time_engine.py",
+        "algorithm_id": "6tail-chinese-utc8-v1",
+        "provider": "lunar-python",
+        "provider_version": "1.4.8",
+        "source_url": "https://github.com/6tail/lunar-python",
+        "calendar_system": "CHINESE_LUNAR",
+        "input_offset_minutes": 420,
+        "offset_minutes": 480,
+        "conversion": "Same aware instant converted to fixed UTC+8 before passing fields to Solar.fromYmdHms",
+        "effective_date": "date(Beijing civil datetime); no added hour/day",
+        "maihoa_day_boundary": "00:00_BEIJING",
+        "bazi_day_boundary": "23:00_BEIJING",
+        "bazi_sect": 1,
+        "bazi_year_month": "Exact library Jie instant in Beijing time",
+        "true_solar_time_applied": false,
+        "location_affects_calculation": false,
+        "validation_status": "INTEGRATION_TESTED"
+      },
+      "validation_status": "EXPERIMENTAL"
+    },
+    "numbers": [
+      "06",
+      "07",
+      "21",
+      "35",
+      "42",
+      "45"
+    ],
+    "status": "OPTIMAL",
+    "score": 81.6,
+    "attempts": 1,
+    "same_request_same_output": true,
+    "formal_response_valid": true,
+    "cached_v3_result_preserved": true,
+    "http_elapsed_ms": 22.0,
+    "measurement_scope": "One localhost request, not a latency benchmark"
+  },
+  "browser": {
+    "url": "http://127.0.0.1:8765/",
+    "casting_vn": "2026-10-11T10:00:00+07:00",
+    "casting_beijing": "2026-10-11T11:00:00+08:00",
+    "variables": {
+      "Y": 7,
+      "M": 9,
+      "D": 2,
+      "H": 7
+    },
+    "hexagram_id": 43,
+    "moving_line": 1,
+    "numbers": [
+      "06",
+      "08",
+      "15",
+      "22",
+      "26",
+      "27"
+    ],
+    "score": 80,
+    "threshold": 75,
+    "attempts": 1,
+    "location_inputs_removed": true,
+    "old_history_versions_visible": true,
+    "screenshot": "docs/research/mvp1_beijing_ui_smoke.jpg"
+  },
+  "interpretation_schema": {
+    "v4_requires_beijing_time_context": true,
+    "v4_rejects_legacy_tst_context": true,
+    "legacy_v2_v3_examples_remain_valid": true,
+    "base_schema_examples_valid": 2,
+    "base_negative_fixtures_rejected": 6,
+    "llm_called": false
+  },
+  "retained_rules": {
+    "one_set": true,
+    "numbers": 6,
+    "pool": [
+      0,
+      45
+    ],
+    "beta": 2,
+    "quota": [
+      3,
+      4
+    ],
+    "max_attempts": 5,
+    "maihoa_core": "maihoa-ymdh-v1",
+    "display_hexagrams_affect_generation": false
+  },
+  "remaining_limits": [
+    "Full-range independent astronomy verification not completed",
+    "LLM provider not integrated",
+    "Scores measure internal-rule fit, not winning probability"
+  ],
+  "file_sha256": {
+    "randomyst/__init__.py": "0a3b9e58e3081ce62e96a882e9432125e7855dd934de05bccbfdd9ab4c6f1193",
+    "randomyst/api.py": "8c0fe76be24344bc9e3865ad075818d0badef26cabc2e51bfa18873d26902fa0",
+    "randomyst/bazi.py": "d0ab6d26d8cbb389d052e85616ef2b12f3facf132c596d152d35e6fc41c44297",
+    "randomyst/engine.py": "524ce884792fd8d7f4de6c74ee156ff1f55ee2538db4e4410c58b3bbb1f78e0b",
+    "randomyst/geolocation.py": "05a5d1094f0ff6479fcbb0324d5dba0ee455e9b5487b4efeb09ed5e9f4e0846d",
+    "randomyst/maihoa.py": "bcad341d77a4e85f4f9c9f52cdcebe6c702f2a8f884b5075f69de42551497c05",
+    "randomyst/models.py": "a32bd29d1b87dad24b9f1e03c16513b06fb0aab571b6d28947925f2b2ecb6201",
+    "randomyst/sampling.py": "6c116079c321370ce972b4fa798e9e7fe601178e3b8000db5a89570ad0983f49",
+    "randomyst/storage.py": "0deb7a6820bddb51023e51a2e01fa7736f7b0353098fd0b0a20909117f9d0668",
+    "randomyst/time_engine.py": "260e47e96650c0e167e8b091396f3515fc8899204a09fb3c0f792bcf0147b83a",
+    "config/mvp1_rules.json": "7544d8a1354f24a1adfeed1f3d4bdd8697baf9e8767e7fd8aabbcdc9720fc64b",
+    "requirements.txt": "5712c7fcf4c31fa17a99f6fcc58dfea08a70320c36bae0dbb9e97e76515aa7ea",
+    "requirements-dev.txt": "edb15de5cff61826b77e4b6c14375a04022063ff60160ddbb1f8ac8e36a795d6",
+    "web/index.html": "cf47b051630228590f40f356f3720328807c3b39da88f61d191a204e307d9113",
+    "web/app.js": "7d0d32f35c76c01f5eda92d629a17cae8ce49d614e3b2249719e402a7654e960",
+    "web/style.css": "58cc4d4bf85e73c06d112e17ff2d6a5c7e8b152e794a1ae70c54ed87b59d89be",
+    "schemas/interpretation_context.schema.json": "796874b21fb82acaf84e6f8ce8e5fbdc240dbacf820f7fe92ab536bfb9e7bc73",
+    "tests/test_beijing_calendar.py": "91589d4006112354e552009f32bebd0c894ac5e87272b3a29300cca2712c33e8",
+    "tests/test_runtime.py": "06623cf95d381a90b28661125ad7d535c1087ada6f976356ab87ef4b2892b8b7"
+  }
+}

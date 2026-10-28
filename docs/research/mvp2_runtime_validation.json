@@ -1,0 +1,95 @@
+{
+  "checked_at_utc": "2026-10-12T13:05:26.536321+00:00",
+  "python": "3.13.2",
+  "platform": "Darwin arm64",
+  "rules_version": "mvp2-dates-2026-10-12-v1",
+  "corpus_sha256": "a046dbf8187bd7bd6b8e3208118f6b584f5d9f3541e663422d69c30ff586ef28",
+  "rules_sha256": "ac0633419e3410790e8fa6094435868032c33e752b0c00d6ae0fa556242b359c",
+  "fresh_server_ready_seconds": 0.6707,
+  "http_measurements": [
+    {
+      "case": "31_days_1_subject_cold_search",
+      "http_seconds": 0.0697,
+      "target_seconds": 2,
+      "response_bytes": 177256,
+      "days": 31,
+      "natal_analysis_count": 1,
+      "evaluated_windows": 404,
+      "personal_comparisons": 404,
+      "grade_counts": {
+        "GOOD": 1,
+        "NORMAL": 9,
+        "BAD": 21
+      }
+    },
+    {
+      "case": "31_days_1_subject_warm",
+      "http_seconds": 0.0618,
+      "target_seconds": 2,
+      "response_bytes": 177256,
+      "days": 31,
+      "natal_analysis_count": 1,
+      "evaluated_windows": 404,
+      "personal_comparisons": 404,
+      "grade_counts": {
+        "GOOD": 1,
+        "NORMAL": 9,
+        "BAD": 21
+      }
+    },
+    {
+      "case": "93_days_2_subjects_first",
+      "http_seconds": 1.0705,
+      "target_seconds": 5,
+      "response_bytes": 564199,
+      "days": 93,
+      "natal_analysis_count": 2,
+      "evaluated_windows": 1212,
+      "personal_comparisons": 2424,
+      "grade_counts": {
+        "GOOD": 0,
+        "NORMAL": 32,
+        "BAD": 61
+      }
+    },
+    {
+      "case": "93_days_2_subjects_warm",
+      "http_seconds": 1.2259,
+      "target_seconds": 5,
+      "response_bytes": 564199,
+      "days": 93,
+      "natal_analysis_count": 2,
+      "evaluated_windows": 1212,
+      "personal_comparisons": 2424,
+      "grade_counts": {
+        "GOOD": 0,
+        "NORMAL": 32,
+        "BAD": 61
+      }
+    },
+    {
+      "case": "93_days_2_subjects_full_details",
+      "http_seconds": 1.0262,
+      "target_seconds": 5,
+      "response_bytes": 2396871,
+      "days": 93,
+      "natal_analysis_count": 2,
+      "evaluated_windows": 1212,
+      "personal_comparisons": 2424,
+      "grade_counts": {
+        "GOOD": 0,
+        "NORMAL": 32,
+        "BAD": 61
+      }
+    }
+  ],
+  "checks": {
+    "request_and_response_schemas": true,
+    "repeat_is_deterministic": true,
+    "invalid_range_422": true,
+    "draw_history_unchanged": true,
+    "tam_nuong_disabled_no_partial": true,
+    "latency_targets_passed": true
+  },
+  "scope": "One fresh local server; first search and one repeated request per size, not load testing or P95. Elapsed HTTP includes serialization and local transfer; schema checks run afterward. Natal call counts are instrumented separately in unit tests. Synthetic profiles; software integration does not validate traditional date-selection outcomes."
+}

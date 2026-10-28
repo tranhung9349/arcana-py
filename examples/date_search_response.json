@@ -1,0 +1,1739 @@
+{
+  "schema_version": "date-search-response-v2",
+  "date_rules_version": "mvp2-dates-2026-10-25-v2",
+  "calendar_policy": "BEIJING_CIVIL_UTC8",
+  "activity": "BUSINESS_OPENING",
+  "activity_name": "Khai trương",
+  "disabled_rules": [
+    "TAM_NUONG"
+  ],
+  "coverage_note": "Đánh giá theo các luật đang bật; Tam Nương chưa được đánh giá. Khung giờ là giờ bắt đầu, không đại diện toàn bộ ngày.",
+  "subject_summaries": [
+    {
+      "subject_id": "person_1",
+      "primary": "Hỏa",
+      "calculated_primary": "Hỏa",
+      "overridden": false,
+      "hy": [
+        "Mộc"
+      ],
+      "ky": [
+        "Thổ",
+        "Thủy"
+      ],
+      "natal_branches": [
+        10,
+        9,
+        3,
+        3
+      ],
+      "pillars": [
+        {
+          "pillar": "year",
+          "stem": "Giáp",
+          "branch": "Tuất",
+          "stem_zh": "甲",
+          "branch_zh": "戌"
+        },
+        {
+          "pillar": "month",
+          "stem": "Quý",
+          "branch": "Dậu",
+          "stem_zh": "癸",
+          "branch_zh": "酉"
+        },
+        {
+          "pillar": "day",
+          "stem": "Đinh",
+          "branch": "Mão",
+          "stem_zh": "丁",
+          "branch_zh": "卯"
+        },
+        {
+          "pillar": "hour",
+          "stem": "Quý",
+          "branch": "Mão",
+          "stem_zh": "癸",
+          "branch_zh": "卯"
+        }
+      ],
+      "birth_boundary": "UNDETERMINED",
+      "role": "Chủ sự kinh doanh"
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-10-13",
+      "grade": "GOOD",
+      "assessment_state": "COMPLETE",
+      "score": 75,
+      "windows": [
+        {
+          "start_at": "2026-10-13T00:00:00+07:00",
+          "end_at": "2026-10-13T02:00:00+07:00",
+          "hour_branch": "丑",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "NOT_LISTED",
+          "assessment_state": "COMPLETE",
+          "score": 65,
+          "raw_score": 65,
+          "grade": "NORMAL",
+          "hard_exclusions": [],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "HOUR_NOT_LISTED",
+              "points": 5,
+              "message": "Lịch giờ không đề cập việc đã chọn.",
+              "source_id": "6TAIL_CORPUS"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 20,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "TENSION",
+              "penalty": 20,
+              "elements": [
+                "Kim",
+                "Hỏa",
+                "Kim",
+                "Thổ"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "PRIMARY",
+                "NEUTRAL",
+                "KY"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "祭祀",
+              "祈福",
+              "酬神",
+              "见贵",
+              "订婚",
+              "嫁娶",
+              "修造",
+              "安葬"
+            ],
+            "hour_ji": [
+              "赴任",
+              "出行",
+              "求财"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T02:00:00+07:00",
+          "end_at": "2026-10-13T04:00:00+07:00",
+          "hour_branch": "寅",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "AVOID",
+          "assessment_state": "COMPLETE",
+          "score": 0,
+          "raw_score": 68,
+          "grade": "BAD",
+          "hard_exclusions": [
+            "ACTIVITY_HOUR_JI"
+          ],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 22,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "TENSION",
+              "penalty": 22,
+              "elements": [
+                "Kim",
+                "Thổ",
+                "Kim",
+                "Mộc"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "KY",
+                "NEUTRAL",
+                "HY"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "无"
+            ],
+            "hour_ji": [
+              "诸事不宜"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T04:00:00+07:00",
+          "end_at": "2026-10-13T06:00:00+07:00",
+          "hour_branch": "卯",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "SUPPORTED",
+          "assessment_state": "COMPLETE",
+          "score": 68,
+          "raw_score": 68,
+          "grade": "NORMAL",
+          "hard_exclusions": [],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 22,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "TENSION",
+              "penalty": 22,
+              "elements": [
+                "Kim",
+                "Thổ",
+                "Kim",
+                "Mộc"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "KY",
+                "NEUTRAL",
+                "HY"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "求嗣",
+              "订婚",
+              "嫁娶",
+              "修造",
+              "入宅",
+              "开市",
+              "交易",
+              "安葬"
+            ],
+            "hour_ji": [
+              "祭祀",
+              "祈福",
+              "斋醮",
+              "酬神"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T06:00:00+07:00",
+          "end_at": "2026-10-13T08:00:00+07:00",
+          "hour_branch": "辰",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "SUPPORTED",
+          "assessment_state": "COMPLETE",
+          "score": 65,
+          "raw_score": 65,
+          "grade": "NORMAL",
+          "hard_exclusions": [],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 25,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "TENSION",
+              "penalty": 25,
+              "elements": [
+                "Kim",
+                "Kim",
+                "Kim",
+                "Thổ"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "NEUTRAL",
+                "NEUTRAL",
+                "KY"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "祈福",
+              "求嗣",
+              "订婚",
+              "嫁娶",
+              "出行",
+              "求财",
+              "开市",
+              "交易",
+              "安床",
+              "赴任"
+            ],
+            "hour_ji": [
+              "修造",
+              "动土"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T08:00:00+07:00",
+          "end_at": "2026-10-13T10:00:00+07:00",
+          "hour_branch": "巳",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "SUPPORTED",
+          "assessment_state": "COMPLETE",
+          "score": 75,
+          "raw_score": 75,
+          "grade": "GOOD",
+          "hard_exclusions": [],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 15,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "SUPPORTED",
+              "penalty": 15,
+              "elements": [
+                "Kim",
+                "Kim",
+                "Kim",
+                "Hỏa"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "NEUTRAL",
+                "NEUTRAL",
+                "PRIMARY"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "祭祀",
+              "祈福",
+              "斋醮",
+              "酬神",
+              "修造",
+              "作灶",
+              "求嗣",
+              "嫁娶",
+              "移徙",
+              "入宅",
+              "开市",
+              "交易"
+            ],
+            "hour_ji": [
+              "赴任",
+              "出行"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T10:00:00+07:00",
+          "end_at": "2026-10-13T12:00:00+07:00",
+          "hour_branch": "午",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "NOT_LISTED",
+          "assessment_state": "COMPLETE",
+          "score": 65,
+          "raw_score": 65,
+          "grade": "NORMAL",
+          "hard_exclusions": [],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "HOUR_NOT_LISTED",
+              "points": 5,
+              "message": "Lịch giờ không đề cập việc đã chọn.",
+              "source_id": "6TAIL_CORPUS"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 20,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "TENSION",
+              "penalty": 20,
+              "elements": [
+                "Kim",
+                "Thủy",
+                "Kim",
+                "Hỏa"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "KY",
+                "NEUTRAL",
+                "PRIMARY"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "求财",
+              "见贵",
+              "酬神"
+            ],
+            "hour_ji": [
+              "祭祀",
+              "祈福",
+              "斋醮",
+              "开光",
+              "赴任",
+              "出行"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T12:00:00+07:00",
+          "end_at": "2026-10-13T14:00:00+07:00",
+          "hour_branch": "未",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "SUPPORTED",
+          "assessment_state": "COMPLETE",
+          "score": 60,
+          "raw_score": 60,
+          "grade": "NORMAL",
+          "hard_exclusions": [],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 30,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "TENSION",
+              "penalty": 30,
+              "elements": [
+                "Kim",
+                "Thủy",
+                "Kim",
+                "Thổ"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "KY",
+                "NEUTRAL",
+                "KY"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "修造",
+              "盖屋",
+              "移徙",
+              "安床",
+              "入宅",
+              "开市",
+              "开仓",
+              "出行",
+              "求财",
+              "见贵",
+              "订婚",
+              "嫁娶"
+            ],
+            "hour_ji": [
+              "祭祀",
+              "祈福",
+              "斋醮",
+              "酬神"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T14:00:00+07:00",
+          "end_at": "2026-10-13T16:00:00+07:00",
+          "hour_branch": "申",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "SUPPORTED",
+          "assessment_state": "COMPLETE",
+          "score": 73,
+          "raw_score": 73,
+          "grade": "NORMAL",
+          "hard_exclusions": [],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 17,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "SUPPORTED",
+              "penalty": 17,
+              "elements": [
+                "Kim",
+                "Mộc",
+                "Kim",
+                "Kim"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "HY",
+                "NEUTRAL",
+                "NEUTRAL"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "求财",
+              "见贵",
+              "订婚",
+              "嫁娶",
+              "入宅",
+              "开市",
+              "安葬"
+            ],
+            "hour_ji": [
+              "赴任",
+              "修造",
+              "移徙",
+              "出行",
+              "词讼",
+              "开光"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T16:00:00+07:00",
+          "end_at": "2026-10-13T18:00:00+07:00",
+          "hour_branch": "酉",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "SUPPORTED",
+          "assessment_state": "COMPLETE",
+          "score": 73,
+          "raw_score": 73,
+          "grade": "NORMAL",
+          "hard_exclusions": [],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 17,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "SUPPORTED",
+              "penalty": 17,
+              "elements": [
+                "Kim",
+                "Mộc",
+                "Kim",
+                "Kim"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "HY",
+                "NEUTRAL",
+                "NEUTRAL"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "求嗣",
+              "嫁娶",
+              "移徙",
+              "入宅",
+              "开市",
+              "交易",
+              "安葬",
+              "祈福",
+              "祭祀"
+            ],
+            "hour_ji": [
+              "赴任",
+              "出行",
+              "修造",
+              "动土"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T18:00:00+07:00",
+          "end_at": "2026-10-13T20:00:00+07:00",
+          "hour_branch": "戌",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "SUPPORTED",
+          "assessment_state": "COMPLETE",
+          "score": 70,
+          "raw_score": 70,
+          "grade": "NORMAL",
+          "hard_exclusions": [],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 20,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "TENSION",
+              "penalty": 20,
+              "elements": [
+                "Kim",
+                "Hỏa",
+                "Kim",
+                "Thổ"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "PRIMARY",
+                "NEUTRAL",
+                "KY"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "祈福",
+              "求嗣",
+              "订婚",
+              "嫁娶",
+              "求财",
+              "开市",
+              "交易",
+              "安床",
+              "作灶",
+              "祭祀"
+            ],
+            "hour_ji": [
+              "上梁",
+              "盖屋",
+              "入殓",
+              "赴任",
+              "出行"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T20:00:00+07:00",
+          "end_at": "2026-10-13T22:00:00+07:00",
+          "hour_branch": "亥",
+          "duration_seconds": 7200.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "庚申",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "NOT_LISTED",
+          "assessment_state": "COMPLETE",
+          "score": 65,
+          "raw_score": 65,
+          "grade": "NORMAL",
+          "hard_exclusions": [],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "HOUR_NOT_LISTED",
+              "points": 5,
+              "message": "Lịch giờ không đề cập việc đã chọn.",
+              "source_id": "6TAIL_CORPUS"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 20,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "TENSION",
+              "penalty": 20,
+              "elements": [
+                "Kim",
+                "Hỏa",
+                "Kim",
+                "Thủy"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "PRIMARY",
+                "NEUTRAL",
+                "KY"
+              ],
+              "clashing_natal_branch_indices": [],
+              "blocked": false
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "修造",
+              "入宅",
+              "安葬"
+            ],
+            "hour_ji": [
+              "赴任",
+              "出行"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T22:00:00+07:00",
+          "end_at": "2026-10-13T23:00:00+07:00",
+          "hour_branch": "子",
+          "duration_seconds": 3600.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "开",
+          "tian_shen": "金匮",
+          "civil_day_ganzhi": "庚申",
+          "bazi_day_ganzhi": "辛酉",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 4
+          },
+          "day_activity_status": "SUPPORTED",
+          "hour_activity_status": "SUPPORTED",
+          "assessment_state": "COMPLETE",
+          "score": 0,
+          "raw_score": 60,
+          "grade": "BAD",
+          "hard_exclusions": [
+            "NATAL_CLASH:person_1"
+          ],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 30,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "CLASH",
+              "penalty": 30,
+              "elements": [
+                "Kim",
+                "Thổ",
+                "Kim",
+                "Thủy"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "KY",
+                "NEUTRAL",
+                "KY"
+              ],
+              "clashing_natal_branch_indices": [
+                3
+              ],
+              "blocked": true
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "开光",
+              "出行",
+              "解除",
+              "出火",
+              "进人口",
+              "开市",
+              "交易",
+              "立券",
+              "挂匾",
+              "纳财",
+              "入宅",
+              "移徙",
+              "栽种",
+              "破土",
+              "谢土"
+            ],
+            "day_ji": [
+              "安床",
+              "安葬"
+            ],
+            "hour_yi": [
+              "嫁娶",
+              "移徙",
+              "入宅",
+              "开市",
+              "交易",
+              "修造",
+              "安葬",
+              "作灶",
+              "祭祀",
+              "斋醮",
+              "酬神"
+            ],
+            "hour_ji": [
+              "祈福",
+              "求嗣",
+              "赴任",
+              "出行",
+              "求财"
+            ]
+          },
+          "rule_warnings": []
+        },
+        {
+          "start_at": "2026-10-13T23:00:00+07:00",
+          "end_at": "2026-10-14T00:00:00+07:00",
+          "hour_branch": "子",
+          "duration_seconds": 3600.0,
+          "calendar_class": "HOANG_DAO",
+          "day_officer": "闭",
+          "tian_shen": "天德",
+          "civil_day_ganzhi": "辛酉",
+          "bazi_day_ganzhi": "辛酉",
+          "month_ganzhi_exact": "戊戌",
+          "lunar": {
+            "year": 2026,
+            "month": 9,
+            "day": 5
+          },
+          "day_activity_status": "NOT_LISTED",
+          "hour_activity_status": "SUPPORTED",
+          "assessment_state": "COMPLETE",
+          "score": 0,
+          "raw_score": 45,
+          "grade": "BAD",
+          "hard_exclusions": [
+            "NATAL_CLASH:person_1"
+          ],
+          "penalties": [
+            {
+              "rule_id": "DAY_SAME",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Can và Chi ngày cùng hành.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "DAY_SAME"
+            },
+            {
+              "rule_id": "NO_AMBIENT_SUPPORT",
+              "effect": "PENALTY",
+              "points": 5,
+              "message": "Chưa gặp hợp chi ngày với tháng/năm.",
+              "source_id": "6TAIL_CORPUS",
+              "dedupe_group": "NO_AMBIENT_SUPPORT"
+            },
+            {
+              "rule_id": "DAY_NOT_LISTED",
+              "points": 15,
+              "message": "Lịch ngày không đề cập việc đã chọn.",
+              "source_id": "6TAIL_CORPUS"
+            },
+            {
+              "rule_id": "PERSONAL_ELEMENTS",
+              "points": 30,
+              "message": "Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.",
+              "source_id": "PRODUCT_PERSONAL_POLICY"
+            }
+          ],
+          "subject_assessments": [
+            {
+              "subject_id": "person_1",
+              "status": "CLASH",
+              "penalty": 30,
+              "elements": [
+                "Kim",
+                "Thổ",
+                "Kim",
+                "Thủy"
+              ],
+              "element_bands": [
+                "NEUTRAL",
+                "KY",
+                "NEUTRAL",
+                "KY"
+              ],
+              "clashing_natal_branch_indices": [
+                3
+              ],
+              "blocked": true
+            }
+          ],
+          "facts": {
+            "calendar_class": "HOANG_DAO",
+            "day_relation": "SAME",
+            "ambient_support": "NONE",
+            "year_clash": false,
+            "sat_chu": false,
+            "tho_tu": false,
+            "nguyet_pha": false,
+            "day_yi": [
+              "嫁娶",
+              "祭祀",
+              "祈福",
+              "求嗣",
+              "动土",
+              "安床",
+              "扫舍",
+              "入殓",
+              "移柩",
+              "破土",
+              "启钻",
+              "安葬",
+              "作灶",
+              "整手足甲",
+              "补垣",
+              "除服",
+              "成服"
+            ],
+            "day_ji": [
+              "开光",
+              "栽种"
+            ],
+            "hour_yi": [
+              "嫁娶",
+              "移徙",
+              "入宅",
+              "开市",
+              "交易",
+              "修造",
+              "安葬",
+              "作灶",
+              "祭祀",
+              "斋醮",
+              "酬神"
+            ],
+            "hour_ji": [
+              "祈福",
+              "求嗣",
+              "赴任",
+              "出行",
+              "求财"
+            ]
+          },
+          "rule_warnings": []
+        }
+      ],
+      "recommended_windows": [
+        {
+          "start_at": "2026-10-13T08:00:00+07:00",
+          "end_at": "2026-10-13T10:00:00+07:00",
+          "hour_branch": "巳"
+        }
+      ],
+      "evaluated_windows": 13,
+      "recommended_minutes": 120.0,
+      "has_unresolved_windows": false,
+      "day_periods": [],
+      "recommended_day_periods": [],
+      "evaluated_periods": 0,
+      "hour_evaluation": "HAS_RECOMMENDATIONS"
+    }
+  ],
+  "evaluated_windows": 13,
+  "personal_comparisons": 13,
+  "natal_analysis_count": 1,
+  "sources": [
+    {
+      "source_id": "6TAIL_CORPUS",
+      "path": "data/date_calendar/almanac_2024_2030.json.gz",
+      "sha256": "a046dbf8187bd7bd6b8e3208118f6b584f5d9f3541e663422d69c30ff586ef28",
+      "url": "https://github.com/6tail/lunar-python",
+      "basis": "Pinned 1.4.8 raw Yi/Ji; month on Jie civil date, day at midnight Beijing"
+    },
+    {
+      "source_id": "TINIX_MONTH_TABLES",
+      "path": "data/reference/tinix-bazi/shensha.js",
+      "sha256": "75aa8af1464fef4183addb384afe9f7d5375f3c2abb09958b20b98d1b42ab2fe",
+      "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/shensha.js",
+      "basis": "Pinned natal tables; product explicitly applies candidate exact Jie month / sect1 day, not a validated ancient date-selection method"
+    },
+    {
+      "source_id": "PRODUCT_PERSONAL_POLICY",
+      "path": "randomyst/bazi.py",
+      "sha256": "d0ab6d26d8cbb389d052e85616ef2b12f3facf132c596d152d35e6fc41c44297",
+      "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/ngu_hanh.js",
+      "basis": "Numeric natal analysis port; date element penalties and clash policy are product rules v1"
+    },
+    {
+      "source_id": "PRODUCT_ACTIVITY_POLICY",
+      "path": "randomyst/date_activities.py",
+      "sha256": "08ea7e732f3758a82213d6d528841c03a9b97617a3ddeae235a8aad2e11d87fd",
+      "url": "/api/v2/auspicious-dates/rules",
+      "basis": "Versioned product activity scope, roles and capability; not expert-certified traditional rules"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "BIRTH_UNCERTAINTY_UNKNOWN",
+      "subject_id": "person_1",
+      "message": "Chưa có biên sai số giờ sinh."
+    }
+  ],
+  "activity_registry_version": "major-events-2026-10-25-v2",
+  "activity_spec": {
+    "activity": "BUSINESS_OPENING",
+    "name": "Khai trương",
+    "provider_token": "开市",
+    "subject_count": 1,
+    "group_id": "BUSINESS_ASSETS",
+    "provider_hour_token": "开市",
+    "subject_roles": [
+      "Chủ sự kinh doanh"
+    ],
+    "hour_evaluation_mode": "LEGACY_V1",
+    "rule_profile": "LEGACY_V1",
+    "event_anchor": "Bắt đầu khai trương hoặc mở bán.",
+    "scope_note": "Nhập người đứng việc kinh doanh; ký văn khế và giao dịch được tra riêng.",
+    "enabled": true,
+    "tier": "CORE",
+    "review_status": "PRODUCT_POLICY"
+  },
+  "evaluation_mode": "DAY_AND_HOUR",
+  "evaluated_periods": 0
+}

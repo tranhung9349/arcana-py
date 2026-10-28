@@ -1,0 +1,993 @@
+{
+ "nodes": [
+  {
+   "id": "schema:schemas/date_search_request.schema.json",
+   "type": "schema",
+   "name": "date_search_request.schema.json",
+   "filePath": "schemas/date_search_request.schema.json",
+   "summary": "Contract JSON Schema cho yêu cầu tra ngày/khung giờ đẹp MVP 2: bắt buộc `activity`, `subjects` (hồ sơ sinh kèm vị trí) và `date_range`, tùy chọn lọc thứ trong tuần, khung giờ cho phép và `include_details`. Được xuất từ model `DateSearchRequest` trong `randomyst/date_models.py`.",
+   "tags": [
+    "schema-definition",
+    "api-schema",
+    "tra-ngay-dep",
+    "pydantic",
+    "request"
+   ],
+   "complexity": "complex",
+   "languageNotes": "JSON Schema sinh tự động bằng Pydantic `model_json_schema()` (chuẩn draft 2020-12, dùng `$defs` và `$ref`); không nên sửa tay vì sẽ bị ghi đè khi chạy lại script build."
+  },
+  {
+   "id": "schema:schemas/date_search_request.schema.json:DateSubject",
+   "type": "schema",
+   "name": "DateSubject",
+   "filePath": "schemas/date_search_request.schema.json",
+   "summary": "Định nghĩa một đối tượng tra cứu gồm `subject_id` và hồ sơ sinh `birth`.",
+   "tags": [
+    "subject",
+    "hồ-sơ-sinh",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/date_search_request.schema.json:Birth",
+   "type": "schema",
+   "name": "Birth",
+   "filePath": "schemas/date_search_request.schema.json",
+   "summary": "Hồ sơ sinh gồm thời điểm dân sự, vị trí, độ bất định đồng hồ (giây) và tùy chọn ghi đè dụng thần.",
+   "tags": [
+    "hồ-sơ-sinh",
+    "bát-tự",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/date_search_request.schema.json:Location",
+   "type": "schema",
+   "name": "Location",
+   "filePath": "schemas/date_search_request.schema.json",
+   "summary": "Vị trí sinh với kinh độ/vĩ độ, nguồn, độ chính xác, độ bất định kinh độ và lý do fallback.",
+   "tags": [
+    "vị-trí",
+    "địa-lý",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/date_search_request.schema.json:DateRange",
+   "type": "schema",
+   "name": "DateRange",
+   "filePath": "schemas/date_search_request.schema.json",
+   "summary": "Khoảng ngày cần tra (`start`, `end`) cho truy vấn tìm ngày đẹp.",
+   "tags": [
+    "khoảng-ngày",
+    "validation",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/date_search_request.schema.json:AllowedHours",
+   "type": "schema",
+   "name": "AllowedHours",
+   "filePath": "schemas/date_search_request.schema.json",
+   "summary": "Khung giờ trong ngày được phép (`start`, `end`) dùng để lọc khung giờ đề xuất.",
+   "tags": [
+    "khung-giờ",
+    "bộ-lọc",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/date_search_response.schema.json",
+   "type": "schema",
+   "name": "date_search_response.schema.json",
+   "filePath": "schemas/date_search_response.schema.json",
+   "summary": "Contract JSON Schema cho phản hồi tra ngày đẹp MVP 2: phiên bản schema/luật, chính sách lịch, tóm tắt từng đối tượng, danh sách ngày được chấm điểm, khung giờ đã đánh giá, so sánh cá nhân, nguồn và cảnh báo. Mỗi `DateDay` có `recommended_windows` (`RecommendedWindow`: `start_at`, `end_at`, `hour_branch`) liệt kê mọi khung GOOD theo thứ tự thời gian, không giới hạn top 3.",
+   "tags": [
+    "schema-definition",
+    "api-schema",
+    "tra-ngay-dep",
+    "pydantic",
+    "response"
+   ],
+   "complexity": "complex",
+   "languageNotes": "JSON Schema sinh tự động bằng Pydantic `model_json_schema()` (chuẩn draft 2020-12, dùng `$defs` và `$ref`); không nên sửa tay vì sẽ bị ghi đè khi chạy lại script build. `DateWindow` kế thừa `RecommendedWindow` nên schema của nó là bản mở rộng các trường của khung giờ đề xuất."
+  },
+  {
+   "id": "schema:schemas/date_search_response.schema.json:DateDay",
+   "type": "schema",
+   "name": "DateDay",
+   "filePath": "schemas/date_search_response.schema.json",
+   "summary": "Kết quả cho một ngày: hạng, trạng thái đánh giá, điểm, các khung giờ, `recommended_windows`, `evaluated_windows`, tổng phút đề xuất và cờ khung chưa giải quyết.",
+   "tags": [
+    "ngày",
+    "chấm-điểm",
+    "schema-definition"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "schema:schemas/date_search_response.schema.json:DateWindow",
+   "type": "schema",
+   "name": "DateWindow",
+   "filePath": "schemas/date_search_response.schema.json",
+   "summary": "Khung giờ đã đánh giá với đầy đủ bằng chứng: chi giờ, thời lượng, phân loại lịch, trực ngày, thần ngày, can chi ngày/tháng, âm lịch và trạng thái hoạt động trong ngày.",
+   "tags": [
+    "khung-giờ",
+    "bằng-chứng",
+    "can-chi",
+    "schema-definition"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "schema:schemas/date_search_response.schema.json:RecommendedWindow",
+   "type": "schema",
+   "name": "RecommendedWindow",
+   "filePath": "schemas/date_search_response.schema.json",
+   "summary": "Khung giờ đề xuất gọn nhẹ (`start_at`, `end_at`, `hour_branch`) cho mọi khoảng GOOD, xếp theo thời gian, không kèm bằng chứng cồng kềnh.",
+   "tags": [
+    "khung-giờ-đẹp",
+    "đề-xuất",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/date_search_response.schema.json:DateSource",
+   "type": "schema",
+   "name": "DateSource",
+   "filePath": "schemas/date_search_response.schema.json",
+   "summary": "Mô tả nguồn dữ liệu/luật (id, đường dẫn, sha256, url, cơ sở) được trích dẫn trong phản hồi.",
+   "tags": [
+    "nguồn",
+    "provenance",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/interpretation_context.schema.json",
+   "type": "schema",
+   "name": "interpretation_context.schema.json",
+   "filePath": "schemas/interpretation_context.schema.json",
+   "summary": "JSON Schema viết tay mô tả ngữ cảnh diễn giải tiếng Việt MVP 1 gửi cho lớp LLM tương lai: câu hỏi, các dữ kiện đã tính (dụng thần, Mai Hoa, kết quả số, bối cảnh thời gian), quẻ hiển thị, bằng chứng nguồn, khoảng trống nguồn và cảnh báo. Chưa kết nối provider LLM.",
+   "tags": [
+    "schema-definition",
+    "llm-contract",
+    "diễn-giải",
+    "mai-hoa",
+    "bát-tự"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Schema draft 2020-12 viết tay với `additionalProperties: false` và `const` cho phiên bản nhằm khóa chặt contract đầu vào LLM."
+  },
+  {
+   "id": "schema:schemas/interpretation_context.schema.json:evidence",
+   "type": "schema",
+   "name": "evidence",
+   "filePath": "schemas/interpretation_context.schema.json",
+   "summary": "Bản ghi bằng chứng nguồn (nhãn, loại văn bản, quẻ, hào, ngôn ngữ, nội dung, nguồn) mà LLM được phép trích dẫn.",
+   "tags": [
+    "bằng-chứng",
+    "trích-dẫn",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/interpretation_context.schema.json:hexagram",
+   "type": "schema",
+   "name": "hexagram",
+   "filePath": "schemas/interpretation_context.schema.json",
+   "summary": "Quẻ hiển thị gồm id, tên chữ Hán, các hào từ dưới lên và danh sách `evidence_ids` liên quan.",
+   "tags": [
+    "quẻ",
+    "kinh-dịch",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/interpretation_response.schema.json",
+   "type": "schema",
+   "name": "interpretation_response.schema.json",
+   "filePath": "schemas/interpretation_response.schema.json",
+   "summary": "JSON Schema nhỏ cho phản hồi diễn giải AI MVP 1: tóm tắt nhãn `AI_INTERPRETATION`, bản dịch, các đoạn diễn giải và giới hạn, mỗi phần phải tham chiếu bằng chứng; dữ kiện tính toán vẫn nằm trong ứng dụng.",
+   "tags": [
+    "schema-definition",
+    "llm-contract",
+    "diễn-giải",
+    "response"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/mvp2_date_rules.schema.json",
+   "type": "schema",
+   "name": "mvp2_date_rules.schema.json",
+   "filePath": "schemas/mvp2_date_rules.schema.json",
+   "summary": "JSON Schema kiểm tra file luật `config/mvp2_date_rules.json` của MVP 2: phiên bản luật/provider, chính sách lịch, nguồn, danh mục hoạt động, bảng tháng (Sát Chủ, Thọ Tử, Nguyệt Phá), cấu hình chấm điểm và danh sách luật. Xuất từ model `DateRules`.",
+   "tags": [
+    "schema-definition",
+    "configuration",
+    "luật-chọn-ngày",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "complex",
+   "languageNotes": "JSON Schema sinh tự động bằng Pydantic `model_json_schema()` (chuẩn draft 2020-12, dùng `$defs` và `$ref`); không nên sửa tay vì sẽ bị ghi đè khi chạy lại script build."
+  },
+  {
+   "id": "schema:schemas/mvp2_date_rules.schema.json:DateRule",
+   "type": "schema",
+   "name": "DateRule",
+   "filePath": "schemas/mvp2_date_rules.schema.json",
+   "summary": "Một luật chọn ngày: id, bật/tắt, điều kiện `when`, phạm vi hoạt động/đối tượng, hiệu ứng (BLOCK/WARN...), điểm, nhóm dedupe, thông điệp, nguồn và trạng thái review.",
+   "tags": [
+    "luật",
+    "chấm-điểm",
+    "schema-definition"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "schema:schemas/mvp2_date_rules.schema.json:RuleWhen",
+   "type": "schema",
+   "name": "RuleWhen",
+   "filePath": "schemas/mvp2_date_rules.schema.json",
+   "summary": "Điều kiện kích hoạt luật dạng so khớp `fact` bằng giá trị `equals`.",
+   "tags": [
+    "điều-kiện",
+    "luật",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/mvp2_date_rules.schema.json:DateScoring",
+   "type": "schema",
+   "name": "DateScoring",
+   "filePath": "schemas/mvp2_date_rules.schema.json",
+   "summary": "Cấu hình chấm điểm: điểm cơ sở, ngưỡng GOOD/NORMAL, phạt ngày/giờ không liệt kê, phạt ngũ hành cá nhân và chặn xung khắc.",
+   "tags": [
+    "chấm-điểm",
+    "ngưỡng",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/mvp2_date_rules.schema.json:MonthTables",
+   "type": "schema",
+   "name": "MonthTables",
+   "filePath": "schemas/mvp2_date_rules.schema.json",
+   "summary": "Bảng tra theo tháng cho Sát Chủ, Thọ Tử và Nguyệt Phá.",
+   "tags": [
+    "bảng-tháng",
+    "lịch-âm",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/mvp2_date_rules.schema.json:ActivitySpec",
+   "type": "schema",
+   "name": "ActivitySpec",
+   "filePath": "schemas/mvp2_date_rules.schema.json",
+   "summary": "Mô tả hoạt động được hỗ trợ: mã, tên, token provider và số đối tượng cần nhập.",
+   "tags": [
+    "hoạt-động",
+    "danh-mục",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/mvp2_date_rules.schema.json:DateSource",
+   "type": "schema",
+   "name": "DateSource",
+   "filePath": "schemas/mvp2_date_rules.schema.json",
+   "summary": "Nguồn luật/dữ liệu (id, đường dẫn, sha256, url, cơ sở) được tham chiếu bởi từng luật.",
+   "tags": [
+    "nguồn",
+    "provenance",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/source_explanation.schema.json",
+   "type": "schema",
+   "name": "source_explanation.schema.json",
+   "filePath": "schemas/source_explanation.schema.json",
+   "summary": "JSON Schema cho payload giải thích nguồn MVP 1: quẻ gốc/hỗ/biến, phân tích bát tự (nhật chủ, cấu trúc, vượng suy, dụng/hỷ/kỵ thần), quan hệ, giới hạn và disclaimer, kèm cờ khẳng định không gọi model và không ảnh hưởng sinh số. Tương ứng model `SourceExplanation` trong `randomyst/models.py`.",
+   "tags": [
+    "schema-definition",
+    "giải-thích-nguồn",
+    "bát-tự",
+    "kinh-dịch",
+    "pydantic"
+   ],
+   "complexity": "complex",
+   "languageNotes": "JSON Schema sinh tự động bằng Pydantic `model_json_schema()` (chuẩn draft 2020-12, dùng `$defs` và `$ref`); không nên sửa tay vì sẽ bị ghi đè khi chạy lại script build."
+  },
+  {
+   "id": "schema:schemas/source_explanation.schema.json:SourceExplanation",
+   "type": "schema",
+   "name": "SourceExplanation",
+   "filePath": "schemas/source_explanation.schema.json",
+   "summary": "Định nghĩa gốc của payload giải thích nguồn, gom quẻ, bát tự, quan hệ, giới hạn và disclaimer.",
+   "tags": [
+    "root-schema",
+    "giải-thích-nguồn",
+    "schema-definition"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "schema:schemas/source_explanation.schema.json:SourceCard",
+   "type": "schema",
+   "name": "SourceCard",
+   "filePath": "schemas/source_explanation.schema.json",
+   "summary": "Thẻ nguồn hiển thị một đoạn văn bản gốc kèm tiêu đề, loại, ngôn ngữ, nhãn, nguồn và bản dịch.",
+   "tags": [
+    "thẻ-nguồn",
+    "trích-dẫn",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/source_explanation.schema.json:SourceReference",
+   "type": "schema",
+   "name": "SourceReference",
+   "filePath": "schemas/source_explanation.schema.json",
+   "summary": "Tham chiếu nguồn tới repository, commit, path, key và url để truy vết văn bản gốc.",
+   "tags": [
+    "provenance",
+    "tham-chiếu",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/source_explanation.schema.json:SourceTranslation",
+   "type": "schema",
+   "name": "SourceTranslation",
+   "filePath": "schemas/source_explanation.schema.json",
+   "summary": "Bản dịch kèm nhãn, ngôn ngữ, trạng thái review, phiên bản, tham chiếu và sha256 văn bản gốc.",
+   "tags": [
+    "bản-dịch",
+    "review",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/source_explanation.schema.json:SourceOverview",
+   "type": "schema",
+   "name": "SourceOverview",
+   "filePath": "schemas/source_explanation.schema.json",
+   "summary": "Tổng quan văn bản nguồn của một quẻ với nhãn, ngôn ngữ, trạng thái review và tham chiếu.",
+   "tags": [
+    "tổng-quan",
+    "quẻ",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "schema:schemas/source_explanation.schema.json:HexagramExplanation",
+   "type": "schema",
+   "name": "HexagramExplanation",
+   "filePath": "schemas/source_explanation.schema.json",
+   "summary": "Giải thích một quẻ: id, tên Hán/Việt, ký hiệu, hào động, tổng quan, thẻ nguồn và khoảng trống nguồn.",
+   "tags": [
+    "quẻ",
+    "kinh-dịch",
+    "schema-definition"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "schema:schemas/source_explanation.schema.json:BaziExplanation",
+   "type": "schema",
+   "name": "BaziExplanation",
+   "filePath": "schemas/source_explanation.schema.json",
+   "summary": "Giải thích bát tự: nhật chủ, cấu trúc, vượng suy, dụng thần chính/tính toán/ghi đè, hỷ/kỵ thần, mùa sinh và thẻ nguồn.",
+   "tags": [
+    "bát-tự",
+    "dụng-thần",
+    "schema-definition"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "schema:schemas/source_explanation.schema.json:DisplayExplanations",
+   "type": "schema",
+   "name": "DisplayExplanations",
+   "filePath": "schemas/source_explanation.schema.json",
+   "summary": "Nhóm giải thích cho quẻ hỗ (`mutual`) và quẻ biến (`changed`).",
+   "tags": [
+    "quẻ-hỗ",
+    "quẻ-biến",
+    "schema-definition"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "schema:schemas/date_search_request.schema.json:DateSubject",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "schema:schemas/date_search_request.schema.json:Birth",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "schema:schemas/date_search_request.schema.json:Location",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "schema:schemas/date_search_request.schema.json:DateRange",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "schema:schemas/date_search_request.schema.json:AllowedHours",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "schema:schemas/date_search_response.schema.json:DateDay",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "schema:schemas/date_search_response.schema.json:DateWindow",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "schema:schemas/date_search_response.schema.json:RecommendedWindow",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "schema:schemas/date_search_response.schema.json:DateSource",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/interpretation_context.schema.json",
+   "target": "schema:schemas/interpretation_context.schema.json:evidence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/interpretation_context.schema.json",
+   "target": "schema:schemas/interpretation_context.schema.json:hexagram",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/mvp2_date_rules.schema.json",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:DateRule",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/mvp2_date_rules.schema.json",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:RuleWhen",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/mvp2_date_rules.schema.json",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:DateScoring",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/mvp2_date_rules.schema.json",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:MonthTables",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/mvp2_date_rules.schema.json",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:ActivitySpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/mvp2_date_rules.schema.json",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:DateSource",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/source_explanation.schema.json",
+   "target": "schema:schemas/source_explanation.schema.json:SourceExplanation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/source_explanation.schema.json",
+   "target": "schema:schemas/source_explanation.schema.json:SourceCard",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/source_explanation.schema.json",
+   "target": "schema:schemas/source_explanation.schema.json:SourceReference",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/source_explanation.schema.json",
+   "target": "schema:schemas/source_explanation.schema.json:SourceTranslation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/source_explanation.schema.json",
+   "target": "schema:schemas/source_explanation.schema.json:SourceOverview",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/source_explanation.schema.json",
+   "target": "schema:schemas/source_explanation.schema.json:HexagramExplanation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/source_explanation.schema.json",
+   "target": "schema:schemas/source_explanation.schema.json:BaziExplanation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "schema:schemas/source_explanation.schema.json",
+   "target": "schema:schemas/source_explanation.schema.json:DisplayExplanations",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateSubject",
+   "target": "schema:schemas/date_search_request.schema.json:DateSubject",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateRange",
+   "target": "schema:schemas/date_search_request.schema.json:DateRange",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:AllowedHours",
+   "target": "schema:schemas/date_search_request.schema.json:AllowedHours",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:Birth",
+   "target": "schema:schemas/date_search_request.schema.json:Birth",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:Location",
+   "target": "schema:schemas/date_search_request.schema.json:Location",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateDay",
+   "target": "schema:schemas/date_search_response.schema.json:DateDay",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateWindow",
+   "target": "schema:schemas/date_search_response.schema.json:DateWindow",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:RecommendedWindow",
+   "target": "schema:schemas/date_search_response.schema.json:RecommendedWindow",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateSource",
+   "target": "schema:schemas/date_search_response.schema.json:DateSource",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateRule",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:DateRule",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:RuleWhen",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:RuleWhen",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateScoring",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:DateScoring",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:MonthTables",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:MonthTables",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:ActivitySpec",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:ActivitySpec",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateSource",
+   "target": "schema:schemas/mvp2_date_rules.schema.json:DateSource",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:SourceExplanation",
+   "target": "schema:schemas/source_explanation.schema.json:SourceExplanation",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:SourceCard",
+   "target": "schema:schemas/source_explanation.schema.json:SourceCard",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:SourceReference",
+   "target": "schema:schemas/source_explanation.schema.json:SourceReference",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:SourceTranslation",
+   "target": "schema:schemas/source_explanation.schema.json:SourceTranslation",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:SourceOverview",
+   "target": "schema:schemas/source_explanation.schema.json:SourceOverview",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:HexagramExplanation",
+   "target": "schema:schemas/source_explanation.schema.json:HexagramExplanation",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:BaziExplanation",
+   "target": "schema:schemas/source_explanation.schema.json:BaziExplanation",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:DisplayExplanations",
+   "target": "schema:schemas/source_explanation.schema.json:DisplayExplanations",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateSearchRequest",
+   "target": "schema:schemas/date_search_request.schema.json",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateSearchResponse",
+   "target": "schema:schemas/date_search_response.schema.json",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateRules",
+   "target": "schema:schemas/mvp2_date_rules.schema.json",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:SourceExplanation",
+   "target": "schema:schemas/source_explanation.schema.json",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "file:randomyst/api.py",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "file:randomyst/date_engine.py",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "file:randomyst/api.py",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "file:randomyst/date_engine.py",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "file:web/dates.js",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "schema:schemas/mvp2_date_rules.schema.json",
+   "target": "file:randomyst/date_rules.py",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "schema:schemas/source_explanation.schema.json",
+   "target": "file:randomyst/models.py",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "config:examples/date_search_request.json",
+   "type": "validates",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "config:examples/marriage_date_search_request.json",
+   "type": "validates",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "config:examples/date_search_response.json",
+   "type": "validates",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "schema:schemas/mvp2_date_rules.schema.json",
+   "target": "config:config/mvp2_date_rules.json",
+   "type": "validates",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "schema:schemas/source_explanation.schema.json",
+   "target": "config:examples/source_explanation.json",
+   "type": "validates",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "schema:schemas/interpretation_context.schema.json",
+   "target": "config:schemas/examples/interpretation_context.example.json",
+   "type": "validates",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "schema:schemas/interpretation_response.schema.json",
+   "target": "config:schemas/examples/interpretation_response.example.json",
+   "type": "validates",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "file:scripts/build_date_data.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "file:scripts/build_date_data.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/mvp2_date_rules.schema.json",
+   "target": "file:scripts/build_date_data.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "file:scripts/smoke_dates.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "file:scripts/smoke_dates.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json",
+   "target": "file:tests/test_auspicious_dates.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/mvp2_date_rules.schema.json",
+   "target": "file:tests/test_auspicious_dates.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/interpretation_context.schema.json",
+   "target": "file:tests/test_beijing_calendar.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/interpretation_context.schema.json",
+   "target": "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/interpretation_context.schema.json",
+   "target": "file:research_tools/validate_interpretation_examples.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/interpretation_response.schema.json",
+   "target": "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/interpretation_response.schema.json",
+   "target": "file:research_tools/validate_interpretation_examples.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/interpretation_response.schema.json",
+   "target": "schema:schemas/interpretation_context.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/date_search_request.schema.json",
+   "target": "schema:schemas/date_search_response.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "schema:schemas/date_search_response.schema.json:DateWindow",
+   "target": "schema:schemas/date_search_response.schema.json:RecommendedWindow",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

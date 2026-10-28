@@ -1,0 +1,607 @@
+{
+  "source_repo": "https://github.com/vhphuoc1102/tinix-bazi",
+  "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+  "files_sha256": {
+    "bazi-ngu_hanh.js": "3efb4f7b131c5ffa7475eb32e53bd0b662ee1deb9541a5e4f03207a0bfe4942b",
+    "bazi-shensha.js": "75aa8af1464fef4183addb384afe9f7d5375f3c2abb09958b20b98d1b42ab2fe",
+    "bazi-shensha_list.js": "9e6fc26a35f538bd11a75aa7234813818dceadbb2fe062da16b6bacaea169baa",
+    "bazi-ganzhi.js": "d2f3db7c3c7a720b66e879cf85f377b28ac6b86df0b9bffaf020ea5f352d5bd8"
+  },
+  "findings": {
+    "ngu_hanh": "Uses ctx.zhis[1]; provides natal month element and day-master support/non-support, not a complete five-stage seasonal table for the casting instant.",
+    "shensha": "Source uses natal day stem for Thiên Ất/Văn Xương and natal month for Thiên Đức. Product explicitly overrides only Thiên Đức lookup month with casting solar-term month; match targets remain original natal pillars.",
+    "generation": "Soft adjustment changes sampling weights, not evaluation formula, forbidden numbers or the frozen normalization cap.",
+    "unresolved": [
+      "Whether Tieu hao receives the same seasonality bonus as other non-Hung modes"
+    ]
+  },
+  "conditional_math_examples": [
+    {
+      "remediation_factor": 1,
+      "deltas": [],
+      "factor_relative_to_pre_remediation_base": 1.0
+    },
+    {
+      "remediation_factor": 1,
+      "deltas": [
+        0.15
+      ],
+      "factor_relative_to_pre_remediation_base": 1.15
+    },
+    {
+      "remediation_factor": 1,
+      "deltas": [
+        0.1
+      ],
+      "factor_relative_to_pre_remediation_base": 1.1
+    },
+    {
+      "remediation_factor": 1,
+      "deltas": [
+        0.2
+      ],
+      "factor_relative_to_pre_remediation_base": 1.2
+    },
+    {
+      "remediation_factor": 1,
+      "deltas": [
+        0.05
+      ],
+      "factor_relative_to_pre_remediation_base": 1.05
+    },
+    {
+      "remediation_factor": 1,
+      "deltas": [
+        0.15,
+        0.1,
+        0.2,
+        0.05
+      ],
+      "factor_relative_to_pre_remediation_base": 1.5
+    },
+    {
+      "remediation_factor": 3,
+      "deltas": [],
+      "factor_relative_to_pre_remediation_base": 3.0
+    },
+    {
+      "remediation_factor": 3,
+      "deltas": [
+        0.15
+      ],
+      "factor_relative_to_pre_remediation_base": 3.45
+    },
+    {
+      "remediation_factor": 3,
+      "deltas": [
+        0.1
+      ],
+      "factor_relative_to_pre_remediation_base": 3.3
+    },
+    {
+      "remediation_factor": 3,
+      "deltas": [
+        0.2
+      ],
+      "factor_relative_to_pre_remediation_base": 3.6
+    },
+    {
+      "remediation_factor": 3,
+      "deltas": [
+        0.05
+      ],
+      "factor_relative_to_pre_remediation_base": 3.15
+    },
+    {
+      "remediation_factor": 3,
+      "deltas": [
+        0.15,
+        0.1,
+        0.2,
+        0.05
+      ],
+      "factor_relative_to_pre_remediation_base": 4.5
+    }
+  ],
+  "confirmed_user_decisions": {
+    "seasonality_month": "Solar-term month at casting time; never natal birth month.",
+    "star_allowlist": [
+      "Thiên Ất",
+      "Thiên Đức",
+      "Văn Xương"
+    ],
+    "tian_de_reference": "Use casting solar-term month to look up a typed target, then match that target against four original natal pillars. Do not modify natal month or recompute natal Useful God.",
+    "other_star_references": "Thiên Ất and Văn Xương retain natal day-stem lookup and actual natal branch matches.",
+    "star_targets": "Only actual matches of the original target kind CAN or CHI; equal element alone does not establish a match.",
+    "star_bonus": "k=0:0; k=1:.20; k=2:.30; k=3:.35. k counts distinct contributing star names, not pillars.",
+    "star_deduplication": "One activation per star name. Each actually matched element receives its .20 base contribution; count a star name once per element, then apply diminishing returns across different names for that element.",
+    "stem_mapping": "Matched stem -> element -> engine digit tails. A representative branch is not needed to calculate the reward and must not be treated as a natal match.",
+    "folk_bonus": "A listed allowed number receives .05 directly, once, without a required pair. Bonus is suppressed if its element controls primary Useful God.",
+    "folk_whitelist_complete": true,
+    "multi_element_example": {
+      "day_stem": "Ất",
+      "matched_branches": [
+        "Thân",
+        "Tý"
+      ],
+      "star": "Thiên Ất",
+      "delta_by_element": {
+        "Metal": 0.2,
+        "Water": 0.2
+      }
+    },
+    "folk_whitelist": [
+      9,
+      11,
+      18,
+      22,
+      28,
+      33,
+      38,
+      39,
+      44
+    ],
+    "folk_config_file": "dan_gian_config.json",
+    "soft_adjustment_lifetime": "Compute and freeze all four deltas before draw 1; retain exact values for draws 1-5. Retry masks may remove candidates but do not recompute or change their frozen deltas.",
+    "seasonality_dominant_element": "Primary element of solar-term month branch, fixed for the entire month; Thin/Tuat/Suu/Mui are Earth for MVP 1.",
+    "seasonality_confirmed_normal_modes": "Dai Cat, Thu Cat (Khac xuat), Binh hoa and Tieu hao: every allowed number belonging to a Vuong or Tuong element receives delta .15. Strong remediation activates only in Dai Hung.",
+    "seasonality_hung_mode": "Dai Hung retains the earlier condition: only the selected remediation element receives .15 if Vuong/Tuong. No double award and no override of bans.",
+    "input_year_ranges": {
+      "birth_inclusive": [
+        1950,
+        2026
+      ],
+      "casting_inclusive": [
+        2024,
+        2030
+      ]
+    },
+    "casting_longitude": "Manual location overrides automatic location for the selected session, including custom past/future times. Without a manual choice use device -> server IP -> default 105.0E. Keep natal longitude separate; freeze for draws 1-5; location age <=900s; used longitude rounded to two decimal places.",
+    "location_uncertainty": "Read actual device accuracy. Flag device values >1000m and all IP results as low confidence. Preserve original time, always include EoT, use aggregate boundary uncertainty and mark missing bounds unknown. Offer manual correction. Display civil time, TST and signed combined offset; flags do not change set score."
+  },
+  "unresolved": [
+    "Validate exact aggregate-error formula and WGS84 conversion; quantify EoT/clock/movement errors.",
+    "Provider and locality-coordinate table selection, unknown locality handling and lookup timeouts.",
+    "Client/server time-source authority, and precision/uncertainty metadata for birth and manually entered inputs."
+  ],
+  "diminishing_returns_examples": [
+    {
+      "k": 0,
+      "delta_shensha": 0.0,
+      "factor_if_remediation_and_all_other_bonuses_apply": 3.9
+    },
+    {
+      "k": 1,
+      "delta_shensha": 0.2,
+      "factor_if_remediation_and_all_other_bonuses_apply": 4.5
+    },
+    {
+      "k": 2,
+      "delta_shensha": 0.3,
+      "factor_if_remediation_and_all_other_bonuses_apply": 4.8
+    },
+    {
+      "k": 3,
+      "delta_shensha": 0.35,
+      "factor_if_remediation_and_all_other_bonuses_apply": 4.95
+    }
+  ],
+  "mvp_algebraic_bounds": {
+    "max_distinct_star_names_per_element": 3,
+    "max_delta_shensha": 0.35,
+    "max_sum_four_deltas": 0.65,
+    "max_factor_relative_to_base_weight": 1.65,
+    "max_factor_relative_to_pre_remediation_base": 4.95,
+    "attainability": "Algebraic upper bound only; simultaneous activation has not been proven for a real casting and natal chart."
+  },
+  "source_table_checks": {
+    "lookup_rows": {
+      "Thiên Ất": 10,
+      "Thiên Đức": 12,
+      "Văn Xương": 10
+    },
+    "tian_de_stem_target_rows": 8,
+    "tian_de_branch_target_rows": 4,
+    "all_tokens_recognized": true,
+    "source_sha256_verified": true
+  },
+  "logic_fixture_checks": {
+    "scope": "Analytical checks on synthetic typed matches and arithmetic. Includes confirmed multi-element reward allocation and the complete nine-number folk config. No application implementation, calendar benchmark or user natal chart was evaluated.",
+    "cases": [
+      {
+        "case": "Tian De: casting Dan targets Ding; duplicate natal Ding activates once",
+        "expected": {
+          "target": "Đinh",
+          "kind": "CAN",
+          "element": "Fire",
+          "matched_pillars": [
+            1,
+            3
+          ],
+          "activation_count": 1
+        },
+        "actual": {
+          "target": "Đinh",
+          "kind": "CAN",
+          "element": "Fire",
+          "matched_pillars": [
+            1,
+            3
+          ],
+          "activation_count": 1
+        },
+        "passed": true
+      },
+      {
+        "case": "Tian De: same-element Ngo does not substitute for missing Ding stem",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "case": "Tian De: casting Mao targets Than branch; same-element Canh does not substitute",
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "case": "Tian De: casting Mao matches natal Than branch",
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      },
+      {
+        "case": "Tian De: lookup uses casting Dan even if natal month is Mao",
+        "expected": "Đinh",
+        "actual": "Đinh",
+        "passed": true
+      },
+      {
+        "case": "Tian At: two matched targets and four pillar occurrences remain one activation",
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      },
+      {
+        "case": "Different star names supporting Metal are not deduplicated together",
+        "expected": 2,
+        "actual": 2,
+        "passed": true
+      },
+      {
+        "case": "MVP diminishing bonus at 0 distinct star names",
+        "expected": "0",
+        "actual": "0",
+        "passed": true
+      },
+      {
+        "case": "MVP diminishing bonus at 1 distinct star names",
+        "expected": "1/5",
+        "actual": "1/5",
+        "passed": true
+      },
+      {
+        "case": "MVP diminishing bonus at 2 distinct star names",
+        "expected": "3/10",
+        "actual": "3/10",
+        "passed": true
+      },
+      {
+        "case": "MVP diminishing bonus at 3 distinct star names",
+        "expected": "7/20",
+        "actual": "7/20",
+        "passed": true
+      },
+      {
+        "case": "Historical non-exhaustive folk examples: intersection with original MVP pool",
+        "expected": [
+          38,
+          39
+        ],
+        "actual": [
+          38,
+          39
+        ],
+        "passed": true
+      },
+      {
+        "case": "A folk number has one fixed bonus regardless of category count",
+        "expected": 0.05,
+        "actual": 0.05,
+        "passed": true
+      },
+      {
+        "case": "Algebraic bound with all four bonus conditions and x3",
+        "expected": 4.95,
+        "actual": 4.95,
+        "passed": true
+      },
+      {
+        "case": "Thien At at At: repeated Than/Ty matches reward both elements once each",
+        "expected": {
+          "Metal": 0.2,
+          "Water": 0.2
+        },
+        "actual": {
+          "Metal": 0.2,
+          "Water": 0.2
+        },
+        "passed": true
+      },
+      {
+        "case": "Dinh with Dau/Hoi: two star names reward Metal .30 and one rewards Water .20",
+        "expected": {
+          "Metal": 0.3,
+          "Water": 0.2
+        },
+        "actual": {
+          "Metal": 0.3,
+          "Water": 0.2
+        },
+        "passed": true
+      },
+      {
+        "case": "Complete confirmed folk whitelist",
+        "expected": [
+          9,
+          11,
+          18,
+          22,
+          28,
+          33,
+          38,
+          39,
+          44
+        ],
+        "actual": [
+          9,
+          11,
+          18,
+          22,
+          28,
+          33,
+          38,
+          39,
+          44
+        ],
+        "passed": true
+      }
+    ],
+    "passed": 17
+  },
+  "folk_config_checks": {
+    "path": "dan_gian_config.json",
+    "sha256": "d3ec139bfbf5c16740489ea88f62b34d71302e622fefa2ec86d381a5c13fa539",
+    "numbers": [
+      9,
+      11,
+      18,
+      22,
+      28,
+      33,
+      38,
+      39,
+      44
+    ],
+    "display_numbers": [
+      "09",
+      "11",
+      "18",
+      "22",
+      "28",
+      "33",
+      "38",
+      "39",
+      "44"
+    ],
+    "all_in_pool": true,
+    "all_unique": true,
+    "bonus_delta": 0.05,
+    "reward_eligible_by_primary_useful_god": {
+      "Wood": [
+        9,
+        11,
+        22,
+        33,
+        39,
+        44
+      ],
+      "Earth": [
+        9,
+        18,
+        28,
+        33,
+        38,
+        39,
+        44
+      ],
+      "Water": [
+        9,
+        11,
+        18,
+        22,
+        28,
+        33,
+        38,
+        39,
+        44
+      ],
+      "Fire": [
+        11,
+        18,
+        22,
+        28,
+        33,
+        38,
+        44
+      ],
+      "Metal": [
+        9,
+        11,
+        18,
+        22,
+        28,
+        38,
+        39
+      ]
+    },
+    "scope": "Checks config and previously confirmed reward-safety relation. No numbers are removed from non-Hung generation solely by this folk bonus check."
+  },
+  "historical_non_exhaustive_folk_examples": [
+    38,
+    39,
+    68,
+    78,
+    79,
+    86
+  ],
+  "seasonality_model_checks": {
+    "dominant_element_by_casting_month_branch": {
+      "Dần": "Wood",
+      "Mão": "Wood",
+      "Thìn": "Earth",
+      "Tỵ": "Fire",
+      "Ngọ": "Fire",
+      "Mùi": "Earth",
+      "Thân": "Metal",
+      "Dậu": "Metal",
+      "Tuất": "Earth",
+      "Hợi": "Water",
+      "Tý": "Water",
+      "Sửu": "Earth"
+    },
+    "stage_elements_by_dominant": {
+      "Wood": {
+        "Vuong": "Wood",
+        "Tuong": "Fire",
+        "Tu_y": "Earth",
+        "Tu": "Metal",
+        "Huu": "Water"
+      },
+      "Fire": {
+        "Huu": "Wood",
+        "Vuong": "Fire",
+        "Tuong": "Earth",
+        "Tu_y": "Metal",
+        "Tu": "Water"
+      },
+      "Earth": {
+        "Tu": "Wood",
+        "Huu": "Fire",
+        "Vuong": "Earth",
+        "Tuong": "Metal",
+        "Tu_y": "Water"
+      },
+      "Metal": {
+        "Tu_y": "Wood",
+        "Tu": "Fire",
+        "Huu": "Earth",
+        "Vuong": "Metal",
+        "Tuong": "Water"
+      },
+      "Water": {
+        "Tuong": "Wood",
+        "Tu_y": "Fire",
+        "Tu": "Earth",
+        "Huu": "Metal",
+        "Vuong": "Water"
+      }
+    },
+    "stage_name_note": "Vuong=Vượng, Tuong=Tướng, Huu=Hưu, Tu=Tù, Tu_y=Tử.",
+    "rewarded_digit_tails_in_confirmed_normal_modes": {
+      "Wood": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "Fire": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "Earth": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "Metal": [
+        0,
+        7,
+        8,
+        9
+      ],
+      "Water": [
+        0,
+        1,
+        2,
+        9
+      ]
+    },
+    "relations_checked": 25,
+    "months_covered": 12,
+    "every_row_assigns_each_of_five_elements_once": true,
+    "Earth_normal_reward_tails": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "Earth_hung_with_Metal_remediation_reward_tails": [
+      7,
+      8
+    ],
+    "Earth_hung_with_Fire_remediation_reward_tails": [],
+    "scope": "Finite algebraic consistency of confirmed month-element and bonus rules, including all four non-Hung modes. No calendar conversion, input source accuracy, sampling probabilities or first-draw KPI were measured."
+  },
+  "calendar_scope": {
+    "birth_inclusive_years": [
+      1950,
+      2026
+    ],
+    "casting_inclusive_years": [
+      2024,
+      2030
+    ],
+    "birth_year_count": 77,
+    "casting_year_count": 7,
+    "common_input_years": [
+      2024,
+      2025,
+      2026
+    ],
+    "input_timezone": "UTC+7",
+    "precision_status": "Independent calendar corpus and astronomical accuracy checks are outstanding. No claim of 100% repo accuracy or guaranteed memory usage is made.",
+    "boundary_validation_rule": "Validate original civil input in UTC+7 before True Solar Time conversion; do not reject valid input solely because TST/effective date/lunar year crosses the original input year limits.",
+    "internal_date_lookup": {
+      "start_inclusive": "1949-12-01",
+      "end_inclusive": "2031-01-31",
+      "public_input_scope_unchanged": true,
+      "nominal_padding_days": 30,
+      "explicit_dates_preserved": true
+    },
+    "astronomical_dependency_note": "New moons, winter solstices and principal solar terms may be needed outside the date-table window to construct lunar month 11 and leap-month metadata. Determine coverage from dependency checks, not a blanket 30-day cap.",
+    "policy_audit": "docs/research/calendar_boundary_policy_audit.json",
+    "independence_note": "lunar-javascript and lunar-python share the 6tail calendar core and are not independent astronomical ground truths."
+  },
+  "location_source_research": {
+    "w3c_geolocation": "https://www.w3.org/TR/geolocation/",
+    "maxmind_accuracy_reference": "https://support.maxmind.com/knowledge-base/articles/maxmind-geolocation-accuracy",
+    "device_api_note": "Browser geolocation is source agnostic; do not label every result GPS. Permission and availability can prevent a result.",
+    "ip_note": "IP geolocation is approximate and a VPN may identify the proxy server rather than the client. MaxMind is a research reference, not a selected provider.",
+    "metadata_proposal": [
+      "longitude",
+      "latitude if provided",
+      "source",
+      "acquired_at with timestamp origin",
+      "accuracy value/unit/provider definition"
+    ],
+    "longitude_sensitivity_minutes_per_degree": 4,
+    "runtime_collection_performed": false,
+    "status": "Design research and metadata proposal only. No geolocation integration or actual device location collection.",
+    "policy_audit": "docs/research/geolocation_policy_audit.json",
+    "device_accuracy_confidence": "95% estimated confidence radius according to W3C; not a guaranteed hard bound."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "status": "PASSED",
+  "recorded_at": "2026-10-26T09:17:49.451770+00:00",
+  "rules_version": "liuyao-analysis-2026-10-26-v2",
+  "rules_sha256": "2b523cfdf0c26002aaa0271f0f2d844445bbfc19be5f3155f2715a6939fb3dcb",
+  "intent_rules_version": "liuyao-question-intent-2026-10-26-v1",
+  "tests": {
+    "command": "RANDOMYST_DATABASE=/tmp/randomyst_intent_test.sqlite3 .venv/bin/python -m unittest discover -s tests -v",
+    "passed": 134,
+    "new_intent_test_methods": 12,
+    "seconds": 14.479,
+    "log": "/tmp/randomyst_intent_full_tests.log",
+    "cases": [
+      "8 topics × original/uppercase/unaccented/NFD/extra spacing",
+      "Supplied accents retained: ưu tiên is not tiền; bỏ is not bố; word boundary checks",
+      "Explicit negation and rhetorical question-final không",
+      "Question/topic conflict, multiple objectives and no keyword-count winner",
+      "Actor context versus direct family question",
+      "Subintent-specific practical prompts for debts, applications and documents",
+      "Combined mode requires acknowledged review; selected topic and explicit relative retain priority",
+      "Legacy TOPIC_ONLY unchanged; unknown question can use selected topic",
+      "Preview is read-only, input validation, no new coin tosses, durable cached replay and database reopen"
+    ]
+  },
+  "artifact_checks": {
+    "schemas_and_examples": 4,
+    "schema_validation": "JSON Schema Draft 2020-12 plus format checks passed",
+    "javascript": "node --check web/coin_intent.js, web/coins.js and web/liuyao.js passed"
+  },
+  "ui": {
+    "url": "http://127.0.0.1:8765/",
+    "viewport": {
+      "width": 686,
+      "height": 979
+    },
+    "document_scroll_width": 686,
+    "console_errors_and_warnings": [],
+    "verified": [
+      "CAREER selected with debt question: WEALTH suggestion; clicking cast waits for scope decision without creating session",
+      "Click suggested WEALTH, cast and save recognized debt intent in narrative",
+      "Multiple career+income question: list both, keep CAREER explicitly, resolved warning clears",
+      "Reload and open saved combined analysis",
+      "On existing debt consultation select CAREER: reanalysis waits for scope decision",
+      "Keep CAREER and reanalyse: selected Quan quỷ retained with explicit acknowledged conflict",
+      "Choose suggested WEALTH and reanalyse the same casting: debt-specific practical question included"
+    ],
+    "screenshots": [
+      "docs/research/liuyao_intent_conflict_ui.png",
+      "docs/research/liuyao_intent_result_ui.png"
+    ]
+  },
+  "limits": [
+    "Bounded local phrase rules, not unrestricted Vietnamese semantic understanding",
+    "Family/person context may still require manual relative selection",
+    "No measured general-purpose intent accuracy or probability claims",
+    "No real mobile-device or load test",
+    "Preview uses /tmp/randomyst_coins_ui.sqlite3"
+  ],
+  "files_sha256": {
+    "randomyst/liuyao_intent.py": "a184a875a38e1b45cfcc0a1e6664972e605d6a22fad8b0834e264e421b8cb142",
+    "randomyst/liuyao_models.py": "7923b06614dd1f7eff9f36866ef99b49fc00d4760da25cad4b1b0c263bb30d9d",
+    "randomyst/liuyao_analysis.py": "a71042423afc4ed5c4c4c1ff19e29563d88bc599e9dcfe51b1de999f03f0f877",
+    "randomyst/api.py": "b8ab7348ca81147482f729b6f1376b0be0a2a80eead9f2647f8008fd0fa67239",
+    "config/liuyao_intent_rules.json": "d66af37a8419957341c9445c8cd1152a4f60cdf22a9ce04e37ecee47a1c0d935",
+    "config/liuyao_analysis_rules.json": "0aee8b4fa74bc907f47d69174c6f72f2e97cf135478931ac8a166361db064602",
+    "web/coin_intent.js": "2a636fd88d966a9660b6891c48f7535735059d3f2aaf5aa3578837cecbd0572d",
+    "web/coins.js": "f3c6615b9f1cf2ed3fdf924900f866f0a07425454abe604dc5ff49fa79ebd5ed",
+    "web/liuyao.js": "b94d9f9611558dfe2e9a6f31fdfd6af5f865ea85da82f3ac618da36a24f8e3a7",
+    "web/index.html": "582d2615ae09c822804d826af1e311ebf7e527293251e42a99321aa154a5b780",
+    "web/style.css": "b2d8d407d4a252dfa310c27cc540c49507c21be2711dadfb227c784b3d849da8",
+    "tests/test_liuyao_intent.py": "e8ba5721a6555a91de04cb1490ed8b64a42e40d473e2a8684202fcea8c410b19",
+    "docs/liuyao_analysis_handoff.md": "8e478dfdda100ed481cc5ccab382d85aeb0d6a0b27b75aebc3211a1ee66d4cad",
+    "docs/research/liuyao_analysis_research.md": "4cd8bdf98b47dc0052024399b25ef7c226fb8b92df7c23a58d0778d9ea2eb31b",
+    "examples/liuyao_intent_request.json": "6db067481ab09ad151839002bbd1bef16af8a02a1eca6f08830c2068d054a268",
+    "examples/liuyao_intent_response.json": "8718066045030e3beaa964f786e75c0cc8d4637390b384479ec861694626011e",
+    "examples/liuyao_analysis_request.json": "96454870546c1b4b2b24542de5615051ec5cf67256ed5cfcf497af1bd42b5fe3",
+    "examples/liuyao_analysis_response.json": "0aa1363c5d614a78bc698a7b6ea79378a84c7b67c50af22948dc8683066f8d98",
+    "schemas/liuyao_intent_request.schema.json": "f70e2ff9271b23f6d1c7d7390f577b50cb6038033879b44e9346222f1b1de9ae",
+    "schemas/liuyao_intent_response.schema.json": "cef39fffc5799747deba34656d439bfd44666d21e1d83df6f85ee78b15b3c976",
+    "schemas/liuyao_analysis_request.schema.json": "87c9b51fabfc8522d3b3435c2b6bb0450d18696726bb82a98f2d13bcca575caf",
+    "schemas/liuyao_analysis_response.schema.json": "cbc92b226cbd8466eadfdbedf19b569ba8e3bd445331fa667dbe0b693ba79b2f",
+    "docs/research/liuyao_intent_conflict_ui.png": "63104f6aa288f177a8794e23b8f1ae763fedfd9de8d9c363992ed8bbce56aacd",
+    "docs/research/liuyao_intent_result_ui.png": "4c4d684da767f3894cd959c1f8b7a59dbec5d7e086f32bcccbd857a647d2f29d"
+  }
+}

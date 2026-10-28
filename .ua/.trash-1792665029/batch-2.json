@@ -1,0 +1,1374 @@
+{
+ "nodes": [
+  {
+   "id": "file:randomyst/api.py",
+   "type": "file",
+   "name": "api.py",
+   "filePath": "randomyst/api.py",
+   "summary": "Factory FastAPI dựng ứng dụng Randomyst MVP 2: khởi tạo NumberEngine, ExplanationRepository, DrawStore SQLite và DateEngine, khai báo các endpoint gieo số, lịch sử, giải thích nguồn, tra ngày tốt và phục vụ giao diện web tĩnh.",
+   "tags": [
+    "entry-point",
+    "api-handler",
+    "fastapi",
+    "factory"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:randomyst/engine.py",
+   "type": "file",
+   "name": "engine.py",
+   "filePath": "randomyst/engine.py",
+   "summary": "Lõi gieo bộ sáu số 00–45: kiểm tra policy lịch Bắc Kinh và luật v1, tính Bát tự, quẻ Mai Hoa, trọng số mũ beta=2 kèm các delta (thiên thời, hào động, thần sát, dân gian) rồi lấy mẫu có điều kiện tối đa năm lần và trả trace đầy đủ.",
+   "tags": [
+    "service",
+    "core-logic",
+    "sampling",
+    "bazi",
+    "validation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:randomyst/interpretation.py",
+   "type": "file",
+   "name": "interpretation.py",
+   "filePath": "randomyst/interpretation.py",
+   "summary": "Kho giải thích chỉ để hiển thị: đọc bản nháp tiếng Việt cho 64 quẻ và corpus Bát tự tinix, ràng buộc bằng SHA-256 với văn bản gốc đã ghim commit, rồi dựng thẻ nguồn cho một phiên gieo đã lưu mà không đổi số.",
+   "tags": [
+    "service",
+    "interpretation",
+    "source-verification",
+    "i-ching"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:randomyst/maihoa.py",
+   "type": "file",
+   "name": "maihoa.py",
+   "filePath": "randomyst/maihoa.py",
+   "summary": "Kho Kinh Dịch Mai Hoa Dịch Số: xác minh checksum dữ liệu open-iching, nạp 64 quẻ, và tính quẻ chủ/hỗ/biến, thể–dụng, hào động từ bốn biến Y/M/D/H kèm bằng chứng văn bản gốc.",
+   "tags": [
+    "data-model",
+    "i-ching",
+    "repository",
+    "validation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:randomyst/sampling.py",
+   "type": "file",
+   "name": "sampling.py",
+   "filePath": "randomyst/sampling.py",
+   "summary": "Liệt kê chính xác cấu hình theo bucket (ngũ hành × chẵn lẻ) và lấy mẫu tập con theo luật tích trọng số, gồm quan hệ sinh khắc ngũ hành, trạng thái thể–dụng, chọn hành hóa giải, ngưỡng điểm và kiểm tra luật cứng.",
+   "tags": [
+    "utility",
+    "sampling",
+    "algorithm",
+    "five-elements",
+    "validation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:randomyst/storage.py",
+   "type": "file",
+   "name": "storage.py",
+   "filePath": "randomyst/storage.py",
+   "summary": "Lưu trữ SQLite cho các phiên gieo, tuần tự hóa yêu cầu idempotent bằng giao dịch BEGIN IMMEDIATE và hash payload, phát hiện xung đột request_id, cung cấp lịch sử và truy xuất kết quả.",
+   "tags": [
+    "service",
+    "persistence",
+    "database",
+    "idempotency"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:tests/test_beijing_calendar.py",
+   "type": "file",
+   "name": "test_beijing_calendar.py",
+   "filePath": "tests/test_beijing_calendar.py",
+   "summary": "Bộ kiểm thử tích hợp lịch Bắc Kinh UTC+8: chuyển giờ Việt Nam sang Bắc Kinh, ranh giới giờ Tý/23h, Tết, tháng nhuận, sai số đồng hồ và tính idempotent của kết quả v3 cũ.",
+   "tags": [
+    "test",
+    "calendar",
+    "timezone",
+    "integration"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:tests/test_runtime.py",
+   "type": "file",
+   "name": "test_runtime.py",
+   "filePath": "tests/test_runtime.py",
+   "summary": "Bộ kiểm thử runtime và API: phủ đủ 64 quẻ/384 hào, đổi tiết khí, 125 ngữ cảnh luật cứng, giới hạn retry, fallback SUB_OPTIMAL, idempotency đồng thời và xác thực đầu vào qua TestClient.",
+   "tags": [
+    "test",
+    "runtime",
+    "api",
+    "sampling"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:tests/test_source_explanations.py",
+   "type": "file",
+   "name": "test_source_explanations.py",
+   "filePath": "tests/test_source_explanations.py",
+   "summary": "Kiểm thử giải thích nguồn: ràng buộc 64 quẻ/384 hào với văn bản gốc, khoảng trống Thoán 32, can ngày Bát tự, việc đọc không làm thay đổi số đã lưu và endpoint giải thích chỉ-đọc.",
+   "tags": [
+    "test",
+    "interpretation",
+    "source-verification",
+    "api"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:randomyst/api.py:create_app",
+   "type": "function",
+   "name": "create_app",
+   "filePath": "randomyst/api.py",
+   "lineRange": [
+    20,
+    81
+   ],
+   "summary": "Tạo ứng dụng FastAPI, gắn engine/kho/store vào app.state, đăng ký exception handler và mọi route API v1/v2 cùng static web.",
+   "tags": [
+    "factory",
+    "api-handler",
+    "fastapi"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:randomyst/engine.py:EngineError",
+   "type": "class",
+   "name": "EngineError",
+   "filePath": "randomyst/engine.py",
+   "lineRange": [
+    16,
+    19
+   ],
+   "summary": "Ngoại lệ nghiệp vụ mang mã lỗi và HTTP status code, được API chuyển thành phản hồi JSON.",
+   "tags": [
+    "error-handling",
+    "exception",
+    "data-model"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/engine.py:NumberEngine",
+   "type": "class",
+   "name": "NumberEngine",
+   "filePath": "randomyst/engine.py",
+   "lineRange": [
+    22,
+    127
+   ],
+   "summary": "Engine gieo số: nạp cấu hình luật, tính lịch/Bát tự/Mai Hoa, xây trọng số cho 46 số và lấy mẫu có điều kiện, trả về kết quả OPTIMAL hoặc SUB_OPTIMAL cùng trace.",
+   "tags": [
+    "service",
+    "core-logic",
+    "sampling"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:randomyst/interpretation.py:digest",
+   "type": "function",
+   "name": "digest",
+   "filePath": "randomyst/interpretation.py",
+   "lineRange": [
+    17,
+    18
+   ],
+   "summary": "Tính SHA-256 hex của chuỗi văn bản để ràng buộc bản dịch với nguồn gốc.",
+   "tags": [
+    "utility",
+    "hashing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/interpretation.py:ExplanationRepository",
+   "type": "class",
+   "name": "ExplanationRepository",
+   "filePath": "randomyst/interpretation.py",
+   "lineRange": [
+    21,
+    150
+   ],
+   "summary": "Nạp và xác minh corpus giải thích quẻ và Bát tự, dựng thẻ nguồn/bản dịch cho quẻ, hào động và tứ trụ của một phiên đã lưu.",
+   "tags": [
+    "repository",
+    "interpretation",
+    "source-verification"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:randomyst/maihoa.py:IchingRepository",
+   "type": "class",
+   "name": "IchingRepository",
+   "filePath": "randomyst/maihoa.py",
+   "lineRange": [
+    18,
+    78
+   ],
+   "summary": "Nạp 64 quẻ đã xác minh checksum và tính quẻ Mai Hoa từ Y/M/D/H, xác định thể–dụng, trạng thái và bằng chứng nguồn.",
+   "tags": [
+    "repository",
+    "i-ching",
+    "calculation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:randomyst/sampling.py:element_of",
+   "type": "function",
+   "name": "element_of",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    21,
+    22
+   ],
+   "summary": "Ánh xạ một số sang ngũ hành theo chữ số hàng đơn vị.",
+   "tags": [
+    "utility",
+    "five-elements"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/sampling.py:relation_score",
+   "type": "function",
+   "name": "relation_score",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    25,
+    36
+   ],
+   "summary": "Chấm điểm quan hệ sinh/khắc/đồng hành giữa hai hành.",
+   "tags": [
+    "utility",
+    "scoring",
+    "five-elements"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/sampling.py:state_of",
+   "type": "function",
+   "name": "state_of",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    39,
+    48
+   ],
+   "summary": "Xác định trạng thái cát hung (DAI_CAT, THU_CAT, BINH_HOA, TIEU_HAO, DAI_HUNG) từ hành thể và dụng.",
+   "tags": [
+    "utility",
+    "five-elements",
+    "classification"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/sampling.py:Context",
+   "type": "class",
+   "name": "Context",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    52,
+    70
+   ],
+   "summary": "Dataclass bất biến mô tả ngữ cảnh gieo (dụng thần, thể, dụng, hành hóa giải), suy ra trạng thái, ngưỡng và hành được phép.",
+   "tags": [
+    "data-model",
+    "dataclass",
+    "rules"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/sampling.py:Configuration",
+   "type": "class",
+   "name": "Configuration",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    74,
+    91
+   ],
+   "summary": "Dataclass cấu hình số lượng theo bucket, tính điểm âm dương, điểm tổng và kiểm tra đạt ngưỡng.",
+   "tags": [
+    "data-model",
+    "dataclass",
+    "scoring"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/sampling.py:count_vectors",
+   "type": "function",
+   "name": "count_vectors",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    95,
+    108
+   ],
+   "summary": "Liệt kê có cache mọi vector phân bổ sáu số theo sức chứa từng bucket.",
+   "tags": [
+    "algorithm",
+    "combinatorics",
+    "cache"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/sampling.py:grouped_pool",
+   "type": "function",
+   "name": "grouped_pool",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    111,
+    112
+   ],
+   "summary": "Nhóm pool số theo bucket ngũ hành × chẵn lẻ.",
+   "tags": [
+    "utility",
+    "grouping"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/sampling.py:configurations",
+   "type": "function",
+   "name": "configurations",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    116,
+    137
+   ],
+   "summary": "Liệt kê có cache các cấu hình hợp lệ theo luật cứng (âm dương, không đơn hành, quota hóa giải) kèm điểm thô và số xung khắc.",
+   "tags": [
+    "algorithm",
+    "rules",
+    "enumeration"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:randomyst/sampling.py:select_context",
+   "type": "function",
+   "name": "select_context",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    140,
+    161
+   ],
+   "summary": "Chọn ngữ cảnh và hành hóa giải cho trạng thái DAI_HUNG theo tie-break xác định, trả cả danh sách ứng viên đã kiểm toán.",
+   "tags": [
+    "rules",
+    "selection",
+    "remediation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:randomyst/sampling.py:elementary_symmetric",
+   "type": "function",
+   "name": "elementary_symmetric",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    164,
+    169
+   ],
+   "summary": "Tính các đa thức đối xứng sơ cấp của trọng số tới bậc sáu.",
+   "tags": [
+    "algorithm",
+    "math"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/sampling.py:ProductSubsetSampler",
+   "type": "class",
+   "name": "ProductSubsetSampler",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    172,
+    199
+   ],
+   "summary": "Lấy mẫu tập con cỡ cố định theo tích trọng số bằng đa thức đối xứng sơ cấp hậu tố.",
+   "tags": [
+    "sampling",
+    "algorithm",
+    "probability"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:randomyst/sampling.py:Distribution",
+   "type": "class",
+   "name": "Distribution",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    202,
+    245
+   ],
+   "summary": "Phân phối trên các cấu hình theo khối lượng tích trọng số, lấy mẫu bộ số và tính các chỉ số chính xác (tỉ lệ đạt ngưỡng, điểm trung bình).",
+   "tags": [
+    "sampling",
+    "probability",
+    "metrics"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:randomyst/sampling.py:validate_sample",
+   "type": "function",
+   "name": "validate_sample",
+   "filePath": "randomyst/sampling.py",
+   "lineRange": [
+    248,
+    261
+   ],
+   "summary": "Kiểm tra bộ sáu số theo luật cứng: khác nhau, trong pool, cân bằng chẵn lẻ và quota hóa giải.",
+   "tags": [
+    "validation",
+    "rules"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/storage.py:DrawStore",
+   "type": "class",
+   "name": "DrawStore",
+   "filePath": "randomyst/storage.py",
+   "lineRange": [
+    11,
+    52
+   ],
+   "summary": "Kho SQLite lưu phản hồi gieo theo request_id, thực thi idempotent có khóa giao dịch, truy vấn lịch sử và lấy phiên đã lưu.",
+   "tags": [
+    "persistence",
+    "database",
+    "idempotency"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:tests/test_beijing_calendar.py:request_at",
+   "type": "function",
+   "name": "request_at",
+   "filePath": "tests/test_beijing_calendar.py",
+   "lineRange": [
+    25,
+    27
+   ],
+   "summary": "Dựng payload yêu cầu gieo chế độ CUSTOM tại một mốc thời gian cho kiểm thử.",
+   "tags": [
+    "test",
+    "fixture"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:tests/test_beijing_calendar.py:BeijingCalendarTests",
+   "type": "class",
+   "name": "BeijingCalendarTests",
+   "filePath": "tests/test_beijing_calendar.py",
+   "lineRange": [
+    30,
+    138
+   ],
+   "summary": "Các test case về chuyển đổi lịch Bắc Kinh, ranh giới giờ/ngày, tháng nhuận và hợp đồng ngữ cảnh v4.",
+   "tags": [
+    "test",
+    "calendar",
+    "timezone"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:tests/test_runtime.py:payload",
+   "type": "function",
+   "name": "payload",
+   "filePath": "tests/test_runtime.py",
+   "lineRange": [
+    26,
+    28
+   ],
+   "summary": "Dựng payload yêu cầu gieo mẫu kèm vị trí cũ cho kiểm thử.",
+   "tags": [
+    "test",
+    "fixture"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:tests/test_runtime.py:RuntimeTests",
+   "type": "class",
+   "name": "RuntimeTests",
+   "filePath": "tests/test_runtime.py",
+   "lineRange": [
+    31,
+    180
+   ],
+   "summary": "Kiểm thử engine: quẻ, tiết khí, Bát tự, trace, luật cứng toàn bộ ngữ cảnh, retry và fallback.",
+   "tags": [
+    "test",
+    "runtime",
+    "sampling"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:tests/test_runtime.py:ApiTests",
+   "type": "class",
+   "name": "ApiTests",
+   "filePath": "tests/test_runtime.py",
+   "lineRange": [
+    183,
+    230
+   ],
+   "summary": "Kiểm thử API: idempotency, lịch sử, xung đột payload, đồng thời, đầu vào không hợp lệ và cảnh báo lệch đồng hồ.",
+   "tags": [
+    "test",
+    "api",
+    "idempotency"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:tests/test_source_explanations.py:SourceExplanationTests",
+   "type": "class",
+   "name": "SourceExplanationTests",
+   "filePath": "tests/test_source_explanations.py",
+   "lineRange": [
+    21,
+    131
+   ],
+   "summary": "Kiểm thử repository giải thích nguồn và endpoint giải thích chỉ-đọc, kể cả xác thực tham chiếu, hash và URL nguồn.",
+   "tags": [
+    "test",
+    "interpretation",
+    "source-verification"
+   ],
+   "complexity": "moderate"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:randomyst/api.py",
+   "target": "function:randomyst/api.py:create_app",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "function:randomyst/api.py:create_app",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "class:randomyst/engine.py:EngineError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "class:randomyst/engine.py:EngineError",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "class:randomyst/engine.py:NumberEngine",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "class:randomyst/engine.py:NumberEngine",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/interpretation.py",
+   "target": "function:randomyst/interpretation.py:digest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/interpretation.py",
+   "target": "function:randomyst/interpretation.py:digest",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/interpretation.py",
+   "target": "class:randomyst/interpretation.py:ExplanationRepository",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/interpretation.py",
+   "target": "class:randomyst/interpretation.py:ExplanationRepository",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/maihoa.py",
+   "target": "class:randomyst/maihoa.py:IchingRepository",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/maihoa.py",
+   "target": "class:randomyst/maihoa.py:IchingRepository",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:element_of",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:element_of",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:relation_score",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:relation_score",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:state_of",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:state_of",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "class:randomyst/sampling.py:Context",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "class:randomyst/sampling.py:Context",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "class:randomyst/sampling.py:Configuration",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "class:randomyst/sampling.py:Configuration",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:count_vectors",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:count_vectors",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:grouped_pool",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:grouped_pool",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:configurations",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:configurations",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:select_context",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:select_context",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:elementary_symmetric",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:elementary_symmetric",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "class:randomyst/sampling.py:ProductSubsetSampler",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "class:randomyst/sampling.py:ProductSubsetSampler",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "class:randomyst/sampling.py:Distribution",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "class:randomyst/sampling.py:Distribution",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:validate_sample",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "function:randomyst/sampling.py:validate_sample",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/storage.py",
+   "target": "class:randomyst/storage.py:DrawStore",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/storage.py",
+   "target": "class:randomyst/storage.py:DrawStore",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:tests/test_beijing_calendar.py",
+   "target": "function:tests/test_beijing_calendar.py:request_at",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:tests/test_beijing_calendar.py",
+   "target": "function:tests/test_beijing_calendar.py:request_at",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:tests/test_beijing_calendar.py",
+   "target": "class:tests/test_beijing_calendar.py:BeijingCalendarTests",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:tests/test_beijing_calendar.py",
+   "target": "class:tests/test_beijing_calendar.py:BeijingCalendarTests",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "function:tests/test_runtime.py:payload",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "function:tests/test_runtime.py:payload",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "class:tests/test_runtime.py:RuntimeTests",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "class:tests/test_runtime.py:RuntimeTests",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "class:tests/test_runtime.py:ApiTests",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "class:tests/test_runtime.py:ApiTests",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:tests/test_source_explanations.py",
+   "target": "class:tests/test_source_explanations.py:SourceExplanationTests",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:tests/test_source_explanations.py",
+   "target": "class:tests/test_source_explanations.py:SourceExplanationTests",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:randomyst/date_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:randomyst/date_models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:randomyst/engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:randomyst/interpretation.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:randomyst/models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:randomyst/storage.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "file:randomyst/bazi.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "file:randomyst/maihoa.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "file:randomyst/sampling.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/interpretation.py",
+   "target": "file:randomyst/bazi.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/interpretation.py",
+   "target": "file:randomyst/maihoa.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/maihoa.py",
+   "target": "file:randomyst/sampling.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/storage.py",
+   "target": "file:randomyst/engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_beijing_calendar.py",
+   "target": "file:randomyst/api.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_beijing_calendar.py",
+   "target": "file:randomyst/engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_beijing_calendar.py",
+   "target": "file:randomyst/models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_beijing_calendar.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "file:randomyst/api.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "file:randomyst/bazi.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "file:randomyst/engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "file:randomyst/maihoa.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "file:randomyst/models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "file:randomyst/sampling.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_runtime.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_source_explanations.py",
+   "target": "file:randomyst/api.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_source_explanations.py",
+   "target": "file:randomyst/engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_source_explanations.py",
+   "target": "file:randomyst/interpretation.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_source_explanations.py",
+   "target": "file:randomyst/models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "function:randomyst/api.py:create_app",
+   "target": "class:randomyst/engine.py:NumberEngine",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:randomyst/api.py:create_app",
+   "target": "class:randomyst/interpretation.py:ExplanationRepository",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:randomyst/api.py:create_app",
+   "target": "class:randomyst/storage.py:DrawStore",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:randomyst/api.py:create_app",
+   "target": "class:randomyst/date_engine.py:DateEngine",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/engine.py:NumberEngine",
+   "target": "function:randomyst/time_engine.py:beijing_clock",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/engine.py:NumberEngine",
+   "target": "function:randomyst/time_engine.py:resolve_maihoa",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/engine.py:NumberEngine",
+   "target": "function:randomyst/time_engine.py:pillars",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/engine.py:NumberEngine",
+   "target": "function:randomyst/bazi.py:analyze",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/engine.py:NumberEngine",
+   "target": "function:randomyst/bazi.py:star_bonuses",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/engine.py:NumberEngine",
+   "target": "function:randomyst/sampling.py:select_context",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/engine.py:NumberEngine",
+   "target": "function:randomyst/sampling.py:configurations",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/engine.py:NumberEngine",
+   "target": "function:randomyst/sampling.py:validate_sample",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/engine.py:NumberEngine",
+   "target": "class:randomyst/sampling.py:Distribution",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/engine.py:NumberEngine",
+   "target": "class:randomyst/maihoa.py:IchingRepository",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/interpretation.py:ExplanationRepository",
+   "target": "class:randomyst/maihoa.py:IchingRepository",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/interpretation.py:ExplanationRepository",
+   "target": "function:randomyst/interpretation.py:digest",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/maihoa.py:IchingRepository",
+   "target": "function:randomyst/sampling.py:state_of",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/storage.py:DrawStore",
+   "target": "class:randomyst/engine.py:EngineError",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:randomyst/sampling.py:configurations",
+   "target": "function:randomyst/sampling.py:count_vectors",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:randomyst/sampling.py:configurations",
+   "target": "function:randomyst/sampling.py:grouped_pool",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:randomyst/sampling.py:configurations",
+   "target": "function:randomyst/sampling.py:relation_score",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:randomyst/sampling.py:select_context",
+   "target": "function:randomyst/sampling.py:configurations",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/sampling.py:Distribution",
+   "target": "class:randomyst/sampling.py:ProductSubsetSampler",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:randomyst/sampling.py:validate_sample",
+   "target": "function:randomyst/sampling.py:element_of",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:tests/test_beijing_calendar.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:tests/test_runtime.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:tests/test_source_explanations.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "file:tests/test_beijing_calendar.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "file:tests/test_runtime.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/engine.py",
+   "target": "file:tests/test_source_explanations.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/interpretation.py",
+   "target": "file:tests/test_source_explanations.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/maihoa.py",
+   "target": "file:tests/test_runtime.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/sampling.py",
+   "target": "file:tests/test_runtime.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

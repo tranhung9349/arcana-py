@@ -1,0 +1,7 @@
+{"projectRoot":"/Users/tranduyhung/Work/randomyst_numbers","batchFiles":[
+{"path":"calendar_adapter/__init__.py","language":"python","sizeLines":5,"fileCategory":"code"},
+{"path":"calendar_adapter/__main__.py","language":"python","sizeLines":32,"fileCategory":"code"},
+{"path":"calendar_adapter/audit.py","language":"python","sizeLines":169,"fileCategory":"code"},
+{"path":"calendar_adapter/vietnamese.py","language":"python","sizeLines":253,"fileCategory":"code"},
+{"path":"tests/test_vietnamese_calendar.py","language":"python","sizeLines":90,"fileCategory":"code"}],
+"batchImportData":{"calendar_adapter/__init__.py":["calendar_adapter/vietnamese.py"],"calendar_adapter/__main__.py":["calendar_adapter/vietnamese.py"],"calendar_adapter/audit.py":["calendar_adapter/vietnamese.py"],"calendar_adapter/vietnamese.py":[],"tests/test_vietnamese_calendar.py":["calendar_adapter/__init__.py","calendar_adapter/vietnamese.py"]}}

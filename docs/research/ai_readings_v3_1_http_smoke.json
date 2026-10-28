@@ -1,0 +1,83 @@
+{
+  "checked_at": "2026-10-26T23:42:01.857391+00:00",
+  "provider": {
+    "configured": true,
+    "model": "deepseek-v4.1-flash",
+    "provider_host": "rexapf.com"
+  },
+  "synthetic_data_only": true,
+  "results": [
+    {
+      "method": "BAZI",
+      "consultation_id": "381711a8-5e4a-42f7-9935-2063dfaad195",
+      "ai_reading_id": "810ffc4198e5a485a570e652b35d920c26a5df8cf17f0533c0ea475b73095dda",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "9ca437ab5fa558442e7fc4b3e5c02ed6f6d702981ebe7ad35a473c60006dbb10",
+      "case_ids": [
+        "bazi-07-study",
+        "bazi-03-mixed"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 14941,
+        "completion_tokens": 4591,
+        "total_tokens": 19532
+      },
+      "generation_passes": 1,
+      "generate_seconds": 11.96,
+      "cache_replay_ms": 22.975,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Điều đáng chú ý nhất là đừng chọn sẵn một kiểu học duy nhất từ việc Ấn lộ còn Thực Thương tàng; hãy coi đó như hai đầu của một vòng học cần tự kiểm tra. Vì khí thế ở trạng thái đan xen và hướng phù ức chưa chốt, chưa thể nói bạn nên nghiêng hẳn về tiếp nhận hay thực hành."
+    },
+    {
+      "method": "MAIHOA",
+      "consultation_id": "338ea908-a663-437e-9113-6c6d6ccca155",
+      "ai_reading_id": "489a4f056b3a4c71431b6405d259b51570953ce5498746883fa896f30b6577df",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "18b4334293e055b397a033b9d42589fc83a6f67f78109227564b9e0d776cbf52",
+      "case_ids": [
+        "maihoa-01-support",
+        "maihoa-04-sequence"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 15641,
+        "completion_tokens": 5972,
+        "total_tokens": 21613
+      },
+      "generation_passes": 1,
+      "generate_seconds": 14.042,
+      "cache_replay_ms": 20.174,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 4,
+      "summary": "Kế hoạch học thêm kỹ năng có các quan hệ được cấp nghiêng thuận từ đầu đến cuối, nhưng chưa có mức vượng suy đầy đủ nên chưa thể chốt mức hiệu lực. Phần cần chuẩn bị kỹ là điều kiện duy trì ở giữa chặng và tiêu chí hoàn tất, không phải đối phó một lực cản đã được chỉ ra."
+    },
+    {
+      "method": "LIUYAO",
+      "consultation_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+      "ai_reading_id": "5b729ab822aa6b01fa1b76ce1ac5cfdc8a897b82ae24c57bff22faa6191097c7",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "00e09ee4c420fffffb9471515e42db4af8485d23bb61f859a7885f5a85c04258",
+      "case_ids": [
+        "liuyao-04-document",
+        "liuyao-01-money"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 14459,
+        "completion_tokens": 5193,
+        "total_tokens": 19652
+      },
+      "generation_passes": 1,
+      "generate_seconds": 16.447,
+      "cache_replay_ms": 28.965,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Bản đề cương có nền khá vững và hướng hỗ trợ bạn, nhưng điều kiện của phía bạn đang là chỗ giới hạn: hào Thế nhập Tuần Không, bị hồi đầu khắc và biến gặp nguyệt phá. Vì vậy việc cần rà soát là tính khả thi và khả năng theo tới cùng, không phải chờ xác nhận nội dung đã đúng."
+    }
+  ]
+}

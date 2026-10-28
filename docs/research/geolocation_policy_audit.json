@@ -1,0 +1,149 @@
+{
+  "status": "Planning and finite arithmetic checks only; no production code or device-location collection.",
+  "confirmed_user_policy": {
+    "priority": [
+      "CLIENT_GEOLOCATION",
+      "IP_GEOLOCATION",
+      "DEFAULT_STANDARD"
+    ],
+    "default_longitude_E": 105.0,
+    "ip_location_policy": "Use configured representative province/city longitude after lookup; provider and mapping table not selected.",
+    "ip_foreign_country_action": "Use default per MVP product convention; not proof of VPN detection.",
+    "new_session_location_request": true,
+    "maximum_location_age_seconds": 900,
+    "used_longitude_decimal_places": 2,
+    "birth_longitude_separate": true,
+    "freeze_across_draws": true,
+    "manual_location_override": true,
+    "manual_override_applies_to_custom_past_future_times": true,
+    "manual_override_scope": "Only the selected casting session; do not update natal longitude or mutate an ongoing frozen session.",
+    "device_low_confidence_when_accuracy_m_greater_than": 1000,
+    "ip_always_low_confidence": true,
+    "successful_device_fix_rejected_at_100m": false,
+    "preserve_original_casting_and_birth_time": true,
+    "fixed_time_shift_seconds": 0,
+    "EoT_required_at_105E": true,
+    "boundary_window": "Derived from aggregate uncertainty; no fixed +/-180 second safety assumption.",
+    "unknown_error_bound_action": "Record uncertainty as unknown and permit manual correction; do not assume no boundary risk or automatically block generation.",
+    "display_time_fields": [
+      "civil UTC+7 datetime",
+      "true solar datetime at second resolution",
+      "signed longitude offset plus EoT"
+    ],
+    "second_resolution_is_not_a_subsecond_accuracy_guarantee": true,
+    "uncertainty_flags_change_number_score": false
+  },
+  "unresolved": [
+    "Validate exact aggregate-error formula and WGS84 conversion; quantify EoT/clock/movement errors.",
+    "Provider and locality-coordinate table selection, unknown locality handling and lookup timeouts.",
+    "Client/server time-source authority, and precision/uncertainty metadata for birth and manually entered inputs."
+  ],
+  "arithmetic_checks": {
+    "minutes_per_longitude_degree": 4,
+    "seconds_for_longitude_error_0_1_degree": 24.0,
+    "seconds_for_longitude_error_0_5_degree": 120.0,
+    "seconds_per_0_01_degree_step": 2.4,
+    "max_seconds_round_to_nearest_2_decimals": 1.2,
+    "formula_at_default_105E": "true_solar_datetime = civil_datetime + EoT(instant); the longitude term is zero.",
+    "H_boundary_hours": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23
+    ],
+    "counterexamples": [
+      {
+        "estimated_and_actual_true_solar_datetime": "2026-10-11T13:01:00",
+        "shifted_true_solar_datetime": "2026-10-11T12:57:00",
+        "original_H": 8,
+        "shifted_H": 7,
+        "original_effective_date": "2026-10-11",
+        "shifted_effective_date": "2026-10-11",
+        "longitude_error_assumed_degrees": 0,
+        "scope": "Synthetic time-boundary counterexample, not an astronomical timestamp calculation or a lunar conversion."
+      },
+      {
+        "estimated_and_actual_true_solar_datetime": "2026-10-11T23:01:00",
+        "shifted_true_solar_datetime": "2026-10-11T22:57:00",
+        "original_H": 1,
+        "shifted_H": 12,
+        "original_effective_date": "2026-10-12",
+        "shifted_effective_date": "2026-10-11",
+        "longitude_error_assumed_degrees": 0,
+        "scope": "Synthetic time-boundary counterexample, not an astronomical timestamp calculation or a lunar conversion."
+      }
+    ]
+  },
+  "sources": {
+    "solar_time_formula": "https://gml.noaa.gov/grad/solcalc/solareqns.PDF",
+    "device_api": "https://www.w3.org/TR/geolocation/",
+    "ip_accuracy": "https://support.maxmind.com/knowledge-base/articles/maxmind-geolocation-accuracy",
+    "ip_api_reference": "https://ip-api.com/docs/api:json"
+  },
+  "superseded_boundary_policy": {
+    "requested_window_seconds_each_side": 180,
+    "requested_shift_seconds": -240,
+    "status": "Rejected by user correction; never apply a fixed time shift or assert a fixed window proves safety.",
+    "counterexamples_retained_for_traceability": true
+  },
+  "boundary_model_proposal": {
+    "units": "seconds",
+    "formula": "delta_t = 240 * longitude_error_degrees + rounding_error_seconds + EoT_error_seconds + clock_error_seconds",
+    "conversion": "Use latitude and WGS84 geometry for radius-to-longitude uncertainty; include replacement with a locality representative and movement since acquisition if relevant.",
+    "rounding_term": "Up to 1.2 seconds with two-decimal nearest rounding; do not add twice if already included in longitude interval.",
+    "missing_term_action": "Unknown delta_t, not zero.",
+    "confidence_note": "Device accuracy is an estimated 95% confidence radius, not a deterministic absolute bound.",
+    "scope": "Exact error model, source error magnitudes and independent EoT accuracy validation remain outstanding."
+  },
+  "policy_boundary_examples": [
+    {
+      "source": "CLIENT_GEOLOCATION",
+      "accuracy_m": 1000,
+      "low_confidence": false,
+      "note": "Strict >1000 threshold; boundary risk is evaluated separately."
+    },
+    {
+      "source": "CLIENT_GEOLOCATION",
+      "accuracy_m": 1000.01,
+      "low_confidence": true
+    },
+    {
+      "source": "IP_GEOLOCATION",
+      "accuracy_m": null,
+      "low_confidence": true,
+      "delta_t_seconds": null,
+      "boundary_status": "UNKNOWN",
+      "fixed_shift_seconds": 0
+    },
+    {
+      "source": "CLIENT_GEOLOCATION",
+      "nominal_TST": "12:59:59",
+      "assumed_total_delta_t_seconds": 1.2,
+      "possible_TST_interval": [
+        "12:59:57.8",
+        "13:00:00.2"
+      ],
+      "boundary_status": "WARNING",
+      "note": "Synthetic known-error interval crosses 13:00 even with an error of less than two seconds."
+    },
+    {
+      "source": "CLIENT_GEOLOCATION",
+      "nominal_TST": "12:30:00",
+      "assumed_total_delta_t_seconds": 60,
+      "possible_TST_interval": [
+        "12:29:00",
+        "12:31:00"
+      ],
+      "boundary_status": "NO_CROSSING_WITHIN_ASSUMED_ERROR",
+      "note": "Does not establish absolute accuracy outside the assumed bounds."
+    }
+  ]
+}

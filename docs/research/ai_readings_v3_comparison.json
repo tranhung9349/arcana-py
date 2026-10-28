@@ -1,0 +1,646 @@
+{
+  "reviewed_date_vietnam": "2026-10-27",
+  "review_kind": "CODEX_EDITORIAL_REVIEW_NOT_EXPERT_REVIEWED",
+  "set_kind": "DEVELOPMENT_REGRESSION_NOT_BLIND_OR_HELDOUT",
+  "synthetic_profiles_only": true,
+  "semantic_accuracy_verified": false,
+  "model_heldout_cases_run": 0,
+  "comparison": [
+    {
+      "method": "BAZI",
+      "consultation_id": "381711a8-5e4a-42f7-9935-2063dfaad195",
+      "review_status": "IMPROVED_WITH_EDITORIAL_LIMITS",
+      "before": {
+        "method": "BAZI",
+        "consultation_id": "381711a8-5e4a-42f7-9935-2063dfaad195",
+        "reading_id": "f1117c084c782abb13d05067d78002132a1e358d5295cdfb8c679f21c5fbb759",
+        "prompt_version": "plain-vietnamese-2026-10-26-v2+query-first-v1",
+        "reading": {
+          "schema_version": "plain-reading-response-v2",
+          "context_id": "381711a8-5e4a-42f7-9935-2063dfaad195",
+          "summary": {
+            "label": "AI_INTERPRETATION",
+            "text": "Điểm đáng chú ý nhất từ dữ kiện: lá số có cả phần tiếp nhận kiến thức (Ấn) lẫn phần làm ra, trình bày (Thực Thương), nhưng phần trình bày chỉ nằm trong tàng can nên không tự lộ ra. Vì engine chưa chốt hành ưu tiên, việc nên thử là chủ động tạo đầu ra sau khi đọc, chứ không phải tăng cường một hành nào.",
+            "fact_refs": [
+              "stem:year",
+              "hidden:day:0",
+              "hidden:year:0",
+              "assessment:snapshot"
+            ],
+            "evidence_refs": [
+              "provider:tables",
+              "policy:balance"
+            ]
+          },
+          "analysis": [
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Ấn là nhóm được hiểu là phần thu nhận, ghi nhớ. Ở đây Giáp Mộc là Chính Ấn lộ trên can năm, còn Ất Mộc là Thiên Ấn nằm trong tàng can của chi ngày và chi giờ. Có mặt không có nghĩa là học giỏi; nó chỉ cho thấy chuyện “nạp vào” là phần hiện rõ trong lá số.",
+              "fact_refs": [
+                "stem:year",
+                "hidden:day:0",
+                "hidden:hour:0"
+              ],
+              "evidence_refs": [
+                "provider:tables",
+                "policy:narrative"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Thực Thương là nhóm được hiểu là phần làm ra, nói ra, trình bày lại. Trong lá số này chỉ có Mậu Thổ Thương Quan nằm trong tàng can của chi năm, chưa lộ trên can. Vì thế bước luyện tập và trình bày khó tự đến; nên tách nó thành một việc riêng chứ không để sau khi đọc xong.",
+              "fact_refs": [
+                "hidden:year:0",
+                "stem:day"
+              ],
+              "evidence_refs": [
+                "provider:tables",
+                "policy:narrative"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Hai can Quý Thủy là Thất Sát lộ ở can tháng và can giờ, gợi hình ảnh đòi hỏi, áp lực từ bên ngoài. Đây là tên nhóm Thập Thần, không phải kết luận bạn đang căng thẳng hay kém tập trung. Nếu dùng làm gợi ý, có thể đối chiếu xem mốc ngắn có kiểm tra được có giúp bạn vào việc hơn mục tiêu dài không mốc hay không.",
+              "fact_refs": [
+                "stem:month",
+                "stem:hour"
+              ],
+              "evidence_refs": [
+                "provider:tables",
+                "policy:narrative"
+              ]
+            }
+          ],
+          "practical_options": [
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Sau mỗi phần đọc, bạn có thể viết lại 3–5 dòng hoặc giải một bài nhỏ mà không mở tài liệu, rồi so với bản gốc để thấy chỗ nào còn hổng.",
+              "fact_refs": [
+                "stem:year",
+                "hidden:year:0"
+              ]
+            },
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể chia mục tiêu thành mốc ngắn kiểm tra được (một tuần, một bài) thay vì một mục tiêu dài không mốc, rồi tự so xem cách nào giữ được nhịp học.",
+              "fact_refs": [
+                "stem:month",
+                "stem:hour"
+              ]
+            }
+          ],
+          "limits": [
+            "Engine chưa chốt hành Dụng/Hỷ/Kỵ, nên không có căn cứ để khuyên tăng một hành, đổi màu sắc hay đổi nghề theo hành đó.",
+            "Ứng viên cách cục Thiên Tài ở nguyệt lệnh mới ở mức có điều kiện; chưa xét thành bại và cứu ứng nên không dùng để kết luận năng lực học.",
+            "Dữ kiện chỉ có mệnh cục sinh, chưa có Đại vận hay Lưu niên, nên không nói được năm hay tháng nào thuận cho việc học."
+          ]
+        },
+        "case_ids": [
+          "bazi-07-study",
+          "bazi-03-mixed"
+        ]
+      },
+      "after": {
+        "reading_id": "1f250120fa22a65daf96e4a593287a7d60d2ded0f26c2bd10140ba31a6589b3c",
+        "prompt_version": "plain-vietnamese-2026-10-27-v3.2",
+        "case_ids": [
+          "bazi-07-study",
+          "bazi-03-mixed"
+        ],
+        "reading": {
+          "schema_version": "plain-reading-response-v2",
+          "context_id": "381711a8-5e4a-42f7-9935-2063dfaad195",
+          "summary": {
+            "label": "AI_INTERPRETATION",
+            "text": "Điểm đáng chú ý nhất cho việc học là ghép phần tiếp nhận với một đầu ra tự làm, đồng thời giữ áp lực ở mức có thể kiểm tra. Lá số có cả nhóm Ấn, Thực Thương và Quan Sát nhưng khí thế đan xen, hướng điều tiết chưa chốt, nên chưa thể nói cách học nào là tối ưu cho bạn.",
+            "fact_refs": [
+              "stem:day",
+              "stem:year",
+              "hidden:day:0",
+              "hidden:hour:0",
+              "hidden:year:0",
+              "stem:month",
+              "stem:hour",
+              "facts:season"
+            ],
+            "evidence_refs": [
+              "text:strength",
+              "policy:strength",
+              "policy:balance",
+              "policy:narrative"
+            ]
+          },
+          "analysis": [
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Nhật chủ Đinh Hỏa sinh tháng Dậu; bản khí chi tháng là Tân Kim, mùa không trợ Hỏa. Điều này không tự kết luận bạn học yếu, vì còn can năm Giáp Mộc thuộc nhóm Ấn sinh trợ và Ất Thiên Ấn tàng ở ngày và giờ. Bức tranh vì vậy là có nguồn tiếp nhận nhưng nền mùa không nâng đỡ; nên xem cả hai phía thay vì chọn một nhãn.",
+              "fact_refs": [
+                "stem:day",
+                "pillar:month",
+                "facts:season",
+                "hidden:month:0",
+                "stem:year",
+                "hidden:day:0",
+                "hidden:hour:0"
+              ],
+              "evidence_refs": [
+                "text:month",
+                "text:strength",
+                "policy:strength"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Hai can Quý Thủy thuộc nhóm Thất Sát lộ ở tháng và giờ; theo cách gọi nhóm, đây là phía áp lực hoặc chuẩn mực đối với Nhật chủ Đinh Hỏa, nhưng lộ không có nghĩa tự mạnh. Nhóm Thực Thương chỉ có Mậu Thổ tàng ở chi năm, chưa lộ; vị trí tàng không chứng minh bạn khó diễn đạt hay thiếu thực hành. Với câu hỏi học, điểm hữu ích là đừng để áp lực đánh giá lấn át việc tự kiểm tra đầu ra; đây là khả năng để đối chiếu, không phải kết luận về tính cách.",
+              "fact_refs": [
+                "stem:month",
+                "stem:hour",
+                "hidden:year:0",
+                "stem:day"
+              ],
+              "evidence_refs": [
+                "policy:narrative",
+                "policy:strength",
+                "text:strength"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Vì khí thế đan xen và hướng phù ức còn để mở, không nên chốt một phương pháp duy nhất từ lá số. Ứng viên Thiên Tài ở nguyệt lệnh cũng chỉ ở mức chưa xác nhận thành cách; các cặp Tuất–Dậu, Dậu–Mão chưa kết luận hóa hành hay sự kiện. Kết luận thực dụng là giữ nhịp học có cả đọc hiểu và tự làm, rồi dùng kết quả bài tập để chọn cách phù hợp.",
+              "fact_refs": [
+                "assessment:snapshot",
+                "hidden:month:0",
+                "relation:0",
+                "relation:3",
+                "relation:4"
+              ],
+              "evidence_refs": [
+                "policy:balance",
+                "policy:structure",
+                "policy:relations",
+                "text:relations"
+              ]
+            }
+          ],
+          "practical_options": [
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể thử học theo vòng: đọc một đoạn ngắn, đóng tài liệu tự giải thích hoặc làm một bài tập nhỏ, ghi lại chỗ mắc; sau đó so với cách chỉ đọc lại. Mục đích là kiểm tra xem phần tiếp nhận có chuyển thành đầu ra được không.",
+              "fact_refs": [
+                "stem:year",
+                "hidden:day:0",
+                "hidden:year:0",
+                "stem:month",
+                "stem:hour"
+              ]
+            },
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể đặt mục tiêu học trong 25–30 phút với một tiêu chí hoàn thành rõ, rồi nghỉ; đối chiếu mức căng thẳng và chất lượng bài làm giữa các buổi để tự chọn nhịp.",
+              "fact_refs": [
+                "stem:month",
+                "stem:hour",
+                "assessment:snapshot"
+              ]
+            }
+          ],
+          "limits": [
+            "Bộ điều kiện định tính; kết luận phải giữ mở khi tín hiệu khác hướng hoặc nghi ngoại cách.",
+            "Chưa có quy tắc đã đối chiếu đủ; không coi phần chưa xét là không có.",
+            "Ứng viên nguyệt lệnh và gợi ý mùa chưa đủ thành bại/cứu ứng, tòng hóa và bảng Điều hậu 120 trường hợp."
+          ]
+        }
+      },
+      "improvements": [
+        "Nối mùa không sinh trợ với can Ấn và phía khắc trong cùng bức tranh, giữ khí thế đan xen.",
+        "Không còn kết luận Thực Thương tàng làm thực hành khó tự đến."
+      ],
+      "remaining": [
+        "Liên hệ Quan Sát với áp lực học vẫn là ứng dụng biểu tượng, chưa phải phát hiện về thói quen.",
+        "Đoạn cuối còn liệt kê một số quan hệ không trực tiếp giúp trả lời cách học."
+      ]
+    },
+    {
+      "method": "MAIHOA",
+      "consultation_id": "338ea908-a663-437e-9113-6c6d6ccca155",
+      "review_status": "IMPROVED_WITH_EDITORIAL_LIMITS",
+      "before": {
+        "method": "MAIHOA",
+        "consultation_id": "338ea908-a663-437e-9113-6c6d6ccca155",
+        "reading_id": "c2be1a6d3e5aaa08d4567fea8da7cf3c0280be4038ec0d9460e4c1b4f4af9a3b",
+        "prompt_version": "plain-vietnamese-2026-10-26-v2+query-first-v1",
+        "reading": {
+          "schema_version": "plain-reading-response-v2",
+          "context_id": "338ea908-a663-437e-9113-6c6d6ccca155",
+          "summary": {
+            "label": "AI_INTERPRETATION",
+            "text": "Điểm hữu ích nhất: ở chặng mở đầu, phía việc học được đọc là đang đưa hỗ trợ về cho bạn, nên kế hoạch không cần gắng ép. Phần nên chuẩn bị kỹ là khâu giữa, vì đó là chỗ bạn phải tự tay giữ tiến độ.",
+            "fact_refs": [
+              "chart:the",
+              "chart:dung",
+              "season"
+            ],
+            "evidence_refs": [
+              "PLANNING_USE_GENERATES_BODY",
+              "BODY_USE"
+            ]
+          },
+          "analysis": [
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Thể là Càn Kim, đại diện phía bạn; Dụng là Cấn Thổ, đại diện việc học. Thổ sinh Kim nên gọi là Dụng sinh Thể, và nguồn ghi “用生體。不謀而成”, nghĩa là việc có chiều tự thành chứ không phải tính toán gượng. Đây vẫn là trạng thái có điều kiện, chưa phải kết quả đã xảy ra.",
+              "fact_refs": [
+                "chart:the",
+                "chart:dung",
+                "season"
+              ],
+              "evidence_refs": [
+                "PLANNING_USE_GENERATES_BODY",
+                "ELEMENTS",
+                "GENERATES"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Chặng giữa có hai mặt. Quẻ hỗ phía bạn cũng là Càn Kim, gọi là tỷ hòa, tức cùng một hành nên không đẩy cũng không cản — dễ chủ quan và tiến độ không tự nhắc. Quẻ hỗ phía việc là Tốn Mộc bị Càn Kim khắc, nghĩa là khâu giữa cần bạn chủ động siết lại thì mới thuận.",
+              "fact_refs": [
+                "chart:the",
+                "chart:mutual_body",
+                "chart:mutual_use"
+              ],
+              "evidence_refs": [
+                "AUX_SAME",
+                "AUX_BODY_CONTROLS_USE",
+                "PHASES"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Chặng cuối là Khôn Thổ sinh Càn Kim, nguồn ghi việc kết thúc theo chiều có lợi. Thêm một điểm đáng chú ý: Dụng Cấn Thổ đang vượng vì tháng Tuất thuộc hành Thổ, mà nguồn nói quái sinh Thể gặp lúc vượng thì tốt. Ngược lại, độ mạnh của Thể chưa được xác định trong dữ kiện, nên chưa nói được bạn có đủ sức theo hết kế hoạch hay không.",
+              "fact_refs": [
+                "chart:the",
+                "chart:changed_use",
+                "season"
+              ],
+              "evidence_refs": [
+                "AUX_USE_GENERATES_BODY",
+                "FINAL",
+                "STRENGTH",
+                "STRONG"
+              ]
+            }
+          ],
+          "practical_options": [
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể đặt sẵn hai mốc tự kiểm tra ở khoảng giữa kế hoạch, ví dụ một buổi ôn lại và một bài thực hành nhỏ, để khâu giữa không bị bỏ trôi.",
+              "fact_refs": [
+                "chart:mutual_body",
+                "chart:mutual_use"
+              ]
+            },
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể kiểm tra trước xem nguồn hỗ trợ bên ngoài đã chắc chưa — lớp học, người hướng dẫn, tài liệu — vì chiều thuận trong quẻ đến từ phía việc học chứ không từ phía bạn.",
+              "fact_refs": [
+                "chart:dung",
+                "season"
+              ]
+            }
+          ],
+          "limits": [
+            "Chưa có ứng kỳ và ngoại ứng thực tế, nên không nói được mốc thời gian nào cho từng chặng.",
+            "Độ mạnh của Thể chưa được xác định trong dữ kiện, nên chưa kết luận được sức theo dài của bạn.",
+            "Các chỉ báo là phép luận truyền thống, không phải xác suất thành công; lời Việt là bản nháp AI chưa hiệu đính."
+          ]
+        },
+        "case_ids": [
+          "maihoa-01-support",
+          "maihoa-04-sequence"
+        ]
+      },
+      "after": {
+        "reading_id": "0929fb4993c8cae366ac1f5b8d81259655061df213b8760f28d1c51b18f4be95",
+        "prompt_version": "plain-vietnamese-2026-10-27-v3.2",
+        "case_ids": [
+          "maihoa-01-support",
+          "maihoa-04-sequence"
+        ],
+        "reading": {
+          "schema_version": "plain-reading-response-v2",
+          "context_id": "338ea908-a663-437e-9113-6c6d6ccca155",
+          "summary": {
+            "label": "AI_INTERPRETATION",
+            "text": "Các quan hệ đầu, giữa và cuối đều được ghi theo chiều thuận, nên kế hoạch học thêm có nền thuận. Điều cần chuẩn bị kỹ là nhịp duy trì và mốc kiểm tra, vì độ mạnh của Thể chưa xác định và các nhận định vẫn còn điều kiện.",
+            "fact_refs": [
+              "chart:the",
+              "chart:dung",
+              "chart:mutual_body",
+              "chart:mutual_use",
+              "chart:changed_use",
+              "season",
+              "summary"
+            ],
+            "evidence_refs": [
+              "PLANNING_USE_GENERATES_BODY",
+              "AUX_SAME",
+              "AUX_BODY_CONTROLS_USE",
+              "AUX_USE_GENERATES_BODY",
+              "STRENGTH",
+              "PHASES"
+            ]
+          },
+          "analysis": [
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Thể là Càn Kim, đại diện phía bạn; Dụng là Cấn Thổ, đại diện việc học kỹ năng. Ở quan hệ đầu, Dụng sinh Thể, tức phía việc có chiều sinh trợ cho bạn, và nguồn mưu sự ghi đây là chiều tự thuận thành. Tháng Tuất thuộc Thổ, Dụng Thổ lại được cấp mạnh, nên phía nội dung hoặc việc học có lực nổi bật. Nhưng Thể Kim chỉ được ghi là chưa xác định độ mạnh, nên không thể suy tiếp rằng bạn đủ sức theo đến đâu; đó là chỗ cần chuẩn bị kỹ.",
+              "fact_refs": [
+                "chart:the",
+                "chart:dung",
+                "season",
+                "summary"
+              ],
+              "evidence_refs": [
+                "PLANNING_USE_GENERATES_BODY",
+                "STRENGTH",
+                "ELEMENTS"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Phần giữa có hai quan hệ khác phía: Hỗ phía Thể cùng hành với Thể, được ghi thuận; Hỗ phía việc bị Thể khắc, cũng được ghi thuận. Cùng hành ở đây là quan hệ cùng hành theo finding, không nên đổi thành trung tính hay trì trệ; còn Thể khắc Hỗ Dụng là chiều Thể tác động lên phía việc, không phải phía việc áp lực ngược lại Thể. Vì hai quan hệ nói về hai phía khác nhau, khi chuẩn bị nên tách phần duy trì của bạn và phần nội dung kỹ năng để theo dõi riêng.",
+              "fact_refs": [
+                "chart:the",
+                "chart:mutual_body",
+                "chart:mutual_use",
+                "summary"
+              ],
+              "evidence_refs": [
+                "AUX_SAME",
+                "AUX_BODY_CONTROLS_USE",
+                "PHASES"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Ở cuối, Dụng biến thành Khôn Thổ mạnh, sinh Thể Kim, được ghi là chiều tiến ích. Đọc theo chặng, đầu và cuối đều thuận, phần giữa cũng không có dấu nghịch được cấp; nhưng tất cả các nhận định này vẫn ở mức có điều kiện. Chưa có ứng kỳ và chưa có đủ vượng suy, nên không thể hẹn ngày hoàn thành hoặc chốt mức thành công. Điều cần chuẩn bị kỹ nhất là nhịp thực hành và mốc kiểm tra, vì đó là phần giúp bạn biết kế hoạch còn giữ được chiều thuận hay không.",
+              "fact_refs": [
+                "chart:changed_use",
+                "chart:the",
+                "season",
+                "summary"
+              ],
+              "evidence_refs": [
+                "AUX_USE_GENERATES_BODY",
+                "STRENGTH",
+                "PHASES",
+                "SYNTHESIS"
+              ]
+            }
+          ],
+          "practical_options": [
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể thử chia kỹ năng thành các buổi thực hành ngắn và đặt mốc kiểm tra sau mỗi chặng; ghi lại phần tự làm được và phần cần hướng dẫn để điều chỉnh nhịp.",
+              "fact_refs": [
+                "chart:the",
+                "chart:dung",
+                "chart:mutual_body",
+                "chart:mutual_use"
+              ]
+            },
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể đối chiếu đầu ra bằng một bài thực hành nhỏ sau mỗi chặng, thay vì chỉ dựa vào cảm giác thuận lúc bắt đầu.",
+              "fact_refs": [
+                "chart:changed_use",
+                "chart:mutual_body",
+                "chart:mutual_use"
+              ]
+            }
+          ],
+          "limits": [
+            "Chưa có vượng suy đầy đủ của Thể và chưa có ứng kỳ; không thể chốt mức độ thành công hoặc thời điểm hoàn thành.",
+            "Các chỉ báo là phép luận truyền thống, không phải xác suất thành công hoặc lợi nhuận."
+          ]
+        }
+      },
+      "improvements": [
+        "Nối quan hệ đầu, hai Hỗ và Biến; giữ rõ chiều Thể khắc Hỗ phía Dụng.",
+        "Không còn suy tỷ hòa thành chủ quan, hoặc áp thành chậm của quy tắc Dụng ban đầu vào Hỗ."
+      ],
+      "remaining": [
+        "Một số câu còn giống hướng dẫn phương pháp, có từ finding lọt vào lời Việt.",
+        "Gợi ý nhịp duy trì là ứng dụng hiện đại; cần hiệu đính để tránh đọc như kết luận quẻ về sức bền."
+      ]
+    },
+    {
+      "method": "LIUYAO",
+      "consultation_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+      "review_status": "IMPROVED_WITH_EDITORIAL_LIMITS",
+      "before": {
+        "method": "LIUYAO",
+        "consultation_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+        "reading_id": "287119a18d43bac32828cd8c571a8e3e53408e7b1a1446756d4d525f8bf4225d",
+        "prompt_version": "plain-vietnamese-2026-10-26-v2+query-first-v1",
+        "reading": {
+          "schema_version": "plain-reading-response-v2",
+          "context_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+          "summary": {
+            "label": "AI_INTERPRETATION",
+            "text": "Điểm đáng yên tâm là phần khung và nội dung chính của bản đề cương có nền khá vững. Chỗ nên rà soát trước là lượng sức bạn bỏ vào đó và những yêu cầu bên ngoài chưa được chốt rõ.",
+            "fact_refs": [
+              "selection",
+              "line:L4",
+              "line:L3",
+              "line:L5"
+            ],
+            "evidence_refs": [
+              "engine:F001",
+              "engine:F002",
+              "engine:F005"
+            ]
+          },
+          "analysis": [
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Với chủ đề học tập, hào Phụ mẫu (nhóm hào đại diện văn bản, giấy tờ) là điểm quy chiếu, ở đây là hào 4 Kim. Hào này được tháng Tuất sinh và ngày Dậu đồng hành, nên phần khung, mục tiêu và tài liệu tham chiếu của đề cương là chỗ giữ lại, không cần làm lại từ đầu.",
+              "fact_refs": [
+                "selection",
+                "line:L4",
+                "tendency"
+              ],
+              "evidence_refs": [
+                "engine:F001",
+                "engine:F002",
+                "ly:document",
+                "ly:month"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Hào Thế là hào đại diện cho bạn, ở đây là hào 3 Hợi Thủy. Hào này đang sinh ra hào Phụ mẫu, tức bạn dồn công sức vào bản đề cương, nhưng bản thân nó lại đang trong Tuần Không (trạng thái tạm trống, chưa tính là mất) và khi động thì bị hồi đầu khắc, hóa Nguyệt Phá. Nghĩa là công sức bỏ ra dễ vượt sức hồi lại, nên rà khối lượng, số mục tiêu và thời gian cam kết.",
+              "fact_refs": [
+                "line:L3",
+                "line:L4",
+                "roles"
+              ],
+              "evidence_refs": [
+                "engine:F004",
+                "engine:F005"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Hai hào Thổ là nguồn hỗ trợ cho hào Phụ mẫu, trong đó hào 5 đang Không dù đắc nguyệt. Hiểu đơn giản: phần điều kiện bên ngoài giúp đề cương đứng vững chưa hiện rõ, nên xác nhận lại yêu cầu, tiêu chí hoặc mốc nộp trước khi viết tiếp.",
+              "fact_refs": [
+                "line:L5",
+                "line:L2",
+                "roles"
+              ],
+              "evidence_refs": [
+                "engine:F001",
+                "engine:F005",
+                "ly:roles"
+              ]
+            }
+          ],
+          "practical_options": [
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể đánh dấu trong đề cương ba mục bắt buộc nhất và tạm gác phần mở rộng, rồi xem một tuần có làm kịp khối lượng đó không.",
+              "fact_refs": [
+                "line:L3",
+                "line:L4"
+              ]
+            },
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể đối chiếu đề cương với đề bài hoặc tiêu chí chấm đã có, thay vì tự đoán phần nào là bắt buộc.",
+              "fact_refs": [
+                "line:L5",
+                "selection"
+              ]
+            }
+          ],
+          "limits": [
+            "Chưa có mốc ứng kỳ, nên không nói được ngày nào nên xong phần nào.",
+            "Đây là phân tích sơ bộ theo tháng và ngày, chưa giải các quan hệ phức tạp giữa các hào, và chưa được chuyên gia hiệu đính."
+          ]
+        },
+        "case_ids": [
+          "liuyao-01-money",
+          "liuyao-03-day-clash"
+        ]
+      },
+      "after": {
+        "reading_id": "ed3d303cde861e1c25d430f0542fc7924db3f297cab2423defb49866738baae9",
+        "prompt_version": "plain-vietnamese-2026-10-27-v3.2",
+        "case_ids": [
+          "liuyao-04-document",
+          "liuyao-01-money"
+        ],
+        "reading": {
+          "schema_version": "plain-reading-response-v2",
+          "context_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+          "summary": {
+            "label": "AI_INTERPRETATION",
+            "text": "Hào đại diện bản đề cương được tháng và ngày nâng đỡ, nhưng hào của bạn đang động, còn nằm trong Tuần Không và bị hồi đầu khắc. Vì vậy điều cần rà soát trước là phần việc và khả năng theo tới bước cuối của chính bạn; quẻ chưa xác nhận nội dung đề cương đã đúng hay sẽ được chấp nhận.",
+            "fact_refs": [
+              "line:L4",
+              "line:L3",
+              "relation:use_world",
+              "tendency"
+            ],
+            "evidence_refs": [
+              "engine:F002",
+              "engine:F004",
+              "engine:F005",
+              "ly:document"
+            ]
+          },
+          "analysis": [
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Phụ mẫu là hào đại diện văn bản, ở đây là hào 4 Thân Kim, đứng yên. Tháng Tuất thuộc Thổ sinh hào Kim, ngày Dậu cũng là Kim đồng hành, nên khí mùa được ghi là Tướng. Đó là nền sơ bộ cho hào, chưa phải bản đánh giá nội dung: hào vượng không chứng minh đề cương đã chặt chẽ hay đã đủ ý, muốn biết vẫn phải đọc chính bản thảo.",
+              "fact_refs": [
+                "selection",
+                "line:L4",
+                "tendency"
+              ],
+              "evidence_refs": [
+                "engine:F001",
+                "engine:F002",
+                "ly:document",
+                "ly:month"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Hào Thế là hào 3 Hợi Thủy, đang động, nên phần của bạn không đứng yên như hào văn bản. Tháng Tuất khắc hào Thủy, ngày Dậu lại sinh hào Thủy, nên trạng thái là MIXED; hào còn nằm trong Tuần Không, phải xét lúc xuất Không hoặc điền thực chứ không loại bỏ hào. Động biến của Thế bị hồi đầu khắc và hóa Nguyệt Phá, tức hào biến khắc lại hào gốc và bản thân hào biến bị tháng xung phá, nên tác dụng của biến hào có điều kiện về thời điểm.",
+              "fact_refs": [
+                "line:L3",
+                "line:L6",
+                "reading:anchors",
+                "tendency"
+              ],
+              "evidence_refs": [
+                "engine:F003",
+                "engine:F005",
+                "ly:day"
+              ]
+            },
+            {
+              "label": "AI_INTERPRETATION",
+              "text": "Quan hệ đã lưu là Dụng hào 4 Kim sinh Thế hào 3 Thủy, chiều từ văn bản sang phía bạn, không phải ngược lại. Nhưng chính nhận định đi kèm nói tác dụng còn phụ thuộc sức hào và động biến, và phần về Thế yêu cầu kiểm tra điều kiện của Thế trước khi kết luận thuận lợi. Nói cách khác, nền hỗ trợ của hào văn bản và điều kiện bất lợi của hào Thế cùng tồn tại; cái sau chỉ giới hạn mức thuận, không chứng minh bạn thiếu sức hay sẽ bỏ dở. Điều cần rà soát vì thế là chỗ nào trong đề cương còn là dự định chờ bổ sung, và chỗ nào đòi hỏi bạn duy trì đều đến cuối.",
+              "fact_refs": [
+                "relation:use_world",
+                "line:L4",
+                "line:L3",
+                "tendency"
+              ],
+              "evidence_refs": [
+                "engine:F004",
+                "engine:F005",
+                "ly:roles",
+                "ly:effective"
+              ]
+            }
+          ],
+          "practical_options": [
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể rà đề cương theo từng mục, đánh dấu mục đã có nội dung đọc được và mục mới chỉ là dự định, rồi đối chiếu với quỹ thời gian bạn thực sự giữ được cho từng mục.",
+              "fact_refs": [
+                "line:L4",
+                "line:L3"
+              ]
+            },
+            {
+              "kind": "MODERN_APPLICATION",
+              "text": "Bạn có thể đặt một mốc kiểm tra giữa chừng cho mỗi phần và ghi rõ phần nào phụ thuộc điều kiện bên ngoài, để phân biệt chỗ cần sửa nội dung với chỗ chỉ cần thêm thời gian.",
+              "fact_refs": [
+                "line:L3",
+                "line:L4",
+                "tendency"
+              ]
+            }
+          ],
+          "limits": [
+            "Chưa có nội dung bản đề cương, nên không thể kết luận chất lượng văn bản hay khả năng được chấp nhận.",
+            "Vượng suy chỉ là phân tích sơ bộ theo Nhật–Nguyệt; chưa giải toàn cục tam hợp, tam hình, mộ tuyệt hay mọi trường hợp cứu giải.",
+            "Chưa có ứng kỳ được ấn định, nên không nêu ngày hoàn tất hoặc thời điểm duyệt."
+          ]
+        }
+      },
+      "improvements": [
+        "Đúng chiều Dụng Kim sinh Thế Thủy; giữ đồng thời Dụng được trợ và điều kiện Không/động biến của Thế.",
+        "Không còn xác nhận nội dung đề cương tốt hoặc gán Mộc khắc Kim từ hào phụ."
+      ],
+      "remaining": [
+        "Có enum MIXED lọt vào một câu; văn phong vẫn cần biên tập.",
+        "Phần liên hệ Thế với thực thi phải tiếp tục giữ ở mức câu hỏi đối chiếu, không chẩn đoán sức người."
+      ]
+    }
+  ]
+}

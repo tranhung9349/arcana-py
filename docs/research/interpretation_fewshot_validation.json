@@ -1,0 +1,37 @@
+{
+  "pack_version": "plain-vietnamese-2026-10-26-v2",
+  "case_count": 17,
+  "evidence_excerpt_and_policy_count": 20,
+  "heldout_case_count": 8,
+  "method_counts": {
+    "BAZI_NATAL_V1": 8,
+    "LIUYAO_NAJIA": 3,
+    "MAIHOA_INTERNAL": 4,
+    "ZHOUYI_TEXT": 2
+  },
+  "verification": {
+    "command": ".venv/bin/python -m unittest discover -s tests -q",
+    "python_tests": 171,
+    "new_prompt_tests": 9,
+    "duration_seconds": 16.754,
+    "exit_code": 0,
+    "corpus_load_with_all_hashes": "PASS",
+    "all_example_schemas_and_references": "PASS",
+    "saved_bazi_to_prompt_cli": "PASS",
+    "bazi_rules_sha256": "ec24edd1b6dbe7a9cdfd6c7803a86b8c4322d2984a18e8f57c19210933fb1005"
+  },
+  "evaluation": {
+    "model_called": false,
+    "model_quality_evaluation": "NOT_RUN",
+    "expert_review": "NOT_RUN",
+    "layperson_readability_review": "NOT_RUN",
+    "source_review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED"
+  },
+  "runtime_integration": false,
+  "limitations": [
+    "Reference validation does not establish semantic truth or translation accuracy.",
+    "Examples are original synthetic teaching slices, not historical divination cases.",
+    "Three Ziping excerpts are web-verified but the complete edition was not captured.",
+    "Prompt preparation has not changed the current UI template readings."
+  ]
+}

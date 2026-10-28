@@ -1,0 +1,20 @@
+{
+  "cases": 1000,
+  "mismatches": [],
+  "decision_branches_covered": [
+    "FOLLOW_OFFICER",
+    "FOLLOW_OUTPUT",
+    "FOLLOW_STRONG",
+    "FOLLOW_WEALTH",
+    "STRONG_RESOURCE",
+    "STRONG_SELF_OFFICER",
+    "STRONG_SELF_OUTPUT",
+    "WEAK_OFFICER",
+    "WEAK_OUTPUT",
+    "WEAK_WEALTH"
+  ],
+  "comparison_scope": "Same supplied four pillars; not an independent calendar or Bazi correctness proof",
+  "source_commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+  "source_sha256": "3efb4f7b131c5ffa7475eb32e53bd0b662ee1deb9541a5e4f03207a0bfe4942b",
+  "port_sha256": "d0ab6d26d8cbb389d052e85616ef2b12f3facf132c596d152d35e6fc41c44297"
+}

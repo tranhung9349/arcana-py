@@ -1,0 +1,546 @@
+{
+  "$defs": {
+    "ActivityGroup": {
+      "additionalProperties": false,
+      "properties": {
+        "group_id": {
+          "title": "Group Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "group_id",
+        "name"
+      ],
+      "title": "ActivityGroup",
+      "type": "object"
+    },
+    "ActivitySpec": {
+      "additionalProperties": false,
+      "properties": {
+        "activity": {
+          "enum": [
+            "MARRIAGE",
+            "BUSINESS_OPENING",
+            "TRAVEL",
+            "HOME_ENTRY",
+            "RELOCATION",
+            "RENOVATION",
+            "TRADE",
+            "LAND_BREAKING",
+            "ROOF_BEAM",
+            "CONTRACT_RITE",
+            "PROPERTY_ACQUISITION",
+            "RECEIVE_ASSETS",
+            "START_EDUCATION",
+            "START_JOB",
+            "ANCESTOR_RITE",
+            "BETROTHAL_NACAI",
+            "BETROTHAL_COVENANT",
+            "INCENSE_INSTALLATION",
+            "BED_SETUP",
+            "DEMOLITION",
+            "PRAYER"
+          ],
+          "title": "Activity",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "provider_token": {
+          "title": "Provider Token",
+          "type": "string"
+        },
+        "subject_count": {
+          "enum": [
+            1,
+            2
+          ],
+          "title": "Subject Count",
+          "type": "integer"
+        },
+        "group_id": {
+          "title": "Group Id",
+          "type": "string"
+        },
+        "provider_hour_token": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Provider Hour Token"
+        },
+        "subject_roles": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 1,
+          "title": "Subject Roles",
+          "type": "array"
+        },
+        "hour_evaluation_mode": {
+          "enum": [
+            "LEGACY_V1",
+            "DIRECT_YI_JI",
+            "DAY_ONLY"
+          ],
+          "title": "Hour Evaluation Mode",
+          "type": "string"
+        },
+        "rule_profile": {
+          "enum": [
+            "LEGACY_V1",
+            "CONSTRUCTIVE_V2",
+            "RITUAL_V2",
+            "DEFERRED"
+          ],
+          "title": "Rule Profile",
+          "type": "string"
+        },
+        "event_anchor": {
+          "title": "Event Anchor",
+          "type": "string"
+        },
+        "scope_note": {
+          "title": "Scope Note",
+          "type": "string"
+        },
+        "enabled": {
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "tier": {
+          "enum": [
+            "CORE",
+            "CONTEXTUAL"
+          ],
+          "title": "Tier",
+          "type": "string"
+        },
+        "review_status": {
+          "enum": [
+            "PRODUCT_POLICY",
+            "NOT_ENABLED"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "activity",
+        "name",
+        "provider_token",
+        "subject_count",
+        "group_id",
+        "provider_hour_token",
+        "subject_roles",
+        "hour_evaluation_mode",
+        "rule_profile",
+        "event_anchor",
+        "scope_note",
+        "enabled",
+        "tier",
+        "review_status"
+      ],
+      "title": "ActivitySpec",
+      "type": "object"
+    },
+    "DateRule": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "pattern": "^[A-Z][A-Z0-9_]+$",
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "enabled": {
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "when": {
+          "$ref": "#/$defs/RuleWhen"
+        },
+        "activity_scope": {
+          "items": {
+            "enum": [
+              "MARRIAGE",
+              "BUSINESS_OPENING",
+              "TRAVEL",
+              "HOME_ENTRY",
+              "RELOCATION",
+              "RENOVATION",
+              "TRADE",
+              "LAND_BREAKING",
+              "ROOF_BEAM",
+              "CONTRACT_RITE",
+              "PROPERTY_ACQUISITION",
+              "RECEIVE_ASSETS",
+              "START_EDUCATION",
+              "START_JOB",
+              "ANCESTOR_RITE",
+              "BETROTHAL_NACAI",
+              "BETROTHAL_COVENANT",
+              "INCENSE_INSTALLATION",
+              "BED_SETUP",
+              "DEMOLITION",
+              "PRAYER"
+            ],
+            "type": "string"
+          },
+          "maxItems": 21,
+          "minItems": 1,
+          "title": "Activity Scope",
+          "type": "array"
+        },
+        "subject_scope": {
+          "const": "GENERAL",
+          "default": "GENERAL",
+          "title": "Subject Scope",
+          "type": "string"
+        },
+        "effect": {
+          "enum": [
+            "PENALTY",
+            "BLOCK",
+            "WARN"
+          ],
+          "title": "Effect",
+          "type": "string"
+        },
+        "points": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Points"
+        },
+        "dedupe_group": {
+          "title": "Dedupe Group",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "review_status": {
+          "enum": [
+            "PINNED_SOFTWARE",
+            "PRODUCT_POLICY",
+            "NOT_ENABLED"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule_id",
+        "enabled",
+        "when",
+        "activity_scope",
+        "effect",
+        "dedupe_group",
+        "message",
+        "source_id",
+        "review_status"
+      ],
+      "title": "DateRule",
+      "type": "object"
+    },
+    "DateScoring": {
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Base",
+          "type": "integer"
+        },
+        "good_threshold": {
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Good Threshold",
+          "type": "integer"
+        },
+        "normal_threshold": {
+          "maximum": 99,
+          "minimum": 0,
+          "title": "Normal Threshold",
+          "type": "integer"
+        },
+        "day_not_listed_penalty": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Day Not Listed Penalty",
+          "type": "integer"
+        },
+        "hour_not_listed_penalty": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Hour Not Listed Penalty",
+          "type": "integer"
+        },
+        "personal_element_penalties": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "propertyNames": {
+            "enum": [
+              "PRIMARY",
+              "HY",
+              "NEUTRAL",
+              "KY"
+            ]
+          },
+          "title": "Personal Element Penalties",
+          "type": "object"
+        },
+        "personal_clash_blocks": {
+          "title": "Personal Clash Blocks",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "base",
+        "good_threshold",
+        "normal_threshold",
+        "day_not_listed_penalty",
+        "hour_not_listed_penalty",
+        "personal_element_penalties",
+        "personal_clash_blocks"
+      ],
+      "title": "DateScoring",
+      "type": "object"
+    },
+    "DateSource": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "basis": {
+          "title": "Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "path",
+        "sha256",
+        "url",
+        "basis"
+      ],
+      "title": "DateSource",
+      "type": "object"
+    },
+    "MonthTables": {
+      "additionalProperties": false,
+      "properties": {
+        "sat_chu": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 12,
+          "minItems": 12,
+          "title": "Sat Chu",
+          "type": "array"
+        },
+        "tho_tu": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 12,
+          "minItems": 12,
+          "title": "Tho Tu",
+          "type": "array"
+        },
+        "nguyet_pha": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 12,
+          "minItems": 12,
+          "title": "Nguyet Pha",
+          "type": "array"
+        }
+      },
+      "required": [
+        "sat_chu",
+        "tho_tu",
+        "nguyet_pha"
+      ],
+      "title": "MonthTables",
+      "type": "object"
+    },
+    "RuleWhen": {
+      "additionalProperties": false,
+      "properties": {
+        "fact": {
+          "enum": [
+            "calendar_class",
+            "day_relation",
+            "ambient_support",
+            "year_clash",
+            "sat_chu",
+            "tho_tu",
+            "nguyet_pha",
+            "tam_nuong"
+          ],
+          "title": "Fact",
+          "type": "string"
+        },
+        "equals": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            }
+          ],
+          "title": "Equals"
+        }
+      },
+      "required": [
+        "fact",
+        "equals"
+      ],
+      "title": "RuleWhen",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "date-rules-v2",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "rules_version": {
+      "title": "Rules Version",
+      "type": "string"
+    },
+    "provider_version": {
+      "const": "1.4.8",
+      "title": "Provider Version",
+      "type": "string"
+    },
+    "calendar_policy": {
+      "const": "BEIJING_CIVIL_UTC8",
+      "title": "Calendar Policy",
+      "type": "string"
+    },
+    "major_taboo_basis": {
+      "const": "CANDIDATE_EXACT_JIE_MONTH_AND_SECT1_DAY",
+      "title": "Major Taboo Basis",
+      "type": "string"
+    },
+    "disabled_rules": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Disabled Rules",
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/DateSource"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "activity_registry_version": {
+      "const": "major-events-2026-10-25-v2",
+      "title": "Activity Registry Version",
+      "type": "string"
+    },
+    "groups": {
+      "items": {
+        "$ref": "#/$defs/ActivityGroup"
+      },
+      "maxItems": 7,
+      "minItems": 7,
+      "title": "Groups",
+      "type": "array"
+    },
+    "activities": {
+      "items": {
+        "$ref": "#/$defs/ActivitySpec"
+      },
+      "maxItems": 21,
+      "minItems": 21,
+      "title": "Activities",
+      "type": "array"
+    },
+    "month_tables": {
+      "$ref": "#/$defs/MonthTables"
+    },
+    "scoring": {
+      "$ref": "#/$defs/DateScoring"
+    },
+    "day_scoring": {
+      "$ref": "#/$defs/DateScoring"
+    },
+    "rules": {
+      "items": {
+        "$ref": "#/$defs/DateRule"
+      },
+      "minItems": 1,
+      "title": "Rules",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "rules_version",
+    "provider_version",
+    "calendar_policy",
+    "major_taboo_basis",
+    "disabled_rules",
+    "sources",
+    "activity_registry_version",
+    "groups",
+    "activities",
+    "month_tables",
+    "scoring",
+    "day_scoring",
+    "rules"
+  ],
+  "title": "DateRules",
+  "type": "object"
+}

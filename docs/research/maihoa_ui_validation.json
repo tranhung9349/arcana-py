@@ -1,0 +1,52 @@
+{
+  "checked_date_utc7": "2026-10-25",
+  "preview_url": "http://127.0.0.1:8766/",
+  "browser": "Codex in-app browser",
+  "viewport": {
+    "width": 686,
+    "height": 979,
+    "override_used": false
+  },
+  "checks": {
+    "three_function_tabs_switch_to_one_visible_workspace": true,
+    "standalone_maihoa_has_no_birth_field": true,
+    "custom_time_form_submission_and_saved_history_open": true,
+    "trade_original_7_moving_2_mutual_24_changed_2": true,
+    "trade_quote_visible_and_links_to_revision_1441921": true,
+    "qian_original_1_moving_3_mutual_37_changed_10": true,
+    "pure_qian_mutual_from_changed_explanation_visible": true,
+    "saved_session_opens_after_server_restart": true,
+    "result_heading_receives_focus_after_render": true,
+    "three_hexagram_cards_and_four_phase_findings": true,
+    "no_horizontal_overflow_at_observed_width": true,
+    "browser_console_errors": [],
+    "javascript_syntax_checks": true
+  },
+  "fixtures": [
+    {
+      "question": "Việc giao dịch mẫu trong tháng tới có những điểm thuận và trở ngại gì?",
+      "topic": "TRADE",
+      "casting_time_utc7": "2026-10-25T09:00:00+07:00"
+    },
+    {
+      "question": "Phiên mẫu đối chiếu cách lấy hỗ của quẻ thuần Càn.",
+      "topic": "GENERAL",
+      "casting_time_utc7": "2026-10-18T12:00:00+07:00"
+    }
+  ],
+  "screenshots": [
+    "maihoa_source_ui.jpg",
+    "maihoa_pure_ui.jpg"
+  ],
+  "automated_suite": {
+    "tests": 80,
+    "new_maihoa_tests": 14,
+    "result": "PASS"
+  },
+  "limitations": [
+    "No viewport override or separate 390px device simulation.",
+    "Network timeout/retry UI was reviewed in code, not artificially simulated.",
+    "CURRENT clock semantics and request idempotency were checked by automated tests; browser fixtures use CUSTOM.",
+    "Test sessions were saved only into the local preview database /private/tmp/randomyst_mvp2_ui.sqlite3."
+  ]
+}

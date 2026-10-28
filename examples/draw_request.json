@@ -1,0 +1,10 @@
+{
+  "request_id": "c6bebf0f-7c19-4ab0-8c25-a5995a4afdb1",
+  "birth": {
+    "civil_datetime": "1994-10-08T05:00:00+07:00"
+  },
+  "casting": {
+    "mode": "CUSTOM",
+    "custom_timestamp": "2026-10-11T10:00:00+07:00"
+  }
+}

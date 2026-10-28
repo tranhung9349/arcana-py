@@ -1,0 +1,300 @@
+{
+  "rules_version": "bazi-natal-2026-10-26-v1",
+  "analysis_profile": "bazi_natal_v1",
+  "topics": [
+    {
+      "id": "GENERAL",
+      "name": "Tổng quan"
+    },
+    {
+      "id": "CAREER",
+      "name": "Công việc"
+    },
+    {
+      "id": "WEALTH",
+      "name": "Tài chính"
+    },
+    {
+      "id": "STUDY",
+      "name": "Học tập"
+    },
+    {
+      "id": "RELATIONSHIPS",
+      "name": "Quan hệ"
+    }
+  ],
+  "tables": {
+    "harms": [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        9,
+        10
+      ]
+    ],
+    "self_punishments": [
+      4,
+      6,
+      9,
+      11
+    ],
+    "three_combinations": [
+      [
+        8,
+        0,
+        4
+      ],
+      [
+        2,
+        6,
+        10
+      ],
+      [
+        5,
+        9,
+        1
+      ],
+      [
+        11,
+        3,
+        7
+      ]
+    ],
+    "three_meetings": [
+      [
+        2,
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        7
+      ],
+      [
+        8,
+        9,
+        10
+      ],
+      [
+        11,
+        0,
+        1
+      ]
+    ],
+    "three_punishments": [
+      [
+        2,
+        5,
+        8
+      ],
+      [
+        1,
+        10,
+        7
+      ]
+    ]
+  },
+  "rules": {
+    "NATAL_CONTEXT": {
+      "evidence_refs": [
+        "provider:tables",
+        "text:month"
+      ],
+      "review_status": "IMPLEMENTATION_TESTED_NOT_EXPERT_REVIEWED"
+    },
+    "ROOTS": {
+      "evidence_refs": [
+        "provider:tables",
+        "policy:strength"
+      ],
+      "review_status": "IMPLEMENTATION_TESTED_NOT_EXPERT_REVIEWED"
+    },
+    "STRENGTH": {
+      "evidence_refs": [
+        "text:strength",
+        "policy:strength"
+      ],
+      "review_status": "IMPLEMENTATION_TESTED_NOT_EXPERT_REVIEWED"
+    },
+    "STRUCTURE": {
+      "evidence_refs": [
+        "text:month",
+        "policy:structure"
+      ],
+      "review_status": "IMPLEMENTATION_TESTED_NOT_EXPERT_REVIEWED"
+    },
+    "BALANCE": {
+      "evidence_refs": [
+        "text:strength",
+        "policy:balance"
+      ],
+      "review_status": "IMPLEMENTATION_TESTED_NOT_EXPERT_REVIEWED"
+    },
+    "CLIMATE": {
+      "evidence_refs": [
+        "text:climate",
+        "policy:balance"
+      ],
+      "review_status": "IMPLEMENTATION_TESTED_NOT_EXPERT_REVIEWED"
+    },
+    "RELATIONS": {
+      "evidence_refs": [
+        "policy:relations",
+        "text:relations"
+      ],
+      "review_status": "IMPLEMENTATION_TESTED_NOT_EXPERT_REVIEWED"
+    },
+    "TEN_GODS": {
+      "evidence_refs": [
+        "provider:tables",
+        "policy:narrative"
+      ],
+      "review_status": "IMPLEMENTATION_TESTED_NOT_EXPERT_REVIEWED"
+    },
+    "SPECIAL_CAUTION": {
+      "evidence_refs": [
+        "text:strength",
+        "policy:strength"
+      ],
+      "review_status": "IMPLEMENTATION_TESTED_NOT_EXPERT_REVIEWED"
+    }
+  },
+  "coverage": [
+    {
+      "feature": "Tứ Trụ, tàng can và Thập Thần",
+      "status": "SUPPORTED",
+      "detail": "Theo provider 1.4.8 đã ghim, giờ Việt Nam chuyển cùng thời điểm sang Bắc Kinh, sect 1."
+    },
+    {
+      "feature": "Thông căn, can lộ và quan hệ Can Chi",
+      "status": "SUPPORTED",
+      "detail": "Nhận diện theo bảng; chưa kết luận hợp hóa hay dùng một quan hệ để phán cát hung toàn cục."
+    },
+    {
+      "feature": "Vượng nhược và hướng phù ức",
+      "status": "PARTIAL",
+      "detail": "Bộ điều kiện định tính; giữ kết luận mở khi tín hiệu khác hướng hoặc nghi ngoại cách."
+    },
+    {
+      "feature": "Cách cục và Điều hậu",
+      "status": "PARTIAL",
+      "detail": "Ứng viên nguyệt lệnh và gợi ý mùa; chưa đủ thành bại/cứu ứng, tòng hóa và bảng Điều hậu 120 trường hợp."
+    },
+    {
+      "feature": "Phá, bán hình và cứu giải toàn cục",
+      "status": "DEFERRED",
+      "detail": "Chưa có quy tắc đã đối chiếu đủ; không coi phần chưa xét là không có."
+    },
+    {
+      "feature": "Đại vận, Lưu niên và hợp hai lá số",
+      "status": "DEFERRED",
+      "detail": "Bản đầu đọc mệnh cục sinh; chưa xác định thời điểm sự kiện."
+    },
+    {
+      "feature": "Không rõ giờ sinh và nhận diện ý hỏi",
+      "status": "DEFERRED",
+      "detail": "Cần giờ sinh xác định. Chủ đề chọn trực tiếp; câu hỏi được giữ nguyên làm ngữ cảnh."
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "text:strength",
+      "kind": "PRIMARY_TEXT",
+      "title": "Địch Thiên Tủy · Suy vượng",
+      "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+      "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6"
+    },
+    {
+      "evidence_id": "text:month",
+      "kind": "PRIMARY_TEXT",
+      "title": "Địch Thiên Tủy · Nguyệt lệnh",
+      "text": "月令提綱，譬之宅也，人元用事之神，宅之向也，不可以不卜。",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=844366",
+      "sha256": "0529be4cdaede0b047426f5651add5f5800a970fd6e915cdf01cea70d05fa224"
+    },
+    {
+      "evidence_id": "text:climate",
+      "kind": "PRIMARY_TEXT",
+      "title": "Địch Thiên Tủy · Hàn noãn",
+      "text": "天道有寒暖，發育萬物，人道得之，不可過也。",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=844365",
+      "sha256": "32b1264d49a00be96b7f6c4c76eaa7dba20af24f7d60c04089ef45bd089154a3"
+    },
+    {
+      "evidence_id": "text:relations",
+      "kind": "PRIMARY_TEXT",
+      "title": "Tam Mệnh Thông Hội · Hợp, hại, hình và xung",
+      "text": "凡见刑不可便以凶论",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=2292392",
+      "sha256": "8a5c0bfee3b3b8e2e2a6f354891067acdc72a977fc1ea366fe31b55ff3e02b94"
+    },
+    {
+      "evidence_id": "provider:tables",
+      "kind": "PROVIDER",
+      "title": "Bảng tra 6tail · bản 1.4.8",
+      "text": "Tứ Trụ sect 1; tàng can, Âm Dương, ngũ hành, 100 cặp Thập Thần; bảng ngũ hợp Can, lục hợp Chi và lục xung. Mã cài được kiểm hash lúc khởi tạo.",
+      "url": "https://github.com/6tail/lunar-python",
+      "sha256": "7a8c36fb506874b38c1c90d696ce58f98325618ee0fd2906d7792a4e2b1c2021"
+    },
+    {
+      "evidence_id": "policy:strength",
+      "kind": "PRODUCT_POLICY",
+      "title": "Quy ước xét khí thế natal v1",
+      "text": "Thiên vượng khi cùng có trợ lực hành tháng, căn bản khí và ít nhất một can sinh trợ ngoài Nhật chủ. Thiên nhược khi không có trợ lực hành tháng, không có căn cùng hành, không có can sinh trợ lộ nhưng có Ấn trong tàng can. Các trường hợp còn lại giữ MIXED. Không có căn, Ấn và can trợ thì giữ nghi vấn thuận thế; không tự chốt ngoại cách. Đây là bộ điều kiện định tính của sản phẩm, chưa phải toàn bộ phép luận cổ thư.",
+      "url": null,
+      "sha256": "26e7e32c754ca629d38da33c973c63760624c112af7f88c6db144a9ee396271c"
+    },
+    {
+      "evidence_id": "policy:structure",
+      "kind": "PRODUCT_POLICY",
+      "title": "Quy ước nguyệt lệnh và ứng viên cách cục",
+      "text": "Xét bản khí chi tháng cùng tàng can thấu đúng Can ở năm/tháng/giờ. Kiến Lộc và Dương Nhận chỉ nhận diện theo bảng điều kiện. Mọi tên cách giữ ở mức ứng viên; chưa xét đủ thành bại, cứu ứng, tư lệnh theo số ngày trong tiết hoặc tòng hóa.",
+      "url": null,
+      "sha256": "6c13fe33ddb233c1896c9c81b9394f672e932fee6ab09ce4f4f9319181aad53c"
+    },
+    {
+      "evidence_id": "policy:balance",
+      "kind": "PRODUCT_POLICY",
+      "title": "Quy ước phù ức và Điều hậu",
+      "text": "Thiên vượng: khảo sát sinh xuất trước, Tài theo sau; thiên nhược: khảo sát Ấn và đồng hành. MIXED hoặc nghi ngoại cách không chốt Dụng/Hỷ/Kỵ. Gợi ý mùa lạnh Hỏa/mùa nóng Thủy tách riêng, không coi là bảng Điều hậu 120 trường hợp và không ghi đè hướng phù ức.",
+      "url": null,
+      "sha256": "12efbd744805402ad0def2c1c89ebe3ddc9d7ac1a41c181a8d1d33f29605f2fb"
+    },
+    {
+      "evidence_id": "policy:relations",
+      "kind": "PRODUCT_POLICY",
+      "title": "Phạm vi nhận diện quan hệ",
+      "text": "Mỗi cặp vị trí chỉ ghi một lần cho từng loại quan hệ. Tam hợp/tam hội cần đủ ba chi khác nhau; ghi cả các vị trí chi lặp, không suy hóa hành. Nhóm hình Dần–Tỵ–Thân và Sửu–Tuất–Mùi chỉ ghi khi đủ bộ; cặp Tý–Mão và tự hình Thìn/Ngọ/Dậu/Hợi ghi riêng. Chưa xét bán hình, phá và chuỗi cứu giải toàn cục.",
+      "url": null,
+      "sha256": "efdaa32ef940c4f13813bfd33c1b1b058c2c8866183613b9c01d5fca29710070"
+    },
+    {
+      "evidence_id": "policy:narrative",
+      "kind": "PRODUCT_POLICY",
+      "title": "Phạm vi diễn giải theo chủ đề",
+      "text": "Thập Thần được đọc tương đối với Nhật chủ. Chủ đề sắp xếp dữ kiện và các lực phối hợp, không thay lá số. Câu hỏi tự do được lưu làm ngữ cảnh; chưa phân tích ngữ nghĩa để trả lời sự kiện hoặc thời điểm. Không dự đoán bệnh, tử, mức giàu có hoặc hôn kỳ từ một nhãn đơn.",
+      "url": null,
+      "sha256": "96cd9579c5c5512ea31511262e3e6e139bf74f4e67ae6689a660b869c78da2fd"
+    }
+  ]
+}

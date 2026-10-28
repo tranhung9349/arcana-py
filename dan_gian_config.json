@@ -1,0 +1,67 @@
+{
+  "version": "mvp1-v2",
+  "source": "Danh sách và ý nghĩa do người dùng chốt trong chat",
+  "pool": {
+    "min": 0,
+    "max": 99
+  },
+  "display_width": 2,
+  "bonus_delta": 0.05,
+  "award_mode": "per_number",
+  "deduplication": "once_per_number",
+  "requires_not_controlling_primary_useful_god": true,
+  "entries": [
+    {
+      "number": 38,
+      "category": "than_tai_ong_dia",
+      "label": "Ông Địa nhỏ"
+    },
+    {
+      "number": 39,
+      "category": "than_tai_ong_dia",
+      "label": "Thần Tài nhỏ"
+    },
+    {
+      "number": 9,
+      "category": "cat_tuong",
+      "label": "Trường cửu, viên mãn",
+      "meaning": "Quy đồng âm dương, tượng trưng cho sự trường cửu, đỉnh cao viên mãn"
+    },
+    {
+      "number": 18,
+      "category": "cat_tuong",
+      "label": "Nhất Phát",
+      "meaning": "Khởi đầu thuận lợi, phát đạt nhanh chóng"
+    },
+    {
+      "number": 28,
+      "category": "cat_tuong",
+      "label": "Mãi Phát",
+      "meaning": "Tài lộc gia tăng bền vững theo thời gian"
+    },
+    {
+      "number": 11,
+      "category": "so_ganh_so_lap",
+      "label": "Số kép 11",
+      "meaning": "Tỷ hòa, vững chắc"
+    },
+    {
+      "number": 22,
+      "category": "so_ganh_so_lap",
+      "label": "Số kép 22",
+      "meaning": "Tỷ hòa, vững chắc"
+    },
+    {
+      "number": 33,
+      "category": "so_ganh_so_lap",
+      "label": "Số kép 33",
+      "meaning": "Tỷ hòa, vững chắc"
+    },
+    {
+      "number": 44,
+      "category": "so_ganh_so_lap",
+      "label": "Số kép 44",
+      "meaning": "Tỷ hòa, vững chắc"
+    }
+  ]
+}

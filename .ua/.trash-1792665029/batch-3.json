@@ -1,0 +1,1509 @@
+{
+ "nodes": [
+  {
+   "id": "file:randomyst/date_models.py",
+   "type": "file",
+   "name": "date_models.py",
+   "filePath": "randomyst/date_models.py",
+   "summary": "Định nghĩa các contract Pydantic có phiên bản cho MVP 2 tra ngày/khung giờ (cưới hỏi, khai trương, xuất hành): request, bộ luật Yi/Ji, chấm điểm, bảng tháng và response gồm ngày, khung giờ và recommended_windows.",
+   "tags": [
+    "data-model",
+    "validation",
+    "schema-definition",
+    "tra-ngày",
+    "pydantic"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Dùng Literal để khoá giá trị contract (phiên bản schema, chính sách lịch BEIJING_CIVIL_UTC8, chi giờ) và model_validator(mode='after') để kiểm tra ràng buộc liên trường."
+  },
+  {
+   "id": "class:randomyst/date_models.py:DateSubject",
+   "type": "class",
+   "name": "DateSubject",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    12,
+    14
+   ],
+   "summary": "Một chủ thể tra ngày gồm mã định danh và hồ sơ sinh Birth.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:DateRange",
+   "type": "class",
+   "name": "DateRange",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    17,
+    27
+   ],
+   "summary": "Khoảng ngày tra cứu, kiểm tra độ dài 1–93 ngày và nằm trong 2024–2030.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:AllowedHours",
+   "type": "class",
+   "name": "AllowedHours",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    30,
+    40
+   ],
+   "summary": "Khung giờ được phép trong ngày (UTC+7), kiểm tra giờ bắt đầu trước giờ kết thúc và độ phân giải giây.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:DateSearchRequest",
+   "type": "class",
+   "name": "DateSearchRequest",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    43,
+    60
+   ],
+   "summary": "Request tra ngày: loại việc, danh sách chủ thể, khoảng ngày, thứ trong tuần và khung giờ; kiểm tra số hồ sơ đúng theo loại việc.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:DateSource",
+   "type": "class",
+   "name": "DateSource",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    63,
+    68
+   ],
+   "summary": "Mô tả một nguồn tham chiếu được trích dẫn bởi các luật tra ngày.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:RuleWhen",
+   "type": "class",
+   "name": "RuleWhen",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    71,
+    73
+   ],
+   "summary": "Điều kiện kích hoạt của một luật: tên fact và giá trị cần khớp.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:DateRule",
+   "type": "class",
+   "name": "DateRule",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    76,
+    103
+   ],
+   "summary": "Một luật tra ngày với hiệu lực BLOCK/PENALTY/WARN, điểm trừ và nguồn; kiểm tra tính nhất quán giữa hiệu lực và điểm.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:randomyst/date_models.py:ActivitySpec",
+   "type": "class",
+   "name": "ActivitySpec",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    106,
+    110
+   ],
+   "summary": "Đặc tả một loại việc (cưới hỏi, khai trương, xuất hành) với token Yi/Ji của provider và số chủ thể yêu cầu.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:DateScoring",
+   "type": "class",
+   "name": "DateScoring",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    113,
+    128
+   ],
+   "summary": "Cấu hình chấm điểm: điểm gốc, ngưỡng xếp hạng GOOD/NORMAL/BAD và mức phạt ngũ hành cá nhân.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:MonthTables",
+   "type": "class",
+   "name": "MonthTables",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    131,
+    140
+   ],
+   "summary": "Bảng tra theo tháng (Sát Chủ, Thọ Tử...) dùng cho các luật cấm, kiểm tra chỉ số hợp lệ.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:DateRules",
+   "type": "class",
+   "name": "DateRules",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    143,
+    171
+   ],
+   "summary": "Gói luật MVP 2 hoàn chỉnh: phiên bản, chính sách lịch, nguồn, loại việc, bảng tháng, chấm điểm và danh sách luật; kiểm tra tham chiếu chéo và luật bị tắt.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:randomyst/date_models.py:RecommendedWindow",
+   "type": "class",
+   "name": "RecommendedWindow",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    174,
+    178
+   ],
+   "summary": "Một khung giờ đẹp (GOOD) gọn nhẹ với thời điểm bắt đầu/kết thúc và hour_branch.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:DateWindow",
+   "type": "class",
+   "name": "DateWindow",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    181,
+    207
+   ],
+   "summary": "Khung giờ đã đánh giá đầy đủ: Hoàng/Hắc đạo, trực, can chi, trạng thái Yi/Ji, điểm, hạng, luật cấm và phạt; kiểm tra luật cấm không bị bù bằng điểm.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:randomyst/date_models.py:DateDay",
+   "type": "class",
+   "name": "DateDay",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    210,
+    219
+   ],
+   "summary": "Kết quả một ngày: hạng, điểm, các khung giờ đã đánh giá và recommended_windows.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_models.py:DateSearchResponse",
+   "type": "class",
+   "name": "DateSearchResponse",
+   "filePath": "randomyst/date_models.py",
+   "lineRange": [
+    222,
+    236
+   ],
+   "summary": "Response tra ngày gồm phiên bản luật, chính sách lịch, tóm tắt chủ thể, danh sách ngày, số đếm đánh giá, nguồn và cảnh báo.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:randomyst/geolocation.py",
+   "type": "file",
+   "name": "geolocation.py",
+   "filePath": "randomyst/geolocation.py",
+   "summary": "Tra vị trí từ địa chỉ IP bằng cơ sở dữ liệu GeoIP2 cục bộ tuỳ chọn, trả về Location mặc định kinh độ 105 khi IP nội bộ hoặc tra cứu thất bại; là module nghiên cứu/tương thích cũ, không thuộc luồng runtime hiện hành.",
+   "tags": [
+    "utility",
+    "geolocation",
+    "fallback",
+    "legacy"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/geolocation.py:ip_location",
+   "type": "function",
+   "name": "ip_location",
+   "filePath": "randomyst/geolocation.py",
+   "lineRange": [
+    9,
+    28
+   ],
+   "summary": "Phân giải IP thành Location qua GeoIP2 cục bộ khi được cấu hình; trả về vị trí mặc định kèm lý do fallback khi IP nội bộ hoặc lỗi.",
+   "tags": [
+    "geolocation",
+    "fallback",
+    "utility"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:randomyst/models.py",
+   "type": "file",
+   "name": "models.py",
+   "filePath": "randomyst/models.py",
+   "summary": "Định nghĩa các model Pydantic nghiêm ngặt cho MVP 1 gieo số: vị trí, hồ sơ sinh, thời điểm gieo, request/response gieo sáu số và các cấu trúc giải thích nguồn (quẻ, Bát tự, thẻ nguồn có bản dịch).",
+   "tags": [
+    "data-model",
+    "validation",
+    "type-definition",
+    "pydantic",
+    "gieo-số"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "StrictModel làm lớp cơ sở chung (extra='forbid') cho mọi model; SourceTranslation ràng buộc bản dịch bằng hash SHA-256 của văn bản gốc."
+  },
+  {
+   "id": "class:randomyst/models.py:StrictModel",
+   "type": "class",
+   "name": "StrictModel",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    11,
+    12
+   ],
+   "summary": "Lớp cơ sở Pydantic nghiêm ngặt, cấm trường thừa, được mọi model của dự án kế thừa.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:Location",
+   "type": "class",
+   "name": "Location",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    15,
+    39
+   ],
+   "summary": "Vị trí địa lý với nguồn (thiết bị/IP/mặc định), thời điểm thu thập có múi giờ và lý do fallback; kiểm tra tính nhất quán các trường nguồn.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:randomyst/models.py:Birth",
+   "type": "class",
+   "name": "Birth",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    48,
+    60
+   ],
+   "summary": "Hồ sơ sinh (thời điểm dân sự, giới tính...), kiểm tra thời điểm sinh hợp lệ qua civil_validator.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:Casting",
+   "type": "class",
+   "name": "Casting",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    63,
+    85
+   ],
+   "summary": "Thông tin thời điểm gieo số, kiểm tra thời điểm dân sự và lựa chọn nguồn timestamp.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:DrawRequest",
+   "type": "class",
+   "name": "DrawRequest",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    88,
+    91
+   ],
+   "summary": "Request gieo số gồm request_id, hồ sơ sinh và thông tin gieo.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:DrawResponse",
+   "type": "class",
+   "name": "DrawResponse",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    94,
+    114
+   ],
+   "summary": "Response gieo sáu số: số, trạng thái, điểm, số lần thử, trace và rules_version; kiểm tra sáu số khác nhau.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:SourceReference",
+   "type": "class",
+   "name": "SourceReference",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    117,
+    122
+   ],
+   "summary": "Tham chiếu tới một đoạn trong nguồn cổ văn.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:SourceTranslation",
+   "type": "class",
+   "name": "SourceTranslation",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    125,
+    132
+   ],
+   "summary": "Bản dịch của một đoạn nguồn, gắn chặt với văn bản gốc qua hash SHA-256.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:SourceCard",
+   "type": "class",
+   "name": "SourceCard",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    135,
+    156
+   ],
+   "summary": "Thẻ hiển thị một đoạn nguồn kèm bản dịch, kiểm tra ràng buộc giữa văn bản và bản dịch.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:SourceOverview",
+   "type": "class",
+   "name": "SourceOverview",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    159,
+    164
+   ],
+   "summary": "Phần tổng quan của giải thích nguồn, liệt kê các tham chiếu.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:HexagramExplanation",
+   "type": "class",
+   "name": "HexagramExplanation",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    167,
+    182
+   ],
+   "summary": "Giải thích quẻ Mai Hoa với tổng quan và thẻ nguồn; kiểm tra mọi tham chiếu đều có thẻ tương ứng.",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:BaziExplanation",
+   "type": "class",
+   "name": "BaziExplanation",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    185,
+    197
+   ],
+   "summary": "Giải thích Bát tự của hồ sơ sinh dùng trong phần diễn giải.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:DisplayExplanations",
+   "type": "class",
+   "name": "DisplayExplanations",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    200,
+    202
+   ],
+   "summary": "Nhóm các giải thích dùng cho hiển thị giao diện.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/models.py:SourceExplanation",
+   "type": "class",
+   "name": "SourceExplanation",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    205,
+    218
+   ],
+   "summary": "Payload giải thích nguồn đầy đủ cho một bản gieo, gồm giải thích quẻ, Bát tự và phần hiển thị.",
+   "tags": [
+    "data-model",
+    "pydantic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/models.py:civil_validator",
+   "type": "function",
+   "name": "civil_validator",
+   "filePath": "randomyst/models.py",
+   "lineRange": [
+    42,
+    45
+   ],
+   "summary": "Kiểm tra datetime dân sự có offset UTC+7 hợp lệ, dùng chung cho Birth và Casting.",
+   "tags": [
+    "validation",
+    "utility",
+    "datetime"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/build_date_data.py",
+   "type": "file",
+   "name": "build_date_data.py",
+   "filePath": "scripts/build_date_data.py",
+   "summary": "Script dựng corpus Yi/Ji thô theo ngày/giờ (2024–2030) từ lunar-python 1.4.8 đã ghim, ghi file gzip cùng manifest SHA-256, đồng thời sinh cấu hình luật MVP 2 và các JSON Schema cho request/response tra ngày.",
+   "tags": [
+    "build-system",
+    "data-pipeline",
+    "code-generation",
+    "script",
+    "tra-ngày"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/build_date_data.py:digest",
+   "type": "function",
+   "name": "digest",
+   "filePath": "scripts/build_date_data.py",
+   "lineRange": [
+    23,
+    24
+   ],
+   "summary": "Tính SHA-256 của nội dung một file.",
+   "tags": [
+    "utility",
+    "hashing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/build_date_data.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/build_date_data.py",
+   "lineRange": [
+    27,
+    115
+   ],
+   "summary": "Duyệt từng ngày 2024–2030 qua lunar-python để thu Yi/Ji ngày và giờ, ghi corpus gzip, cấu hình luật MVP 2, các JSON Schema và manifest.",
+   "tags": [
+    "entry-point",
+    "data-pipeline",
+    "code-generation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/smoke_dates.py",
+   "type": "file",
+   "name": "smoke_dates.py",
+   "filePath": "scripts/smoke_dates.py",
+   "summary": "Smoke test HTTP cho MVP 2: tự khởi động server localhost với cơ sở dữ liệu tạm, gửi các yêu cầu tra ngày bằng hồ sơ sinh tổng hợp, kiểm tra schema, tính tất định, SLA độ trễ và ghi báo cáo xác thực runtime.",
+   "tags": [
+    "test",
+    "smoke-test",
+    "integration",
+    "tra-ngày",
+    "script"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/smoke_dates.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/smoke_dates.py",
+   "lineRange": [
+    27,
+    119
+   ],
+   "summary": "Khởi động server tạm, chạy các ca tra ngày (đơn/cặp, nhiều độ dài), kiểm tra schema, tất định, SLA, lỗi 422 và ghi báo cáo xác thực.",
+   "tags": [
+    "entry-point",
+    "smoke-test",
+    "integration"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/smoke_mvp.py",
+   "type": "file",
+   "name": "smoke_mvp.py",
+   "filePath": "scripts/smoke_mvp.py",
+   "summary": "Smoke test trực tiếp API localhost MVP 1: gọi /api/v1/draw với dữ liệu mẫu, kiểm tra tính idempotent, ràng buộc sáu số khác nhau trong 00–45, bảo toàn kết quả v3 đã lưu và ghi báo cáo smoke.",
+   "tags": [
+    "test",
+    "smoke-test",
+    "gieo-số",
+    "script"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/smoke_source_explanations.py",
+   "type": "file",
+   "name": "smoke_source_explanations.py",
+   "filePath": "scripts/smoke_source_explanations.py",
+   "summary": "Smoke check chỉ đọc vào MVP đang chạy: lấy phần giải thích nguồn cho bản gieo mẫu, xác thực bằng model SourceExplanation và đảm bảo lịch sử gieo không đổi, rồi ghi ví dụ và báo cáo.",
+   "tags": [
+    "test",
+    "smoke-test",
+    "giải-thích-nguồn",
+    "script"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/smoke_source_explanations.py:get",
+   "type": "function",
+   "name": "get",
+   "filePath": "scripts/smoke_source_explanations.py",
+   "lineRange": [
+    11,
+    13
+   ],
+   "summary": "Gửi GET tới API localhost và trả về JSON đã giải mã.",
+   "tags": [
+    "utility",
+    "http-client"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/smoke_source_explanations.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/smoke_source_explanations.py",
+   "lineRange": [
+    16,
+    31
+   ],
+   "summary": "Lấy giải thích nguồn cho bản gieo mẫu, xác thực bằng SourceExplanation, kiểm tra lịch sử không đổi rồi ghi file ví dụ và báo cáo.",
+   "tags": [
+    "entry-point",
+    "smoke-test"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "file:randomyst/models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateSubject",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateSubject",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateRange",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateRange",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:AllowedHours",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:AllowedHours",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateSearchRequest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateSearchRequest",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateSource",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateSource",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:RuleWhen",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:RuleWhen",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateRule",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateRule",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:ActivitySpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:ActivitySpec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateScoring",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateScoring",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:MonthTables",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:MonthTables",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateRules",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateRules",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:RecommendedWindow",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:RecommendedWindow",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateWindow",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateWindow",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateDay",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateDay",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateSearchResponse",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "class:randomyst/date_models.py:DateSearchResponse",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/geolocation.py",
+   "target": "file:randomyst/models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/geolocation.py",
+   "target": "function:randomyst/geolocation.py:ip_location",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/geolocation.py",
+   "target": "function:randomyst/geolocation.py:ip_location",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:Location",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:Location",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:Birth",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:Birth",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:Casting",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:Casting",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:DrawRequest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:DrawRequest",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:DrawResponse",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:DrawResponse",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:SourceReference",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:SourceReference",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:SourceTranslation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:SourceTranslation",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:SourceCard",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:SourceCard",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:SourceOverview",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:SourceOverview",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:HexagramExplanation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:HexagramExplanation",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:BaziExplanation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:BaziExplanation",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:DisplayExplanations",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:DisplayExplanations",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:SourceExplanation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "class:randomyst/models.py:SourceExplanation",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "function:randomyst/models.py:civil_validator",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "function:randomyst/models.py:civil_validator",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/build_date_data.py",
+   "target": "file:randomyst/date_models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/build_date_data.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/build_date_data.py",
+   "target": "function:scripts/build_date_data.py:digest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/build_date_data.py",
+   "target": "function:scripts/build_date_data.py:digest",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/build_date_data.py",
+   "target": "function:scripts/build_date_data.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/build_date_data.py",
+   "target": "function:scripts/build_date_data.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/smoke_dates.py",
+   "target": "file:randomyst/date_models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/smoke_dates.py",
+   "target": "function:scripts/smoke_dates.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/smoke_dates.py",
+   "target": "function:scripts/smoke_dates.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/smoke_mvp.py",
+   "target": "file:randomyst/models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/smoke_source_explanations.py",
+   "target": "file:randomyst/models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/smoke_source_explanations.py",
+   "target": "function:scripts/smoke_source_explanations.py:get",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/smoke_source_explanations.py",
+   "target": "function:scripts/smoke_source_explanations.py:get",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/smoke_source_explanations.py",
+   "target": "function:scripts/smoke_source_explanations.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/smoke_source_explanations.py",
+   "target": "function:scripts/smoke_source_explanations.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateSubject",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateRange",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:AllowedHours",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateSearchRequest",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateSource",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:RuleWhen",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateRule",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:ActivitySpec",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateScoring",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:MonthTables",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateRules",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:RecommendedWindow",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateWindow",
+   "target": "class:randomyst/date_models.py:RecommendedWindow",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateDay",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/date_models.py:DateSearchResponse",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:Location",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:Birth",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:Casting",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:DrawRequest",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:DrawResponse",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:SourceReference",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:SourceTranslation",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:SourceCard",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:SourceOverview",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:HexagramExplanation",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:BaziExplanation",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:DisplayExplanations",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:SourceExplanation",
+   "target": "class:randomyst/models.py:StrictModel",
+   "type": "inherits",
+   "direction": "forward",
+   "weight": 0.9
+  },
+  {
+   "source": "class:randomyst/models.py:Birth",
+   "target": "function:randomyst/models.py:civil_validator",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/models.py:Casting",
+   "target": "function:randomyst/models.py:civil_validator",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:scripts/smoke_source_explanations.py:main",
+   "target": "function:scripts/smoke_source_explanations.py:get",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:scripts/build_date_data.py:main",
+   "target": "function:scripts/build_date_data.py:digest",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "file:tests/test_runtime.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "file:tests/test_beijing_calendar.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/models.py",
+   "target": "file:tests/test_source_explanations.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "file:tests/test_auspicious_dates.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

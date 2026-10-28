@@ -1,0 +1,17 @@
+{
+  "schema_definitions_valid": 2,
+  "valid_examples": 2,
+  "rejected_invalid_examples": 6,
+  "fixture_references_and_cross_fields_valid": true,
+  "validation_date": "2026-10-11",
+  "validator": "jsonschema==4.25.1 / Draft202012Validator",
+  "model_called": false,
+  "translation_quality_evaluated": false,
+  "source_gap_policy": "Report missing; never fabricate original text",
+  "sha256": {
+    "schemas/interpretation_context.schema.json": "d27384aa952d8ed4ddf949efd26c84de4ea56248f3599a328374e95547c8a991",
+    "schemas/interpretation_response.schema.json": "db1ffc4a469c8a636742e6f676d64f943b27b7b5ad6f0e3b47d87cb6d416d1dd",
+    "docs/prompts/vietnamese_interpretation_v1.md": "ae16df20e153cc42182beb6ceefa0b730f462280b6273236c3c0aa0d66b69b95",
+    "config/interpretation_disclaimers.json": "4f98a559db0302c44e9fe25f5d7c907ebe8ceab75e7be24c085d9b40d574c2e8"
+  }
+}

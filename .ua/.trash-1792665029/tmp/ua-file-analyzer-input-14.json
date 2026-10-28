@@ -1,0 +1,11 @@
+{"projectRoot":"/Users/tranduyhung/Work/randomyst_numbers","batchFiles":[
+{"path":"docs/research/mvp2_rule_matrix_counterexamples.json","language":"json","sizeLines":108,"fileCategory":"config"},
+{"path":"docs/research/mvp2_runtime_validation.json","language":"json","sizeLines":95,"fileCategory":"config"},
+{"path":"docs/research/mvp2_ui_smoke.json","language":"json","sizeLines":19,"fileCategory":"config"},
+{"path":"docs/research/remediation_audit_v2.json","language":"json","sizeLines":2223,"fileCategory":"config"},
+{"path":"docs/research/remediation_feasibility_v3.json","language":"json","sizeLines":1416,"fileCategory":"config"},
+{"path":"docs/research/remediation_feasibility_v4.json","language":"json","sizeLines":1124,"fileCategory":"config"},
+{"path":"docs/research/soft_adjusters_source_audit.json","language":"json","sizeLines":607,"fileCategory":"config"},
+{"path":"docs/research/source_explanation_http_smoke.json","language":"json","sizeLines":12,"fileCategory":"config"},
+{"path":"docs/research/source_explanation_validation.json","language":"json","sizeLines":92,"fileCategory":"config"}],
+"batchImportData":{}}

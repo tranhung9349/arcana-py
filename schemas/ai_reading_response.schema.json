@@ -1,0 +1,548 @@
+{
+  "$defs": {
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "const": "AI_INTERPRETATION",
+          "default": "AI_INTERPRETATION",
+          "title": "Label",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 1400,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "fact_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Fact Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "fact_refs",
+        "evidence_refs"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "Context": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "plain-reading-context-v2",
+          "default": "plain-reading-context-v2",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "context_id": {
+          "minLength": 1,
+          "title": "Context Id",
+          "type": "string"
+        },
+        "method": {
+          "enum": [
+            "BAZI_NATAL_V1",
+            "MAIHOA_INTERNAL",
+            "LIUYAO_NAJIA",
+            "ZHOUYI_TEXT"
+          ],
+          "title": "Method",
+          "type": "string"
+        },
+        "analysis_profile": {
+          "title": "Analysis Profile",
+          "type": "string"
+        },
+        "topic": {
+          "title": "Topic",
+          "type": "string"
+        },
+        "question": {
+          "maxLength": 2000,
+          "title": "Question",
+          "type": "string"
+        },
+        "signals": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Signals",
+          "type": "array"
+        },
+        "facts": {
+          "items": {
+            "$ref": "#/$defs/Fact"
+          },
+          "minItems": 1,
+          "title": "Facts",
+          "type": "array"
+        },
+        "findings": {
+          "items": {
+            "$ref": "#/$defs/Finding"
+          },
+          "minItems": 1,
+          "title": "Findings",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "context_id",
+        "method",
+        "analysis_profile",
+        "topic",
+        "question",
+        "signals",
+        "facts",
+        "findings",
+        "evidence",
+        "limitations"
+      ],
+      "title": "Context",
+      "type": "object"
+    },
+    "DateReadingContext": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "plain-reading-context-v2",
+          "default": "plain-reading-context-v2",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "context_id": {
+          "minLength": 1,
+          "title": "Context Id",
+          "type": "string"
+        },
+        "method": {
+          "const": "DATE_SELECTION",
+          "default": "DATE_SELECTION",
+          "title": "Method",
+          "type": "string"
+        },
+        "analysis_profile": {
+          "title": "Analysis Profile",
+          "type": "string"
+        },
+        "topic": {
+          "title": "Topic",
+          "type": "string"
+        },
+        "question": {
+          "maxLength": 2000,
+          "title": "Question",
+          "type": "string"
+        },
+        "signals": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Signals",
+          "type": "array"
+        },
+        "facts": {
+          "items": {
+            "$ref": "#/$defs/Fact"
+          },
+          "minItems": 1,
+          "title": "Facts",
+          "type": "array"
+        },
+        "findings": {
+          "items": {
+            "$ref": "#/$defs/Finding"
+          },
+          "minItems": 1,
+          "title": "Findings",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "context_id",
+        "analysis_profile",
+        "topic",
+        "question",
+        "signals",
+        "facts",
+        "findings",
+        "evidence",
+        "limitations"
+      ],
+      "title": "DateReadingContext",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Url"
+        },
+        "kind": {
+          "enum": [
+            "PRIMARY_TEXT",
+            "PRODUCT_POLICY",
+            "PROVIDER"
+          ],
+          "title": "Kind",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "text",
+        "sha256",
+        "url",
+        "kind"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Fact": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "Fact",
+      "type": "object"
+    },
+    "Finding": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "SUPPORTED",
+            "CONDITIONAL",
+            "UNRESOLVED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "fact_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Fact Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "status",
+        "fact_refs",
+        "evidence_refs"
+      ],
+      "title": "Finding",
+      "type": "object"
+    },
+    "PracticalOption": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "MODERN_APPLICATION",
+          "title": "Kind",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 800,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "fact_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Fact Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "text",
+        "fact_refs"
+      ],
+      "title": "PracticalOption",
+      "type": "object"
+    },
+    "Response": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "plain-reading-response-v2",
+          "default": "plain-reading-response-v2",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "context_id": {
+          "title": "Context Id",
+          "type": "string"
+        },
+        "summary": {
+          "$ref": "#/$defs/Claim"
+        },
+        "analysis": {
+          "items": {
+            "$ref": "#/$defs/Claim"
+          },
+          "maxItems": 4,
+          "minItems": 2,
+          "title": "Analysis",
+          "type": "array"
+        },
+        "practical_options": {
+          "items": {
+            "$ref": "#/$defs/PracticalOption"
+          },
+          "maxItems": 2,
+          "minItems": 1,
+          "title": "Practical Options",
+          "type": "array"
+        },
+        "limits": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Limits",
+          "type": "array"
+        }
+      },
+      "required": [
+        "context_id",
+        "summary",
+        "analysis",
+        "practical_options",
+        "limits"
+      ],
+      "title": "Response",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "ai-reading-v1",
+      "default": "ai-reading-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "reading_id": {
+      "title": "Reading Id",
+      "type": "string"
+    },
+    "consultation_id": {
+      "format": "uuid",
+      "title": "Consultation Id",
+      "type": "string"
+    },
+    "method": {
+      "enum": [
+        "BAZI",
+        "MAIHOA",
+        "LIUYAO",
+        "DATE"
+      ],
+      "title": "Method",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "model_requested": {
+      "title": "Model Requested",
+      "type": "string"
+    },
+    "model_returned": {
+      "title": "Model Returned",
+      "type": "string"
+    },
+    "provider_host": {
+      "title": "Provider Host",
+      "type": "string"
+    },
+    "prompt_version": {
+      "title": "Prompt Version",
+      "type": "string"
+    },
+    "case_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Case Ids",
+      "type": "array"
+    },
+    "context_sha256": {
+      "title": "Context Sha256",
+      "type": "string"
+    },
+    "model_called": {
+      "const": true,
+      "default": true,
+      "title": "Model Called",
+      "type": "boolean"
+    },
+    "validation": {
+      "const": "SCHEMA_AND_REFERENCES_CHECKED",
+      "default": "SCHEMA_AND_REFERENCES_CHECKED",
+      "title": "Validation",
+      "type": "string"
+    },
+    "usage": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Usage",
+      "type": "object"
+    },
+    "generation_passes": {
+      "default": 1,
+      "maximum": 2,
+      "minimum": 1,
+      "title": "Generation Passes",
+      "type": "integer"
+    },
+    "context": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Context"
+        },
+        {
+          "$ref": "#/$defs/DateReadingContext"
+        }
+      ],
+      "title": "Context"
+    },
+    "reading": {
+      "$ref": "#/$defs/Response"
+    }
+  },
+  "required": [
+    "reading_id",
+    "consultation_id",
+    "method",
+    "created_at",
+    "model_requested",
+    "model_returned",
+    "provider_host",
+    "prompt_version",
+    "case_ids",
+    "context_sha256",
+    "usage",
+    "context",
+    "reading"
+  ],
+  "title": "AIReadingResult",
+  "type": "object"
+}

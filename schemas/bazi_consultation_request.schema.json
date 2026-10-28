@@ -1,0 +1,74 @@
+{
+  "$defs": {
+    "BaziBirth": {
+      "additionalProperties": false,
+      "properties": {
+        "civil_datetime": {
+          "format": "date-time",
+          "title": "Civil Datetime",
+          "type": "string"
+        },
+        "clock_uncertainty_seconds": {
+          "anyOf": [
+            {
+              "maximum": 86400,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Clock Uncertainty Seconds"
+        }
+      },
+      "required": [
+        "civil_datetime"
+      ],
+      "title": "BaziBirth",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "topic": {
+      "default": "GENERAL",
+      "enum": [
+        "GENERAL",
+        "CAREER",
+        "WEALTH",
+        "STUDY",
+        "RELATIONSHIPS"
+      ],
+      "title": "Topic",
+      "type": "string"
+    },
+    "question": {
+      "default": "",
+      "maxLength": 2000,
+      "title": "Question",
+      "type": "string"
+    },
+    "request_id": {
+      "format": "uuid",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "display_name": {
+      "default": "",
+      "maxLength": 80,
+      "title": "Display Name",
+      "type": "string"
+    },
+    "birth": {
+      "$ref": "#/$defs/BaziBirth"
+    }
+  },
+  "required": [
+    "request_id",
+    "birth"
+  ],
+  "title": "BaziRequest",
+  "type": "object"
+}

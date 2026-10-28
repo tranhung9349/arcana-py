@@ -1,0 +1,865 @@
+{
+ "scriptCompleted": true,
+ "commonPrefix": "",
+ "directoryGroups": {
+  "randomyst": [
+   "file:randomyst/bazi.py",
+   "file:randomyst/date_calendar.py",
+   "file:randomyst/date_engine.py",
+   "file:randomyst/date_rules.py",
+   "file:randomyst/time_engine.py",
+   "file:randomyst/api.py",
+   "file:randomyst/engine.py",
+   "file:randomyst/interpretation.py",
+   "file:randomyst/maihoa.py",
+   "file:randomyst/sampling.py",
+   "file:randomyst/storage.py",
+   "file:randomyst/date_models.py",
+   "file:randomyst/geolocation.py",
+   "file:randomyst/models.py",
+   "file:randomyst/__init__.py",
+   "endpoint:randomyst/api.py:POST-/api/v2/auspicious-dates/search",
+   "endpoint:randomyst/api.py:GET-/api/v2/auspicious-dates/rules",
+   "endpoint:randomyst/api.py:GET-/api/v1/health",
+   "endpoint:randomyst/api.py:POST-/api/v1/draw",
+   "endpoint:randomyst/api.py:GET-/api/v1/history",
+   "endpoint:randomyst/api.py:GET-/api/v1/interpretation/{request_id}",
+   "endpoint:randomyst/api.py:GET-/api/v1/draw/{request_id}",
+   "endpoint:randomyst/api.py:GET-/",
+   "table:randomyst/storage.py:draws"
+  ],
+  "research_tools": [
+   "file:research_tools/audit_activity_categories.py",
+   "file:research_tools/auspicious_date_audit.py",
+   "file:research_tools/exponential_audit.py",
+   "file:research_tools/weighted_sampling.py",
+   "document:research_tools/README.md",
+   "file:research_tools/__init__.py",
+   "file:research_tools/legacy_time_engine.py",
+   "file:research_tools/validate_interpretation_examples.py"
+  ],
+  "scripts": [
+   "file:scripts/audit_beijing_calendar.py",
+   "file:scripts/compare_bazi_source.py",
+   "file:scripts/build_date_data.py",
+   "file:scripts/smoke_dates.py",
+   "file:scripts/smoke_mvp.py",
+   "file:scripts/smoke_source_explanations.py",
+   "file:scripts/astronomy_smoke_audit.py",
+   "file:scripts/build_explanation_data.py",
+   "file:scripts/run_mvp.sh"
+  ],
+  "tests": [
+   "file:tests/test_auspicious_dates.py",
+   "file:tests/test_beijing_calendar.py",
+   "file:tests/test_runtime.py",
+   "file:tests/test_source_explanations.py",
+   "file:tests/test_vietnamese_calendar.py",
+   "file:tests/test_weighted_sampling.py"
+  ],
+  "data": [
+   "file:data/reference/tinix-bazi/ganzhi.js",
+   "file:data/reference/tinix-bazi/ganzhi_data.js",
+   "file:data/reference/tinix-bazi/geju.js",
+   "file:data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+   "file:data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+   "file:data/reference/tinix-bazi/shensha.js",
+   "document:data/interpretation/README.md",
+   "config:data/interpretation/iching_vi_draft.json",
+   "config:data/interpretation/tinix_vi.json",
+   "config:data/reference/open-iching/iching.json",
+   "config:data/reference/open-iching/tuan.json",
+   "config:data/reference/open-iching/xiang.json",
+   "document:data/date_calendar/README.md",
+   "document:data/reference/README.md",
+   "resource:data/date_calendar/almanac_2024_2030.json.gz",
+   "config:data/date_calendar/manifest.json",
+   "config:data/reference/manifest.json",
+   "file:data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js"
+  ],
+  "calendar_adapter": [
+   "file:calendar_adapter/__init__.py",
+   "file:calendar_adapter/__main__.py",
+   "file:calendar_adapter/audit.py",
+   "file:calendar_adapter/vietnamese.py",
+   "document:calendar_adapter/README.md"
+  ],
+  "root": [
+   "document:MVP1_HANDOFF.md",
+   "document:MVP2_HANDOFF.md",
+   "document:README.md",
+   "config:dan_gian_config.json",
+   "document:requirements-dev.txt",
+   "document:requirements-lock.txt",
+   "document:requirements.txt"
+  ],
+  "config": [
+   "config:config/interpretation_disclaimers.json",
+   "config:config/mvp1_rules.json",
+   "config:config/mvp2_date_rules.json"
+  ],
+  "docs": [
+   "document:docs/architect_idea.md",
+   "document:docs/logic_plan_mvp1.md",
+   "document:docs/logic_plan_mvp2.md",
+   "config:docs/archive/draw_request_v3.json",
+   "config:docs/archive/draw_response_v3.json",
+   "document:docs/archive/logic_plan_mvp1_v3.md",
+   "document:docs/archive/logic_plan_mvp2_pre_r1.md",
+   "config:docs/research/astronomy_runtime_spot_checks.json",
+   "config:docs/research/bazi_python_port_validation.json",
+   "config:docs/research/beijing_calendar_http_smoke.json",
+   "config:docs/research/beijing_calendar_migration_validation.json",
+   "config:docs/research/beijing_calendar_range_audit.json",
+   "config:docs/research/calendar_adapter_trial.json",
+   "config:docs/research/calendar_boundary_policy_audit.json",
+   "config:docs/research/exponential_distribution_trial.json",
+   "document:docs/research/exponential_distribution_trial.md",
+   "config:docs/research/geolocation_policy_audit.json",
+   "config:docs/research/interpretation_schema_validation.json",
+   "config:docs/research/mvp1_runtime_validation.json",
+   "document:docs/research/mvp2_activity_expansion.md",
+   "config:docs/research/mvp2_activity_token_coverage.json",
+   "config:docs/research/mvp2_auspicious_date_feasibility.json",
+   "document:docs/research/mvp2_auspicious_date_research.md",
+   "config:docs/research/mvp2_cold_93_runtime_validation.json",
+   "config:docs/research/mvp2_display_runtime_validation.json",
+   "config:docs/research/mvp2_display_ui_validation.json",
+   "config:docs/research/mvp2_popup_ui_validation.json",
+   "config:docs/research/mvp2_rule_matrix_counterexamples.json",
+   "config:docs/research/mvp2_runtime_validation.json",
+   "config:docs/research/mvp2_ui_smoke.json",
+   "config:docs/research/remediation_audit_v2.json",
+   "config:docs/research/remediation_feasibility_v3.json",
+   "config:docs/research/remediation_feasibility_v4.json",
+   "config:docs/research/soft_adjusters_source_audit.json",
+   "config:docs/research/source_explanation_http_smoke.json",
+   "config:docs/research/source_explanation_validation.json",
+   "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "file:docs/research/calendar_sources/nasa-phases1901.html",
+   "file:docs/research/calendar_sources/nasa-phases2001.html"
+  ],
+  "examples": [
+   "document:examples/README.md",
+   "config:examples/date_search_request.json",
+   "config:examples/date_search_response.json",
+   "config:examples/draw_request.json",
+   "config:examples/draw_response.json",
+   "config:examples/marriage_date_search_request.json",
+   "config:examples/source_explanation.json"
+  ],
+  "schemas": [
+   "schema:schemas/date_search_request.schema.json",
+   "schema:schemas/date_search_request.schema.json:DateSubject",
+   "schema:schemas/date_search_request.schema.json:Birth",
+   "schema:schemas/date_search_request.schema.json:Location",
+   "schema:schemas/date_search_request.schema.json:DateRange",
+   "schema:schemas/date_search_request.schema.json:AllowedHours",
+   "schema:schemas/date_search_response.schema.json",
+   "schema:schemas/date_search_response.schema.json:DateDay",
+   "schema:schemas/date_search_response.schema.json:DateWindow",
+   "schema:schemas/date_search_response.schema.json:RecommendedWindow",
+   "schema:schemas/date_search_response.schema.json:DateSource",
+   "schema:schemas/interpretation_context.schema.json",
+   "schema:schemas/interpretation_context.schema.json:evidence",
+   "schema:schemas/interpretation_context.schema.json:hexagram",
+   "schema:schemas/interpretation_response.schema.json",
+   "schema:schemas/mvp2_date_rules.schema.json",
+   "schema:schemas/mvp2_date_rules.schema.json:DateRule",
+   "schema:schemas/mvp2_date_rules.schema.json:RuleWhen",
+   "schema:schemas/mvp2_date_rules.schema.json:DateScoring",
+   "schema:schemas/mvp2_date_rules.schema.json:MonthTables",
+   "schema:schemas/mvp2_date_rules.schema.json:ActivitySpec",
+   "schema:schemas/mvp2_date_rules.schema.json:DateSource",
+   "schema:schemas/source_explanation.schema.json",
+   "schema:schemas/source_explanation.schema.json:SourceExplanation",
+   "schema:schemas/source_explanation.schema.json:SourceCard",
+   "schema:schemas/source_explanation.schema.json:SourceReference",
+   "schema:schemas/source_explanation.schema.json:SourceTranslation",
+   "schema:schemas/source_explanation.schema.json:SourceOverview",
+   "schema:schemas/source_explanation.schema.json:HexagramExplanation",
+   "schema:schemas/source_explanation.schema.json:BaziExplanation",
+   "schema:schemas/source_explanation.schema.json:DisplayExplanations",
+   "config:schemas/examples/interpretation_context.example.json",
+   "config:schemas/examples/interpretation_response.example.json"
+  ],
+  "web": [
+   "file:web/app.js",
+   "file:web/dates.js",
+   "file:web/index.html",
+   "file:web/style.css"
+  ]
+ },
+ "nodeTypeGroups": {
+  "file": [
+   "file:randomyst/bazi.py",
+   "file:randomyst/date_calendar.py",
+   "file:randomyst/date_engine.py",
+   "file:randomyst/date_rules.py",
+   "file:randomyst/time_engine.py",
+   "file:research_tools/audit_activity_categories.py",
+   "file:research_tools/auspicious_date_audit.py",
+   "file:scripts/audit_beijing_calendar.py",
+   "file:scripts/compare_bazi_source.py",
+   "file:tests/test_auspicious_dates.py",
+   "file:randomyst/api.py",
+   "file:randomyst/engine.py",
+   "file:randomyst/interpretation.py",
+   "file:randomyst/maihoa.py",
+   "file:randomyst/sampling.py",
+   "file:randomyst/storage.py",
+   "file:tests/test_beijing_calendar.py",
+   "file:tests/test_runtime.py",
+   "file:tests/test_source_explanations.py",
+   "file:randomyst/date_models.py",
+   "file:randomyst/geolocation.py",
+   "file:randomyst/models.py",
+   "file:scripts/build_date_data.py",
+   "file:scripts/smoke_dates.py",
+   "file:scripts/smoke_mvp.py",
+   "file:scripts/smoke_source_explanations.py",
+   "file:data/reference/tinix-bazi/ganzhi.js",
+   "file:data/reference/tinix-bazi/ganzhi_data.js",
+   "file:data/reference/tinix-bazi/geju.js",
+   "file:data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+   "file:data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+   "file:data/reference/tinix-bazi/shensha.js",
+   "file:calendar_adapter/__init__.py",
+   "file:calendar_adapter/__main__.py",
+   "file:calendar_adapter/audit.py",
+   "file:calendar_adapter/vietnamese.py",
+   "file:tests/test_vietnamese_calendar.py",
+   "file:research_tools/exponential_audit.py",
+   "file:research_tools/weighted_sampling.py",
+   "file:tests/test_weighted_sampling.py",
+   "file:data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js",
+   "file:docs/research/calendar_sources/nasa-phases1901.html",
+   "file:docs/research/calendar_sources/nasa-phases2001.html",
+   "file:randomyst/__init__.py",
+   "file:research_tools/__init__.py",
+   "file:research_tools/legacy_time_engine.py",
+   "file:research_tools/validate_interpretation_examples.py",
+   "file:scripts/astronomy_smoke_audit.py",
+   "file:scripts/build_explanation_data.py",
+   "file:scripts/run_mvp.sh",
+   "file:web/app.js",
+   "file:web/dates.js",
+   "file:web/index.html",
+   "file:web/style.css"
+  ],
+  "document": [
+   "document:MVP1_HANDOFF.md",
+   "document:MVP2_HANDOFF.md",
+   "document:README.md",
+   "document:requirements-dev.txt",
+   "document:requirements-lock.txt",
+   "document:requirements.txt",
+   "document:data/interpretation/README.md",
+   "document:docs/architect_idea.md",
+   "document:docs/logic_plan_mvp1.md",
+   "document:docs/logic_plan_mvp2.md",
+   "document:docs/archive/logic_plan_mvp1_v3.md",
+   "document:docs/archive/logic_plan_mvp2_pre_r1.md",
+   "document:docs/research/exponential_distribution_trial.md",
+   "document:docs/research/mvp2_activity_expansion.md",
+   "document:docs/research/mvp2_auspicious_date_research.md",
+   "document:examples/README.md",
+   "document:calendar_adapter/README.md",
+   "document:data/date_calendar/README.md",
+   "document:data/reference/README.md",
+   "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "document:research_tools/README.md"
+  ],
+  "config": [
+   "config:dan_gian_config.json",
+   "config:config/interpretation_disclaimers.json",
+   "config:config/mvp1_rules.json",
+   "config:config/mvp2_date_rules.json",
+   "config:data/interpretation/iching_vi_draft.json",
+   "config:data/interpretation/tinix_vi.json",
+   "config:data/reference/open-iching/iching.json",
+   "config:data/reference/open-iching/tuan.json",
+   "config:data/reference/open-iching/xiang.json",
+   "config:docs/archive/draw_request_v3.json",
+   "config:docs/archive/draw_response_v3.json",
+   "config:docs/research/astronomy_runtime_spot_checks.json",
+   "config:docs/research/bazi_python_port_validation.json",
+   "config:docs/research/beijing_calendar_http_smoke.json",
+   "config:docs/research/beijing_calendar_migration_validation.json",
+   "config:docs/research/beijing_calendar_range_audit.json",
+   "config:docs/research/calendar_adapter_trial.json",
+   "config:docs/research/calendar_boundary_policy_audit.json",
+   "config:docs/research/exponential_distribution_trial.json",
+   "config:docs/research/geolocation_policy_audit.json",
+   "config:docs/research/interpretation_schema_validation.json",
+   "config:docs/research/mvp1_runtime_validation.json",
+   "config:docs/research/mvp2_activity_token_coverage.json",
+   "config:docs/research/mvp2_auspicious_date_feasibility.json",
+   "config:docs/research/mvp2_cold_93_runtime_validation.json",
+   "config:docs/research/mvp2_display_runtime_validation.json",
+   "config:docs/research/mvp2_display_ui_validation.json",
+   "config:docs/research/mvp2_popup_ui_validation.json",
+   "config:docs/research/mvp2_rule_matrix_counterexamples.json",
+   "config:docs/research/mvp2_runtime_validation.json",
+   "config:docs/research/mvp2_ui_smoke.json",
+   "config:docs/research/remediation_audit_v2.json",
+   "config:docs/research/remediation_feasibility_v3.json",
+   "config:docs/research/remediation_feasibility_v4.json",
+   "config:docs/research/soft_adjusters_source_audit.json",
+   "config:docs/research/source_explanation_http_smoke.json",
+   "config:docs/research/source_explanation_validation.json",
+   "config:examples/date_search_request.json",
+   "config:examples/date_search_response.json",
+   "config:examples/draw_request.json",
+   "config:examples/draw_response.json",
+   "config:examples/marriage_date_search_request.json",
+   "config:examples/source_explanation.json",
+   "config:data/date_calendar/manifest.json",
+   "config:data/reference/manifest.json",
+   "config:schemas/examples/interpretation_context.example.json",
+   "config:schemas/examples/interpretation_response.example.json"
+  ],
+  "schema": [
+   "schema:schemas/date_search_request.schema.json",
+   "schema:schemas/date_search_request.schema.json:DateSubject",
+   "schema:schemas/date_search_request.schema.json:Birth",
+   "schema:schemas/date_search_request.schema.json:Location",
+   "schema:schemas/date_search_request.schema.json:DateRange",
+   "schema:schemas/date_search_request.schema.json:AllowedHours",
+   "schema:schemas/date_search_response.schema.json",
+   "schema:schemas/date_search_response.schema.json:DateDay",
+   "schema:schemas/date_search_response.schema.json:DateWindow",
+   "schema:schemas/date_search_response.schema.json:RecommendedWindow",
+   "schema:schemas/date_search_response.schema.json:DateSource",
+   "schema:schemas/interpretation_context.schema.json",
+   "schema:schemas/interpretation_context.schema.json:evidence",
+   "schema:schemas/interpretation_context.schema.json:hexagram",
+   "schema:schemas/interpretation_response.schema.json",
+   "schema:schemas/mvp2_date_rules.schema.json",
+   "schema:schemas/mvp2_date_rules.schema.json:DateRule",
+   "schema:schemas/mvp2_date_rules.schema.json:RuleWhen",
+   "schema:schemas/mvp2_date_rules.schema.json:DateScoring",
+   "schema:schemas/mvp2_date_rules.schema.json:MonthTables",
+   "schema:schemas/mvp2_date_rules.schema.json:ActivitySpec",
+   "schema:schemas/mvp2_date_rules.schema.json:DateSource",
+   "schema:schemas/source_explanation.schema.json",
+   "schema:schemas/source_explanation.schema.json:SourceExplanation",
+   "schema:schemas/source_explanation.schema.json:SourceCard",
+   "schema:schemas/source_explanation.schema.json:SourceReference",
+   "schema:schemas/source_explanation.schema.json:SourceTranslation",
+   "schema:schemas/source_explanation.schema.json:SourceOverview",
+   "schema:schemas/source_explanation.schema.json:HexagramExplanation",
+   "schema:schemas/source_explanation.schema.json:BaziExplanation",
+   "schema:schemas/source_explanation.schema.json:DisplayExplanations"
+  ],
+  "resource": [
+   "resource:data/date_calendar/almanac_2024_2030.json.gz"
+  ],
+  "endpoint": [
+   "endpoint:randomyst/api.py:POST-/api/v2/auspicious-dates/search",
+   "endpoint:randomyst/api.py:GET-/api/v2/auspicious-dates/rules",
+   "endpoint:randomyst/api.py:GET-/api/v1/health",
+   "endpoint:randomyst/api.py:POST-/api/v1/draw",
+   "endpoint:randomyst/api.py:GET-/api/v1/history",
+   "endpoint:randomyst/api.py:GET-/api/v1/interpretation/{request_id}",
+   "endpoint:randomyst/api.py:GET-/api/v1/draw/{request_id}",
+   "endpoint:randomyst/api.py:GET-/"
+  ],
+  "table": [
+   "table:randomyst/storage.py:draws"
+  ]
+ },
+ "crossCategoryEdges": [
+  {
+   "fromType": "file",
+   "toType": "file",
+   "edgeType": "imports",
+   "count": 73
+  },
+  {
+   "fromType": "file",
+   "toType": "file",
+   "edgeType": "tested_by",
+   "count": 20
+  },
+  {
+   "fromType": "file",
+   "toType": "file",
+   "edgeType": "depends_on",
+   "count": 10
+  },
+  {
+   "fromType": "document",
+   "toType": "file",
+   "edgeType": "documents",
+   "count": 70
+  },
+  {
+   "fromType": "document",
+   "toType": "document",
+   "edgeType": "related",
+   "count": 25
+  },
+  {
+   "fromType": "document",
+   "toType": "config",
+   "edgeType": "related",
+   "count": 28
+  },
+  {
+   "fromType": "config",
+   "toType": "file",
+   "edgeType": "configures",
+   "count": 19
+  },
+  {
+   "fromType": "config",
+   "toType": "config",
+   "edgeType": "related",
+   "count": 29
+  },
+  {
+   "fromType": "document",
+   "toType": "document",
+   "edgeType": "depends_on",
+   "count": 1
+  },
+  {
+   "fromType": "document",
+   "toType": "file",
+   "edgeType": "related",
+   "count": 11
+  },
+  {
+   "fromType": "document",
+   "toType": "file",
+   "edgeType": "configures",
+   "count": 2
+  },
+  {
+   "fromType": "config",
+   "toType": "file",
+   "edgeType": "related",
+   "count": 52
+  },
+  {
+   "fromType": "config",
+   "toType": "document",
+   "edgeType": "related",
+   "count": 7
+  },
+  {
+   "fromType": "config",
+   "toType": "schema",
+   "edgeType": "related",
+   "count": 10
+  },
+  {
+   "fromType": "config",
+   "toType": "resource",
+   "edgeType": "depends_on",
+   "count": 1
+  },
+  {
+   "fromType": "config",
+   "toType": "file",
+   "edgeType": "depends_on",
+   "count": 2
+  },
+  {
+   "fromType": "document",
+   "toType": "config",
+   "edgeType": "documents",
+   "count": 6
+  },
+  {
+   "fromType": "document",
+   "toType": "schema",
+   "edgeType": "related",
+   "count": 1
+  },
+  {
+   "fromType": "document",
+   "toType": "schema",
+   "edgeType": "documents",
+   "count": 4
+  },
+  {
+   "fromType": "config",
+   "toType": "resource",
+   "edgeType": "related",
+   "count": 2
+  },
+  {
+   "fromType": "config",
+   "toType": "config",
+   "edgeType": "depends_on",
+   "count": 1
+  },
+  {
+   "fromType": "schema",
+   "toType": "schema",
+   "edgeType": "contains",
+   "count": 25
+  },
+  {
+   "fromType": "schema",
+   "toType": "file",
+   "edgeType": "defines_schema",
+   "count": 7
+  },
+  {
+   "fromType": "schema",
+   "toType": "config",
+   "edgeType": "validates",
+   "count": 7
+  },
+  {
+   "fromType": "schema",
+   "toType": "file",
+   "edgeType": "related",
+   "count": 10
+  },
+  {
+   "fromType": "schema",
+   "toType": "document",
+   "edgeType": "related",
+   "count": 2
+  },
+  {
+   "fromType": "schema",
+   "toType": "schema",
+   "edgeType": "related",
+   "count": 3
+  },
+  {
+   "fromType": "document",
+   "toType": "resource",
+   "edgeType": "documents",
+   "count": 1
+  },
+  {
+   "fromType": "resource",
+   "toType": "file",
+   "edgeType": "related",
+   "count": 2
+  },
+  {
+   "fromType": "file",
+   "toType": "file",
+   "edgeType": "related",
+   "count": 2
+  },
+  {
+   "fromType": "file",
+   "toType": "schema",
+   "edgeType": "depends_on",
+   "count": 2
+  },
+  {
+   "fromType": "file",
+   "toType": "config",
+   "edgeType": "depends_on",
+   "count": 5
+  },
+  {
+   "fromType": "file",
+   "toType": "document",
+   "edgeType": "related",
+   "count": 1
+  },
+  {
+   "fromType": "file",
+   "toType": "endpoint",
+   "edgeType": "contains",
+   "count": 8
+  },
+  {
+   "fromType": "file",
+   "toType": "table",
+   "edgeType": "contains",
+   "count": 1
+  },
+  {
+   "fromType": "endpoint",
+   "toType": "table",
+   "edgeType": "writes_to",
+   "count": 1
+  },
+  {
+   "fromType": "endpoint",
+   "toType": "table",
+   "edgeType": "reads_from",
+   "count": 3
+  },
+  {
+   "fromType": "endpoint",
+   "toType": "file",
+   "edgeType": "serves",
+   "count": 1
+  },
+  {
+   "fromType": "file",
+   "toType": "endpoint",
+   "edgeType": "calls",
+   "count": 2
+  }
+ ],
+ "interGroupImports": [
+  {
+   "from": "tests",
+   "to": "randomyst",
+   "count": 20
+  },
+  {
+   "from": "scripts",
+   "to": "randomyst",
+   "count": 7
+  },
+  {
+   "from": "research_tools",
+   "to": "randomyst",
+   "count": 4
+  },
+  {
+   "from": "tests",
+   "to": "calendar_adapter",
+   "count": 2
+  },
+  {
+   "from": "tests",
+   "to": "research_tools",
+   "count": 1
+  },
+  {
+   "from": "scripts",
+   "to": "research_tools",
+   "count": 1
+  }
+ ],
+ "intraGroupDensity": {
+  "randomyst": {
+   "internalEdges": 28,
+   "totalEdges": 59,
+   "density": 0.47
+  },
+  "research_tools": {
+   "internalEdges": 1,
+   "totalEdges": 7,
+   "density": 0.14
+  },
+  "scripts": {
+   "internalEdges": 0,
+   "totalEdges": 8,
+   "density": 0
+  },
+  "tests": {
+   "internalEdges": 0,
+   "totalEdges": 23,
+   "density": 0
+  },
+  "data": {
+   "internalEdges": 6,
+   "totalEdges": 6,
+   "density": 1
+  },
+  "calendar_adapter": {
+   "internalEdges": 3,
+   "totalEdges": 5,
+   "density": 0.6
+  },
+  "root": {
+   "internalEdges": 0,
+   "totalEdges": 0,
+   "density": 0
+  },
+  "config": {
+   "internalEdges": 0,
+   "totalEdges": 0,
+   "density": 0
+  },
+  "docs": {
+   "internalEdges": 0,
+   "totalEdges": 0,
+   "density": 0
+  },
+  "examples": {
+   "internalEdges": 0,
+   "totalEdges": 0,
+   "density": 0
+  },
+  "schemas": {
+   "internalEdges": 0,
+   "totalEdges": 0,
+   "density": 0
+  },
+  "web": {
+   "internalEdges": 0,
+   "totalEdges": 0,
+   "density": 0
+  }
+ },
+ "patternMatches": {
+  "scripts": "infrastructure",
+  "tests": "test",
+  "data": "data",
+  "config": "config",
+  "docs": "documentation",
+  "schemas": "types",
+  "web": "ui"
+ },
+ "deploymentTopology": {
+  "hasDockerfile": false,
+  "hasCompose": false,
+  "hasK8s": false,
+  "hasTerraform": false,
+  "hasCI": false,
+  "infraFiles": [
+   "scripts/run_mvp.sh"
+  ]
+ },
+ "dataPipeline": {
+  "schemaFiles": [
+   "schemas/date_search_request.schema.json",
+   "schemas/date_search_response.schema.json",
+   "schemas/interpretation_context.schema.json",
+   "schemas/interpretation_response.schema.json",
+   "schemas/mvp2_date_rules.schema.json",
+   "schemas/source_explanation.schema.json"
+  ],
+  "migrationFiles": [],
+  "dataModelFiles": [
+   "randomyst/storage.py",
+   "randomyst/date_models.py",
+   "randomyst/models.py"
+  ],
+  "apiHandlerFiles": [
+   "randomyst/api.py"
+  ]
+ },
+ "docCoverage": {
+  "groupsWithDocs": 5,
+  "totalGroups": 12,
+  "coverageRatio": 0.42,
+  "undocumentedGroups": [
+   "randomyst",
+   "scripts",
+   "tests",
+   "config",
+   "docs",
+   "schemas",
+   "web"
+  ]
+ },
+ "dependencyDirection": [
+  {
+   "dependent": "tests",
+   "dependsOn": "randomyst"
+  },
+  {
+   "dependent": "scripts",
+   "dependsOn": "randomyst"
+  },
+  {
+   "dependent": "research_tools",
+   "dependsOn": "randomyst"
+  },
+  {
+   "dependent": "tests",
+   "dependsOn": "calendar_adapter"
+  },
+  {
+   "dependent": "tests",
+   "dependsOn": "research_tools"
+  },
+  {
+   "dependent": "scripts",
+   "dependsOn": "research_tools"
+  }
+ ],
+ "fileStats": {
+  "totalFileNodes": 163,
+  "filesPerGroup": {
+   "randomyst": 24,
+   "research_tools": 8,
+   "scripts": 9,
+   "tests": 6,
+   "data": 18,
+   "calendar_adapter": 5,
+   "root": 7,
+   "config": 3,
+   "docs": 39,
+   "examples": 7,
+   "schemas": 33,
+   "web": 4
+  },
+  "nodeTypeCounts": {
+   "file": 54,
+   "document": 21,
+   "config": 47,
+   "schema": 31,
+   "resource": 1,
+   "endpoint": 8,
+   "table": 1
+  }
+ },
+ "fileFanIn": {
+  "file:randomyst/sampling.py": 5,
+  "file:randomyst/time_engine.py": 12,
+  "file:randomyst/bazi.py": 7,
+  "file:randomyst/date_calendar.py": 2,
+  "file:randomyst/date_rules.py": 3,
+  "file:randomyst/date_models.py": 5,
+  "file:randomyst/api.py": 4,
+  "file:randomyst/date_engine.py": 2,
+  "file:randomyst/engine.py": 5,
+  "file:randomyst/interpretation.py": 2,
+  "file:randomyst/models.py": 8,
+  "file:randomyst/storage.py": 1,
+  "file:randomyst/maihoa.py": 3,
+  "file:data/reference/tinix-bazi/ganzhi_data.js": 1,
+  "file:data/reference/tinix-bazi/ganzhi.js": 3,
+  "file:data/reference/tinix-bazi/geju.js": 1,
+  "file:data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js": 1,
+  "file:calendar_adapter/vietnamese.py": 4,
+  "file:calendar_adapter/__init__.py": 1,
+  "file:research_tools/weighted_sampling.py": 2,
+  "file:research_tools/legacy_time_engine.py": 1
+ },
+ "fileFanOut": {
+  "file:randomyst/bazi.py": 2,
+  "file:randomyst/date_calendar.py": 1,
+  "file:randomyst/date_engine.py": 4,
+  "file:randomyst/date_rules.py": 4,
+  "file:research_tools/audit_activity_categories.py": 2,
+  "file:research_tools/auspicious_date_audit.py": 2,
+  "file:scripts/audit_beijing_calendar.py": 1,
+  "file:scripts/compare_bazi_source.py": 1,
+  "file:tests/test_auspicious_dates.py": 5,
+  "file:randomyst/api.py": 7,
+  "file:randomyst/engine.py": 4,
+  "file:randomyst/interpretation.py": 2,
+  "file:randomyst/maihoa.py": 1,
+  "file:randomyst/storage.py": 1,
+  "file:tests/test_beijing_calendar.py": 4,
+  "file:tests/test_runtime.py": 7,
+  "file:tests/test_source_explanations.py": 4,
+  "file:randomyst/date_models.py": 1,
+  "file:randomyst/geolocation.py": 1,
+  "file:scripts/build_date_data.py": 2,
+  "file:scripts/smoke_dates.py": 1,
+  "file:scripts/smoke_mvp.py": 1,
+  "file:scripts/smoke_source_explanations.py": 1,
+  "file:data/reference/tinix-bazi/ganzhi.js": 1,
+  "file:data/reference/tinix-bazi/geju.js": 1,
+  "file:data/reference/tinix-bazi/phan_tich/ngu_hanh.js": 3,
+  "file:data/reference/tinix-bazi/shensha.js": 1,
+  "file:calendar_adapter/__init__.py": 1,
+  "file:calendar_adapter/__main__.py": 1,
+  "file:calendar_adapter/audit.py": 1,
+  "file:tests/test_vietnamese_calendar.py": 2,
+  "file:research_tools/exponential_audit.py": 1,
+  "file:tests/test_weighted_sampling.py": 1,
+  "file:scripts/astronomy_smoke_audit.py": 1
+ }
+}

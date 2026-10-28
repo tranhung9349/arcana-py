@@ -1,0 +1,7 @@
+{
+ "config:schemas/source_explanation.schema.json": "schema:schemas/source_explanation.schema.json",
+ "config:schemas/mvp2_date_rules.schema.json": "schema:schemas/mvp2_date_rules.schema.json",
+ "config:schemas/interpretation_context.schema.json": "schema:schemas/interpretation_context.schema.json",
+ "config:schemas/interpretation_response.schema.json": "schema:schemas/interpretation_response.schema.json",
+ "file:data/date_calendar/almanac_2024_2030.json.gz": "resource:data/date_calendar/almanac_2024_2030.json.gz"
+}

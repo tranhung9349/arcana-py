@@ -1,0 +1,985 @@
+{
+  "$defs": {
+    "BalanceDirection": {
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "enum": [
+            "CONDITIONAL",
+            "UNRESOLVED"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "preferred": {
+          "items": {
+            "enum": [
+              "Mộc",
+              "Hỏa",
+              "Thổ",
+              "Kim",
+              "Thủy"
+            ],
+            "type": "string"
+          },
+          "title": "Preferred",
+          "type": "array"
+        },
+        "supporting": {
+          "items": {
+            "enum": [
+              "Mộc",
+              "Hỏa",
+              "Thổ",
+              "Kim",
+              "Thủy"
+            ],
+            "type": "string"
+          },
+          "title": "Supporting",
+          "type": "array"
+        },
+        "restrain": {
+          "items": {
+            "enum": [
+              "Mộc",
+              "Hỏa",
+              "Thổ",
+              "Kim",
+              "Thủy"
+            ],
+            "type": "string"
+          },
+          "title": "Restrain",
+          "type": "array"
+        }
+      },
+      "required": [
+        "state",
+        "preferred",
+        "supporting",
+        "restrain"
+      ],
+      "title": "BalanceDirection",
+      "type": "object"
+    },
+    "BaziEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "PRIMARY_TEXT",
+            "PROVIDER",
+            "PRODUCT_POLICY"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "kind",
+        "title",
+        "text",
+        "sha256"
+      ],
+      "title": "BaziEvidence",
+      "type": "object"
+    },
+    "BaziFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "finding_id": {
+          "title": "Finding Id",
+          "type": "string"
+        },
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "SUPPORTED",
+            "CONDITIONAL",
+            "UNRESOLVED"
+          ],
+          "title": "State",
+          "type": "string"
+        },
+        "fact_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Fact Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "finding_id",
+        "rule_id",
+        "title",
+        "text",
+        "state",
+        "fact_refs",
+        "evidence_refs"
+      ],
+      "title": "BaziFinding",
+      "type": "object"
+    },
+    "CoverageItem": {
+      "additionalProperties": false,
+      "properties": {
+        "feature": {
+          "title": "Feature",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "SUPPORTED",
+            "PARTIAL",
+            "DEFERRED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        }
+      },
+      "required": [
+        "feature",
+        "status",
+        "detail"
+      ],
+      "title": "CoverageItem",
+      "type": "object"
+    },
+    "ElementCount": {
+      "additionalProperties": false,
+      "properties": {
+        "element": {
+          "enum": [
+            "Mộc",
+            "Hỏa",
+            "Thổ",
+            "Kim",
+            "Thủy"
+          ],
+          "title": "Element",
+          "type": "string"
+        },
+        "visible_stems": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Visible Stems",
+          "type": "integer"
+        },
+        "hidden_occurrences": {
+          "maximum": 12,
+          "minimum": 0,
+          "title": "Hidden Occurrences",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "element",
+        "visible_stems",
+        "hidden_occurrences"
+      ],
+      "title": "ElementCount",
+      "type": "object"
+    },
+    "NatalAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "strength": {
+          "enum": [
+            "STRONG",
+            "WEAK",
+            "MIXED"
+          ],
+          "title": "Strength",
+          "type": "string"
+        },
+        "strength_name": {
+          "title": "Strength Name",
+          "type": "string"
+        },
+        "possible_following": {
+          "title": "Possible Following",
+          "type": "boolean"
+        },
+        "structures": {
+          "items": {
+            "$ref": "#/$defs/StructureCandidate"
+          },
+          "title": "Structures",
+          "type": "array"
+        },
+        "balance": {
+          "$ref": "#/$defs/BalanceDirection"
+        },
+        "climate_element": {
+          "anyOf": [
+            {
+              "enum": [
+                "Mộc",
+                "Hỏa",
+                "Thổ",
+                "Kim",
+                "Thủy"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Climate Element"
+        },
+        "climate_conflict": {
+          "title": "Climate Conflict",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "strength",
+        "strength_name",
+        "possible_following",
+        "structures",
+        "balance",
+        "climate_element",
+        "climate_conflict"
+      ],
+      "title": "NatalAssessment",
+      "type": "object"
+    },
+    "NatalChart": {
+      "additionalProperties": false,
+      "properties": {
+        "civil_datetime": {
+          "format": "date-time",
+          "title": "Civil Datetime",
+          "type": "string"
+        },
+        "beijing_datetime": {
+          "format": "date-time",
+          "title": "Beijing Datetime",
+          "type": "string"
+        },
+        "provider": {
+          "const": "lunar-python-1.4.8",
+          "title": "Provider",
+          "type": "string"
+        },
+        "sect": {
+          "const": 1,
+          "title": "Sect",
+          "type": "integer"
+        },
+        "day_boundary": {
+          "const": "23:00_BEIJING",
+          "title": "Day Boundary",
+          "type": "string"
+        },
+        "pillars": {
+          "items": {
+            "$ref": "#/$defs/NatalPillar"
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "title": "Pillars",
+          "type": "array"
+        },
+        "month": {
+          "$ref": "#/$defs/NatalMonth"
+        }
+      },
+      "required": [
+        "civil_datetime",
+        "beijing_datetime",
+        "provider",
+        "sect",
+        "day_boundary",
+        "pillars",
+        "month"
+      ],
+      "title": "NatalChart",
+      "type": "object"
+    },
+    "NatalFacts": {
+      "additionalProperties": false,
+      "properties": {
+        "roots": {
+          "items": {
+            "$ref": "#/$defs/RootFact"
+          },
+          "title": "Roots",
+          "type": "array"
+        },
+        "visible_support_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Visible Support Refs",
+          "type": "array"
+        },
+        "visible_drain_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Visible Drain Refs",
+          "type": "array"
+        },
+        "resource_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Resource Refs",
+          "type": "array"
+        },
+        "relations": {
+          "items": {
+            "$ref": "#/$defs/NatalRelation"
+          },
+          "title": "Relations",
+          "type": "array"
+        },
+        "distribution": {
+          "items": {
+            "$ref": "#/$defs/ElementCount"
+          },
+          "maxItems": 5,
+          "minItems": 5,
+          "title": "Distribution",
+          "type": "array"
+        }
+      },
+      "required": [
+        "roots",
+        "visible_support_refs",
+        "visible_drain_refs",
+        "resource_refs",
+        "relations",
+        "distribution"
+      ],
+      "title": "NatalFacts",
+      "type": "object"
+    },
+    "NatalMonth": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "const": "facts:season",
+          "default": "facts:season",
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "branch": {
+          "title": "Branch",
+          "type": "string"
+        },
+        "branch_index": {
+          "maximum": 11,
+          "minimum": 0,
+          "title": "Branch Index",
+          "type": "integer"
+        },
+        "element": {
+          "enum": [
+            "Mộc",
+            "Hỏa",
+            "Thổ",
+            "Kim",
+            "Thủy"
+          ],
+          "title": "Element",
+          "type": "string"
+        },
+        "jie_name": {
+          "title": "Jie Name",
+          "type": "string"
+        },
+        "jie_start_beijing": {
+          "format": "date-time",
+          "title": "Jie Start Beijing",
+          "type": "string"
+        },
+        "seasonal_support": {
+          "title": "Seasonal Support",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "branch",
+        "branch_index",
+        "element",
+        "jie_name",
+        "jie_start_beijing",
+        "seasonal_support"
+      ],
+      "title": "NatalMonth",
+      "type": "object"
+    },
+    "NatalPillar": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "position": {
+          "enum": [
+            "year",
+            "month",
+            "day",
+            "hour"
+          ],
+          "title": "Position",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "stem": {
+          "$ref": "#/$defs/StemFact"
+        },
+        "branch_index": {
+          "maximum": 11,
+          "minimum": 0,
+          "title": "Branch Index",
+          "type": "integer"
+        },
+        "branch": {
+          "title": "Branch",
+          "type": "string"
+        },
+        "branch_zh": {
+          "title": "Branch Zh",
+          "type": "string"
+        },
+        "branch_element": {
+          "enum": [
+            "Mộc",
+            "Hỏa",
+            "Thổ",
+            "Kim",
+            "Thủy"
+          ],
+          "title": "Branch Element",
+          "type": "string"
+        },
+        "hidden_stems": {
+          "items": {
+            "$ref": "#/$defs/StemFact"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Hidden Stems",
+          "type": "array"
+        }
+      },
+      "required": [
+        "fact_id",
+        "position",
+        "label",
+        "stem",
+        "branch_index",
+        "branch",
+        "branch_zh",
+        "branch_element",
+        "hidden_stems"
+      ],
+      "title": "NatalPillar",
+      "type": "object"
+    },
+    "NatalReading": {
+      "additionalProperties": false,
+      "properties": {
+        "topic": {
+          "enum": [
+            "GENERAL",
+            "CAREER",
+            "WEALTH",
+            "STUDY",
+            "RELATIONSHIPS"
+          ],
+          "title": "Topic",
+          "type": "string"
+        },
+        "topic_name": {
+          "title": "Topic Name",
+          "type": "string"
+        },
+        "question": {
+          "title": "Question",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "highlights": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 3,
+          "title": "Highlights",
+          "type": "array"
+        },
+        "sections": {
+          "items": {
+            "$ref": "#/$defs/NatalSection"
+          },
+          "minItems": 5,
+          "title": "Sections",
+          "type": "array"
+        },
+        "narrative_version": {
+          "title": "Narrative Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "topic",
+        "topic_name",
+        "question",
+        "title",
+        "summary",
+        "highlights",
+        "sections",
+        "narrative_version"
+      ],
+      "title": "NatalReading",
+      "type": "object"
+    },
+    "NatalRelation": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "STEM_COMBINATION",
+            "SIX_COMBINATION",
+            "CLASH",
+            "THREE_COMBINATION",
+            "THREE_MEETING",
+            "HARM",
+            "PUNISHMENT",
+            "SELF_PUNISHMENT"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "pillar_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4,
+          "minItems": 2,
+          "title": "Pillar Refs",
+          "type": "array"
+        },
+        "tokens": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Tokens",
+          "type": "array"
+        },
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "transformation_assumed": {
+          "const": false,
+          "default": false,
+          "title": "Transformation Assumed",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "fact_id",
+        "kind",
+        "name",
+        "pillar_refs",
+        "tokens",
+        "evidence_id"
+      ],
+      "title": "NatalRelation",
+      "type": "object"
+    },
+    "NatalSection": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "finding_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Finding Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "title",
+        "text",
+        "finding_refs"
+      ],
+      "title": "NatalSection",
+      "type": "object"
+    },
+    "RootFact": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "pillar": {
+          "enum": [
+            "year",
+            "month",
+            "day",
+            "hour"
+          ],
+          "title": "Pillar",
+          "type": "string"
+        },
+        "stem_ref": {
+          "title": "Stem Ref",
+          "type": "string"
+        },
+        "stem": {
+          "title": "Stem",
+          "type": "string"
+        },
+        "level": {
+          "enum": [
+            "MAIN_QI",
+            "OTHER_QI"
+          ],
+          "title": "Level",
+          "type": "string"
+        }
+      },
+      "required": [
+        "fact_id",
+        "pillar",
+        "stem_ref",
+        "stem",
+        "level"
+      ],
+      "title": "RootFact",
+      "type": "object"
+    },
+    "StemFact": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "index": {
+          "maximum": 9,
+          "minimum": 0,
+          "title": "Index",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "zh": {
+          "title": "Zh",
+          "type": "string"
+        },
+        "element": {
+          "enum": [
+            "Mộc",
+            "Hỏa",
+            "Thổ",
+            "Kim",
+            "Thủy"
+          ],
+          "title": "Element",
+          "type": "string"
+        },
+        "polarity": {
+          "enum": [
+            "Dương",
+            "Âm"
+          ],
+          "title": "Polarity",
+          "type": "string"
+        },
+        "ten_god": {
+          "enum": [
+            "DAY_MASTER",
+            "PEER",
+            "ROB_WEALTH",
+            "EATING_GOD",
+            "HURTING_OFFICER",
+            "INDIRECT_WEALTH",
+            "DIRECT_WEALTH",
+            "SEVEN_KILLINGS",
+            "DIRECT_OFFICER",
+            "INDIRECT_RESOURCE",
+            "DIRECT_RESOURCE"
+          ],
+          "title": "Ten God",
+          "type": "string"
+        },
+        "ten_god_name": {
+          "title": "Ten God Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "fact_id",
+        "index",
+        "name",
+        "zh",
+        "element",
+        "polarity",
+        "ten_god",
+        "ten_god_name"
+      ],
+      "title": "StemFact",
+      "type": "object"
+    },
+    "StructureCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "ten_god": {
+          "enum": [
+            "DAY_MASTER",
+            "PEER",
+            "ROB_WEALTH",
+            "EATING_GOD",
+            "HURTING_OFFICER",
+            "INDIRECT_WEALTH",
+            "DIRECT_WEALTH",
+            "SEVEN_KILLINGS",
+            "DIRECT_OFFICER",
+            "INDIRECT_RESOURCE",
+            "DIRECT_RESOURCE"
+          ],
+          "title": "Ten God",
+          "type": "string"
+        },
+        "hidden_stem_ref": {
+          "title": "Hidden Stem Ref",
+          "type": "string"
+        },
+        "exposed_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Exposed Refs",
+          "type": "array"
+        },
+        "state": {
+          "const": "CONDITIONAL",
+          "default": "CONDITIONAL",
+          "title": "State",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "ten_god",
+        "hidden_stem_ref",
+        "exposed_refs"
+      ],
+      "title": "StructureCandidate",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "bazi-consultation-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "request_id": {
+      "format": "uuid",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "display_name": {
+      "title": "Display Name",
+      "type": "string"
+    },
+    "analysis_profile": {
+      "const": "bazi_natal_v1",
+      "title": "Analysis Profile",
+      "type": "string"
+    },
+    "rules_version": {
+      "title": "Rules Version",
+      "type": "string"
+    },
+    "corpus_version": {
+      "title": "Corpus Version",
+      "type": "string"
+    },
+    "rules_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Rules Sha256",
+      "type": "string"
+    },
+    "calendar_policy": {
+      "const": "VN_INSTANT_TO_BEIJING_SECT1",
+      "title": "Calendar Policy",
+      "type": "string"
+    },
+    "chart": {
+      "$ref": "#/$defs/NatalChart"
+    },
+    "facts": {
+      "$ref": "#/$defs/NatalFacts"
+    },
+    "assessment": {
+      "$ref": "#/$defs/NatalAssessment"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/BaziFinding"
+      },
+      "minItems": 5,
+      "title": "Findings",
+      "type": "array"
+    },
+    "reading": {
+      "$ref": "#/$defs/NatalReading"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/BaziEvidence"
+      },
+      "minItems": 1,
+      "title": "Evidence",
+      "type": "array"
+    },
+    "coverage": {
+      "items": {
+        "$ref": "#/$defs/CoverageItem"
+      },
+      "title": "Coverage",
+      "type": "array"
+    },
+    "model_called": {
+      "const": false,
+      "default": false,
+      "title": "Model Called",
+      "type": "boolean"
+    },
+    "review_status": {
+      "const": "RULES_TESTED_NOT_EXPERT_REVIEWED",
+      "default": "RULES_TESTED_NOT_EXPERT_REVIEWED",
+      "title": "Review Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "request_id",
+    "created_at",
+    "display_name",
+    "analysis_profile",
+    "rules_version",
+    "corpus_version",
+    "rules_sha256",
+    "calendar_policy",
+    "chart",
+    "facts",
+    "assessment",
+    "findings",
+    "reading",
+    "evidence",
+    "coverage"
+  ],
+  "title": "BaziResponse",
+  "type": "object"
+}

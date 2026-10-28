@@ -1,0 +1,2049 @@
+[
+  {
+    "id": "bazi-01-strong",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:bazi-01-strong",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "GENERAL",
+      "question": "Lá số này nên phát huy điều gì?",
+      "signals": [
+        "STRONG",
+        "NATAL_ONLY"
+      ],
+      "facts": [
+        {
+          "id": "bazi-01-strong:f1",
+          "text": "Nhật chủ Giáp Mộc; engine đánh giá STRONG theo profile natal v1."
+        },
+        {
+          "id": "bazi-01-strong:f2",
+          "text": "Có căn Mộc bản khí và can sinh trợ ngoài Nhật chủ."
+        },
+        {
+          "id": "bazi-01-strong:f3",
+          "text": "Hướng phù ức ưu tiên Hỏa, ở mức CONDITIONAL."
+        }
+      ],
+      "findings": [
+        {
+          "id": "bazi-01-strong:finding",
+          "text": "Theo phần phân tích hiện có, điểm cần chú ý là dùng phần được hỗ trợ để tạo ra kết quả cụ thể, thay vì chỉ tìm thêm hỗ trợ.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "bazi-01-strong:f1",
+            "bazi-01-strong:f2",
+            "bazi-01-strong:f3"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "dtt:strength",
+          "title": "Địch Thiên Tủy · Suy vượng",
+          "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+          "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Phân loại thiên vượng có điều kiện; chưa phân tích vận và chưa xác định nghề phù hợp."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:bazi-01-strong",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Theo phần phân tích hiện có, điểm cần chú ý là dùng phần được hỗ trợ để tạo ra kết quả cụ thể, thay vì chỉ tìm thêm hỗ trợ.",
+        "fact_refs": [
+          "bazi-01-strong:f1",
+          "bazi-01-strong:f2",
+          "bazi-01-strong:f3"
+        ],
+        "evidence_refs": [
+          "dtt:strength"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Lá số có cả gốc Mộc trong chi và can nâng đỡ Giáp Mộc. Vì vậy engine xếp vào nhóm thiên vượng, nghĩa là bên sinh trợ đang nổi bật trong cách tính này.",
+          "fact_refs": [
+            "bazi-01-strong:f1",
+            "bazi-01-strong:f2"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Hỏa là phần Mộc sinh ra, nên được chọn làm hướng đưa phần sinh trợ thành đầu ra. Đây là quan hệ trong lá số; chưa đủ để khẳng định bạn hướng ngoại hay hợp một nghề cụ thể.",
+          "fact_refs": [
+            "bazi-01-strong:f1",
+            "bazi-01-strong:f3"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể chọn một việc đang học hoặc chuẩn bị, rồi đặt một sản phẩm nhỏ để hoàn thành: bản nháp, bài trình bày hoặc bản thử nghiệm.",
+          "fact_refs": [
+            "bazi-01-strong:f3"
+          ]
+        }
+      ],
+      "limits": [
+        "Phân loại thiên vượng có điều kiện; chưa phân tích vận và chưa xác định nghề phù hợp."
+      ]
+    }
+  },
+  {
+    "id": "bazi-02-weak",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:bazi-02-weak",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "CAREER",
+      "question": "Tôi nên chú ý gì khi nhận thêm việc?",
+      "signals": [
+        "WEAK",
+        "NATAL_ONLY"
+      ],
+      "facts": [
+        {
+          "id": "bazi-02-weak:f1",
+          "text": "Engine đánh giá WEAK; Nhật chủ không được mùa trợ, không có căn cùng hành và không có can sinh trợ lộ."
+        },
+        {
+          "id": "bazi-02-weak:f2",
+          "text": "Có Ấn trong tàng can; hướng phù ức ưu tiên nhóm sinh trợ, CONDITIONAL."
+        }
+      ],
+      "findings": [
+        {
+          "id": "bazi-02-weak:finding",
+          "text": "Theo cách đọc này, nên xem điều kiện hỗ trợ trước khi bàn đến việc gánh thêm yêu cầu. Phân tích chưa xác định bạn có nên nhận công việc cụ thể hay không.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "bazi-02-weak:f1",
+            "bazi-02-weak:f2"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "dtt:strength",
+          "title": "Địch Thiên Tủy · Suy vượng",
+          "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+          "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Chưa có mô tả công việc và khối lượng thực tế; lá số không xác nhận khả năng đảm nhiệm một vị trí."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:bazi-02-weak",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Theo cách đọc này, nên xem điều kiện hỗ trợ trước khi bàn đến việc gánh thêm yêu cầu. Phân tích chưa xác định bạn có nên nhận công việc cụ thể hay không.",
+        "fact_refs": [
+          "bazi-02-weak:f1",
+          "bazi-02-weak:f2"
+        ],
+        "evidence_refs": [
+          "dtt:strength"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Thân nhược ở đây nghĩa là Nhật chủ ít được sinh trợ theo dữ kiện đã tính. Nó không nói bạn yếu sức, kém năng lực hoặc thiếu ý chí.",
+          "fact_refs": [
+            "bazi-02-weak:f1"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Ấn là nhóm sinh trợ cho Nhật chủ; trong lá số này nó nằm ở phần tàng can. Khi dùng hình ảnh này để suy ngẫm về công việc, trọng tâm là chỗ dựa trước yêu cầu mới, không phải mặc định sẽ có người giúp.",
+          "fact_refs": [
+            "bazi-02-weak:f2"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Trước khi nhận thêm việc, bạn có thể làm rõ ba điều: phần nào đã thành thạo, ai có thể hướng dẫn và thời gian thực tế để hoàn thành.",
+          "fact_refs": [
+            "bazi-02-weak:f1",
+            "bazi-02-weak:f2"
+          ]
+        }
+      ],
+      "limits": [
+        "Chưa có mô tả công việc và khối lượng thực tế; lá số không xác nhận khả năng đảm nhiệm một vị trí."
+      ]
+    }
+  },
+  {
+    "id": "bazi-03-mixed",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:bazi-03-mixed",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "GENERAL",
+      "question": "Vậy mệnh tôi đang tốt hay xấu?",
+      "signals": [
+        "MIXED",
+        "NATAL_ONLY"
+      ],
+      "facts": [
+        {
+          "id": "bazi-03-mixed:f1",
+          "text": "Assessment.strength=MIXED: có các tín hiệu sinh trợ và tiêu hao đan xen."
+        },
+        {
+          "id": "bazi-03-mixed:f2",
+          "text": "Assessment.balance.state=UNRESOLVED; chưa chọn hành ưu tiên."
+        }
+      ],
+      "findings": [
+        {
+          "id": "bazi-03-mixed:finding",
+          "text": "Phần phân tích này chưa đủ cơ sở gộp lá số thành tốt hoặc xấu. Nó cho thấy các yếu tố tác động khác hướng, nên chưa chọn một hành để ưu tiên.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "bazi-03-mixed:f1",
+            "bazi-03-mixed:f2"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "dtt:strength",
+          "title": "Địch Thiên Tủy · Suy vượng",
+          "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+          "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Engine chưa đánh giá đầy đủ ngoại cách và cứu ứng; chưa kết luận Dụng thần."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:bazi-03-mixed",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Phần phân tích này chưa đủ cơ sở gộp lá số thành tốt hoặc xấu. Nó cho thấy các yếu tố tác động khác hướng, nên chưa chọn một hành để ưu tiên.",
+        "fact_refs": [
+          "bazi-03-mixed:f1",
+          "bazi-03-mixed:f2"
+        ],
+        "evidence_refs": [
+          "dtt:strength"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "MIXED nghĩa là các tín hiệu chưa cùng chỉ về một phía. Nhãn này không có nghĩa ngũ hành đã cân bằng hay số phận ở mức trung bình.",
+          "fact_refs": [
+            "bazi-03-mixed:f1"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Vì hướng điều chỉnh còn để mở, chưa có căn cứ yêu cầu bạn tăng một hành, đổi màu sắc hay đổi nghề theo hành đó.",
+          "fact_refs": [
+            "bazi-03-mixed:f2"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể chọn một chủ đề cụ thể như học tập hoặc công việc; điều đó giúp lời giải tập trung vào các yếu tố liên quan thay vì một đánh giá chung.",
+          "fact_refs": [
+            "bazi-03-mixed:f1",
+            "bazi-03-mixed:f2"
+          ]
+        }
+      ],
+      "limits": [
+        "Engine chưa đánh giá đầy đủ ngoại cách và cứu ứng; chưa kết luận Dụng thần."
+      ]
+    }
+  },
+  {
+    "id": "bazi-04-structure",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:bazi-04-structure",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "CAREER",
+      "question": "Có Chính Quan là hợp làm quản lý đúng không?",
+      "signals": [
+        "CANDIDATE_STRUCTURE",
+        "NATAL_ONLY"
+      ],
+      "facts": [
+        {
+          "id": "bazi-04-structure:f1",
+          "text": "Chính Quan được nhận diện là ứng viên cách cục từ chi tháng và can thấu."
+        },
+        {
+          "id": "bazi-04-structure:f2",
+          "text": "Trạng thái cách cục CONDITIONAL; chưa xét đầy đủ thành cách, phá cách và cứu ứng."
+        }
+      ],
+      "findings": [
+        {
+          "id": "bazi-04-structure:finding",
+          "text": "Lá số mới có dấu hiệu để khảo sát Chính Quan; chưa đủ căn cứ kết luận bạn hợp làm quản lý.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "bazi-04-structure:f1",
+            "bazi-04-structure:f2"
+          ],
+          "evidence_refs": [
+            "ziping:use",
+            "ziping:formation"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ziping:use",
+          "title": "Tử Bình Chân Thuyên · Luận Dụng thần",
+          "text": "八字用神，專求月令",
+          "sha256": "8f82b286eca6fa26c92c8a44b7c74dce4855e766526ab13088c5bb692baadd68",
+          "url": "https://www.donglishuzhai.net/chapter/3721.html",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "ziping:formation",
+          "title": "Tử Bình Chân Thuyên · Thành bại cứu ứng",
+          "text": "用神專求月令，然以四柱配之，必有成敗。",
+          "sha256": "72aaf670e49b403b9c60a4ed7e8befb1cc5560610655c769fd36fdaf45f16887",
+          "url": "https://www.donglishuzhai.net/chapter/3722.html",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Ứng viên cách cục chưa phải thành cách; phân tích chưa xác định nghề hoặc thời điểm thăng tiến."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:bazi-04-structure",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Lá số mới có dấu hiệu để khảo sát Chính Quan; chưa đủ căn cứ kết luận bạn hợp làm quản lý.",
+        "fact_refs": [
+          "bazi-04-structure:f1",
+          "bazi-04-structure:f2"
+        ],
+        "evidence_refs": [
+          "ziping:use",
+          "ziping:formation"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Chính Quan là tên một quan hệ ngũ hành so với Nhật chủ. Ở đây nó được nhận diện trong phần tháng sinh, nên trở thành một ứng viên cách cục để đọc tiếp.",
+          "fact_refs": [
+            "bazi-04-structure:f1"
+          ],
+          "evidence_refs": [
+            "ziping:use",
+            "ziping:formation"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Tử Bình Chân Thuyên còn xét sự phối hợp của cả bốn trụ để bàn thành bại. Vì engine chưa xét đủ phần này, không thể chuyển tên ứng viên thành một phẩm chất hoặc lời hứa thăng tiến.",
+          "fact_refs": [
+            "bazi-04-structure:f2"
+          ],
+          "evidence_refs": [
+            "ziping:use",
+            "ziping:formation"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Nếu đang cân nhắc quản lý, bạn có thể đối chiếu bằng một nhiệm vụ điều phối nhỏ: giao việc, theo dõi tiến độ và nhận phản hồi từ người cùng làm.",
+          "fact_refs": [
+            "bazi-04-structure:f1",
+            "bazi-04-structure:f2"
+          ]
+        }
+      ],
+      "limits": [
+        "Ứng viên cách cục chưa phải thành cách; phân tích chưa xác định nghề hoặc thời điểm thăng tiến."
+      ]
+    }
+  },
+  {
+    "id": "bazi-05-climate",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:bazi-05-climate",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "GENERAL",
+      "question": "Vì sao một đoạn cần Hỏa, đoạn khác lại cần Thủy?",
+      "signals": [
+        "CLIMATE_CONFLICT",
+        "NATAL_ONLY"
+      ],
+      "facts": [
+        {
+          "id": "bazi-05-climate:f1",
+          "text": "Hướng phù ức của engine tạm ưu tiên Thủy."
+        },
+        {
+          "id": "bazi-05-climate:f2",
+          "text": "Gợi ý Điều hậu theo mùa là Hỏa; climate_conflict=true."
+        },
+        {
+          "id": "bazi-05-climate:f3",
+          "text": "Điều hậu hiện chỉ là gợi ý mùa, chưa có bảng đầy đủ theo Can và tháng."
+        }
+      ],
+      "findings": [
+        {
+          "id": "bazi-05-climate:finding",
+          "text": "Hai đoạn đang trả lời hai vấn đề khác nhau: một bên xem quan hệ sinh trợ, một bên xem nóng lạnh theo mùa. Engine đã ghi nhận chúng khác hướng và chưa hợp nhất thành một kết luận.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "bazi-05-climate:f1",
+            "bazi-05-climate:f2",
+            "bazi-05-climate:f3"
+          ],
+          "evidence_refs": [
+            "dtt:climate",
+            "ziping:climate"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "dtt:climate",
+          "title": "Địch Thiên Tủy · Hàn noãn",
+          "text": "天道有寒暖，發育萬物，人道得之，不可過也。",
+          "sha256": "32b1264d49a00be96b7f6c4c76eaa7dba20af24f7d60c04089ef45bd089154a3",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844365",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "ziping:climate",
+          "title": "Tử Bình Chân Thuyên · Phối khí hậu",
+          "text": "論命惟以月令用神爲主，然亦須配氣候而互參之。",
+          "sha256": "1209ff3ce05b85b9baa67f4c860796b283cf384826917002e02873c72682a4f7",
+          "url": "https://www.donglishuzhai.net/chapter/3727.html",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Bảng Điều hậu đầy đủ chưa được triển khai; chưa chốt một hành để áp dụng chung."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:bazi-05-climate",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Hai đoạn đang trả lời hai vấn đề khác nhau: một bên xem quan hệ sinh trợ, một bên xem nóng lạnh theo mùa. Engine đã ghi nhận chúng khác hướng và chưa hợp nhất thành một kết luận.",
+        "fact_refs": [
+          "bazi-05-climate:f1",
+          "bazi-05-climate:f2",
+          "bazi-05-climate:f3"
+        ],
+        "evidence_refs": [
+          "dtt:climate",
+          "ziping:climate"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Hướng phù ức Thủy là kết quả của nhánh cân nhắc sinh trợ trong lá số. Nó không tự thay thế việc xem điều kiện mùa sinh.",
+          "fact_refs": [
+            "bazi-05-climate:f1"
+          ],
+          "evidence_refs": [
+            "dtt:climate",
+            "ziping:climate"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Gợi ý Hỏa thuộc phần Điều hậu, tức cách đọc nóng lạnh theo mùa. Vì phần này còn sơ bộ, chưa thể bảo bạn phải chọn Hỏa hoặc Thủy trong sinh hoạt.",
+          "fact_refs": [
+            "bazi-05-climate:f2",
+            "bazi-05-climate:f3"
+          ],
+          "evidence_refs": [
+            "dtt:climate",
+            "ziping:climate"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể đọc hai nhận định như hai câu hỏi riêng; nếu muốn chốt một hành ưu tiên, cần kiểm tra thêm phần Điều hậu cụ thể trước.",
+          "fact_refs": [
+            "bazi-05-climate:f1",
+            "bazi-05-climate:f2",
+            "bazi-05-climate:f3"
+          ]
+        }
+      ],
+      "limits": [
+        "Bảng Điều hậu đầy đủ chưa được triển khai; chưa chốt một hành để áp dụng chung."
+      ]
+    }
+  },
+  {
+    "id": "bazi-06-wealth",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:bazi-06-wealth",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "WEALTH",
+      "question": "Có Tài lộ là tôi dễ có tiền không?",
+      "signals": [
+        "NATAL_ONLY",
+        "WEALTH_EXPOSED"
+      ],
+      "facts": [
+        {
+          "id": "bazi-06-wealth:f1",
+          "text": "Có Chính Tài trên can năm."
+        },
+        {
+          "id": "bazi-06-wealth:f2",
+          "text": "Thực Thương không lộ trên can; có thể còn trong tàng can."
+        },
+        {
+          "id": "bazi-06-wealth:f3",
+          "text": "Khí thế Nhật chủ MIXED; hướng phù ức UNRESOLVED."
+        }
+      ],
+      "findings": [
+        {
+          "id": "bazi-06-wealth:finding",
+          "text": "Có Chính Tài chỉ xác nhận một quan hệ trong lá số; chưa cho biết bạn kiếm được bao nhiêu hay tiền đến dễ hay khó.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "bazi-06-wealth:f1",
+            "bazi-06-wealth:f3"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "dtt:strength",
+          "title": "Địch Thiên Tủy · Suy vượng",
+          "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+          "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Đây là mệnh cục; chưa có dữ kiện thu nhập hoặc Đại vận–Lưu niên để bàn một thời kỳ tài chính."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:bazi-06-wealth",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Có Chính Tài chỉ xác nhận một quan hệ trong lá số; chưa cho biết bạn kiếm được bao nhiêu hay tiền đến dễ hay khó.",
+        "fact_refs": [
+          "bazi-06-wealth:f1",
+          "bazi-06-wealth:f3"
+        ],
+        "evidence_refs": [
+          "dtt:strength"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Tài là nhóm ngũ hành do Nhật chủ khắc; ở đây Chính Tài xuất hiện trên can năm. Nhãn này không phải số dư tài khoản hoặc bằng chứng thu nhập ổn định.",
+          "fact_refs": [
+            "bazi-06-wealth:f1"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Thực Thương là nhóm Nhật chủ sinh ra, thường được đặt cạnh Tài khi khảo sát đường sinh Tài. Nhóm này chưa lộ trên can, nhưng không vì thế mà kết luận bạn thiếu kỹ năng hoặc không có cách kiếm tiền.",
+          "fact_refs": [
+            "bazi-06-wealth:f2",
+            "bazi-06-wealth:f3"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Để đối chiếu với việc thực tế, bạn có thể ghi rõ sản phẩm hoặc dịch vụ mình tạo ra, ai trả tiền cho nó và tiền thường về khi nào.",
+          "fact_refs": [
+            "bazi-06-wealth:f1",
+            "bazi-06-wealth:f2"
+          ]
+        }
+      ],
+      "limits": [
+        "Đây là mệnh cục; chưa có dữ kiện thu nhập hoặc Đại vận–Lưu niên để bàn một thời kỳ tài chính."
+      ]
+    }
+  },
+  {
+    "id": "bazi-07-study",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:bazi-07-study",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "STUDY",
+      "question": "Tôi nên thay đổi cách học thế nào?",
+      "signals": [
+        "NATAL_ONLY",
+        "RESOURCE_EXPOSED"
+      ],
+      "facts": [
+        {
+          "id": "bazi-07-study:f1",
+          "text": "Chính Ấn lộ trên can tháng."
+        },
+        {
+          "id": "bazi-07-study:f2",
+          "text": "Thực Thương chưa lộ trên can."
+        },
+        {
+          "id": "bazi-07-study:f3",
+          "text": "Engine chưa đánh giá năng lực học tập thực tế."
+        }
+      ],
+      "findings": [
+        {
+          "id": "bazi-07-study:finding",
+          "text": "Nếu dùng lá số làm gợi ý tự đối chiếu, điểm đáng thử là chuyển điều đã đọc thành bài làm cụ thể. Dữ kiện chưa đủ để xác định cách học nào tốt nhất cho bạn.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "bazi-07-study:f1",
+            "bazi-07-study:f2",
+            "bazi-07-study:f3"
+          ],
+          "evidence_refs": [
+            "dtt:month"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "dtt:month",
+          "title": "Địch Thiên Tủy · Nguyệt lệnh",
+          "text": "月令提綱，譬之宅也，人元用事之神，宅之向也，不可以不卜。",
+          "sha256": "0529be4cdaede0b047426f5651add5f5800a970fd6e915cdf01cea70d05fa224",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844366",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Các liên hệ với thói quen học là ứng dụng biên tập hiện đại; cần đối chiếu bằng kết quả học thực tế."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:bazi-07-study",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Nếu dùng lá số làm gợi ý tự đối chiếu, điểm đáng thử là chuyển điều đã đọc thành bài làm cụ thể. Dữ kiện chưa đủ để xác định cách học nào tốt nhất cho bạn.",
+        "fact_refs": [
+          "bazi-07-study:f1",
+          "bazi-07-study:f2",
+          "bazi-07-study:f3"
+        ],
+        "evidence_refs": [
+          "dtt:month"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Ấn là nhóm sinh trợ cho Nhật chủ và ở đây xuất hiện trên can tháng. Khi bàn chuyện học, có thể dùng nó làm hình ảnh cho phần tiếp nhận kiến thức, chứ chưa chứng minh bạn học giỏi.",
+          "fact_refs": [
+            "bazi-07-study:f1",
+            "bazi-07-study:f3"
+          ],
+          "evidence_refs": [
+            "dtt:month"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Thực Thương là nhóm Nhật chủ sinh ra, được dùng như hình ảnh cho phần diễn đạt và thực hành. Chưa lộ trên can không có nghĩa bạn thiếu sáng tạo hay không biết vận dụng.",
+          "fact_refs": [
+            "bazi-07-study:f2",
+            "bazi-07-study:f3"
+          ],
+          "evidence_refs": [
+            "dtt:month"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể thử học một phần ngắn rồi đóng tài liệu, tự giải một bài hoặc giải thích lại bằng lời của mình; so kết quả với cách học cũ.",
+          "fact_refs": [
+            "bazi-07-study:f1",
+            "bazi-07-study:f2"
+          ]
+        }
+      ],
+      "limits": [
+        "Các liên hệ với thói quen học là ứng dụng biên tập hiện đại; cần đối chiếu bằng kết quả học thực tế."
+      ]
+    }
+  },
+  {
+    "id": "bazi-08-relations",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:bazi-08-relations",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "RELATIONSHIPS",
+      "question": "Lá số có hình là tình cảm sẽ đổ vỡ à?",
+      "signals": [
+        "NATAL_ONLY",
+        "HAS_RELATIONS"
+      ],
+      "facts": [
+        {
+          "id": "bazi-08-relations:f1",
+          "text": "Nhận diện Tý–Mão hình có liên quan chi ngày."
+        },
+        {
+          "id": "bazi-08-relations:f2",
+          "text": "Engine chỉ ghi nhận tổ hợp Chi, chưa đánh giá cứu giải toàn cục."
+        },
+        {
+          "id": "bazi-08-relations:f3",
+          "text": "Chưa có lá số hoặc thông tin tương tác của người còn lại."
+        }
+      ],
+      "findings": [
+        {
+          "id": "bazi-08-relations:finding",
+          "text": "Chưa thể kết luận đổ vỡ từ tổ hợp này. App mới nhận diện một quan hệ giữa các Chi, chưa xác định một sự kiện tình cảm.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "bazi-08-relations:f1",
+            "bazi-08-relations:f2",
+            "bazi-08-relations:f3"
+          ],
+          "evidence_refs": [
+            "smt:relations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "smt:relations",
+          "title": "Tam Mệnh Thông Hội · Luận tam hình",
+          "text": "凡见刑不可便以凶论",
+          "sha256": "8a5c0bfee3b3b8e2e2a6f354891067acdc72a977fc1ea366fe31b55ff3e02b94",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2292392",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Chưa luận hợp hai lá số hoặc thời điểm hôn nhân; không suy kết cục từ một tổ hợp hình."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:bazi-08-relations",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Chưa thể kết luận đổ vỡ từ tổ hợp này. App mới nhận diện một quan hệ giữa các Chi, chưa xác định một sự kiện tình cảm.",
+        "fact_refs": [
+          "bazi-08-relations:f1",
+          "bazi-08-relations:f2",
+          "bazi-08-relations:f3"
+        ],
+        "evidence_refs": [
+          "smt:relations"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Chữ hình ở đây là tên một tổ hợp trong phép luận, không phải thông tin rằng người kia sẽ làm hại bạn. Nguồn Tam Mệnh Thông Hội cũng lưu ý không thấy hình là lập tức luận hung.",
+          "fact_refs": [
+            "bazi-08-relations:f1",
+            "bazi-08-relations:f2"
+          ],
+          "evidence_refs": [
+            "smt:relations"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Muốn bàn một mối quan hệ cụ thể còn cần ngữ cảnh hai người. Một lá số không cho phép xác định tính cách, sự chung thủy hay ý định của người còn lại.",
+          "fact_refs": [
+            "bazi-08-relations:f3"
+          ],
+          "evidence_refs": [
+            "smt:relations"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Nếu có chuyện đang vướng, bạn có thể nêu một tình huống cụ thể và điều muốn thống nhất với nhau, chẳng hạn cách chia sẻ thời gian hoặc trách nhiệm.",
+          "fact_refs": [
+            "bazi-08-relations:f2",
+            "bazi-08-relations:f3"
+          ]
+        }
+      ],
+      "limits": [
+        "Chưa luận hợp hai lá số hoặc thời điểm hôn nhân; không suy kết cục từ một tổ hợp hình."
+      ]
+    }
+  },
+  {
+    "id": "maihoa-01-support",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:maihoa-01-support",
+      "method": "MAIHOA_INTERNAL",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "WEALTH",
+      "question": "Việc thu khoản tiền này có thuận không?",
+      "signals": [
+        "USE_GENERATES_BODY"
+      ],
+      "facts": [
+        {
+          "id": "maihoa-01-support:f1",
+          "text": "Engine chọn Thể Chấn Mộc và Dụng Khảm Thủy."
+        },
+        {
+          "id": "maihoa-01-support:f2",
+          "text": "Quan hệ đầu: USE_GENERATES_BODY, nghiêng thuận theo phép Mai Hoa."
+        },
+        {
+          "id": "maihoa-01-support:f3",
+          "text": "Chưa có dữ kiện người trả tiền hoặc ngày thanh toán."
+        }
+      ],
+      "findings": [
+        {
+          "id": "maihoa-01-support:finding",
+          "text": "Ở quan hệ đầu của quẻ, phía việc đang hỏi được đọc là có chiều hỗ trợ cho bạn. Dấu hiệu này chưa xác nhận tiền đã được duyệt hay sẽ về đúng hẹn.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "maihoa-01-support:f1",
+            "maihoa-01-support:f2",
+            "maihoa-01-support:f3"
+          ],
+          "evidence_refs": [
+            "mh:roles",
+            "mh:wealth"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "mh:roles",
+          "title": "Mai Hoa Dịch Số · Thể và Dụng",
+          "text": "體為主，用為事。",
+          "sha256": "258e7ec60a6925d721464a76037c00bb38c31dc2913f460992bec170aa4e7320",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "mh:wealth",
+          "title": "Mai Hoa Dịch Số · Cầu tài",
+          "text": "體生用，財有損耗之憂；用生體，財有進益之喜。",
+          "sha256": "8174472750d15f6cb14fb0de3554742ee9c0e5a5788807a5a2b9c6216748bd5c",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Ví dụ chỉ có quan hệ đầu; chưa đủ Hỗ/Biến và điều kiện thực tế để kết luận toàn việc hoặc ngày nhận tiền."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:maihoa-01-support",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Ở quan hệ đầu của quẻ, phía việc đang hỏi được đọc là có chiều hỗ trợ cho bạn. Dấu hiệu này chưa xác nhận tiền đã được duyệt hay sẽ về đúng hẹn.",
+        "fact_refs": [
+          "maihoa-01-support:f1",
+          "maihoa-01-support:f2",
+          "maihoa-01-support:f3"
+        ],
+        "evidence_refs": [
+          "mh:roles",
+          "mh:wealth"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Thể đại diện phía chủ thể, Dụng đại diện việc đang hỏi. Thủy sinh Mộc nên ở đây được gọi là Dụng sinh Thể: chiều tác động từ việc về phía bạn là sinh trợ.",
+          "fact_refs": [
+            "maihoa-01-support:f1",
+            "maihoa-01-support:f2"
+          ],
+          "evidence_refs": [
+            "mh:roles",
+            "mh:wealth"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Trong phép cầu tài, quan hệ này được đọc theo hướng có thêm phần nhận về. Tuy vậy, quẻ không cung cấp tình trạng xác nhận và thanh toán thực tế của khoản tiền.",
+          "fact_refs": [
+            "maihoa-01-support:f2",
+            "maihoa-01-support:f3"
+          ],
+          "evidence_refs": [
+            "mh:roles",
+            "mh:wealth"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể kiểm tra khoản tiền đã được xác nhận đến bước nào và còn chờ thao tác của bên nào; đó là điều cụ thể để đối chiếu dấu hiệu hỗ trợ.",
+          "fact_refs": [
+            "maihoa-01-support:f3"
+          ]
+        }
+      ],
+      "limits": [
+        "Ví dụ chỉ có quan hệ đầu; chưa đủ Hỗ/Biến và điều kiện thực tế để kết luận toàn việc hoặc ngày nhận tiền."
+      ]
+    }
+  },
+  {
+    "id": "maihoa-02-drain",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:maihoa-02-drain",
+      "method": "MAIHOA_INTERNAL",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "TRADE",
+      "question": "Tôi nên chú ý gì trước khi nhận đơn hàng này?",
+      "signals": [
+        "BODY_GENERATES_USE"
+      ],
+      "facts": [
+        {
+          "id": "maihoa-02-drain:f1",
+          "text": "Thể Ly Hỏa, Dụng Khôn Thổ; BODY_GENERATES_USE."
+        },
+        {
+          "id": "maihoa-02-drain:f2",
+          "text": "Theo quy tắc giao dịch, quan hệ này có chiều hao về phía Thể."
+        },
+        {
+          "id": "maihoa-02-drain:f3",
+          "text": "Không có số liệu giá vốn hoặc điều khoản của đơn hàng."
+        }
+      ],
+      "findings": [
+        {
+          "id": "maihoa-02-drain:finding",
+          "text": "Điểm cần soi là phần bạn phải bỏ ra trước khi nhận được kết quả. Quẻ hiện cho dấu hiệu hao về phía bạn, chưa đủ để quyết định nhận hay bỏ đơn.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "maihoa-02-drain:f1",
+            "maihoa-02-drain:f2",
+            "maihoa-02-drain:f3"
+          ],
+          "evidence_refs": [
+            "mh:trade"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "mh:trade",
+          "title": "Mai Hoa Dịch Số · Giao dịch",
+          "text": "體生用，難成，或因交易有失。用生體，即成，成必有財。",
+          "sha256": "7e6ffa2d6e78879ca5d6fabd1cdd056aa36798380e50e4bc00ac8fe69022d8a3",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Chưa có số liệu giao dịch và toàn bộ diễn tiến quẻ; không suy thành mức lỗ hoặc lợi nhuận."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:maihoa-02-drain",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Điểm cần soi là phần bạn phải bỏ ra trước khi nhận được kết quả. Quẻ hiện cho dấu hiệu hao về phía bạn, chưa đủ để quyết định nhận hay bỏ đơn.",
+        "fact_refs": [
+          "maihoa-02-drain:f1",
+          "maihoa-02-drain:f2",
+          "maihoa-02-drain:f3"
+        ],
+        "evidence_refs": [
+          "mh:trade"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Hỏa sinh Thổ nên quan hệ này gọi là Thể sinh Dụng. Trong cách đọc giao dịch, nó nhấn mạnh chiều cho đi từ phía chủ thể.",
+          "fact_refs": [
+            "maihoa-02-drain:f1",
+            "maihoa-02-drain:f2"
+          ],
+          "evidence_refs": [
+            "mh:trade"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Có thể dùng hình ảnh đó để rà chi phí, thời gian hoặc công sức phải ứng trước. Đây là cách đối chiếu hiện đại; dữ kiện không xác nhận đơn hàng đang lỗ.",
+          "fact_refs": [
+            "maihoa-02-drain:f2",
+            "maihoa-02-drain:f3"
+          ],
+          "evidence_refs": [
+            "mh:trade"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể lập một bảng ngắn gồm khoản phải ứng, thời gian làm và điều kiện thanh toán trước khi chốt đơn.",
+          "fact_refs": [
+            "maihoa-02-drain:f2",
+            "maihoa-02-drain:f3"
+          ]
+        }
+      ],
+      "limits": [
+        "Chưa có số liệu giao dịch và toàn bộ diễn tiến quẻ; không suy thành mức lỗ hoặc lợi nhuận."
+      ]
+    }
+  },
+  {
+    "id": "maihoa-03-control",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:maihoa-03-control",
+      "method": "MAIHOA_INTERNAL",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "PLANNING",
+      "question": "Việc tôi đang tính có trở ngại gì cần lưu ý?",
+      "signals": [
+        "USE_CONTROLS_BODY"
+      ],
+      "facts": [
+        {
+          "id": "maihoa-03-control:f1",
+          "text": "Thể Khảm Thủy, Dụng Cấn Thổ; USE_CONTROLS_BODY."
+        },
+        {
+          "id": "maihoa-03-control:f2",
+          "text": "Engine đánh dấu CAUTION cho quan hệ đầu."
+        },
+        {
+          "id": "maihoa-03-control:f3",
+          "text": "Chưa có mô tả trở ngại thực tế hoặc người liên quan."
+        }
+      ],
+      "findings": [
+        {
+          "id": "maihoa-03-control:finding",
+          "text": "Quan hệ đầu nghiêng về sức ép từ hoàn cảnh lên phía bạn. Chưa có dữ kiện để gọi tên một người cản trở hoặc xác định việc sẽ thất bại.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "maihoa-03-control:f1",
+            "maihoa-03-control:f2",
+            "maihoa-03-control:f3"
+          ],
+          "evidence_refs": [
+            "mh:roles",
+            "mh:planning"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "mh:roles",
+          "title": "Mai Hoa Dịch Số · Thể và Dụng",
+          "text": "體為主，用為事。",
+          "sha256": "258e7ec60a6925d721464a76037c00bb38c31dc2913f460992bec170aa4e7320",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "mh:planning",
+          "title": "Mai Hoa Dịch Số · Mưu sự",
+          "text": "體克用，謀雖可成，但成遲。用克體，求謀不成，謀亦有害。",
+          "sha256": "e5fcdd3ded09efbadfb88798b4e318e394885e82477164a2b902a5435745036b",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Ví dụ chưa đủ Hỗ/Biến; chưa thể phán kết quả sau cùng hoặc người gây cản trở."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:maihoa-03-control",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Quan hệ đầu nghiêng về sức ép từ hoàn cảnh lên phía bạn. Chưa có dữ kiện để gọi tên một người cản trở hoặc xác định việc sẽ thất bại.",
+        "fact_refs": [
+          "maihoa-03-control:f1",
+          "maihoa-03-control:f2",
+          "maihoa-03-control:f3"
+        ],
+        "evidence_refs": [
+          "mh:roles",
+          "mh:planning"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Thổ khắc Thủy nên quan hệ này được gọi là Dụng khắc Thể. Trong phép mưu sự, đây là dấu hiệu cần thận trọng với điều kiện của việc đang tính.",
+          "fact_refs": [
+            "maihoa-03-control:f1",
+            "maihoa-03-control:f2"
+          ],
+          "evidence_refs": [
+            "mh:roles",
+            "mh:planning"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Trở ngại có thể được đem đối chiếu với điều kiện bạn chưa chủ động được, nhưng quẻ chưa cho biết đó là tiền, lịch hẹn hay thủ tục. Cần xem mô tả việc trước khi chọn một cách xử lý.",
+          "fact_refs": [
+            "maihoa-03-control:f3"
+          ],
+          "evidence_refs": [
+            "mh:roles",
+            "mh:planning"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể liệt kê điều kiện bắt buộc để việc bắt đầu và đánh dấu điều nào còn phải chờ bên khác xác nhận.",
+          "fact_refs": [
+            "maihoa-03-control:f2",
+            "maihoa-03-control:f3"
+          ]
+        }
+      ],
+      "limits": [
+        "Ví dụ chưa đủ Hỗ/Biến; chưa thể phán kết quả sau cùng hoặc người gây cản trở."
+      ]
+    }
+  },
+  {
+    "id": "maihoa-04-sequence",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:maihoa-04-sequence",
+      "method": "MAIHOA_INTERNAL",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "GENERAL",
+      "question": "Vì sao đầu thuận mà cuối lại có cảnh báo?",
+      "signals": [
+        "MIXED_PHASES"
+      ],
+      "facts": [
+        {
+          "id": "maihoa-04-sequence:f1",
+          "text": "Quan hệ đầu là USE_GENERATES_BODY, FAVOURABLE."
+        },
+        {
+          "id": "maihoa-04-sequence:f2",
+          "text": "Quan hệ cuối là USE_CONTROLS_BODY, CAUTION."
+        },
+        {
+          "id": "maihoa-04-sequence:f3",
+          "text": "Không có quy tắc ứng kỳ cụ thể trong dữ liệu đầu vào."
+        }
+      ],
+      "findings": [
+        {
+          "id": "maihoa-04-sequence:finding",
+          "text": "Hai nhận định nói về hai chặng khác nhau: đầu có chiều hỗ trợ, cuối có dấu hiệu gây sức ép. Vì vậy nên đọc như một diễn tiến, chưa gộp cả quẻ thành hoàn toàn thuận.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "maihoa-04-sequence:f1",
+            "maihoa-04-sequence:f2"
+          ],
+          "evidence_refs": [
+            "mh:sequence"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "mh:sequence",
+          "title": "Mai Hoa Dịch Số · Diễn tiến Hỗ và Biến",
+          "text": "用吉變凶者，先吉後凶；用凶變吉者，先凶後吉。",
+          "sha256": "5cc5bfa3eca79356bb093eed612e9d159994440f342f3ac33260cecfb41787fe",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Chưa có ứng kỳ và ngữ cảnh việc cụ thể; không gán ngày hoặc sự kiện cho từng chặng."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:maihoa-04-sequence",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Hai nhận định nói về hai chặng khác nhau: đầu có chiều hỗ trợ, cuối có dấu hiệu gây sức ép. Vì vậy nên đọc như một diễn tiến, chưa gộp cả quẻ thành hoàn toàn thuận.",
+        "fact_refs": [
+          "maihoa-04-sequence:f1",
+          "maihoa-04-sequence:f2"
+        ],
+        "evidence_refs": [
+          "mh:sequence"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Phép Mai Hoa dùng quan hệ đầu để xem bước khởi sự và quan hệ biến để xem chiều cuối. Được hỗ trợ lúc đầu chưa loại trừ việc gặp điều kiện khó hơn về sau.",
+          "fact_refs": [
+            "maihoa-04-sequence:f1",
+            "maihoa-04-sequence:f2"
+          ],
+          "evidence_refs": [
+            "mh:sequence"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Chặng cuối ở đây là vị trí trong cách đọc quẻ, không phải một ngày hoặc một tháng đã được xác định.",
+          "fact_refs": [
+            "maihoa-04-sequence:f2",
+            "maihoa-04-sequence:f3"
+          ],
+          "evidence_refs": [
+            "mh:sequence"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể kiểm tra riêng điều kiện để bắt đầu và điều kiện để hoàn tất; tránh chỉ chuẩn bị cho bước đầu.",
+          "fact_refs": [
+            "maihoa-04-sequence:f1",
+            "maihoa-04-sequence:f2"
+          ]
+        }
+      ],
+      "limits": [
+        "Chưa có ứng kỳ và ngữ cảnh việc cụ thể; không gán ngày hoặc sự kiện cho từng chặng."
+      ]
+    }
+  },
+  {
+    "id": "liuyao-01-money",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:liuyao-01-money",
+      "method": "LIUYAO_NAJIA",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "WEALTH",
+      "question": "Người kia có trả khoản đang nợ không?",
+      "signals": [
+        "DAY_MONTH_MIXED"
+      ],
+      "facts": [
+        {
+          "id": "liuyao-01-money:f1",
+          "text": "Engine đã chọn hào Thê tài làm Dụng thần cho khoản tiền."
+        },
+        {
+          "id": "liuyao-01-money:f2",
+          "text": "Dụng thần được tháng sinh nhưng bị ngày khắc; tendency=MIXED."
+        },
+        {
+          "id": "liuyao-01-money:f3",
+          "text": "Chưa có điều kiện ứng kỳ hoặc thông tin cam kết trả tiền."
+        }
+      ],
+      "findings": [
+        {
+          "id": "liuyao-01-money:finding",
+          "text": "Phần luận hiện có cả trợ lực lẫn cản trở cho khoản tiền, nên chưa xác nhận người kia sẽ trả hoặc không trả.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "liuyao-01-money:f1",
+            "liuyao-01-money:f2",
+            "liuyao-01-money:f3"
+          ],
+          "evidence_refs": [
+            "ly:wealth",
+            "ly:month"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ly:wealth",
+          "title": "Tăng San Bốc Dịch · Dụng thần · Tài vật",
+          "text": "一切使用之財物亦以妻財爻爲用神。",
+          "sha256": "eca1164de968e99ca9c191aa70d5b0f331ebdc0a303217c97e5b7b23f78443b4",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100700",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "ly:month",
+          "title": "Tăng San Bốc Dịch · Nguyệt tướng",
+          "text": "月將卽是月建又爲月令。掌一月之權，司三旬之令。",
+          "sha256": "6933a79f007770c732c5dc3bb9712be0e2e4506e62b4b7196208492ca011b94d",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100331",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Chưa có ứng kỳ; không xác định ngày trả, số tiền nhận được hoặc ý định của người nợ."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:liuyao-01-money",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Phần luận hiện có cả trợ lực lẫn cản trở cho khoản tiền, nên chưa xác nhận người kia sẽ trả hoặc không trả.",
+        "fact_refs": [
+          "liuyao-01-money:f1",
+          "liuyao-01-money:f2",
+          "liuyao-01-money:f3"
+        ],
+        "evidence_refs": [
+          "ly:wealth",
+          "ly:month"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Thê tài ở câu hỏi này là nhãn đại diện khoản tiền cần xét, không phải người vợ. Engine dùng hào này làm điểm tập trung của phép luận.",
+          "fact_refs": [
+            "liuyao-01-money:f1"
+          ],
+          "evidence_refs": [
+            "ly:wealth",
+            "ly:month"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Tháng sinh cho thấy một chiều nâng đỡ, ngày khắc là một chiều gây sức ép. Không thể bỏ một phía chỉ vì muốn lấy một kết luận tốt hoặc xấu.",
+          "fact_refs": [
+            "liuyao-01-money:f2"
+          ],
+          "evidence_refs": [
+            "ly:wealth",
+            "ly:month"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể hỏi lại một mốc thanh toán cụ thể và phần việc còn vướng; thông tin đó giúp kiểm tra khả năng thu tiền ngoài thực tế.",
+          "fact_refs": [
+            "liuyao-01-money:f3"
+          ]
+        }
+      ],
+      "limits": [
+        "Chưa có ứng kỳ; không xác định ngày trả, số tiền nhận được hoặc ý định của người nợ."
+      ]
+    }
+  },
+  {
+    "id": "liuyao-02-selection",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:liuyao-02-selection",
+      "method": "LIUYAO_NAJIA",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "DOCUMENT",
+      "question": "Hồ sơ của tôi có được duyệt không?",
+      "signals": [
+        "AMBIGUOUS_USE"
+      ],
+      "facts": [
+        {
+          "id": "liuyao-02-selection:f1",
+          "text": "Hỏi về hồ sơ nên nhóm trọng tâm là Phụ mẫu."
+        },
+        {
+          "id": "liuyao-02-selection:f2",
+          "text": "Có hai hào Phụ mẫu; engine chưa khóa được Dụng thần, selection=AMBIGUOUS."
+        },
+        {
+          "id": "liuyao-02-selection:f3",
+          "text": "Hai ứng viên có điều kiện Nhật–Nguyệt khác nhau."
+        }
+      ],
+      "findings": [
+        {
+          "id": "liuyao-02-selection:finding",
+          "text": "Chưa thể đưa một kết luận chung vì còn hai hào đại diện hồ sơ với điều kiện khác nhau. Cần giữ hai khả năng riêng trong phần luận.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "liuyao-02-selection:f1",
+            "liuyao-02-selection:f2",
+            "liuyao-02-selection:f3"
+          ],
+          "evidence_refs": [
+            "ly:document"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ly:document",
+          "title": "Tăng San Bốc Dịch · Dụng thần · Văn thư",
+          "text": "章奏、文書及書館文契也以父母爻爲用神",
+          "sha256": "320c662df868c6c56be23aacc6dabfafbb05592515e17fb9e451caf77dffa4c5",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100700",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Dụng thần chưa được chọn; không tự chọn hào thuận hơn hoặc gieo lại để tìm câu trả lời mong muốn."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:liuyao-02-selection",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Chưa thể đưa một kết luận chung vì còn hai hào đại diện hồ sơ với điều kiện khác nhau. Cần giữ hai khả năng riêng trong phần luận.",
+        "fact_refs": [
+          "liuyao-02-selection:f1",
+          "liuyao-02-selection:f2",
+          "liuyao-02-selection:f3"
+        ],
+        "evidence_refs": [
+          "ly:document"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Phụ mẫu ở đây được dùng cho văn thư và hồ sơ; nó không nói về cha mẹ của bạn trong câu hỏi này.",
+          "fact_refs": [
+            "liuyao-02-selection:f1"
+          ],
+          "evidence_refs": [
+            "ly:document"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Engine chưa chọn được một hào trọng tâm nên chưa có cơ sở lấy điều kiện thuận của hào này ghép với điều kiện thuận của hào kia để đoán được duyệt.",
+          "fact_refs": [
+            "liuyao-02-selection:f2",
+            "liuyao-02-selection:f3"
+          ],
+          "evidence_refs": [
+            "ly:document"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể đọc riêng hai ứng viên trên cùng quẻ đã lưu; nếu biết hồ sơ đang ở khâu nào, hãy dùng thông tin đó làm ngữ cảnh đối chiếu.",
+          "fact_refs": [
+            "liuyao-02-selection:f2",
+            "liuyao-02-selection:f3"
+          ]
+        }
+      ],
+      "limits": [
+        "Dụng thần chưa được chọn; không tự chọn hào thuận hơn hoặc gieo lại để tìm câu trả lời mong muốn."
+      ]
+    }
+  },
+  {
+    "id": "liuyao-03-day-clash",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:liuyao-03-day-clash",
+      "method": "LIUYAO_NAJIA",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "CAREER",
+      "question": "Hào bị ngày xung là hỏng việc sao?",
+      "signals": [
+        "DAY_CLASH_STRONG_STATIC"
+      ],
+      "facts": [
+        {
+          "id": "liuyao-03-day-clash:f1",
+          "text": "Hào Quan quỷ đã được engine chọn cho câu hỏi vị trí công việc."
+        },
+        {
+          "id": "liuyao-03-day-clash:f2",
+          "text": "Hào gốc tĩnh, được tháng sinh phù; bị ngày xung."
+        },
+        {
+          "id": "liuyao-03-day-clash:f3",
+          "text": "Engine ghi ám động sơ bộ, chưa kết luận Nhật phá."
+        }
+      ],
+      "findings": [
+        {
+          "id": "liuyao-03-day-clash:finding",
+          "text": "Trong dữ kiện này, ngày xung chưa được đọc là hỏng việc. Vì hào đang có tháng nâng đỡ, engine ghi nhận khả năng ám động và vẫn để kết luận có điều kiện.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "liuyao-03-day-clash:f1",
+            "liuyao-03-day-clash:f2",
+            "liuyao-03-day-clash:f3"
+          ],
+          "evidence_refs": [
+            "ly:day"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ly:day",
+          "title": "Tăng San Bốc Dịch · Nhật thần",
+          "text": "沖旺相之靜爻，旣爲暗動，沖衰弱之靜爻爲日破",
+          "sha256": "6d3623a2834828ff428848f02004e0e4a04a4fd8aa45ee083674f8a2fe7a984e",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100338",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Ám động đang ở mức sơ bộ; chưa có ứng kỳ hoặc kết luận thành bại cho công việc."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:liuyao-03-day-clash",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Trong dữ kiện này, ngày xung chưa được đọc là hỏng việc. Vì hào đang có tháng nâng đỡ, engine ghi nhận khả năng ám động và vẫn để kết luận có điều kiện.",
+        "fact_refs": [
+          "liuyao-03-day-clash:f1",
+          "liuyao-03-day-clash:f2",
+          "liuyao-03-day-clash:f3"
+        ],
+        "evidence_refs": [
+          "ly:day"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Ám động là cách gọi hào vốn tĩnh nhưng được ngày xung làm nổi tác động khi có đủ sức. Nó khác cách đọc một hào yếu bị xung thành Nhật phá.",
+          "fact_refs": [
+            "liuyao-03-day-clash:f2",
+            "liuyao-03-day-clash:f3"
+          ],
+          "evidence_refs": [
+            "ly:day"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Vì vậy, chỉ thấy chữ xung chưa đủ xác định kết quả công việc. Còn phải theo các điều kiện sinh khắc và biến hóa mà engine đã cấp cho hào này.",
+          "fact_refs": [
+            "liuyao-03-day-clash:f1",
+            "liuyao-03-day-clash:f3"
+          ],
+          "evidence_refs": [
+            "ly:day"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể kiểm tra tình trạng hồ sơ ứng tuyển hoặc quyết định nhân sự thực tế, thay vì coi một chữ xung là câu trả lời cuối.",
+          "fact_refs": [
+            "liuyao-03-day-clash:f1",
+            "liuyao-03-day-clash:f3"
+          ]
+        }
+      ],
+      "limits": [
+        "Ám động đang ở mức sơ bộ; chưa có ứng kỳ hoặc kết luận thành bại cho công việc."
+      ]
+    }
+  },
+  {
+    "id": "zhouyi-01-qian",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:zhouyi-01-qian",
+      "method": "ZHOUYI_TEXT",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "PLANNING",
+      "question": "Hào đầu quẻ Càn khuyên gì khi khởi sự?",
+      "signals": [
+        "LINE_1"
+      ],
+      "facts": [
+        {
+          "id": "zhouyi-01-qian:f1",
+          "text": "Engine đã xác định quẻ Càn, hào 1; kinh văn được truy xuất đúng vị trí."
+        },
+        {
+          "id": "zhouyi-01-qian:f2",
+          "text": "Nguồn hào 1 là 潛龍勿用。"
+        },
+        {
+          "id": "zhouyi-01-qian:f3",
+          "text": "Context không có dữ kiện Nạp Giáp hoặc điều kiện dự án."
+        }
+      ],
+      "findings": [
+        {
+          "id": "zhouyi-01-qian:finding",
+          "text": "Hào này gợi ý giữ sức và chuẩn bị khi điều kiện chưa chín, thay vì vội đưa toàn bộ kế hoạch ra ngay.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "zhouyi-01-qian:f1",
+            "zhouyi-01-qian:f2"
+          ],
+          "evidence_refs": [
+            "zy:qian1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "zy:qian1",
+          "title": "Chu Dịch · Càn · Sơ Cửu",
+          "text": "潛龍勿用。",
+          "sha256": "2efeb0a408474c8ae63170884b0dc957f02e8486322a2af1620c70d1dd891c76",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2404991",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Không dùng lời hào này thay kết luận Lục Hào hoặc làm căn cứ dự đoán ngày khởi sự."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:zhouyi-01-qian",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Hào này gợi ý giữ sức và chuẩn bị khi điều kiện chưa chín, thay vì vội đưa toàn bộ kế hoạch ra ngay.",
+        "fact_refs": [
+          "zhouyi-01-qian:f1",
+          "zhouyi-01-qian:f2"
+        ],
+        "evidence_refs": [
+          "zy:qian1"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Hình ảnh rồng còn ẩn nói về một giai đoạn chưa nên bộc lộ hết. Chữ chưa dùng ở đây cần đọc theo vị trí khởi đầu của hào, không phải lệnh bỏ hẳn việc định làm.",
+          "fact_refs": [
+            "zhouyi-01-qian:f1",
+            "zhouyi-01-qian:f2"
+          ],
+          "evidence_refs": [
+            "zy:qian1"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Đây là diễn giải nghĩa hào. Chưa có dữ kiện để xác định bạn đang thiếu điều kiện nào hoặc khi nào nên bắt đầu.",
+          "fact_refs": [
+            "zhouyi-01-qian:f3"
+          ],
+          "evidence_refs": [
+            "zy:qian1"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Nếu đang chuẩn bị một dự án, bạn có thể thử bản nhỏ, lấy phản hồi rồi mới quyết định phạm vi công bố.",
+          "fact_refs": [
+            "zhouyi-01-qian:f1",
+            "zhouyi-01-qian:f2"
+          ]
+        }
+      ],
+      "limits": [
+        "Không dùng lời hào này thay kết luận Lục Hào hoặc làm căn cứ dự đoán ngày khởi sự."
+      ]
+    }
+  },
+  {
+    "id": "zhouyi-02-jiji",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:zhouyi-02-jiji",
+      "method": "ZHOUYI_TEXT",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "GENERAL",
+      "question": "Quẻ Ký Tế nghĩa là mọi việc đã xong và sẽ tốt hết à?",
+      "signals": [
+        "HEXAGRAM_63"
+      ],
+      "facts": [
+        {
+          "id": "zhouyi-02-jiji:f1",
+          "text": "Quẻ được xác định là Ký Tế, số 63."
+        },
+        {
+          "id": "zhouyi-02-jiji:f2",
+          "text": "Quẻ từ có mệnh đề 初吉終亂。"
+        },
+        {
+          "id": "zhouyi-02-jiji:f3",
+          "text": "Không có hào động hoặc ứng kỳ được cấp trong context."
+        }
+      ],
+      "findings": [
+        {
+          "id": "zhouyi-02-jiji:finding",
+          "text": "Ký Tế gợi hình ảnh việc đã vào thế hoàn tất, đồng thời nhắc rằng kết quả tốt ban đầu vẫn cần được giữ gìn.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "zhouyi-02-jiji:f1",
+            "zhouyi-02-jiji:f2"
+          ],
+          "evidence_refs": [
+            "zy:jiji"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "zy:jiji",
+          "title": "Chu Dịch · Ký Tế · Quẻ từ",
+          "text": "初吉終亂。",
+          "sha256": "d519be64d34adbaa2848af9eeab990ad81945f82afa6f43c194cc8a0e3839407",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2572417",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Đây là nghĩa quẻ từ; thiếu hào và ngữ cảnh để luận sự kiện cụ thể."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:zhouyi-02-jiji",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Ký Tế gợi hình ảnh việc đã vào thế hoàn tất, đồng thời nhắc rằng kết quả tốt ban đầu vẫn cần được giữ gìn.",
+        "fact_refs": [
+          "zhouyi-02-jiji:f1",
+          "zhouyi-02-jiji:f2"
+        ],
+        "evidence_refs": [
+          "zy:jiji"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Mệnh đề đầu tốt, cuối rối đặt một lời nhắc ngay trong quẻ từ: xong một bước không có nghĩa mọi bước sau tự ổn.",
+          "fact_refs": [
+            "zhouyi-02-jiji:f2"
+          ],
+          "evidence_refs": [
+            "zy:jiji"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Ở đây chưa có hào cụ thể để đọc sâu một tình huống, nên không gán chữ cuối thành một tai nạn hay một thời điểm chắc chắn.",
+          "fact_refs": [
+            "zhouyi-02-jiji:f3"
+          ],
+          "evidence_refs": [
+            "zy:jiji"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Sau một mốc hoàn thành, bạn có thể rà việc bàn giao, người theo dõi và cách phát hiện sai sót sớm.",
+          "fact_refs": [
+            "zhouyi-02-jiji:f1",
+            "zhouyi-02-jiji:f2"
+          ]
+        }
+      ],
+      "limits": [
+        "Đây là nghĩa quẻ từ; thiếu hào và ngữ cảnh để luận sự kiện cụ thể."
+      ]
+    }
+  }
+]

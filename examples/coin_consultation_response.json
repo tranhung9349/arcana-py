@@ -1,0 +1,806 @@
+{
+  "schema_version": "coin-consultation-v1",
+  "request_id": "e6237512-d72b-4bc3-8f0a-dd90bb58d828",
+  "created_at": "2026-10-26T07:48:46.866154Z",
+  "rules_version": "three-coins-liuyao-2026-10-26-v1",
+  "question": "Tôi cần cân nhắc điều gì khi hợp tác trong tháng tới?",
+  "casting": {
+    "method": "THREE_COINS_SIX_THROWS",
+    "source": "MANUAL",
+    "throws_bottom_to_top": [
+      [
+        "BACK",
+        "INSCRIPTION",
+        "INSCRIPTION"
+      ],
+      [
+        "BACK",
+        "BACK",
+        "INSCRIPTION"
+      ],
+      [
+        "BACK",
+        "BACK",
+        "BACK"
+      ],
+      [
+        "BACK",
+        "BACK",
+        "INSCRIPTION"
+      ],
+      [
+        "BACK",
+        "INSCRIPTION",
+        "INSCRIPTION"
+      ],
+      [
+        "INSCRIPTION",
+        "INSCRIPTION",
+        "INSCRIPTION"
+      ]
+    ],
+    "totals_bottom_to_top": [
+      7,
+      8,
+      9,
+      8,
+      7,
+      6
+    ],
+    "convention": "Mặt lưng (背, BACK) = 3; mặt chữ (字, INSCRIPTION) = 2. Lượt 1 là hào dưới cùng; lượt 6 là hào trên cùng.",
+    "randomness": "USER_SUPPLIED"
+  },
+  "calendar": {
+    "gans": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "zhis": [
+      6,
+      10,
+      9,
+      5
+    ],
+    "solar_month": {
+      "year_ganzhi_zh": "丙午",
+      "month_branch_index": 10,
+      "month_branch": "Tuất",
+      "jie_name": "Hàn Lộ",
+      "jie_name_zh": "寒露",
+      "jie_start_utc": "2026-10-08T06:29:17+00:00",
+      "jie_start_beijing": "2026-10-08T14:29:17+08:00",
+      "provider": "lunar-python-1.4.8",
+      "validation_status": "INTEGRATION_TESTED"
+    },
+    "beijing_datetime": "2026-10-26T10:00:00+08:00",
+    "day_boundary": "23:00_BEIJING",
+    "sect": 1,
+    "effective_date": "2026-10-26",
+    "provider": "lunar-python-1.4.8",
+    "pillars": [
+      {
+        "pillar": "year",
+        "stem": "Bính",
+        "branch": "Ngọ",
+        "stem_zh": "丙",
+        "branch_zh": "午"
+      },
+      {
+        "pillar": "month",
+        "stem": "Mậu",
+        "branch": "Tuất",
+        "stem_zh": "戊",
+        "branch_zh": "戌"
+      },
+      {
+        "pillar": "day",
+        "stem": "Quý",
+        "branch": "Dậu",
+        "stem_zh": "癸",
+        "branch_zh": "酉"
+      },
+      {
+        "pillar": "hour",
+        "stem": "Đinh",
+        "branch": "Tỵ",
+        "stem_zh": "丁",
+        "branch_zh": "巳"
+      }
+    ],
+    "civil_datetime": "2026-10-26T09:00:00+07:00",
+    "policy": "Giờ nhập UTC+7 đổi sang Bắc Kinh UTC+8 một lần, theo profile lịch hiện có của app; tháng theo tiết khí, ngày Can Chi đổi lúc 23:00 Bắc Kinh. Đây là quy ước sản phẩm được công khai, không phải chuẩn múi giờ duy nhất của mọi phái Lục Hào.",
+    "rules_sha256": "35794199d9344df42afefda754a0e2d9484d90658080f4bff685d0ed02f96392"
+  },
+  "original": {
+    "schema_version": "coin-reading-v1",
+    "corpus_version": "iching-vi-draft-v1",
+    "chart": {
+      "hexagram_id": 63,
+      "name_zh": "既济",
+      "name_vi": "Thủy Hỏa Ký Tế",
+      "symbol": "䷾",
+      "lines_bottom_to_top": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_trigram": "Ly",
+      "upper_trigram": "Khảm"
+    },
+    "text": {
+      "hexagram_id": 63,
+      "name_zh": "既济",
+      "name_vi": "Thủy Hỏa Ký Tế",
+      "symbol": "䷾",
+      "moving_line": null,
+      "overview": {
+        "label": "AI_INTERPRETATION",
+        "language": "vi",
+        "text": "Ký Tế là việc đã hoàn tất. Thành công cần được bảo trì và theo dõi, vì chủ quan ở cuối có thể làm đảo chiều.",
+        "review_status": "UNREVIEWED",
+        "references": [
+          "iching__63__hexagram_text"
+        ]
+      },
+      "cards": [
+        {
+          "evidence_id": "iching__63__hexagram_text",
+          "title": "Quẻ từ",
+          "text_type": "HEXAGRAM_TEXT",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "亨小，利贞。初吉终乱。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "iching/iching.json",
+            "key": "iching__63",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+          },
+          "translation": {
+            "label": "AI_TRANSLATION",
+            "language": "vi",
+            "text": "Hanh thông trong việc nhỏ, lợi giữ chính. Đầu tốt, cuối rối.",
+            "review_status": "UNREVIEWED",
+            "version": "iching-vi-draft-v1",
+            "references": [
+              "iching__63__hexagram_text"
+            ],
+            "source_text_sha256": "6a8e642f6e1f5e4a3f333300b7d8d48fd26e1166ad2e0bca0fe9ab93f01c84f9"
+          }
+        },
+        {
+          "evidence_id": "iching__63__tuan_commentary",
+          "title": "Thoán truyện",
+          "text_type": "TUAN_COMMENTARY",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "“既济，亨”，小者亨也。“利贞”，刚柔正而位当也。“初吉”，柔得中也。终止则乱，其道穷也。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "ichuan/tuan.json",
+            "key": "iching__63",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/tuan.json"
+          },
+          "translation": null
+        },
+        {
+          "evidence_id": "iching__63__xiang_commentary",
+          "title": "Đại Tượng truyện",
+          "text_type": "XIANG_COMMENTARY",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "水在火上，既济。君子以思患而豫防之。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "ichuan/xiang.json",
+            "key": "iching__63",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/xiang.json"
+          },
+          "translation": null
+        }
+      ],
+      "source_gaps": []
+    },
+    "reference_lines": [
+      {
+        "evidence_id": "iching__63_1__line_text",
+        "title": "Hào 1 · 初九",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "曳其轮，濡其尾，无咎。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__63_1",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Kéo ghìm bánh xe, ướt đuôi; không lỗi.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__63_1__line_text"
+          ],
+          "source_text_sha256": "1342b19db6025db52f865f5f0df7989e47b552fc6379f010e90e02f73ee85783"
+        }
+      },
+      {
+        "evidence_id": "iching__63_2__line_text",
+        "title": "Hào 2 · 六二",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "妇丧其茀，勿逐，七日得。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__63_2",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Người nữ mất màn che, đừng đuổi; bảy ngày được lại.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__63_2__line_text"
+          ],
+          "source_text_sha256": "4f3561e04f8d91ea81a91f5ccdaa14f4d0e6da520e4384f658363310c1cd1ed5"
+        }
+      },
+      {
+        "evidence_id": "iching__63_3__line_text",
+        "title": "Hào 3 · 九三",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "高宗伐鬼方，三年克之；小人勿用。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__63_3",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Cao Tông đánh Quỷ Phương, ba năm mới thắng; không dùng tiểu nhân.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__63_3__line_text"
+          ],
+          "source_text_sha256": "3c37156f52681eb4f9401627507e8e2f8b69e11f27ac0b9432b874098be8de41"
+        }
+      },
+      {
+        "evidence_id": "iching__63_4__line_text",
+        "title": "Hào 4 · 六四",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "繻有衣袽，终日戒。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__63_4",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Chuẩn bị áo vá để phòng rò; cả ngày cảnh giác.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__63_4__line_text"
+          ],
+          "source_text_sha256": "eb30a729b83bde623e7050e8c57c0641a2e027a0eba0d5212c5b7878e12f74ff"
+        }
+      },
+      {
+        "evidence_id": "iching__63_5__line_text",
+        "title": "Hào 5 · 九五",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "东邻杀牛，不如西邻之禴祭，实受其福。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__63_5",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Hàng xóm đông giết bò tế, không bằng lễ giản dị của hàng xóm tây mà thực hưởng phúc.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__63_5__line_text"
+          ],
+          "source_text_sha256": "0faa78a865d0e6857023b3f1c398ae2dceae72311d5d5a414c0574790b9d83d9"
+        }
+      },
+      {
+        "evidence_id": "iching__63_6__line_text",
+        "title": "Hào 6 · 上六",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "濡其首，厉。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__63_6",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Ướt đầu; nguy.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__63_6__line_text"
+          ],
+          "source_text_sha256": "ed147fce986d741b67466d599647bfdae25ac2ab983d551687952d928dddabbf"
+        }
+      }
+    ],
+    "interpretation_review_status": "AI_DRAFT_UNREVIEWED"
+  },
+  "changed": {
+    "schema_version": "coin-reading-v1",
+    "corpus_version": "iching-vi-draft-v1",
+    "chart": {
+      "hexagram_id": 42,
+      "name_zh": "益",
+      "name_vi": "Phong Lôi Ích",
+      "symbol": "䷩",
+      "lines_bottom_to_top": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "lower_trigram": "Chấn",
+      "upper_trigram": "Tốn"
+    },
+    "text": {
+      "hexagram_id": 42,
+      "name_zh": "益",
+      "name_vi": "Phong Lôi Ích",
+      "symbol": "䷩",
+      "moving_line": null,
+      "overview": {
+        "label": "AI_INTERPRETATION",
+        "language": "vi",
+        "text": "Ích là tăng ích và hỗ trợ. Dùng nguồn lực để tạo giá trị chung, tránh chỉ đòi nhận phần lợi.",
+        "review_status": "UNREVIEWED",
+        "references": [
+          "iching__42__hexagram_text"
+        ]
+      },
+      "cards": [
+        {
+          "evidence_id": "iching__42__hexagram_text",
+          "title": "Quẻ từ",
+          "text_type": "HEXAGRAM_TEXT",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "利有攸往，利涉大川。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "iching/iching.json",
+            "key": "iching__42",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+          },
+          "translation": {
+            "label": "AI_TRANSLATION",
+            "language": "vi",
+            "text": "Lợi tiến đi, lợi vượt sông lớn.",
+            "review_status": "UNREVIEWED",
+            "version": "iching-vi-draft-v1",
+            "references": [
+              "iching__42__hexagram_text"
+            ],
+            "source_text_sha256": "0bafbe8277e6044186f28116896109ea3c4c4562c8e66a7a08b92bdd52647c50"
+          }
+        },
+        {
+          "evidence_id": "iching__42__tuan_commentary",
+          "title": "Thoán truyện",
+          "text_type": "TUAN_COMMENTARY",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "益，损上益下，民说无疆；自上下下，其道大光。“利有攸往”，中正有庆；“利涉大川”，木道乃行。益动而巽，日进无疆。天施地生，其益无方。凡益之道，与时偕行。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "ichuan/tuan.json",
+            "key": "iching__42",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/tuan.json"
+          },
+          "translation": null
+        },
+        {
+          "evidence_id": "iching__42__xiang_commentary",
+          "title": "Đại Tượng truyện",
+          "text_type": "XIANG_COMMENTARY",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "风雷，益。君子以见善则迁，有过则改。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "ichuan/xiang.json",
+            "key": "iching__42",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/xiang.json"
+          },
+          "translation": null
+        }
+      ],
+      "source_gaps": []
+    },
+    "reference_lines": [
+      {
+        "evidence_id": "iching__42_1__line_text",
+        "title": "Hào 1 · 初九",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "利用为大作，元吉，无咎。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__42_1",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Lợi làm việc lớn; rất tốt, không lỗi.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__42_1__line_text"
+          ],
+          "source_text_sha256": "35867b424e9dff016a47ebe3d242957c21b52a62e8b29e6b8d79e39a35b2109a"
+        }
+      },
+      {
+        "evidence_id": "iching__42_2__line_text",
+        "title": "Hào 2 · 六二",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "或益之十朋之龟，弗克违。永贞吉；王用享于帝，吉。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__42_2",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Có người cho rùa quý giá mười bằng, không thể từ chối. Giữ chính lâu dài tốt; vua tế Thượng Đế tốt.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__42_2__line_text"
+          ],
+          "source_text_sha256": "ae9ef913463a48d627c81fe89f24e7f46af9ad32fabf445876e10875371d2332"
+        }
+      },
+      {
+        "evidence_id": "iching__42_3__line_text",
+        "title": "Hào 3 · 六三",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "益之用凶事，无咎；有孚中行，告公用圭。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__42_3",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Tăng ích trong việc tai biến, không lỗi. Có thành tín, đi trung chính, dùng ngọc khuê báo bậc công.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__42_3__line_text"
+          ],
+          "source_text_sha256": "b4916fcdc8cd001392bee7fd4758b0b044c8553c4eba4fa4753383621349ef27"
+        }
+      },
+      {
+        "evidence_id": "iching__42_4__line_text",
+        "title": "Hào 4 · 六四",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "中行，告公从，利用为依迁国。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__42_4",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Đi trung chính, báo bậc công thì được thuận; lợi dựa vào đó để dời nước.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__42_4__line_text"
+          ],
+          "source_text_sha256": "1f4b401dc543fdeef191908df5ab0f901b180872fc22805773a7326b867aa7c7"
+        }
+      },
+      {
+        "evidence_id": "iching__42_5__line_text",
+        "title": "Hào 5 · 九五",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "有孚惠心，勿问元吉。有孚惠我德。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__42_5",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Có lòng thành và lòng làm lợi cho người, không cần hỏi cũng rất tốt; lòng thành đáp đức của ta.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__42_5__line_text"
+          ],
+          "source_text_sha256": "e0f83dce1ea34458b6db63ac743009bd64938a4d16dd76957adc240feb06bd57"
+        }
+      },
+      {
+        "evidence_id": "iching__42_6__line_text",
+        "title": "Hào 6 · 上九",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "莫益之，或击之，立心勿恒，凶。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__42_6",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Không ai giúp, có người đánh; lòng không bền, xấu.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__42_6__line_text"
+          ],
+          "source_text_sha256": "8328a235c20173f2beb868197c3c25d92c61bc58b7c585055fe1f04d3292a87a"
+        }
+      }
+    ],
+    "interpretation_review_status": "AI_DRAFT_UNREVIEWED"
+  },
+  "moving_lines": [
+    3,
+    6
+  ],
+  "najia": {
+    "palace": "Khảm",
+    "palace_element": "Thủy",
+    "stage": "Tam thế",
+    "world_line": 3,
+    "response_line": 6,
+    "void_branches": [
+      "Tuất",
+      "Hợi"
+    ],
+    "lines_bottom_to_top": [
+      {
+        "position": 1,
+        "stem": "Kỷ",
+        "branch": "Mão",
+        "branch_zh": "卯",
+        "element": "Mộc",
+        "relative": "Tử tôn",
+        "spirit": "Huyền Vũ",
+        "is_world": false,
+        "is_response": false,
+        "moving": false,
+        "void": false,
+        "month_clash": false,
+        "changed_stem": null,
+        "changed_branch": null,
+        "changed_element": null,
+        "changed_relative": null
+      },
+      {
+        "position": 2,
+        "stem": "Kỷ",
+        "branch": "Sửu",
+        "branch_zh": "丑",
+        "element": "Thổ",
+        "relative": "Quan quỷ",
+        "spirit": "Thanh Long",
+        "is_world": false,
+        "is_response": false,
+        "moving": false,
+        "void": false,
+        "month_clash": false,
+        "changed_stem": null,
+        "changed_branch": null,
+        "changed_element": null,
+        "changed_relative": null
+      },
+      {
+        "position": 3,
+        "stem": "Kỷ",
+        "branch": "Hợi",
+        "branch_zh": "亥",
+        "element": "Thủy",
+        "relative": "Huynh đệ",
+        "spirit": "Chu Tước",
+        "is_world": true,
+        "is_response": false,
+        "moving": true,
+        "void": true,
+        "month_clash": false,
+        "changed_stem": "Canh",
+        "changed_branch": "Thìn",
+        "changed_element": "Thổ",
+        "changed_relative": "Quan quỷ"
+      },
+      {
+        "position": 4,
+        "stem": "Mậu",
+        "branch": "Thân",
+        "branch_zh": "申",
+        "element": "Kim",
+        "relative": "Phụ mẫu",
+        "spirit": "Câu Trần",
+        "is_world": false,
+        "is_response": false,
+        "moving": false,
+        "void": false,
+        "month_clash": false,
+        "changed_stem": null,
+        "changed_branch": null,
+        "changed_element": null,
+        "changed_relative": null
+      },
+      {
+        "position": 5,
+        "stem": "Mậu",
+        "branch": "Tuất",
+        "branch_zh": "戌",
+        "element": "Thổ",
+        "relative": "Quan quỷ",
+        "spirit": "Đằng Xà",
+        "is_world": false,
+        "is_response": false,
+        "moving": false,
+        "void": true,
+        "month_clash": false,
+        "changed_stem": null,
+        "changed_branch": null,
+        "changed_element": null,
+        "changed_relative": null
+      },
+      {
+        "position": 6,
+        "stem": "Mậu",
+        "branch": "Tý",
+        "branch_zh": "子",
+        "element": "Thủy",
+        "relative": "Huynh đệ",
+        "spirit": "Bạch Hổ",
+        "is_world": false,
+        "is_response": true,
+        "moving": true,
+        "void": false,
+        "month_clash": false,
+        "changed_stem": "Tân",
+        "changed_branch": "Mão",
+        "changed_element": "Mộc",
+        "changed_relative": "Tử tôn"
+      }
+    ],
+    "scope": "BASIC_NAJIA_CHART"
+  },
+  "reading_guide": [
+    "Đọc quẻ chủ để nắm nghĩa chung; các hào động được giữ đầy đủ theo đúng sáu lượt gieo. Quẻ biến lật đồng thời tất cả hào động.",
+    "Quẻ từ và hào từ là phần đọc kinh văn. Bàn Lục Hào bên dưới lập Nạp Giáp, cung, Thế–Ứng, Lục thân, Lục thú, Tuần Không và Nguyệt Phá để đối chiếu.",
+    "Lục thân của hào biến được tính theo ngũ hành cung của quẻ chủ. Dấu Không/Phá chỉ ghi quan hệ lịch; không tự kết luận hào vô dụng hoặc cát hung.",
+    "Chưa tự chọn Dụng thần, xét vượng suy/sinh khắc toàn cục hoặc luận ứng kỳ. Phần nghĩa quẻ là nội dung có sẵn, chưa phải lời luận riêng theo câu hỏi."
+  ],
+  "limitations": [
+    "Nghĩa Việt và diễn giải là bản nháp AI chưa hiệu đính. Phiên này đọc corpus cục bộ, không gọi mô hình AI.",
+    "Không áp quy tắc chọn một hào theo số hào động của trường phái đọc Chu Dịch vào phép Nạp Giáp; hiển thị đủ 0–6 hào động.",
+    "Chưa tự động luận Phục thần, ám động, hợp/xung, tiến/thoái, hồi đầu sinh/khắc, Dụng thần hoặc thời điểm ứng nghiệm.",
+    "Trường hợp Càn/Khôn cả sáu hào động: nguồn có Dụng Cửu/Dụng Lục được hiển thị nguyên văn Hán riêng; corpus chưa có bản nghĩa Việt tương ứng."
+  ],
+  "sources": [
+    {
+      "title": "Bốc Phệ Chính Tông · quyển 1",
+      "url": "https://www.shidianguji.com/book/AMNL0060/chapter/1ma05akk4w74j",
+      "sections": [
+        "以錢代蓍法",
+        "六十四卦名",
+        "納甲裝卦歌",
+        "安世應訣",
+        "六獸歌",
+        "六甲旬空起例",
+        "月破定例"
+      ],
+      "status": "ELECTRONIC_TRANSCRIPTION_OCR_VARIANTS"
+    },
+    {
+      "title": "Bốc Phệ Toàn Thư · Dùng tiền thay cỏ thi",
+      "url": "https://www.shidianguji.com/zh/book/HY1394/chapter/1l3wdooougilw",
+      "sections": [
+        "以錢代蓍法"
+      ],
+      "status": "ELECTRONIC_TRANSCRIPTION"
+    },
+    {
+      "title": "Bốc Phệ Chính Tông · Nạp Giáp trang quái ca",
+      "url": "https://changxianyi.com/guji/bushi/wz-20260915/chapter-018/",
+      "sections": [
+        "納甲裝卦歌"
+      ],
+      "status": "CROSS_CHECKED_TRANSCRIPTION"
+    },
+    {
+      "title": "University of Oregon · I Ching readings",
+      "url": "https://hexadecimal.uoregon.edu/ching/explain.html",
+      "sections": [
+        "6/7/8/9 and bottom-to-top ordering"
+      ],
+      "status": "REPRESENTATION_CROSS_CHECK"
+    }
+  ]
+}

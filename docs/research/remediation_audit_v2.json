@@ -1,0 +1,2223 @@
+{
+  "all_125_mode_counts": {
+    "SAFE_REMEDIATION": 115,
+    "PROTECT_ONLY": 5,
+    "CHE_SAT": 5
+  },
+  "hung_25_mode_counts": {
+    "SAFE_REMEDIATION": 20,
+    "CHE_SAT": 5
+  },
+  "hung_first_safe_lower_score_cases": 7,
+  "example_first_safe": {
+    "P": "Mộc",
+    "The": "Mộc",
+    "Dung": "Kim",
+    "dai_hung": true,
+    "mode": "SAFE_REMEDIATION",
+    "first_selected": "Hỏa",
+    "candidates": [
+      "Hỏa",
+      "Thủy"
+    ],
+    "ranked_by_compatibility": [
+      "Thủy",
+      "Hỏa"
+    ],
+    "first_score": 60,
+    "ranked_best_score": 200
+  },
+  "fallback_cases": [
+    {
+      "P": "Mộc",
+      "The": "Thủy",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "PROTECT_ONLY",
+      "first_selected": "Mộc",
+      "candidates": [],
+      "ranked_by_compatibility": [],
+      "first_score": 110,
+      "ranked_best_score": null
+    },
+    {
+      "P": "Hỏa",
+      "The": "Mộc",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "PROTECT_ONLY",
+      "first_selected": "Hỏa",
+      "candidates": [],
+      "ranked_by_compatibility": [],
+      "first_score": 110,
+      "ranked_best_score": null
+    },
+    {
+      "P": "Thổ",
+      "The": "Hỏa",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "PROTECT_ONLY",
+      "first_selected": "Thổ",
+      "candidates": [],
+      "ranked_by_compatibility": [],
+      "first_score": 110,
+      "ranked_best_score": null
+    },
+    {
+      "P": "Kim",
+      "The": "Thổ",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "PROTECT_ONLY",
+      "first_selected": "Kim",
+      "candidates": [],
+      "ranked_by_compatibility": [],
+      "first_score": 110,
+      "ranked_best_score": null
+    },
+    {
+      "P": "Thủy",
+      "The": "Kim",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "PROTECT_ONLY",
+      "first_selected": "Thủy",
+      "candidates": [],
+      "ranked_by_compatibility": [],
+      "first_score": 110,
+      "ranked_best_score": null
+    }
+  ],
+  "rows": [
+    {
+      "P": "Mộc",
+      "The": "Mộc",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Mộc",
+      "The": "Mộc",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Mộc",
+      "The": "Mộc",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Mộc"
+      ],
+      "first_score": 160,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Mộc",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Hỏa"
+      ],
+      "first_score": 60,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Mộc",
+      "The": "Mộc",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Thổ"
+      ],
+      "first_score": 0,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Mộc",
+      "The": "Hỏa",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Mộc",
+      "The": "Hỏa",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Thủy"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Mộc",
+      "The": "Hỏa",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Mộc",
+      "The": "Hỏa",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Hỏa"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Mộc",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Thổ"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Mộc",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Mộc",
+      "The": "Thổ",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Thủy"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Mộc",
+      "The": "Thổ",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Mộc"
+      ],
+      "first_score": -20,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Mộc",
+      "The": "Thổ",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Mộc",
+      "The": "Thổ",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Thổ"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Mộc",
+      "The": "Kim",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Mộc",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Thổ"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Mộc",
+      "The": "Kim",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Mộc"
+      ],
+      "first_score": 80,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Mộc",
+      "The": "Kim",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Hỏa"
+      ],
+      "first_score": -70,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Mộc",
+      "The": "Kim",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Mộc",
+      "The": "Thủy",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "PROTECT_ONLY",
+      "first_selected": "Mộc",
+      "candidates": [],
+      "ranked_by_compatibility": [],
+      "first_score": 110,
+      "ranked_best_score": null
+    },
+    {
+      "P": "Mộc",
+      "The": "Thủy",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Mộc",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "dai_hung": true,
+      "mode": "CHE_SAT",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 110,
+      "ranked_best_score": 110
+    },
+    {
+      "P": "Mộc",
+      "The": "Thủy",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 30,
+      "ranked_best_score": 30
+    },
+    {
+      "P": "Mộc",
+      "The": "Thủy",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": -100,
+      "ranked_best_score": -100
+    },
+    {
+      "P": "Hỏa",
+      "The": "Mộc",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": -100,
+      "ranked_best_score": -100
+    },
+    {
+      "P": "Hỏa",
+      "The": "Mộc",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "PROTECT_ONLY",
+      "first_selected": "Hỏa",
+      "candidates": [],
+      "ranked_by_compatibility": [],
+      "first_score": 110,
+      "ranked_best_score": null
+    },
+    {
+      "P": "Hỏa",
+      "The": "Mộc",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Hỏa",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "dai_hung": true,
+      "mode": "CHE_SAT",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 110,
+      "ranked_best_score": 110
+    },
+    {
+      "P": "Hỏa",
+      "The": "Mộc",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 30,
+      "ranked_best_score": 30
+    },
+    {
+      "P": "Hỏa",
+      "The": "Hỏa",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Kim"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Hỏa",
+      "The": "Hỏa",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Hỏa",
+      "The": "Hỏa",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Hỏa",
+      "The": "Hỏa",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Hỏa"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Hỏa",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Thổ"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Kim"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thổ",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thổ",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Mộc"
+      ],
+      "first_score": 0,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thổ",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thổ",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Thổ"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Hỏa",
+      "The": "Kim",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Kim"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Hỏa",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Hỏa",
+      "The": "Kim",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Mộc"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Hỏa",
+      "The": "Kim",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Hỏa"
+      ],
+      "first_score": -20,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Hỏa",
+      "The": "Kim",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thủy",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thủy",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Kim"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thủy",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Hỏa"
+      ],
+      "first_score": 80,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thủy",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Thổ"
+      ],
+      "first_score": -70,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Thổ",
+      "The": "Mộc",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Kim"
+      ],
+      "first_score": -70,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Thổ",
+      "The": "Mộc",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Thổ",
+      "The": "Mộc",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Thổ",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Thủy"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thổ",
+      "The": "Mộc",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Thổ"
+      ],
+      "first_score": 80,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Thổ",
+      "The": "Hỏa",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 30,
+      "ranked_best_score": 30
+    },
+    {
+      "P": "Thổ",
+      "The": "Hỏa",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": -100,
+      "ranked_best_score": -100
+    },
+    {
+      "P": "Thổ",
+      "The": "Hỏa",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "PROTECT_ONLY",
+      "first_selected": "Thổ",
+      "candidates": [],
+      "ranked_by_compatibility": [],
+      "first_score": 110,
+      "ranked_best_score": null
+    },
+    {
+      "P": "Thổ",
+      "The": "Hỏa",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thổ",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "dai_hung": true,
+      "mode": "CHE_SAT",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 110,
+      "ranked_best_score": 110
+    },
+    {
+      "P": "Thổ",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Kim"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Thổ",
+      "The": "Thổ",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Thủy"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Thổ",
+      "The": "Thổ",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Thổ",
+      "The": "Thổ",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Thổ",
+      "The": "Thổ",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Thổ"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Thổ",
+      "The": "Kim",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Kim"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thổ",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Thủy"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thổ",
+      "The": "Kim",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thổ",
+      "The": "Kim",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Hỏa"
+      ],
+      "first_score": 0,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thổ",
+      "The": "Kim",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thổ",
+      "The": "Thủy",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thổ",
+      "The": "Thủy",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Thủy"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thổ",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thổ",
+      "The": "Thủy",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Hỏa"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thổ",
+      "The": "Thủy",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Thổ"
+      ],
+      "first_score": -20,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Kim",
+      "The": "Mộc",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Kim"
+      ],
+      "first_score": -20,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Kim",
+      "The": "Mộc",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Kim",
+      "The": "Mộc",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Mộc"
+      ],
+      "first_score": 80,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Kim",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Kim",
+      "The": "Mộc",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Thổ"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Kim",
+      "The": "Hỏa",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Kim"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Kim",
+      "The": "Hỏa",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Thủy"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Kim",
+      "The": "Hỏa",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Kim",
+      "The": "Hỏa",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Kim",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Mộc"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Kim",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "dai_hung": true,
+      "mode": "CHE_SAT",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 110,
+      "ranked_best_score": 110
+    },
+    {
+      "P": "Kim",
+      "The": "Thổ",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 30,
+      "ranked_best_score": 30
+    },
+    {
+      "P": "Kim",
+      "The": "Thổ",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": -100,
+      "ranked_best_score": -100
+    },
+    {
+      "P": "Kim",
+      "The": "Thổ",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "PROTECT_ONLY",
+      "first_selected": "Kim",
+      "candidates": [],
+      "ranked_by_compatibility": [],
+      "first_score": 110,
+      "ranked_best_score": null
+    },
+    {
+      "P": "Kim",
+      "The": "Thổ",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Kim",
+      "The": "Kim",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Kim"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Kim",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Thủy"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Kim",
+      "The": "Kim",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ",
+        "Mộc"
+      ],
+      "first_score": 0,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Kim",
+      "The": "Kim",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Kim",
+      "The": "Kim",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ"
+      ],
+      "ranked_by_compatibility": [
+        "Thổ"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Kim",
+      "The": "Thủy",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Kim",
+      "The": "Thủy",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Thủy"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Kim",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Mộc"
+      ],
+      "first_score": 30,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Kim",
+      "The": "Thủy",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Kim",
+      "The": "Thủy",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thổ",
+      "candidates": [
+        "Thổ",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Thổ"
+      ],
+      "first_score": 0,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thủy",
+      "The": "Mộc",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Kim"
+      ],
+      "first_score": 0,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thủy",
+      "The": "Mộc",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thủy",
+      "The": "Mộc",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Mộc"
+      ],
+      "first_score": 110,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thủy",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy",
+        "Hỏa"
+      ],
+      "first_score": 30,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thủy",
+      "The": "Mộc",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thủy",
+      "The": "Hỏa",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Kim"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thủy",
+      "The": "Hỏa",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Thủy"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thủy",
+      "The": "Hỏa",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thủy",
+      "The": "Hỏa",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc",
+        "Hỏa"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thủy",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 130,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thủy",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Hỏa"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 130
+    },
+    {
+      "P": "Thủy",
+      "The": "Thổ",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Thủy"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Thủy",
+      "The": "Thổ",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa",
+        "Mộc"
+      ],
+      "first_score": -70,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Thủy",
+      "The": "Thổ",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Thủy",
+      "The": "Thổ",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": 100,
+      "ranked_best_score": 100
+    },
+    {
+      "P": "Thủy",
+      "The": "Kim",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 180,
+      "ranked_best_score": 180
+    },
+    {
+      "P": "Thủy",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "dai_hung": true,
+      "mode": "CHE_SAT",
+      "first_selected": "Thủy",
+      "candidates": [
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Thủy"
+      ],
+      "first_score": 110,
+      "ranked_best_score": 110
+    },
+    {
+      "P": "Thủy",
+      "The": "Kim",
+      "Dung": "Thổ",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc"
+      ],
+      "ranked_by_compatibility": [
+        "Mộc"
+      ],
+      "first_score": 30,
+      "ranked_best_score": 30
+    },
+    {
+      "P": "Thủy",
+      "The": "Kim",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa"
+      ],
+      "ranked_by_compatibility": [
+        "Hỏa"
+      ],
+      "first_score": -100,
+      "ranked_best_score": -100
+    },
+    {
+      "P": "Thủy",
+      "The": "Kim",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "PROTECT_ONLY",
+      "first_selected": "Thủy",
+      "candidates": [],
+      "ranked_by_compatibility": [],
+      "first_score": 110,
+      "ranked_best_score": null
+    },
+    {
+      "P": "Thủy",
+      "The": "Thủy",
+      "Dung": "Mộc",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Thủy",
+      "The": "Thủy",
+      "Dung": "Hỏa",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim",
+        "Thủy"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Thủy"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Thủy",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "dai_hung": true,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Mộc",
+      "candidates": [
+        "Mộc",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Mộc"
+      ],
+      "first_score": 60,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Thủy",
+      "The": "Thủy",
+      "Dung": "Kim",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Hỏa",
+      "candidates": [
+        "Hỏa",
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim",
+        "Hỏa"
+      ],
+      "first_score": 0,
+      "ranked_best_score": 200
+    },
+    {
+      "P": "Thủy",
+      "The": "Thủy",
+      "Dung": "Thủy",
+      "dai_hung": false,
+      "mode": "SAFE_REMEDIATION",
+      "first_selected": "Kim",
+      "candidates": [
+        "Kim"
+      ],
+      "ranked_by_compatibility": [
+        "Kim"
+      ],
+      "first_score": 200,
+      "ranked_best_score": 200
+    }
+  ],
+  "method": {
+    "purpose": "Audit the user-proposed relation-only pseudocode; not product acceptance KPIs.",
+    "element_order": [
+      "Mộc",
+      "Hỏa",
+      "Thổ",
+      "Kim",
+      "Thủy"
+    ],
+    "generation_cycle": [
+      "Mộc",
+      "Hỏa",
+      "Thổ",
+      "Kim",
+      "Thủy",
+      "Mộc"
+    ],
+    "control_cycle": [
+      "Mộc",
+      "Thổ",
+      "Thủy",
+      "Hỏa",
+      "Kim",
+      "Mộc"
+    ],
+    "comparison": "Compatibility S(E)=R(E,P)+R(E,The); this audit ranks individual element scores, not feasible whole-set scores.",
+    "scope": "All 125 P/The/Dung triples; 25 have Dung controlling The. High-intensity remediation is authorized only for those 25.",
+    "user_rule": "Use primary Useful God returned first by tinix-bazi; protect that element."
+  }
+}

@@ -1,0 +1,14 @@
+{"nodes":[
+{"id":"document:data/interpretation/README.md","type":"document","name":"README.md","filePath":"data/interpretation/README.md","summary":"Mô tả corpus hiển thị v1: bản nháp nghĩa Việt 64 quẻ/384 hào do AI soạn (chưa hiệu đính) và bảng Nhật Chủ/cách cục trích từ tinix-bazi, cùng cơ chế ràng buộc SHA-256 với nguyên văn và quy trình build bằng scripts/build_explanation_data.py.","tags":["documentation","dữ-liệu-diễn-giải","nguồn-gốc-dữ-liệu","kiểm-chứng-hash"],"complexity":"simple"},
+{"id":"config:data/interpretation/iching_vi_draft.json","type":"config","name":"iching_vi_draft.json","filePath":"data/interpretation/iching_vi_draft.json","summary":"Corpus nháp nghĩa Việt cho 64 quẻ Kinh Dịch, mỗi quẻ gồm tên, quẻ từ, tổng quan, 6 lời hào và SHA-256 của nguyên văn tương ứng; gắn nhãn AI_TRANSLATION, trạng thái UNREVIEWED và khóa theo source_commit của open-iching.","tags":["dữ-liệu-diễn-giải","kinh-dịch","bản-dịch-ai","corpus","kiểm-chứng-hash"],"complexity":"complex","languageNotes":"Mỗi bản dịch được ràng buộc với hash của đúng đoạn nguyên văn (source_text_sha256), cho phép runtime từ chối corpus lệch commit hoặc lệch văn bản."},
+{"id":"config:data/interpretation/tinix_vi.json","type":"config","name":"tinix_vi.json","filePath":"data/interpretation/tinix_vi.json","summary":"Bảng văn bản Việt trích từ tinix-bazi gồm 10 thiên can Nhật Chủ (verse, detail, luận theo 4 mùa) và 13 cách cục, kèm nhãn SOURCE_ORIGINAL, source_commit, đường dẫn và SHA-256 file nguồn; được sinh bởi scripts/build_explanation_data.py.","tags":["dữ-liệu-diễn-giải","bát-tự","dữ-liệu-sinh-tự-động","corpus"],"complexity":"moderate"}
+],"edges":[
+{"source":"document:data/interpretation/README.md","target":"config:data/interpretation/iching_vi_draft.json","type":"documents","direction":"forward","weight":0.5},
+{"source":"document:data/interpretation/README.md","target":"config:data/interpretation/tinix_vi.json","type":"documents","direction":"forward","weight":0.5},
+{"source":"document:data/interpretation/README.md","target":"file:scripts/build_explanation_data.py","type":"documents","direction":"forward","weight":0.5},
+{"source":"document:data/interpretation/README.md","target":"file:randomyst/interpretation.py","type":"documents","direction":"forward","weight":0.5},
+{"source":"config:data/interpretation/iching_vi_draft.json","target":"file:randomyst/interpretation.py","type":"configures","direction":"forward","weight":0.6},
+{"source":"config:data/interpretation/tinix_vi.json","target":"file:randomyst/interpretation.py","type":"configures","direction":"forward","weight":0.6},
+{"source":"config:data/interpretation/tinix_vi.json","target":"file:scripts/build_explanation_data.py","type":"related","direction":"forward","weight":0.5},
+{"source":"config:data/interpretation/iching_vi_draft.json","target":"file:scripts/build_explanation_data.py","type":"related","direction":"forward","weight":0.5}
+]}

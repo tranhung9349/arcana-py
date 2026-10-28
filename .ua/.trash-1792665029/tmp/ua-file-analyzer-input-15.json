@@ -1,0 +1,9 @@
+{"projectRoot":"/Users/tranduyhung/Work/randomyst_numbers","batchFiles":[
+{"path":"examples/README.md","language":"markdown","sizeLines":10,"fileCategory":"docs"},
+{"path":"examples/date_search_request.json","language":"json","sizeLines":16,"fileCategory":"config"},
+{"path":"examples/date_search_response.json","language":"json","sizeLines":1693,"fileCategory":"config"},
+{"path":"examples/draw_request.json","language":"json","sizeLines":10,"fileCategory":"config"},
+{"path":"examples/draw_response.json","language":"json","sizeLines":1130,"fileCategory":"config"},
+{"path":"examples/marriage_date_search_request.json","language":"json","sizeLines":22,"fileCategory":"config"},
+{"path":"examples/source_explanation.json","language":"json","sizeLines":439,"fileCategory":"config"}],
+"batchImportData":{}}

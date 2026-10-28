@@ -1,0 +1,18 @@
+{
+	email {$ARCANA_TLS_EMAIL}
+	admin off
+}
+
+{$ARCANA_DOMAIN} {
+	encode zstd gzip
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy same-origin
+		X-Frame-Options DENY
+		-Server
+	}
+	reverse_proxy app:8765 {
+		# Drop incoming credentials; the application has no login.
+		header_up -Authorization
+	}
+}

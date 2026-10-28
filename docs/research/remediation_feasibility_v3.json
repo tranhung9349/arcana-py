@@ -1,0 +1,1416 @@
+{
+  "scope": "Mathematical feasibility audit, not measured product KPIs. Pool 0..45, 3 even/3 odd, no element controlling P or The, remedy quota 3..5. User confirmed: high-intensity remediation only in Dai Hung, ban elements controlling P from attempt 1, no six numbers of one element in the whole engine, and rank safe remedy candidates by maximum attainable raw set score before fixing the normalization cap.",
+  "hung_contexts": 25,
+  "all_have_feasible_configuration": true,
+  "minimum_positive_raw_cap": 125.0,
+  "maximum_raw_cap": 193.33333333333334,
+  "rows": [
+    {
+      "P": "Mộc",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "single_element_score": 60,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 130.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 3,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 3
+          }
+        },
+        {
+          "remedy": "Thủy",
+          "single_element_score": 200,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 193.33333333333334,
+          "example_counts": {
+            "Mộc": 1,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 5
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Thủy",
+        "single_element_score": 200,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 193.33333333333334,
+        "example_counts": {
+          "Mộc": 1,
+          "Hỏa": 0,
+          "Thổ": 0,
+          "Kim": 0,
+          "Thủy": 5
+        }
+      }
+    },
+    {
+      "P": "Mộc",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "single_element_score": 180,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 168.33333333333334,
+          "example_counts": {
+            "Mộc": 5,
+            "Hỏa": 1,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Thổ",
+          "single_element_score": 30,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 105.0,
+          "example_counts": {
+            "Mộc": 3,
+            "Hỏa": 0,
+            "Thổ": 3,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Mộc",
+        "single_element_score": 180,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 168.33333333333334,
+        "example_counts": {
+          "Mộc": 5,
+          "Hỏa": 1,
+          "Thổ": 0,
+          "Kim": 0,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Mộc",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "single_element_score": 130,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 125.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 5,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 1
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Hỏa",
+        "single_element_score": 130,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 125.0,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 5,
+          "Thổ": 0,
+          "Kim": 0,
+          "Thủy": 1
+        }
+      }
+    },
+    {
+      "P": "Mộc",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Thổ",
+          "single_element_score": 100,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 115.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 3,
+            "Kim": 0,
+            "Thủy": 3
+          }
+        },
+        {
+          "remedy": "Thủy",
+          "single_element_score": 130,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 125.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 1,
+            "Kim": 0,
+            "Thủy": 5
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Thủy",
+        "single_element_score": 130,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 125.0,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 0,
+          "Thổ": 1,
+          "Kim": 0,
+          "Thủy": 5
+        }
+      }
+    },
+    {
+      "P": "Mộc",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "mode": "CHE_SAT",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "single_element_score": 110,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 145.0,
+          "example_counts": {
+            "Mộc": 3,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 3
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Mộc",
+        "single_element_score": 110,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 145.0,
+        "example_counts": {
+          "Mộc": 3,
+          "Hỏa": 0,
+          "Thổ": 0,
+          "Kim": 0,
+          "Thủy": 3
+        }
+      }
+    },
+    {
+      "P": "Hỏa",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "mode": "CHE_SAT",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "single_element_score": 110,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 145.0,
+          "example_counts": {
+            "Mộc": 3,
+            "Hỏa": 3,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Hỏa",
+        "single_element_score": 110,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 145.0,
+        "example_counts": {
+          "Mộc": 3,
+          "Hỏa": 3,
+          "Thổ": 0,
+          "Kim": 0,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Hỏa",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "single_element_score": 200,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 193.33333333333334,
+          "example_counts": {
+            "Mộc": 5,
+            "Hỏa": 1,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Thổ",
+          "single_element_score": 60,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 130.0,
+          "example_counts": {
+            "Mộc": 3,
+            "Hỏa": 0,
+            "Thổ": 3,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Mộc",
+        "single_element_score": 200,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 193.33333333333334,
+        "example_counts": {
+          "Mộc": 5,
+          "Hỏa": 1,
+          "Thổ": 0,
+          "Kim": 0,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "single_element_score": 180,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 168.33333333333334,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 5,
+            "Thổ": 1,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Kim",
+          "single_element_score": 30,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 105.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 3,
+            "Thổ": 0,
+            "Kim": 3,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Hỏa",
+        "single_element_score": 180,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 168.33333333333334,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 5,
+          "Thổ": 1,
+          "Kim": 0,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Hỏa",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Thổ",
+          "single_element_score": 130,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 125.0,
+          "example_counts": {
+            "Mộc": 1,
+            "Hỏa": 0,
+            "Thổ": 5,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Thổ",
+        "single_element_score": 130,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 125.0,
+        "example_counts": {
+          "Mộc": 1,
+          "Hỏa": 0,
+          "Thổ": 5,
+          "Kim": 0,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "single_element_score": 130,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 125.0,
+          "example_counts": {
+            "Mộc": 5,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 1,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Kim",
+          "single_element_score": 100,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 115.0,
+          "example_counts": {
+            "Mộc": 3,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 3,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Mộc",
+        "single_element_score": 130,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 125.0,
+        "example_counts": {
+          "Mộc": 5,
+          "Hỏa": 0,
+          "Thổ": 0,
+          "Kim": 1,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Thổ",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "single_element_score": 130,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 125.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 5,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 1
+          }
+        },
+        {
+          "remedy": "Thủy",
+          "single_element_score": 100,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 115.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 3,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 3
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Hỏa",
+        "single_element_score": 130,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 125.0,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 5,
+          "Thổ": 0,
+          "Kim": 0,
+          "Thủy": 1
+        }
+      }
+    },
+    {
+      "P": "Thổ",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "mode": "CHE_SAT",
+      "candidates": [
+        {
+          "remedy": "Thổ",
+          "single_element_score": 110,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 145.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 3,
+            "Thổ": 3,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Thổ",
+        "single_element_score": 110,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 145.0,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 3,
+          "Thổ": 3,
+          "Kim": 0,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Thổ",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "single_element_score": 200,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 193.33333333333334,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 5,
+            "Thổ": 1,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Kim",
+          "single_element_score": 60,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 130.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 3,
+            "Thổ": 0,
+            "Kim": 3,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Hỏa",
+        "single_element_score": 200,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 193.33333333333334,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 5,
+          "Thổ": 1,
+          "Kim": 0,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Thổ",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Thổ",
+          "single_element_score": 180,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 168.33333333333334,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 5,
+            "Kim": 1,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Thủy",
+          "single_element_score": 30,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 105.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 3,
+            "Kim": 0,
+            "Thủy": 3
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Thổ",
+        "single_element_score": 180,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 168.33333333333334,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 0,
+          "Thổ": 5,
+          "Kim": 1,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Thổ",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Kim",
+          "single_element_score": 130,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 125.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 1,
+            "Thổ": 0,
+            "Kim": 5,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Kim",
+        "single_element_score": 130,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 125.0,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 1,
+          "Thổ": 0,
+          "Kim": 5,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Kim",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Thủy",
+          "single_element_score": 130,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 125.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 1,
+            "Kim": 0,
+            "Thủy": 5
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Thủy",
+        "single_element_score": 130,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 125.0,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 0,
+          "Thổ": 1,
+          "Kim": 0,
+          "Thủy": 5
+        }
+      }
+    },
+    {
+      "P": "Kim",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "single_element_score": 100,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 115.0,
+          "example_counts": {
+            "Mộc": 3,
+            "Hỏa": 0,
+            "Thổ": 3,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Thổ",
+          "single_element_score": 130,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 125.0,
+          "example_counts": {
+            "Mộc": 1,
+            "Hỏa": 0,
+            "Thổ": 5,
+            "Kim": 0,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Thổ",
+        "single_element_score": 130,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 125.0,
+        "example_counts": {
+          "Mộc": 1,
+          "Hỏa": 0,
+          "Thổ": 5,
+          "Kim": 0,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Kim",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "mode": "CHE_SAT",
+      "candidates": [
+        {
+          "remedy": "Kim",
+          "single_element_score": 110,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 145.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 3,
+            "Kim": 3,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Kim",
+        "single_element_score": 110,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 145.0,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 0,
+          "Thổ": 3,
+          "Kim": 3,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Kim",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Thổ",
+          "single_element_score": 200,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 193.33333333333334,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 5,
+            "Kim": 1,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Thủy",
+          "single_element_score": 60,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 130.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 3,
+            "Kim": 0,
+            "Thủy": 3
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Thổ",
+        "single_element_score": 200,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 193.33333333333334,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 0,
+          "Thổ": 5,
+          "Kim": 1,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Kim",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "single_element_score": 30,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 105.0,
+          "example_counts": {
+            "Mộc": 3,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 3,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Kim",
+          "single_element_score": 180,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 168.33333333333334,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 5,
+            "Thủy": 1
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Kim",
+        "single_element_score": 180,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 168.33333333333334,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 0,
+          "Thổ": 0,
+          "Kim": 5,
+          "Thủy": 1
+        }
+      }
+    },
+    {
+      "P": "Thủy",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "single_element_score": 30,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 105.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 3,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 3
+          }
+        },
+        {
+          "remedy": "Thủy",
+          "single_element_score": 180,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 168.33333333333334,
+          "example_counts": {
+            "Mộc": 1,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 0,
+            "Thủy": 5
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Thủy",
+        "single_element_score": 180,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 168.33333333333334,
+        "example_counts": {
+          "Mộc": 1,
+          "Hỏa": 0,
+          "Thổ": 0,
+          "Kim": 0,
+          "Thủy": 5
+        }
+      }
+    },
+    {
+      "P": "Thủy",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "single_element_score": 130,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 125.0,
+          "example_counts": {
+            "Mộc": 5,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 1,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Mộc",
+        "single_element_score": 130,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 125.0,
+        "example_counts": {
+          "Mộc": 5,
+          "Hỏa": 0,
+          "Thổ": 0,
+          "Kim": 1,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Thủy",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "single_element_score": 100,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 115.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 3,
+            "Thổ": 0,
+            "Kim": 3,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Kim",
+          "single_element_score": 130,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 125.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 1,
+            "Thổ": 0,
+            "Kim": 5,
+            "Thủy": 0
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Kim",
+        "single_element_score": 130,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 125.0,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 1,
+          "Thổ": 0,
+          "Kim": 5,
+          "Thủy": 0
+        }
+      }
+    },
+    {
+      "P": "Thủy",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "mode": "CHE_SAT",
+      "candidates": [
+        {
+          "remedy": "Thủy",
+          "single_element_score": 110,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 145.0,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 3,
+            "Thủy": 3
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Thủy",
+        "single_element_score": 110,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 145.0,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 0,
+          "Thổ": 0,
+          "Kim": 3,
+          "Thủy": 3
+        }
+      }
+    },
+    {
+      "P": "Thủy",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "mode": "SAFE_REMEDIATION",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "single_element_score": 60,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 130.0,
+          "example_counts": {
+            "Mộc": 3,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 3,
+            "Thủy": 0
+          }
+        },
+        {
+          "remedy": "Kim",
+          "single_element_score": 200,
+          "feasible": true,
+          "max_raw_with_quota_3_to_5": 193.33333333333334,
+          "example_counts": {
+            "Mộc": 0,
+            "Hỏa": 0,
+            "Thổ": 0,
+            "Kim": 5,
+            "Thủy": 1
+          }
+        }
+      ],
+      "recommended": {
+        "remedy": "Kim",
+        "single_element_score": 200,
+        "feasible": true,
+        "max_raw_with_quota_3_to_5": 193.33333333333334,
+        "example_counts": {
+          "Mộc": 0,
+          "Hỏa": 0,
+          "Thổ": 0,
+          "Kim": 5,
+          "Thủy": 1
+        }
+      }
+    }
+  ],
+  "method": {
+    "grouping": "5 elements times 2 parity buckets",
+    "capacities_even_odd": {
+      "Mộc": [
+        5,
+        5
+      ],
+      "Hỏa": [
+        5,
+        5
+      ],
+      "Thổ": [
+        4,
+        5
+      ],
+      "Kim": [
+        4,
+        4
+      ],
+      "Thủy": [
+        5,
+        4
+      ]
+    },
+    "enumeration": "Enumerate all nonnegative counts in ten buckets summing to six, enforce capacities and 3/3 parity, then aggregate by element. Enforce eligibility and remedy quota 3..5.",
+    "raw_score": "No negative relations in permitted retry groups, so N_khac=0; raw score is the six-number average of R(E,P)+R(E,The).",
+    "candidate_selection": "Keep the user ideal branch if The generates P and P controls Dung; otherwise compare all safe remedy elements by best attainable raw set score."
+  },
+  "cap_freeze_check": {
+    "purpose": "Check that first-attempt feasible cap is not silently replaced by a lower retry cap. This uses only the confirmed base score and number constraints; future scoring changes require a new audit.",
+    "non_hung_target_pairs": [
+      {
+        "P": "Mộc",
+        "The": "Mộc",
+        "G_cap": 193.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Mộc",
+        "The": "Hỏa",
+        "G_cap": 168.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Mộc",
+        "The": "Thổ",
+        "G_cap": 125.0,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Mộc",
+        "The": "Kim",
+        "G_cap": 125.0,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Mộc",
+        "The": "Thủy",
+        "G_cap": 168.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Hỏa",
+        "The": "Mộc",
+        "G_cap": 168.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Hỏa",
+        "The": "Hỏa",
+        "G_cap": 193.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Hỏa",
+        "The": "Thổ",
+        "G_cap": 168.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Hỏa",
+        "The": "Kim",
+        "G_cap": 125.0,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Hỏa",
+        "The": "Thủy",
+        "G_cap": 125.0,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Thổ",
+        "The": "Mộc",
+        "G_cap": 125.0,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Thổ",
+        "The": "Hỏa",
+        "G_cap": 168.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Thổ",
+        "The": "Thổ",
+        "G_cap": 193.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Thổ",
+        "The": "Kim",
+        "G_cap": 168.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Thổ",
+        "The": "Thủy",
+        "G_cap": 125.0,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Kim",
+        "The": "Mộc",
+        "G_cap": 125.0,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Kim",
+        "The": "Hỏa",
+        "G_cap": 125.0,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Kim",
+        "The": "Thổ",
+        "G_cap": 168.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Kim",
+        "The": "Kim",
+        "G_cap": 193.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Kim",
+        "The": "Thủy",
+        "G_cap": 168.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Thủy",
+        "The": "Mộc",
+        "G_cap": 168.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Thủy",
+        "The": "Hỏa",
+        "G_cap": 125.0,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Thủy",
+        "The": "Thổ",
+        "G_cap": 125.0,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Thủy",
+        "The": "Kim",
+        "G_cap": 168.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      },
+      {
+        "P": "Thủy",
+        "The": "Thủy",
+        "G_cap": 193.33333333333334,
+        "cap_attainable_with_3_even_3_odd": true
+      }
+    ],
+    "hung_contexts": [
+      {
+        "P": "Mộc",
+        "The": "Mộc",
+        "Dung": "Kim",
+        "G_cap_before_retry": 193.33333333333334,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Mộc",
+        "The": "Hỏa",
+        "Dung": "Thủy",
+        "G_cap_before_retry": 168.33333333333334,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Mộc",
+        "The": "Thổ",
+        "Dung": "Mộc",
+        "G_cap_before_retry": 125.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Mộc",
+        "The": "Kim",
+        "Dung": "Hỏa",
+        "G_cap_before_retry": 125.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Mộc",
+        "The": "Thủy",
+        "Dung": "Thổ",
+        "G_cap_before_retry": 145.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Hỏa",
+        "The": "Mộc",
+        "Dung": "Kim",
+        "G_cap_before_retry": 145.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Hỏa",
+        "The": "Hỏa",
+        "Dung": "Thủy",
+        "G_cap_before_retry": 193.33333333333334,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Hỏa",
+        "The": "Thổ",
+        "Dung": "Mộc",
+        "G_cap_before_retry": 168.33333333333334,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Hỏa",
+        "The": "Kim",
+        "Dung": "Hỏa",
+        "G_cap_before_retry": 125.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Hỏa",
+        "The": "Thủy",
+        "Dung": "Thổ",
+        "G_cap_before_retry": 125.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Thổ",
+        "The": "Mộc",
+        "Dung": "Kim",
+        "G_cap_before_retry": 125.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Thổ",
+        "The": "Hỏa",
+        "Dung": "Thủy",
+        "G_cap_before_retry": 145.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Thổ",
+        "The": "Thổ",
+        "Dung": "Mộc",
+        "G_cap_before_retry": 193.33333333333334,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Thổ",
+        "The": "Kim",
+        "Dung": "Hỏa",
+        "G_cap_before_retry": 168.33333333333334,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Thổ",
+        "The": "Thủy",
+        "Dung": "Thổ",
+        "G_cap_before_retry": 125.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Kim",
+        "The": "Mộc",
+        "Dung": "Kim",
+        "G_cap_before_retry": 125.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Kim",
+        "The": "Hỏa",
+        "Dung": "Thủy",
+        "G_cap_before_retry": 125.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Kim",
+        "The": "Thổ",
+        "Dung": "Mộc",
+        "G_cap_before_retry": 145.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Kim",
+        "The": "Kim",
+        "Dung": "Hỏa",
+        "G_cap_before_retry": 193.33333333333334,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Kim",
+        "The": "Thủy",
+        "Dung": "Thổ",
+        "G_cap_before_retry": 168.33333333333334,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Thủy",
+        "The": "Mộc",
+        "Dung": "Kim",
+        "G_cap_before_retry": 168.33333333333334,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Thủy",
+        "The": "Hỏa",
+        "Dung": "Thủy",
+        "G_cap_before_retry": 125.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Thủy",
+        "The": "Thổ",
+        "Dung": "Mộc",
+        "G_cap_before_retry": 125.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Thủy",
+        "The": "Kim",
+        "Dung": "Hỏa",
+        "G_cap_before_retry": 145.0,
+        "equals_retry_cap": true
+      },
+      {
+        "P": "Thủy",
+        "The": "Thủy",
+        "Dung": "Thổ",
+        "G_cap_before_retry": 193.33333333333334,
+        "equals_retry_cap": true
+      }
+    ],
+    "all_50_checks_passed": true
+  },
+  "candidate_ranking_ties": []
+}

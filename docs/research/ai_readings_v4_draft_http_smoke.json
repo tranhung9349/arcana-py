@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-10-27T07:29:48.675909+00:00",
+  "provider": {
+    "configured": true,
+    "model": "deepseek-v4.1-flash",
+    "provider_host": "rexapf.com"
+  },
+  "synthetic_data_only": true,
+  "results": [
+    {
+      "method": "BAZI",
+      "consultation_id": "381711a8-5e4a-42f7-9935-2063dfaad195",
+      "ai_reading_id": "05d9e4d40fbb5c0e1ee730f279663758955be61b0ecd0170600f5bf5d60e1296",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "prompt_version": "plain-vietnamese-2026-10-27-v4",
+      "context_sha256": "cf67150c15a72c56a9a5260d9c98625a5dbf6161040eae4acf4ead7650552407",
+      "case_ids": [
+        "bazi-07-study",
+        "bazi-09-priority"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 16566,
+        "completion_tokens": 6496,
+        "total_tokens": 23062
+      },
+      "generation_passes": 1,
+      "generate_seconds": 32.878,
+      "cache_replay_ms": 33.521,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Điều đáng chú ý nhất cho việc học và thực hành là không lấy một dấu nổi bật — nhóm Ấn lộ hay hai can Quý — để chốt cách học. Nền Nhật chủ Đinh Hỏa có mùa Dậu không trợ, có căn tàng và một can sinh trợ, nhưng đồng thời có hai can Quý thuộc nhóm khắc; khí thế vì thế còn đan xen và hướng điều tiết chưa chốt."
+    },
+    {
+      "method": "MAIHOA",
+      "consultation_id": "338ea908-a663-437e-9113-6c6d6ccca155",
+      "ai_reading_id": "0396ab5c0d82025d823f1fab87fde5c74de18edc810aa0d9175df3c4d5334279",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "prompt_version": "plain-vietnamese-2026-10-27-v4",
+      "context_sha256": "3c46d6b347375343b92bd801057ad8d2fafcdabf60f272522b1ada62fe1ac41d",
+      "case_ids": [
+        "maihoa-06-comparison",
+        "maihoa-05-turning"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 16624,
+        "completion_tokens": 7044,
+        "total_tokens": 23668
+      },
+      "generation_passes": 1,
+      "generate_seconds": 35.527,
+      "cache_replay_ms": 29.015,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Các chặng đã tính đều nghiêng thuận: Dụng sinh Thể ở đầu, phần giữa có tỷ hòa và Thể khắc Hỗ Dụng, cuối Biến sinh Thể. Điều cần chuẩn bị kỹ là phần giữa và mức của Thể, vì Dụng Cấn Thổ đang vượng trong tháng Tuất còn Thể Càn Kim chưa được xác định mức; đây chưa phải cam kết kết quả."
+    },
+    {
+      "method": "LIUYAO",
+      "consultation_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+      "ai_reading_id": "e86efb268aa46e5f655174a74298f148346baecc8aed2741b239cb89701fbce3",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "prompt_version": "plain-vietnamese-2026-10-27-v4",
+      "context_sha256": "f032f102e0b1b8ade9d55aa325973c1a10685dec74226e66a3d676d68f190bc9",
+      "case_ids": [
+        "liuyao-04-document",
+        "liuyao-06-timing"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 15117,
+        "completion_tokens": 3976,
+        "total_tokens": 19093
+      },
+      "generation_passes": 1,
+      "generate_seconds": 15.164,
+      "cache_replay_ms": 26.702,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Hào đại diện bản đề cương có nền sinh phù từ tháng và ngày, lại sinh về phía hào của bạn; nhưng hào của bạn đang động, nhập Tuần Không và bị hào biến khắc ngược lại. Vì vậy việc rà soát nên tập trung vào phần đề cương gắn với điều kiện bạn thực sự theo được; chưa thể kết luận nội dung đề cương đã ổn."
+    }
+  ]
+}

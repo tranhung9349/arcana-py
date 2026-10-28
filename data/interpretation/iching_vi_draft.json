@@ -1,0 +1,1609 @@
+{
+  "version": "iching-vi-draft-v1",
+  "label": "AI_TRANSLATION",
+  "review_status": "UNREVIEWED",
+  "source_commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+  "description": "Bản dịch nghĩa và diễn giải tham khảo do trợ lý AI soạn từ nguyên văn đã khóa. Không phải bản dịch có sẵn trong hai repo hoặc của một học giả. Chưa được chuyên gia hiệu đính.",
+  "hexagrams": [
+    {
+      "id": 1,
+      "name_vi": "Thuần Càn",
+      "judgment": "Khởi đầu lớn, hanh thông; thuận lợi khi giữ sự chính bền.",
+      "overview": "Càn tượng trưng cho sức sáng tạo và chủ động. Tiến lên cần đúng thời, giữ bền chí và tránh quá đà.",
+      "lines": [
+        "Rồng còn ẩn, chưa nên hành động.",
+        "Rồng hiện ở đồng; thuận lợi khi gặp người có đức và tài.",
+        "Người quân tử cả ngày nỗ lực, tối vẫn cảnh giác; dù nguy cũng không lỗi.",
+        "Có thể nhảy lên, hoặc còn ở vực; không lỗi.",
+        "Rồng bay trên trời; thuận lợi khi gặp bậc đại nhân.",
+        "Rồng lên quá cao thì có hối tiếc."
+      ],
+      "source_text_sha256": {
+        "judgment": "a25e023d9cfe4d088ab7d0f9159d7f1df84c0db3e54f6d7f8405a407e1268110",
+        "lines": [
+          "c4dce2307def2b8483bed37850fd008571ea99f2075495d0502a9b9de032e40c",
+          "fe16102a34a23905105a85aeb9d672607ddc34bb9c8f71c2001865905c77d196",
+          "c7478add60b03469f44ebd8acfb36f51a404f1ac3f708d9a87a361b391d3d493",
+          "e0d9f0361385a1f5fee493bd99b0d6b206bcedfa4fc5148b1018c4e5d35ea5d5",
+          "64ad18948f8d9ddf7c63c1419e4f729acef0506a2cc48b5bf83621f96b878a94",
+          "41f9fc7be0910cbb0796f84c6d7de5b856c40b9feb2b9ddb031116ed81cd5322"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name_vi": "Thuần Khôn",
+      "judgment": "Khởi đầu lớn, hanh thông; thuận với sự bền chính của ngựa cái. Người quân tử đi trước thì lạc, theo sau thì tìm được chủ, có lợi. Tây nam được bạn, đông bắc mất bạn. An lòng giữ chính thì tốt.",
+      "overview": "Khôn nói về tiếp nhận, nâng đỡ và bền bỉ. Biết phối hợp, tìm đúng hướng và giữ nền tảng ổn định.",
+      "lines": [
+        "Giẫm lên sương thì biết băng cứng sắp đến.",
+        "Ngay thẳng, vuông vức, rộng lớn; không cần gắng tập mà vẫn thuận lợi.",
+        "Ẩn vẻ đẹp, có thể giữ chính; làm việc cho vua, không nhận công nhưng có kết thúc.",
+        "Buộc miệng túi; không lỗi, cũng không được khen.",
+        "Xiêm vàng; rất tốt.",
+        "Rồng đánh nhau ngoài đồng, máu màu đen và vàng."
+      ],
+      "source_text_sha256": {
+        "judgment": "7afcb8c2e385c744c0878071dc25ff1809c2d70a5f49e5f68ef554c2e7ec784b",
+        "lines": [
+          "84f6cc350900f23df71e87b7b73c20e1adeae375f6f662ab6eb37827697992e2",
+          "e0b0cc062bd8e17e7cfda81e2b155e854604ba0bb129f8794037172a16808314",
+          "432033bd54352a3177b9e8d13ee7f30df1bd661a21c13d95822c264e02ae53f7",
+          "0dd572f30bdf631653f7c3ff6a25149952068dfdf27398507d81f668dddbe188",
+          "cf684f5e6ebd6b9c5f7a0cacc3b56018615ee2c159a1050b64003aa0dab14fed",
+          "e149aaf5dad92e2f2c6cac51e10e095b6d75110524ea1c7c42c961c636a24c23"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name_vi": "Thủy Lôi Truân",
+      "judgment": "Khởi đầu lớn, hanh thông, lợi khi giữ chính. Chưa nên vội tiến; thuận lợi khi lập người lãnh đạo.",
+      "overview": "Truân là khó khăn lúc mới bắt đầu. Cần tổ chức nguồn lực và người hỗ trợ trước khi mở rộng.",
+      "lines": [
+        "Quanh quẩn chưa tiến; nên ở yên giữ chính và lập người lãnh đạo.",
+        "Khó khăn, chậm trễ, ngựa đi quanh. Không phải cướp mà là cầu hôn. Người nữ giữ chính, chưa thuận cưới; mười năm mới thuận.",
+        "Đuổi hươu không có người dẫn, chỉ lạc vào rừng. Quân tử thấy cơ thì bỏ; tiến sẽ đáng tiếc.",
+        "Ngựa còn quanh quẩn, đi cầu hôn; tiến thì tốt, không gì bất lợi.",
+        "Ân huệ bị giữ lại; giữ chính việc nhỏ thì tốt, việc lớn thì xấu.",
+        "Ngựa đi quanh, khóc ra máu từng dòng."
+      ],
+      "source_text_sha256": {
+        "judgment": "a4781ff34860065eabb3dcd4916cf01a500011458a1c69940870ddbbe5f22e7e",
+        "lines": [
+          "ef4921e945a885be72ed9f409739f77ac34146ab162960c259c43c0ea9146c97",
+          "569ced7759c4df89c98450692cca309497e363f860e4039f755ea7929e0c2fa2",
+          "9d56896629ff13f142fa795fead9c2f1ad72944934e0ebab8f01bbfd455ca47a",
+          "cb0737228c4e572a57084523bbf62788fc81e64b4383252750dce49289844033",
+          "0bd71f4d70ebc0ad49a10405b31855b4ba1709681615cdeb4760563cc2ca299a",
+          "33b6f2216be76ab7d35570c2433b5fd87804a1e0393f9bec46d09873713c5068"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name_vi": "Sơn Thủy Mông",
+      "judgment": "Hanh thông. Không phải ta tìm trẻ chưa biết, mà trẻ tìm ta. Lần hỏi đầu thì chỉ; hỏi đi hỏi lại là khinh nhờn, nên không chỉ nữa. Lợi khi giữ chính.",
+      "overview": "Mông nói về học hỏi khi chưa rõ đường. Cần thành tâm, người hướng dẫn phù hợp và tránh hỏi lặp chỉ để tìm câu trả lời vừa ý.",
+      "lines": [
+        "Khai mở sự mông muội; dùng kỷ luật để tháo gông cùm. Cứ kéo dài sự trừng phạt thì đáng tiếc.",
+        "Bao dung người chưa biết thì tốt; lấy vợ thì tốt, người con có thể gánh việc nhà.",
+        "Không nên lấy người nữ thấy kẻ giàu mà đánh mất tự chủ; không có lợi.",
+        "Bị vây trong sự mông muội; đáng tiếc.",
+        "Trẻ thơ chịu học; tốt.",
+        "Đánh thức sự mông muội; không lợi làm kẻ xâm phạm, lợi khi chống xâm phạm."
+      ],
+      "source_text_sha256": {
+        "judgment": "3b9742da3da7f403bea84aa5e39a5a7c50356d05e55b7542a1ec73c6664f6aa2",
+        "lines": [
+          "c9cdaa654c796f439f53d333ee093fefbac271ce95726983bcb6474bc136a26e",
+          "6aa70fe331dedcee947ecc5a53b7a0cafece3bef34d93b9d911083caee3d7e3c",
+          "82bb802092bf4f4585ccf53e0cfe810f02c822e12fc34c8a012d09c98996852c",
+          "c7529dbe93678a7d069495697261b2d4862d45541c8288f013cca89b745cd716",
+          "9fdc0dd3e7a8faef2d3221c184f1fa36bb8b5cc89609cd9f5086920b4e4191f6",
+          "58aea5fdd77ffc55f996dd8e639df21098bafb5a6db4909c5cc278409138f07e"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name_vi": "Thủy Thiên Nhu",
+      "judgment": "Có lòng thành, sáng rõ và hanh thông. Giữ chính thì tốt; lợi khi vượt sông lớn.",
+      "overview": "Nhu là chờ đúng lúc. Chờ đợi có chuẩn bị và giữ lòng tin, thay vì lao vào nguy hiểm.",
+      "lines": [
+        "Chờ ở ngoài đồng; lợi khi bền chí, không lỗi.",
+        "Chờ trên cát; có lời dị nghị nhỏ, cuối cùng tốt.",
+        "Chờ trong bùn, khiến giặc kéo đến.",
+        "Chờ giữa cảnh đổ máu rồi ra khỏi hố.",
+        "Chờ bên rượu và thức ăn; giữ chính thì tốt.",
+        "Vào hố, ba khách không mời đến; kính trọng họ thì cuối cùng tốt."
+      ],
+      "source_text_sha256": {
+        "judgment": "0882860741c12743de3ebf05893015bcbc7413831eaa464c3ab660717fecffd0",
+        "lines": [
+          "b27be486b6325bc1616a09e9dbb9b4431aba6e5506f00b43be76c7f2b6bbf42a",
+          "828779f7d901ccf10ab0b976ebc4baed65333bd23b5673eb962f0e4acd51bab7",
+          "cce383f32d2f031723443dd0d078d53f354d19a7198984338f91e3f59c05fc95",
+          "800a914d409e170d5209f7c64001b23805b930e5d40e278da1635da1815c0729",
+          "070707ec287d9dea878b547d2e54e732c695cd058226806ea409e599f3f43b3f",
+          "f17f173ee56541056e3a02720b69791691e990aa8f6a9b72fb34b19bb1143cd5"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name_vi": "Thiên Thủy Tụng",
+      "judgment": "Có lòng thành nhưng bị ngăn, phải dè chừng. Dừng giữa chừng thì tốt, theo đến cùng thì xấu. Lợi khi gặp bậc đại nhân; không lợi vượt sông lớn.",
+      "overview": "Tụng là tranh chấp. Nên tìm cách hòa giải, dùng người phân xử và tránh đẩy xung đột đến cùng.",
+      "lines": [
+        "Không kéo dài việc tranh chấp; có lời dị nghị nhỏ, cuối cùng tốt.",
+        "Không thắng kiện, quay về lánh; ba trăm hộ trong làng không bị họa.",
+        "Sống nhờ đức cũ, giữ chính dù nguy, cuối cùng tốt. Làm việc cho vua thì không nhận công.",
+        "Không thắng kiện; trở về thuận mệnh, đổi ý, an lòng giữ chính thì tốt.",
+        "Phân xử tranh chấp; rất tốt.",
+        "Có thể được ban đai lớn, nhưng trong một buổi sáng bị tước ba lần."
+      ],
+      "source_text_sha256": {
+        "judgment": "e4ea76615949390820b2ea4478d82a0ea24a472b5e0096537eb0adb0c2df08f7",
+        "lines": [
+          "e53875300a64a4167364e7606c529da45a727d2c0366abf599245d911dd99fad",
+          "450046dbc332b727258478302450cba030bd9c0205f84e1443bb009de061839d",
+          "d023382a8228d3efa5ea3470fe1417f27f3e49a85254411e21767e22ea8cb49a",
+          "c79360cbe2443b3d62ae8b9e97909737bd4dd7cf07f74fbe09e6570bb49d057f",
+          "bf2320bd8708f7599800874c45fe57f4f58b964f851f5aba3fe2d05b14dff228",
+          "9837acab9079d0972806d27f4cdc9e58e336e931f72c462505b51397255c3274"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name_vi": "Địa Thủy Sư",
+      "judgment": "Giữ chính; người lão luyện chỉ huy thì tốt, không lỗi.",
+      "overview": "Sư nói về tổ chức lực lượng và kỷ luật. Người chỉ huy phải có năng lực, trách nhiệm và được tin cậy.",
+      "lines": [
+        "Ra quân phải có kỷ luật; không đúng phép thì xấu.",
+        "Ở giữa quân đội thì tốt, không lỗi; vua ba lần ban mệnh.",
+        "Quân đội có thể chở xác về; xấu.",
+        "Quân lui về đóng trại bên trái; không lỗi.",
+        "Ruộng có thú, có lý do để bắt, không lỗi. Người trưởng chỉ huy, người thiếu năng lực chở xác; dù giữ chính cũng xấu.",
+        "Đại quân ban mệnh, lập nước và phong nhà; không dùng tiểu nhân."
+      ],
+      "source_text_sha256": {
+        "judgment": "e20cf1ef0fb831e5ae014a202190411ae88abe3394b800216cdb59c918a53ee0",
+        "lines": [
+          "d48daf875814929cc0f3dafc591b8643650e7e541fbb020cc9b80acf0913e96c",
+          "f5fd4d9233ca15340fbe98c232cf98308c71a3f02767c6445e58fa111c987629",
+          "1c2be930da683631625605b2a34f76bccd639059190f8b89653bdfe7aa8f45a4",
+          "729196b5f78b131df95164734e9bff96b1b66c4c28b85ee5a6af0625990c4ff4",
+          "7257cf712f83480918e6ba3a3d855495e82664d29def9d861933e49582d8c4f9",
+          "fffe12e265906983436c5756f58bf569cdd8c024bcb72834bf0c851c00fc1ce4"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name_vi": "Thủy Địa Tỷ",
+      "judgment": "Tốt. Xét lại việc hỏi: có đức lớn, lâu bền và chính thì không lỗi. Người chưa yên sẽ đến; người đến sau cùng thì xấu.",
+      "overview": "Tỷ là gắn bó và liên kết. Cần chọn người đáng tin, cùng mục đích và tham gia đúng lúc.",
+      "lines": [
+        "Có lòng thành để gắn bó, không lỗi. Lòng thành đầy như vò; cuối cùng có điều tốt khác đến.",
+        "Gắn bó từ bên trong; giữ chính thì tốt.",
+        "Gắn bó với người không xứng đáng.",
+        "Gắn bó với người bên ngoài; giữ chính thì tốt.",
+        "Liên kết công khai; vua săn ba phía, để thú phía trước thoát. Dân không bị răn ép; tốt.",
+        "Gắn bó mà không có người dẫn đầu; xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "c0f7d91b834cd1c63c185d8b9ddeef81febc91b0595ea2aeffc58d139b934415",
+        "lines": [
+          "ec0fe19db85b8f6280e22cc2f4004b1540c1ad4f6a3b6e22847a016bdfabac9b",
+          "414d7394a18bcaa8bf5b8a7c1d3d94e0116292c2648916b9a1f2cbcb415fb45c",
+          "49e35791de3f72c4d84ec6aef0ffeedce9fbf66a35d973a6655d31ae55d96daa",
+          "f5dc83677a009c0dbafdcb6d284f568c85dec00bb0d267d5b4ea0b4517157df2",
+          "52bb56fcee2694d78451d1393a7ddecdb31c27930de6eb72b000fa5a1149d3b4",
+          "1d0255e2da51ad61ac7a0bea08faee51abefc962d22ab0e566779795d0996d59"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name_vi": "Phong Thiên Tiểu Súc",
+      "judgment": "Hanh thông. Mây dày chưa mưa, kéo đến từ ngoại ô phía tây của ta.",
+      "overview": "Tiểu Súc là tích lũy nhỏ và kiềm chế vừa phải. Điều kiện đang hình thành, chưa nên ép kết quả lớn xuất hiện ngay.",
+      "lines": [
+        "Trở về đường của mình thì có lỗi gì? Tốt.",
+        "Được kéo cùng trở về; tốt.",
+        "Xe tuột nan bánh, vợ chồng bất hòa.",
+        "Có lòng thành thì nguy đổ máu và lo sợ qua đi; không lỗi.",
+        "Lòng thành gắn kết; cùng giàu với hàng xóm.",
+        "Đã mưa rồi yên, đức được tích chứa. Người vợ giữ chính vẫn gặp nguy, trăng gần tròn; quân tử tiến đi thì xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "d412ed17608231b7361fa0b34e50b92d4211287e31f3d6c5cbd6909778e5c2fd",
+        "lines": [
+          "9e06b50258f0448b516e99e63b43e42e4fb52ca179ca0e2b88dfc7b9071b8154",
+          "eb6a0a2bc7e070fba5eabeb09df7c52dd9f83db6dd698974ca4afb63e1a06700",
+          "0a72003c1092bbae7dfb05930547ed77fbcf925ba8530cfa42d51205b97aa202",
+          "2645df61bd6775f43412422aab589b666e5644cace8561e74a805fb69073e8fc",
+          "a248d4d277a3dc7e61d62953b640038a9cab5e70928fe035a2c4e49bb6f0740d",
+          "02079f173b446b57325df5048a751855c9c4a43e46563aea302d1ae841e2d277"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name_vi": "Thiên Trạch Lý",
+      "judgment": "Giẫm đuôi hổ mà hổ không cắn người; hanh thông.",
+      "overview": "Lý nói về cách ứng xử trong hoàn cảnh nhạy cảm. Giữ lễ, biết giới hạn và bước đi thận trọng.",
+      "lines": [
+        "Bước đi giản dị; tiến đi không lỗi.",
+        "Đường đi bằng phẳng; người ẩn dật giữ chính thì tốt.",
+        "Mắt kém vẫn muốn nhìn, chân què vẫn muốn đi. Giẫm đuôi hổ bị cắn, xấu; võ nhân muốn làm đại quân.",
+        "Giẫm đuôi hổ, run sợ và cảnh giác; cuối cùng tốt.",
+        "Bước đi quyết liệt; dù giữ chính vẫn nguy.",
+        "Xem lại bước đi, xét điều lành; quay về đúng hướng thì rất tốt."
+      ],
+      "source_text_sha256": {
+        "judgment": "1a6c21f771b9b68a143578a68b24da64a3ed5747ab4fa2d98eb7cb782045cca8",
+        "lines": [
+          "aa51ee141012aa82cfbe2638b3738bdc61e09450aa813cae5aa5c0274f46f7fa",
+          "8e233dab0c9ecf4993845666e792fabb629aa1370526943bfcf8473dcbd5bb79",
+          "4f3d82053ac2350bb32cca2bfa0717cce247a136aa9aa3b909310bffb0ce2c7a",
+          "f9b7fe56cc1164ee2ba573c0e527cd680abdc88da8ddd123fa7102c4b36f5ba9",
+          "319641d7fee29f08e0ca48e07e2e15939496e3db31a3d702a5bde6a2e6746108",
+          "a1cd7af76649f7768f8456f1acafcd9e10f27cf4faed5298ecec451f74150629"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "name_vi": "Địa Thiên Thái",
+      "judgment": "Cái nhỏ đi, cái lớn đến; tốt và hanh thông.",
+      "overview": "Thái là thông suốt và hòa hợp. Tận dụng thuận lợi nhưng vẫn chăm nền tảng, vì vận thuận cũng có thể đổi.",
+      "lines": [
+        "Nhổ cỏ tranh kéo cả rễ cùng loại; tiến đi thì tốt.",
+        "Bao dung điều hoang sơ, dám lội sông, không bỏ người xa, không kết bè; hợp với đường trung chính.",
+        "Không bằng nào chẳng thành dốc, không đi nào chẳng trở lại. Gian khó mà giữ chính thì không lỗi; đừng lo lòng thành, ăn uống có phúc.",
+        "Cùng bay xuống, không dựa của cải mà gần hàng xóm; không cần răn, vẫn tin nhau.",
+        "Đế Ất gả em gái; nhờ phúc ấy mà rất tốt.",
+        "Thành đổ xuống hào; không dùng quân, trong ấp ban lời mệnh. Cố giữ thì đáng tiếc."
+      ],
+      "source_text_sha256": {
+        "judgment": "1ae53fff638962e714c9c26bd80a23cb4798989bc911c876cecb1c2b6ae1a5ac",
+        "lines": [
+          "765bd8cc1342336f925029f329b3644efc0a096289e9cc656442d9630c485752",
+          "dc0bf9faab3ae3c5edd15a10df3ca097caedee28e96ed0b3df4dc45c27ccab1c",
+          "9356ca4f6a5653cef2a2505b6ddf188cdbb04ee0566c060c135f306ba393eb93",
+          "1beafe1e6d127fb106766290d4b381a4e523eee4b36d69ab853668615ed024ab",
+          "9845230aa5cc41621117c4c16b0a62930950e8eaff2fe1bd7ec7b4d5fc5f4022",
+          "98ad5bc341aa7924b8d7a5a0503f7ccf76871b6d6ffe3babd90fd31335b3a4c6"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name_vi": "Thiên Địa Bĩ",
+      "judgment": "Bế tắc do người không đúng đạo; không thuận cho sự chính bền của quân tử. Cái lớn đi, cái nhỏ đến.",
+      "overview": "Bĩ là bế tắc và thiếu giao thông. Giữ phẩm chất, hạn chế dấn sâu và chuẩn bị cho lúc điều kiện thay đổi.",
+      "lines": [
+        "Nhổ cỏ tranh kéo cả rễ cùng loại; giữ chính thì tốt, hanh thông.",
+        "Bao dung và vâng theo; tiểu nhân thấy tốt, đại nhân chịu bế tắc mà vẫn hanh thông.",
+        "Ôm giữ sự hổ thẹn.",
+        "Có mệnh thì không lỗi, những người cùng chí hưởng phúc.",
+        "Làm bế tắc dừng lại; đại nhân tốt. Luôn nghĩ có thể mất, buộc chặt như vào khóm dâu.",
+        "Bế tắc bị lật đổ; trước bế tắc, sau vui mừng."
+      ],
+      "source_text_sha256": {
+        "judgment": "e4d145e2f2ff437c0e8853b81c1479ff25ef28d3b1da3c3ca7055334567721e3",
+        "lines": [
+          "559f079b1a7acde0c6d9f91516e5ebb16d59b925cc7cdcca10dac9648d24aefd",
+          "e55e2938202cecd9d41a1e9f86f9c327210228e058038b7315e6dedc4bcb1e06",
+          "4098269c8c54c453d0b337c7cf384d3604eeed57755518d1ba0a508ebcd71c92",
+          "4645b8f1a6e798349a4e51794c94671dfcf144e9a244c5fc9514a2f7d6c645cb",
+          "01f2a4744c2c45dfcb649a528c06c82d50fd4ff96635cef91080f6f0c275699c",
+          "7b185f7a8637ab4c219d4104628cffb0ffb50b050aa717d90b09b98464a61518"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "name_vi": "Thiên Hỏa Đồng Nhân",
+      "judgment": "Cùng người ở nơi rộng mở thì hanh thông. Lợi vượt sông lớn, lợi với sự chính bền của quân tử.",
+      "overview": "Đồng Nhân nói về hợp tác rộng rãi. Tìm điểm chung và minh bạch, tránh chỉ gắn bó trong nhóm riêng.",
+      "lines": [
+        "Cùng người ở ngoài cửa; không lỗi.",
+        "Chỉ cùng người trong tông họ; đáng tiếc.",
+        "Giấu quân trong bụi, lên đồi cao; ba năm chưa dấy lên.",
+        "Lên tường nhưng không thể đánh; tốt.",
+        "Cùng người, trước khóc lớn sau cười; quân lớn thắng rồi gặp nhau.",
+        "Cùng người ở ngoại ô; không hối tiếc."
+      ],
+      "source_text_sha256": {
+        "judgment": "9233a9eaac47ee62d0bf52f7454e1e85c5ab5031488d71ba311f915dbc6d400c",
+        "lines": [
+          "8182e2f31d016297c36f831b33cb6d41280a07ec44ad3a6170172ac56ce7aad7",
+          "c4f4f583aad8f964ba31b295302c19b955a2b22722c317a02dd337091eb64d56",
+          "1f0ee4354c2ac7ef60b06a98c8e92e968b303259c4ab6d3083aa4f830673afd6",
+          "5d7d92d5152fe020ae2c2cfd5d037ab97051e2cdd2e27f4e61bcd38fb3db046b",
+          "7260e7f3bf52be862eea2e23d9b2b3f19c843b7b84d54cfa04b4b8caf50fa40f",
+          "cf150008ffa48d765eea935bd7bbddb1fe065e9c916e7d9ab057a32debd973f8"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "name_vi": "Hỏa Thiên Đại Hữu",
+      "judgment": "Khởi đầu lớn, hanh thông.",
+      "overview": "Đại Hữu là có nguồn lực dồi dào. Cần đức độ, quản lý đúng mức và tránh kiêu căng khi đang thuận.",
+      "lines": [
+        "Không giao kết điều hại thì không lỗi; biết khó khăn thì không lỗi.",
+        "Xe lớn chở đồ, có nơi để đi; không lỗi.",
+        "Bậc công dâng lễ cho thiên tử; tiểu nhân không làm được.",
+        "Không phô trương sự lớn mạnh; không lỗi.",
+        "Lòng thành kết nối, có uy nghiêm; tốt.",
+        "Được trời giúp; tốt, không gì bất lợi."
+      ],
+      "source_text_sha256": {
+        "judgment": "14a1338bde7139653f557922ea4cfc328e2dbe9023a0476ff2480a3c313a5e64",
+        "lines": [
+          "8f2185849e38d2e4485349898b3b0503747298fb4a9b7fc7997c154dc7169fb0",
+          "3af3405edeaece948a0129cf4d0573597212d1a333924637a20f8756beb7ad1e",
+          "48ab39f4d37001aa248af7f8e80585de514eb99ac0072eb6512a8d3f9cf11aee",
+          "fc8325d189bc76f329d7cf6bae04c7450f52b897857946532fc7e080d02fd93b",
+          "065cce77ff17b72a2a7ab0812ef30f317a30e8c55da8d121828c39c492b5d905",
+          "8f4b7110ce2ccf247304d98061b9302023609d23b00daf400956207589f55719"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "name_vi": "Địa Sơn Khiêm",
+      "judgment": "Hanh thông; người quân tử đi đến kết quả trọn vẹn.",
+      "overview": "Khiêm là biết hạ mình và cân bằng. Khiêm nhường cần đi cùng hành động có trách nhiệm, không phải tự hạ giá trị.",
+      "lines": [
+        "Quân tử khiêm rồi lại khiêm; vượt sông lớn thì tốt.",
+        "Sự khiêm nhường được biểu lộ; giữ chính thì tốt.",
+        "Có công mà khiêm, quân tử có kết quả trọn vẹn; tốt.",
+        "Không gì bất lợi; phát huy sự khiêm.",
+        "Không dựa của cải mà cùng hàng xóm; lợi khi chinh phạt, không gì bất lợi.",
+        "Sự khiêm nhường được biểu lộ; lợi khi ra quân, chỉnh trị ấp nước."
+      ],
+      "source_text_sha256": {
+        "judgment": "9672f64c5828e66ddc55d3918c2e6869dcc336d26d56b23d97e16d41e2be471e",
+        "lines": [
+          "40961d288438672454fe4ae575c8000bdd8587139a107582795926877bc4c92c",
+          "fa978c2f0f7f0f9b69f49dcbeabd20d3e911140ab9cb035b928643711ca1dc36",
+          "934f36ce1362c013cfde8d11eb1d6134f2c5bf40e373e0fb9e3e454f927a2d38",
+          "857b75847b98f3c60102dc1c360d1d036179d38495c1994f415d8c9f072ecb77",
+          "7ca71c408f31dcda3d5921b39ae2d84c175d75c2d772cfc0f5a9dfcffded3612",
+          "28670a7ede9775025f7d1a5a6b7a5c36a1037f192debe8a5e6359b5b54af1213"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "name_vi": "Lôi Địa Dự",
+      "judgment": "Lợi khi lập người lãnh đạo và điều động quân đội.",
+      "overview": "Dự nói về sự hứng khởi và chuẩn bị. Dùng tinh thần chung để tổ chức hành động, tránh say mê hoặc tự mãn.",
+      "lines": [
+        "Khoe niềm vui; xấu.",
+        "Vững như đá, không đợi hết ngày mới quyết; giữ chính thì tốt.",
+        "Ngước nhìn để hưởng vui thì hối; chậm trễ cũng hối.",
+        "Làm nguồn của niềm vui, được nhiều. Đừng nghi ngờ; bạn bè tụ lại như chụm trâm.",
+        "Giữ lâu trong bệnh, nhưng chưa chết.",
+        "Mê đắm trong vui; việc đã thành mà biết đổi thì không lỗi."
+      ],
+      "source_text_sha256": {
+        "judgment": "bbf6aae2a3d9ea8858345954aa7ef216baedd9026afff6ecddcf41cfe523652b",
+        "lines": [
+          "203df68dff0807be01384062c9ee08562dc126cfa7286add00778a6998492c3c",
+          "72fc70cb8e20b3d2442008b9f92bbd859f65993efbe7d23f4b589d8f0085a11f",
+          "b97550f202ea67554df62b97340d67dafbd4545c65b41257230edb6e705e12a8",
+          "aa55f79c87ba5c56b36a538656fdd2fc0e9f737c2e8122d7d331638d7e8201af",
+          "d0fd5fc7d90db91b6e4c91e8eb0d6aebd938bb501c2ae957683dc19d3af0609c",
+          "d07b0e170103128a5ee5f84f96c65e46685f8d53ece8e713699abcd686d02695"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "name_vi": "Trạch Lôi Tùy",
+      "judgment": "Khởi đầu lớn, hanh thông; lợi khi giữ chính, không lỗi.",
+      "overview": "Tùy là thuận theo đúng người và đúng thời. Theo hoàn cảnh cần có nguyên tắc, tránh bỏ điều lớn để bám điều nhỏ.",
+      "lines": [
+        "Vai trò có thay đổi; giữ chính thì tốt. Ra cửa giao tiếp thì có công.",
+        "Buộc theo người nhỏ thì mất người trưởng thành.",
+        "Buộc theo người trưởng thành thì mất người nhỏ. Theo thì cầu được; lợi ở yên giữ chính.",
+        "Theo mà có thu hoạch, cố chấp sẽ xấu. Có lòng thành, đi đúng đạo và sáng rõ thì lỗi gì?",
+        "Thành tín với điều tốt đẹp; tốt.",
+        "Bị giữ rồi buộc chặt; vua dùng lễ tế ở núi phía tây."
+      ],
+      "source_text_sha256": {
+        "judgment": "ca3c8d77b6f30acd449de072bb5e8164df5343292694caaecd1d4aa54b551183",
+        "lines": [
+          "d1e05d2e40ad016bc5ef6387bd322f3bd04c5425e992d9451cef3216eae91311",
+          "3abba450c75e9ec522cdfd0b6b3aa60ebdade974e7d440e61caf25f239f0b106",
+          "238b8af7da18af16fd8ed718aba0c7127e207f1ea1ce75e86721c66b116be28d",
+          "81b2b414095f6ef4fde71681a4d90db6cda305b4abdcb53d80e4c9452f6cb843",
+          "e64be28d672adf54dd43eb005e30b767378a43c15500b94f488b9c8ee1545799",
+          "9915829710c489afa4b091be3bbc110e5d18dfd9d1a29272519e8f2d6c7f77c7"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "name_vi": "Sơn Phong Cổ",
+      "judgment": "Khởi đầu lớn, hanh thông; lợi vượt sông lớn. Xét ba ngày trước ngày Giáp và ba ngày sau ngày Giáp.",
+      "overview": "Cổ là sửa chữa điều hư hỏng tích tụ. Tìm nguyên nhân, chỉnh hệ thống cũ và theo dõi sau thay đổi.",
+      "lines": [
+        "Sửa việc hư của cha; có người con gánh nên cha không lỗi. Có nguy, cuối cùng tốt.",
+        "Sửa việc hư của mẹ; không nên cố chấp.",
+        "Sửa việc hư của cha; có hối nhỏ, không lỗi lớn.",
+        "Dung túng việc hư của cha; tiến sẽ thấy điều đáng tiếc.",
+        "Sửa việc hư của cha; được khen.",
+        "Không làm việc cho vua chúa, đề cao việc của mình."
+      ],
+      "source_text_sha256": {
+        "judgment": "988e8a4d815302e4fece844b262712aa008f8d725a892d0b73607e851ac5c1cb",
+        "lines": [
+          "62dd2f2af01d6549f2644e00fb930dc9fd3335176a5ca572586415c2632d0a3a",
+          "3c5e8dc0e18cb27a977d95572f18f03559d35054e2f347f1a2776a3cc3b3a9f5",
+          "cfc81125195d0e45cf85522993b7fc6590c9f37ba1d4b474648ae709d60fa9c4",
+          "b8d1a1b8b8b36f5b3816213c24488309a0d2f1d7f923d3deb28f0c791c021122",
+          "0f8f6b6674eab58a945bf86ddcf5ff50f64788c69d8313c48c6c6237acb24343",
+          "d78d867dcaf2b65133256c81d7743a4458d28352e9abe676972f6192b38a7d1b"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "name_vi": "Địa Trạch Lâm",
+      "judgment": "Khởi đầu lớn, hanh thông; lợi khi giữ chính. Đến tháng tám có điều xấu.",
+      "overview": "Lâm là đến gần và chăm lo. Khi đang có đà thuận, cần quan tâm người khác và chuẩn bị cho chu kỳ đổi chiều.",
+      "lines": [
+        "Cùng cảm ứng mà đến gần; giữ chính thì tốt.",
+        "Cùng cảm ứng mà đến gần; tốt, không gì bất lợi.",
+        "Đến gần bằng lời ngọt, không có lợi; biết lo thì không lỗi.",
+        "Đến gần chân thành và hết mức; không lỗi.",
+        "Đến gần bằng trí tuệ, hợp với đại quân; tốt.",
+        "Đến gần bằng sự đôn hậu; tốt, không lỗi."
+      ],
+      "source_text_sha256": {
+        "judgment": "1065433357ac5586f1c39eae1f56bd964461d14e2227c87aa9fb2d1b1ea161e5",
+        "lines": [
+          "002ca569af34737f7ea486face7fad3352f4b2df1dc929c92521095aea4e44fc",
+          "ea89a960816d00ae35dadb27b64c75a4b25e06162d01b6d97b9ea000e95c2234",
+          "484368ff67b9316927f0ac90cbfd854cf286a587f26e8e4ac973fb70fc4a003d",
+          "48f3a34e8df9be0320e4b8863821243cefdaa2daf08e01e3fdc374b6666eee68",
+          "2a06cb312592e3da4c8e641bd548f415b6c932c5774ad6559ca2077a2842a400",
+          "42a13bdfdd7439cad7e7054721f33561b05ebb3b4c3cd432f832cbaa8c2309d0"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "name_vi": "Phong Địa Quán",
+      "judgment": "Đã rửa tay mà chưa dâng lễ; lòng thành thể hiện trong dáng kính ngưỡng.",
+      "overview": "Quán là quan sát và tự xét. Nhìn cả hoàn cảnh lẫn cách mình hành động, rồi mới quyết định tiến lui.",
+      "lines": [
+        "Nhìn như trẻ nhỏ; tiểu nhân không lỗi, quân tử thì đáng tiếc.",
+        "Nhìn qua khe; thuận với sự chính bền của người nữ.",
+        "Xét đời sống của mình để quyết định tiến hay lui.",
+        "Nhìn vẻ sáng của nước; lợi làm khách của vua.",
+        "Xét đời sống của mình; quân tử không lỗi.",
+        "Xét đời sống của người ấy; quân tử không lỗi."
+      ],
+      "source_text_sha256": {
+        "judgment": "9bcd203c1f2c50b57462049e4d637e11dab94613a43993e177638ebd3f714b4b",
+        "lines": [
+          "f1ee678726a9acd39af9dd43d26665909973edb6e04d575382134f126e99de4e",
+          "06f1df3a4792f0acd364b9f6a781af099797886160c5f740842597349d0c1f73",
+          "eee57bebb54f026fa84a97856d5d4f63687f0e4ceedfa24446ba652cdc87c359",
+          "8fd5d38da49d48785ea5dae2315cff5ee937f498c7f1b28ba064c3e6a4bd4fec",
+          "061857379e7249ec899b257ca886c9e52a1faf0e6eedbc5775272bdf5e3e2eaf",
+          "0c74a76ab91fc24cf8332bbd33170975181f8d17cf48a182c692519ee5b7b220"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "name_vi": "Hỏa Lôi Phệ Hạp",
+      "judgment": "Hanh thông; lợi khi xử lý việc hình ngục.",
+      "overview": "Phệ Hạp là cắn xuyên vật cản để kết nối. Cần xử lý trở ngại rõ ràng, đúng phép và không lạm dụng trừng phạt.",
+      "lines": [
+        "Mang gông chân che ngón; không lỗi.",
+        "Cắn thịt mềm đến che mũi; không lỗi.",
+        "Cắn thịt khô gặp độc; có điều đáng tiếc nhỏ, không lỗi.",
+        "Cắn thịt khô có xương, được mũi tên kim loại; lợi khi gian khó mà giữ chính, tốt.",
+        "Cắn thịt khô được vàng; giữ chính dù nguy, không lỗi.",
+        "Mang gông cổ che tai; xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "2b0da1ca1862c0b4356060e8ee9b9a2ce0c51f2ce28840d12a89e3f2cb550e9c",
+        "lines": [
+          "16c1811a58f76a0f3fc2a4ff0819801dc5e568bf73452c3cd3d7f3f1a715e455",
+          "cb6f877b145c52f7b796c217c96498efe2d41dbcfa767338133afa5e358bdbe6",
+          "ff4d075aaab9b7113650a60f2508f455f4921d9a4820675404bee8eeaabc7179",
+          "d9feb232a385ad883b4591b78634cdf3ffe2dc7024e578a28e03c13aeaf3d530",
+          "a41f83bcdb6a018b73e152ea0fe1a918353d87584f93e2b521365b738781b736",
+          "818c96153764ea499e2c538e9c6e7479aca9e4af486a52a4cab79f57088d31e5"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "name_vi": "Sơn Hỏa Bí",
+      "judgment": "Hanh thông; có lợi nhỏ khi tiến đi.",
+      "overview": "Bí nói về vẻ đẹp và hình thức. Trang sức giúp biểu đạt, nhưng cần giữ nội dung thật và sự giản dị.",
+      "lines": [
+        "Làm đẹp bước chân, bỏ xe đi bộ.",
+        "Trang sức bộ râu.",
+        "Đẹp đẽ và nhuần nhã; giữ chính lâu dài thì tốt.",
+        "Trang sức mà trắng giản dị, ngựa trắng bay đến; không phải cướp mà là cầu hôn.",
+        "Trang sức nơi vườn đồi, bó lụa ít ỏi; có ngượng, cuối cùng tốt.",
+        "Trang sức bằng sự trắng giản dị; không lỗi."
+      ],
+      "source_text_sha256": {
+        "judgment": "89264210248b3a98605e85ceb41a58c40d165b06f683be9593cd0c293a546efc",
+        "lines": [
+          "ed7f8356a2b1e6398fe77f6a556f26712c255ceab97d57985dd148f885a614bf",
+          "b90784da745277c7e637133a7694b265668f198d543e114247cefaaf8666ef95",
+          "1da556610388f6fb8d6d0ba507fb971afe0e2787aa0362e9c4a6884db6940bbc",
+          "824b7e5feda2393a09a02ea16509198a299a5a83039b9444f461ff7256d11fa8",
+          "9a5d92f2eb7844eb7f83f3530329721b2ddf4b79da9b397f9b12563202fa709a",
+          "3c6582f84486b80d4db967d76a010ec6762391f2fcf4f5abb1991618616bf944"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "name_vi": "Sơn Địa Bác",
+      "judgment": "Không lợi khi tiến đi.",
+      "overview": "Bác là nền tảng bị bào mòn. Nên bảo toàn phần thiết yếu, nhận rõ sự suy giảm và tránh mở rộng liều lĩnh.",
+      "lines": [
+        "Giường bị bóc ở chân, sự chính bị hủy; xấu.",
+        "Giường bị bóc ở phần khung, sự chính bị hủy; xấu.",
+        "Bị bóc đi; không lỗi.",
+        "Giường bị bóc đến chỗ da người nằm; xấu.",
+        "Như cá xâu thành chuỗi, cung nhân được yêu; không gì bất lợi.",
+        "Quả lớn chưa bị ăn; quân tử được xe, tiểu nhân mất nhà."
+      ],
+      "source_text_sha256": {
+        "judgment": "04c191df66d1c490b4ceefd1e268e8a903f7eeb3cace705586538e92f39f0878",
+        "lines": [
+          "e0d7cb5b7af4869d26aa2197da41874a35c786f9e3f341b6a61c70aef6bbad5b",
+          "686fbf76ed41eed196e77f04fadebbc44b8d62e269992c785ff085286379d5c5",
+          "fc9143874a824621192f2ed1fcd93105db7a3bfea2b6e49156a4d979e79bb31c",
+          "f3edf14628d75c4178c5b512499f1adcc0337caebb6d177b8826c310a2ff6efc",
+          "4dac498cbd3d454538c4868683371b3110d8e359cb4be437f913b0f165ccebae",
+          "da2f527be89aa9e62de90b5a6b70ccfdd9bad651bba4ba3c66739546371b7410"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "name_vi": "Địa Lôi Phục",
+      "judgment": "Hanh thông. Ra vào không bệnh, bạn đến không lỗi. Trở lại theo đạo của mình, bảy ngày quay về; lợi khi tiến đi.",
+      "overview": "Phục là quay về và hồi phục. Sửa sai sớm, khởi động lại vừa sức và để nguồn lực phục hồi.",
+      "lines": [
+        "Trở lại khi chưa đi xa, không đến mức hối lớn; rất tốt.",
+        "Trở lại một cách tốt đẹp; tốt.",
+        "Trở lại nhiều lần; nguy nhưng không lỗi.",
+        "Đi giữa mọi người mà một mình quay về.",
+        "Trở về đôn hậu; không hối.",
+        "Lạc lối không trở lại; xấu, có tai họa. Dùng quân thì đại bại, vua nước ấy gặp xấu; mười năm chưa thể ra quân."
+      ],
+      "source_text_sha256": {
+        "judgment": "41b75640cb11c06978d882e4f10d5ce691bd0c1eba1ef901c301764e1d076cc6",
+        "lines": [
+          "b8cfda0b2b960efa2908835fb5ad4968c75245666df2283d3fcbcaa3a79fb187",
+          "b733b435e70ba3c64ee420dd25979f66eaa27014f8b259e725ce280e8325736a",
+          "3cdc098d241be4c961690482afc13d3ea6677bb47682945c6a6c7b50577745d8",
+          "cea3db05e1d7198ec1631cc93215e114804592fa381241262fa530355ad1f498",
+          "d79ddf6d42e62b6d6f20eb4a58c3ffa5e87bcebc989263c8122f8c3d3dc848f0",
+          "ff090518206fe10f6050a91eae3c8407f7a00ced57f7ea0f596ec19891813b65"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "name_vi": "Thiên Lôi Vô Vọng",
+      "judgment": "Khởi đầu lớn, hanh thông, lợi giữ chính. Không chính thì có họa; không lợi tiến đi.",
+      "overview": "Vô Vọng nói về chân thật và không vọng cầu. Hành động đúng việc mình làm, tránh suy tính quá mức về lợi bất ngờ.",
+      "lines": [
+        "Không vọng động; tiến đi thì tốt.",
+        "Không tính chuyện gặt khi cày, không tính ruộng chín khi mới khai; như vậy tiến đi có lợi.",
+        "Tai họa bất ngờ: con bò bị buộc, người qua đường được bò, người trong ấp chịu họa.",
+        "Có thể giữ chính; không lỗi.",
+        "Bệnh không do vọng động; đừng dùng thuốc, rồi có điều vui. Đây là hình tượng cổ, không phải hướng dẫn chữa bệnh.",
+        "Không vọng động, nhưng tiến đi gặp họa; không có lợi."
+      ],
+      "source_text_sha256": {
+        "judgment": "77ee6438806bf465c9bf4b71df07a93ed231118c313c86554123096db99c81ca",
+        "lines": [
+          "8ff3ff3469eac519f68a925c62b3d46391e58a244586b6c118cb2f9c946299be",
+          "372dcad44356fbfb6a798e624555af48e35267bd53043b013ca62e53dd6750e3",
+          "52773e5ca57a55c5207f032af2604946728d897495b9b6afce812caa245d980e",
+          "71031b88a58d32467ae02ef4137984538933ddb6ad9e5e12278a55b645b6fb18",
+          "15fff91a940bf508e8665d8291d664c05780702f11817bbfbc47c962f3489c5c",
+          "3b2f5a40af6f4c92284d4eb4c5304dff061d12b9aeddc794f8175aa5ff7e078d"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "name_vi": "Sơn Thiên Đại Súc",
+      "judgment": "Lợi giữ chính; không ăn ở nhà thì tốt. Lợi vượt sông lớn.",
+      "overview": "Đại Súc là tích lũy năng lực và kiềm chế sức mạnh. Học hỏi, giữ nguồn lực rồi dùng vào việc xứng đáng.",
+      "lines": [
+        "Có nguy; lợi dừng lại.",
+        "Xe tuột bộ phận giữ trục.",
+        "Ngựa tốt cùng chạy; lợi gian khó giữ chính. Rèn xe và phòng vệ thường xuyên; lợi tiến đi.",
+        "Thanh ngăn sừng bò non; rất tốt.",
+        "Răng của lợn đã thiến; tốt.",
+        "Đường rộng thông tới trời; hanh thông."
+      ],
+      "source_text_sha256": {
+        "judgment": "8abbeb9ede85e8bab751a5838d9a8aa6938806ae47dab353508933a90d1bde76",
+        "lines": [
+          "1b74126393bee6db11636143c1831dd8bd21b33b7158a5f36c61d7792d0deabb",
+          "bb344921b7ad5d2dd902e1fc43637c1b5cce2eb9bede0cb4288bd64ac968fbbc",
+          "69e8b532adf3b2bcbc61106f9e413ac42d1d791d1ba6ad5f48cf0da91ca11f29",
+          "62a217bf4c6f105c23ffa4462ef19cefca185723e84f478003aa369c62b81410",
+          "24135b471ecfbf3c78533cd340c11f94b25284c95465d6f47334639ca32e2e03",
+          "11464ac4eb01ccafd07b4bb38fe9805793033044771cb899d4392b241793206a"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "name_vi": "Sơn Lôi Di",
+      "judgment": "Giữ chính thì tốt. Xét việc nuôi dưỡng và tự tìm thứ nuôi miệng mình.",
+      "overview": "Di là nuôi dưỡng. Xem mình tiếp nhận gì, nói gì và dùng nguồn lực thế nào để nuôi bản thân và người khác.",
+      "lines": [
+        "Bỏ con rùa thiêng của mình, nhìn ta động hàm ăn; xấu.",
+        "Nuôi dưỡng đảo ngược, trái đường thường, tìm nuôi ở gò cao; tiến thì xấu.",
+        "Trái đạo nuôi dưỡng; cố giữ thì xấu, mười năm không dùng, không có lợi.",
+        "Nuôi dưỡng đảo ngược mà tốt; nhìn chăm như hổ, mong muốn liên tục, không lỗi.",
+        "Trái đường thường; ở yên giữ chính thì tốt, không thể vượt sông lớn.",
+        "Làm nguồn nuôi dưỡng; có nguy nhưng tốt, lợi vượt sông lớn."
+      ],
+      "source_text_sha256": {
+        "judgment": "3c01e95c3aa5d505c3833f6a87d1e2a3659007a1075b530a0afe0ee1e2a36693",
+        "lines": [
+          "e33ebc74df2e7561bd4297cf5ab60324a6836f890e76196f16539eb5e899572f",
+          "05b1f146ba5dde54ac711e08df7b7def440e78db65986e67378c89f3c511c21d",
+          "69a000d9a2260f64ee34f0c52bce6499a02bd14e4a817c27ec8bf871d6c742b2",
+          "ccf254f86c281bcea19c0a6917bc9c93b6afcc6fbec21b00612177242315f6fc",
+          "8505dca1f8b1de95e33d383f8e4f1db44ce9ec64322d32278c317e170440a5e4",
+          "95bfab3c1dd3ebd45d1539bbb2d2eacd99a07c9c93754acffb5f35cbbe02260f"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "name_vi": "Trạch Phong Đại Quá",
+      "judgment": "Xà nhà bị cong; lợi khi có nơi để đi, hanh thông.",
+      "overview": "Đại Quá là gánh nặng vượt mức thường. Cần gia cố nền tảng và quyết đoán, nhưng phải biết giới hạn chịu lực.",
+      "lines": [
+        "Lót bằng cỏ tranh trắng; không lỗi.",
+        "Cây dương khô mọc chồi, người già có vợ trẻ; không gì bất lợi.",
+        "Xà nhà cong; xấu.",
+        "Xà nhà nâng vững; tốt. Có điều khác xen vào thì đáng tiếc.",
+        "Cây dương khô nở hoa, bà già có chồng trẻ; không lỗi, không được khen.",
+        "Lội quá sâu, nước ngập đầu; xấu nhưng không lỗi về đạo nghĩa."
+      ],
+      "source_text_sha256": {
+        "judgment": "d6b4adde97b3267b692aacb991330c1b4a6f1e8806f4f46b21777a04cbe4ceca",
+        "lines": [
+          "5ccf780eb0fee25bcc3689d329636f4f1c47dc5219ff3700c17d3f5117e5af1c",
+          "235e916961f631cf7021ac7910381e5936cb0e3b7a9904046fce72e865e1b242",
+          "c65fd08196df4853bd5ea713a14e4e3bf9030a289839696f58daa59b34bcef96",
+          "528bad276903132f1ccfba65c40eefc5980809b5d0facdcf7c8bbea5176cc624",
+          "afe12a83188ec18fd038aea066d7c816de45f537de9e2da8da480e4e7604b979",
+          "6f861341429aa1427cf9b7303bf525395b7c579fd4d7ecb9560a8c503aac4255"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "name_vi": "Thuần Khảm",
+      "judgment": "Có lòng thành, giữ tâm thì hanh thông; hành động có điều đáng trọng.",
+      "overview": "Khảm là hiểm nguy lặp lại. Giữ lòng thành, ổn định tâm thế và vượt từng chặng thay vì nóng vội.",
+      "lines": [
+        "Hiểm nguy chồng chất, rơi vào hố sâu; xấu.",
+        "Trong hiểm có nguy; chỉ cầu thành tựu nhỏ.",
+        "Đi hay đến đều gặp hiểm, nguy mà phải dừng; vào hố sâu, chưa nên hành động.",
+        "Một vò rượu, hai giỏ đồ, dùng đồ đất; dâng lễ giản dị qua cửa sổ, cuối cùng không lỗi.",
+        "Hố hiểm chưa đầy, chỉ vừa đến mức bằng; không lỗi.",
+        "Bị trói bằng dây, đặt trong bụi gai; ba năm chưa thoát, xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "d2cb58737c4802f6a22522008dc5269e8985817c92d2a6e658f58f7f7c635923",
+        "lines": [
+          "742ed2257260738ce1dbaf0046a82a14f857fde7c6ac5a610f5c8b4fc7214014",
+          "0aad26214ddd41cd00216e53d0a05f94bf022b6847c14ecf8f7089d658fb9cea",
+          "a541cde219fd113c041ab4e87fa6e1b6f2e2e48e2062918f96d4c0a96edc3a8f",
+          "926a84d0b332d57b6011b2f0ffaa2092c21e170bc212b2f14def0840d10798e3",
+          "054b8b22bb6f93b6e00eeb557c0521a5f71a0d189531341078ef4a7db204f8e9",
+          "efe95ecf6eeca8d472754cf24585b1becca5c79f018662826748b074b3e594ee"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "name_vi": "Thuần Ly",
+      "judgment": "Lợi giữ chính, hanh thông. Nuôi bò cái thì tốt.",
+      "overview": "Ly là sáng rõ và nương tựa. Chọn chỗ dựa đúng, giữ sự mềm thuận và dùng hiểu biết để soi đường.",
+      "lines": [
+        "Bước đi còn rối; giữ sự kính cẩn thì không lỗi.",
+        "Ánh sáng màu vàng trung chính; rất tốt.",
+        "Ánh sáng khi mặt trời xế; không gõ vò mà hát thì than tuổi già, xấu.",
+        "Đột ngột đến, bùng cháy, chết và bị bỏ.",
+        "Nước mắt tuôn, buồn và than thở; tốt.",
+        "Vua ra quân, chặt đầu kẻ cầm đầu có tội; không bắt những người không cùng tội, không lỗi."
+      ],
+      "source_text_sha256": {
+        "judgment": "129ddee90e581e9491db9fa259dc684e70894dff6695c5e446121204eb43f5b8",
+        "lines": [
+          "a95359aa6c49ab0d5502c8ffeb307ee8dc4919945eade82e9148ce2bb91f8030",
+          "70bcf7c08effec93615e4a5577b49cf0d0aa0a16be855707dc537bdff34b443f",
+          "c7748018fb928f40f642cca29241808f990d29fa727d1ae1cf10e15e65281217",
+          "304f9308abc95932804d604823ae79fbf1f153bbc08f4a2bbbb7d03e61844442",
+          "1697579a584458cd05d69c0d31769a8e2ce43039f95bceef2ce22f6a92243004",
+          "9c943aba99ef6c2aa0ef0e6caf1f62b40018256d067ae5be6a8bc1746dbb2419"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "name_vi": "Trạch Sơn Hàm",
+      "judgment": "Hanh thông, lợi giữ chính. Lấy vợ thì tốt.",
+      "overview": "Hàm là cảm ứng qua lại. Quan hệ tốt dựa trên sự chân thành, tự chủ và lắng nghe, không chỉ lời nói.",
+      "lines": [
+        "Cảm ứng ở ngón chân cái.",
+        "Cảm ứng ở bắp chân thì xấu; ở yên thì tốt.",
+        "Cảm ứng ở đùi, cứ bám theo người khác; tiến thì đáng tiếc.",
+        "Giữ chính thì tốt, hối tiếc mất. Bồn chồn qua lại, bạn chỉ theo ý nghĩ của mình.",
+        "Cảm ứng ở cơ lưng; không hối.",
+        "Cảm ứng ở hàm, má và lưỡi."
+      ],
+      "source_text_sha256": {
+        "judgment": "1f34c7b8deccb7c94d63e9e3562e6c2349fe82b7491c29e5cddb010de5b5f8ba",
+        "lines": [
+          "45625c4853d47b4ea7784a39c344a1974edf2f82feb7e46d4ea6eaeb07549faf",
+          "ccf8a377ab242082eba67279d955fe8be9d45ba6051937bb7c514d2aaa7582d7",
+          "0facaf610d19053b9cbfa7e1d34affffc9182faae0af9f0bc72542d173d00175",
+          "cc3e74318a1fdd55474db127b5d16ee91815c18d72e841e57bbd32c238b482e2",
+          "c21f949c89e94560b966b143a17556f3c4f7b126e7f83cea1bf49a73bb8927a1",
+          "6fef34ffe0978fb230922ea89e2f121e7dfad7deaa70f7649b779e78b0fcc674"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "name_vi": "Lôi Phong Hằng",
+      "judgment": "Hanh thông, không lỗi, lợi giữ chính và lợi tiến đi.",
+      "overview": "Hằng là bền lâu. Duy trì nguyên tắc nhưng biết điều chỉnh phương thức, tránh nhầm bền chí với cố chấp.",
+      "lines": [
+        "Cầu bền lâu quá sâu ngay đầu; cố giữ thì xấu, không có lợi.",
+        "Hối tiếc mất.",
+        "Không giữ đức bền, có thể chịu nhục; cố giữ thì đáng tiếc.",
+        "Đi săn mà không có thú.",
+        "Giữ đức bền và chính; người vợ tốt, người chồng xấu, theo vai trò được kinh văn cổ phân định.",
+        "Lay động không yên trong việc giữ lâu; xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "0bd791fd55665e4073c092181054974a57db130ec9d580164c073b2d04785738",
+        "lines": [
+          "486d27d6eadf58bf497e8c20a82b48cd1b544ec95b7c45220317694b8572cbc0",
+          "801063413e9fa3f8834921bc28a263dd8cab207f2f668f939f016a88d88e0729",
+          "bded65d27d2a770ac2391aa592939c8d0c176f68d5308a8ed90ab356c846e298",
+          "d1e43d739b807757093c6031c5d05d6f48007ba6a3fb8c4abd775c307a539775",
+          "ab48e3b2dce06ef3c82def7e6cc14f4ac4cffbcca5b43c545fcb9aebb2b20451",
+          "21ae0e9da8bfca0a46e19a93c9506f2c3b15caea5ea2a654fa9f84a8962e9f46"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "name_vi": "Thiên Sơn Độn",
+      "judgment": "Hanh thông; việc nhỏ lợi khi giữ chính.",
+      "overview": "Độn là rút lui đúng lúc. Giữ khoảng cách để bảo toàn nguyên tắc và chuẩn bị cho cơ hội phù hợp hơn.",
+      "lines": [
+        "Rút lui ở phía cuối, có nguy; đừng tiến đi.",
+        "Giữ bằng da bò vàng, không ai tháo nổi.",
+        "Rút lui bị ràng buộc, có bệnh và nguy; nuôi người phục vụ thì tốt.",
+        "Tự nguyện rút lui; quân tử tốt, tiểu nhân không thuận.",
+        "Rút lui đẹp đẽ; giữ chính thì tốt.",
+        "Rút lui rộng rãi, thong dong; không gì bất lợi."
+      ],
+      "source_text_sha256": {
+        "judgment": "e1c5b465ef704546ffc006fe0d836a27ce39cb4c2c98174e91cd8cc1ec3ce30a",
+        "lines": [
+          "f22713f87a1778c97f33a51f6039c8d38cdef1f408397f874e1e68800631ebd8",
+          "fed65cdd2b53c8f7dfb749b7c66fd47d56dac4a59e39bd1f3895173f8fc70724",
+          "f9385c78763167d0602696908e4d26b728aff9764f6c538c0964df2704d8668f",
+          "eed94d3fb2d02f01c87284554df3bc85e90032d9f5dad10e1d8f2a9a50ff16cc",
+          "6b568fe625b37a58eff0341482f5da38922b32cd3c3d82f85eeff3ba8ba778f1",
+          "728f2ba8af2b91c3baa1aaa4bfb89413dd02bdc9e127dc443c6adad8207b2a5a"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "name_vi": "Lôi Thiên Đại Tráng",
+      "judgment": "Lợi khi giữ chính.",
+      "overview": "Đại Tráng là sức mạnh đang lên. Năng lực cần đi cùng nguyên tắc; dùng sức đơn thuần dễ tự mắc kẹt.",
+      "lines": [
+        "Mạnh ở ngón chân; tiến đi thì xấu, điều ấy là thật.",
+        "Giữ chính thì tốt.",
+        "Tiểu nhân dùng sức, quân tử không dùng sức bừa; cố giữ thì nguy. Dê đực húc rào mắc sừng.",
+        "Giữ chính thì tốt, hối mất. Rào mở, sừng không mắc; mạnh như bộ phận giữ trục xe lớn.",
+        "Mất dê một cách dễ dàng; không hối.",
+        "Dê đực húc rào, không lui cũng không tiến, không có lợi; biết gian khó thì tốt."
+      ],
+      "source_text_sha256": {
+        "judgment": "b7fb9ad9bf0dccc3802ca7353f9e14e24d086a56735f06ac574c369d209fa9fd",
+        "lines": [
+          "1f1ca821078a83564cef07e478f83b9b03cc15143947b8d1930a4792c97ef318",
+          "3bdbadf36ac1a213a6e99f9162eda86c55dac5a89c4d7036dc06366d97345671",
+          "3981f63a60ddea32fa0a53ec1db7c13e674caf3d16d3124b0bba71f597434a59",
+          "8c7a5a24f637d3eb6ee84b1a807f9c2471f26f7f63a45044d1e2fb507a276600",
+          "e6e279640f2dd6bd7cc05c65f5ed788eaba5a170a4a41a40bf54c517c2a2138e",
+          "11f5e05a0319ea7412d2feebba88080f00375e24dc99595c452fe7963b75ccfc"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "name_vi": "Hỏa Địa Tấn",
+      "judgment": "Vị hầu an dân được ban nhiều ngựa, một ngày được tiếp kiến ba lần.",
+      "overview": "Tấn là tiến lên và được ghi nhận. Phát huy năng lực công khai nhưng không quá bận lòng với được mất.",
+      "lines": [
+        "Tiến mà bị ngăn; giữ chính thì tốt. Chưa được tin, giữ khoan dung thì không lỗi.",
+        "Tiến mà lo buồn; giữ chính thì tốt, nhận phúc lớn từ bà tổ.",
+        "Mọi người tin thuận; hối mất.",
+        "Tiến như chuột đồng; cố giữ thì nguy.",
+        "Hối mất; đừng lo được mất, tiến thì tốt, không gì bất lợi.",
+        "Tiến bằng sừng, chỉ nên dùng để đánh ấp mình; nguy mà tốt, không lỗi. Cố giữ thì đáng tiếc."
+      ],
+      "source_text_sha256": {
+        "judgment": "40183855bb0e9d6d9b1397b494eb18bbd0090e9c0f17cca9aa3dbe83ffb1a520",
+        "lines": [
+          "ebabce9d51d4358776b1e86c0c6bdbee33b9f1084f68762472d598f4419dbc7e",
+          "1a77ab51affa7c68b58a9ea5016d2f65d18a9df68a9e4d2dfeaa69f7d5263635",
+          "f941e59698925be71138a83170af96dcf7232450cf005aadc8ec09aef242aee9",
+          "25b34137a0f13247d17e659affe5ffa65fc2e2d88ec74d2e5737c104b4772320",
+          "806ce6731c93132c8dbcbcbe622194b0955daacf8b03125cbffc69d93ebb3755",
+          "6fd3fd11b11e350dfbce75e96819db3ceae14ce22518fb83065de1d7735a9188"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "name_vi": "Địa Hỏa Minh Di",
+      "judgment": "Lợi khi gian khó mà giữ chính.",
+      "overview": "Minh Di là ánh sáng bị che hoặc tổn thương. Giữ hiểu biết bên trong và chọn cách thể hiện thận trọng.",
+      "lines": [
+        "Ánh sáng bị thương khi bay, cánh rủ xuống. Quân tử đi, ba ngày không ăn; đến nơi thì chủ có lời trách.",
+        "Ánh sáng bị thương ở đùi trái; dùng ngựa mạnh cứu, tốt.",
+        "Ánh sáng bị thương trong cuộc săn phía nam, bắt được thủ lĩnh lớn; không nên nóng vội chỉnh trị.",
+        "Vào bên trái bụng, hiểu lòng của cảnh tối, rồi ra khỏi cửa sân.",
+        "Ánh sáng bị che như Cơ Tử; lợi giữ chính.",
+        "Không sáng mà tối; đầu lên tận trời, sau rơi xuống đất."
+      ],
+      "source_text_sha256": {
+        "judgment": "5a9995a4629502255f8dc6d486f7e83ba0d32a6d167bb2b5750e8f7c741e0649",
+        "lines": [
+          "eff2f02550c7178b3aeaf9adc6873356fc2c40eb50f821cfc4cf0bb70c536bed",
+          "1ca823aca9204ae0fef572d0618d5f1397aff4acfccefb02b61e45b800eadc73",
+          "ab9f5d62b0efa328656e02de94f005caaabf4c658718189f3f5e992f10f53030",
+          "c5149ef8dacbdf7270f70275c6b28d78bed3e505a831f5abff5f7603b6affbe5",
+          "9001072b2e4628f274a56a402585dc0973c6be95b65781696ab494836f3db0a3",
+          "d639d90185727dc51bc31bfb0c5becb54f5afc1b74acfef2a5a5416086258adc"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "name_vi": "Phong Hỏa Gia Nhân",
+      "judgment": "Lợi với sự chính bền của người nữ.",
+      "overview": "Gia Nhân nói về gia đình và nhóm thân cận. Quan hệ bền cần vai trò rõ, lòng tin và kỷ cương hợp lý.",
+      "lines": [
+        "Đặt phép phòng ngừa trong nhà; hối mất.",
+        "Không theo việc riêng, lo việc ăn uống bên trong; giữ chính thì tốt.",
+        "Người nhà nghiêm, có hối và nguy nhưng tốt. Vợ con cười đùa buông thả, cuối cùng đáng tiếc.",
+        "Làm nhà giàu lên; rất tốt.",
+        "Vua đến với gia đình; đừng lo, tốt.",
+        "Có lòng thành và uy nghiêm; cuối cùng tốt."
+      ],
+      "source_text_sha256": {
+        "judgment": "bc55e573b11967620dd1964b6b9d70869337c2666195653d70095be09380bd71",
+        "lines": [
+          "81ce1ee71d6ea91595d7b21fd76ca754ea45acf7cde2b10b223308a70303cd85",
+          "d45db00fbf52b555590bcd8dda76b4651c783e8ec321f8d0071ef38c95b7fdb0",
+          "7a9b21fd0e4a04ef11fa07485a7e5fb97c75df58f436cfc995a815bfb4a12abc",
+          "32a5db29141102c9f48234374e3184f17309ef6a5f24e23f130c2f464217d008",
+          "037412b8a14314734e2019c0987a18b9e40fc3f2de208e207adf215034c0338b",
+          "1b558748baee3e20041e3dda5d9af6fd43ccb82b2783d075c0846e384654c3ee"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "name_vi": "Hỏa Trạch Khuê",
+      "judgment": "Việc nhỏ thì tốt.",
+      "overview": "Khuê là khác biệt và bất đồng. Tìm điểm chung trong việc nhỏ, kiểm chứng hiểu lầm trước khi đối đầu.",
+      "lines": [
+        "Hối mất; mất ngựa đừng đuổi, tự trở về. Gặp người xấu mà vẫn không lỗi.",
+        "Gặp chủ trong ngõ; không lỗi.",
+        "Thấy xe bị kéo, bò bị giữ; người bị cắt tóc và cắt mũi. Không tốt lúc đầu nhưng có kết quả sau.",
+        "Đơn độc vì khác biệt, gặp người đáng tin và giao thành tín; nguy nhưng không lỗi.",
+        "Hối mất, người trong họ cắn xuyên thịt mềm; tiến thì lỗi gì?",
+        "Đơn độc, thấy lợn lấm bùn và xe chở quỷ; trước giương cung, sau hạ cung. Không phải cướp mà cầu hôn; tiến gặp mưa thì tốt."
+      ],
+      "source_text_sha256": {
+        "judgment": "644020b586ea6cd74da305a05a80d3ecd141dbac838b334cb6aac51cc9a5c418",
+        "lines": [
+          "2aa6833c45712caf94b183742ef5d94997505142e81e5bdd266e51d69577798e",
+          "ea9ea77700a24d18354caef7e095f476c0a785ae7701f1cf725c0e35167af702",
+          "b58ecca1878b3d93382becdf7566b6140f98ce922b8cc23f592a16b3c2326229",
+          "5af39d27900235bc0a6247ee28096a078e62d04b2940d97d5954647d3f651ca8",
+          "1a071fac6313a30024daf88e600c147efa04858bd0c3b4279436d60e9f9a35ee",
+          "d0ca8e39d263eb7f719c807d0eb178c2736e2971942d5aa6ae240bf68f4726cc"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "name_vi": "Thủy Sơn Kiển",
+      "judgment": "Lợi hướng tây nam, không lợi đông bắc. Lợi gặp đại nhân; giữ chính thì tốt.",
+      "overview": "Kiển là trở ngại khó đi. Đổi hướng, tìm người trợ giúp và trở về củng cố năng lực khi cần.",
+      "lines": [
+        "Tiến thì khó, trở lại được khen.",
+        "Bề tôi của vua gặp khó chồng chất, không phải vì lợi riêng.",
+        "Tiến thì khó, trở lại quay về.",
+        "Tiến thì khó, trở lại kết nối.",
+        "Khó khăn lớn, bạn bè đến.",
+        "Tiến thì khó, trở lại được điều lớn; tốt, lợi gặp đại nhân."
+      ],
+      "source_text_sha256": {
+        "judgment": "84b66f8d4e469ab6f31137529e82e42de48d152592e30a170ea341d2f5762df0",
+        "lines": [
+          "cc3fed85828a0745a2eb9e06a828555169d07fe328513fc4ea46a878d5cc0df9",
+          "1d20a15082cbfd448789be4dd29fe7e2648a690bf5184b4c15a09451ae0ed545",
+          "8f54bc401806e4afa56ab5c431ad990dc829a0a1763516ab2e50d766c0eeb386",
+          "9187e6d01463e8584405f0ee33cf9edf0d1bedf32737188555b05bc8d34e1d35",
+          "797d67062f68a06fe51cc86762162d7b515ab8b0f604e464cb16a15f953bc743",
+          "80a993de4f7116b66b3eae75887b20beb03ea11cb392669a17595572b93f4c6d"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "name_vi": "Lôi Thủy Giải",
+      "judgment": "Lợi hướng tây nam. Không cần tiến thêm thì trở lại tốt; cần tiến thì làm sớm tốt.",
+      "overview": "Giải là tháo gỡ và giảm căng thẳng. Giải quyết điều còn vướng rồi trở về bình thường, tránh kéo dài xung đột.",
+      "lines": [
+        "Không lỗi.",
+        "Săn được ba con cáo, được mũi tên vàng; giữ chính thì tốt.",
+        "Mang gánh mà lại ngồi xe, khiến giặc đến; cố giữ thì đáng tiếc.",
+        "Tháo khỏi ngón chân cái; bạn đến và tin nhau.",
+        "Quân tử có thể giải thoát, tốt; khiến tiểu nhân cũng nhận thấy lòng thành.",
+        "Bậc công bắn chim ưng trên tường cao, bắt được; không gì bất lợi."
+      ],
+      "source_text_sha256": {
+        "judgment": "ec410d0f6472f68e8385770064fadf647519700ce2bee6a6969930cd1c605a24",
+        "lines": [
+          "7e2efef0adad3b472b992b6463d1a201ae2475d85b3049d1baf77ef9aa98b911",
+          "d71f7771545bad3c198e49288a725783a094a5345c4518456f4223c64820c2f4",
+          "d7a1f00b15b3a01824dff12f2027c12d341cbf3af8bb6481a0bf15ca0af34de4",
+          "2965199d08e8ed0f1012d3c02b489c5bd8f0ac275163e50e5e1a3363cfadba5d",
+          "31251af285bb65d51122da3a09171db3a5d6953f3ad63b82338af18999e54963",
+          "231fe8c8d7732bcf32144192c0bdac22611b47f64d57316f28a08c35b1c900d1"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "name_vi": "Sơn Trạch Tổn",
+      "judgment": "Có lòng thành thì rất tốt, không lỗi, có thể giữ chính, lợi tiến đi. Dùng gì? Hai giỏ lễ cũng đủ dâng.",
+      "overview": "Tổn là giảm bớt có chủ đích. Bỏ phần dư để giữ phần thiết yếu; lòng thành có giá trị hơn phô trương.",
+      "lines": [
+        "Xong việc riêng rồi mau đi giúp, không lỗi; cân nhắc mức giảm.",
+        "Lợi giữ chính; tiến thì xấu. Không giảm mình mà vẫn tăng ích cho người.",
+        "Ba người đi thì bớt một; một người đi thì được bạn.",
+        "Giảm điều gây bệnh, khiến niềm vui mau đến; không lỗi.",
+        "Có người cho thêm rùa quý giá mười bằng, không thể từ chối; rất tốt.",
+        "Không giảm mà tăng ích; không lỗi, giữ chính tốt, lợi tiến đi, được người phụ tá không riêng nhà mình."
+      ],
+      "source_text_sha256": {
+        "judgment": "14ba3eaa111f86f9ec00f9ffa0bbd95a2af4087b3c02afc5f17aa33463643e34",
+        "lines": [
+          "23025a6072d8adaff2ef481620a82b9d51383f39df0afe853ec4876b880f876c",
+          "d9567e4a0ab0af35f4a9680b64f7c9b2f99a1f035741a008d8db4f25b5b1b9c8",
+          "e42ef556dbd5ccd0ebad83f4080f6d62080aca2f73c14421d68d9df3a4d39290",
+          "e7dc6f181c9acd36fd3abc73a42a81077b25053f95241fb80e3fe4e3524db46b",
+          "0ad3adc07c2dd0a5d5ba84faaf1d32183307a9b3308b9785ba6ac19b91d0de4d",
+          "4ec0b4065999665f320a2f0bd11ff096d20452c42719942f3afddf5ce8392913"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "name_vi": "Phong Lôi Ích",
+      "judgment": "Lợi tiến đi, lợi vượt sông lớn.",
+      "overview": "Ích là tăng ích và hỗ trợ. Dùng nguồn lực để tạo giá trị chung, tránh chỉ đòi nhận phần lợi.",
+      "lines": [
+        "Lợi làm việc lớn; rất tốt, không lỗi.",
+        "Có người cho rùa quý giá mười bằng, không thể từ chối. Giữ chính lâu dài tốt; vua tế Thượng Đế tốt.",
+        "Tăng ích trong việc tai biến, không lỗi. Có thành tín, đi trung chính, dùng ngọc khuê báo bậc công.",
+        "Đi trung chính, báo bậc công thì được thuận; lợi dựa vào đó để dời nước.",
+        "Có lòng thành và lòng làm lợi cho người, không cần hỏi cũng rất tốt; lòng thành đáp đức của ta.",
+        "Không ai giúp, có người đánh; lòng không bền, xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "0bafbe8277e6044186f28116896109ea3c4c4562c8e66a7a08b92bdd52647c50",
+        "lines": [
+          "35867b424e9dff016a47ebe3d242957c21b52a62e8b29e6b8d79e39a35b2109a",
+          "ae9ef913463a48d627c81fe89f24e7f46af9ad32fabf445876e10875371d2332",
+          "b4916fcdc8cd001392bee7fd4758b0b044c8553c4eba4fa4753383621349ef27",
+          "1f4b401dc543fdeef191908df5ab0f901b180872fc22805773a7326b867aa7c7",
+          "e0f83dce1ea34458b6db63ac743009bd64938a4d16dd76957adc240feb06bd57",
+          "8328a235c20173f2beb868197c3c25d92c61bc58b7c585055fe1f04d3292a87a"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "name_vi": "Trạch Thiên Quải",
+      "judgment": "Công bố ở sân vua, thành tín báo rõ điều nguy. Báo từ ấp mình; không lợi dùng binh, lợi tiến đi.",
+      "overview": "Quải là quyết định và loại bỏ điều không phù hợp. Cần nói rõ, có căn cứ và giữ bình tĩnh; mạnh bạo thiếu chuẩn bị dễ gặp lỗi.",
+      "lines": [
+        "Mạnh ở ngón chân trước; tiến mà không thắng thì thành lỗi.",
+        "Cảnh giác báo động; đêm có quân đến cũng đừng quá lo.",
+        "Cứng mạnh ở gò má có điều xấu. Quân tử quyết đoán, đi riêng gặp mưa bị ướt; bị giận nhưng không lỗi.",
+        "Mông không có da, đi khó nhọc. Dắt dê thì hối mất; nghe lời mà không tin.",
+        "Như cỏ dền cần dứt bỏ quyết liệt; đi trung chính thì không lỗi.",
+        "Không kêu báo; cuối cùng có điều xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "49c4c285e6b40b567d0933e33eb47b1f553d52f04c6220f24309872f440ba81e",
+        "lines": [
+          "961871f3f13758f3f93744f88222ce630c79b757a06ec7693288239b9b0f632f",
+          "9307d42eb2b5c172d7caebac17b323d4932856e0364b447ccee36cb368d03a07",
+          "9000a74a152fd4e798da3181edb336f0562cda0c13ee0bca079292ac0603690b",
+          "d11eab64e536d88f89eeaeb6c0fd8bb38875c2d7dec6667fe49f87ed7f8c9d2f",
+          "262cedea54306de9695fdd58641bb613902a483aa64357bf383b5fd41b794e69",
+          "2444eb901e9aa47273577215a567766f231afc485e50f4838838dea7778ac665"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "name_vi": "Thiên Phong Cấu",
+      "judgment": "Người nữ mạnh; không nên lấy làm vợ.",
+      "overview": "Cấu là cuộc gặp bất ngờ với lực ảnh hưởng mạnh. Xét kỹ điều mình tiếp nhận và đặt giới hạn sớm.",
+      "lines": [
+        "Buộc vào chốt kim loại; giữ chính thì tốt. Tiến sẽ thấy xấu; lợn gầy vẫn muốn nhảy nhót.",
+        "Trong bọc có cá, không lỗi; không lợi cho khách.",
+        "Mông không da, đi khó; nguy nhưng không lỗi lớn.",
+        "Trong bọc không cá; điều xấu phát sinh.",
+        "Dùng cây kỷ che quả dưa, giữ vẻ đẹp bên trong; có điều rơi xuống từ trời.",
+        "Gặp bằng sừng; đáng tiếc, không lỗi."
+      ],
+      "source_text_sha256": {
+        "judgment": "53d5f86a14ca84838d37b8df92fbe54d0ad0dca2b98caba1af0b460b578309b5",
+        "lines": [
+          "248ed23cb209bf4fab1178f0a6462097f3fa135f9e94b00c33f49938e4f18fe9",
+          "ea6b66c6061ad5a615880aa7869b22aa0ff14802dd5b987814b8ec7b3b69c77a",
+          "a971c288bbf2e053ded8894188fd839e4e173c1407b60d70606b3c5a7610f530",
+          "9242e905dbcabc530564e480edf9a46180cea5533d24ab8f44ea772332f3ed72",
+          "ccacba2f03adce7c93e22d7109b84b1057eeacc3dc3c2e2f3dc3bbb8795d6260",
+          "7169120c73c3a9a289f9afbf05ab226eb4a3bfe0ddc0d373d7af9e6718eb2bab"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "name_vi": "Trạch Địa Tụy",
+      "judgment": "Hanh thông; vua đến miếu, lợi gặp đại nhân, hanh thông và lợi giữ chính. Dùng vật tế lớn thì tốt; lợi tiến đi.",
+      "overview": "Tụy là quy tụ nguồn lực và con người. Cần mục đích chung, lòng thành và người dẫn dắt đáng tin.",
+      "lines": [
+        "Có lòng thành mà không đến cuối, rối rồi tụ. Nếu kêu gọi, nắm tay rồi cười; đừng lo, tiến không lỗi.",
+        "Được dẫn đến thì tốt, không lỗi; có thành tín thì lễ giản dị cũng lợi.",
+        "Tụ mà than, không có lợi; tiến không lỗi, có điều đáng tiếc nhỏ.",
+        "Rất tốt, không lỗi.",
+        "Quy tụ có địa vị, không lỗi. Chưa được tin thì giữ đức lớn, lâu và chính; hối mất.",
+        "Than thở, nước mắt nước mũi; không lỗi."
+      ],
+      "source_text_sha256": {
+        "judgment": "63d0fd8cca846808754617332be9466c50194be8526ad65e6a5fc184cb46c1ee",
+        "lines": [
+          "d1f92b47e413aa84fe58e5f291ee705c188f5cc688603df74d55afed8ad1b7d5",
+          "c2c3feebb9abee268521ac1ebc56e923c93ead46ed0695ba6775d87341584841",
+          "3548d479403b0b050dc02d9e5ea7653da1bbd7f1b389cf602ff209161685ab43",
+          "900af5797103cdfc75703d79f8c36ff34e610e770326754de06774dcd769eefd",
+          "e0e24869ea3d75e7166743374bbc9e7dcc35787b898674f5291572cdb5a046b3",
+          "8a3b0dcf78a7094fa64d778ee14ca306341a95a3b07fd7d6690a6f6060ed21a2"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "name_vi": "Địa Phong Thăng",
+      "judgment": "Khởi đầu lớn, hanh thông; gặp đại nhân, đừng lo. Tiến về nam thì tốt.",
+      "overview": "Thăng là đi lên từng bước. Nỗ lực đều đặn, nhờ hỗ trợ đúng và xây chắc từng bậc.",
+      "lines": [
+        "Được tin để đi lên; rất tốt.",
+        "Có lòng thành, lễ giản dị cũng lợi; không lỗi.",
+        "Đi lên vào ấp trống.",
+        "Vua tế ở núi Kỳ; tốt, không lỗi.",
+        "Giữ chính thì tốt; đi lên từng bậc.",
+        "Mải miết đi lên trong tối; lợi ở sự chính bền không ngừng."
+      ],
+      "source_text_sha256": {
+        "judgment": "80b16c81a0bad327dd18a9602b55bf6702fef48f27bddbd63bbfe66934f82e45",
+        "lines": [
+          "e52ac8e881dacf4a589e215eee59fe395b85bec436f47587d500eed91c205c56",
+          "30ecc5db828f1cf54124b54afd035ee0eaace8c9e5578a93a6401c219effbd87",
+          "7c61adec59c0109ae46e813bf4843824c61514668b5c440fc5e3704c61c7b89a",
+          "3a6ee1b7ac1eea1f0bb93e716cfca3f2c4d8485c9b2e6205096fc483c0bbd38e",
+          "44cc6cede29517ed624bb244f8cd538ff07e239a5314468f47935b1ef57ccf86",
+          "6b230203a74082582b7b4e7c58732f1558c9ddae910c62341263635f8b0dfde2"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "name_vi": "Trạch Thủy Khốn",
+      "judgment": "Hanh thông. Giữ chính, đại nhân tốt, không lỗi; có nói cũng chưa được tin.",
+      "overview": "Khốn là thiếu nguồn lực hoặc bị hạn chế. Giữ phẩm chất và hành động thiết thực khi lời nói chưa có sức nặng.",
+      "lines": [
+        "Mông bị kẹt ở gốc cây, vào thung lũng tối; ba năm không gặp ai.",
+        "Khốn trong rượu thức ăn, người đeo dải đỏ đang đến. Lợi tế lễ; tiến thì xấu, không lỗi.",
+        "Khốn vì đá, dựa vào gai; vào nhà không thấy vợ, xấu.",
+        "Đến chậm, khốn vì xe kim loại; đáng tiếc nhưng có kết thúc.",
+        "Bị cắt mũi chân, khốn vì dải đỏ; dần được cởi bỏ, lợi tế lễ.",
+        "Khốn vì dây leo và nơi chông chênh; nói đi sẽ hối, đã có hối. Tiến đi thì tốt."
+      ],
+      "source_text_sha256": {
+        "judgment": "93b1de0e93bf24d77d9d193378dcb54cf59dac97d2c548a6ed75f650d1f27437",
+        "lines": [
+          "da6d77f9d5f847649df7cd45bf4a314d9ba2c4849c0b807ce468cd2160f70f33",
+          "5e329d35d3600c2f9aa873c72689202ce889679aa3319ae564ccec1a49000a23",
+          "ac85f2142417bf0cfe75431a6403a4e33e712c68caa6969660550ad79884c5e5",
+          "90fdeaf1a5c6c3aecb01cc307aec232750a9a4ec92b646fb9164cdcfea37d065",
+          "101c2f59d18c0b4300ceea7289ec68ba4645d53207ad4ccf37404ef698771798",
+          "bc106c27fa62ed82cdcf052aa6a2cd88343338b1ecab456f752d258954b73abd"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "name_vi": "Thủy Phong Tỉnh",
+      "judgment": "Đổi ấp không đổi giếng, không mất không thêm; người đi lại dùng giếng. Gần lấy được mà dây chưa tới, lại vỡ bình thì xấu.",
+      "overview": "Tỉnh là nguồn nuôi dưỡng chung. Bảo trì nền tảng và hoàn tất bước cuối, vì có nguồn tốt chưa đủ nếu không dùng được.",
+      "lines": [
+        "Giếng bùn không uống, giếng cũ không có chim thú đến.",
+        "Nước ở đáy chỉ để bắn cá nhỏ, vò hỏng bị rò.",
+        "Giếng đã vét mà không dùng, khiến lòng buồn. Có thể múc; vua sáng thì mọi người cùng hưởng phúc.",
+        "Xây thành giếng; không lỗi.",
+        "Giếng trong, nước suối mát có thể uống.",
+        "Nước giếng được đưa lên, đừng che lại; có lòng thành, rất tốt."
+      ],
+      "source_text_sha256": {
+        "judgment": "a452884d95034d93a4e6c7b22b3701f191da9974b2aadb1ad209e73018cbd616",
+        "lines": [
+          "57ea6e49b85ac264aef7fbb225e4f831ce9578d56ed2d9b9e65fb8ea91bae104",
+          "09595c856484adb93eec4a77002b752ea689e4cec9abf5983f777acee1e9160f",
+          "f5d21f4dfb50adb84439345ecd7ec57eef6c96a243b99ba65495859934bb09a8",
+          "b4c60191399b7102505e828ae5b29cf0ea45c8563710cd99fa6f06aa44e6ead0",
+          "a7b48b8970d490a322b056817220cc66ebffef25a1fe21c71e7b76cb2a273a2e",
+          "3e27c99fd46fbc39ab9b117915bc7ed890ee459b60817bcea514f9ad44e79faa"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "name_vi": "Trạch Hỏa Cách",
+      "judgment": "Đến ngày thích hợp mới được tin; khởi đầu lớn, hanh thông, lợi giữ chính; hối tiếc mất.",
+      "overview": "Cách là thay đổi nền nếp cũ. Cải cách cần thời điểm, căn cứ và sự tin tưởng, tránh thay đổi chỉ vì sốt ruột.",
+      "lines": [
+        "Buộc chặt bằng da bò vàng.",
+        "Đến ngày thích hợp mới thay đổi; tiến thì tốt, không lỗi.",
+        "Tiến thì xấu, cố giữ thì nguy. Lời cải cách được xét ba lần thì có lòng tin.",
+        "Hối mất; được tin để đổi mệnh, tốt.",
+        "Đại nhân đổi như hổ thay lông; chưa bói đã được tin.",
+        "Quân tử đổi như báo thay lông, tiểu nhân đổi nét mặt; tiến xấu, ở yên giữ chính tốt."
+      ],
+      "source_text_sha256": {
+        "judgment": "1085d9079b3cad437d16da1793d9867e549c52dba4e5d504ea95759481e87fa5",
+        "lines": [
+          "c134feacd78559e1cd2fd86be276fac0c1223127c04f84d9d386000c9e0c4eb2",
+          "ab66a031f53569249bb2b1c1bc82c141e38ac60d4a379cca95d2dfd857ef9cab",
+          "8aa435e485c38201ce7e55edc65ff2950474ed381c2a9b0a6ca3ffd1edd2b995",
+          "c6332024401bf8b7a591e67f6f51f3d69502aff50ccc13a209fd8ff9ce7bf59d",
+          "79ac240d57f56eed70d055afcfe9def9a064258ac313afaa95f5a161fd3c158e",
+          "c26ac1d36fc34637111c71c416f76e6845e98c1d0d9aa06c4aff1c96aaa704ff"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "name_vi": "Hỏa Phong Đỉnh",
+      "judgment": "Rất tốt, hanh thông.",
+      "overview": "Đỉnh là đổi mới để nuôi dưỡng và tạo giá trị. Cần người phù hợp, nền tảng vững và cách dùng nguồn lực có trách nhiệm.",
+      "lines": [
+        "Đỉnh lật chân, lợi đổ chất bẩn ra. Có thiếp nhờ người con, không lỗi.",
+        "Đỉnh có thức ăn; người đối địch có bệnh không đến được, tốt.",
+        "Tai đỉnh đổi, việc đi bị tắc, mỡ chim trĩ không được ăn. Mưa sắp đến làm giảm hối; cuối cùng tốt.",
+        "Đỉnh gãy chân, đổ thức ăn của bậc công, thân bị vấy bẩn; xấu.",
+        "Đỉnh tai vàng, đòn khiêng kim loại; lợi giữ chính.",
+        "Đỉnh có đòn khiêng bằng ngọc; rất tốt, không gì bất lợi."
+      ],
+      "source_text_sha256": {
+        "judgment": "bbede109584afcf1bc637a9fa8aab3c0c49c2b97cf34023b6197944e55621cbb",
+        "lines": [
+          "efb377404950a5e5fd115c732f9f820bd6d258183ae1ff988b4639ae625b1bab",
+          "0442be7bda090fe474c1c2c508e538865e2bb37cd1e5bae1b120f4b86a7802eb",
+          "4ed0818f8627f8096dca7a3b35512c2949a08bc1efc2bd38257587edd8bcef77",
+          "4258c26b98f02e99dd8eb6639679aa8912c85e4cef26a93745574961e4d1bcf6",
+          "0bddbd9d3ccd094055f0a40d7d8dac05a795753c6b3b6915370b208900b9a74a",
+          "9c243140a7d4d04929ee880b9027dea4be2fdeee82ca382097c50f296e8769d2"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "name_vi": "Thuần Chấn",
+      "judgment": "Hanh thông. Sấm đến gây sợ, rồi cười nói vui. Sấm chấn động trăm dặm mà không đánh rơi muỗng và rượu tế.",
+      "overview": "Chấn là biến động gây giật mình. Giữ bình tĩnh và trách nhiệm giữa thay đổi, tránh hành động trong hoảng loạn.",
+      "lines": [
+        "Sấm đến gây sợ, sau cười nói vui; tốt.",
+        "Sấm đến nguy, mất nhiều của, lên chín đồi; đừng đuổi, bảy ngày được lại.",
+        "Sấm làm bàng hoàng; biết hành động sau chấn động thì không họa.",
+        "Chấn động rồi mắc trong bùn.",
+        "Sấm đi lại, có nguy; liệu không mất, còn việc phải làm.",
+        "Sấm khiến run rẩy, mắt hoảng hốt; tiến thì xấu. Chấn động ở hàng xóm chưa đến mình, không lỗi; hôn nhân có lời dị nghị."
+      ],
+      "source_text_sha256": {
+        "judgment": "20fbfb04af5141d42146e89e36b798d91c370e11ae9a4af3bf9399374d0f2d91",
+        "lines": [
+          "0dbee1b29521b003bcd01feedb398c336ba07a6cc5230473711e8851d584c581",
+          "7dcfaab9439e892844f62e9ee2ea63a4ee65c2523a56456d26de9c08a02e33b6",
+          "23e4aa5b85891f2d0410f12202a13f7aaa7782e7a8f7bab77909d39c23ec7d79",
+          "65b2ff8dbfb6b4e28e4d00c40b567e0cb74804fb8595df1c77901f4ca1700033",
+          "92da0ec9e45f80599d7136d599dbe576b397182d67711aca10ba84cc40f0148e",
+          "cfa5c7afe361d9b6d65db997bef868f5204a6b83ca2a2b237b2fb03a67b24eb8"
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "name_vi": "Thuần Cấn",
+      "judgment": "Giữ lưng yên, không còn thấy thân mình; đi trong sân không thấy người, không lỗi.",
+      "overview": "Cấn là dừng đúng chỗ. Biết giới hạn, nghỉ để tự xét và không để ngoại cảnh kéo mình hành động liên tục.",
+      "lines": [
+        "Dừng ở ngón chân; không lỗi, lợi giữ chính lâu dài.",
+        "Dừng ở bắp chân, không cứu được người đi theo; lòng không vui.",
+        "Dừng ở eo, chia cứng phần lưng; nguy làm nóng lòng.",
+        "Giữ thân yên; không lỗi.",
+        "Giữ hàm yên, lời nói có thứ tự; hối mất.",
+        "Dừng bằng sự đôn hậu; tốt."
+      ],
+      "source_text_sha256": {
+        "judgment": "d0df6171b668ec686e137c0537f07e058c386c7526e278b39b74ca74cc4dbe51",
+        "lines": [
+          "e43708116b9fffa26bbb6c9507a17160630fb7081633b9985493d1b6e213c9ac",
+          "49aacaf17d35b134ffc753bf45dcd7ed8ce3a78e2307f4f14359976eb85ef26b",
+          "472f16c7f1d179115bc9ebbddf4bbaaaae0fc4fad7a1c240abe1bd4d2043b823",
+          "4ce1496b9bcfe41fdaa9905c3428535d80c8bf0659c69b50d6dca8d5cb5ce621",
+          "7a90289e8d7054d3a613cf69bf6be4a180f5d4213639d2114f9426e3443549ee",
+          "f15b702f2f4201102fdd259310ed5bc8c8ccb4fbd0ae48700fe03432a74b718b"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "name_vi": "Phong Sơn Tiệm",
+      "judgment": "Người nữ về nhà chồng thì tốt; lợi giữ chính.",
+      "overview": "Tiệm là tiến dần theo trình tự. Tích lũy và xây quan hệ bền, tránh bỏ qua các bước chuẩn bị.",
+      "lines": [
+        "Chim hồng dần đến bờ; người trẻ có nguy và lời dị nghị, không lỗi.",
+        "Chim hồng dần đến đá bằng, ăn uống vui; tốt.",
+        "Chim hồng dần đến đất cao; chồng đi không về, vợ mang thai không nuôi được, xấu. Lợi chống giặc.",
+        "Chim hồng dần đến cây, có thể tìm cành bằng; không lỗi.",
+        "Chim hồng dần đến đồi; vợ ba năm không có thai, cuối cùng không gì ngăn được, tốt.",
+        "Chim hồng dần đến đất cao; lông dùng làm nghi thức, tốt."
+      ],
+      "source_text_sha256": {
+        "judgment": "f54cb2214955fc741d11bd1befe74240347f0f61350b0b7fc02a9bf193f515f6",
+        "lines": [
+          "6e7620a6293c2c03ed3140531181f164d4afac3533865cb1a9c454faf6dd6582",
+          "1a565731ea6f5b57c8e3da6ef14bbff7f62f51977c5be3353d5b983813a0ec00",
+          "5674db7b51d5adfc9bc8b6bb2d6e7723b1f7550cbbee1db9492086b579659c9e",
+          "df9c8108a8fa516fbf31da1f59d206c70ee3e67556fa0b46e0e569c0506db890",
+          "0ed0ca8da79f09a6b39b3251202a7ab87658cc2d56e0a2bc23a2d75cc549b8af",
+          "c76a26f1568f5d4b85e0f792bc9c27d8fd95246fa5d71f580e68f37026652c62"
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "name_vi": "Lôi Trạch Quy Muội",
+      "judgment": "Tiến đi thì xấu; không có điều thuận lợi.",
+      "overview": "Quy Muội nói về quan hệ hoặc bước đi khi vị thế chưa phù hợp. Cần xét điều kiện và tránh cam kết vội.",
+      "lines": [
+        "Em gái lấy chồng ở vai thứ, chân què vẫn đi được; tiến thì tốt.",
+        "Mắt kém vẫn nhìn được; lợi sự chính bền của người ở kín.",
+        "Em gái chờ lấy chồng, trở về ở vai thứ.",
+        "Em gái lấy chồng lỡ kỳ; chậm nhưng có lúc phù hợp.",
+        "Đế Ất gả em; tay áo người chính không đẹp bằng người thứ. Trăng gần tròn, tốt.",
+        "Người nữ cầm giỏ không có vật, người nam cắt dê không có máu; không có lợi."
+      ],
+      "source_text_sha256": {
+        "judgment": "508db3546e4eab0c21a0bf1036f220d394c6b4e4be6c83e53ad2abfc77530c39",
+        "lines": [
+          "c092468a933d8ccf870fdd0ca5a693aa7bd749e11426b249e124b942be4d98d5",
+          "854eb06e7fd782f4136ccf9bf20fa2790537a6b9d1214d3dcd947ec75aba0bed",
+          "0ba47f54df29297d0d6f52ddd36b66c8e81f9a458235ae1829f9f60be6d35dd6",
+          "5234143d7c15ca2f45c26d87a625ae18780e01cd0bc12aaa44d6332cd2fc9e14",
+          "bd1708213c9ecc011aac418e1513248888bb6320a9fddcfccf9f4c96c3dcd5b5",
+          "7b79ad13c4ca0d7099bb02aaf30c4ffc720743a04be924ffea1a0e88f8c2d262"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "name_vi": "Lôi Hỏa Phong",
+      "judgment": "Hanh thông, vua đến; đừng lo, nên như mặt trời giữa trưa.",
+      "overview": "Phong là đầy đủ và thịnh lớn. Dùng sự sáng suốt khi việc đang đạt đỉnh, tránh để phức tạp che mất thực trạng.",
+      "lines": [
+        "Gặp người chủ tương xứng; dù ngang nhau không lỗi, tiến được trọng.",
+        "Màn che dày, giữa trưa thấy sao Bắc Đẩu. Tiến bị nghi, có lòng thành khai mở thì tốt.",
+        "Che phủ dày, giữa trưa thấy sao nhỏ; gãy cánh tay phải, không lỗi.",
+        "Màn che dày, giữa trưa thấy sao Bắc Đẩu; gặp người chủ ngang hàng, tốt.",
+        "Vẻ sáng đến, có phúc và khen; tốt.",
+        "Nhà lớn mà bị che, nhìn cửa vắng không người; ba năm không gặp, xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "e9b76f0c774438aae50742c003d55d5308f45809fdf44a2f9846c2725b04175b",
+        "lines": [
+          "b504d83fe129e118adb0734383227b46dcf76ba42f3b62f8c5053cec32701987",
+          "52197fba780df2cb8f0bfb0f38104169077b6f985f8b3775e1fe3e58d95e5ea8",
+          "70ad0424b211ba2d0a62b39937d43a1e0ad57dbb17142f431d82935c983d3bcd",
+          "87fd838d5b40992eaefec6115ca749be29f46f06aa815e91a626ea5f68ab6611",
+          "202a759f50091d3c372766dd6fae74b3d8d801f4c0e62396bc9859bc70e8e006",
+          "2a95546700920a8bf609d6ee0c399860a857b4ea757f9d58f10eca2cd48c1b5f"
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "name_vi": "Hỏa Sơn Lữ",
+      "judgment": "Hanh thông nhỏ; người lữ hành giữ chính thì tốt.",
+      "overview": "Lữ là ở nơi tạm hoặc môi trường lạ. Cần tự chủ, ứng xử mềm và giữ nguồn lực thiết yếu.",
+      "lines": [
+        "Người lữ hành nhỏ nhen vụn vặt, tự chuốc tai họa.",
+        "Người lữ hành đến quán, giữ của, có người giúp trẻ trung; giữ chính.",
+        "Quán bị cháy, mất người giúp; cố giữ thì nguy.",
+        "Người lữ hành có chỗ dừng, có của và rìu, nhưng lòng chưa vui.",
+        "Bắn chim trĩ, mất một mũi tên; cuối cùng được khen và ban mệnh.",
+        "Chim cháy tổ, người lữ hành trước cười sau khóc lớn; mất bò vì dễ dãi, xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "cf6bf5d55efc78f5ea2da88e48432cccad606cec29a4fae58c71a7ad0a78ef6a",
+        "lines": [
+          "df4853cb9e3f03d69e7946b22fdee82cce9a7fb0f889eabc59fd8285fb46832f",
+          "2efa45eb5c594c9a1ee02e5c80aa93c21b5e5c7f6b2bed44f4816fbf25c002e2",
+          "1245bbaf8a576a705bb6de4adc7fdefee5dda3593e3e037163d27bb00f22ab82",
+          "7c96c2ed76d9b8c7d9aa25f654e0b241080a8aa3f8295d6526bb0dce727e33c1",
+          "01f48a8801a6213e22b4944891df31d25cb039ec3bd5f5599f45a6eeec742976",
+          "acf4f74f4ed3a343c2375fc58ddfb1ecec8bd14cbeb645a169e64bf54b26097d"
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "name_vi": "Thuần Tốn",
+      "judgment": "Hanh thông nhỏ, lợi tiến đi và lợi gặp đại nhân.",
+      "overview": "Tốn là thấm dần bằng sự mềm thuận. Rõ mục tiêu và kiên trì tác động, tránh do dự hoặc phục tùng quá mức.",
+      "lines": [
+        "Tiến rồi lui; lợi sự chính bền của võ nhân.",
+        "Nhún ở dưới giường, dùng người ghi lễ và thầy cúng nhiều; tốt, không lỗi.",
+        "Nhún thuận lặp đi lặp lại; đáng tiếc.",
+        "Hối mất; săn được ba loại vật.",
+        "Giữ chính thì tốt, hối mất, không gì bất lợi. Đầu không thuận nhưng cuối có kết quả; xét ba ngày trước và sau ngày Canh, tốt.",
+        "Nhún ở dưới giường, mất của và rìu; cố giữ thì xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "249db389bc9bb6d29d80d16f9cf6a086e467b1d424de76f94315cba8ce6a6a39",
+        "lines": [
+          "d06c3aa092afad5524dd2ac8fcd04e925a4e354394c39dbe49eb2c668d6d4069",
+          "20a42a50690759a04cfb8b31ae4bdd90d09064dc203421ebfdf1f5e9bd7fc09f",
+          "90502a60617662bb5e8d83cfde9b4698d8959af2370e42409831484b185eb203",
+          "06ee82dfa8ebf4b22ad699c057f5c5416a2a4071709e2ac292f48cf8fefb125d",
+          "54b5d84487684563bb0bbc61c2c3b25af81caa7fea36253c3b92b16c53418dda",
+          "b5cd0254151c39b2023ba5556346a90360efe70388ac8c5c0cd0bafe79e7ce2d"
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "name_vi": "Thuần Đoài",
+      "judgment": "Hanh thông; lợi giữ chính.",
+      "overview": "Đoài là niềm vui và giao tiếp. Vui vẻ cần đi cùng chân thành, tránh tìm sự hài lòng bằng cách bỏ nguyên tắc.",
+      "lines": [
+        "Vui hòa thuận; tốt.",
+        "Vui có lòng thành; tốt, hối mất.",
+        "Đi tìm vui từ bên ngoài; xấu.",
+        "Cân nhắc niềm vui, chưa yên; tách điều gây bệnh thì có vui.",
+        "Tin vào điều đang bào mòn mình; có nguy.",
+        "Dẫn dụ vào niềm vui."
+      ],
+      "source_text_sha256": {
+        "judgment": "e3fff949c323d8e239961c7783609786ea9449b7566c517c313f99fb92f0664f",
+        "lines": [
+          "5d24d56b8240654500343117ac3fb65f73160ee46465429e16b89d070e5d0957",
+          "cd29456a9dfe9fe151534f4da9364a029b6570955dfa6eb1de14e359f837a86a",
+          "90951c8d6324b57ba6bd0eb2f666539d05a68b4426cdf6b61905071dbc1e9f7f",
+          "d65cbb2666b10b86b23e8409855b89fae791c60643887fbf973cfffdf2ad8ff2",
+          "414369b64d5f3d089f09e31386a86e98e5f802350fa075c96d88297c7bd60b58",
+          "3fad80be03eb91245ab9de1b4bfcee7471bc7129cd5e3941665f31ac3c5a9a27"
+        ]
+      }
+    },
+    {
+      "id": 59,
+      "name_vi": "Phong Thủy Hoán",
+      "judgment": "Hanh thông; vua đến miếu, lợi vượt sông lớn, lợi giữ chính.",
+      "overview": "Hoán là làm tan sự ngăn cách. Tái lập lòng tin và mục đích chung khi con người hoặc nguồn lực đang tản mát.",
+      "lines": [
+        "Dùng ngựa mạnh để cứu; tốt.",
+        "Trong tản mát chạy đến chỗ dựa; hối mất.",
+        "Làm tan sự chấp vào bản thân; không hối.",
+        "Làm tan nhóm riêng; rất tốt. Tản để tụ lớn như gò, điều người thường khó nghĩ.",
+        "Ban hiệu lệnh lớn như mồ hôi tỏa; phân tán của nơi vua ở, không lỗi.",
+        "Làm tan cảnh đổ máu, tránh xa và thoát ra; không lỗi."
+      ],
+      "source_text_sha256": {
+        "judgment": "dd7c99f956af5fcea294d063ddb29b2d415b05307fe2e57c4a96eb57dc7da43a",
+        "lines": [
+          "2ba7b93549f0a84d5274af1410da3486f96a825df1d6a166ec71c21495888d9b",
+          "4d3af86ba46e20035ddc335b8440e10600af48c1433cee5a27741940b10823bf",
+          "b46a62f39a8b45734fa27de35b97d5c21ce7e61c491e54610cf14276eee7988e",
+          "cd13b589737839b901731cb1d6d6d76896af8dbd626f5fe94dc384657b9692c1",
+          "dbe15c6b1ccf82ec016655f288176bf6de3c1a702890589fe36220e8510123e6",
+          "39232b7b4473e861e22db91d1bb50fe72c34d3276b0cd60b65c3fed6173e93c7"
+        ]
+      }
+    },
+    {
+      "id": 60,
+      "name_vi": "Thủy Trạch Tiết",
+      "judgment": "Hanh thông; tiết chế khổ sở thì không thể giữ lâu.",
+      "overview": "Tiết là đặt giới hạn hợp lý. Kỷ luật giúp bền vững, nhưng giới hạn quá cứng gây tổn hại.",
+      "lines": [
+        "Không ra khỏi sân trong; không lỗi.",
+        "Không ra khỏi sân ngoài; xấu.",
+        "Không tiết chế thì than thở; không đổ lỗi cho ai.",
+        "An lòng với tiết chế; hanh thông.",
+        "Tiết chế dễ chịu; tốt, tiến được trọng.",
+        "Tiết chế khổ sở; cố giữ thì xấu, hối mất."
+      ],
+      "source_text_sha256": {
+        "judgment": "a9afdef4e743b959632632529fca9a91072fec408250454c528bfa652456a974",
+        "lines": [
+          "9bde22e6d96a28c65808146c488a500c8330f28a261796b484d8bfd80b9ce3ce",
+          "b886e0a5babbceac33190e0f0eef7ac68d2b8093afa8dfc59b1bb334289dae2e",
+          "16e5a2cf8a679e63bb2a609bceac51358aab59d5b4da6b445e2a890da235763d",
+          "4c3b4967cb43ec3a79e3004c91ebbd2946a8e2aa35f8039f19a2adbfed121813",
+          "2b15dd29173b03b055059ba889af217a2cc13740e7a9cc465d93f52ffff2ff6f",
+          "3c465f78158a3e99c04b9baeb835a3d6028195d278aeba1a0a90075e7513909b"
+        ]
+      }
+    },
+    {
+      "id": 61,
+      "name_vi": "Phong Trạch Trung Phu",
+      "judgment": "Lòng thành cảm đến lợn và cá thì tốt; lợi vượt sông lớn, lợi giữ chính.",
+      "overview": "Trung Phu là sự thành tín từ bên trong. Xây lòng tin bằng tính nhất quán và hành động, không chỉ lời hứa.",
+      "lines": [
+        "Biết liệu trước thì tốt; có ý khác thì không yên.",
+        "Hạc kêu trong bóng, con đáp lại; ta có chén ngon, cùng ngươi chia sẻ.",
+        "Gặp đối thủ; khi đánh trống, khi dừng, khi khóc, khi hát.",
+        "Trăng gần tròn, mất ngựa cùng đôi; không lỗi.",
+        "Có lòng thành gắn kết; không lỗi.",
+        "Tiếng gà bay lên trời; cố giữ thì xấu."
+      ],
+      "source_text_sha256": {
+        "judgment": "9e03175ec2ff4c797fe0b024eb1d608fea855f5dbfe22ea1eedd9e47d3a84398",
+        "lines": [
+          "be3a46f5fe0e1ea28f3a8099f6ad76cb0195f08f026a09b4d8eb29ab19711eaf",
+          "ae36fe2ab82b28dabec34302c0b3f703d7fff85f909a379f1ee5da03787f18c2",
+          "14eb20097a3238d0e2992ba492b97187594faf374d600de3449f9490045699c6",
+          "7d730b144effae2add510d6add53944a8a8f895ed1fbd39c42bba3cc2117f7f1",
+          "e11e68e9b59b9451237bd69b429b10334cde0d69dba1c06e08f86e1c754800fd",
+          "0454109be023c9d3fe844334c1e1ce5c16ef7ef4c5c93775d12dbc86c2fa5db3"
+        ]
+      }
+    },
+    {
+      "id": 62,
+      "name_vi": "Lôi Sơn Tiểu Quá",
+      "judgment": "Hanh thông, lợi giữ chính. Làm việc nhỏ được, việc lớn không được. Chim bay để lại tiếng; không nên lên, nên xuống thì rất tốt.",
+      "overview": "Tiểu Quá là vượt nhẹ trong việc nhỏ. Chú ý chi tiết, giữ khiêm nhường và tránh đẩy quy mô quá xa.",
+      "lines": [
+        "Chim bay mang điều xấu.",
+        "Vượt ông tổ, gặp bà tổ; chưa đến vua, gặp bề tôi, không lỗi.",
+        "Không phòng ngừa hơn mức thường, có người theo mà hại; xấu.",
+        "Không lỗi; đừng vượt, hãy gặp đúng mức. Tiến nguy phải cảnh giác, không nên cố giữ lâu.",
+        "Mây dày chưa mưa từ ngoại ô tây; bậc công bắn lấy vật ở hang.",
+        "Không gặp mà vượt quá; chim bay mắc lưới, xấu, ấy là tai họa."
+      ],
+      "source_text_sha256": {
+        "judgment": "e8928ee02a619c78ebd24af1a9fdfc6e8bac24954b331c206f10d182453422f4",
+        "lines": [
+          "6630ea328d0ca20db523fb1ce6d78b478c3ad96d4b58df2e2f21d29959a5b008",
+          "e6b264cf690c9b0f3cde57c04ebbc1b9082daffbd26a39e194b23bfda355b50c",
+          "f224c30cd0557cadc2aaab1f6759a05673b8cac9efe003e5bfe3d1f25083b6e2",
+          "26567b747a95d72cf4b12193596e369d5930e4b7a92c27c946533e2b1327ae27",
+          "709ee1ed162e807354f3be862a818405b4bf9d45afa0dd8d9a66869ea4efdbfb",
+          "91709e586bce4154d57cdc15542cc6edca8cc80b39614fc2952d71d4bdeab7c4"
+        ]
+      }
+    },
+    {
+      "id": 63,
+      "name_vi": "Thủy Hỏa Ký Tế",
+      "judgment": "Hanh thông trong việc nhỏ, lợi giữ chính. Đầu tốt, cuối rối.",
+      "overview": "Ký Tế là việc đã hoàn tất. Thành công cần được bảo trì và theo dõi, vì chủ quan ở cuối có thể làm đảo chiều.",
+      "lines": [
+        "Kéo ghìm bánh xe, ướt đuôi; không lỗi.",
+        "Người nữ mất màn che, đừng đuổi; bảy ngày được lại.",
+        "Cao Tông đánh Quỷ Phương, ba năm mới thắng; không dùng tiểu nhân.",
+        "Chuẩn bị áo vá để phòng rò; cả ngày cảnh giác.",
+        "Hàng xóm đông giết bò tế, không bằng lễ giản dị của hàng xóm tây mà thực hưởng phúc.",
+        "Ướt đầu; nguy."
+      ],
+      "source_text_sha256": {
+        "judgment": "6a8e642f6e1f5e4a3f333300b7d8d48fd26e1166ad2e0bca0fe9ab93f01c84f9",
+        "lines": [
+          "1342b19db6025db52f865f5f0df7989e47b552fc6379f010e90e02f73ee85783",
+          "4f3561e04f8d91ea81a91f5ccdaa14f4d0e6da520e4384f658363310c1cd1ed5",
+          "3c37156f52681eb4f9401627507e8e2f8b69e11f27ac0b9432b874098be8de41",
+          "eb30a729b83bde623e7050e8c57c0641a2e027a0eba0d5212c5b7878e12f74ff",
+          "0faa78a865d0e6857023b3f1c398ae2dceae72311d5d5a414c0574790b9d83d9",
+          "ed147fce986d741b67466d599647bfdae25ac2ab983d551687952d928dddabbf"
+        ]
+      }
+    },
+    {
+      "id": 64,
+      "name_vi": "Hỏa Thủy Vị Tế",
+      "judgment": "Hanh thông. Cáo nhỏ gần qua sông nhưng ướt đuôi, chưa có lợi.",
+      "overview": "Vị Tế là chưa hoàn tất. Kiểm tra khâu cuối, sắp lại nguồn lực và không xem gần thành công là đã thành công.",
+      "lines": [
+        "Ướt đuôi; đáng tiếc.",
+        "Kéo ghìm bánh xe; giữ chính thì tốt.",
+        "Chưa hoàn tất, tiến thì xấu; lợi vượt sông lớn.",
+        "Giữ chính thì tốt, hối mất; chấn chỉnh để đánh Quỷ Phương, ba năm được nước lớn thưởng.",
+        "Giữ chính thì tốt, không hối; ánh sáng quân tử có lòng thành, tốt.",
+        "Có lòng thành khi uống rượu, không lỗi. Uống đến ướt đầu thì lòng tin mất sự đúng mực."
+      ],
+      "source_text_sha256": {
+        "judgment": "9089eb69632913bedbf395db6e51694ffa125accc1218a5e8d9e655d49a3d2bf",
+        "lines": [
+          "dd3ec35f6a25dec09ce73e87d0e13244d05ff0320d65e7414d86b99076efd3cb",
+          "3e141c88ff9181b8388dd75fdbdd11b29d208efa2cc5bd03c630308132f18d3a",
+          "edabc9f9735f8bac4b2ed5c6f01b1031604564136c8f2f913c28500e83231d1c",
+          "7fd80bbb7bd6b7ffa3eec33e454672b7d554fc470c5a7815af10f16c12cb50f6",
+          "094fbbcf9578e9e672c20570fce1e40fcbee9d6539f416ab9e33e08c554c3342",
+          "8afef703e362057dbfc9dbbe017e2557c4abc1712e171aa6c36051ab757dd85c"
+        ]
+      }
+    }
+  ]
+}

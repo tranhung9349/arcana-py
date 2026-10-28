@@ -1,0 +1,739 @@
+{
+  "$defs": {
+    "Hexagram": {
+      "additionalProperties": false,
+      "properties": {
+        "hexagram_id": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Hexagram Id",
+          "type": "integer"
+        },
+        "name_zh": {
+          "title": "Name Zh",
+          "type": "string"
+        },
+        "symbol": {
+          "title": "Symbol",
+          "type": "string"
+        },
+        "lines_bottom_to_top": {
+          "items": {
+            "enum": [
+              0,
+              1
+            ],
+            "type": "integer"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "title": "Lines Bottom To Top",
+          "type": "array"
+        }
+      },
+      "required": [
+        "hexagram_id",
+        "name_zh",
+        "symbol",
+        "lines_bottom_to_top"
+      ],
+      "title": "Hexagram",
+      "type": "object"
+    },
+    "HexagramExplanation": {
+      "additionalProperties": false,
+      "properties": {
+        "hexagram_id": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Hexagram Id",
+          "type": "integer"
+        },
+        "name_zh": {
+          "title": "Name Zh",
+          "type": "string"
+        },
+        "name_vi": {
+          "title": "Name Vi",
+          "type": "string"
+        },
+        "symbol": {
+          "title": "Symbol",
+          "type": "string"
+        },
+        "moving_line": {
+          "anyOf": [
+            {
+              "maximum": 6,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Moving Line"
+        },
+        "overview": {
+          "$ref": "#/$defs/SourceOverview"
+        },
+        "cards": {
+          "items": {
+            "$ref": "#/$defs/SourceCard"
+          },
+          "title": "Cards",
+          "type": "array"
+        },
+        "source_gaps": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Source Gaps",
+          "type": "array"
+        }
+      },
+      "required": [
+        "hexagram_id",
+        "name_zh",
+        "name_vi",
+        "symbol",
+        "moving_line",
+        "overview",
+        "cards",
+        "source_gaps"
+      ],
+      "title": "HexagramExplanation",
+      "type": "object"
+    },
+    "MaiHoaChart": {
+      "additionalProperties": false,
+      "properties": {
+        "core_version": {
+          "const": "maihoa-ymdh-source-v2",
+          "title": "Core Version",
+          "type": "string"
+        },
+        "variables": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "title": "Variables",
+          "type": "object"
+        },
+        "upper": {
+          "maximum": 8,
+          "minimum": 1,
+          "title": "Upper",
+          "type": "integer"
+        },
+        "lower": {
+          "maximum": 8,
+          "minimum": 1,
+          "title": "Lower",
+          "type": "integer"
+        },
+        "moving_line": {
+          "maximum": 6,
+          "minimum": 1,
+          "title": "Moving Line",
+          "type": "integer"
+        },
+        "mutual_basis": {
+          "enum": [
+            "ORIGINAL",
+            "CHANGED_FOR_PURE"
+          ],
+          "title": "Mutual Basis",
+          "type": "string"
+        },
+        "original": {
+          "$ref": "#/$defs/Hexagram"
+        },
+        "mutual": {
+          "$ref": "#/$defs/Hexagram"
+        },
+        "changed": {
+          "$ref": "#/$defs/Hexagram"
+        },
+        "the": {
+          "$ref": "#/$defs/Trigram"
+        },
+        "dung": {
+          "$ref": "#/$defs/Trigram"
+        },
+        "mutual_body": {
+          "$ref": "#/$defs/Trigram"
+        },
+        "mutual_use": {
+          "$ref": "#/$defs/Trigram"
+        },
+        "changed_use": {
+          "$ref": "#/$defs/Trigram"
+        }
+      },
+      "required": [
+        "core_version",
+        "variables",
+        "upper",
+        "lower",
+        "moving_line",
+        "mutual_basis",
+        "original",
+        "mutual",
+        "changed",
+        "the",
+        "dung",
+        "mutual_body",
+        "mutual_use",
+        "changed_use"
+      ],
+      "title": "MaiHoaChart",
+      "type": "object"
+    },
+    "MaiHoaEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "text_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Text Sha256",
+          "type": "string"
+        },
+        "section_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Section Sha256",
+          "type": "string"
+        },
+        "section": {
+          "title": "Section",
+          "type": "string"
+        },
+        "volume": {
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Volume",
+          "type": "integer"
+        },
+        "source": {
+          "$ref": "#/$defs/MaiHoaSource"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "title",
+        "text",
+        "text_sha256",
+        "section_sha256",
+        "section",
+        "volume",
+        "source"
+      ],
+      "title": "MaiHoaEvidence",
+      "type": "object"
+    },
+    "MaiHoaFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "phase": {
+          "enum": [
+            "BEGINNING",
+            "MIDDLE_BODY",
+            "MIDDLE_USE",
+            "ENDING"
+          ],
+          "title": "Phase",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "SAME",
+            "USE_GENERATES_BODY",
+            "BODY_CONTROLS_USE",
+            "BODY_GENERATES_USE",
+            "USE_CONTROLS_BODY"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "indication": {
+          "enum": [
+            "FAVOURABLE",
+            "CAUTION"
+          ],
+          "title": "Indication",
+          "type": "string"
+        },
+        "text_vi": {
+          "title": "Text Vi",
+          "type": "string"
+        },
+        "translation_status": {
+          "const": "AI_DRAFT_UNREVIEWED",
+          "title": "Translation Status",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "rule_id",
+        "phase",
+        "title",
+        "relation",
+        "indication",
+        "text_vi",
+        "translation_status",
+        "evidence_refs"
+      ],
+      "title": "MaiHoaFinding",
+      "type": "object"
+    },
+    "MaiHoaSource": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "revision_id": {
+          "exclusiveMinimum": 0,
+          "title": "Revision Id",
+          "type": "integer"
+        },
+        "timestamp": {
+          "title": "Timestamp",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "title",
+        "revision_id",
+        "timestamp",
+        "sha256",
+        "url"
+      ],
+      "title": "MaiHoaSource",
+      "type": "object"
+    },
+    "SourceCard": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text_type": {
+          "title": "Text Type",
+          "type": "string"
+        },
+        "language": {
+          "enum": [
+            "zh",
+            "vi"
+          ],
+          "title": "Language",
+          "type": "string"
+        },
+        "label": {
+          "const": "SOURCE_ORIGINAL",
+          "title": "Label",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceReference"
+        },
+        "translation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTranslation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "evidence_id",
+        "title",
+        "text_type",
+        "language",
+        "label",
+        "text",
+        "source",
+        "translation"
+      ],
+      "title": "SourceCard",
+      "type": "object"
+    },
+    "SourceOverview": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "const": "AI_INTERPRETATION",
+          "title": "Label",
+          "type": "string"
+        },
+        "language": {
+          "const": "vi",
+          "title": "Language",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "UNREVIEWED",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "references": {
+          "items": {
+            "type": "string"
+          },
+          "title": "References",
+          "type": "array"
+        }
+      },
+      "required": [
+        "label",
+        "language",
+        "text",
+        "review_status",
+        "references"
+      ],
+      "title": "SourceOverview",
+      "type": "object"
+    },
+    "SourceReference": {
+      "additionalProperties": false,
+      "properties": {
+        "repository": {
+          "enum": [
+            "john-walks-slow/open-iching",
+            "vhphuoc1102/tinix-bazi"
+          ],
+          "title": "Repository",
+          "type": "string"
+        },
+        "commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Commit",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "repository",
+        "commit",
+        "path",
+        "key",
+        "url"
+      ],
+      "title": "SourceReference",
+      "type": "object"
+    },
+    "SourceTranslation": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "const": "AI_TRANSLATION",
+          "title": "Label",
+          "type": "string"
+        },
+        "language": {
+          "const": "vi",
+          "title": "Language",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "UNREVIEWED",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "references": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 1,
+          "minItems": 1,
+          "title": "References",
+          "type": "array"
+        },
+        "source_text_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Text Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "language",
+        "text",
+        "review_status",
+        "version",
+        "references",
+        "source_text_sha256"
+      ],
+      "title": "SourceTranslation",
+      "type": "object"
+    },
+    "Trigram": {
+      "additionalProperties": false,
+      "properties": {
+        "trigram": {
+          "maximum": 8,
+          "minimum": 1,
+          "title": "Trigram",
+          "type": "integer"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "element": {
+          "title": "Element",
+          "type": "string"
+        },
+        "position": {
+          "enum": [
+            "UPPER",
+            "LOWER"
+          ],
+          "title": "Position",
+          "type": "string"
+        },
+        "strength": {
+          "enum": [
+            "STRONG",
+            "WEAK",
+            "NOT_SPECIFIED"
+          ],
+          "title": "Strength",
+          "type": "string"
+        }
+      },
+      "required": [
+        "trigram",
+        "name",
+        "element",
+        "position",
+        "strength"
+      ],
+      "title": "Trigram",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "maihoa-consultation-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "request_id": {
+      "format": "uuid",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "rules_version": {
+      "title": "Rules Version",
+      "type": "string"
+    },
+    "corpus_version": {
+      "title": "Corpus Version",
+      "type": "string"
+    },
+    "question": {
+      "title": "Question",
+      "type": "string"
+    },
+    "topic": {
+      "enum": [
+        "GENERAL",
+        "WEALTH",
+        "TRADE",
+        "PLANNING",
+        "MARRIAGE",
+        "TRAVEL"
+      ],
+      "title": "Topic",
+      "type": "string"
+    },
+    "topic_name": {
+      "title": "Topic Name",
+      "type": "string"
+    },
+    "calendar": {
+      "additionalProperties": true,
+      "title": "Calendar",
+      "type": "object"
+    },
+    "calendar_policy": {
+      "additionalProperties": true,
+      "title": "Calendar Policy",
+      "type": "object"
+    },
+    "season": {
+      "additionalProperties": true,
+      "title": "Season",
+      "type": "object"
+    },
+    "chart": {
+      "$ref": "#/$defs/MaiHoaChart"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/MaiHoaFinding"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "title": "Findings",
+      "type": "array"
+    },
+    "summary": {
+      "additionalProperties": true,
+      "title": "Summary",
+      "type": "object"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/MaiHoaEvidence"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "texts": {
+      "additionalProperties": {
+        "$ref": "#/$defs/HexagramExplanation"
+      },
+      "title": "Texts",
+      "type": "object"
+    },
+    "warnings": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Warnings",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "automated_scope": {
+      "const": "INTERNAL_TRIGRAM_RELATIONS",
+      "title": "Automated Scope",
+      "type": "string"
+    },
+    "interpretation_review_status": {
+      "const": "AI_DRAFT_UNREVIEWED",
+      "title": "Interpretation Review Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "request_id",
+    "created_at",
+    "rules_version",
+    "corpus_version",
+    "question",
+    "topic",
+    "topic_name",
+    "calendar",
+    "calendar_policy",
+    "season",
+    "chart",
+    "findings",
+    "summary",
+    "evidence",
+    "texts",
+    "warnings",
+    "limitations",
+    "automated_scope",
+    "interpretation_review_status"
+  ],
+  "title": "MaiHoaResponse",
+  "type": "object"
+}

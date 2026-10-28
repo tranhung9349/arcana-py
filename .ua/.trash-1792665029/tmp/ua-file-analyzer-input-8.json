@@ -1,0 +1,5 @@
+{"projectRoot":"/Users/tranduyhung/Work/randomyst_numbers","batchFiles":[
+{"path":"config/interpretation_disclaimers.json","language":"json","sizeLines":9,"fileCategory":"config"},
+{"path":"config/mvp1_rules.json","language":"json","sizeLines":112,"fileCategory":"config"},
+{"path":"config/mvp2_date_rules.json","language":"json","sizeLines":333,"fileCategory":"config"}],
+"batchImportData":{}}

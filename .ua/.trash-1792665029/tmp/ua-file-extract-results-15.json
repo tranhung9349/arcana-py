@@ -1,0 +1,391 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 7,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 7
+    }
+  },
+  "results": [
+    {
+      "path": "examples/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 10,
+      "nonEmptyLines": 6,
+      "sections": [
+        {
+          "heading": "Hồ sơ mẫu kiểm tra",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Giải thích nguồn",
+          "level": 1,
+          "line": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "examples/date_search_request.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 16,
+      "nonEmptyLines": 16,
+      "sections": [
+        {
+          "heading": "activity",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "subjects",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "date_range",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "include_details",
+          "level": 1,
+          "line": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "examples/date_search_response.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1693,
+      "nonEmptyLines": 1693,
+      "sections": [
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "date_rules_version",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "calendar_policy",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "activity",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "activity_name",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "disabled_rules",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "coverage_note",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "subject_summaries",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "days",
+          "level": 1,
+          "line": 63
+        },
+        {
+          "heading": "evaluated_windows",
+          "level": 1,
+          "line": 1655
+        },
+        {
+          "heading": "personal_comparisons",
+          "level": 1,
+          "line": 1661
+        },
+        {
+          "heading": "natal_analysis_count",
+          "level": 1,
+          "line": 1662
+        },
+        {
+          "heading": "sources",
+          "level": 1,
+          "line": 1663
+        },
+        {
+          "heading": "warnings",
+          "level": 1,
+          "line": 1686
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "examples/draw_request.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 10,
+      "nonEmptyLines": 10,
+      "sections": [
+        {
+          "heading": "request_id",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "birth",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "casting",
+          "level": 1,
+          "line": 6
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "examples/draw_response.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1130,
+      "nonEmptyLines": 1130,
+      "sections": [
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "request_id",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "numbers",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "score",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "threshold",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "attempts",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "selected_attempt",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "warnings",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "disclaimer",
+          "level": 1,
+          "line": 30
+        },
+        {
+          "heading": "trace",
+          "level": 1,
+          "line": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "examples/marriage_date_search_request.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 22,
+      "nonEmptyLines": 22,
+      "sections": [
+        {
+          "heading": "activity",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "subjects",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "date_range",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "include_details",
+          "level": 1,
+          "line": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "examples/source_explanation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 439,
+      "nonEmptyLines": 439,
+      "sections": [
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "context_id",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "corpus_version",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "model_called",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "affects_generation",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "affects_evaluation",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "original",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "bazi",
+          "level": 1,
+          "line": 128
+        },
+        {
+          "heading": "display_hexagrams",
+          "level": 1,
+          "line": 262
+        },
+        {
+          "heading": "relation",
+          "level": 1,
+          "line": 418
+        },
+        {
+          "heading": "limitations",
+          "level": 1,
+          "line": 433
+        },
+        {
+          "heading": "disclaimer",
+          "level": 1,
+          "line": 438
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    }
+  ]
+}

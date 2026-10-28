@@ -1,0 +1,17 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 9,
+  "edgesRestored": 0,
+  "crossBatchEdgesAdded": 36,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "Phần Fixed hợp lý: chỉ 1 cạnh tested_by bị loại; không có node nào cần sửa ID hoặc complexity; 13 node production được gắn tag 'tested'.",
+    "Phần Could not fix trống: không có node thiếu id, không có type/complexity lạ, không có cạnh lơ lửng.",
+    "Đối chiếu importMap (129 mục, 73 cạnh import nội bộ): đủ 73/73 cạnh imports giữa các file node, không cần bổ sung.",
+    "Bổ sung 8 node endpoint cho randomyst/api.py (định dạng ID endpoint:randomyst/api.py:<METHOD>-<path>) kèm contains từ file, calls/depends_on tới DateEngine, NumberEngine, DrawStore, ExplanationRepository và các model response/request đã xác minh trong source.",
+    "Bổ sung node table:randomyst/storage.py:draws (CREATE TABLE dòng 16) với contains từ storage.py; DrawStore writes_to (INSERT trong execute) và reads_from (SELECT trong execute/history/get); endpoint POST /api/v1/draw writes_to, các GET history/interpretation/draw reads_from. Luồng tra ngày tốt không chạm bảng draws.",
+    "Cạnh UI → endpoint: web/dates.js:fetchDates → POST search; web/app.js:send → POST draw; web/app.js:loadExplanation → GET interpretation; file:web/app.js → GET history và GET draw/{request_id} (các hàm history/openSavedDraw không có node riêng). GET / serves web/index.html. Không tìm thấy UI gọi /rules hoặc /health.",
+    "Các endpoint là closure bên trong create_app nên được gắn contains từ file, không từ function:create_app."
+  ]
+}

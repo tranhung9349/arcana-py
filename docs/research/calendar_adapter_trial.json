@@ -1,0 +1,274 @@
+{
+  "algorithm_id": "hnd-simplified-vn-utc7-v0.1",
+  "lookup_range": [
+    "1949-12-01",
+    "2031-01-31"
+  ],
+  "structural": {
+    "days_checked": 29647,
+    "month_starts": 1004,
+    "errors": [],
+    "meaning": "Internal invariants only; not independent verification of every date's month/year label."
+  },
+  "published_new_moons": {
+    "reference_author": "Fred Espenak, GSFC Planetary Systems Laboratory",
+    "source_urls": [
+      "https://eclipse.gsfc.nasa.gov/phase/phases1901.html",
+      "https://eclipse.gsfc.nasa.gov/phase/phases2001.html"
+    ],
+    "downloaded_html_sha256": [
+      "0ee4dd03d8f2661b2315993228f096c91deb63727d78fe7d7796e4b50279f4ce",
+      "ceb16de952edaf9bf1f7c6d1daf13c7487632c3a5ad78808bd40120a76c9fbd8"
+    ],
+    "reference_time_scale": "UT, not implicitly second-accurate UTC",
+    "reference_output_resolution": "minute",
+    "reference_absolute_error_bound_seconds": null,
+    "events_checked": 1004,
+    "matching_start_dates": 1004,
+    "mismatches": [],
+    "max_observed_approximation_difference_minutes": 3.5127,
+    "near_midnight_manual_review": [
+      {
+        "reference_UT": "1967-07-07T17:00:00",
+        "reference_UTC7_date": "1967-07-08",
+        "adapter_start_date": "1967-07-08",
+        "lunar_on_reference_date": {
+          "year": 1967,
+          "month": 6,
+          "day": 1,
+          "is_leap_month": false
+        },
+        "approximation_difference_minutes": 0.4845
+      },
+      {
+        "reference_UT": "1995-09-24T16:55:00",
+        "reference_UTC7_date": "1995-09-24",
+        "adapter_start_date": "1995-09-24",
+        "lunar_on_reference_date": {
+          "year": 1995,
+          "month": 8,
+          "day": 1,
+          "is_leap_month": true
+        },
+        "approximation_difference_minutes": 0.7284
+      },
+      {
+        "reference_UT": "1996-12-10T16:56:00",
+        "reference_UTC7_date": "1996-12-10",
+        "adapter_start_date": "1996-12-10",
+        "lunar_on_reference_date": {
+          "year": 1996,
+          "month": 11,
+          "day": 1,
+          "is_leap_month": false
+        },
+        "approximation_difference_minutes": 0.1974
+      },
+      {
+        "reference_UT": "1997-12-29T16:57:00",
+        "reference_UTC7_date": "1997-12-29",
+        "adapter_start_date": "1997-12-29",
+        "lunar_on_reference_date": {
+          "year": 1997,
+          "month": 12,
+          "day": 1,
+          "is_leap_month": false
+        },
+        "approximation_difference_minutes": 0.1656
+      },
+      {
+        "reference_UT": "1998-09-20T17:01:00",
+        "reference_UTC7_date": "1998-09-21",
+        "adapter_start_date": "1998-09-21",
+        "lunar_on_reference_date": {
+          "year": 1998,
+          "month": 8,
+          "day": 1,
+          "is_leap_month": false
+        },
+        "approximation_difference_minutes": 1.2891
+      },
+      {
+        "reference_UT": "2008-11-27T16:55:00",
+        "reference_UTC7_date": "2008-11-27",
+        "adapter_start_date": "2008-11-27",
+        "lunar_on_reference_date": {
+          "year": 2008,
+          "month": 11,
+          "day": 1,
+          "is_leap_month": false
+        },
+        "approximation_difference_minutes": 0.4344
+      }
+    ],
+    "UTC7_UTC8_differing_dates": [
+      {
+        "reference_UT": "1950-08-13T16:48:00",
+        "UTC7_date": "1950-08-13",
+        "UTC8_date": "1950-08-14"
+      },
+      {
+        "reference_UT": "1951-06-04T16:40:00",
+        "UTC7_date": "1951-06-04",
+        "UTC8_date": "1951-06-05"
+      },
+      {
+        "reference_UT": "1953-08-09T16:10:00",
+        "UTC7_date": "1953-08-09",
+        "UTC8_date": "1953-08-10"
+      },
+      {
+        "reference_UT": "1956-11-02T16:44:00",
+        "UTC7_date": "1956-11-02",
+        "UTC8_date": "1956-11-03"
+      },
+      {
+        "reference_UT": "1957-03-01T16:12:00",
+        "UTC7_date": "1957-03-01",
+        "UTC8_date": "1957-03-02"
+      },
+      {
+        "reference_UT": "1957-11-21T16:19:00",
+        "UTC7_date": "1957-11-21",
+        "UTC8_date": "1957-11-22"
+      },
+      {
+        "reference_UT": "1961-05-14T16:54:00",
+        "UTC7_date": "1961-05-14",
+        "UTC8_date": "1961-05-15"
+      },
+      {
+        "reference_UT": "1964-10-05T16:20:00",
+        "UTC7_date": "1964-10-05",
+        "UTC8_date": "1964-10-06"
+      },
+      {
+        "reference_UT": "1965-02-01T16:36:00",
+        "UTC7_date": "1965-02-01",
+        "UTC8_date": "1965-02-02"
+      },
+      {
+        "reference_UT": "1967-12-01T16:10:00",
+        "UTC7_date": "1967-12-01",
+        "UTC8_date": "1967-12-02"
+      },
+      {
+        "reference_UT": "1968-01-29T16:29:00",
+        "UTC7_date": "1968-01-29",
+        "UTC8_date": "1968-01-30"
+      },
+      {
+        "reference_UT": "1969-02-16T16:25:00",
+        "UTC7_date": "1969-02-16",
+        "UTC8_date": "1969-02-17"
+      },
+      {
+        "reference_UT": "1974-12-13T16:25:00",
+        "UTC7_date": "1974-12-13",
+        "UTC8_date": "1974-12-14"
+      },
+      {
+        "reference_UT": "1975-04-11T16:39:00",
+        "UTC7_date": "1975-04-11",
+        "UTC8_date": "1975-04-12"
+      },
+      {
+        "reference_UT": "1978-09-02T16:09:00",
+        "UTC7_date": "1978-09-02",
+        "UTC8_date": "1978-09-03"
+      },
+      {
+        "reference_UT": "1979-02-26T16:45:00",
+        "UTC7_date": "1979-02-26",
+        "UTC8_date": "1979-02-27"
+      },
+      {
+        "reference_UT": "1984-05-30T16:48:00",
+        "UTC7_date": "1984-05-30",
+        "UTC8_date": "1984-05-31"
+      },
+      {
+        "reference_UT": "1986-12-01T16:43:00",
+        "UTC7_date": "1986-12-01",
+        "UTC8_date": "1986-12-02"
+      },
+      {
+        "reference_UT": "1989-08-01T16:06:00",
+        "UTC7_date": "1989-08-01",
+        "UTC8_date": "1989-08-02"
+      },
+      {
+        "reference_UT": "1995-09-24T16:55:00",
+        "UTC7_date": "1995-09-24",
+        "UTC8_date": "1995-09-25"
+      },
+      {
+        "reference_UT": "1996-07-15T16:15:00",
+        "UTC7_date": "1996-07-15",
+        "UTC8_date": "1996-07-16"
+      },
+      {
+        "reference_UT": "1996-12-10T16:56:00",
+        "UTC7_date": "1996-12-10",
+        "UTC8_date": "1996-12-11"
+      },
+      {
+        "reference_UT": "1997-10-01T16:52:00",
+        "UTC7_date": "1997-10-01",
+        "UTC8_date": "1997-10-02"
+      },
+      {
+        "reference_UT": "1997-12-29T16:57:00",
+        "UTC7_date": "1997-12-29",
+        "UTC8_date": "1997-12-30"
+      },
+      {
+        "reference_UT": "2006-06-25T16:05:00",
+        "UTC7_date": "2006-06-25",
+        "UTC8_date": "2006-06-26"
+      },
+      {
+        "reference_UT": "2007-02-17T16:14:00",
+        "UTC7_date": "2007-02-17",
+        "UTC8_date": "2007-02-18"
+      },
+      {
+        "reference_UT": "2008-11-27T16:55:00",
+        "UTC7_date": "2008-11-27",
+        "UTC8_date": "2008-11-28"
+      },
+      {
+        "reference_UT": "2009-03-26T16:06:00",
+        "UTC7_date": "2009-03-26",
+        "UTC8_date": "2009-03-27"
+      },
+      {
+        "reference_UT": "2018-11-07T16:02:00",
+        "UTC7_date": "2018-11-07",
+        "UTC8_date": "2018-11-08"
+      },
+      {
+        "reference_UT": "2019-03-06T16:04:00",
+        "UTC7_date": "2019-03-06",
+        "UTC8_date": "2019-03-07"
+      },
+      {
+        "reference_UT": "2020-12-14T16:17:00",
+        "UTC7_date": "2020-12-14",
+        "UTC8_date": "2020-12-15"
+      },
+      {
+        "reference_UT": "2030-02-02T16:07:00",
+        "UTC7_date": "2030-02-02",
+        "UTC8_date": "2030-02-03"
+      }
+    ],
+    "meaning": "External published event comparison, not verification of all lunar month/year/leap labels. Both formula families use Meeus; not independent physical measurements."
+  },
+  "production_ready": false,
+  "remaining_validation": [
+    "Independent VN lunar month/year/leap-month labels across the full lookup range",
+    "Precise solar-term provider and Lap Xuan boundaries",
+    "Quantified astronomy/time-scale uncertainty, especially near midnight"
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": "docs/architect_idea.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 77,
+      "nonEmptyLines": 60,
+      "sections": [
+        {
+          "heading": "Sơ đồ kiến trúc hệ thống luận giải và gieo số",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "docs/logic_plan_mvp1.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 99,
+      "nonEmptyLines": 67,
+      "sections": [
+        {
+          "heading": "Đặc tả hiện hành MVP 1 — rules v4",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Mục tiêu và pipeline",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "2. Thời gian và lịch",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "3. Core Mai Hoa khóa",
+          "level": 2,
+          "line": 38
+        },
+        {
+          "heading": "4. Nguồn Bát Tự và kinh văn",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "5. Điểm nghiệm thu và trọng số chọn",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "6. Giải sát, sinh và dừng",
+          "level": 2,
+          "line": 68
+        },
+        {
+          "heading": "7. API, trace và lịch sử",
+          "level": 2,
+          "line": 74
+        },
+        {
+          "heading": "8. Kiểm chứng và phần còn lại",
+          "level": 2,
+          "line": 80
+        },
+        {
+          "heading": "9. Giải thích quẻ và Bát Tự — display-only v1",
+          "level": 2,
+          "line": 88
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/logic_plan_mvp2.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 153,
+      "nonEmptyLines": 105,
+      "sections": [
+        {
+          "heading": "MVP 2 — Tra ngày theo việc và hồ sơ sinh",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Quyết định đã chốt",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "2. Phạm vi và input",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "3. R1 — Schema và dữ liệu đã đóng",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "4. Ba bộ lọc ngày chung",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "5. Điều kiện công việc và cá nhân",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "6. Score và nhãn v1",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "7. Ranh lịch và hiệu năng",
+          "level": 2,
+          "line": 93
+        },
+        {
+          "heading": "8. API/UI và kiến trúc",
+          "level": 2,
+          "line": 106
+        },
+        {
+          "heading": "9. Kiểm chứng và bàn giao R1–R5",
+          "level": 2,
+          "line": 128
+        },
+        {
+          "heading": "10. Giới hạn nội dung và hướng tiếp theo",
+          "level": 2,
+          "line": 147
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "activity": "BUSINESS_OPENING",
+  "subjects": [
+    {
+      "subject_id": "person_1",
+      "birth": {
+        "civil_datetime": "1994-10-08T05:00:00+07:00"
+      }
+    }
+  ],
+  "date_range": {
+    "start": "2026-10-12",
+    "end": "2026-11-11"
+  },
+  "include_details": false
+}

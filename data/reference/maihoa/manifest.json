@@ -1,0 +1,31 @@
+{
+  "corpus_version": "maihoa-wikisource-2026-10-25-v1",
+  "accessed_date_utc7": "2026-10-25",
+  "edition": "Wikisource transcription; not a critical edition",
+  "files": [
+    {
+      "path": "volume_1.wikitext",
+      "title": "梅花易數/卷一",
+      "revision_id": 2690596,
+      "timestamp": "2026-04-09T04:31:29Z",
+      "sha256": "f5245837e94bf82420e619fa61644cac1a1242cc59e1c5da5f776dcfd985ac99",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=2690596"
+    },
+    {
+      "path": "volume_2.wikitext",
+      "title": "梅花易數/卷二",
+      "revision_id": 1441921,
+      "timestamp": "2018-05-01T02:50:25Z",
+      "sha256": "239523c6bb8b59d7ed3fe229c681cd1a1124a5216617e198f05dbf19cc6d2939",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=1441921"
+    },
+    {
+      "path": "volume_3.wikitext",
+      "title": "梅花易數/卷三",
+      "revision_id": 1441927,
+      "timestamp": "2018-05-01T02:59:09Z",
+      "sha256": "2320fdff0b05335964a9f0c91d2a9870e11c9fbcddc32aecd822f90999fa45b4",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=1441927"
+    }
+  ]
+}

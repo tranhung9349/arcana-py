@@ -1,0 +1,5433 @@
+{
+  "schema_version": "mvp2-activity-research-v1",
+  "research_date_utc7": "2026-10-14",
+  "provider": "lunar-python==1.4.8",
+  "corpus_gzip_sha256": "a046dbf8187bd7bd6b8e3208118f6b584f5d9f3541e663422d69c30ff586ef28",
+  "basis": "Beijing civil days 2024-01-01..2030-12-31 inclusive; 13 anchors/day including both Zi anchors; 2031 padding excluded.",
+  "day_count": 2557,
+  "hour_anchor_count": 33241,
+  "meaning": "Token presence and existing activity_status only. Not a GOOD score, traditional validation, demand estimate, or runtime activation.",
+  "sources": [
+    "https://github.com/6tail/lunar-python",
+    "https://6tail.cn/calendar/lunar.yiji.html",
+    "https://6tail.cn/calendar/lunar.timeyiji.html"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "MARRIAGE",
+      "name_vi": "Cưới hỏi",
+      "phase": "LIVE",
+      "runtime_enabled": true,
+      "day_token": "嫁娶",
+      "hour_token": "嫁娶",
+      "token_mapping_reviewed": true,
+      "proposed_subject_count": 2,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 887,
+        "ji_mentions": 967,
+        "statuses": {
+          "SUPPORTED": 887,
+          "AVOID": 1350,
+          "NOT_LISTED": 320,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 27184,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 27184,
+          "AVOID": 2770,
+          "NOT_LISTED": 3287,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 128,
+            "ji_mentions": 119,
+            "statuses": {
+              "SUPPORTED": 128,
+              "AVOID": 198,
+              "NOT_LISTED": 40,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 3890,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 3890,
+              "AVOID": 397,
+              "NOT_LISTED": 471,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 126,
+            "ji_mentions": 129,
+            "statuses": {
+              "SUPPORTED": 126,
+              "AVOID": 200,
+              "NOT_LISTED": 39,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 3886,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 3886,
+              "AVOID": 395,
+              "NOT_LISTED": 464,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 125,
+            "ji_mentions": 145,
+            "statuses": {
+              "SUPPORTED": 125,
+              "AVOID": 202,
+              "NOT_LISTED": 38,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 3874,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 3874,
+              "AVOID": 395,
+              "NOT_LISTED": 476,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 130,
+            "ji_mentions": 156,
+            "statuses": {
+              "SUPPORTED": 130,
+              "AVOID": 196,
+              "NOT_LISTED": 39,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 3880,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 3880,
+              "AVOID": 396,
+              "NOT_LISTED": 469,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 130,
+            "ji_mentions": 147,
+            "statuses": {
+              "SUPPORTED": 130,
+              "AVOID": 187,
+              "NOT_LISTED": 49,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 3891,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 3891,
+              "AVOID": 396,
+              "NOT_LISTED": 471,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 126,
+            "ji_mentions": 140,
+            "statuses": {
+              "SUPPORTED": 126,
+              "AVOID": 185,
+              "NOT_LISTED": 54,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 3884,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 3884,
+              "AVOID": 396,
+              "NOT_LISTED": 465,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 122,
+            "ji_mentions": 131,
+            "statuses": {
+              "SUPPORTED": 122,
+              "AVOID": 182,
+              "NOT_LISTED": 61,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 3879,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 3879,
+              "AVOID": 395,
+              "NOT_LISTED": 471,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "BUSINESS_OPENING",
+      "name_vi": "Khai trương",
+      "phase": "LIVE",
+      "runtime_enabled": true,
+      "day_token": "开市",
+      "hour_token": "开市",
+      "token_mapping_reviewed": true,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 560,
+        "ji_mentions": 737,
+        "statuses": {
+          "SUPPORTED": 560,
+          "AVOID": 1233,
+          "NOT_LISTED": 764,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 17171,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 17171,
+          "AVOID": 2770,
+          "NOT_LISTED": 13300,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 85,
+            "ji_mentions": 72,
+            "statuses": {
+              "SUPPORTED": 85,
+              "AVOID": 166,
+              "NOT_LISTED": 115,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 2462,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2462,
+              "AVOID": 397,
+              "NOT_LISTED": 1899,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 79,
+            "ji_mentions": 91,
+            "statuses": {
+              "SUPPORTED": 79,
+              "AVOID": 177,
+              "NOT_LISTED": 109,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2455,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2455,
+              "AVOID": 395,
+              "NOT_LISTED": 1895,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 80,
+            "ji_mentions": 104,
+            "statuses": {
+              "SUPPORTED": 80,
+              "AVOID": 177,
+              "NOT_LISTED": 108,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2448,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2448,
+              "AVOID": 395,
+              "NOT_LISTED": 1902,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 81,
+            "ji_mentions": 121,
+            "statuses": {
+              "SUPPORTED": 81,
+              "AVOID": 181,
+              "NOT_LISTED": 103,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2453,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2453,
+              "AVOID": 396,
+              "NOT_LISTED": 1896,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 81,
+            "ji_mentions": 125,
+            "statuses": {
+              "SUPPORTED": 81,
+              "AVOID": 187,
+              "NOT_LISTED": 98,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 2454,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2454,
+              "AVOID": 396,
+              "NOT_LISTED": 1908,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 78,
+            "ji_mentions": 115,
+            "statuses": {
+              "SUPPORTED": 78,
+              "AVOID": 174,
+              "NOT_LISTED": 113,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2451,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2451,
+              "AVOID": 396,
+              "NOT_LISTED": 1898,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 76,
+            "ji_mentions": 109,
+            "statuses": {
+              "SUPPORTED": 76,
+              "AVOID": 171,
+              "NOT_LISTED": 118,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2448,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2448,
+              "AVOID": 395,
+              "NOT_LISTED": 1902,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "TRAVEL",
+      "name_vi": "Xuất hành",
+      "phase": "LIVE",
+      "runtime_enabled": true,
+      "day_token": "出行",
+      "hour_token": "出行",
+      "token_mapping_reviewed": true,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 867,
+        "ji_mentions": 328,
+        "statuses": {
+          "SUPPORTED": 860,
+          "AVOID": 895,
+          "NOT_LISTED": 795,
+          "UNRESOLVED": 7
+        },
+        "conflicts": [
+          "2024-04-10",
+          "2024-09-07",
+          "2024-09-18",
+          "2025-04-05",
+          "2025-09-13",
+          "2026-09-08",
+          "2030-10-06"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 13513,
+        "ji_mentions": 13417,
+        "statuses": {
+          "SUPPORTED": 13513,
+          "AVOID": 16187,
+          "NOT_LISTED": 3541,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 129,
+            "ji_mentions": 55,
+            "statuses": {
+              "SUPPORTED": 126,
+              "AVOID": 147,
+              "NOT_LISTED": 90,
+              "UNRESOLVED": 3
+            },
+            "conflicts": [
+              "2024-04-10",
+              "2024-09-07",
+              "2024-09-18"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1933,
+            "ji_mentions": 1925,
+            "statuses": {
+              "SUPPORTED": 1933,
+              "AVOID": 2322,
+              "NOT_LISTED": 503,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 130,
+            "ji_mentions": 58,
+            "statuses": {
+              "SUPPORTED": 128,
+              "AVOID": 148,
+              "NOT_LISTED": 87,
+              "UNRESOLVED": 2
+            },
+            "conflicts": [
+              "2025-04-05",
+              "2025-09-13"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1928,
+            "ji_mentions": 1918,
+            "statuses": {
+              "SUPPORTED": 1928,
+              "AVOID": 2313,
+              "NOT_LISTED": 504,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 128,
+            "ji_mentions": 50,
+            "statuses": {
+              "SUPPORTED": 127,
+              "AVOID": 133,
+              "NOT_LISTED": 104,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2026-09-08"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1933,
+            "ji_mentions": 1913,
+            "statuses": {
+              "SUPPORTED": 1933,
+              "AVOID": 2308,
+              "NOT_LISTED": 504,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 128,
+            "ji_mentions": 51,
+            "statuses": {
+              "SUPPORTED": 128,
+              "AVOID": 124,
+              "NOT_LISTED": 113,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1927,
+            "ji_mentions": 1914,
+            "statuses": {
+              "SUPPORTED": 1927,
+              "AVOID": 2310,
+              "NOT_LISTED": 508,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 123,
+            "ji_mentions": 44,
+            "statuses": {
+              "SUPPORTED": 123,
+              "AVOID": 123,
+              "NOT_LISTED": 120,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1940,
+            "ji_mentions": 1916,
+            "statuses": {
+              "SUPPORTED": 1940,
+              "AVOID": 2312,
+              "NOT_LISTED": 506,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 116,
+            "ji_mentions": 40,
+            "statuses": {
+              "SUPPORTED": 116,
+              "AVOID": 113,
+              "NOT_LISTED": 136,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1928,
+            "ji_mentions": 1914,
+            "statuses": {
+              "SUPPORTED": 1928,
+              "AVOID": 2310,
+              "NOT_LISTED": 507,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 113,
+            "ji_mentions": 30,
+            "statuses": {
+              "SUPPORTED": 112,
+              "AVOID": 107,
+              "NOT_LISTED": 145,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2030-10-06"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1924,
+            "ji_mentions": 1917,
+            "statuses": {
+              "SUPPORTED": 1924,
+              "AVOID": 2312,
+              "NOT_LISTED": 509,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "HOME_ENTRY",
+      "name_vi": "Nhập trạch",
+      "phase": "NEXT",
+      "runtime_enabled": false,
+      "day_token": "入宅",
+      "hour_token": "入宅",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 650,
+        "ji_mentions": 873,
+        "statuses": {
+          "SUPPORTED": 650,
+          "AVOID": 1343,
+          "NOT_LISTED": 564,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 12563,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 12563,
+          "AVOID": 2770,
+          "NOT_LISTED": 17908,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 87,
+            "ji_mentions": 119,
+            "statuses": {
+              "SUPPORTED": 87,
+              "AVOID": 204,
+              "NOT_LISTED": 75,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1800,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1800,
+              "AVOID": 397,
+              "NOT_LISTED": 2561,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 89,
+            "ji_mentions": 128,
+            "statuses": {
+              "SUPPORTED": 89,
+              "AVOID": 204,
+              "NOT_LISTED": 72,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1799,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1799,
+              "AVOID": 395,
+              "NOT_LISTED": 2551,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 95,
+            "ji_mentions": 133,
+            "statuses": {
+              "SUPPORTED": 95,
+              "AVOID": 202,
+              "NOT_LISTED": 68,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1787,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1787,
+              "AVOID": 395,
+              "NOT_LISTED": 2563,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 96,
+            "ji_mentions": 136,
+            "statuses": {
+              "SUPPORTED": 96,
+              "AVOID": 192,
+              "NOT_LISTED": 77,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1795,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1795,
+              "AVOID": 396,
+              "NOT_LISTED": 2554,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 87,
+            "ji_mentions": 136,
+            "statuses": {
+              "SUPPORTED": 87,
+              "AVOID": 194,
+              "NOT_LISTED": 85,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1795,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1795,
+              "AVOID": 396,
+              "NOT_LISTED": 2567,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 98,
+            "ji_mentions": 115,
+            "statuses": {
+              "SUPPORTED": 98,
+              "AVOID": 175,
+              "NOT_LISTED": 92,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1798,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1798,
+              "AVOID": 396,
+              "NOT_LISTED": 2551,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 98,
+            "ji_mentions": 106,
+            "statuses": {
+              "SUPPORTED": 98,
+              "AVOID": 172,
+              "NOT_LISTED": 95,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1789,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1789,
+              "AVOID": 395,
+              "NOT_LISTED": 2561,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "RELOCATION",
+      "name_vi": "Chuyển chỗ ở",
+      "phase": "NEXT",
+      "runtime_enabled": false,
+      "day_token": "移徙",
+      "hour_token": "移徙",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 719,
+        "ji_mentions": 347,
+        "statuses": {
+          "SUPPORTED": 719,
+          "AVOID": 945,
+          "NOT_LISTED": 893,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 10519,
+        "ji_mentions": 1792,
+        "statuses": {
+          "SUPPORTED": 10519,
+          "AVOID": 4562,
+          "NOT_LISTED": 18160,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 96,
+            "ji_mentions": 54,
+            "statuses": {
+              "SUPPORTED": 96,
+              "AVOID": 154,
+              "NOT_LISTED": 116,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1503,
+            "ji_mentions": 257,
+            "statuses": {
+              "SUPPORTED": 1503,
+              "AVOID": 654,
+              "NOT_LISTED": 2601,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 99,
+            "ji_mentions": 58,
+            "statuses": {
+              "SUPPORTED": 99,
+              "AVOID": 153,
+              "NOT_LISTED": 113,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1501,
+            "ji_mentions": 257,
+            "statuses": {
+              "SUPPORTED": 1501,
+              "AVOID": 652,
+              "NOT_LISTED": 2592,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 106,
+            "ji_mentions": 54,
+            "statuses": {
+              "SUPPORTED": 106,
+              "AVOID": 142,
+              "NOT_LISTED": 117,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1498,
+            "ji_mentions": 256,
+            "statuses": {
+              "SUPPORTED": 1498,
+              "AVOID": 651,
+              "NOT_LISTED": 2596,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 112,
+            "ji_mentions": 53,
+            "statuses": {
+              "SUPPORTED": 112,
+              "AVOID": 130,
+              "NOT_LISTED": 123,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1503,
+            "ji_mentions": 257,
+            "statuses": {
+              "SUPPORTED": 1503,
+              "AVOID": 653,
+              "NOT_LISTED": 2589,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 101,
+            "ji_mentions": 47,
+            "statuses": {
+              "SUPPORTED": 101,
+              "AVOID": 130,
+              "NOT_LISTED": 135,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1509,
+            "ji_mentions": 255,
+            "statuses": {
+              "SUPPORTED": 1509,
+              "AVOID": 651,
+              "NOT_LISTED": 2598,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 104,
+            "ji_mentions": 42,
+            "statuses": {
+              "SUPPORTED": 104,
+              "AVOID": 118,
+              "NOT_LISTED": 143,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1507,
+            "ji_mentions": 253,
+            "statuses": {
+              "SUPPORTED": 1507,
+              "AVOID": 649,
+              "NOT_LISTED": 2589,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 101,
+            "ji_mentions": 39,
+            "statuses": {
+              "SUPPORTED": 101,
+              "AVOID": 118,
+              "NOT_LISTED": 146,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1498,
+            "ji_mentions": 257,
+            "statuses": {
+              "SUPPORTED": 1498,
+              "AVOID": 652,
+              "NOT_LISTED": 2595,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "BED_SETUP",
+      "name_vi": "An sàng — đặt giường",
+      "phase": "NEXT",
+      "runtime_enabled": false,
+      "day_token": "安床",
+      "hour_token": "安床",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 759,
+        "ji_mentions": 321,
+        "statuses": {
+          "SUPPORTED": 759,
+          "AVOID": 934,
+          "NOT_LISTED": 864,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 12397,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 12397,
+          "AVOID": 2770,
+          "NOT_LISTED": 18074,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 145,
+            "ji_mentions": 39,
+            "statuses": {
+              "SUPPORTED": 145,
+              "AVOID": 140,
+              "NOT_LISTED": 81,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1776,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1776,
+              "AVOID": 397,
+              "NOT_LISTED": 2585,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 141,
+            "ji_mentions": 46,
+            "statuses": {
+              "SUPPORTED": 141,
+              "AVOID": 144,
+              "NOT_LISTED": 80,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1767,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1767,
+              "AVOID": 395,
+              "NOT_LISTED": 2583,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 124,
+            "ji_mentions": 48,
+            "statuses": {
+              "SUPPORTED": 124,
+              "AVOID": 140,
+              "NOT_LISTED": 101,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1768,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1768,
+              "AVOID": 395,
+              "NOT_LISTED": 2582,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 107,
+            "ji_mentions": 49,
+            "statuses": {
+              "SUPPORTED": 107,
+              "AVOID": 131,
+              "NOT_LISTED": 127,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1767,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1767,
+              "AVOID": 396,
+              "NOT_LISTED": 2582,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 89,
+            "ji_mentions": 53,
+            "statuses": {
+              "SUPPORTED": 89,
+              "AVOID": 137,
+              "NOT_LISTED": 140,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1773,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1773,
+              "AVOID": 396,
+              "NOT_LISTED": 2589,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 84,
+            "ji_mentions": 48,
+            "statuses": {
+              "SUPPORTED": 84,
+              "AVOID": 124,
+              "NOT_LISTED": 157,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1775,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1775,
+              "AVOID": 396,
+              "NOT_LISTED": 2574,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 69,
+            "ji_mentions": 38,
+            "statuses": {
+              "SUPPORTED": 69,
+              "AVOID": 118,
+              "NOT_LISTED": 178,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1771,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1771,
+              "AVOID": 395,
+              "NOT_LISTED": 2579,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "RENOVATION",
+      "name_vi": "Sửa chữa, tu tạo",
+      "phase": "NEXT",
+      "runtime_enabled": false,
+      "day_token": "修造",
+      "hour_token": "修造",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 663,
+        "ji_mentions": 115,
+        "statuses": {
+          "SUPPORTED": 663,
+          "AVOID": 745,
+          "NOT_LISTED": 1149,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 11501,
+        "ji_mentions": 9678,
+        "statuses": {
+          "SUPPORTED": 11501,
+          "AVOID": 12448,
+          "NOT_LISTED": 9292,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 96,
+            "ji_mentions": 20,
+            "statuses": {
+              "SUPPORTED": 96,
+              "AVOID": 123,
+              "NOT_LISTED": 147,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1645,
+            "ji_mentions": 1385,
+            "statuses": {
+              "SUPPORTED": 1645,
+              "AVOID": 1782,
+              "NOT_LISTED": 1331,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 96,
+            "ji_mentions": 21,
+            "statuses": {
+              "SUPPORTED": 96,
+              "AVOID": 120,
+              "NOT_LISTED": 149,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1639,
+            "ji_mentions": 1386,
+            "statuses": {
+              "SUPPORTED": 1639,
+              "AVOID": 1781,
+              "NOT_LISTED": 1325,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 99,
+            "ji_mentions": 18,
+            "statuses": {
+              "SUPPORTED": 99,
+              "AVOID": 111,
+              "NOT_LISTED": 155,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1639,
+            "ji_mentions": 1383,
+            "statuses": {
+              "SUPPORTED": 1639,
+              "AVOID": 1778,
+              "NOT_LISTED": 1328,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 102,
+            "ji_mentions": 19,
+            "statuses": {
+              "SUPPORTED": 102,
+              "AVOID": 104,
+              "NOT_LISTED": 159,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1645,
+            "ji_mentions": 1382,
+            "statuses": {
+              "SUPPORTED": 1645,
+              "AVOID": 1778,
+              "NOT_LISTED": 1322,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 100,
+            "ji_mentions": 16,
+            "statuses": {
+              "SUPPORTED": 100,
+              "AVOID": 105,
+              "NOT_LISTED": 161,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1646,
+            "ji_mentions": 1384,
+            "statuses": {
+              "SUPPORTED": 1646,
+              "AVOID": 1780,
+              "NOT_LISTED": 1332,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 92,
+            "ji_mentions": 12,
+            "statuses": {
+              "SUPPORTED": 92,
+              "AVOID": 90,
+              "NOT_LISTED": 183,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1646,
+            "ji_mentions": 1375,
+            "statuses": {
+              "SUPPORTED": 1646,
+              "AVOID": 1771,
+              "NOT_LISTED": 1328,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 78,
+            "ji_mentions": 9,
+            "statuses": {
+              "SUPPORTED": 78,
+              "AVOID": 92,
+              "NOT_LISTED": 195,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1641,
+            "ji_mentions": 1383,
+            "statuses": {
+              "SUPPORTED": 1641,
+              "AVOID": 1778,
+              "NOT_LISTED": 1326,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "TRADE",
+      "name_vi": "Giao dịch",
+      "phase": "NEXT",
+      "runtime_enabled": false,
+      "day_token": "交易",
+      "hour_token": "交易",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 561,
+        "ji_mentions": 86,
+        "statuses": {
+          "SUPPORTED": 557,
+          "AVOID": 715,
+          "NOT_LISTED": 1281,
+          "UNRESOLVED": 4
+        },
+        "conflicts": [
+          "2024-02-20",
+          "2025-02-14",
+          "2026-02-09",
+          "2027-02-04"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 11678,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 11678,
+          "AVOID": 2770,
+          "NOT_LISTED": 18793,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 95,
+            "ji_mentions": 14,
+            "statuses": {
+              "SUPPORTED": 94,
+              "AVOID": 115,
+              "NOT_LISTED": 156,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2024-02-20"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1674,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1674,
+              "AVOID": 397,
+              "NOT_LISTED": 2687,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 90,
+            "ji_mentions": 16,
+            "statuses": {
+              "SUPPORTED": 89,
+              "AVOID": 114,
+              "NOT_LISTED": 161,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2025-02-14"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1671,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1671,
+              "AVOID": 395,
+              "NOT_LISTED": 2679,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 87,
+            "ji_mentions": 13,
+            "statuses": {
+              "SUPPORTED": 86,
+              "AVOID": 105,
+              "NOT_LISTED": 173,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2026-02-09"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1663,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1663,
+              "AVOID": 395,
+              "NOT_LISTED": 2687,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 87,
+            "ji_mentions": 12,
+            "statuses": {
+              "SUPPORTED": 86,
+              "AVOID": 97,
+              "NOT_LISTED": 181,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2027-02-04"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1669,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1669,
+              "AVOID": 396,
+              "NOT_LISTED": 2680,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 80,
+            "ji_mentions": 12,
+            "statuses": {
+              "SUPPORTED": 80,
+              "AVOID": 101,
+              "NOT_LISTED": 185,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1665,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1665,
+              "AVOID": 396,
+              "NOT_LISTED": 2697,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 65,
+            "ji_mentions": 10,
+            "statuses": {
+              "SUPPORTED": 65,
+              "AVOID": 91,
+              "NOT_LISTED": 209,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1669,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1669,
+              "AVOID": 396,
+              "NOT_LISTED": 2680,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 57,
+            "ji_mentions": 9,
+            "statuses": {
+              "SUPPORTED": 57,
+              "AVOID": 92,
+              "NOT_LISTED": 216,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1667,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 1667,
+              "AVOID": 395,
+              "NOT_LISTED": 2683,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "BETROTHAL_NACAI",
+      "name_vi": "Nạp thái — lễ dạm hỏi",
+      "phase": "REVIEW_MAPPING",
+      "runtime_enabled": false,
+      "day_token": "纳采",
+      "hour_token": "订婚",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 2,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 714,
+        "ji_mentions": 102,
+        "statuses": {
+          "SUPPORTED": 709,
+          "AVOID": 741,
+          "NOT_LISTED": 1102,
+          "UNRESOLVED": 5
+        },
+        "conflicts": [
+          "2026-05-02",
+          "2027-04-27",
+          "2028-04-21",
+          "2029-04-16",
+          "2030-04-11"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 19216,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 19216,
+          "AVOID": 2770,
+          "NOT_LISTED": 11255,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 70,
+            "ji_mentions": 8,
+            "statuses": {
+              "SUPPORTED": 70,
+              "AVOID": 109,
+              "NOT_LISTED": 187,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 2752,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2752,
+              "AVOID": 397,
+              "NOT_LISTED": 1609,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 70,
+            "ji_mentions": 11,
+            "statuses": {
+              "SUPPORTED": 70,
+              "AVOID": 111,
+              "NOT_LISTED": 184,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2746,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2746,
+              "AVOID": 395,
+              "NOT_LISTED": 1604,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 87,
+            "ji_mentions": 16,
+            "statuses": {
+              "SUPPORTED": 86,
+              "AVOID": 109,
+              "NOT_LISTED": 169,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2026-05-02"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2744,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2744,
+              "AVOID": 395,
+              "NOT_LISTED": 1606,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 105,
+            "ji_mentions": 20,
+            "statuses": {
+              "SUPPORTED": 104,
+              "AVOID": 106,
+              "NOT_LISTED": 154,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2027-04-27"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2741,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2741,
+              "AVOID": 396,
+              "NOT_LISTED": 1608,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 117,
+            "ji_mentions": 18,
+            "statuses": {
+              "SUPPORTED": 116,
+              "AVOID": 108,
+              "NOT_LISTED": 141,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2028-04-21"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 2742,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2742,
+              "AVOID": 396,
+              "NOT_LISTED": 1620,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 128,
+            "ji_mentions": 16,
+            "statuses": {
+              "SUPPORTED": 127,
+              "AVOID": 99,
+              "NOT_LISTED": 138,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2029-04-16"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2745,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2745,
+              "AVOID": 396,
+              "NOT_LISTED": 1604,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 137,
+            "ji_mentions": 13,
+            "statuses": {
+              "SUPPORTED": 136,
+              "AVOID": 99,
+              "NOT_LISTED": 129,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2030-04-11"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2746,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2746,
+              "AVOID": 395,
+              "NOT_LISTED": 1604,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "BETROTHAL_COVENANT",
+      "name_vi": "Đính ước",
+      "phase": "REVIEW_MAPPING",
+      "runtime_enabled": false,
+      "day_token": "订盟",
+      "hour_token": "订婚",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 2,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 560,
+        "ji_mentions": 71,
+        "statuses": {
+          "SUPPORTED": 555,
+          "AVOID": 710,
+          "NOT_LISTED": 1287,
+          "UNRESOLVED": 5
+        },
+        "conflicts": [
+          "2026-05-02",
+          "2027-04-27",
+          "2028-04-21",
+          "2029-04-16",
+          "2030-04-11"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 19216,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 19216,
+          "AVOID": 2770,
+          "NOT_LISTED": 11255,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 57,
+            "ji_mentions": 7,
+            "statuses": {
+              "SUPPORTED": 57,
+              "AVOID": 108,
+              "NOT_LISTED": 201,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 2752,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2752,
+              "AVOID": 397,
+              "NOT_LISTED": 1609,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 53,
+            "ji_mentions": 8,
+            "statuses": {
+              "SUPPORTED": 53,
+              "AVOID": 108,
+              "NOT_LISTED": 204,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2746,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2746,
+              "AVOID": 395,
+              "NOT_LISTED": 1604,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 68,
+            "ji_mentions": 11,
+            "statuses": {
+              "SUPPORTED": 67,
+              "AVOID": 104,
+              "NOT_LISTED": 193,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2026-05-02"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2744,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2744,
+              "AVOID": 395,
+              "NOT_LISTED": 1606,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 86,
+            "ji_mentions": 14,
+            "statuses": {
+              "SUPPORTED": 85,
+              "AVOID": 100,
+              "NOT_LISTED": 179,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2027-04-27"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2741,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2741,
+              "AVOID": 396,
+              "NOT_LISTED": 1608,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 95,
+            "ji_mentions": 13,
+            "statuses": {
+              "SUPPORTED": 94,
+              "AVOID": 103,
+              "NOT_LISTED": 168,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2028-04-21"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 2742,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2742,
+              "AVOID": 396,
+              "NOT_LISTED": 1620,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 96,
+            "ji_mentions": 10,
+            "statuses": {
+              "SUPPORTED": 95,
+              "AVOID": 93,
+              "NOT_LISTED": 176,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2029-04-16"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2745,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2745,
+              "AVOID": 396,
+              "NOT_LISTED": 1604,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 105,
+            "ji_mentions": 8,
+            "statuses": {
+              "SUPPORTED": 104,
+              "AVOID": 94,
+              "NOT_LISTED": 166,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2030-04-11"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2746,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 2746,
+              "AVOID": 395,
+              "NOT_LISTED": 1604,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "CONTRACT_RITE",
+      "name_vi": "Lập văn khế",
+      "phase": "DAY_ONLY_REVIEW",
+      "runtime_enabled": false,
+      "day_token": "立券",
+      "hour_token": "立券",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 586,
+        "ji_mentions": 41,
+        "statuses": {
+          "SUPPORTED": 582,
+          "AVOID": 692,
+          "NOT_LISTED": 1279,
+          "UNRESOLVED": 4
+        },
+        "conflicts": [
+          "2024-02-20",
+          "2025-02-14",
+          "2026-02-09",
+          "2027-02-04"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 0,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 0,
+          "AVOID": 2770,
+          "NOT_LISTED": 30471,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 91,
+            "ji_mentions": 9,
+            "statuses": {
+              "SUPPORTED": 90,
+              "AVOID": 112,
+              "NOT_LISTED": 163,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2024-02-20"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 397,
+              "NOT_LISTED": 4361,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 88,
+            "ji_mentions": 9,
+            "statuses": {
+              "SUPPORTED": 87,
+              "AVOID": 110,
+              "NOT_LISTED": 167,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2025-02-14"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 92,
+            "ji_mentions": 5,
+            "statuses": {
+              "SUPPORTED": 91,
+              "AVOID": 100,
+              "NOT_LISTED": 173,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2026-02-09"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 92,
+            "ji_mentions": 6,
+            "statuses": {
+              "SUPPORTED": 91,
+              "AVOID": 94,
+              "NOT_LISTED": 179,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2027-02-04"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 85,
+            "ji_mentions": 5,
+            "statuses": {
+              "SUPPORTED": 85,
+              "AVOID": 98,
+              "NOT_LISTED": 183,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4362,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 73,
+            "ji_mentions": 5,
+            "statuses": {
+              "SUPPORTED": 73,
+              "AVOID": 89,
+              "NOT_LISTED": 203,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 65,
+            "ji_mentions": 2,
+            "statuses": {
+              "SUPPORTED": 65,
+              "AVOID": 89,
+              "NOT_LISTED": 211,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "LAND_BREAKING",
+      "name_vi": "Động thổ",
+      "phase": "DAY_ONLY_REVIEW",
+      "runtime_enabled": false,
+      "day_token": "动土",
+      "hour_token": "动土",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 824,
+        "ji_mentions": 577,
+        "statuses": {
+          "SUPPORTED": 824,
+          "AVOID": 1134,
+          "NOT_LISTED": 599,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 0,
+        "ji_mentions": 4858,
+        "statuses": {
+          "SUPPORTED": 0,
+          "AVOID": 7628,
+          "NOT_LISTED": 25613,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 128,
+            "ji_mentions": 66,
+            "statuses": {
+              "SUPPORTED": 128,
+              "AVOID": 160,
+              "NOT_LISTED": 78,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 695,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 1092,
+              "NOT_LISTED": 3666,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 124,
+            "ji_mentions": 71,
+            "statuses": {
+              "SUPPORTED": 124,
+              "AVOID": 162,
+              "NOT_LISTED": 79,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 695,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 1090,
+              "NOT_LISTED": 3655,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 123,
+            "ji_mentions": 79,
+            "statuses": {
+              "SUPPORTED": 123,
+              "AVOID": 162,
+              "NOT_LISTED": 80,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 694,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 1089,
+              "NOT_LISTED": 3656,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 119,
+            "ji_mentions": 96,
+            "statuses": {
+              "SUPPORTED": 119,
+              "AVOID": 167,
+              "NOT_LISTED": 79,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 693,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 1089,
+              "NOT_LISTED": 3656,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 115,
+            "ji_mentions": 94,
+            "statuses": {
+              "SUPPORTED": 115,
+              "AVOID": 169,
+              "NOT_LISTED": 82,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 696,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 1092,
+              "NOT_LISTED": 3666,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 111,
+            "ji_mentions": 89,
+            "statuses": {
+              "SUPPORTED": 111,
+              "AVOID": 158,
+              "NOT_LISTED": 96,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 692,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 1088,
+              "NOT_LISTED": 3657,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 104,
+            "ji_mentions": 82,
+            "statuses": {
+              "SUPPORTED": 104,
+              "AVOID": 156,
+              "NOT_LISTED": 105,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 693,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 1088,
+              "NOT_LISTED": 3657,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "ROOF_BEAM",
+      "name_vi": "Thượng lương — gác đòn nóc",
+      "phase": "DAY_ONLY_REVIEW",
+      "runtime_enabled": false,
+      "day_token": "上梁",
+      "hour_token": "上梁",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 453,
+        "ji_mentions": 225,
+        "statuses": {
+          "SUPPORTED": 448,
+          "AVOID": 857,
+          "NOT_LISTED": 1247,
+          "UNRESOLVED": 5
+        },
+        "conflicts": [
+          "2026-05-02",
+          "2027-04-27",
+          "2028-04-21",
+          "2029-04-16",
+          "2030-04-11"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 0,
+        "ji_mentions": 3196,
+        "statuses": {
+          "SUPPORTED": 0,
+          "AVOID": 5966,
+          "NOT_LISTED": 27275,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 68,
+            "ji_mentions": 34,
+            "statuses": {
+              "SUPPORTED": 68,
+              "AVOID": 136,
+              "NOT_LISTED": 162,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 456,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 853,
+              "NOT_LISTED": 3905,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 65,
+            "ji_mentions": 35,
+            "statuses": {
+              "SUPPORTED": 65,
+              "AVOID": 135,
+              "NOT_LISTED": 165,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 456,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 851,
+              "NOT_LISTED": 3894,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 65,
+            "ji_mentions": 38,
+            "statuses": {
+              "SUPPORTED": 64,
+              "AVOID": 130,
+              "NOT_LISTED": 170,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2026-05-02"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 457,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 852,
+              "NOT_LISTED": 3893,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 69,
+            "ji_mentions": 35,
+            "statuses": {
+              "SUPPORTED": 68,
+              "AVOID": 120,
+              "NOT_LISTED": 176,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2027-04-27"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 457,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 853,
+              "NOT_LISTED": 3892,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 63,
+            "ji_mentions": 32,
+            "statuses": {
+              "SUPPORTED": 62,
+              "AVOID": 121,
+              "NOT_LISTED": 182,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2028-04-21"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 456,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 852,
+              "NOT_LISTED": 3906,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 64,
+            "ji_mentions": 26,
+            "statuses": {
+              "SUPPORTED": 63,
+              "AVOID": 106,
+              "NOT_LISTED": 195,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2029-04-16"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 458,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 854,
+              "NOT_LISTED": 3891,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 59,
+            "ji_mentions": 25,
+            "statuses": {
+              "SUPPORTED": 58,
+              "AVOID": 109,
+              "NOT_LISTED": 197,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2030-04-11"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 456,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 851,
+              "NOT_LISTED": 3894,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "DEMOLITION",
+      "name_vi": "Tháo dỡ",
+      "phase": "RULE_SCOPE_REVIEW",
+      "runtime_enabled": false,
+      "day_token": "拆卸",
+      "hour_token": "拆卸",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 533,
+        "ji_mentions": 2,
+        "statuses": {
+          "SUPPORTED": 533,
+          "AVOID": 657,
+          "NOT_LISTED": 1367,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 0,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 0,
+          "AVOID": 2770,
+          "NOT_LISTED": 30471,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 102,
+            "ji_mentions": 1,
+            "statuses": {
+              "SUPPORTED": 102,
+              "AVOID": 105,
+              "NOT_LISTED": 159,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 397,
+              "NOT_LISTED": 4361,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 98,
+            "ji_mentions": 1,
+            "statuses": {
+              "SUPPORTED": 98,
+              "AVOID": 103,
+              "NOT_LISTED": 164,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 80,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 80,
+              "AVOID": 96,
+              "NOT_LISTED": 189,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 70,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 70,
+              "AVOID": 89,
+              "NOT_LISTED": 206,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 66,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 66,
+              "AVOID": 93,
+              "NOT_LISTED": 207,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4362,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 63,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 63,
+              "AVOID": 84,
+              "NOT_LISTED": 218,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 54,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 54,
+              "AVOID": 87,
+              "NOT_LISTED": 224,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "ANCESTOR_RITE",
+      "name_vi": "Tế lễ",
+      "phase": "LATER",
+      "runtime_enabled": false,
+      "day_token": "祭祀",
+      "hour_token": "祭祀",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 1696,
+        "ji_mentions": 178,
+        "statuses": {
+          "SUPPORTED": 1614,
+          "AVOID": 413,
+          "NOT_LISTED": 448,
+          "UNRESOLVED": 82
+        },
+        "conflicts": [
+          "2024-01-23",
+          "2024-02-23",
+          "2024-03-22",
+          "2024-04-04",
+          "2024-04-13",
+          "2024-04-16",
+          "2024-05-11",
+          "2024-06-08",
+          "2024-06-11",
+          "2024-06-20",
+          "2024-07-21",
+          "2024-08-17",
+          "2024-08-19",
+          "2024-09-07",
+          "2024-09-18",
+          "2024-09-21",
+          "2024-09-24",
+          "2024-10-10",
+          "2024-10-19",
+          "2024-12-17",
+          "2024-12-19",
+          "2024-12-20",
+          "2025-01-17",
+          "2025-02-17",
+          "2025-03-17",
+          "2025-04-08",
+          "2025-04-11",
+          "2025-05-06",
+          "2025-06-06",
+          "2025-06-15",
+          "2025-07-16",
+          "2025-08-12",
+          "2025-08-14",
+          "2025-09-13",
+          "2025-09-16",
+          "2025-09-19",
+          "2025-10-14",
+          "2025-12-12",
+          "2025-12-14",
+          "2025-12-15",
+          "2026-01-12",
+          "2026-02-12",
+          "2026-03-12",
+          "2026-04-06",
+          "2026-05-02",
+          "2026-06-10",
+          "2026-07-11",
+          "2026-08-07",
+          "2026-08-09",
+          "2026-09-08",
+          "2026-09-11",
+          "2026-09-14",
+          "2026-10-09",
+          "2026-12-07",
+          "2026-12-09",
+          "2026-12-10",
+          "2027-01-07",
+          "2027-02-07",
+          "2027-03-07",
+          "2027-04-27",
+          "2027-09-09",
+          "2028-04-21",
+          "2028-07-05",
+          "2028-12-04",
+          "2029-01-04",
+          "2029-04-16",
+          "2029-06-02",
+          "2029-06-30",
+          "2029-08-03",
+          "2029-11-29",
+          "2029-12-05",
+          "2029-12-30",
+          "2030-01-30",
+          "2030-04-11",
+          "2030-05-03",
+          "2030-05-28",
+          "2030-06-25",
+          "2030-07-29",
+          "2030-10-06",
+          "2030-11-24",
+          "2030-11-30",
+          "2030-12-25"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 8917,
+        "ji_mentions": 9158,
+        "statuses": {
+          "SUPPORTED": 8917,
+          "AVOID": 11928,
+          "NOT_LISTED": 12396,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 234,
+            "ji_mentions": 27,
+            "statuses": {
+              "SUPPORTED": 212,
+              "AVOID": 77,
+              "NOT_LISTED": 55,
+              "UNRESOLVED": 22
+            },
+            "conflicts": [
+              "2024-01-23",
+              "2024-02-23",
+              "2024-03-22",
+              "2024-04-04",
+              "2024-04-13",
+              "2024-04-16",
+              "2024-05-11",
+              "2024-06-08",
+              "2024-06-11",
+              "2024-06-20",
+              "2024-07-21",
+              "2024-08-17",
+              "2024-08-19",
+              "2024-09-07",
+              "2024-09-18",
+              "2024-09-21",
+              "2024-09-24",
+              "2024-10-10",
+              "2024-10-19",
+              "2024-12-17",
+              "2024-12-19",
+              "2024-12-20"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1280,
+            "ji_mentions": 1307,
+            "statuses": {
+              "SUPPORTED": 1280,
+              "AVOID": 1704,
+              "NOT_LISTED": 1774,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 250,
+            "ji_mentions": 27,
+            "statuses": {
+              "SUPPORTED": 232,
+              "AVOID": 69,
+              "NOT_LISTED": 46,
+              "UNRESOLVED": 18
+            },
+            "conflicts": [
+              "2025-01-17",
+              "2025-02-17",
+              "2025-03-17",
+              "2025-04-08",
+              "2025-04-11",
+              "2025-05-06",
+              "2025-06-06",
+              "2025-06-15",
+              "2025-07-16",
+              "2025-08-12",
+              "2025-08-14",
+              "2025-09-13",
+              "2025-09-16",
+              "2025-09-19",
+              "2025-10-14",
+              "2025-12-12",
+              "2025-12-14",
+              "2025-12-15"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1271,
+            "ji_mentions": 1306,
+            "statuses": {
+              "SUPPORTED": 1271,
+              "AVOID": 1701,
+              "NOT_LISTED": 1773,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 252,
+            "ji_mentions": 28,
+            "statuses": {
+              "SUPPORTED": 236,
+              "AVOID": 59,
+              "NOT_LISTED": 54,
+              "UNRESOLVED": 16
+            },
+            "conflicts": [
+              "2026-01-12",
+              "2026-02-12",
+              "2026-03-12",
+              "2026-04-06",
+              "2026-05-02",
+              "2026-06-10",
+              "2026-07-11",
+              "2026-08-07",
+              "2026-08-09",
+              "2026-09-08",
+              "2026-09-11",
+              "2026-09-14",
+              "2026-10-09",
+              "2026-12-07",
+              "2026-12-09",
+              "2026-12-10"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1273,
+            "ji_mentions": 1310,
+            "statuses": {
+              "SUPPORTED": 1273,
+              "AVOID": 1705,
+              "NOT_LISTED": 1767,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 251,
+            "ji_mentions": 27,
+            "statuses": {
+              "SUPPORTED": 246,
+              "AVOID": 53,
+              "NOT_LISTED": 61,
+              "UNRESOLVED": 5
+            },
+            "conflicts": [
+              "2027-01-07",
+              "2027-02-07",
+              "2027-03-07",
+              "2027-04-27",
+              "2027-09-09"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1274,
+            "ji_mentions": 1307,
+            "statuses": {
+              "SUPPORTED": 1274,
+              "AVOID": 1703,
+              "NOT_LISTED": 1768,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 240,
+            "ji_mentions": 27,
+            "statuses": {
+              "SUPPORTED": 237,
+              "AVOID": 58,
+              "NOT_LISTED": 68,
+              "UNRESOLVED": 3
+            },
+            "conflicts": [
+              "2028-04-21",
+              "2028-07-05",
+              "2028-12-04"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1279,
+            "ji_mentions": 1312,
+            "statuses": {
+              "SUPPORTED": 1279,
+              "AVOID": 1708,
+              "NOT_LISTED": 1771,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 240,
+            "ji_mentions": 25,
+            "statuses": {
+              "SUPPORTED": 232,
+              "AVOID": 49,
+              "NOT_LISTED": 76,
+              "UNRESOLVED": 8
+            },
+            "conflicts": [
+              "2029-01-04",
+              "2029-04-16",
+              "2029-06-02",
+              "2029-06-30",
+              "2029-08-03",
+              "2029-11-29",
+              "2029-12-05",
+              "2029-12-30"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1268,
+            "ji_mentions": 1309,
+            "statuses": {
+              "SUPPORTED": 1268,
+              "AVOID": 1705,
+              "NOT_LISTED": 1772,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 229,
+            "ji_mentions": 17,
+            "statuses": {
+              "SUPPORTED": 219,
+              "AVOID": 48,
+              "NOT_LISTED": 88,
+              "UNRESOLVED": 10
+            },
+            "conflicts": [
+              "2030-01-30",
+              "2030-04-11",
+              "2030-05-03",
+              "2030-05-28",
+              "2030-06-25",
+              "2030-07-29",
+              "2030-10-06",
+              "2030-11-24",
+              "2030-11-30",
+              "2030-12-25"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1272,
+            "ji_mentions": 1307,
+            "statuses": {
+              "SUPPORTED": 1272,
+              "AVOID": 1702,
+              "NOT_LISTED": 1771,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "PRAYER",
+      "name_vi": "Cầu phúc",
+      "phase": "LATER",
+      "runtime_enabled": false,
+      "day_token": "祈福",
+      "hour_token": "祈福",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 841,
+        "ji_mentions": 271,
+        "statuses": {
+          "SUPPORTED": 836,
+          "AVOID": 893,
+          "NOT_LISTED": 823,
+          "UNRESOLVED": 5
+        },
+        "conflicts": [
+          "2026-05-02",
+          "2027-04-27",
+          "2028-04-21",
+          "2029-04-16",
+          "2030-04-11"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 15176,
+        "ji_mentions": 12229,
+        "statuses": {
+          "SUPPORTED": 15176,
+          "AVOID": 14999,
+          "NOT_LISTED": 3066,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 123,
+            "ji_mentions": 37,
+            "statuses": {
+              "SUPPORTED": 123,
+              "AVOID": 139,
+              "NOT_LISTED": 104,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 2176,
+            "ji_mentions": 1746,
+            "statuses": {
+              "SUPPORTED": 2176,
+              "AVOID": 2143,
+              "NOT_LISTED": 439,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 122,
+            "ji_mentions": 39,
+            "statuses": {
+              "SUPPORTED": 122,
+              "AVOID": 138,
+              "NOT_LISTED": 105,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2169,
+            "ji_mentions": 1744,
+            "statuses": {
+              "SUPPORTED": 2169,
+              "AVOID": 2139,
+              "NOT_LISTED": 437,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 123,
+            "ji_mentions": 44,
+            "statuses": {
+              "SUPPORTED": 122,
+              "AVOID": 135,
+              "NOT_LISTED": 107,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2026-05-02"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2162,
+            "ji_mentions": 1749,
+            "statuses": {
+              "SUPPORTED": 2162,
+              "AVOID": 2144,
+              "NOT_LISTED": 439,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 125,
+            "ji_mentions": 43,
+            "statuses": {
+              "SUPPORTED": 124,
+              "AVOID": 126,
+              "NOT_LISTED": 114,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2027-04-27"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2166,
+            "ji_mentions": 1747,
+            "statuses": {
+              "SUPPORTED": 2166,
+              "AVOID": 2143,
+              "NOT_LISTED": 436,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 118,
+            "ji_mentions": 40,
+            "statuses": {
+              "SUPPORTED": 117,
+              "AVOID": 127,
+              "NOT_LISTED": 121,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2028-04-21"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 2170,
+            "ji_mentions": 1750,
+            "statuses": {
+              "SUPPORTED": 2170,
+              "AVOID": 2146,
+              "NOT_LISTED": 442,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 116,
+            "ji_mentions": 37,
+            "statuses": {
+              "SUPPORTED": 115,
+              "AVOID": 115,
+              "NOT_LISTED": 134,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2029-04-16"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2167,
+            "ji_mentions": 1748,
+            "statuses": {
+              "SUPPORTED": 2167,
+              "AVOID": 2144,
+              "NOT_LISTED": 434,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 114,
+            "ji_mentions": 31,
+            "statuses": {
+              "SUPPORTED": 113,
+              "AVOID": 113,
+              "NOT_LISTED": 138,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2030-04-11"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2166,
+            "ji_mentions": 1745,
+            "statuses": {
+              "SUPPORTED": 2166,
+              "AVOID": 2140,
+              "NOT_LISTED": 439,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "START_JOB",
+      "name_vi": "Nhậm chức",
+      "phase": "LATER",
+      "runtime_enabled": false,
+      "day_token": "赴任",
+      "hour_token": "赴任",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 39,
+        "ji_mentions": 39,
+        "statuses": {
+          "SUPPORTED": 37,
+          "AVOID": 692,
+          "NOT_LISTED": 1826,
+          "UNRESOLVED": 2
+        },
+        "conflicts": [
+          "2024-09-07",
+          "2030-10-06"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 7292,
+        "ji_mentions": 14910,
+        "statuses": {
+          "SUPPORTED": 7292,
+          "AVOID": 17680,
+          "NOT_LISTED": 8269,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 5,
+            "ji_mentions": 8,
+            "statuses": {
+              "SUPPORTED": 4,
+              "AVOID": 111,
+              "NOT_LISTED": 250,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2024-09-07"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1044,
+            "ji_mentions": 2138,
+            "statuses": {
+              "SUPPORTED": 1044,
+              "AVOID": 2535,
+              "NOT_LISTED": 1179,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 2,
+            "ji_mentions": 9,
+            "statuses": {
+              "SUPPORTED": 2,
+              "AVOID": 111,
+              "NOT_LISTED": 252,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1042,
+            "ji_mentions": 2131,
+            "statuses": {
+              "SUPPORTED": 1042,
+              "AVOID": 2526,
+              "NOT_LISTED": 1177,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 1,
+            "ji_mentions": 5,
+            "statuses": {
+              "SUPPORTED": 1,
+              "AVOID": 101,
+              "NOT_LISTED": 263,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1043,
+            "ji_mentions": 2126,
+            "statuses": {
+              "SUPPORTED": 1043,
+              "AVOID": 2521,
+              "NOT_LISTED": 1181,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 2,
+            "ji_mentions": 5,
+            "statuses": {
+              "SUPPORTED": 2,
+              "AVOID": 94,
+              "NOT_LISTED": 269,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1043,
+            "ji_mentions": 2128,
+            "statuses": {
+              "SUPPORTED": 1043,
+              "AVOID": 2524,
+              "NOT_LISTED": 1178,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 4,
+            "ji_mentions": 3,
+            "statuses": {
+              "SUPPORTED": 4,
+              "AVOID": 96,
+              "NOT_LISTED": 266,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 1044,
+            "ji_mentions": 2128,
+            "statuses": {
+              "SUPPORTED": 1044,
+              "AVOID": 2524,
+              "NOT_LISTED": 1190,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 12,
+            "ji_mentions": 4,
+            "statuses": {
+              "SUPPORTED": 12,
+              "AVOID": 88,
+              "NOT_LISTED": 265,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1036,
+            "ji_mentions": 2128,
+            "statuses": {
+              "SUPPORTED": 1036,
+              "AVOID": 2524,
+              "NOT_LISTED": 1185,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 13,
+            "ji_mentions": 5,
+            "statuses": {
+              "SUPPORTED": 12,
+              "AVOID": 91,
+              "NOT_LISTED": 261,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2030-10-06"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 1040,
+            "ji_mentions": 2131,
+            "statuses": {
+              "SUPPORTED": 1040,
+              "AVOID": 2526,
+              "NOT_LISTED": 1179,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "MEET_FAMILY",
+      "name_vi": "Hội họp thân hữu",
+      "phase": "DAY_ONLY_REVIEW",
+      "runtime_enabled": false,
+      "day_token": "会亲友",
+      "hour_token": "会亲友",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 502,
+        "ji_mentions": 37,
+        "statuses": {
+          "SUPPORTED": 502,
+          "AVOID": 674,
+          "NOT_LISTED": 1381,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 0,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 0,
+          "AVOID": 2770,
+          "NOT_LISTED": 30471,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 44,
+            "ji_mentions": 4,
+            "statuses": {
+              "SUPPORTED": 44,
+              "AVOID": 108,
+              "NOT_LISTED": 214,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 397,
+              "NOT_LISTED": 4361,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 48,
+            "ji_mentions": 6,
+            "statuses": {
+              "SUPPORTED": 48,
+              "AVOID": 107,
+              "NOT_LISTED": 210,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 61,
+            "ji_mentions": 5,
+            "statuses": {
+              "SUPPORTED": 61,
+              "AVOID": 99,
+              "NOT_LISTED": 205,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 76,
+            "ji_mentions": 6,
+            "statuses": {
+              "SUPPORTED": 76,
+              "AVOID": 92,
+              "NOT_LISTED": 197,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 87,
+            "ji_mentions": 7,
+            "statuses": {
+              "SUPPORTED": 87,
+              "AVOID": 96,
+              "NOT_LISTED": 183,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4362,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 95,
+            "ji_mentions": 5,
+            "statuses": {
+              "SUPPORTED": 95,
+              "AVOID": 85,
+              "NOT_LISTED": 185,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 91,
+            "ji_mentions": 4,
+            "statuses": {
+              "SUPPORTED": 91,
+              "AVOID": 87,
+              "NOT_LISTED": 187,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "HAIRCUT",
+      "name_vi": "Cắt tóc",
+      "phase": "DAY_ONLY_REVIEW",
+      "runtime_enabled": false,
+      "day_token": "理发",
+      "hour_token": "理发",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 242,
+        "ji_mentions": 68,
+        "statuses": {
+          "SUPPORTED": 242,
+          "AVOID": 711,
+          "NOT_LISTED": 1604,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 0,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 0,
+          "AVOID": 2770,
+          "NOT_LISTED": 30471,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 34,
+            "ji_mentions": 16,
+            "statuses": {
+              "SUPPORTED": 34,
+              "AVOID": 120,
+              "NOT_LISTED": 212,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 397,
+              "NOT_LISTED": 4361,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 41,
+            "ji_mentions": 14,
+            "statuses": {
+              "SUPPORTED": 41,
+              "AVOID": 114,
+              "NOT_LISTED": 210,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 35,
+            "ji_mentions": 14,
+            "statuses": {
+              "SUPPORTED": 35,
+              "AVOID": 108,
+              "NOT_LISTED": 222,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 41,
+            "ji_mentions": 11,
+            "statuses": {
+              "SUPPORTED": 41,
+              "AVOID": 98,
+              "NOT_LISTED": 226,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 32,
+            "ji_mentions": 7,
+            "statuses": {
+              "SUPPORTED": 32,
+              "AVOID": 98,
+              "NOT_LISTED": 236,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4362,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 32,
+            "ji_mentions": 4,
+            "statuses": {
+              "SUPPORTED": 32,
+              "AVOID": 86,
+              "NOT_LISTED": 247,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 27,
+            "ji_mentions": 2,
+            "statuses": {
+              "SUPPORTED": 27,
+              "AVOID": 87,
+              "NOT_LISTED": 251,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "MEDICAL_VISIT",
+      "name_vi": "Cầu y — đi khám",
+      "phase": "DEFER",
+      "runtime_enabled": false,
+      "day_token": "求医",
+      "hour_token": "求医",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 159,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 151,
+          "AVOID": 598,
+          "NOT_LISTED": 1800,
+          "UNRESOLVED": 8
+        },
+        "conflicts": [
+          "2024-03-10",
+          "2024-04-04",
+          "2025-03-05",
+          "2029-01-04",
+          "2029-12-30",
+          "2030-03-02",
+          "2030-05-03",
+          "2030-12-25"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 0,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 0,
+          "AVOID": 2770,
+          "NOT_LISTED": 30471,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 14,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 12,
+              "AVOID": 97,
+              "NOT_LISTED": 255,
+              "UNRESOLVED": 2
+            },
+            "conflicts": [
+              "2024-03-10",
+              "2024-04-04"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 397,
+              "NOT_LISTED": 4361,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 12,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 11,
+              "AVOID": 95,
+              "NOT_LISTED": 258,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2025-03-05"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 15,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 15,
+              "AVOID": 89,
+              "NOT_LISTED": 261,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 23,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 23,
+              "AVOID": 81,
+              "NOT_LISTED": 261,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 31,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 31,
+              "AVOID": 83,
+              "NOT_LISTED": 252,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4362,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 32,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 30,
+              "AVOID": 74,
+              "NOT_LISTED": 259,
+              "UNRESOLVED": 2
+            },
+            "conflicts": [
+              "2029-01-04",
+              "2029-12-30"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 32,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 29,
+              "AVOID": 79,
+              "NOT_LISTED": 254,
+              "UNRESOLVED": 3
+            },
+            "conflicts": [
+              "2030-03-02",
+              "2030-05-03",
+              "2030-12-25"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "TREATMENT",
+      "name_vi": "Trị bệnh",
+      "phase": "DEFER",
+      "runtime_enabled": false,
+      "day_token": "治病",
+      "hour_token": "治病",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": 1,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 230,
+        "ji_mentions": 75,
+        "statuses": {
+          "SUPPORTED": 216,
+          "AVOID": 638,
+          "NOT_LISTED": 1689,
+          "UNRESOLVED": 14
+        },
+        "conflicts": [
+          "2024-03-10",
+          "2024-03-22",
+          "2024-04-04",
+          "2024-09-24",
+          "2024-12-08",
+          "2025-03-05",
+          "2025-03-17",
+          "2025-09-19",
+          "2026-03-12",
+          "2026-09-14",
+          "2027-03-07",
+          "2027-09-09",
+          "2030-05-03",
+          "2030-09-04"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 0,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 0,
+          "AVOID": 2770,
+          "NOT_LISTED": 30471,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 22,
+            "ji_mentions": 11,
+            "statuses": {
+              "SUPPORTED": 17,
+              "AVOID": 101,
+              "NOT_LISTED": 243,
+              "UNRESOLVED": 5
+            },
+            "conflicts": [
+              "2024-03-10",
+              "2024-03-22",
+              "2024-04-04",
+              "2024-09-24",
+              "2024-12-08"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 397,
+              "NOT_LISTED": 4361,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 23,
+            "ji_mentions": 9,
+            "statuses": {
+              "SUPPORTED": 20,
+              "AVOID": 96,
+              "NOT_LISTED": 246,
+              "UNRESOLVED": 3
+            },
+            "conflicts": [
+              "2025-03-05",
+              "2025-03-17",
+              "2025-09-19"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 27,
+            "ji_mentions": 10,
+            "statuses": {
+              "SUPPORTED": 25,
+              "AVOID": 93,
+              "NOT_LISTED": 245,
+              "UNRESOLVED": 2
+            },
+            "conflicts": [
+              "2026-03-12",
+              "2026-09-14"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 35,
+            "ji_mentions": 11,
+            "statuses": {
+              "SUPPORTED": 33,
+              "AVOID": 85,
+              "NOT_LISTED": 245,
+              "UNRESOLVED": 2
+            },
+            "conflicts": [
+              "2027-03-07",
+              "2027-09-09"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 44,
+            "ji_mentions": 11,
+            "statuses": {
+              "SUPPORTED": 44,
+              "AVOID": 88,
+              "NOT_LISTED": 234,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4362,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 40,
+            "ji_mentions": 11,
+            "statuses": {
+              "SUPPORTED": 40,
+              "AVOID": 85,
+              "NOT_LISTED": 240,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 39,
+            "ji_mentions": 12,
+            "statuses": {
+              "SUPPORTED": 37,
+              "AVOID": 90,
+              "NOT_LISTED": 236,
+              "UNRESOLVED": 2
+            },
+            "conflicts": [
+              "2030-05-03",
+              "2030-09-04"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "BURIAL",
+      "name_vi": "An táng",
+      "phase": "SEPARATE_DOMAIN",
+      "runtime_enabled": false,
+      "day_token": "安葬",
+      "hour_token": "安葬",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": null,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 875,
+        "ji_mentions": 1031,
+        "statuses": {
+          "SUPPORTED": 864,
+          "AVOID": 1411,
+          "NOT_LISTED": 271,
+          "UNRESOLVED": 11
+        },
+        "conflicts": [
+          "2024-02-16",
+          "2024-05-08",
+          "2024-08-17",
+          "2024-08-19",
+          "2025-02-10",
+          "2025-08-12",
+          "2025-08-14",
+          "2026-02-05",
+          "2026-08-07",
+          "2026-08-09",
+          "2030-08-03"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 16742,
+        "ji_mentions": 1663,
+        "statuses": {
+          "SUPPORTED": 16742,
+          "AVOID": 4433,
+          "NOT_LISTED": 12066,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 136,
+            "ji_mentions": 127,
+            "statuses": {
+              "SUPPORTED": 132,
+              "AVOID": 197,
+              "NOT_LISTED": 33,
+              "UNRESOLVED": 4
+            },
+            "conflicts": [
+              "2024-02-16",
+              "2024-05-08",
+              "2024-08-17",
+              "2024-08-19"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 2395,
+            "ji_mentions": 237,
+            "statuses": {
+              "SUPPORTED": 2395,
+              "AVOID": 634,
+              "NOT_LISTED": 1729,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 127,
+            "ji_mentions": 139,
+            "statuses": {
+              "SUPPORTED": 124,
+              "AVOID": 205,
+              "NOT_LISTED": 33,
+              "UNRESOLVED": 3
+            },
+            "conflicts": [
+              "2025-02-10",
+              "2025-08-12",
+              "2025-08-14"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2396,
+            "ji_mentions": 238,
+            "statuses": {
+              "SUPPORTED": 2396,
+              "AVOID": 633,
+              "NOT_LISTED": 1716,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 127,
+            "ji_mentions": 150,
+            "statuses": {
+              "SUPPORTED": 124,
+              "AVOID": 204,
+              "NOT_LISTED": 34,
+              "UNRESOLVED": 3
+            },
+            "conflicts": [
+              "2026-02-05",
+              "2026-08-07",
+              "2026-08-09"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2384,
+            "ji_mentions": 239,
+            "statuses": {
+              "SUPPORTED": 2384,
+              "AVOID": 634,
+              "NOT_LISTED": 1727,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 123,
+            "ji_mentions": 159,
+            "statuses": {
+              "SUPPORTED": 123,
+              "AVOID": 203,
+              "NOT_LISTED": 39,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2391,
+            "ji_mentions": 238,
+            "statuses": {
+              "SUPPORTED": 2391,
+              "AVOID": 634,
+              "NOT_LISTED": 1720,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 119,
+            "ji_mentions": 162,
+            "statuses": {
+              "SUPPORTED": 119,
+              "AVOID": 207,
+              "NOT_LISTED": 40,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 2399,
+            "ji_mentions": 239,
+            "statuses": {
+              "SUPPORTED": 2399,
+              "AVOID": 635,
+              "NOT_LISTED": 1724,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 120,
+            "ji_mentions": 152,
+            "statuses": {
+              "SUPPORTED": 120,
+              "AVOID": 200,
+              "NOT_LISTED": 45,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2391,
+            "ji_mentions": 236,
+            "statuses": {
+              "SUPPORTED": 2391,
+              "AVOID": 632,
+              "NOT_LISTED": 1722,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 123,
+            "ji_mentions": 142,
+            "statuses": {
+              "SUPPORTED": 122,
+              "AVOID": 195,
+              "NOT_LISTED": 47,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2030-08-03"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 2386,
+            "ji_mentions": 236,
+            "statuses": {
+              "SUPPORTED": 2386,
+              "AVOID": 631,
+              "NOT_LISTED": 1728,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    },
+    {
+      "candidate_id": "GRAVE_BREAKING",
+      "name_vi": "Phá thổ phần mộ",
+      "phase": "SEPARATE_DOMAIN",
+      "runtime_enabled": false,
+      "day_token": "破土",
+      "hour_token": "破土",
+      "token_mapping_reviewed": false,
+      "proposed_subject_count": null,
+      "day": {
+        "records": 2557,
+        "yi_mentions": 730,
+        "ji_mentions": 522,
+        "statuses": {
+          "SUPPORTED": 718,
+          "AVOID": 1038,
+          "NOT_LISTED": 789,
+          "UNRESOLVED": 12
+        },
+        "conflicts": [
+          "2024-02-16",
+          "2024-05-08",
+          "2024-08-17",
+          "2025-02-10",
+          "2025-08-12",
+          "2026-02-05",
+          "2026-05-02",
+          "2026-08-07",
+          "2027-04-27",
+          "2028-04-21",
+          "2029-04-16",
+          "2030-04-11"
+        ]
+      },
+      "hour": {
+        "records": 33241,
+        "yi_mentions": 0,
+        "ji_mentions": 0,
+        "statuses": {
+          "SUPPORTED": 0,
+          "AVOID": 2770,
+          "NOT_LISTED": 30471,
+          "UNRESOLVED": 0
+        },
+        "conflicts": []
+      },
+      "annual": {
+        "2024": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 101,
+            "ji_mentions": 58,
+            "statuses": {
+              "SUPPORTED": 98,
+              "AVOID": 142,
+              "NOT_LISTED": 123,
+              "UNRESOLVED": 3
+            },
+            "conflicts": [
+              "2024-02-16",
+              "2024-05-08",
+              "2024-08-17"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 397,
+              "NOT_LISTED": 4361,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2025": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 106,
+            "ji_mentions": 63,
+            "statuses": {
+              "SUPPORTED": 104,
+              "AVOID": 145,
+              "NOT_LISTED": 114,
+              "UNRESOLVED": 2
+            },
+            "conflicts": [
+              "2025-02-10",
+              "2025-08-12"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2026": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 109,
+            "ji_mentions": 78,
+            "statuses": {
+              "SUPPORTED": 106,
+              "AVOID": 151,
+              "NOT_LISTED": 105,
+              "UNRESOLVED": 3
+            },
+            "conflicts": [
+              "2026-02-05",
+              "2026-05-02",
+              "2026-08-07"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2027": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 110,
+            "ji_mentions": 92,
+            "statuses": {
+              "SUPPORTED": 109,
+              "AVOID": 160,
+              "NOT_LISTED": 95,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2027-04-27"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2028": {
+          "day": {
+            "records": 366,
+            "yi_mentions": 106,
+            "ji_mentions": 85,
+            "statuses": {
+              "SUPPORTED": 105,
+              "AVOID": 154,
+              "NOT_LISTED": 106,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2028-04-21"
+            ]
+          },
+          "hour": {
+            "records": 4758,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4362,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2029": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 100,
+            "ji_mentions": 76,
+            "statuses": {
+              "SUPPORTED": 99,
+              "AVOID": 143,
+              "NOT_LISTED": 122,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2029-04-16"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 396,
+              "NOT_LISTED": 4349,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        },
+        "2030": {
+          "day": {
+            "records": 365,
+            "yi_mentions": 98,
+            "ji_mentions": 70,
+            "statuses": {
+              "SUPPORTED": 97,
+              "AVOID": 143,
+              "NOT_LISTED": 124,
+              "UNRESOLVED": 1
+            },
+            "conflicts": [
+              "2030-04-11"
+            ]
+          },
+          "hour": {
+            "records": 4745,
+            "yi_mentions": 0,
+            "ji_mentions": 0,
+            "statuses": {
+              "SUPPORTED": 0,
+              "AVOID": 395,
+              "NOT_LISTED": 4350,
+              "UNRESOLVED": 0
+            },
+            "conflicts": []
+          }
+        }
+      }
+    }
+  ]
+}

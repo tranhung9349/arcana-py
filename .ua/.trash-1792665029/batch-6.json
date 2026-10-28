@@ -1,0 +1,1020 @@
+{
+ "nodes": [
+  {
+   "id": "file:research_tools/exponential_audit.py",
+   "type": "file",
+   "name": "exponential_audit.py",
+   "filePath": "research_tools/exponential_audit.py",
+   "summary": "Script CLI nghiên cứu so sánh các tham số beta của phân bố trọng số hàm mũ cho MVP 1: tính chính xác xác suất trên 125 ngữ cảnh P/Thể/Dụng, lấy mẫu Monte Carlo tái lập được và xuất báo cáo JSON/Markdown vào docs/research. Không thuộc luồng runtime.",
+   "tags": [
+    "entry-point",
+    "nghiên-cứu",
+    "audit",
+    "monte-carlo",
+    "báo-cáo"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Chạy dưới dạng module (`python3 -m research_tools.exponential_audit`) với relative import; đối chiếu chặt `config/mvp1_rules.json` và ghi SHA-256 của rule/config/mã nguồn để báo cáo có thể kiểm chứng."
+  },
+  {
+   "id": "file:research_tools/weighted_sampling.py",
+   "type": "file",
+   "name": "weighted_sampling.py",
+   "filePath": "research_tools/weighted_sampling.py",
+   "summary": "Thư viện nghiên cứu liệt kê chính xác các cấu hình bucket (hành × chẵn/lẻ) cho bộ sáu số 00–45 và lấy mẫu tập con theo luật tích trọng số bằng đa thức đối xứng sơ cấp. Mô phỏng chấm điểm Âm Dương/Ngũ Hành, chọn hành giải cho Đại Hung và kiểm tra luật cứng, tách biệt với sampler runtime.",
+   "tags": [
+    "nghiên-cứu",
+    "lấy-mẫu-có-trọng-số",
+    "ngũ-hành",
+    "xác-suất",
+    "utility"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Dùng `@dataclass(frozen=True)` để Context/Configuration hashable làm khóa cho `lru_cache`; lấy mẫu tập con kích thước cố định qua đa thức đối xứng sơ cấp hậu tố, khác với bốc tuần tự có loại bỏ."
+  },
+  {
+   "id": "file:tests/test_weighted_sampling.py",
+   "type": "file",
+   "name": "test_weighted_sampling.py",
+   "filePath": "tests/test_weighted_sampling.py",
+   "summary": "Bộ unittest kiểm chứng optimizer và sampler nghiên cứu bằng cách đối chiếu với phép cộng brute-force trên pool nhỏ: chiều quan hệ ngũ hành, xác suất tập con, partition, tỉ lệ trọng số theo beta và quota hành giải.",
+   "tags": [
+    "test",
+    "unittest",
+    "brute-force",
+    "xác-suất",
+    "nghiên-cứu"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:research_tools/exponential_audit.py:digest",
+   "type": "function",
+   "name": "digest",
+   "filePath": "research_tools/exponential_audit.py",
+   "lineRange": [
+    26,
+    27
+   ],
+   "summary": "Tính mã băm SHA-256 của một file để ghi dấu phiên bản rule/config/mã nguồn vào báo cáo.",
+   "tags": [
+    "utility",
+    "hashing",
+    "tái-lập"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/exponential_audit.py:average_metrics",
+   "type": "function",
+   "name": "average_metrics",
+   "filePath": "research_tools/exponential_audit.py",
+   "lineRange": [
+    30,
+    35
+   ],
+   "summary": "Lấy trung bình các chỉ số chính xác (tỉ lệ đạt ngưỡng, điểm ≥75, điểm trung bình, kỳ vọng số lượng từng hành, phân bố chẵn) trên danh sách ngữ cảnh.",
+   "tags": [
+    "thống-kê",
+    "tổng-hợp",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/exponential_audit.py:feasibility_report",
+   "type": "function",
+   "name": "feasibility_report",
+   "filePath": "research_tools/exponential_audit.py",
+   "lineRange": [
+    38,
+    83
+   ],
+   "summary": "Lập báo cáo khả thi toán học cho các ngữ cảnh Đại Hung: G_cap lượt đầu, khả năng đạt ngưỡng khi retry 3–3 và so sánh quota 3..4 với 3..5; kèm các cặp P/Thể không Hung.",
+   "tags": [
+    "khả-thi",
+    "audit",
+    "đại-hung",
+    "báo-cáo"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:research_tools/exponential_audit.py:run",
+   "type": "function",
+   "name": "run",
+   "filePath": "research_tools/exponential_audit.py",
+   "lineRange": [
+    86,
+    137
+   ],
+   "summary": "Chạy thử nghiệm cho từng profile delta và beta: tính chỉ số chính xác qua Distribution, lấy mẫu Monte Carlo có seed, kiểm luật cứng cho lượt đầu và retry có điều kiện.",
+   "tags": [
+    "monte-carlo",
+    "thử-nghiệm",
+    "lấy-mẫu",
+    "beta"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:research_tools/exponential_audit.py:markdown_report",
+   "type": "function",
+   "name": "markdown_report",
+   "filePath": "research_tools/exponential_audit.py",
+   "lineRange": [
+    140,
+    156
+   ],
+   "summary": "Sinh báo cáo Markdown tiếng Việt tóm tắt kết quả thử phân bố hàm mũ theo profile và beta, kèm các lưu ý phương pháp.",
+   "tags": [
+    "báo-cáo",
+    "markdown",
+    "định-dạng"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:research_tools/exponential_audit.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "research_tools/exponential_audit.py",
+   "lineRange": [
+    159,
+    201
+   ],
+   "summary": "Điểm vào CLI: parse tham số, đọc và xác thực chính sách trong mvp1_rules.json cùng danh sách số dân gian, chạy báo cáo khả thi và thử nghiệm rồi ghi các file JSON/Markdown.",
+   "tags": [
+    "entry-point",
+    "cli",
+    "xác-thực-cấu-hình",
+    "điều-phối"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:element_of",
+   "type": "function",
+   "name": "element_of",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    21,
+    22
+   ],
+   "summary": "Ánh xạ một số sang hành Ngũ Hành theo chữ số hàng đơn vị.",
+   "tags": [
+    "ngũ-hành",
+    "utility",
+    "ánh-xạ"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:relation_score",
+   "type": "function",
+   "name": "relation_score",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    25,
+    36
+   ],
+   "summary": "Trả điểm quan hệ giữa hai hành (đồng hành, sinh, được sinh, bị khắc, khắc) trong thang -100..100.",
+   "tags": [
+    "ngũ-hành",
+    "chấm-điểm",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:state_of",
+   "type": "function",
+   "name": "state_of",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    39,
+    48
+   ],
+   "summary": "Xác định trạng thái quẻ (Bình Hòa, Đại Cát, Thứ Cát, Tiểu Hao, Đại Hung) từ quan hệ Thể–Dụng.",
+   "tags": [
+    "mai-hoa",
+    "thể-dụng",
+    "phân-loại"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:count_vectors",
+   "type": "function",
+   "name": "count_vectors",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    95,
+    108
+   ],
+   "summary": "Liệt kê có cache mọi vector số lượng tổng bằng sáu trên các bucket có giới hạn dung lượng.",
+   "tags": [
+    "tổ-hợp",
+    "liệt-kê",
+    "cache"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:grouped_pool",
+   "type": "function",
+   "name": "grouped_pool",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    111,
+    112
+   ],
+   "summary": "Chia pool số thành mười bucket theo hành và tính chẵn/lẻ.",
+   "tags": [
+    "utility",
+    "phân-nhóm",
+    "ngũ-hành"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:configurations",
+   "type": "function",
+   "name": "configurations",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    116,
+    137
+   ],
+   "summary": "Liệt kê có cache mọi cấu hình bucket hợp lệ cho một ngữ cảnh, áp luật cứng chẵn/lẻ, cấm sáu số cùng hành, quota hành giải Đại Hung và tính điểm thô có phạt xung khắc.",
+   "tags": [
+    "liệt-kê",
+    "luật-cứng",
+    "chấm-điểm",
+    "cache"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:select_context",
+   "type": "function",
+   "name": "select_context",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    140,
+    161
+   ],
+   "summary": "Tạo ngữ cảnh từ P/Thể/Dụng; với Đại Hung chọn hành giải khả thi tốt nhất theo tie-break thử nghiệm và trả kèm danh sách ứng viên đã audit.",
+   "tags": [
+    "đại-hung",
+    "hành-giải",
+    "tối-ưu"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:elementary_symmetric",
+   "type": "function",
+   "name": "elementary_symmetric",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    164,
+    169
+   ],
+   "summary": "Tính các đa thức đối xứng sơ cấp e_0..e_k của một dãy trọng số.",
+   "tags": [
+    "toán-học",
+    "đa-thức",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:weights_for",
+   "type": "function",
+   "name": "weights_for",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    202,
+    225
+   ],
+   "summary": "Tính trọng số từng số theo exp(beta × (S_i − max)/100), nhân ×3 cho hành giải và cộng delta minh họa theo profile.",
+   "tags": [
+    "trọng-số",
+    "beta",
+    "hàm-mũ"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:all_contexts",
+   "type": "function",
+   "name": "all_contexts",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    274,
+    275
+   ],
+   "summary": "Sinh 125 ngữ cảnh P/Thể/Dụng đã chọn hành giải.",
+   "tags": [
+    "liệt-kê",
+    "ngữ-cảnh",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/weighted_sampling.py:validate_sample",
+   "type": "function",
+   "name": "validate_sample",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    278,
+    291
+   ],
+   "summary": "Kiểm tra một bộ số thỏa luật cứng: sáu số khác nhau trong pool, không đơn hành, không toàn chẵn/lẻ, 3–3 khi retry và quota/cấm khắc trong Đại Hung.",
+   "tags": [
+    "validation",
+    "luật-cứng",
+    "kiểm-tra"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:research_tools/weighted_sampling.py:Context",
+   "type": "class",
+   "name": "Context",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    52,
+    70
+   ],
+   "summary": "Dataclass bất biến mô tả ngữ cảnh gieo (P, Thể, Dụng, hành giải, chiến lược) kèm trạng thái, ngưỡng điểm và luật cho phép hành.",
+   "tags": [
+    "data-model",
+    "ngữ-cảnh",
+    "dataclass"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:research_tools/weighted_sampling.py:Configuration",
+   "type": "class",
+   "name": "Configuration",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    74,
+    91
+   ],
+   "summary": "Dataclass bất biến cho một cấu hình bucket, tính điểm Âm Dương theo số chẵn và điểm tổng 40/60 chuẩn hóa theo G_cap, kiểm tra đạt ngưỡng.",
+   "tags": [
+    "data-model",
+    "chấm-điểm",
+    "dataclass"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:research_tools/weighted_sampling.py:ProductSubsetSampler",
+   "type": "class",
+   "name": "ProductSubsetSampler",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    172,
+    199
+   ],
+   "summary": "Sampler tập con kích thước cố định với xác suất tỷ lệ tích trọng số, dùng đa thức đối xứng sơ cấp hậu tố.",
+   "tags": [
+    "sampler",
+    "xác-suất",
+    "thuật-toán"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:research_tools/weighted_sampling.py:Distribution",
+   "type": "class",
+   "name": "Distribution",
+   "filePath": "research_tools/weighted_sampling.py",
+   "lineRange": [
+    228,
+    271
+   ],
+   "summary": "Phân bố trên các cấu hình khả thi: tính khối lượng chính xác bằng tích đa thức, lấy mẫu qua CDF và tính các chỉ số kỳ vọng chính xác.",
+   "tags": [
+    "phân-bố",
+    "xác-suất",
+    "lấy-mẫu",
+    "chỉ-số"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "type": "class",
+   "name": "WeightedSamplingTest",
+   "filePath": "tests/test_weighted_sampling.py",
+   "lineRange": [
+    15,
+    84
+   ],
+   "summary": "Lớp unittest đối chiếu configurations, select_context, Distribution, ProductSubsetSampler và weights_for với tính toán brute-force độc lập trên pool nhỏ.",
+   "tags": [
+    "test",
+    "unittest",
+    "brute-force"
+   ],
+   "complexity": "moderate"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:digest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:digest",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:average_metrics",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:average_metrics",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:feasibility_report",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:feasibility_report",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:run",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:run",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:markdown_report",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:markdown_report",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "function:research_tools/exponential_audit.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:element_of",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:element_of",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:relation_score",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:relation_score",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:state_of",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:state_of",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:count_vectors",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:count_vectors",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:grouped_pool",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:grouped_pool",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:configurations",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:configurations",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:select_context",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:select_context",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:elementary_symmetric",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:elementary_symmetric",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:weights_for",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:weights_for",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:all_contexts",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:all_contexts",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:validate_sample",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "function:research_tools/weighted_sampling.py:validate_sample",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "class:research_tools/weighted_sampling.py:Context",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "class:research_tools/weighted_sampling.py:Context",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "class:research_tools/weighted_sampling.py:Configuration",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "class:research_tools/weighted_sampling.py:Configuration",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "class:research_tools/weighted_sampling.py:ProductSubsetSampler",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "class:research_tools/weighted_sampling.py:ProductSubsetSampler",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "class:research_tools/weighted_sampling.py:Distribution",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "class:research_tools/weighted_sampling.py:Distribution",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:tests/test_weighted_sampling.py",
+   "target": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:tests/test_weighted_sampling.py",
+   "target": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/exponential_audit.py",
+   "target": "file:research_tools/weighted_sampling.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_weighted_sampling.py",
+   "target": "file:research_tools/weighted_sampling.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:research_tools/weighted_sampling.py",
+   "target": "file:tests/test_weighted_sampling.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:main",
+   "target": "function:research_tools/exponential_audit.py:feasibility_report",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:main",
+   "target": "function:research_tools/exponential_audit.py:run",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:main",
+   "target": "function:research_tools/exponential_audit.py:markdown_report",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:main",
+   "target": "function:research_tools/exponential_audit.py:digest",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:run",
+   "target": "function:research_tools/exponential_audit.py:average_metrics",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:run",
+   "target": "function:research_tools/weighted_sampling.py:all_contexts",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:run",
+   "target": "function:research_tools/weighted_sampling.py:configurations",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:run",
+   "target": "function:research_tools/weighted_sampling.py:weights_for",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:run",
+   "target": "class:research_tools/weighted_sampling.py:Distribution",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:run",
+   "target": "function:research_tools/weighted_sampling.py:validate_sample",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:feasibility_report",
+   "target": "function:research_tools/weighted_sampling.py:all_contexts",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:feasibility_report",
+   "target": "function:research_tools/weighted_sampling.py:configurations",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:feasibility_report",
+   "target": "function:research_tools/weighted_sampling.py:select_context",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/exponential_audit.py:feasibility_report",
+   "target": "class:research_tools/weighted_sampling.py:Context",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:configurations",
+   "target": "function:research_tools/weighted_sampling.py:grouped_pool",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:configurations",
+   "target": "function:research_tools/weighted_sampling.py:count_vectors",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:configurations",
+   "target": "function:research_tools/weighted_sampling.py:relation_score",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:configurations",
+   "target": "class:research_tools/weighted_sampling.py:Configuration",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:select_context",
+   "target": "function:research_tools/weighted_sampling.py:configurations",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:select_context",
+   "target": "function:research_tools/weighted_sampling.py:relation_score",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:select_context",
+   "target": "class:research_tools/weighted_sampling.py:Context",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:all_contexts",
+   "target": "function:research_tools/weighted_sampling.py:select_context",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:weights_for",
+   "target": "function:research_tools/weighted_sampling.py:relation_score",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:weights_for",
+   "target": "function:research_tools/weighted_sampling.py:element_of",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:grouped_pool",
+   "target": "function:research_tools/weighted_sampling.py:element_of",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/weighted_sampling.py:validate_sample",
+   "target": "function:research_tools/weighted_sampling.py:element_of",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:research_tools/weighted_sampling.py:Context",
+   "target": "function:research_tools/weighted_sampling.py:state_of",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:research_tools/weighted_sampling.py:Distribution",
+   "target": "function:research_tools/weighted_sampling.py:grouped_pool",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:research_tools/weighted_sampling.py:Distribution",
+   "target": "class:research_tools/weighted_sampling.py:ProductSubsetSampler",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "target": "function:research_tools/weighted_sampling.py:configurations",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "target": "function:research_tools/weighted_sampling.py:select_context",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "target": "class:research_tools/weighted_sampling.py:Distribution",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "target": "class:research_tools/weighted_sampling.py:ProductSubsetSampler",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "target": "function:research_tools/weighted_sampling.py:weights_for",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "target": "function:research_tools/weighted_sampling.py:validate_sample",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "target": "function:research_tools/weighted_sampling.py:relation_score",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_weighted_sampling.py:WeightedSamplingTest",
+   "target": "function:research_tools/weighted_sampling.py:element_of",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  }
+ ]
+}

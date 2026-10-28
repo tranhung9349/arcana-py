@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "config:data/reference/open-iching/iching.json",
+      "type": "config",
+      "name": "iching.json",
+      "filePath": "data/reference/open-iching/iching.json",
+      "summary": "Dữ liệu kinh văn Kinh Dịch nguyên văn Hán (ghim từ john-walks-slow/open-iching): mảng 64 quẻ, mỗi quẻ có id, tên, ký hiệu Unicode, mảng 6 hào âm/dương, cặp quẻ đơn và quẻ từ, kèm danh sách hào từ (tổng 386 mục, gồm 用九/用六 ở quẻ Càn và Khôn).",
+      "tags": ["du-lieu-tham-chieu", "kinh-dich", "kinh-van", "json-data", "schema-definition"],
+      "complexity": "complex",
+      "languageNotes": "Mảng JSON lồng nhau: mỗi phần tử quẻ chứa mảng `lines` với `type` (1 = dương, 0 = âm) và `scripture`; khóa tra cứu trong code được dựng dạng `iching__<id>` và `iching__<id>_<hào>`."
+    },
+    {
+      "id": "config:data/reference/open-iching/tuan.json",
+      "type": "config",
+      "name": "tuan.json",
+      "filePath": "data/reference/open-iching/tuan.json",
+      "summary": "Thoán truyện nguyên văn Hán dạng ánh xạ phẳng `iching__<id>` → văn bản, gồm 63 mục; thiếu mục của quẻ 32 (Hằng), được code ghi nhận thành khoảng trống nguồn.",
+      "tags": ["du-lieu-tham-chieu", "kinh-dich", "thoan-truyen", "json-data", "khoang-trong-du-lieu"],
+      "complexity": "moderate",
+      "languageNotes": "Object JSON phẳng một cấp; việc thiếu khóa `iching__32` phải được xử lý tường minh khi tra cứu theo khóa chính xác."
+    },
+    {
+      "id": "config:data/reference/open-iching/xiang.json",
+      "type": "config",
+      "name": "xiang.json",
+      "filePath": "data/reference/open-iching/xiang.json",
+      "summary": "Tượng truyện nguyên văn Hán dạng ánh xạ phẳng 450 khóa: `iching__<id>` cho Đại Tượng của 64 quẻ và `iching__<id>_<hào>` cho Tiểu Tượng từng hào (kể cả 用九/用六).",
+      "tags": ["du-lieu-tham-chieu", "kinh-dich", "tuong-truyen", "json-data"],
+      "complexity": "complex",
+      "languageNotes": "Quy ước khóa phân cấp mã hóa trong chuỗi (`iching__1_7` là 用九) thay vì cấu trúc lồng nhau."
+    }
+  ],
+  "edges": [
+    {"source": "config:data/reference/open-iching/iching.json", "target": "file:randomyst/maihoa.py", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "config:data/reference/open-iching/iching.json", "target": "file:randomyst/interpretation.py", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "config:data/reference/open-iching/tuan.json", "target": "file:randomyst/maihoa.py", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "config:data/reference/open-iching/tuan.json", "target": "file:randomyst/interpretation.py", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "config:data/reference/open-iching/xiang.json", "target": "file:randomyst/maihoa.py", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "config:data/reference/open-iching/xiang.json", "target": "file:randomyst/interpretation.py", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "config:data/reference/open-iching/tuan.json", "target": "config:data/reference/open-iching/iching.json", "type": "related", "direction": "forward", "weight": 0.5},
+    {"source": "config:data/reference/open-iching/xiang.json", "target": "config:data/reference/open-iching/iching.json", "type": "related", "direction": "forward", "weight": 0.5},
+    {"source": "config:data/reference/open-iching/iching.json", "target": "config:data/reference/manifest.json", "type": "related", "direction": "forward", "weight": 0.5}
+  ]
+}

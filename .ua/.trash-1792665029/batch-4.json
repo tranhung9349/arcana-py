@@ -1,0 +1,854 @@
+{
+ "nodes": [
+  {
+   "id": "file:data/reference/tinix-bazi/ganzhi.js",
+   "type": "file",
+   "name": "ganzhi.js",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "summary": "Module lõi Can Chi tham chiếu từ tinix-bazi: định nghĩa Thiên Can, Địa Chi, Ngũ Hành, Nạp Âm, Tàng Can và các hàm chuyển đổi, Thập Thần, Vòng Tràng Sinh; đồng thời gộp lại toàn bộ dữ liệu mở rộng từ ganzhi_data.js. Runtime không chạy file này, chỉ dùng để đối chiếu với randomyst/bazi.py.",
+   "tags": [
+    "bat-tu",
+    "can-chi",
+    "utility",
+    "tham-chieu",
+    "barrel"
+   ],
+   "complexity": "complex",
+   "languageNotes": "CommonJS: module.exports dùng spread `...ganzhiData` để tái xuất toàn bộ bảng dữ liệu mở rộng cùng các hàm tiện ích."
+  },
+  {
+   "id": "file:data/reference/tinix-bazi/ganzhi_data.js",
+   "type": "file",
+   "name": "ganzhi_data.js",
+   "filePath": "data/reference/tinix-bazi/ganzhi_data.js",
+   "summary": "Kho dữ liệu Can Chi mở rộng (chuyển từ Python ganzhi.py): bảng hợp/xung/hình/hại/phá của Can Chi, Thập Thần, mô tả Nhật Chủ, Không Vong, Điều Hậu, Cách cục, tiết khí và các bảng Thần Sát theo năm/tháng/ngày.",
+   "tags": [
+    "bat-tu",
+    "du-lieu-tham-chieu",
+    "lookup-table",
+    "can-chi",
+    "data-model"
+   ],
+   "complexity": "complex",
+   "languageNotes": "File thuần dữ liệu: chỉ gồm các hằng số object/array và một module.exports lớn, không có hàm."
+  },
+  {
+   "id": "file:data/reference/tinix-bazi/geju.js",
+   "type": "file",
+   "name": "geju.js",
+   "filePath": "data/reference/tinix-bazi/geju.js",
+   "summary": "Xác định Cách Cục của lá số Bát Tự (Kiến Lộc, Thực Thần, Chính Quan…) dựa trên Thập Thần của chi tháng và phân tích Tam Hợp cục trong tứ trụ.",
+   "tags": [
+    "bat-tu",
+    "cach-cuc",
+    "phan-tich",
+    "tham-chieu"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+   "type": "file",
+   "name": "ngu_hanh_data.js",
+   "filePath": "data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+   "summary": "Kho dữ liệu Ngũ Hành tĩnh dùng cho phân tích luận giải: nghề nghiệp theo hành, sức khỏe Đông Y, phân tích cấu trúc cách cục, lời khuyên đại vận, Điều Hậu và phong thủy.",
+   "tags": [
+    "ngu-hanh",
+    "du-lieu-tham-chieu",
+    "lookup-table",
+    "data-model"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+   "type": "file",
+   "name": "ngu_hanh.js",
+   "filePath": "data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+   "summary": "Phân tích cân bằng Ngũ Hành của lá số: tính điểm cường nhược Nhật Chủ, suy ra Dụng/Hỷ/Kỵ thần, Điều Hậu, rồi ghép luận giải nghề nghiệp, sức khỏe, phong thủy từ ngu_hanh_data.js.",
+   "tags": [
+    "ngu-hanh",
+    "phan-tich",
+    "dung-than",
+    "service",
+    "tham-chieu"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:data/reference/tinix-bazi/shensha.js",
+   "type": "file",
+   "name": "shensha.js",
+   "filePath": "data/reference/tinix-bazi/shensha.js",
+   "summary": "Tính Thần Sát cho bốn trụ năm/tháng/ngày/giờ (Vòng Thái Tuế, Cô Thần, Quả Tú, Tam Kỳ…) từ các bảng SHEN_SHA và mô tả SHEN_SHA_INFO.",
+   "tags": [
+    "bat-tu",
+    "than-sat",
+    "lookup-table",
+    "phan-tich",
+    "tham-chieu"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:ganToVN",
+   "type": "function",
+   "name": "ganToVN",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    111,
+    115
+   ],
+   "summary": "Chuyển Thiên Can chữ Hán sang tên tiếng Việt.",
+   "tags": [
+    "can-chi",
+    "chuyen-doi",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:zhiToVN",
+   "type": "function",
+   "name": "zhiToVN",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    118,
+    121
+   ],
+   "summary": "Chuyển Địa Chi chữ Hán sang tên tiếng Việt.",
+   "tags": [
+    "can-chi",
+    "chuyen-doi",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:ganToElement",
+   "type": "function",
+   "name": "ganToElement",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    124,
+    130
+   ],
+   "summary": "Trả về hành Ngũ Hành của một Thiên Can (nhận cả chữ Hán lẫn tiếng Việt).",
+   "tags": [
+    "can-chi",
+    "ngu-hanh",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:zhiToElement",
+   "type": "function",
+   "name": "zhiToElement",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    133,
+    138
+   ],
+   "summary": "Trả về hành Ngũ Hành của một Địa Chi (nhận cả chữ Hán lẫn tiếng Việt).",
+   "tags": [
+    "can-chi",
+    "ngu-hanh",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:getNapAm",
+   "type": "function",
+   "name": "getNapAm",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    141,
+    144
+   ],
+   "summary": "Tra Nạp Âm của cặp Can Chi từ bảng NAP_AM.",
+   "tags": [
+    "can-chi",
+    "nap-am",
+    "lookup"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:getTangCan",
+   "type": "function",
+   "name": "getTangCan",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    147,
+    149
+   ],
+   "summary": "Trả về danh sách Tàng Can ẩn trong một Địa Chi.",
+   "tags": [
+    "can-chi",
+    "tang-can",
+    "lookup"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:getZhiMainGan",
+   "type": "function",
+   "name": "getZhiMainGan",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    152,
+    155
+   ],
+   "summary": "Lấy Can chính (bản khí) của một Địa Chi từ Tàng Can.",
+   "tags": [
+    "can-chi",
+    "tang-can",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:getThapThan",
+   "type": "function",
+   "name": "getThapThan",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    158,
+    196
+   ],
+   "summary": "Xác định Thập Thần giữa Nhật Can và một Can khác dựa trên quan hệ sinh/khắc và âm dương.",
+   "tags": [
+    "thap-than",
+    "bat-tu",
+    "ngu-hanh"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:generates",
+   "type": "function",
+   "name": "generates",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    199,
+    202
+   ],
+   "summary": "Kiểm tra hành e1 có sinh hành e2 theo vòng Ngũ Hành tương sinh.",
+   "tags": [
+    "ngu-hanh",
+    "tuong-sinh",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:controls",
+   "type": "function",
+   "name": "controls",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    205,
+    208
+   ],
+   "summary": "Kiểm tra hành e1 có khắc hành e2 theo vòng Ngũ Hành tương khắc.",
+   "tags": [
+    "ngu-hanh",
+    "tuong-khac",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:getCanKhi",
+   "type": "function",
+   "name": "getCanKhi",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    211,
+    219
+   ],
+   "summary": "Đánh giá Nhật Chủ đắc lệnh hay thất lệnh theo hành của chi tháng.",
+   "tags": [
+    "ngu-hanh",
+    "cuong-nhuoc",
+    "bat-tu"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:getFavorable",
+   "type": "function",
+   "name": "getFavorable",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    222,
+    226
+   ],
+   "summary": "Trả về các hành có lợi cho Nhật Chủ (cùng hành và hành sinh ra nó).",
+   "tags": [
+    "ngu-hanh",
+    "dung-than",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:getUnfavorable",
+   "type": "function",
+   "name": "getUnfavorable",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    229,
+    233
+   ],
+   "summary": "Trả về hành bất lợi cho Nhật Chủ (hành khắc nó).",
+   "tags": [
+    "ngu-hanh",
+    "ky-than",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:getVongTrangSinh",
+   "type": "function",
+   "name": "getVongTrangSinh",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    244,
+    265
+   ],
+   "summary": "Tính trạng thái Vòng Tràng Sinh (Trường Sinh, Đế Vượng, Mộ…) của một Can tại một Chi.",
+   "tags": [
+    "trang-sinh",
+    "can-chi",
+    "bat-tu"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/ganzhi.js:removeDiacritics",
+   "type": "function",
+   "name": "removeDiacritics",
+   "filePath": "data/reference/tinix-bazi/ganzhi.js",
+   "lineRange": [
+    276,
+    278
+   ],
+   "summary": "Bỏ dấu tiếng Việt (kể cả đ/Đ) khỏi chuỗi để so khớp không dấu.",
+   "tags": [
+    "utility",
+    "chuoi",
+    "tieng-viet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/geju.js:determineCach",
+   "type": "function",
+   "name": "determineCach",
+   "filePath": "data/reference/tinix-bazi/geju.js",
+   "lineRange": [
+    24,
+    66
+   ],
+   "summary": "Xác định danh sách Cách Cục của lá số từ Thập Thần chi tháng, có kiểm tra Kiến Lộc và thấu can.",
+   "tags": [
+    "cach-cuc",
+    "bat-tu",
+    "phan-tich"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/geju.js:analyzeSanHe",
+   "type": "function",
+   "name": "analyzeSanHe",
+   "filePath": "data/reference/tinix-bazi/geju.js",
+   "lineRange": [
+    82,
+    106
+   ],
+   "summary": "Tìm các Tam Hợp (và bán hợp) cục hiện diện trong các Địa Chi của tứ trụ.",
+   "tags": [
+    "tam-hop",
+    "dia-chi",
+    "phan-tich"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/phan_tich/ngu_hanh.js:analyzeNguHanh",
+   "type": "function",
+   "name": "analyzeNguHanh",
+   "filePath": "data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+   "lineRange": [
+    18,
+    318
+   ],
+   "summary": "Hàm phân tích chính: chấm điểm hỗ trợ/khắc chế cho Nhật Chủ, xét đắc lệnh, Điều Hậu theo mùa, xác định Dụng/Hỷ/Kỵ thần và dựng object luận giải đầy đủ (nghề nghiệp, sức khỏe, phong thủy, cát hung).",
+   "tags": [
+    "ngu-hanh",
+    "dung-than",
+    "phan-tich",
+    "luan-giai"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:data/reference/tinix-bazi/shensha.js:calculateShenSha",
+   "type": "function",
+   "name": "calculateShenSha",
+   "filePath": "data/reference/tinix-bazi/shensha.js",
+   "lineRange": [
+    603,
+    794
+   ],
+   "summary": "Duyệt tứ trụ để gắn các Thần Sát theo chi năm, can ngày, chi tháng và ngày đặc biệt (Cô Loan, Tam Kỳ…), trả về danh sách theo trụ kèm tóm tắt mô tả.",
+   "tags": [
+    "than-sat",
+    "bat-tu",
+    "phan-tich"
+   ],
+   "complexity": "complex"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:ganToVN",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:ganToVN",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:zhiToVN",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:zhiToVN",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:ganToElement",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:ganToElement",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:zhiToElement",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:zhiToElement",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getNapAm",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getNapAm",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getTangCan",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getTangCan",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getZhiMainGan",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getZhiMainGan",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getThapThan",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getThapThan",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:generates",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:generates",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:controls",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:controls",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getCanKhi",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getCanKhi",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getFavorable",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getFavorable",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getUnfavorable",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getUnfavorable",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getVongTrangSinh",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getVongTrangSinh",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:removeDiacritics",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:removeDiacritics",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/geju.js",
+   "target": "function:data/reference/tinix-bazi/geju.js:determineCach",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/geju.js",
+   "target": "function:data/reference/tinix-bazi/geju.js:determineCach",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/geju.js",
+   "target": "function:data/reference/tinix-bazi/geju.js:analyzeSanHe",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/geju.js",
+   "target": "function:data/reference/tinix-bazi/geju.js:analyzeSanHe",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+   "target": "function:data/reference/tinix-bazi/phan_tich/ngu_hanh.js:analyzeNguHanh",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+   "target": "function:data/reference/tinix-bazi/phan_tich/ngu_hanh.js:analyzeNguHanh",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/shensha.js",
+   "target": "function:data/reference/tinix-bazi/shensha.js:calculateShenSha",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/shensha.js",
+   "target": "function:data/reference/tinix-bazi/shensha.js:calculateShenSha",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "file:data/reference/tinix-bazi/ganzhi_data.js",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/geju.js",
+   "target": "file:data/reference/tinix-bazi/ganzhi.js",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+   "target": "file:data/reference/tinix-bazi/ganzhi.js",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+   "target": "file:data/reference/tinix-bazi/geju.js",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+   "target": "file:data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/shensha.js",
+   "target": "file:data/reference/tinix-bazi/ganzhi.js",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/ganzhi.js:getCanKhi",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:generates",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/ganzhi.js:getCanKhi",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:controls",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/ganzhi.js:getCanKhi",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:zhiToElement",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/ganzhi.js:getThapThan",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:generates",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/ganzhi.js:getThapThan",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:controls",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/ganzhi.js:getVongTrangSinh",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:ganToVN",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/ganzhi.js:getVongTrangSinh",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:zhiToVN",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/ganzhi.js:getZhiMainGan",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getTangCan",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/geju.js:determineCach",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getThapThan",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/phan_tich/ngu_hanh.js:analyzeNguHanh",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:ganToElement",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/phan_tich/ngu_hanh.js:analyzeNguHanh",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:zhiToElement",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/phan_tich/ngu_hanh.js:analyzeNguHanh",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getThapThan",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/phan_tich/ngu_hanh.js:analyzeNguHanh",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:getZhiMainGan",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/phan_tich/ngu_hanh.js:analyzeNguHanh",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:zhiToVN",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/phan_tich/ngu_hanh.js:analyzeNguHanh",
+   "target": "function:data/reference/tinix-bazi/geju.js:determineCach",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/shensha.js:calculateShenSha",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:ganToVN",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:data/reference/tinix-bazi/shensha.js:calculateShenSha",
+   "target": "function:data/reference/tinix-bazi/ganzhi.js:zhiToVN",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:data/reference/tinix-bazi/ganzhi.js",
+   "target": "file:data/reference/tinix-bazi/ganzhi_data.js",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  }
+ ]
+}

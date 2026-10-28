@@ -1,0 +1,157 @@
+{
+  "nodes": [
+    {
+      "id": "config:config/interpretation_disclaimers.json",
+      "type": "config",
+      "name": "interpretation_disclaimers.json",
+      "filePath": "config/interpretation_disclaimers.json",
+      "summary": "Bộ thông điệp miễn trừ trách nhiệm (phiên bản interpretation-disclaimers-v1) do ứng dụng tự chèn, LLM không được sửa: cảnh báo nội dung tiếng Việt do AI tạo và nhấn mạnh điểm bộ số không phải xác suất trúng thưởng. `NumberEngine` trong randomyst/engine.py đọc file này để gắn thông điệp INTERNAL_SCORE_MEANING vào phản hồi gieo số.",
+      "tags": [
+        "configuration",
+        "disclaimer",
+        "noi-dung-ai",
+        "chinh-sach-san-pham"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:config/mvp1_rules.json",
+      "type": "config",
+      "name": "mvp1_rules.json",
+      "filePath": "config/mvp1_rules.json",
+      "summary": "Đặc tả luật MVP 1 (mvp1-logic-2026-10-11-v4) cho việc gieo bộ sáu số 00–45: chính sách lịch Bắc Kinh UTC+8 qua lunar-python 1.4.8, công thức quẻ Mai Hoa năm-tháng-ngày-giờ, ràng buộc chẵn lẻ/ngũ hành, ngưỡng chấm điểm, trọng số mũ beta=2, quy tắc retry và xử lý thời điểm gieo. `NumberEngine` chỉ đọc và kiểm một số khóa (algorithm_id, selected_beta, target_quota_max, pool_max, rules_version); phần lớn luật còn lại được triển khai bằng constant trong time_engine.py, maihoa.py và sampling.py.",
+      "tags": [
+        "configuration",
+        "dac-ta-luat",
+        "lich-am",
+        "mai-hoa",
+        "lay-mau-co-trong-so"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "File JSON đóng vai trò hợp đồng tài liệu hóa (spec) nhiều hơn cấu hình runtime: engine chỉ dùng nó như guard, chặn khởi động khi giá trị lệch khỏi phiên bản đã audit khả thi."
+    },
+    {
+      "id": "config:config/mvp2_date_rules.json",
+      "type": "config",
+      "name": "mvp2_date_rules.json",
+      "filePath": "config/mvp2_date_rules.json",
+      "summary": "Bộ luật chọn ngày MVP 2 (mvp2-dates-2026-10-12-v1) cho cưới hỏi, khai trương, xuất hành: khai báo nguồn dữ liệu kèm SHA-256 (almanac 6tail, bảng thần sát tinix-bazi, chính sách bazi), bảng tháng Sát Chủ/Thọ Tử/Nguyệt Phá, tham số chấm điểm và 11 rule dạng fact/effect (Hắc Đạo, xung năm…), trong đó Tam Nương bị tắt. `RuleEvaluator` trong date_rules.py nạp và validate file bằng Pydantic, kiểm hash nguồn, còn date_engine.py dùng phần scoring.",
+      "tags": [
+        "configuration",
+        "rule-engine",
+        "chon-ngay",
+        "cham-diem",
+        "schema-validated"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Luật được biểu diễn khai báo (declarative) với điều kiện `when` trên fact, phạm vi hoạt động/đối tượng và hiệu ứng điểm, giúp thay đổi chính sách mà không sửa code; tính toàn vẹn nguồn được bảo đảm bằng hash SHA-256 kiểm khi khởi động."
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:config/interpretation_disclaimers.json",
+      "target": "file:randomyst/engine.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:config/mvp1_rules.json",
+      "target": "file:randomyst/engine.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:config/mvp1_rules.json",
+      "target": "file:randomyst/time_engine.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:config/mvp1_rules.json",
+      "target": "file:randomyst/maihoa.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:config/mvp1_rules.json",
+      "target": "file:randomyst/sampling.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:config/mvp1_rules.json",
+      "target": "document:docs/logic_plan_mvp1.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:config/mvp1_rules.json",
+      "target": "config:config/interpretation_disclaimers.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:config/mvp2_date_rules.json",
+      "target": "file:randomyst/date_rules.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:config/mvp2_date_rules.json",
+      "target": "file:randomyst/date_engine.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:config/mvp2_date_rules.json",
+      "target": "file:randomyst/api.py",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:config/mvp2_date_rules.json",
+      "target": "schema:schemas/mvp2_date_rules.schema.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:config/mvp2_date_rules.json",
+      "target": "resource:data/date_calendar/almanac_2024_2030.json.gz",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:config/mvp2_date_rules.json",
+      "target": "file:data/reference/tinix-bazi/shensha.js",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:config/mvp2_date_rules.json",
+      "target": "file:randomyst/bazi.py",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:config/mvp2_date_rules.json",
+      "target": "file:tests/test_auspicious_dates.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "research_date_utc7": "2026-10-24",
+  "status": "RESEARCH_ONLY",
+  "input_sha256": {
+    "research_tools/audit_iching_methods.py": "87278829c1e1b188e6874272b6eb8ef54faa2ff683eef00b19d3059731a9a2a4",
+    "randomyst/maihoa.py": "bcad341d77a4e85f4f9c9f52cdcebe6c702f2a8f884b5075f69de42551497c05",
+    "randomyst/sampling.py": "6c116079c321370ce972b4fa798e9e7fe601178e3b8000db5a89570ad0983f49",
+    "randomyst/interpretation.py": "c5da81a3dd322de52e69f2cff0f38621f4cdc3cc616ba0f75864ddff40f8e1f4",
+    "randomyst/time_engine.py": "260e47e96650c0e167e8b091396f3515fc8899204a09fb3c0f792bcf0147b83a",
+    "config/mvp1_rules.json": "7544d8a1354f24a1adfeed1f3d4bdd8697baf9e8767e7fd8aabbcdc9720fc64b",
+    "data/reference/open-iching/iching.json": "7fe029a32c51f2da39d702f8064825262cfd3a7d004353738cd893b0a017ab10",
+    "data/reference/open-iching/tuan.json": "14453a0ef7d3b1dc05e65c0d272dd97104375ba315364b70105353ada73d1668",
+    "data/reference/open-iching/xiang.json": "e346a62a41107f35f7e33955cf018b11749d80781847e681a088c2ee3412cc98",
+    "data/interpretation/iching_vi_draft.json": "8f7cd817793bb00015051f1814422071ce9103aff3365c02fc284390c3187a36"
+  },
+  "scope": {
+    "calendar_conversion_audited": false,
+    "historical_prediction_tested": false,
+    "consultation_created": false,
+    "database_accessed": false,
+    "runtime_or_rules_modified": false,
+    "note": "Arithmetic/corpus coverage only; no evidence of predictive or financial accuracy."
+  },
+  "coins": {
+    "assumptions": "Three independent fair coins per line, six independent throws; faces worth 2 and 3.",
+    "ordered_single_throw_outcomes": 8,
+    "single_line_counts": {
+      "6": 1,
+      "7": 3,
+      "8": 3,
+      "9": 1
+    },
+    "line_probabilities": {
+      "6": {
+        "fraction": "1/8",
+        "percent": 12.5
+      },
+      "7": {
+        "fraction": "3/8",
+        "percent": 37.5
+      },
+      "8": {
+        "fraction": "3/8",
+        "percent": 37.5
+      },
+      "9": {
+        "fraction": "1/8",
+        "percent": 12.5
+      }
+    },
+    "line_state_vectors": 4096,
+    "original_hexagrams": 64,
+    "original_changed_pairs": 4096,
+    "moving_count_probabilities": {
+      "0": {
+        "fraction": "729/4096",
+        "percent": 17.7978515625
+      },
+      "1": {
+        "fraction": "729/2048",
+        "percent": 35.595703125
+      },
+      "2": {
+        "fraction": "1215/4096",
+        "percent": 29.6630859375
+      },
+      "3": {
+        "fraction": "135/1024",
+        "percent": 13.18359375
+      },
+      "4": {
+        "fraction": "135/4096",
+        "percent": 3.2958984375
+      },
+      "5": {
+        "fraction": "9/2048",
+        "percent": 0.439453125
+      },
+      "6": {
+        "fraction": "1/4096",
+        "percent": 0.0244140625
+      }
+    },
+    "two_or_more_moving_probability": {
+      "fraction": "1909/4096",
+      "percent": 46.6064453125
+    },
+    "expected_moving_count": "3/2"
+  },
+  "yarrow_conventional_probability_model": {
+    "status": "DECLARED_COMPARISON_MODEL_NOT_A_STALK_SIMULATION",
+    "weights_for_6_7_8_9": [
+      1,
+      5,
+      7,
+      3
+    ],
+    "denominator": 16,
+    "assumptions": "Conventional idealized remainder model, not every physical splitting procedure.",
+    "physical_division_algorithm_verified": false,
+    "production_recommendation": "Do not label a coin simulation as yarrow; defer physical stalk simulation."
+  },
+  "maihoa": {
+    "core_version": "maihoa-ymdh-v1",
+    "integer_input_tuples": 51840,
+    "input_domain": "Y=1..12, M=1..12, D=1..30, H=1..12; not a sequence of real calendar dates.",
+    "original_hexagrams": 64,
+    "distinct_original_moving_pairs": 192,
+    "moving_positions_per_hexagram": [
+      3
+    ],
+    "parity_invariant": "lower_trigram_index % 2 == moving_line % 2",
+    "parity_mismatches": 0,
+    "always_one_moving_line": true,
+    "birth_or_question_text_is_an_input_to_core": false,
+    "classical_arithmetic_fixtures": [
+      {
+        "source_section": "觀梅占",
+        "variables": {
+          "Y": 5,
+          "M": 12,
+          "D": 17,
+          "H": 9
+        },
+        "expected_original_moving_changed_mutual": [
+          49,
+          1,
+          31,
+          44
+        ],
+        "observed_original_moving_changed_mutual": [
+          49,
+          1,
+          31,
+          44
+        ],
+        "matches": true
+      },
+      {
+        "source_section": "牡丹占",
+        "variables": {
+          "Y": 6,
+          "M": 3,
+          "D": 16,
+          "H": 4
+        },
+        "expected_original_moving_changed_mutual": [
+          44,
+          5,
+          50,
+          1
+        ],
+        "observed_original_moving_changed_mutual": [
+          44,
+          5,
+          50,
+          1
+        ],
+        "matches": true
+      }
+    ],
+    "pure_hexagram_mutual_policy": {
+      "runtime": "Always extract lines 2-3-4 and 3-4-5, including Qian/Kun.",
+      "source_variant": "Meihua vol. 1 also states 乾坤無互，互其變卦; requires a separately versioned policy."
+    }
+  },
+  "corpus": {
+    "hexagrams": 64,
+    "ordinary_lines": 384,
+    "special_source_entries": [
+      {
+        "hexagram_id": 1,
+        "line_id": 7,
+        "name": "用九"
+      },
+      {
+        "hexagram_id": 2,
+        "line_id": 7,
+        "name": "用六"
+      }
+    ],
+    "vi_draft_line_lengths": [
+      6
+    ],
+    "vi_special_use_nine_six_display_supported": false,
+    "current_explanation_accepts_one_moving_line_only": true
+  }
+}

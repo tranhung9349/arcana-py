@@ -1,0 +1,185 @@
+[
+  {
+    "order": 1,
+    "title": "Tổng quan ứng dụng",
+    "description": "Bắt đầu với README.md để nắm hai luồng của ứng dụng local FastAPI: MVP 1 gieo một bộ sáu số khác nhau trong 00–45, MVP 2 tra ngày và khung giờ cho cưới hỏi, khai trương, xuất hành theo hồ sơ sinh. README cũng nêu các ràng buộc xuyên suốt tour: giờ nhập theo UTC+7 nhưng tên giờ và trụ tính theo lịch Bắc Kinh UTC+8, tra tối đa 93 ngày trong 2024–2030, và Tam Nương chưa bật. requirements.txt cho thấy dependency runtime rất gọn: fastapi, pydantic, uvicorn và lunar-python 1.4.8 được ghim phiên bản.",
+    "nodeIds": [
+      "document:README.md",
+      "document:requirements.txt"
+    ]
+  },
+  {
+    "order": 2,
+    "title": "Điểm vào API",
+    "description": "scripts/run_mvp.sh kiểm .venv rồi khởi chạy Uvicorn tại 127.0.0.1:8765, trỏ vào ứng dụng FastAPI trong randomyst/api.py. File api.py là nơi lắp ráp mọi thứ: khởi tạo NumberEngine, ExplanationRepository, DrawStore SQLite và DateEngine, rồi khai báo tám route v1/v2 cùng route gốc phục vụ web/index.html. Trang HTML một trang này có hai tab “Gieo bộ số” và “Tra ngày theo việc”, nên từ đây bạn đã thấy hai luồng sẽ được tách riêng ở các bước sau.",
+    "nodeIds": [
+      "file:scripts/run_mvp.sh",
+      "file:randomyst/api.py",
+      "endpoint:randomyst/api.py:GET-/",
+      "endpoint:randomyst/api.py:GET-/api/v1/health",
+      "file:web/index.html"
+    ],
+    "languageLesson": "FastAPI dùng decorator như @app.post(...) để gắn hàm Python vào route; kiểu tham số là model Pydantic nên request được validate tự động và trả 422 khi sai dữ liệu."
+  },
+  {
+    "order": 3,
+    "title": "Hợp đồng hai luồng",
+    "description": "Trước khi đi vào thuật toán, hãy xem dữ liệu ra vào: models.py định nghĩa request/response gieo sáu số của MVP 1, còn date_models.py định nghĩa các contract có phiên bản cho tra ngày MVP 2 (request, bộ luật, chấm điểm, response với recommended_windows). Hai file request mẫu cho thấy dạng thật: một lần gieo CUSTOM với request_id cố định để thử idempotency, và một lần tra ngày khai trương cho một người. JSON Schema của request tra ngày được sinh từ model, nên schema và code Python luôn cùng một nguồn.",
+    "nodeIds": [
+      "file:randomyst/models.py",
+      "file:randomyst/date_models.py",
+      "config:examples/draw_request.json",
+      "config:examples/date_search_request.json",
+      "schema:schemas/date_search_request.schema.json"
+    ],
+    "languageLesson": "Pydantic model nghiêm ngặt (ví dụ cấm field thừa) biến contract thành code: cùng một class vừa validate input, vừa serialize output, vừa xuất ra JSON Schema."
+  },
+  {
+    "order": 4,
+    "title": "Lịch và lá số",
+    "description": "time_engine.py là file được phụ thuộc nhiều nhất trong dự án: nó giữ nguyên thời điểm thật, chuyển UTC+7 sang Bắc Kinh UTC+8 rồi dùng lunar-python 1.4.8 để tính Tứ Trụ, tháng tiết khí và đầu vào Mai Hoa. Trên nền đó, bazi.py port logic ngu_hanh.js của tinix-bazi để tìm Dụng/Hỷ/Kỵ Thần, còn maihoa.py lập quẻ chủ/hỗ/biến từ bốn biến Y/M/D/H. Manifest trong data/reference khóa commit và SHA-256 của các nguồn ghim, nên runtime Python không phải chạy JS mà vẫn kiểm được tính toàn vẹn.",
+    "nodeIds": [
+      "file:randomyst/time_engine.py",
+      "file:randomyst/bazi.py",
+      "file:randomyst/maihoa.py",
+      "config:data/reference/manifest.json",
+      "document:data/reference/README.md"
+    ],
+    "languageLesson": "Trong Python, datetime.astimezone(tz) đổi múi giờ mà giữ nguyên instant; khác với replace(tzinfo=...) chỉ đổi nhãn. README nhấn mạnh đúng điểm này để tránh cộng giờ hai lần."
+  },
+  {
+    "order": 5,
+    "title": "Gieo bộ sáu số",
+    "description": "Dùng lá số và quẻ từ Bước 4, engine.py kiểm policy lịch và luật v1 rồi tính trọng số mũ beta=2 kèm các delta (thiên thời, hào động, thần sát, dân gian). sampling.py liệt kê chính xác cấu hình theo bucket ngũ hành × chẵn lẻ và lấy mẫu tập con theo luật tích trọng số, với tối đa năm lần giải sát. Toàn bộ tham số nằm trong mvp1_rules.json và dan_gian_config.json, còn endpoint POST /api/v1/draw là cửa vào của luồng này.",
+    "nodeIds": [
+      "file:randomyst/engine.py",
+      "file:randomyst/sampling.py",
+      "config:config/mvp1_rules.json",
+      "config:dan_gian_config.json",
+      "endpoint:randomyst/api.py:POST-/api/v1/draw"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "Lưu phiên, đọc lời giải",
+    "description": "Mỗi response gieo được DrawStore trong storage.py lưu bất biến vào bảng draws theo request_id và payload_hash, dùng giao dịch BEGIN IMMEDIATE để gửi lại cùng request thì nhận lại đúng kết quả, còn payload khác thì báo xung đột. interpretation.py đọc phiên đã lưu và dựng thẻ nguồn Kinh Dịch/Bát Tự từ corpus Việt gắn SHA-256 với nguyên văn, mà không đổi số. Phía giao diện, web/app.js gửi lệnh gieo, tải lịch sử rồi gọi GET /api/v1/interpretation/{request_id} để hiển thị tab giải thích.",
+    "nodeIds": [
+      "file:randomyst/storage.py",
+      "table:randomyst/storage.py:draws",
+      "file:randomyst/interpretation.py",
+      "endpoint:randomyst/api.py:GET-/api/v1/interpretation/{request_id}",
+      "file:web/app.js"
+    ],
+    "languageLesson": "SQLite BEGIN IMMEDIATE lấy khóa ghi ngay từ đầu giao dịch, nên hai request đồng thời cùng request_id không thể cùng ghi; đây là cách đơn giản để có idempotency mà không cần server DB riêng."
+  },
+  {
+    "order": 7,
+    "title": "Corpus và ranh ngày",
+    "description": "Chuyển sang MVP 2: thay vì gọi lịch mỗi request, dự án dựng sẵn corpus Yi/Ji nguyên văn cho 2.558 ngày và 33.254 mốc giờ (2024–2030) bằng scripts/build_date_data.py, nén thành almanac_2024_2030.json.gz. Manifest khóa provider, SHA-256 bản nén/giải nén và hash module nguồn; date_calendar.py kiểm các hash này khi nạp, rồi chia ngày thành các khung giờ UTC+7 và cảnh báo biên giờ sinh. README trong data/date_calendar giải thích cách đọc token như 诸事不宜 hay UNRESOLVED.",
+    "nodeIds": [
+      "file:randomyst/date_calendar.py",
+      "resource:data/date_calendar/almanac_2024_2030.json.gz",
+      "config:data/date_calendar/manifest.json",
+      "document:data/date_calendar/README.md",
+      "file:scripts/build_date_data.py"
+    ],
+    "languageLesson": "File .json.gz chỉ là JSON nén gzip; Python mở bằng gzip.open và json.load. Ghim cả hash bản nén lẫn bản giải nén giúp phát hiện cả lỗi đóng gói lẫn thay đổi nội dung."
+  },
+  {
+    "order": 8,
+    "title": "Luật ứng viên v1",
+    "description": "Bộ luật mvp2_date_rules.json (mvp2-dates-2026-10-12-v1) khai báo ba việc được hỗ trợ, bảng tháng Sát Chủ/Thọ Tử/Nguyệt Phá, tham số chấm điểm và các rule dạng fact, mỗi rule kèm nguồn SHA-256. date_rules.py đọc file đã kiểm hash, tính quan hệ can-chi và trạng thái hoạt động từ Yi/Ji của corpus ở Bước 7 (SUPPORTED/AVOID/NOT_LISTED/UNRESOLVED). logic_plan_mvp2.md là đặc tả final giải thích vì sao các rule này là policy sản phẩm, và ghi rõ Tam Nương đang tắt.",
+    "nodeIds": [
+      "config:config/mvp2_date_rules.json",
+      "schema:schemas/mvp2_date_rules.schema.json",
+      "file:randomyst/date_rules.py",
+      "document:docs/logic_plan_mvp2.md"
+    ],
+    "languageLesson": "Rule dạng dữ liệu (when.fact equals value → effect) giúp thêm/tắt luật mà không sửa code; JSON Schema đi kèm bảo đảm file cấu hình sai sẽ bị từ chối ngay khi nạp."
+  },
+  {
+    "order": 9,
+    "title": "Dựng hồ sơ một lần",
+    "description": "date_engine.py là engine tất định của MVP 2: với mỗi chủ thể nó lập hồ sơ mệnh đúng một lần mỗi request, tái dùng time_engine và bazi từ Bước 4, rồi chấm từng khung giờ theo luật Bước 8. Endpoint POST /api/v2/auspicious-dates/search nhận DateSearchRequest và gọi DateEngine.search; với cưới hỏi request mẫu có hai người, còn khai trương và xuất hành chỉ một người. Tra ngày không ghi vào bảng draws, nên luồng này hoàn toàn chỉ đọc.",
+    "nodeIds": [
+      "file:randomyst/date_engine.py",
+      "endpoint:randomyst/api.py:POST-/api/v2/auspicious-dates/search",
+      "config:examples/marriage_date_search_request.json",
+      "endpoint:randomyst/api.py:GET-/api/v2/auspicious-dates/rules"
+    ]
+  },
+  {
+    "order": 10,
+    "title": "Gate trước điểm số",
+    "description": "Điểm số chỉ được tính sau các gate: rule BLOCK loại trừ trước, còn PENALTY và phạt ngũ hành cá nhân mới trừ điểm so với ngưỡng GOOD/NORMAL. Các schema DateRule, DateScoring và MonthTables cho thấy cấu trúc đó trong bộ luật ở Bước 8. Bằng chứng review thiết kế giải thích lý do: một mức trừ -100 cố định không đủ làm veto khi tổng điểm thưởng không bị chặn, nên luật lớn phải là gate chứ không chỉ là điểm âm.",
+    "nodeIds": [
+      "schema:schemas/mvp2_date_rules.schema.json:DateRule",
+      "schema:schemas/mvp2_date_rules.schema.json:DateScoring",
+      "schema:schemas/mvp2_date_rules.schema.json:MonthTables",
+      "config:docs/research/mvp2_rule_matrix_counterexamples.json"
+    ]
+  },
+  {
+    "order": 11,
+    "title": "Lịch và chi tiết giờ",
+    "description": "Kết quả về tới giao diện qua web/dates.js, một IIFE độc lập với phần gieo số: mỗi ô ngày giữ chiều cao cố định và chỉ hiện số khung giờ đẹp. Bấm vào ô sẽ mở popup dialog liệt kê đủ mọi khung GOOD từ recommended_windows (hour_branch, start_at, end_at) theo thời gian, dạng “Giờ Tuất - Từ 18:00 đến 20:00”, và chỉ tải lý do chi tiết khi mở phần đánh giá; đóng bằng nút Đóng, Esc hoặc bấm ra ngoài. RecommendedWindow cố ý gọn nhẹ, không kèm bằng chứng cồng kềnh, và báo cáo kiểm chứng popup ghi lại card 160px, cuộn và vòng focus Tab.",
+    "nodeIds": [
+      "file:web/dates.js",
+      "schema:schemas/date_search_response.schema.json:RecommendedWindow",
+      "config:examples/date_search_response.json",
+      "file:web/style.css",
+      "config:docs/research/mvp2_popup_ui_validation.json"
+    ],
+    "languageLesson": "Phần tử HTML <dialog> với showModal() có sẵn backdrop, chặn tương tác phía sau và đóng bằng Esc; code chỉ cần thêm bấm-ngoài-để-đóng và khóa cuộn body."
+  },
+  {
+    "order": 12,
+    "title": "Kiểm thử và HTTP",
+    "description": "Hai luồng được bảo vệ bằng unittest và smoke HTTP. test_auspicious_dates.py kiểm schema luật, activity_status, phân đoạn khung giờ qua biên múi giờ/tiết khí và hợp đồng API qua TestClient; test_runtime.py phủ 64 quẻ/384 hào, 125 ngữ cảnh luật cứng và idempotency đồng thời. Các script smoke tự khởi động server localhost với DB tạm, và báo cáo khởi động lạnh cho thấy tra 93 ngày/2 chủ thể mất khoảng 0,92s so với mục tiêu 5s.",
+    "nodeIds": [
+      "file:tests/test_auspicious_dates.py",
+      "file:tests/test_runtime.py",
+      "file:scripts/smoke_dates.py",
+      "file:scripts/smoke_mvp.py",
+      "config:docs/research/mvp2_cold_93_runtime_validation.json"
+    ],
+    "languageLesson": "FastAPI TestClient gọi ứng dụng trực tiếp trong tiến trình, không cần mở cổng mạng, nên test API chạy nhanh như unit test."
+  },
+  {
+    "order": 13,
+    "title": "Mở rộng 23 việc",
+    "description": "Ngoài ba việc đang chạy, dự án đã nghiên cứu 23 category “Việc dự định” nhưng chưa bật category mới nào. audit_activity_categories.py là công cụ chỉ đọc đếm độ phủ token Yi/Ji theo ngày và giờ trong corpus Bước 7, ghi kết quả máy đọc vào mvp2_activity_token_coverage.json với phase và runtime_enabled từng ứng viên. mvp2_activity_expansion.md diễn giải số liệu đó thành thứ tự triển khai năm việc tiếp theo, cách gọi chủ thể và cách hiển thị popup bằng recommended_windows; MVP2_HANDOFF.md ghi lại trạng thái này khi bàn giao.",
+    "nodeIds": [
+      "document:docs/research/mvp2_activity_expansion.md",
+      "file:research_tools/audit_activity_categories.py",
+      "config:docs/research/mvp2_activity_token_coverage.json",
+      "document:MVP2_HANDOFF.md",
+      "document:docs/research/mvp2_auspicious_date_research.md"
+    ]
+  },
+  {
+    "order": 14,
+    "title": "Ranh giới bản lưu",
+    "description": "Không phải mọi code trong repo đều thuộc runtime. Gói calendar_adapter (lịch âm Việt UTC+7 theo thuật toán Hồ Ngọc Đức, có CLI python -m calendar_adapter) và legacy_time_engine.py (giờ mặt trời thật, EoT) là công cụ của rules v3 cũ, chỉ giữ để tái lập báo cáo. Phân tích đồ thị còn chọn __main__.py làm ứng viên điểm vào, nhưng ứng dụng thật khởi chạy từ run_mvp.sh ở Bước 2; đặc tả MVP 2 trước R1 cũng nằm trong docs/archive vì lý do tương tự.",
+    "nodeIds": [
+      "file:calendar_adapter/__main__.py",
+      "file:calendar_adapter/vietnamese.py",
+      "document:calendar_adapter/README.md",
+      "file:research_tools/legacy_time_engine.py",
+      "document:docs/archive/logic_plan_mvp2_pre_r1.md"
+    ]
+  },
+  {
+    "order": 15,
+    "title": "Hợp đồng LLM dự kiến",
+    "description": "Bước cuối nhìn về tương lai: dự án đã viết sẵn prompt luận giải Việt ngữ, JSON Schema ngữ cảnh/phản hồi và validator, nhưng runtime chưa gọi model nào. Ngữ cảnh chỉ chứa dữ kiện đã tính và bằng chứng nguồn được phép trích dẫn, còn phản hồi phải gắn nhãn AI_TRANSLATION/AI_INTERPRETATION và tham chiếu bằng chứng. Disclaimer do ứng dụng tự chèn và LLM không được sửa, giữ đúng tinh thần các bước trước: điểm bộ số không phải xác suất trúng thưởng.",
+    "nodeIds": [
+      "document:docs/prompts/vietnamese_interpretation_v1.md",
+      "schema:schemas/interpretation_context.schema.json",
+      "schema:schemas/interpretation_response.schema.json",
+      "config:config/interpretation_disclaimers.json",
+      "file:research_tools/validate_interpretation_examples.py"
+    ],
+    "languageLesson": "JSON Schema 2020-12 có thể được kiểm bằng thư viện jsonschema; validator ở đây còn kiểm chéo evidence_id và xác nhận các bản sửa sai bị từ chối, tức là test cả trường hợp âm."
+  }
+]

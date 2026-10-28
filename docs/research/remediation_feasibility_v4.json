@@ -1,0 +1,1124 @@
+{
+  "scope": "Finite mathematical feasibility under confirmed base scoring, quota 3..4, pool 00..45; not calendar or product KPI validation.",
+  "quota": {
+    "min": 3,
+    "max": 4
+  },
+  "hung_contexts": 25,
+  "all_hung_have_passing_retry": true,
+  "all_hung_caps_remain_attainable_in_retry": true,
+  "minimum_G_cap": 120.0,
+  "maximum_G_cap": 186.66666666666666,
+  "caps_changed_from_quota_3_to_5": 20,
+  "selected_remedies_changed_from_quota_3_to_5": 0,
+  "tie_break_used_in_experiment": "Highest feasible raw score; fewer conflicts at that maximum; higher remedy S_i; fixed element order. Not separately confirmed as product policy.",
+  "rows": [
+    {
+      "P": "Mộc",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Thủy",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "feasible": true,
+          "best_raw": 130.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 60
+        },
+        {
+          "remedy": "Thủy",
+          "feasible": true,
+          "best_raw": 186.66666666666666,
+          "conflicts_at_best": 0,
+          "single_element_score": 200
+        }
+      ],
+      "G_cap_first_attempt": 186.66666666666666,
+      "max_raw_retry": 186.66666666666666,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 2,
+        "Hỏa": 0,
+        "Thổ": 0,
+        "Kim": 0,
+        "Thủy": 4
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Thủy",
+        "G_cap": 193.33333333333334,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Mộc",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Mộc",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "feasible": true,
+          "best_raw": 156.66666666666666,
+          "conflicts_at_best": 0,
+          "single_element_score": 180
+        },
+        {
+          "remedy": "Thổ",
+          "feasible": true,
+          "best_raw": 105.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 30
+        }
+      ],
+      "G_cap_first_attempt": 156.66666666666666,
+      "max_raw_retry": 156.66666666666666,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 4,
+        "Hỏa": 2,
+        "Thổ": 0,
+        "Kim": 0,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Mộc",
+        "G_cap": 168.33333333333334,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Mộc",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Hỏa",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "feasible": true,
+          "best_raw": 120.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 130
+        }
+      ],
+      "G_cap_first_attempt": 120.0,
+      "max_raw_retry": 120.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 4,
+        "Thổ": 0,
+        "Kim": 0,
+        "Thủy": 2
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Hỏa",
+        "G_cap": 125.0,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Mộc",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Thủy",
+      "candidates": [
+        {
+          "remedy": "Thổ",
+          "feasible": true,
+          "best_raw": 115.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 100
+        },
+        {
+          "remedy": "Thủy",
+          "feasible": true,
+          "best_raw": 120.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 130
+        }
+      ],
+      "G_cap_first_attempt": 120.0,
+      "max_raw_retry": 120.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 0,
+        "Thổ": 2,
+        "Kim": 0,
+        "Thủy": 4
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Thủy",
+        "G_cap": 125.0,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Mộc",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "strategy": "IDEAL_CHAIN",
+      "selected_remedy": "Mộc",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "feasible": true,
+          "best_raw": 145.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 110
+        }
+      ],
+      "G_cap_first_attempt": 145.0,
+      "max_raw_retry": 145.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 3,
+        "Hỏa": 0,
+        "Thổ": 0,
+        "Kim": 0,
+        "Thủy": 3
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Mộc",
+        "G_cap": 145.0,
+        "cap_changed": false,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Hỏa",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "strategy": "IDEAL_CHAIN",
+      "selected_remedy": "Hỏa",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "feasible": true,
+          "best_raw": 145.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 110
+        }
+      ],
+      "G_cap_first_attempt": 145.0,
+      "max_raw_retry": 145.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 3,
+        "Hỏa": 3,
+        "Thổ": 0,
+        "Kim": 0,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Hỏa",
+        "G_cap": 145.0,
+        "cap_changed": false,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Hỏa",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Mộc",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "feasible": true,
+          "best_raw": 186.66666666666666,
+          "conflicts_at_best": 0,
+          "single_element_score": 200
+        },
+        {
+          "remedy": "Thổ",
+          "feasible": true,
+          "best_raw": 130.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 60
+        }
+      ],
+      "G_cap_first_attempt": 186.66666666666666,
+      "max_raw_retry": 186.66666666666666,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 4,
+        "Hỏa": 2,
+        "Thổ": 0,
+        "Kim": 0,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Mộc",
+        "G_cap": 193.33333333333334,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Hỏa",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "feasible": true,
+          "best_raw": 156.66666666666666,
+          "conflicts_at_best": 0,
+          "single_element_score": 180
+        },
+        {
+          "remedy": "Kim",
+          "feasible": true,
+          "best_raw": 105.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 30
+        }
+      ],
+      "G_cap_first_attempt": 156.66666666666666,
+      "max_raw_retry": 156.66666666666666,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 4,
+        "Thổ": 2,
+        "Kim": 0,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Hỏa",
+        "G_cap": 168.33333333333334,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Hỏa",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Thổ",
+      "candidates": [
+        {
+          "remedy": "Thổ",
+          "feasible": true,
+          "best_raw": 120.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 130
+        }
+      ],
+      "G_cap_first_attempt": 120.0,
+      "max_raw_retry": 120.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 2,
+        "Hỏa": 0,
+        "Thổ": 4,
+        "Kim": 0,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Thổ",
+        "G_cap": 125.0,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Mộc",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "feasible": true,
+          "best_raw": 120.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 130
+        },
+        {
+          "remedy": "Kim",
+          "feasible": true,
+          "best_raw": 115.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 100
+        }
+      ],
+      "G_cap_first_attempt": 120.0,
+      "max_raw_retry": 120.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 4,
+        "Hỏa": 0,
+        "Thổ": 0,
+        "Kim": 2,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Mộc",
+        "G_cap": 125.0,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Thổ",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Hỏa",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "feasible": true,
+          "best_raw": 120.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 130
+        },
+        {
+          "remedy": "Thủy",
+          "feasible": true,
+          "best_raw": 115.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 100
+        }
+      ],
+      "G_cap_first_attempt": 120.0,
+      "max_raw_retry": 120.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 4,
+        "Thổ": 0,
+        "Kim": 0,
+        "Thủy": 2
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Hỏa",
+        "G_cap": 125.0,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Thổ",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "strategy": "IDEAL_CHAIN",
+      "selected_remedy": "Thổ",
+      "candidates": [
+        {
+          "remedy": "Thổ",
+          "feasible": true,
+          "best_raw": 145.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 110
+        }
+      ],
+      "G_cap_first_attempt": 145.0,
+      "max_raw_retry": 145.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 3,
+        "Thổ": 3,
+        "Kim": 0,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Thổ",
+        "G_cap": 145.0,
+        "cap_changed": false,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Thổ",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Hỏa",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "feasible": true,
+          "best_raw": 186.66666666666666,
+          "conflicts_at_best": 0,
+          "single_element_score": 200
+        },
+        {
+          "remedy": "Kim",
+          "feasible": true,
+          "best_raw": 130.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 60
+        }
+      ],
+      "G_cap_first_attempt": 186.66666666666666,
+      "max_raw_retry": 186.66666666666666,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 4,
+        "Thổ": 2,
+        "Kim": 0,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Hỏa",
+        "G_cap": 193.33333333333334,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Thổ",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Thổ",
+      "candidates": [
+        {
+          "remedy": "Thổ",
+          "feasible": true,
+          "best_raw": 156.66666666666666,
+          "conflicts_at_best": 0,
+          "single_element_score": 180
+        },
+        {
+          "remedy": "Thủy",
+          "feasible": true,
+          "best_raw": 105.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 30
+        }
+      ],
+      "G_cap_first_attempt": 156.66666666666666,
+      "max_raw_retry": 156.66666666666666,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 0,
+        "Thổ": 4,
+        "Kim": 2,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Thổ",
+        "G_cap": 168.33333333333334,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Thổ",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Kim",
+      "candidates": [
+        {
+          "remedy": "Kim",
+          "feasible": true,
+          "best_raw": 120.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 130
+        }
+      ],
+      "G_cap_first_attempt": 120.0,
+      "max_raw_retry": 120.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 2,
+        "Thổ": 0,
+        "Kim": 4,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Kim",
+        "G_cap": 125.0,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Kim",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Thủy",
+      "candidates": [
+        {
+          "remedy": "Thủy",
+          "feasible": true,
+          "best_raw": 120.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 130
+        }
+      ],
+      "G_cap_first_attempt": 120.0,
+      "max_raw_retry": 120.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 0,
+        "Thổ": 2,
+        "Kim": 0,
+        "Thủy": 4
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Thủy",
+        "G_cap": 125.0,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Kim",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Thổ",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "feasible": true,
+          "best_raw": 115.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 100
+        },
+        {
+          "remedy": "Thổ",
+          "feasible": true,
+          "best_raw": 120.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 130
+        }
+      ],
+      "G_cap_first_attempt": 120.0,
+      "max_raw_retry": 120.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 2,
+        "Hỏa": 0,
+        "Thổ": 4,
+        "Kim": 0,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Thổ",
+        "G_cap": 125.0,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Kim",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "strategy": "IDEAL_CHAIN",
+      "selected_remedy": "Kim",
+      "candidates": [
+        {
+          "remedy": "Kim",
+          "feasible": true,
+          "best_raw": 145.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 110
+        }
+      ],
+      "G_cap_first_attempt": 145.0,
+      "max_raw_retry": 145.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 0,
+        "Thổ": 3,
+        "Kim": 3,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Kim",
+        "G_cap": 145.0,
+        "cap_changed": false,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Kim",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Thổ",
+      "candidates": [
+        {
+          "remedy": "Thổ",
+          "feasible": true,
+          "best_raw": 186.66666666666666,
+          "conflicts_at_best": 0,
+          "single_element_score": 200
+        },
+        {
+          "remedy": "Thủy",
+          "feasible": true,
+          "best_raw": 130.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 60
+        }
+      ],
+      "G_cap_first_attempt": 186.66666666666666,
+      "max_raw_retry": 186.66666666666666,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 0,
+        "Thổ": 4,
+        "Kim": 2,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Thổ",
+        "G_cap": 193.33333333333334,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Kim",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Kim",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "feasible": true,
+          "best_raw": 105.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 30
+        },
+        {
+          "remedy": "Kim",
+          "feasible": true,
+          "best_raw": 156.66666666666666,
+          "conflicts_at_best": 0,
+          "single_element_score": 180
+        }
+      ],
+      "G_cap_first_attempt": 156.66666666666666,
+      "max_raw_retry": 156.66666666666666,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 0,
+        "Thổ": 0,
+        "Kim": 4,
+        "Thủy": 2
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Kim",
+        "G_cap": 168.33333333333334,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Thủy",
+      "The": "Mộc",
+      "Dung": "Kim",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Thủy",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "feasible": true,
+          "best_raw": 105.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 30
+        },
+        {
+          "remedy": "Thủy",
+          "feasible": true,
+          "best_raw": 156.66666666666666,
+          "conflicts_at_best": 0,
+          "single_element_score": 180
+        }
+      ],
+      "G_cap_first_attempt": 156.66666666666666,
+      "max_raw_retry": 156.66666666666666,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 2,
+        "Hỏa": 0,
+        "Thổ": 0,
+        "Kim": 0,
+        "Thủy": 4
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Thủy",
+        "G_cap": 168.33333333333334,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Thủy",
+      "The": "Hỏa",
+      "Dung": "Thủy",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Mộc",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "feasible": true,
+          "best_raw": 120.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 130
+        }
+      ],
+      "G_cap_first_attempt": 120.0,
+      "max_raw_retry": 120.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 4,
+        "Hỏa": 0,
+        "Thổ": 0,
+        "Kim": 2,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Mộc",
+        "G_cap": 125.0,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Thủy",
+      "The": "Thổ",
+      "Dung": "Mộc",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Kim",
+      "candidates": [
+        {
+          "remedy": "Hỏa",
+          "feasible": true,
+          "best_raw": 115.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 100
+        },
+        {
+          "remedy": "Kim",
+          "feasible": true,
+          "best_raw": 120.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 130
+        }
+      ],
+      "G_cap_first_attempt": 120.0,
+      "max_raw_retry": 120.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 2,
+        "Thổ": 0,
+        "Kim": 4,
+        "Thủy": 0
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Kim",
+        "G_cap": 125.0,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Thủy",
+      "The": "Kim",
+      "Dung": "Hỏa",
+      "strategy": "IDEAL_CHAIN",
+      "selected_remedy": "Thủy",
+      "candidates": [
+        {
+          "remedy": "Thủy",
+          "feasible": true,
+          "best_raw": 145.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 110
+        }
+      ],
+      "G_cap_first_attempt": 145.0,
+      "max_raw_retry": 145.0,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 0,
+        "Thổ": 0,
+        "Kim": 3,
+        "Thủy": 3
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Thủy",
+        "G_cap": 145.0,
+        "cap_changed": false,
+        "remedy_changed": false
+      }
+    },
+    {
+      "P": "Thủy",
+      "The": "Thủy",
+      "Dung": "Thổ",
+      "strategy": "SAFE_REMEDIATION",
+      "selected_remedy": "Kim",
+      "candidates": [
+        {
+          "remedy": "Mộc",
+          "feasible": true,
+          "best_raw": 130.0,
+          "conflicts_at_best": 0,
+          "single_element_score": 60
+        },
+        {
+          "remedy": "Kim",
+          "feasible": true,
+          "best_raw": 186.66666666666666,
+          "conflicts_at_best": 0,
+          "single_element_score": 200
+        }
+      ],
+      "G_cap_first_attempt": 186.66666666666666,
+      "max_raw_retry": 186.66666666666666,
+      "cap_attainable_in_retry": true,
+      "threshold": 85,
+      "retry_has_threshold_passing_configuration": true,
+      "best_first_element_counts": {
+        "Mộc": 0,
+        "Hỏa": 0,
+        "Thổ": 0,
+        "Kim": 4,
+        "Thủy": 2
+      },
+      "quota_3_to_5_comparison": {
+        "remedy": "Kim",
+        "G_cap": 193.33333333333334,
+        "cap_changed": true,
+        "remedy_changed": false
+      }
+    }
+  ],
+  "non_hung_target_pairs": [
+    {
+      "P": "Mộc",
+      "The": "Mộc",
+      "G_cap": 193.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Mộc",
+      "The": "Hỏa",
+      "G_cap": 168.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Mộc",
+      "The": "Thổ",
+      "G_cap": 125.0,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Mộc",
+      "The": "Kim",
+      "G_cap": 125.0,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Mộc",
+      "The": "Thủy",
+      "G_cap": 168.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Hỏa",
+      "The": "Mộc",
+      "G_cap": 168.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Hỏa",
+      "The": "Hỏa",
+      "G_cap": 193.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thổ",
+      "G_cap": 168.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Hỏa",
+      "The": "Kim",
+      "G_cap": 125.0,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Hỏa",
+      "The": "Thủy",
+      "G_cap": 125.0,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Thổ",
+      "The": "Mộc",
+      "G_cap": 125.0,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Thổ",
+      "The": "Hỏa",
+      "G_cap": 168.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Thổ",
+      "The": "Thổ",
+      "G_cap": 193.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Thổ",
+      "The": "Kim",
+      "G_cap": 168.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Thổ",
+      "The": "Thủy",
+      "G_cap": 125.0,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Kim",
+      "The": "Mộc",
+      "G_cap": 125.0,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Kim",
+      "The": "Hỏa",
+      "G_cap": 125.0,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Kim",
+      "The": "Thổ",
+      "G_cap": 168.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Kim",
+      "The": "Kim",
+      "G_cap": 193.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Kim",
+      "The": "Thủy",
+      "G_cap": 168.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Thủy",
+      "The": "Mộc",
+      "G_cap": 168.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Thủy",
+      "The": "Hỏa",
+      "G_cap": 125.0,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Thủy",
+      "The": "Thổ",
+      "G_cap": 125.0,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Thủy",
+      "The": "Kim",
+      "G_cap": 168.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    },
+    {
+      "P": "Thủy",
+      "The": "Thủy",
+      "G_cap": 193.33333333333334,
+      "cap_attainable_with_3_even_3_odd": true
+    }
+  ]
+}

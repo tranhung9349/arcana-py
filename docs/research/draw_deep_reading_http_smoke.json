@@ -1,0 +1,20 @@
+{
+  "context_id": "c6bebf0f-7c19-4ab0-8c25-a5995a4afdb1",
+  "hexagram": "Trạch Thiên Quải",
+  "moving_line": 1,
+  "source_cards": 5,
+  "bazi_cards": 7,
+  "saved_draw_preserved": true,
+  "history_unchanged": true,
+  "same_read_same_explanation": true,
+  "schema_valid": true,
+  "model_called": false,
+  "schema_version": "source-explanation-v2",
+  "module_versions": {
+    "bazi": "bazi-reading-2026-10-26-v1",
+    "maihoa": "draw-maihoa-reading-2026-10-26-v1"
+  },
+  "bazi_sections": 5,
+  "maihoa_sections": 7,
+  "saved_birth_and_casting_charts_preserved": true
+}

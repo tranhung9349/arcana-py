@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "date": "2026-10-26",
+  "rules_version": "bazi-natal-2026-10-26-v1",
+  "rules_sha256": "ec24edd1b6dbe7a9cdfd6c7803a86b8c4322d2984a18e8f57c19210933fb1005",
+  "python_tests": 162,
+  "javascript_tests": 5,
+  "new_bazi_tests": 15,
+  "checks": [
+    {
+      "check": "python",
+      "exit_code": 0,
+      "output": "/Users/tranduyhung/Work/randomyst_numbers/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n  from starlette.testclient import TestClient as TestClient  # noqa\n----------------------------------------------------------------------\nRan 162 tests in 16.316s\n\nOK\n"
+    },
+    {
+      "check": "javascript",
+      "exit_code": 0,
+      "output": "✔ explains endpoints, repeated tails and the selected attempt rather than the last attempt (3.290541ms)\n✔ number groups agree with all 100 element labels saved by the engine (0.697792ms)\n✔ keeps both profile and casting relations, including an explicit override (0.467792ms)\n✔ only describes bonuses for selected numbers and does not invent missing score components (0.937708ms)\n✔ can explain an archived 00–45 draw without changing its saved threshold (0.767209ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 57.518958\n"
+    },
+    {
+      "check": "bazi_syntax",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "check": "navigation_syntax",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "schema_examples": {
+    "valid": 4,
+    "checked_with": "Draft202012Validator"
+  },
+  "sources": [
+    {
+      "source_id": "text:strength",
+      "revision_id": 844360
+    },
+    {
+      "source_id": "text:month",
+      "revision_id": 844366
+    },
+    {
+      "source_id": "text:climate",
+      "revision_id": 844365
+    },
+    {
+      "source_id": "text:relations",
+      "revision_id": 2292392
+    }
+  ],
+  "sample_audit": {
+    "charts": 308,
+    "years": [
+      1950,
+      2026
+    ],
+    "samples_per_year": 4,
+    "strength_counts": {
+      "MIXED": 242,
+      "WEAK": 7,
+      "STRONG": 59
+    },
+    "all_validated": true,
+    "max_ms": 13.344,
+    "mean_ms": 3.058,
+    "scope": "sampled integration/performance, not independent fate validation"
+  },
+  "http": {
+    "result": "PASS",
+    "request_id": "03b5f600-973f-44d7-9314-a4f318376ddd",
+    "reading_id": "ae2c6e9d-d691-4e4c-b393-8ede67009601",
+    "schema_version": "bazi-consultation-v1",
+    "rules_version": "bazi-natal-2026-10-26-v1",
+    "rules_sha256": "ec24edd1b6dbe7a9cdfd6c7803a86b8c4322d2984a18e8f57c19210933fb1005",
+    "chart_sha256": "2b07837f0296e1b091c44b36614d3ed27632577a248c8f9150cf8ee531e3f1f1",
+    "findings": 12,
+    "sections": 8,
+    "create_seconds": 0.010745,
+    "same_uuid_replay": true,
+    "changed_payload_409": true,
+    "reread_keeps_chart": true,
+    "original_snapshot_unchanged": true,
+    "other_histories_unchanged": true,
+    "model_called": false
+  },
+  "ui": {
+    "browser": "IAB",
+    "viewport_width_observed": 686,
+    "checks": [
+      "new main menu",
+      "empty birth input",
+      "topic before question",
+      "create chart and save",
+      "4 pillars/hidden stems/ten gods rendered",
+      "reread WEALTH on saved chart",
+      "reopen original CAREER reading",
+      "expand source evidence",
+      "result focus scrolls into view"
+    ],
+    "console_warnings_errors": [],
+    "proof": "docs/research/bazi_module_ui.png"
+  },
+  "limitations": [
+    "qualitative strength model, not full expert-reviewed methodology",
+    "structure candidates and seasonal hints remain conditional",
+    "no full Ziping corpus, following/transformation or 120-case climate table",
+    "no major/lunar-year fortune cycles",
+    "free question stored as context, not semantically answered"
+  ]
+}

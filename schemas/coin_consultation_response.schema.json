@@ -1,0 +1,723 @@
+{
+  "$defs": {
+    "CoinCasting": {
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "const": "THREE_COINS_SIX_THROWS",
+          "title": "Method",
+          "type": "string"
+        },
+        "source": {
+          "enum": [
+            "RANDOM",
+            "MANUAL"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "throws_bottom_to_top": {
+          "items": {
+            "items": {
+              "enum": [
+                "BACK",
+                "INSCRIPTION"
+              ],
+              "type": "string"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "title": "Throws Bottom To Top",
+          "type": "array"
+        },
+        "totals_bottom_to_top": {
+          "items": {
+            "enum": [
+              6,
+              7,
+              8,
+              9
+            ],
+            "type": "integer"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "title": "Totals Bottom To Top",
+          "type": "array"
+        },
+        "convention": {
+          "title": "Convention",
+          "type": "string"
+        },
+        "randomness": {
+          "enum": [
+            "SYSTEM_SECRETS",
+            "USER_SUPPLIED"
+          ],
+          "title": "Randomness",
+          "type": "string"
+        }
+      },
+      "required": [
+        "method",
+        "source",
+        "throws_bottom_to_top",
+        "totals_bottom_to_top",
+        "convention",
+        "randomness"
+      ],
+      "title": "CoinCasting",
+      "type": "object"
+    },
+    "CoinHexagram": {
+      "additionalProperties": false,
+      "properties": {
+        "hexagram_id": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Hexagram Id",
+          "type": "integer"
+        },
+        "name_zh": {
+          "title": "Name Zh",
+          "type": "string"
+        },
+        "name_vi": {
+          "title": "Name Vi",
+          "type": "string"
+        },
+        "symbol": {
+          "title": "Symbol",
+          "type": "string"
+        },
+        "lines_bottom_to_top": {
+          "items": {
+            "enum": [
+              0,
+              1
+            ],
+            "type": "integer"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "title": "Lines Bottom To Top",
+          "type": "array"
+        },
+        "lower_trigram": {
+          "title": "Lower Trigram",
+          "type": "string"
+        },
+        "upper_trigram": {
+          "title": "Upper Trigram",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hexagram_id",
+        "name_zh",
+        "name_vi",
+        "symbol",
+        "lines_bottom_to_top",
+        "lower_trigram",
+        "upper_trigram"
+      ],
+      "title": "CoinHexagram",
+      "type": "object"
+    },
+    "CoinReading": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "coin-reading-v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "corpus_version": {
+          "title": "Corpus Version",
+          "type": "string"
+        },
+        "chart": {
+          "$ref": "#/$defs/CoinHexagram"
+        },
+        "text": {
+          "$ref": "#/$defs/HexagramExplanation"
+        },
+        "reference_lines": {
+          "items": {
+            "$ref": "#/$defs/SourceCard"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "title": "Reference Lines",
+          "type": "array"
+        },
+        "interpretation_review_status": {
+          "const": "AI_DRAFT_UNREVIEWED",
+          "title": "Interpretation Review Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "corpus_version",
+        "chart",
+        "text",
+        "reference_lines",
+        "interpretation_review_status"
+      ],
+      "title": "CoinReading",
+      "type": "object"
+    },
+    "HexagramExplanation": {
+      "additionalProperties": false,
+      "properties": {
+        "hexagram_id": {
+          "maximum": 64,
+          "minimum": 1,
+          "title": "Hexagram Id",
+          "type": "integer"
+        },
+        "name_zh": {
+          "title": "Name Zh",
+          "type": "string"
+        },
+        "name_vi": {
+          "title": "Name Vi",
+          "type": "string"
+        },
+        "symbol": {
+          "title": "Symbol",
+          "type": "string"
+        },
+        "moving_line": {
+          "anyOf": [
+            {
+              "maximum": 6,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Moving Line"
+        },
+        "overview": {
+          "$ref": "#/$defs/SourceOverview"
+        },
+        "cards": {
+          "items": {
+            "$ref": "#/$defs/SourceCard"
+          },
+          "title": "Cards",
+          "type": "array"
+        },
+        "source_gaps": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Source Gaps",
+          "type": "array"
+        }
+      },
+      "required": [
+        "hexagram_id",
+        "name_zh",
+        "name_vi",
+        "symbol",
+        "moving_line",
+        "overview",
+        "cards",
+        "source_gaps"
+      ],
+      "title": "HexagramExplanation",
+      "type": "object"
+    },
+    "NaJiaChart": {
+      "additionalProperties": false,
+      "properties": {
+        "palace": {
+          "title": "Palace",
+          "type": "string"
+        },
+        "palace_element": {
+          "title": "Palace Element",
+          "type": "string"
+        },
+        "stage": {
+          "title": "Stage",
+          "type": "string"
+        },
+        "world_line": {
+          "maximum": 6,
+          "minimum": 1,
+          "title": "World Line",
+          "type": "integer"
+        },
+        "response_line": {
+          "maximum": 6,
+          "minimum": 1,
+          "title": "Response Line",
+          "type": "integer"
+        },
+        "void_branches": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "title": "Void Branches",
+          "type": "array"
+        },
+        "lines_bottom_to_top": {
+          "items": {
+            "$ref": "#/$defs/NaJiaLine"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "title": "Lines Bottom To Top",
+          "type": "array"
+        },
+        "scope": {
+          "const": "BASIC_NAJIA_CHART",
+          "title": "Scope",
+          "type": "string"
+        }
+      },
+      "required": [
+        "palace",
+        "palace_element",
+        "stage",
+        "world_line",
+        "response_line",
+        "void_branches",
+        "lines_bottom_to_top",
+        "scope"
+      ],
+      "title": "NaJiaChart",
+      "type": "object"
+    },
+    "NaJiaLine": {
+      "additionalProperties": false,
+      "properties": {
+        "position": {
+          "maximum": 6,
+          "minimum": 1,
+          "title": "Position",
+          "type": "integer"
+        },
+        "stem": {
+          "title": "Stem",
+          "type": "string"
+        },
+        "branch": {
+          "title": "Branch",
+          "type": "string"
+        },
+        "branch_zh": {
+          "title": "Branch Zh",
+          "type": "string"
+        },
+        "element": {
+          "title": "Element",
+          "type": "string"
+        },
+        "relative": {
+          "title": "Relative",
+          "type": "string"
+        },
+        "spirit": {
+          "title": "Spirit",
+          "type": "string"
+        },
+        "is_world": {
+          "title": "Is World",
+          "type": "boolean"
+        },
+        "is_response": {
+          "title": "Is Response",
+          "type": "boolean"
+        },
+        "moving": {
+          "title": "Moving",
+          "type": "boolean"
+        },
+        "void": {
+          "title": "Void",
+          "type": "boolean"
+        },
+        "month_clash": {
+          "title": "Month Clash",
+          "type": "boolean"
+        },
+        "changed_stem": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Changed Stem"
+        },
+        "changed_branch": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Changed Branch"
+        },
+        "changed_element": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Changed Element"
+        },
+        "changed_relative": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Changed Relative"
+        }
+      },
+      "required": [
+        "position",
+        "stem",
+        "branch",
+        "branch_zh",
+        "element",
+        "relative",
+        "spirit",
+        "is_world",
+        "is_response",
+        "moving",
+        "void",
+        "month_clash",
+        "changed_stem",
+        "changed_branch",
+        "changed_element",
+        "changed_relative"
+      ],
+      "title": "NaJiaLine",
+      "type": "object"
+    },
+    "SourceCard": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text_type": {
+          "title": "Text Type",
+          "type": "string"
+        },
+        "language": {
+          "enum": [
+            "zh",
+            "vi"
+          ],
+          "title": "Language",
+          "type": "string"
+        },
+        "label": {
+          "const": "SOURCE_ORIGINAL",
+          "title": "Label",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceReference"
+        },
+        "translation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceTranslation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "evidence_id",
+        "title",
+        "text_type",
+        "language",
+        "label",
+        "text",
+        "source",
+        "translation"
+      ],
+      "title": "SourceCard",
+      "type": "object"
+    },
+    "SourceOverview": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "const": "AI_INTERPRETATION",
+          "title": "Label",
+          "type": "string"
+        },
+        "language": {
+          "const": "vi",
+          "title": "Language",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "UNREVIEWED",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "references": {
+          "items": {
+            "type": "string"
+          },
+          "title": "References",
+          "type": "array"
+        }
+      },
+      "required": [
+        "label",
+        "language",
+        "text",
+        "review_status",
+        "references"
+      ],
+      "title": "SourceOverview",
+      "type": "object"
+    },
+    "SourceReference": {
+      "additionalProperties": false,
+      "properties": {
+        "repository": {
+          "enum": [
+            "john-walks-slow/open-iching",
+            "vhphuoc1102/tinix-bazi"
+          ],
+          "title": "Repository",
+          "type": "string"
+        },
+        "commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Commit",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "repository",
+        "commit",
+        "path",
+        "key",
+        "url"
+      ],
+      "title": "SourceReference",
+      "type": "object"
+    },
+    "SourceTranslation": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "const": "AI_TRANSLATION",
+          "title": "Label",
+          "type": "string"
+        },
+        "language": {
+          "const": "vi",
+          "title": "Language",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "UNREVIEWED",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "references": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 1,
+          "minItems": 1,
+          "title": "References",
+          "type": "array"
+        },
+        "source_text_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Source Text Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "language",
+        "text",
+        "review_status",
+        "version",
+        "references",
+        "source_text_sha256"
+      ],
+      "title": "SourceTranslation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "coin-consultation-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "request_id": {
+      "format": "uuid",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "rules_version": {
+      "title": "Rules Version",
+      "type": "string"
+    },
+    "question": {
+      "title": "Question",
+      "type": "string"
+    },
+    "casting": {
+      "$ref": "#/$defs/CoinCasting"
+    },
+    "calendar": {
+      "additionalProperties": true,
+      "title": "Calendar",
+      "type": "object"
+    },
+    "original": {
+      "$ref": "#/$defs/CoinReading"
+    },
+    "changed": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CoinReading"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "moving_lines": {
+      "items": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "type": "integer"
+      },
+      "title": "Moving Lines",
+      "type": "array"
+    },
+    "najia": {
+      "$ref": "#/$defs/NaJiaChart"
+    },
+    "reading_guide": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reading Guide",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Sources",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "request_id",
+    "created_at",
+    "rules_version",
+    "question",
+    "casting",
+    "calendar",
+    "original",
+    "changed",
+    "moving_lines",
+    "najia",
+    "reading_guide",
+    "limitations",
+    "sources"
+  ],
+  "title": "CoinResponse",
+  "type": "object"
+}

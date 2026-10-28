@@ -1,0 +1,1865 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 129,
+  "totalBatches": 17,
+  "exportsByPath": {
+    "calendar_adapter/__init__.py": [],
+    "calendar_adapter/__main__.py": [
+      "main"
+    ],
+    "calendar_adapter/audit.py": [
+      "_PreText",
+      "read_moons",
+      "structural_check",
+      "audit",
+      "main"
+    ],
+    "calendar_adapter/vietnamese.py": [
+      "CalendarError",
+      "LunarDate",
+      "_jdn",
+      "_date_from_jdn",
+      "_new_moon_jd",
+      "_new_moon_day",
+      "_principal_term_sector",
+      "_month_eleven_start",
+      "_leap_offset",
+      "_solar_to_lunar",
+      "VietnameseCalendar",
+      "resolve_maihoa"
+    ],
+    "data/date_calendar/almanac_2024_2030.json.gz": [],
+    "data/reference/tinix-bazi/ganzhi.js": [],
+    "data/reference/tinix-bazi/ganzhi_data.js": [],
+    "data/reference/tinix-bazi/geju.js": [],
+    "data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js": [],
+    "data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js": [],
+    "data/reference/tinix-bazi/phan_tich/ngu_hanh.js": [],
+    "data/reference/tinix-bazi/shensha.js": [],
+    "randomyst/__init__.py": [],
+    "randomyst/api.py": [
+      "create_app"
+    ],
+    "randomyst/bazi.py": [
+      "deity",
+      "structure",
+      "analyze",
+      "star_bonuses"
+    ],
+    "randomyst/date_calendar.py": [
+      "DateDataError",
+      "DateCalendar"
+    ],
+    "randomyst/date_engine.py": [
+      "DateEngine"
+    ],
+    "randomyst/date_models.py": [
+      "DateSubject",
+      "DateRange",
+      "AllowedHours",
+      "DateSearchRequest",
+      "DateSource",
+      "RuleWhen",
+      "DateRule",
+      "ActivitySpec",
+      "DateScoring",
+      "MonthTables",
+      "DateRules",
+      "RecommendedWindow",
+      "DateWindow",
+      "DateDay",
+      "DateSearchResponse"
+    ],
+    "randomyst/date_rules.py": [
+      "relation",
+      "activity_status",
+      "RuleEvaluator"
+    ],
+    "randomyst/engine.py": [
+      "EngineError",
+      "NumberEngine"
+    ],
+    "randomyst/geolocation.py": [
+      "ip_location"
+    ],
+    "randomyst/interpretation.py": [
+      "digest",
+      "ExplanationRepository"
+    ],
+    "randomyst/maihoa.py": [
+      "IchingRepository"
+    ],
+    "randomyst/models.py": [
+      "StrictModel",
+      "Location",
+      "civil_validator",
+      "Birth",
+      "Casting",
+      "DrawRequest",
+      "DrawResponse",
+      "SourceReference",
+      "SourceTranslation",
+      "SourceCard",
+      "SourceOverview",
+      "HexagramExplanation",
+      "BaziExplanation",
+      "DisplayExplanations",
+      "SourceExplanation"
+    ],
+    "randomyst/sampling.py": [
+      "element_of",
+      "relation_score",
+      "state_of",
+      "Context",
+      "Configuration",
+      "count_vectors",
+      "grouped_pool",
+      "configurations",
+      "select_context",
+      "elementary_symmetric",
+      "ProductSubsetSampler",
+      "Distribution",
+      "validate_sample"
+    ],
+    "randomyst/storage.py": [
+      "DrawStore"
+    ],
+    "randomyst/time_engine.py": [
+      "CalendarError",
+      "check_provider",
+      "_lunar",
+      "beijing_clock",
+      "resolve_maihoa",
+      "solar_month",
+      "pillars"
+    ],
+    "research_tools/__init__.py": [],
+    "research_tools/audit_activity_categories.py": [
+      "summarize",
+      "audit"
+    ],
+    "research_tools/auspicious_date_audit.py": [
+      "lunar_at",
+      "facts",
+      "graph_freshness",
+      "scan_days",
+      "benchmark",
+      "static_filter_evidence",
+      "audit",
+      "main"
+    ],
+    "research_tools/exponential_audit.py": [
+      "digest",
+      "average_metrics",
+      "feasibility_report",
+      "run",
+      "markdown_report",
+      "main"
+    ],
+    "research_tools/legacy_time_engine.py": [
+      "noaa_eot_minutes",
+      "longitude_error_from_radius",
+      "solar_clock",
+      "jie_for_year",
+      "solar_month",
+      "pillars"
+    ],
+    "research_tools/validate_interpretation_examples.py": [
+      "main"
+    ],
+    "research_tools/weighted_sampling.py": [
+      "element_of",
+      "relation_score",
+      "state_of",
+      "Context",
+      "Configuration",
+      "count_vectors",
+      "grouped_pool",
+      "configurations",
+      "select_context",
+      "elementary_symmetric",
+      "ProductSubsetSampler",
+      "weights_for",
+      "Distribution",
+      "all_contexts",
+      "validate_sample"
+    ],
+    "scripts/astronomy_smoke_audit.py": [],
+    "scripts/audit_beijing_calendar.py": [
+      "main"
+    ],
+    "scripts/build_date_data.py": [
+      "digest",
+      "main"
+    ],
+    "scripts/build_explanation_data.py": [
+      "digest",
+      "build"
+    ],
+    "scripts/compare_bazi_source.py": [
+      "run"
+    ],
+    "scripts/smoke_dates.py": [
+      "main"
+    ],
+    "scripts/smoke_mvp.py": [],
+    "scripts/smoke_source_explanations.py": [
+      "get",
+      "main"
+    ],
+    "tests/test_auspicious_dates.py": [
+      "payload",
+      "DateTests"
+    ],
+    "tests/test_beijing_calendar.py": [
+      "request_at",
+      "BeijingCalendarTests"
+    ],
+    "tests/test_runtime.py": [
+      "payload",
+      "RuntimeTests",
+      "ApiTests"
+    ],
+    "tests/test_source_explanations.py": [
+      "SourceExplanationTests"
+    ],
+    "tests/test_vietnamese_calendar.py": [
+      "CalendarTests"
+    ],
+    "tests/test_weighted_sampling.py": [
+      "WeightedSamplingTest"
+    ],
+    "web/app.js": [],
+    "web/dates.js": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "randomyst/bazi.py",
+          "language": "python",
+          "sizeLines": 120,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/date_calendar.py",
+          "language": "python",
+          "sizeLines": 91,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/date_engine.py",
+          "language": "python",
+          "sizeLines": 111,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/date_rules.py",
+          "language": "python",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/time_engine.py",
+          "language": "python",
+          "sizeLines": 116,
+          "fileCategory": "code"
+        },
+        {
+          "path": "research_tools/audit_activity_categories.py",
+          "language": "python",
+          "sizeLines": 86,
+          "fileCategory": "code"
+        },
+        {
+          "path": "research_tools/auspicious_date_audit.py",
+          "language": "python",
+          "sizeLines": 208,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/audit_beijing_calendar.py",
+          "language": "python",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/compare_bazi_source.py",
+          "language": "python",
+          "sizeLines": 49,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_auspicious_dates.py",
+          "language": "python",
+          "sizeLines": 241,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "randomyst/bazi.py": [
+          "randomyst/sampling.py",
+          "randomyst/time_engine.py"
+        ],
+        "randomyst/date_calendar.py": [
+          "randomyst/time_engine.py"
+        ],
+        "randomyst/date_engine.py": [
+          "randomyst/bazi.py",
+          "randomyst/date_calendar.py",
+          "randomyst/date_rules.py",
+          "randomyst/time_engine.py"
+        ],
+        "randomyst/date_rules.py": [
+          "randomyst/bazi.py",
+          "randomyst/date_models.py",
+          "randomyst/sampling.py",
+          "randomyst/time_engine.py"
+        ],
+        "randomyst/time_engine.py": [],
+        "research_tools/audit_activity_categories.py": [
+          "randomyst/date_calendar.py",
+          "randomyst/date_rules.py"
+        ],
+        "research_tools/auspicious_date_audit.py": [
+          "randomyst/bazi.py",
+          "randomyst/time_engine.py"
+        ],
+        "scripts/audit_beijing_calendar.py": [
+          "randomyst/time_engine.py"
+        ],
+        "scripts/compare_bazi_source.py": [
+          "randomyst/bazi.py"
+        ],
+        "tests/test_auspicious_dates.py": [
+          "randomyst/api.py",
+          "randomyst/date_engine.py",
+          "randomyst/date_models.py",
+          "randomyst/date_rules.py",
+          "randomyst/time_engine.py"
+        ]
+      },
+      "neighborMap": {
+        "randomyst/bazi.py": [
+          {
+            "path": "randomyst/sampling.py",
+            "batchIndex": 2,
+            "symbols": [
+              "element_of",
+              "relation_score",
+              "state_of",
+              "Context",
+              "Configuration",
+              "count_vectors",
+              "grouped_pool",
+              "configurations",
+              "select_context",
+              "elementary_symmetric",
+              "ProductSubsetSampler",
+              "Distribution",
+              "validate_sample"
+            ]
+          },
+          {
+            "path": "randomyst/engine.py",
+            "batchIndex": 2,
+            "symbols": [
+              "EngineError",
+              "NumberEngine"
+            ]
+          },
+          {
+            "path": "randomyst/interpretation.py",
+            "batchIndex": 2,
+            "symbols": [
+              "digest",
+              "ExplanationRepository"
+            ]
+          },
+          {
+            "path": "tests/test_runtime.py",
+            "batchIndex": 2,
+            "symbols": [
+              "payload",
+              "RuntimeTests",
+              "ApiTests"
+            ]
+          }
+        ],
+        "randomyst/date_engine.py": [
+          {
+            "path": "randomyst/api.py",
+            "batchIndex": 2,
+            "symbols": [
+              "create_app"
+            ]
+          }
+        ],
+        "randomyst/date_rules.py": [
+          {
+            "path": "randomyst/date_models.py",
+            "batchIndex": 3,
+            "symbols": [
+              "DateSubject",
+              "DateRange",
+              "AllowedHours",
+              "DateSearchRequest",
+              "DateSource",
+              "RuleWhen",
+              "DateRule",
+              "ActivitySpec",
+              "DateScoring",
+              "MonthTables",
+              "DateRules",
+              "RecommendedWindow",
+              "DateWindow",
+              "DateDay",
+              "DateSearchResponse"
+            ]
+          },
+          {
+            "path": "randomyst/sampling.py",
+            "batchIndex": 2,
+            "symbols": [
+              "element_of",
+              "relation_score",
+              "state_of",
+              "Context",
+              "Configuration",
+              "count_vectors",
+              "grouped_pool",
+              "configurations",
+              "select_context",
+              "elementary_symmetric",
+              "ProductSubsetSampler",
+              "Distribution",
+              "validate_sample"
+            ]
+          }
+        ],
+        "randomyst/time_engine.py": [
+          {
+            "path": "randomyst/api.py",
+            "batchIndex": 2,
+            "symbols": [
+              "create_app"
+            ]
+          },
+          {
+            "path": "randomyst/engine.py",
+            "batchIndex": 2,
+            "symbols": [
+              "EngineError",
+              "NumberEngine"
+            ]
+          },
+          {
+            "path": "scripts/build_date_data.py",
+            "batchIndex": 3,
+            "symbols": [
+              "digest",
+              "main"
+            ]
+          },
+          {
+            "path": "tests/test_beijing_calendar.py",
+            "batchIndex": 2,
+            "symbols": [
+              "request_at",
+              "BeijingCalendarTests"
+            ]
+          },
+          {
+            "path": "tests/test_runtime.py",
+            "batchIndex": 2,
+            "symbols": [
+              "payload",
+              "RuntimeTests",
+              "ApiTests"
+            ]
+          }
+        ],
+        "tests/test_auspicious_dates.py": [
+          {
+            "path": "randomyst/api.py",
+            "batchIndex": 2,
+            "symbols": [
+              "create_app"
+            ]
+          },
+          {
+            "path": "randomyst/date_models.py",
+            "batchIndex": 3,
+            "symbols": [
+              "DateSubject",
+              "DateRange",
+              "AllowedHours",
+              "DateSearchRequest",
+              "DateSource",
+              "RuleWhen",
+              "DateRule",
+              "ActivitySpec",
+              "DateScoring",
+              "MonthTables",
+              "DateRules",
+              "RecommendedWindow",
+              "DateWindow",
+              "DateDay",
+              "DateSearchResponse"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "randomyst/api.py",
+          "language": "python",
+          "sizeLines": 84,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/engine.py",
+          "language": "python",
+          "sizeLines": 127,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/interpretation.py",
+          "language": "python",
+          "sizeLines": 150,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/maihoa.py",
+          "language": "python",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/sampling.py",
+          "language": "python",
+          "sizeLines": 261,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/storage.py",
+          "language": "python",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_beijing_calendar.py",
+          "language": "python",
+          "sizeLines": 138,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_runtime.py",
+          "language": "python",
+          "sizeLines": 233,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_source_explanations.py",
+          "language": "python",
+          "sizeLines": 135,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "randomyst/api.py": [
+          "randomyst/date_engine.py",
+          "randomyst/date_models.py",
+          "randomyst/engine.py",
+          "randomyst/interpretation.py",
+          "randomyst/models.py",
+          "randomyst/storage.py",
+          "randomyst/time_engine.py"
+        ],
+        "randomyst/engine.py": [
+          "randomyst/bazi.py",
+          "randomyst/maihoa.py",
+          "randomyst/sampling.py",
+          "randomyst/time_engine.py"
+        ],
+        "randomyst/interpretation.py": [
+          "randomyst/bazi.py",
+          "randomyst/maihoa.py"
+        ],
+        "randomyst/maihoa.py": [
+          "randomyst/sampling.py"
+        ],
+        "randomyst/sampling.py": [],
+        "randomyst/storage.py": [
+          "randomyst/engine.py"
+        ],
+        "tests/test_beijing_calendar.py": [
+          "randomyst/api.py",
+          "randomyst/engine.py",
+          "randomyst/models.py",
+          "randomyst/time_engine.py"
+        ],
+        "tests/test_runtime.py": [
+          "randomyst/api.py",
+          "randomyst/bazi.py",
+          "randomyst/engine.py",
+          "randomyst/maihoa.py",
+          "randomyst/models.py",
+          "randomyst/sampling.py",
+          "randomyst/time_engine.py"
+        ],
+        "tests/test_source_explanations.py": [
+          "randomyst/api.py",
+          "randomyst/engine.py",
+          "randomyst/interpretation.py",
+          "randomyst/models.py"
+        ]
+      },
+      "neighborMap": {
+        "randomyst/api.py": [
+          {
+            "path": "randomyst/date_engine.py",
+            "batchIndex": 1,
+            "symbols": [
+              "DateEngine"
+            ]
+          },
+          {
+            "path": "randomyst/date_models.py",
+            "batchIndex": 3,
+            "symbols": [
+              "DateSubject",
+              "DateRange",
+              "AllowedHours",
+              "DateSearchRequest",
+              "DateSource",
+              "RuleWhen",
+              "DateRule",
+              "ActivitySpec",
+              "DateScoring",
+              "MonthTables",
+              "DateRules",
+              "RecommendedWindow",
+              "DateWindow",
+              "DateDay",
+              "DateSearchResponse"
+            ]
+          },
+          {
+            "path": "randomyst/models.py",
+            "batchIndex": 3,
+            "symbols": [
+              "StrictModel",
+              "Location",
+              "civil_validator",
+              "Birth",
+              "Casting",
+              "DrawRequest",
+              "DrawResponse",
+              "SourceReference",
+              "SourceTranslation",
+              "SourceCard",
+              "SourceOverview",
+              "HexagramExplanation",
+              "BaziExplanation",
+              "DisplayExplanations",
+              "SourceExplanation"
+            ]
+          },
+          {
+            "path": "randomyst/time_engine.py",
+            "batchIndex": 1,
+            "symbols": [
+              "CalendarError",
+              "check_provider",
+              "_lunar",
+              "beijing_clock",
+              "resolve_maihoa",
+              "solar_month",
+              "pillars"
+            ]
+          },
+          {
+            "path": "tests/test_auspicious_dates.py",
+            "batchIndex": 1,
+            "symbols": [
+              "payload",
+              "DateTests"
+            ]
+          }
+        ],
+        "randomyst/engine.py": [
+          {
+            "path": "randomyst/bazi.py",
+            "batchIndex": 1,
+            "symbols": [
+              "deity",
+              "structure",
+              "analyze",
+              "star_bonuses"
+            ]
+          },
+          {
+            "path": "randomyst/time_engine.py",
+            "batchIndex": 1,
+            "symbols": [
+              "CalendarError",
+              "check_provider",
+              "_lunar",
+              "beijing_clock",
+              "resolve_maihoa",
+              "solar_month",
+              "pillars"
+            ]
+          }
+        ],
+        "randomyst/interpretation.py": [
+          {
+            "path": "randomyst/bazi.py",
+            "batchIndex": 1,
+            "symbols": [
+              "deity",
+              "structure",
+              "analyze",
+              "star_bonuses"
+            ]
+          }
+        ],
+        "randomyst/sampling.py": [
+          {
+            "path": "randomyst/bazi.py",
+            "batchIndex": 1,
+            "symbols": [
+              "deity",
+              "structure",
+              "analyze",
+              "star_bonuses"
+            ]
+          },
+          {
+            "path": "randomyst/date_rules.py",
+            "batchIndex": 1,
+            "symbols": [
+              "relation",
+              "activity_status",
+              "RuleEvaluator"
+            ]
+          }
+        ],
+        "tests/test_beijing_calendar.py": [
+          {
+            "path": "randomyst/models.py",
+            "batchIndex": 3,
+            "symbols": [
+              "StrictModel",
+              "Location",
+              "civil_validator",
+              "Birth",
+              "Casting",
+              "DrawRequest",
+              "DrawResponse",
+              "SourceReference",
+              "SourceTranslation",
+              "SourceCard",
+              "SourceOverview",
+              "HexagramExplanation",
+              "BaziExplanation",
+              "DisplayExplanations",
+              "SourceExplanation"
+            ]
+          },
+          {
+            "path": "randomyst/time_engine.py",
+            "batchIndex": 1,
+            "symbols": [
+              "CalendarError",
+              "check_provider",
+              "_lunar",
+              "beijing_clock",
+              "resolve_maihoa",
+              "solar_month",
+              "pillars"
+            ]
+          }
+        ],
+        "tests/test_runtime.py": [
+          {
+            "path": "randomyst/bazi.py",
+            "batchIndex": 1,
+            "symbols": [
+              "deity",
+              "structure",
+              "analyze",
+              "star_bonuses"
+            ]
+          },
+          {
+            "path": "randomyst/models.py",
+            "batchIndex": 3,
+            "symbols": [
+              "StrictModel",
+              "Location",
+              "civil_validator",
+              "Birth",
+              "Casting",
+              "DrawRequest",
+              "DrawResponse",
+              "SourceReference",
+              "SourceTranslation",
+              "SourceCard",
+              "SourceOverview",
+              "HexagramExplanation",
+              "BaziExplanation",
+              "DisplayExplanations",
+              "SourceExplanation"
+            ]
+          },
+          {
+            "path": "randomyst/time_engine.py",
+            "batchIndex": 1,
+            "symbols": [
+              "CalendarError",
+              "check_provider",
+              "_lunar",
+              "beijing_clock",
+              "resolve_maihoa",
+              "solar_month",
+              "pillars"
+            ]
+          }
+        ],
+        "tests/test_source_explanations.py": [
+          {
+            "path": "randomyst/models.py",
+            "batchIndex": 3,
+            "symbols": [
+              "StrictModel",
+              "Location",
+              "civil_validator",
+              "Birth",
+              "Casting",
+              "DrawRequest",
+              "DrawResponse",
+              "SourceReference",
+              "SourceTranslation",
+              "SourceCard",
+              "SourceOverview",
+              "HexagramExplanation",
+              "BaziExplanation",
+              "DisplayExplanations",
+              "SourceExplanation"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "randomyst/date_models.py",
+          "language": "python",
+          "sizeLines": 236,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/geolocation.py",
+          "language": "python",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "randomyst/models.py",
+          "language": "python",
+          "sizeLines": 218,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/build_date_data.py",
+          "language": "python",
+          "sizeLines": 119,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/smoke_dates.py",
+          "language": "python",
+          "sizeLines": 123,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/smoke_mvp.py",
+          "language": "python",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/smoke_source_explanations.py",
+          "language": "python",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "randomyst/date_models.py": [
+          "randomyst/models.py"
+        ],
+        "randomyst/geolocation.py": [
+          "randomyst/models.py"
+        ],
+        "randomyst/models.py": [],
+        "scripts/build_date_data.py": [
+          "randomyst/date_models.py",
+          "randomyst/time_engine.py"
+        ],
+        "scripts/smoke_dates.py": [
+          "randomyst/date_models.py"
+        ],
+        "scripts/smoke_mvp.py": [
+          "randomyst/models.py"
+        ],
+        "scripts/smoke_source_explanations.py": [
+          "randomyst/models.py"
+        ]
+      },
+      "neighborMap": {
+        "randomyst/date_models.py": [
+          {
+            "path": "randomyst/api.py",
+            "batchIndex": 2,
+            "symbols": [
+              "create_app"
+            ]
+          },
+          {
+            "path": "randomyst/date_rules.py",
+            "batchIndex": 1,
+            "symbols": [
+              "relation",
+              "activity_status",
+              "RuleEvaluator"
+            ]
+          },
+          {
+            "path": "tests/test_auspicious_dates.py",
+            "batchIndex": 1,
+            "symbols": [
+              "payload",
+              "DateTests"
+            ]
+          }
+        ],
+        "randomyst/models.py": [
+          {
+            "path": "randomyst/api.py",
+            "batchIndex": 2,
+            "symbols": [
+              "create_app"
+            ]
+          },
+          {
+            "path": "tests/test_beijing_calendar.py",
+            "batchIndex": 2,
+            "symbols": [
+              "request_at",
+              "BeijingCalendarTests"
+            ]
+          },
+          {
+            "path": "tests/test_runtime.py",
+            "batchIndex": 2,
+            "symbols": [
+              "payload",
+              "RuntimeTests",
+              "ApiTests"
+            ]
+          },
+          {
+            "path": "tests/test_source_explanations.py",
+            "batchIndex": 2,
+            "symbols": [
+              "SourceExplanationTests"
+            ]
+          }
+        ],
+        "scripts/build_date_data.py": [
+          {
+            "path": "randomyst/time_engine.py",
+            "batchIndex": 1,
+            "symbols": [
+              "CalendarError",
+              "check_provider",
+              "_lunar",
+              "beijing_clock",
+              "resolve_maihoa",
+              "solar_month",
+              "pillars"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "data/reference/tinix-bazi/ganzhi.js",
+          "language": "javascript",
+          "sizeLines": 292,
+          "fileCategory": "code"
+        },
+        {
+          "path": "data/reference/tinix-bazi/ganzhi_data.js",
+          "language": "javascript",
+          "sizeLines": 1106,
+          "fileCategory": "code"
+        },
+        {
+          "path": "data/reference/tinix-bazi/geju.js",
+          "language": "javascript",
+          "sizeLines": 112,
+          "fileCategory": "code"
+        },
+        {
+          "path": "data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+          "language": "javascript",
+          "sizeLines": 273,
+          "fileCategory": "code"
+        },
+        {
+          "path": "data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+          "language": "javascript",
+          "sizeLines": 320,
+          "fileCategory": "code"
+        },
+        {
+          "path": "data/reference/tinix-bazi/shensha.js",
+          "language": "javascript",
+          "sizeLines": 800,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "data/reference/tinix-bazi/ganzhi.js": [
+          "data/reference/tinix-bazi/ganzhi_data.js"
+        ],
+        "data/reference/tinix-bazi/ganzhi_data.js": [],
+        "data/reference/tinix-bazi/geju.js": [
+          "data/reference/tinix-bazi/ganzhi.js"
+        ],
+        "data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js": [],
+        "data/reference/tinix-bazi/phan_tich/ngu_hanh.js": [
+          "data/reference/tinix-bazi/ganzhi.js",
+          "data/reference/tinix-bazi/geju.js",
+          "data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js"
+        ],
+        "data/reference/tinix-bazi/shensha.js": [
+          "data/reference/tinix-bazi/ganzhi.js"
+        ]
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "calendar_adapter/__init__.py",
+          "language": "python",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "calendar_adapter/__main__.py",
+          "language": "python",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "calendar_adapter/audit.py",
+          "language": "python",
+          "sizeLines": 169,
+          "fileCategory": "code"
+        },
+        {
+          "path": "calendar_adapter/vietnamese.py",
+          "language": "python",
+          "sizeLines": 253,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_vietnamese_calendar.py",
+          "language": "python",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "calendar_adapter/__init__.py": [
+          "calendar_adapter/vietnamese.py"
+        ],
+        "calendar_adapter/__main__.py": [
+          "calendar_adapter/vietnamese.py"
+        ],
+        "calendar_adapter/audit.py": [
+          "calendar_adapter/vietnamese.py"
+        ],
+        "calendar_adapter/vietnamese.py": [],
+        "tests/test_vietnamese_calendar.py": [
+          "calendar_adapter/__init__.py",
+          "calendar_adapter/vietnamese.py"
+        ]
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": "research_tools/exponential_audit.py",
+          "language": "python",
+          "sizeLines": 205,
+          "fileCategory": "code"
+        },
+        {
+          "path": "research_tools/weighted_sampling.py",
+          "language": "python",
+          "sizeLines": 291,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_weighted_sampling.py",
+          "language": "python",
+          "sizeLines": 88,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "research_tools/exponential_audit.py": [
+          "research_tools/weighted_sampling.py"
+        ],
+        "research_tools/weighted_sampling.py": [],
+        "tests/test_weighted_sampling.py": [
+          "research_tools/weighted_sampling.py"
+        ]
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "MVP1_HANDOFF.md",
+          "language": "markdown",
+          "sizeLines": 35,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "MVP2_HANDOFF.md",
+          "language": "markdown",
+          "sizeLines": 47,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 111,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "dan_gian_config.json",
+          "language": "json",
+          "sizeLines": 67,
+          "fileCategory": "config"
+        },
+        {
+          "path": "requirements-dev.txt",
+          "language": "txt",
+          "sizeLines": 5,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "requirements-lock.txt",
+          "language": "txt",
+          "sizeLines": 36,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "requirements.txt",
+          "language": "txt",
+          "sizeLines": 4,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "MVP1_HANDOFF.md": [],
+        "MVP2_HANDOFF.md": [],
+        "README.md": [],
+        "dan_gian_config.json": [],
+        "requirements-dev.txt": [],
+        "requirements-lock.txt": [],
+        "requirements.txt": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": "config/interpretation_disclaimers.json",
+          "language": "json",
+          "sizeLines": 9,
+          "fileCategory": "config"
+        },
+        {
+          "path": "config/mvp1_rules.json",
+          "language": "json",
+          "sizeLines": 112,
+          "fileCategory": "config"
+        },
+        {
+          "path": "config/mvp2_date_rules.json",
+          "language": "json",
+          "sizeLines": 333,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "config/interpretation_disclaimers.json": [],
+        "config/mvp1_rules.json": [],
+        "config/mvp2_date_rules.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "data/interpretation/README.md",
+          "language": "markdown",
+          "sizeLines": 9,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "data/interpretation/iching_vi_draft.json",
+          "language": "json",
+          "sizeLines": 1609,
+          "fileCategory": "config"
+        },
+        {
+          "path": "data/interpretation/tinix_vi.json",
+          "language": "json",
+          "sizeLines": 195,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "data/interpretation/README.md": [],
+        "data/interpretation/iching_vi_draft.json": [],
+        "data/interpretation/tinix_vi.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "data/reference/open-iching/iching.json",
+          "language": "json",
+          "sizeLines": 3597,
+          "fileCategory": "config"
+        },
+        {
+          "path": "data/reference/open-iching/tuan.json",
+          "language": "json",
+          "sizeLines": 64,
+          "fileCategory": "config"
+        },
+        {
+          "path": "data/reference/open-iching/xiang.json",
+          "language": "json",
+          "sizeLines": 451,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "data/reference/open-iching/iching.json": [],
+        "data/reference/open-iching/tuan.json": [],
+        "data/reference/open-iching/xiang.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": "docs/architect_idea.md",
+          "language": "markdown",
+          "sizeLines": 77,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/logic_plan_mvp1.md",
+          "language": "markdown",
+          "sizeLines": 99,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/logic_plan_mvp2.md",
+          "language": "markdown",
+          "sizeLines": 153,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "docs/architect_idea.md": [],
+        "docs/logic_plan_mvp1.md": [],
+        "docs/logic_plan_mvp2.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 12,
+      "files": [
+        {
+          "path": "docs/archive/draw_request_v3.json",
+          "language": "json",
+          "sizeLines": 20,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/archive/draw_response_v3.json",
+          "language": "json",
+          "sizeLines": 1148,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/archive/logic_plan_mvp1_v3.md",
+          "language": "markdown",
+          "sizeLines": 834,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/archive/logic_plan_mvp2_pre_r1.md",
+          "language": "markdown",
+          "sizeLines": 240,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "docs/archive/draw_request_v3.json": [],
+        "docs/archive/draw_response_v3.json": [],
+        "docs/archive/logic_plan_mvp1_v3.md": [],
+        "docs/archive/logic_plan_mvp2_pre_r1.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 13,
+      "files": [
+        {
+          "path": "docs/research/astronomy_runtime_spot_checks.json",
+          "language": "json",
+          "sizeLines": 120,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/bazi_python_port_validation.json",
+          "language": "json",
+          "sizeLines": 20,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/beijing_calendar_http_smoke.json",
+          "language": "json",
+          "sizeLines": 49,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/beijing_calendar_migration_validation.json",
+          "language": "json",
+          "sizeLines": 207,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/beijing_calendar_range_audit.json",
+          "language": "json",
+          "sizeLines": 13,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/calendar_adapter_trial.json",
+          "language": "json",
+          "sizeLines": 274,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/calendar_boundary_policy_audit.json",
+          "language": "json",
+          "sizeLines": 262,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/exponential_distribution_trial.json",
+          "language": "json",
+          "sizeLines": 45650,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/exponential_distribution_trial.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/research/geolocation_policy_audit.json",
+          "language": "json",
+          "sizeLines": 149,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/interpretation_schema_validation.json",
+          "language": "json",
+          "sizeLines": 17,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/mvp1_runtime_validation.json",
+          "language": "json",
+          "sizeLines": 130,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/mvp2_activity_expansion.md",
+          "language": "markdown",
+          "sizeLines": 100,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/research/mvp2_activity_token_coverage.json",
+          "language": "json",
+          "sizeLines": 5433,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/mvp2_auspicious_date_feasibility.json",
+          "language": "json",
+          "sizeLines": 1370,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/mvp2_auspicious_date_research.md",
+          "language": "markdown",
+          "sizeLines": 71,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/research/mvp2_cold_93_runtime_validation.json",
+          "language": "json",
+          "sizeLines": 50,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/mvp2_display_runtime_validation.json",
+          "language": "json",
+          "sizeLines": 95,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/mvp2_display_ui_validation.json",
+          "language": "json",
+          "sizeLines": 39,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/mvp2_popup_ui_validation.json",
+          "language": "json",
+          "sizeLines": 44,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "docs/research/astronomy_runtime_spot_checks.json": [],
+        "docs/research/bazi_python_port_validation.json": [],
+        "docs/research/beijing_calendar_http_smoke.json": [],
+        "docs/research/beijing_calendar_migration_validation.json": [],
+        "docs/research/beijing_calendar_range_audit.json": [],
+        "docs/research/calendar_adapter_trial.json": [],
+        "docs/research/calendar_boundary_policy_audit.json": [],
+        "docs/research/exponential_distribution_trial.json": [],
+        "docs/research/exponential_distribution_trial.md": [],
+        "docs/research/geolocation_policy_audit.json": [],
+        "docs/research/interpretation_schema_validation.json": [],
+        "docs/research/mvp1_runtime_validation.json": [],
+        "docs/research/mvp2_activity_expansion.md": [],
+        "docs/research/mvp2_activity_token_coverage.json": [],
+        "docs/research/mvp2_auspicious_date_feasibility.json": [],
+        "docs/research/mvp2_auspicious_date_research.md": [],
+        "docs/research/mvp2_cold_93_runtime_validation.json": [],
+        "docs/research/mvp2_display_runtime_validation.json": [],
+        "docs/research/mvp2_display_ui_validation.json": [],
+        "docs/research/mvp2_popup_ui_validation.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 14,
+      "files": [
+        {
+          "path": "docs/research/mvp2_rule_matrix_counterexamples.json",
+          "language": "json",
+          "sizeLines": 108,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/mvp2_runtime_validation.json",
+          "language": "json",
+          "sizeLines": 95,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/mvp2_ui_smoke.json",
+          "language": "json",
+          "sizeLines": 19,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/remediation_audit_v2.json",
+          "language": "json",
+          "sizeLines": 2223,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/remediation_feasibility_v3.json",
+          "language": "json",
+          "sizeLines": 1416,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/remediation_feasibility_v4.json",
+          "language": "json",
+          "sizeLines": 1124,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/soft_adjusters_source_audit.json",
+          "language": "json",
+          "sizeLines": 607,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/source_explanation_http_smoke.json",
+          "language": "json",
+          "sizeLines": 12,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/research/source_explanation_validation.json",
+          "language": "json",
+          "sizeLines": 92,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "docs/research/mvp2_rule_matrix_counterexamples.json": [],
+        "docs/research/mvp2_runtime_validation.json": [],
+        "docs/research/mvp2_ui_smoke.json": [],
+        "docs/research/remediation_audit_v2.json": [],
+        "docs/research/remediation_feasibility_v3.json": [],
+        "docs/research/remediation_feasibility_v4.json": [],
+        "docs/research/soft_adjusters_source_audit.json": [],
+        "docs/research/source_explanation_http_smoke.json": [],
+        "docs/research/source_explanation_validation.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 15,
+      "files": [
+        {
+          "path": "examples/README.md",
+          "language": "markdown",
+          "sizeLines": 10,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "examples/date_search_request.json",
+          "language": "json",
+          "sizeLines": 16,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/date_search_response.json",
+          "language": "json",
+          "sizeLines": 1693,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/draw_request.json",
+          "language": "json",
+          "sizeLines": 10,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/draw_response.json",
+          "language": "json",
+          "sizeLines": 1130,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/marriage_date_search_request.json",
+          "language": "json",
+          "sizeLines": 22,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/source_explanation.json",
+          "language": "json",
+          "sizeLines": 439,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "examples/README.md": [],
+        "examples/date_search_request.json": [],
+        "examples/date_search_response.json": [],
+        "examples/draw_request.json": [],
+        "examples/draw_response.json": [],
+        "examples/marriage_date_search_request.json": [],
+        "examples/source_explanation.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 16,
+      "files": [
+        {
+          "path": "schemas/date_search_request.schema.json",
+          "language": "json",
+          "sizeLines": 273,
+          "fileCategory": "config"
+        },
+        {
+          "path": "schemas/date_search_response.schema.json",
+          "language": "json",
+          "sizeLines": 453,
+          "fileCategory": "config"
+        },
+        {
+          "path": "schemas/interpretation_context.schema.json",
+          "language": "json",
+          "sizeLines": 677,
+          "fileCategory": "config"
+        },
+        {
+          "path": "schemas/interpretation_response.schema.json",
+          "language": "json",
+          "sizeLines": 30,
+          "fileCategory": "config"
+        },
+        {
+          "path": "schemas/mvp2_date_rules.schema.json",
+          "language": "json",
+          "sizeLines": 390,
+          "fileCategory": "config"
+        },
+        {
+          "path": "schemas/source_explanation.schema.json",
+          "language": "json",
+          "sizeLines": 492,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "schemas/date_search_request.schema.json": [],
+        "schemas/date_search_response.schema.json": [],
+        "schemas/interpretation_context.schema.json": [],
+        "schemas/interpretation_response.schema.json": [],
+        "schemas/mvp2_date_rules.schema.json": [],
+        "schemas/source_explanation.schema.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 17,
+      "files": [
+        {
+          "path": "calendar_adapter/README.md",
+          "language": "markdown",
+          "sizeLines": 80,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "data/date_calendar/README.md",
+          "language": "markdown",
+          "sizeLines": 26,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "data/date_calendar/almanac_2024_2030.json.gz",
+          "language": "gz",
+          "sizeLines": 1489,
+          "fileCategory": "code"
+        },
+        {
+          "path": "data/date_calendar/manifest.json",
+          "language": "json",
+          "sizeLines": 35,
+          "fileCategory": "config"
+        },
+        {
+          "path": "data/reference/README.md",
+          "language": "markdown",
+          "sizeLines": 12,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "data/reference/manifest.json",
+          "language": "json",
+          "sizeLines": 46,
+          "fileCategory": "config"
+        },
+        {
+          "path": "data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js",
+          "language": "javascript",
+          "sizeLines": 110,
+          "fileCategory": "code"
+        },
+        {
+          "path": "docs/prompts/vietnamese_interpretation_v1.md",
+          "language": "markdown",
+          "sizeLines": 62,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/research/calendar_sources/nasa-phases1901.html",
+          "language": "html",
+          "sizeLines": 1850,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "docs/research/calendar_sources/nasa-phases2001.html",
+          "language": "html",
+          "sizeLines": 1850,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "randomyst/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "research_tools/README.md",
+          "language": "markdown",
+          "sizeLines": 60,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "research_tools/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "research_tools/legacy_time_engine.py",
+          "language": "python",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "research_tools/validate_interpretation_examples.py",
+          "language": "python",
+          "sizeLines": 81,
+          "fileCategory": "code"
+        },
+        {
+          "path": "schemas/examples/interpretation_context.example.json",
+          "language": "json",
+          "sizeLines": 148,
+          "fileCategory": "config"
+        },
+        {
+          "path": "schemas/examples/interpretation_response.example.json",
+          "language": "json",
+          "sizeLines": 40,
+          "fileCategory": "config"
+        },
+        {
+          "path": "scripts/astronomy_smoke_audit.py",
+          "language": "python",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/build_explanation_data.py",
+          "language": "python",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/run_mvp.sh",
+          "language": "shell",
+          "sizeLines": 9,
+          "fileCategory": "script"
+        },
+        {
+          "path": "web/app.js",
+          "language": "javascript",
+          "sizeLines": 122,
+          "fileCategory": "code"
+        },
+        {
+          "path": "web/dates.js",
+          "language": "javascript",
+          "sizeLines": 161,
+          "fileCategory": "code"
+        },
+        {
+          "path": "web/index.html",
+          "language": "html",
+          "sizeLines": 34,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "web/style.css",
+          "language": "css",
+          "sizeLines": 14,
+          "fileCategory": "markup"
+        }
+      ],
+      "batchImportData": {
+        "calendar_adapter/README.md": [],
+        "data/date_calendar/README.md": [],
+        "data/date_calendar/almanac_2024_2030.json.gz": [],
+        "data/date_calendar/manifest.json": [],
+        "data/reference/README.md": [],
+        "data/reference/manifest.json": [],
+        "data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js": [],
+        "docs/prompts/vietnamese_interpretation_v1.md": [],
+        "docs/research/calendar_sources/nasa-phases1901.html": [],
+        "docs/research/calendar_sources/nasa-phases2001.html": [],
+        "randomyst/__init__.py": [],
+        "research_tools/README.md": [],
+        "research_tools/__init__.py": [],
+        "research_tools/legacy_time_engine.py": [],
+        "research_tools/validate_interpretation_examples.py": [],
+        "schemas/examples/interpretation_context.example.json": [],
+        "schemas/examples/interpretation_response.example.json": [],
+        "scripts/astronomy_smoke_audit.py": [
+          "research_tools/legacy_time_engine.py"
+        ],
+        "scripts/build_explanation_data.py": [],
+        "scripts/run_mvp.sh": [],
+        "web/app.js": [],
+        "web/dates.js": [],
+        "web/index.html": [],
+        "web/style.css": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "success": true,
+  "issues": [],
+  "inventoryFiles": 129,
+  "coveredFiles": 129,
+  "deterministicImportEdges": 73,
+  "sourceSnapshotSha256": "92d7ff560aa82fb8086490e1c4ac19ad31fa032ae21764e54b82f6c5ac87e77b",
+  "sourceUnchanged": true,
+  "gitAvailable": false,
+  "validatedAt": "2026-10-22T10:29:56.085587+00:00",
+  "warnings": [
+    "Node 'file:randomyst/__init__.py' has no edges (orphan)",
+    "Node 'file:research_tools/__init__.py' has no edges (orphan)"
+  ],
+  "phaseWarnings": [
+    "Bản dựng lại đầy đủ R6 (--full); không tái dùng phân tích của graph R5.",
+    "scan-project bắt .DS_Store khi không có Git; đã loại bằng --exclude '**/.DS_Store,.DS_Store', không sửa .understandignore.",
+    "6 cạnh liên batch được chuẩn hóa prefix trước merge: config:schemas/*.schema.json → schema:…, file:…almanac_2024_2030.json.gz → resource:….",
+    "Parser JavaScript bỏ sót function trong IIFE của web/dates.js; 4 function bổ sung từ source với lineRange đọc thủ công.",
+    "gz/html/css và requirements*.txt không có parser; node được tạo từ metadata/source, corpus gzip chỉ giữ metadata.",
+    "Assemble review bổ sung 8 endpoint của randomyst/api.py và bảng SQLite draws sau khi đối chiếu source.",
+    "Concept/module node của R5 (do LLM tổng hợp) không được dựng lại trong bản full này."
+  ],
+  "stats": {
+    "totalNodes": 328,
+    "totalEdges": 972,
+    "totalLayers": 10,
+    "tourSteps": 15,
+    "nodeTypes": {
+      "file": 54,
+      "function": 108,
+      "class": 57,
+      "document": 21,
+      "config": 47,
+      "schema": 31,
+      "resource": 1,
+      "endpoint": 8,
+      "table": 1
+    },
+    "edgeTypes": {
+      "contains": 199,
+      "exports": 149,
+      "imports": 73,
+      "calls": 138,
+      "tested_by": 20,
+      "inherits": 28,
+      "depends_on": 30,
+      "documents": 81,
+      "related": 185,
+      "configures": 21,
+      "defines_schema": 34,
+      "validates": 7,
+      "writes_to": 2,
+      "reads_from": 4,
+      "serves": 1
+    }
+  },
+  "fileCategories": {
+    "docs": 21,
+    "code": 50,
+    "config": 53,
+    "markup": 4,
+    "script": 1
+  },
+  "fingerprintFiles": 129
+}

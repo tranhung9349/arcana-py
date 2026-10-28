@@ -1,0 +1,736 @@
+{
+  "$defs": {
+    "AnalysisContext": {
+      "additionalProperties": false,
+      "properties": {
+        "topic": {
+          "default": "GENERAL",
+          "enum": [
+            "GENERAL",
+            "WEALTH",
+            "CAREER",
+            "DOCUMENT",
+            "PARENTS",
+            "CHILDREN",
+            "SIBLINGS",
+            "PARTNERSHIP"
+          ],
+          "title": "Topic",
+          "type": "string"
+        },
+        "use_relative": {
+          "anyOf": [
+            {
+              "enum": [
+                "Phụ mẫu",
+                "Huynh đệ",
+                "Tử tôn",
+                "Thê tài",
+                "Quan quỷ"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Use Relative"
+        },
+        "focus_line": {
+          "anyOf": [
+            {
+              "maximum": 6,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Focus Line"
+        },
+        "intent_mode": {
+          "default": "TOPIC_ONLY",
+          "enum": [
+            "TOPIC_ONLY",
+            "COMBINED"
+          ],
+          "title": "Intent Mode",
+          "type": "string"
+        },
+        "intent_acknowledged": {
+          "default": false,
+          "title": "Intent Acknowledged",
+          "type": "boolean"
+        }
+      },
+      "title": "AnalysisContext",
+      "type": "object"
+    },
+    "AnalysisFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "rule": {
+          "title": "Rule",
+          "type": "string"
+        },
+        "effect": {
+          "enum": [
+            "SUPPORT",
+            "OBSTACLE",
+            "CONDITION",
+            "CONTEXT"
+          ],
+          "title": "Effect",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence",
+          "type": "array"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Source Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "rule",
+        "effect",
+        "title",
+        "explanation",
+        "evidence",
+        "source_ids"
+      ],
+      "title": "AnalysisFinding",
+      "type": "object"
+    },
+    "AnalysisRole": {
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "title": "Role",
+          "type": "string"
+        },
+        "element": {
+          "title": "Element",
+          "type": "string"
+        },
+        "line_keys": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Line Keys",
+          "type": "array"
+        },
+        "active_line_keys": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Active Line Keys",
+          "type": "array"
+        }
+      },
+      "required": [
+        "role",
+        "element",
+        "line_keys",
+        "active_line_keys"
+      ],
+      "title": "AnalysisRole",
+      "type": "object"
+    },
+    "IntentCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "topic": {
+          "enum": [
+            "GENERAL",
+            "WEALTH",
+            "CAREER",
+            "DOCUMENT",
+            "PARENTS",
+            "CHILDREN",
+            "SIBLINGS",
+            "PARTNERSHIP"
+          ],
+          "title": "Topic",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "target": {
+          "title": "Target",
+          "type": "string"
+        },
+        "intent_labels": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Intent Labels",
+          "type": "array"
+        },
+        "terms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Terms",
+          "type": "array"
+        },
+        "evidence_level": {
+          "enum": [
+            "SPECIFIC_PHRASE",
+            "KEYWORD"
+          ],
+          "title": "Evidence Level",
+          "type": "string"
+        }
+      },
+      "required": [
+        "topic",
+        "label",
+        "target",
+        "intent_labels",
+        "terms",
+        "evidence_level"
+      ],
+      "title": "IntentCandidate",
+      "type": "object"
+    },
+    "IntentMatch": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "topic": {
+          "enum": [
+            "GENERAL",
+            "WEALTH",
+            "CAREER",
+            "DOCUMENT",
+            "PARENTS",
+            "CHILDREN",
+            "SIBLINGS",
+            "PARTNERSHIP"
+          ],
+          "title": "Topic",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "term": {
+          "title": "Term",
+          "type": "string"
+        },
+        "disposition": {
+          "enum": [
+            "INTENT",
+            "NEGATED",
+            "CONTEXT"
+          ],
+          "title": "Disposition",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule_id",
+        "topic",
+        "label",
+        "term",
+        "disposition"
+      ],
+      "title": "IntentMatch",
+      "type": "object"
+    },
+    "LineAnalysis": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "title": "Key",
+          "type": "string"
+        },
+        "position": {
+          "maximum": 6,
+          "minimum": 1,
+          "title": "Position",
+          "type": "integer"
+        },
+        "visibility": {
+          "enum": [
+            "VISIBLE",
+            "HIDDEN"
+          ],
+          "title": "Visibility",
+          "type": "string"
+        },
+        "branch": {
+          "title": "Branch",
+          "type": "string"
+        },
+        "element": {
+          "title": "Element",
+          "type": "string"
+        },
+        "relative": {
+          "title": "Relative",
+          "type": "string"
+        },
+        "month_relation": {
+          "title": "Month Relation",
+          "type": "string"
+        },
+        "day_relation": {
+          "title": "Day Relation",
+          "type": "string"
+        },
+        "seasonal_state": {
+          "title": "Seasonal State",
+          "type": "string"
+        },
+        "calendar_state": {
+          "enum": [
+            "SUPPORTED",
+            "MIXED",
+            "WEAK"
+          ],
+          "title": "Calendar State",
+          "type": "string"
+        },
+        "calendar_summary": {
+          "title": "Calendar Summary",
+          "type": "string"
+        },
+        "activity": {
+          "enum": [
+            "MOVING",
+            "DARK_ACTIVE",
+            "STATIC",
+            "DAY_CLASH_WEAK"
+          ],
+          "title": "Activity",
+          "type": "string"
+        },
+        "flags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Flags",
+          "type": "array"
+        },
+        "transformation": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Transformation",
+          "type": "array"
+        },
+        "caveats": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Caveats",
+          "type": "array"
+        }
+      },
+      "required": [
+        "key",
+        "position",
+        "visibility",
+        "branch",
+        "element",
+        "relative",
+        "month_relation",
+        "day_relation",
+        "seasonal_state",
+        "calendar_state",
+        "calendar_summary",
+        "activity",
+        "flags",
+        "transformation",
+        "caveats"
+      ],
+      "title": "LineAnalysis",
+      "type": "object"
+    },
+    "QuestionIntent": {
+      "additionalProperties": false,
+      "properties": {
+        "rules_version": {
+          "title": "Rules Version",
+          "type": "string"
+        },
+        "question_sha256": {
+          "title": "Question Sha256",
+          "type": "string"
+        },
+        "selected_topic": {
+          "enum": [
+            "GENERAL",
+            "WEALTH",
+            "CAREER",
+            "DOCUMENT",
+            "PARENTS",
+            "CHILDREN",
+            "SIBLINGS",
+            "PARTNERSHIP"
+          ],
+          "title": "Selected Topic",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "MATCH",
+            "CONFLICT",
+            "MULTIPLE",
+            "UNRECOGNIZED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "suggested_topic": {
+          "anyOf": [
+            {
+              "enum": [
+                "GENERAL",
+                "WEALTH",
+                "CAREER",
+                "DOCUMENT",
+                "PARENTS",
+                "CHILDREN",
+                "SIBLINGS",
+                "PARTNERSHIP"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Suggested Topic"
+        },
+        "candidates": {
+          "items": {
+            "$ref": "#/$defs/IntentCandidate"
+          },
+          "title": "Candidates",
+          "type": "array"
+        },
+        "matches": {
+          "items": {
+            "$ref": "#/$defs/IntentMatch"
+          },
+          "title": "Matches",
+          "type": "array"
+        },
+        "needs_review": {
+          "title": "Needs Review",
+          "type": "boolean"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        },
+        "notes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Notes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "rules_version",
+        "question_sha256",
+        "selected_topic",
+        "status",
+        "suggested_topic",
+        "candidates",
+        "matches",
+        "needs_review",
+        "message",
+        "notes"
+      ],
+      "title": "QuestionIntent",
+      "type": "object"
+    },
+    "TimingCondition": {
+      "additionalProperties": false,
+      "properties": {
+        "line_key": {
+          "title": "Line Key",
+          "type": "string"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "branches": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Branches",
+          "type": "array"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "line_key",
+        "kind",
+        "branches",
+        "explanation"
+      ],
+      "title": "TimingCondition",
+      "type": "object"
+    },
+    "UseSelection": {
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "title": "Target",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "SELECTED",
+            "PROVISIONAL",
+            "AMBIGUOUS"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "selected_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Selected Key"
+        },
+        "candidate_keys": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Candidate Keys",
+          "type": "array"
+        },
+        "hidden": {
+          "title": "Hidden",
+          "type": "boolean"
+        },
+        "calendar_representatives": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Calendar Representatives",
+          "type": "array"
+        },
+        "emerging_lines": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Emerging Lines",
+          "type": "array"
+        }
+      },
+      "required": [
+        "target",
+        "reason",
+        "status",
+        "selected_key",
+        "candidate_keys",
+        "hidden",
+        "calendar_representatives",
+        "emerging_lines"
+      ],
+      "title": "UseSelection",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "liuyao-analysis-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "session_id": {
+      "format": "uuid",
+      "title": "Session Id",
+      "type": "string"
+    },
+    "rules_version": {
+      "title": "Rules Version",
+      "type": "string"
+    },
+    "rules_sha256": {
+      "title": "Rules Sha256",
+      "type": "string"
+    },
+    "snapshot_sha256": {
+      "title": "Snapshot Sha256",
+      "type": "string"
+    },
+    "context": {
+      "$ref": "#/$defs/AnalysisContext"
+    },
+    "intent": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/QuestionIntent"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "topic_label": {
+      "title": "Topic Label",
+      "type": "string"
+    },
+    "method": {
+      "const": "DETERMINISTIC_RULES",
+      "title": "Method",
+      "type": "string"
+    },
+    "selection": {
+      "$ref": "#/$defs/UseSelection"
+    },
+    "tendency": {
+      "enum": [
+        "SUPPORT_WITH_CONDITIONS",
+        "MIXED",
+        "OBSTACLES",
+        "UNRESOLVED"
+      ],
+      "title": "Tendency",
+      "type": "string"
+    },
+    "headline": {
+      "title": "Headline",
+      "type": "string"
+    },
+    "narrative": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "title": "Narrative",
+      "type": "array"
+    },
+    "practical_questions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Practical Questions",
+      "type": "array"
+    },
+    "lines": {
+      "items": {
+        "$ref": "#/$defs/LineAnalysis"
+      },
+      "minItems": 6,
+      "title": "Lines",
+      "type": "array"
+    },
+    "roles": {
+      "items": {
+        "$ref": "#/$defs/AnalysisRole"
+      },
+      "title": "Roles",
+      "type": "array"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/AnalysisFinding"
+      },
+      "minItems": 1,
+      "title": "Findings",
+      "type": "array"
+    },
+    "timing_conditions": {
+      "items": {
+        "$ref": "#/$defs/TimingCondition"
+      },
+      "title": "Timing Conditions",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Sources",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "session_id",
+    "rules_version",
+    "rules_sha256",
+    "snapshot_sha256",
+    "context",
+    "topic_label",
+    "method",
+    "selection",
+    "tendency",
+    "headline",
+    "narrative",
+    "practical_questions",
+    "lines",
+    "roles",
+    "findings",
+    "timing_conditions",
+    "limitations",
+    "sources"
+  ],
+  "title": "LiuYaoAnalysis",
+  "type": "object"
+}

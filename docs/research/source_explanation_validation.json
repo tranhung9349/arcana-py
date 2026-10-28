@@ -1,0 +1,92 @@
+{
+  "created_at_utc": "2026-10-11T15:29:05.618409+00:00",
+  "status": "RUNNABLE_LOCAL_MVP",
+  "schema_version": "source-explanation-v1",
+  "rules_version": "mvp1-logic-2026-10-11-v4",
+  "corpus_version": "iching-vi-draft-v1",
+  "coverage": {
+    "hexagrams": 64,
+    "translated_judgments": 64,
+    "translated_lines": 384,
+    "bazi_stems": 10,
+    "bazi_seasons_per_stem": 4,
+    "bazi_structure_entries": 13
+  },
+  "unit_tests": {
+    "total_passed": 50,
+    "active_mvp": 38,
+    "archived_vietnamese_adapter": 12,
+    "source_explanation_tests": 7,
+    "elapsed_seconds": 3.186
+  },
+  "validation_scope": "Mapping, source integrity and display behavior; not expert certification of translation semantics.",
+  "translation_labels": [
+    "AI_TRANSLATION",
+    "AI_INTERPRETATION"
+  ],
+  "translation_review_status": "UNREVIEWED",
+  "bazi_prose_label": "SOURCE_ORIGINAL",
+  "bazi_verse_language": "Hán Việt as stored in tinix; no verified Hán classical corpus imported.",
+  "source_commits": {
+    "tinix-bazi": "80ff4463d0397c1b11db76f38d880255f55558bc",
+    "open-iching": "4c5f00f8cb62c6e0d2471243d28150b473ef592f"
+  },
+  "new_source_git_blob_verified": "4b8b5d2ce2f2cae7a7c537832416a1bfce7211c7",
+  "missing_thoan_32_preserved": true,
+  "runtime_model_called": false,
+  "numbers_rules_changed": false,
+  "http_smoke": {
+    "context_id": "e4a4bb46-27ab-42b3-9cf6-02992749d4a4",
+    "hexagram": "Trạch Thiên Quải",
+    "moving_line": 1,
+    "source_cards": 5,
+    "bazi_cards": 7,
+    "saved_draw_preserved": true,
+    "history_unchanged": true,
+    "same_read_same_explanation": true,
+    "schema_valid": true,
+    "model_called": false
+  },
+  "browser": {
+    "tabs_verified": [
+      "Kinh Dịch",
+      "Bát Tự"
+    ],
+    "keyboard_tab_navigation_verified": true,
+    "context_id": "e4a4bb46-27ab-42b3-9cf6-02992749d4a4",
+    "hexagram_id": 43,
+    "moving_line": 1,
+    "numbers_preserved": [
+      "06",
+      "07",
+      "21",
+      "35",
+      "42",
+      "45"
+    ],
+    "score_preserved": 81.6,
+    "bazi_day_master": "Đinh (丁)",
+    "bazi_structure": "Thất Sát Cách",
+    "screenshots": [
+      "docs/research/source_explanation_iching_ui.jpg",
+      "docs/research/source_explanation_bazi_ui.jpg"
+    ]
+  },
+  "file_sha256": {
+    "randomyst/interpretation.py": "c5da81a3dd322de52e69f2cff0f38621f4cdc3cc616ba0f75864ddff40f8e1f4",
+    "randomyst/models.py": "eadb932af63f59ddb950729d71f2e13be3bdd11994c3c145800e0825f07ea5d7",
+    "randomyst/api.py": "f5637e4222b52d092071e5608504b8758d8f1be57d46fdfac027f52dea35fc97",
+    "randomyst/storage.py": "5d44f6d552a318f6eb70982033e2f829271c090d6de252cec23df292a0bc5dbe",
+    "data/reference/manifest.json": "d1b41abf83f8d37a1dc894f7fed589acdf66ec116c650528cc611f881401a17f",
+    "data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js": "1108468d1d0a286d197567f11ee6965d63c5bba663502d995c596f25feae7bb8",
+    "data/interpretation/tinix_vi.json": "2cfb45bf36435c31767e563cc01102bd218ba44739f0c59a412c3e9b7f68e64e",
+    "data/interpretation/iching_vi_draft.json": "8f7cd817793bb00015051f1814422071ce9103aff3365c02fc284390c3187a36",
+    "schemas/source_explanation.schema.json": "2c7726d802625ee7cfe52b7e2db87fe734ece430fa15ff532752b67ab6e43a88",
+    "scripts/build_explanation_data.py": "8b786eaa0f0865c9a5a208567341bd29e275d2eda4f524f198f1f3751a38f26a",
+    "scripts/smoke_source_explanations.py": "3e197496c8fbf51565ef55e40f87ff1561ac004b843d63255d14c02c10a40d5f",
+    "tests/test_source_explanations.py": "cdc7ef3fe015b77f57553add0f1c84989e4c16cdf057cd8bb33ba2da24a10e2c",
+    "web/app.js": "f7007f89b9e4e2433ff89036c3ce745333a5e090cfb457c3c1de757ed2a56cb6",
+    "web/index.html": "6c803a1ec04446fb73cb2ddfb912825b4e4f8faceb6316c82578209e88bb0cf0",
+    "web/style.css": "dd330b72a04eaa538c6aeb25b2c273fd251c2fac28b08207cee6a475b4484943"
+  }
+}

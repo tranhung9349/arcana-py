@@ -1,0 +1,37 @@
+{
+  "version": "liuyao-analysis-2026-10-26-v2",
+  "profile": "NAJIA_EXPLAINABLE_CONDITIONAL",
+  "topics": {
+    "GENERAL": {"label": "Bản thân · tổng quan", "target": "WORLD", "meaning": "tình thế của người hỏi", "advice": "Xác định một việc cụ thể và kiểm tra nguồn lực mình đang có trước khi chốt hướng đi."},
+    "WEALTH": {"label": "Tài lộc · giao dịch", "target": "Thê tài", "meaning": "khoản tiền hoặc tài sản đang hỏi", "advice": "Đối chiếu dòng tiền, chi phí và điều kiện thanh toán thực tế; làm rõ phần nào còn phụ thuộc bên khác."},
+    "CAREER": {"label": "Công việc · vị trí", "target": "Quan quỷ", "meaning": "công việc, vị trí hoặc trách nhiệm đang hướng tới", "advice": "Kiểm tra tiêu chí tuyển chọn, thẩm quyền quyết định và phần việc mình cần đáp ứng."},
+    "DOCUMENT": {"label": "Hồ sơ · hợp đồng · học tập", "target": "Phụ mẫu", "meaning": "hồ sơ, văn bản hoặc nội dung học tập", "advice": "Rà soát giấy tờ, nội dung và hạn nộp; kết quả thi hay tuyển chọn còn cần xét thêm Quan quỷ và điều kiện thực tế."},
+    "PARENTS": {"label": "Cha mẹ · bậc trưởng", "target": "Phụ mẫu", "meaning": "người thuộc vai cha mẹ hoặc bậc trưởng đang hỏi", "advice": "Trao đổi trực tiếp để xác nhận nhu cầu của người được hỏi, thay vì suy đoán từ tên Lục thân."},
+    "CHILDREN": {"label": "Con cháu", "target": "Tử tôn", "meaning": "người thuộc vai con cháu đang hỏi", "advice": "Xác nhận hoàn cảnh và mong muốn của người được hỏi; dùng phần luận để chuẩn bị câu hỏi trao đổi."},
+    "SIBLINGS": {"label": "Anh chị em", "target": "Huynh đệ", "meaning": "anh chị em đang hỏi", "advice": "Làm rõ trách nhiệm và kỳ vọng giữa những người liên quan."},
+    "PARTNERSHIP": {"label": "Hợp tác · quan hệ hai bên", "target": "RESPONSE", "meaning": "bên đối tác hoặc người được hỏi", "advice": "Trao đổi mục tiêu, quyền hạn và cam kết của hai bên; quan hệ Thế–Ứng chỉ là khung đối chiếu."}
+  },
+  "combines": [[0, 1], [2, 11], [3, 10], [4, 9], [5, 8], [6, 7]],
+  "advances": [[11, 0], [2, 3], [5, 6], [8, 9], [1, 4], [4, 7], [7, 10], [10, 1]],
+  "sources": [
+    {"id": "USE", "title": "Tăng San Bốc Dịch · Dụng thần", "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy09.html"},
+    {"id": "ROLES", "title": "Tăng San Bốc Dịch · Dụng, Nguyên, Kỵ, Cừu thần", "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy10.html"},
+    {"id": "SEASON", "title": "Tăng San Bốc Dịch · Tứ thời vượng tướng", "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy17.html"},
+    {"id": "MONTH", "title": "Tăng San Bốc Dịch · Nguyệt tướng", "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy18.html"},
+    {"id": "DAY", "title": "Tăng San Bốc Dịch · Nhật thần", "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy19.html"},
+    {"id": "MOTION", "title": "Tăng San Bốc Dịch · Động tĩnh sinh khắc", "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy15.html"},
+    {"id": "TRANSFORM", "title": "Tăng San Bốc Dịch · Động biến sinh khắc xung hợp", "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy16.html"},
+    {"id": "COMBINE", "title": "Tăng San Bốc Dịch · Lục hợp", "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy21.html"},
+    {"id": "ADVANCE", "title": "Tăng San Bốc Dịch · Tiến thần, thoái thần", "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy37.html"},
+    {"id": "HIDDEN", "title": "Tăng San Bốc Dịch · Phi, Phục thần", "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy36.html"},
+    {"id": "MULTIPLE", "title": "Bốc Phệ Chính Tông · Quyển 14, câu hỏi 17", "url": "https://www.shidianguji.com/book/AMNL0060/chapter/1ma05bb1p924m"},
+    {"id": "VOID", "title": "Bốc Phệ Chính Tông · Phục thần, Nguyệt phá, Tuần không", "url": "https://www.shidianguji.com/book/HY0057/chapter/1lpdfpdr8oqhb"}
+  ],
+  "limits": [
+    "Đây là phân tích theo quy tắc Lục Hào truyền thống được mã hóa, chưa được chuyên gia hiệu đính và không phải xác suất dự báo thực nghiệm.",
+    "Chủ đề do bạn chọn quyết định Dụng thần. Chế độ kết hợp nhận diện cụm từ trong câu hỏi để gợi ý và nêu khác biệt; không tự đổi chủ đề hoặc Lục thân chỉ định. Một chủ đề không bao quát mọi cách hỏi trong lĩnh vực đó.",
+    "Vượng suy là phân tích sơ bộ Nhật–Nguyệt, không cộng điểm cát hung. Sinh khắc giữa các hào được nêu cùng điều kiện có thể làm thay đổi tác dụng.",
+    "Chưa giải toàn cục tam hợp hóa cục, tam hình, mộ tuyệt, liên hoàn sinh khắc hoặc mọi trường hợp cứu giải. Không lấy Lục thú hay tên quẻ để kết luận sự kiện.",
+    "Mốc ứng kỳ chỉ nêu điều kiện địa chi cần đối chiếu, chưa ấn định ngày xảy ra hoặc cam kết thành bại."
+  ]
+}

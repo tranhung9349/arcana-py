@@ -1,0 +1,32 @@
+[
+  {
+    "consultation_path": "/api/v1/bazi/consultations/",
+    "request": {
+      "method": "BAZI",
+      "consultation_id": "381711a8-5e4a-42f7-9935-2063dfaad195"
+    }
+  },
+  {
+    "consultation_path": "/api/v1/maihoa/consultations/",
+    "request": {
+      "method": "MAIHOA",
+      "consultation_id": "338ea908-a663-437e-9113-6c6d6ccca155"
+    }
+  },
+  {
+    "consultation_path": "/api/v1/coins/consultations/",
+    "request": {
+      "method": "LIUYAO",
+      "consultation_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+      "bazi_reading_id": null,
+      "analysis_context": {
+        "topic": "DOCUMENT",
+        "use_relative": null,
+        "focus_line": null,
+        "intent_mode": "TOPIC_ONLY",
+        "intent_acknowledged": true
+      },
+      "analysis_rules_sha256": "2b523cfdf0c26002aaa0271f0f2d844445bbfc19be5f3155f2715a6939fb3dcb"
+    }
+  }
+]

@@ -1,0 +1,211 @@
+{
+  "$defs": {
+    "IntentCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "topic": {
+          "enum": [
+            "GENERAL",
+            "WEALTH",
+            "CAREER",
+            "DOCUMENT",
+            "PARENTS",
+            "CHILDREN",
+            "SIBLINGS",
+            "PARTNERSHIP"
+          ],
+          "title": "Topic",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "target": {
+          "title": "Target",
+          "type": "string"
+        },
+        "intent_labels": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Intent Labels",
+          "type": "array"
+        },
+        "terms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Terms",
+          "type": "array"
+        },
+        "evidence_level": {
+          "enum": [
+            "SPECIFIC_PHRASE",
+            "KEYWORD"
+          ],
+          "title": "Evidence Level",
+          "type": "string"
+        }
+      },
+      "required": [
+        "topic",
+        "label",
+        "target",
+        "intent_labels",
+        "terms",
+        "evidence_level"
+      ],
+      "title": "IntentCandidate",
+      "type": "object"
+    },
+    "IntentMatch": {
+      "additionalProperties": false,
+      "properties": {
+        "rule_id": {
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "topic": {
+          "enum": [
+            "GENERAL",
+            "WEALTH",
+            "CAREER",
+            "DOCUMENT",
+            "PARENTS",
+            "CHILDREN",
+            "SIBLINGS",
+            "PARTNERSHIP"
+          ],
+          "title": "Topic",
+          "type": "string"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "term": {
+          "title": "Term",
+          "type": "string"
+        },
+        "disposition": {
+          "enum": [
+            "INTENT",
+            "NEGATED",
+            "CONTEXT"
+          ],
+          "title": "Disposition",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule_id",
+        "topic",
+        "label",
+        "term",
+        "disposition"
+      ],
+      "title": "IntentMatch",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "rules_version": {
+      "title": "Rules Version",
+      "type": "string"
+    },
+    "question_sha256": {
+      "title": "Question Sha256",
+      "type": "string"
+    },
+    "selected_topic": {
+      "enum": [
+        "GENERAL",
+        "WEALTH",
+        "CAREER",
+        "DOCUMENT",
+        "PARENTS",
+        "CHILDREN",
+        "SIBLINGS",
+        "PARTNERSHIP"
+      ],
+      "title": "Selected Topic",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "MATCH",
+        "CONFLICT",
+        "MULTIPLE",
+        "UNRECOGNIZED"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "suggested_topic": {
+      "anyOf": [
+        {
+          "enum": [
+            "GENERAL",
+            "WEALTH",
+            "CAREER",
+            "DOCUMENT",
+            "PARENTS",
+            "CHILDREN",
+            "SIBLINGS",
+            "PARTNERSHIP"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Suggested Topic"
+    },
+    "candidates": {
+      "items": {
+        "$ref": "#/$defs/IntentCandidate"
+      },
+      "title": "Candidates",
+      "type": "array"
+    },
+    "matches": {
+      "items": {
+        "$ref": "#/$defs/IntentMatch"
+      },
+      "title": "Matches",
+      "type": "array"
+    },
+    "needs_review": {
+      "title": "Needs Review",
+      "type": "boolean"
+    },
+    "message": {
+      "title": "Message",
+      "type": "string"
+    },
+    "notes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "rules_version",
+    "question_sha256",
+    "selected_topic",
+    "status",
+    "suggested_topic",
+    "candidates",
+    "matches",
+    "needs_review",
+    "message",
+    "notes"
+  ],
+  "title": "QuestionIntent",
+  "type": "object"
+}

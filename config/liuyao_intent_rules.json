@@ -1,0 +1,25 @@
+{
+  "version": "liuyao-question-intent-2026-10-26-v1",
+  "rules": [
+    {"id":"WEALTH_DEBT","topic":"WEALTH","label":"Khoản nợ · thu hồi hoặc thanh toán","terms":["đòi nợ","thu hồi nợ","trả nợ","khoản nợ","nợ tiền","vay tiền","cho vay"],"specific":true,"advice":"Khoản đang hỏi là tiền đi vay hay tiền cần thu hồi? Đối chiếu người có nghĩa vụ thanh toán, chứng từ và mốc đã cam kết."},
+    {"id":"WEALTH_INCOME","topic":"WEALTH","label":"Tiền bạc · thu nhập","terms":["tiền bạc","tài chính","doanh thu","lợi nhuận","thu nhập","mức lương","lương thưởng","tiền lương","tiền","lương"],"specific":false},
+    {"id":"WEALTH_TRADE","topic":"WEALTH","label":"Tiền từ mua bán · kinh doanh","terms":["mua bán","kinh doanh","bán hàng","bán nhà","mua nhà","bán đất","mua đất","đầu tư","góp vốn"],"specific":true},
+    {"id":"CAREER_APPLY","topic":"CAREER","label":"Ứng tuyển · tuyển dụng","terms":["xin việc","ứng tuyển","phỏng vấn","tuyển dụng","được nhận việc","trúng tuyển công việc"],"specific":true,"advice":"Bạn đang hỏi cơ hội được nhận, kết quả phỏng vấn hay điều kiện của vị trí? Xác định vòng tuyển chọn và người quyết định trước khi đối chiếu lời luận."},
+    {"id":"CAREER_CHANGE","topic":"CAREER","label":"Thay đổi công việc · chức vụ","terms":["thăng chức","thăng tiến","nhậm chức","đổi việc","chuyển việc","nghỉ việc","bổ nhiệm"],"specific":true},
+    {"id":"CAREER_GENERAL","topic":"CAREER","label":"Công việc · vị trí","terms":["công việc","công danh","sự nghiệp","vị trí mới","chức vụ"],"specific":false},
+    {"id":"DOCUMENT_CONTRACT","topic":"DOCUMENT","label":"Hợp đồng · văn bản","terms":["hợp đồng","văn bản","văn khế","ký kết","giấy phép","sổ đỏ"],"specific":true,"advice":"Bạn đang hỏi việc văn bản được ký hay khoản tiền phát sinh từ văn bản? Hai mục tiêu có thể cần hai phạm vi luận khác nhau."},
+    {"id":"DOCUMENT_EXAM","topic":"DOCUMENT","label":"Thi cử · học tập","terms":["thi cử","kỳ thi","thi tuyển","bài thi","thi đại học","thi tốt nghiệp","học tập","nhập học","chứng chỉ","bằng cấp"],"specific":true,"advice":"Phần này lấy việc học hoặc văn bài làm trọng tâm; nếu hỏi đỗ một vị trí tuyển chọn, cần đối chiếu thêm Quan quỷ và xác định lại mục tiêu."},
+    {"id":"DOCUMENT_PAPERS","topic":"DOCUMENT","label":"Hồ sơ · giấy tờ","terms":["hồ sơ","giấy tờ","thủ tục"],"specific":false},
+    {"id":"PARENTS_PERSON","topic":"PARENTS","label":"Cha mẹ · bậc trưởng","terms":["cha mẹ","bố mẹ","ba mẹ","ông bà","cha tôi","bố tôi","ba tôi","mẹ tôi","má tôi","mẹ","cha","bố"],"specific":false},
+    {"id":"CHILDREN_PERSON","topic":"CHILDREN","label":"Con cháu","terms":["con tôi","con trai","con gái","con cháu","con cái","cháu tôi"],"specific":false},
+    {"id":"SIBLINGS_PERSON","topic":"SIBLINGS","label":"Anh chị em ruột","terms":["anh chị em","anh trai","chị gái","em trai","em gái","anh ruột","chị ruột","em ruột"],"specific":false},
+    {"id":"PARTNERSHIP_COOPERATE","topic":"PARTNERSHIP","label":"Hợp tác · quan hệ hai bên","terms":["đối tác","hợp tác","hai bên","quan hệ"],"specific":false},
+    {"id":"PARTNERSHIP_ROMANCE","topic":"PARTNERSHIP","label":"Tình cảm · người được hỏi","terms":["tình cảm","người yêu","người ấy","bạn đời","hôn nhân","kết hôn","chia tay","quay lại với"],"specific":true},
+    {"id":"GENERAL_SELF","topic":"GENERAL","label":"Tình thế bản thân","terms":["bản thân","chính tôi","tổng quan"],"specific":false}
+  ],
+  "notes": [
+    "Nhận diện theo cụm từ tiếng Việt có hoặc không dấu; đây là gợi ý theo quy tắc, chưa hiểu mọi ngữ cảnh như con người.",
+    "Chủ đề được chọn và Lục thân chỉ định luôn được giữ; nhận diện không tự đổi Dụng thần.",
+    "Nếu câu hỏi có nhiều nhóm ý hoặc khác chủ đề, cần chọn lại hoặc xác nhận giữ phạm vi trước khi luận."
+  ]
+}

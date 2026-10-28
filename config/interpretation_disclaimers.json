@@ -1,0 +1,9 @@
+{
+  "version": "interpretation-disclaimers-v1",
+  "inserted_by": "APPLICATION",
+  "llm_may_modify": false,
+  "messages": [
+    {"code": "AI_LANGUAGE_CONTENT", "text": "Bản dịch và luận giải tiếng Việt do AI tạo, có thể có sai sót. Hãy đối chiếu nguyên văn và nguồn được đính kèm."},
+    {"code": "INTERNAL_SCORE_MEANING", "text": "Điểm bộ số thể hiện mức phù hợp với quy tắc của hệ thống, không phải xác suất trúng thưởng hoặc bằng chứng cải vận."}
+  ]
+}

@@ -1,0 +1,317 @@
+[
+  {
+    "id": "dtt:strength",
+    "title": "Địch Thiên Tủy · Suy vượng",
+    "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+    "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "BAZI_NATAL_V1"
+    ],
+    "raw_path": "data/reference/bazi/dtt_strength.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "dtt:month",
+    "title": "Địch Thiên Tủy · Nguyệt lệnh",
+    "text": "月令提綱，譬之宅也，人元用事之神，宅之向也，不可以不卜。",
+    "sha256": "0529be4cdaede0b047426f5651add5f5800a970fd6e915cdf01cea70d05fa224",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=844366",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "BAZI_NATAL_V1"
+    ],
+    "raw_path": "data/reference/bazi/dtt_month.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "dtt:climate",
+    "title": "Địch Thiên Tủy · Hàn noãn",
+    "text": "天道有寒暖，發育萬物，人道得之，不可過也。",
+    "sha256": "32b1264d49a00be96b7f6c4c76eaa7dba20af24f7d60c04089ef45bd089154a3",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=844365",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "BAZI_NATAL_V1"
+    ],
+    "raw_path": "data/reference/bazi/dtt_climate.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "smt:relations",
+    "title": "Tam Mệnh Thông Hội · Luận tam hình",
+    "text": "凡见刑不可便以凶论",
+    "sha256": "8a5c0bfee3b3b8e2e2a6f354891067acdc72a977fc1ea366fe31b55ff3e02b94",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=2292392",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "BAZI_NATAL_V1"
+    ],
+    "raw_path": "data/reference/bazi/smt_relations.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "ziping:use",
+    "title": "Tử Bình Chân Thuyên · Luận Dụng thần",
+    "text": "八字用神，專求月令",
+    "sha256": "8f82b286eca6fa26c92c8a44b7c74dce4855e766526ab13088c5bb692baadd68",
+    "url": "https://www.donglishuzhai.net/chapter/3721.html",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "BAZI_NATAL_V1"
+    ],
+    "raw_path": null,
+    "source_state": "WEB_EXCERPT_NOT_EDITION_PINNED"
+  },
+  {
+    "id": "ziping:formation",
+    "title": "Tử Bình Chân Thuyên · Thành bại cứu ứng",
+    "text": "用神專求月令，然以四柱配之，必有成敗。",
+    "sha256": "72aaf670e49b403b9c60a4ed7e8befb1cc5560610655c769fd36fdaf45f16887",
+    "url": "https://www.donglishuzhai.net/chapter/3722.html",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "BAZI_NATAL_V1"
+    ],
+    "raw_path": null,
+    "source_state": "WEB_EXCERPT_NOT_EDITION_PINNED"
+  },
+  {
+    "id": "ziping:climate",
+    "title": "Tử Bình Chân Thuyên · Phối khí hậu",
+    "text": "論命惟以月令用神爲主，然亦須配氣候而互參之。",
+    "sha256": "1209ff3ce05b85b9baa67f4c860796b283cf384826917002e02873c72682a4f7",
+    "url": "https://www.donglishuzhai.net/chapter/3727.html",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "BAZI_NATAL_V1"
+    ],
+    "raw_path": null,
+    "source_state": "WEB_EXCERPT_NOT_EDITION_PINNED"
+  },
+  {
+    "id": "mh:roles",
+    "title": "Mai Hoa Dịch Số · Thể và Dụng",
+    "text": "體為主，用為事。",
+    "sha256": "258e7ec60a6925d721464a76037c00bb38c31dc2913f460992bec170aa4e7320",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "MAIHOA_INTERNAL"
+    ],
+    "raw_path": "data/reference/maihoa/volume_2.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "mh:sequence",
+    "title": "Mai Hoa Dịch Số · Diễn tiến Hỗ và Biến",
+    "text": "用吉變凶者，先吉後凶；用凶變吉者，先凶後吉。",
+    "sha256": "5cc5bfa3eca79356bb093eed612e9d159994440f342f3ac33260cecfb41787fe",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "MAIHOA_INTERNAL"
+    ],
+    "raw_path": "data/reference/maihoa/volume_2.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "mh:wealth",
+    "title": "Mai Hoa Dịch Số · Cầu tài",
+    "text": "體生用，財有損耗之憂；用生體，財有進益之喜。",
+    "sha256": "8174472750d15f6cb14fb0de3554742ee9c0e5a5788807a5a2b9c6216748bd5c",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "MAIHOA_INTERNAL"
+    ],
+    "raw_path": "data/reference/maihoa/volume_2.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "mh:trade",
+    "title": "Mai Hoa Dịch Số · Giao dịch",
+    "text": "體生用，難成，或因交易有失。用生體，即成，成必有財。",
+    "sha256": "7e6ffa2d6e78879ca5d6fabd1cdd056aa36798380e50e4bc00ac8fe69022d8a3",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "MAIHOA_INTERNAL"
+    ],
+    "raw_path": "data/reference/maihoa/volume_2.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "mh:planning",
+    "title": "Mai Hoa Dịch Số · Mưu sự",
+    "text": "體克用，謀雖可成，但成遲。用克體，求謀不成，謀亦有害。",
+    "sha256": "e5fcdd3ded09efbadfb88798b4e318e394885e82477164a2b902a5435745036b",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "MAIHOA_INTERNAL"
+    ],
+    "raw_path": "data/reference/maihoa/volume_2.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "ly:wealth",
+    "title": "Tăng San Bốc Dịch · Dụng thần · Tài vật",
+    "text": "一切使用之財物亦以妻財爻爲用神。",
+    "sha256": "eca1164de968e99ca9c191aa70d5b0f331ebdc0a303217c97e5b7b23f78443b4",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=2100700",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "LIUYAO_NAJIA"
+    ],
+    "raw_path": "data/reference/interpretation/zsby_8.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "ly:document",
+    "title": "Tăng San Bốc Dịch · Dụng thần · Văn thư",
+    "text": "章奏、文書及書館文契也以父母爻爲用神",
+    "sha256": "320c662df868c6c56be23aacc6dabfafbb05592515e17fb9e451caf77dffa4c5",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=2100700",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "LIUYAO_NAJIA"
+    ],
+    "raw_path": "data/reference/interpretation/zsby_8.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "ly:roles",
+    "title": "Tăng San Bốc Dịch · Nguyên thần và Kỵ thần",
+    "text": "元神，生用神之神卽爲元神。忌神克用神之爻也。",
+    "sha256": "ba52cc71432f8a081822ebd4df9034e48a8f68340cf339150307f8284d4815f8",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=2100299",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "LIUYAO_NAJIA"
+    ],
+    "raw_path": "data/reference/interpretation/zsby_9.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "ly:month",
+    "title": "Tăng San Bốc Dịch · Nguyệt tướng",
+    "text": "月將卽是月建又爲月令。掌一月之權，司三旬之令。",
+    "sha256": "6933a79f007770c732c5dc3bb9712be0e2e4506e62b4b7196208492ca011b94d",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=2100331",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "LIUYAO_NAJIA"
+    ],
+    "raw_path": "data/reference/interpretation/zsby_16.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "ly:day",
+    "title": "Tăng San Bốc Dịch · Nhật thần",
+    "text": "沖旺相之靜爻，旣爲暗動，沖衰弱之靜爻爲日破",
+    "sha256": "6d3623a2834828ff428848f02004e0e4a04a4fd8aa45ee083674f8a2fe7a984e",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=2100338",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "LIUYAO_NAJIA"
+    ],
+    "raw_path": "data/reference/interpretation/zsby_17.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "zy:qian1",
+    "title": "Chu Dịch · Càn · Sơ Cửu",
+    "text": "潛龍勿用。",
+    "sha256": "2efeb0a408474c8ae63170884b0dc957f02e8486322a2af1620c70d1dd891c76",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=2404991",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "ZHOUYI_TEXT"
+    ],
+    "raw_path": "data/reference/interpretation/zhouyi_qian.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "zy:jiji",
+    "title": "Chu Dịch · Ký Tế · Quẻ từ",
+    "text": "初吉終亂。",
+    "sha256": "d519be64d34adbaa2848af9eeab990ad81945f82afa6f43c194cc8a0e3839407",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=2572417",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "ZHOUYI_TEXT"
+    ],
+    "raw_path": "data/reference/interpretation/zhouyi_jiji.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "editorial:scope",
+    "title": "Quy ước biên tập và phạm vi ví dụ",
+    "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+    "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+    "url": null,
+    "kind": "PRODUCT_POLICY",
+    "methods": [
+      "BAZI_NATAL_V1",
+      "MAIHOA_INTERNAL",
+      "LIUYAO_NAJIA",
+      "ZHOUYI_TEXT"
+    ],
+    "raw_path": null,
+    "source_state": "PRODUCT_EDITORIAL_POLICY"
+  },
+  {
+    "id": "mh:reason",
+    "title": "Mai Hoa Dịch Số · Chiêm bốc luận lý quyết",
+    "text": "數說當也，必以理論之而後備。",
+    "sha256": "ee602c3f9f07d175ac4913097ea5b02a494d8f1e25d18561e4fd1b5484e81f9a",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "MAIHOA_INTERNAL"
+    ],
+    "raw_path": "data/reference/maihoa/volume_2.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "mh:phase_priority",
+    "title": "Mai Hoa Dịch Số · Thể Dụng Hỗ Biến chi quyết",
+    "text": "用為占之即應，互為中間之應，變為事占之終應。",
+    "sha256": "b61c6f15c67ecbfa720f05f94a046faa5610ab8e8be6c391e1ae55a86f4d705b",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=1441927",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "MAIHOA_INTERNAL"
+    ],
+    "raw_path": "data/reference/maihoa/volume_3.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "ly:effective",
+    "title": "Tăng San Bốc Dịch · Nguyên thần Kỵ thần suy vượng",
+    "text": "元神𨿽生用神，須要旺相，方可生得用神。",
+    "sha256": "cfa2c090d248a0fd1b895ac9afb571d8a3280bca701850293fce6bbe6a478da9",
+    "url": "https://zh.wikisource.org/w/index.php?oldid=2100301",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "LIUYAO_NAJIA"
+    ],
+    "raw_path": "data/reference/interpretation/zsby_10.wikitext",
+    "source_state": "PINNED_TRANSCRIPTION"
+  },
+  {
+    "id": "ziping:rescue",
+    "title": "Tử Bình Chân Thuyên · Thành bại cứu ứng",
+    "text": "成中有敗，必是帶忌；敗中有成，全憑救應。",
+    "sha256": "ce6fcf2ad3cb14c09adcfdd51358921b603a316993f395e69f31431ab37efd24",
+    "url": "https://m.donglishuzhai.net/chapter/3722.html",
+    "kind": "PRIMARY_TEXT",
+    "methods": [
+      "BAZI_NATAL_V1"
+    ],
+    "raw_path": null,
+    "source_state": "WEB_EXCERPT_NOT_EDITION_PINNED"
+  }
+]

@@ -1,0 +1,5 @@
+{"projectRoot":"/Users/tranduyhung/Work/randomyst_numbers","batchFiles":[
+{"path":"data/reference/open-iching/iching.json","language":"json","sizeLines":3597,"fileCategory":"config"},
+{"path":"data/reference/open-iching/tuan.json","language":"json","sizeLines":64,"fileCategory":"config"},
+{"path":"data/reference/open-iching/xiang.json","language":"json","sizeLines":451,"fileCategory":"config"}],
+"batchImportData":{"data/reference/open-iching/iching.json":[],"data/reference/open-iching/tuan.json":[],"data/reference/open-iching/xiang.json":[]}}

@@ -1,0 +1,52 @@
+[
+ {
+  "id": "layer:ui",
+  "name": "Giao diện gieo và tra ngày",
+  "description": "Trang Việt ngữ và hai controller trình duyệt thu thời gian UTC+7, gọi luồng gieo/đọc phiên hoặc tra ngày theo việc, rồi hiển thị số, kinh văn, lịch và lý do khung giờ."
+ },
+ {
+  "id": "layer:api-storage",
+  "name": "API cục bộ và SQLite",
+  "description": "Ứng dụng FastAPI phục vụ web cùng tám route, điều phối gieo số/tra ngày và dùng SQLite cho response gieo bất biến theo UUID/hash payload; API chọn ngày không ghi draws."
+ },
+ {
+  "id": "layer:calendar-divination",
+  "name": "Lịch Bắc Kinh, Bát Tự và Mai Hoa",
+  "description": "Các helper dùng chung chuyển cùng instant UTC+7 sang UTC+8 qua provider đã ghim, phân tích Bát Tự từ bản port tinix và lập quẻ Mai Hoa bằng Y/M/D/H với các ranh lịch hiện hành."
+ },
+ {
+  "id": "layer:generation-scoring",
+  "name": "Điều phối gieo, trọng số và nghiệm thu",
+  "description": "NumberEngine khóa ngữ cảnh và các tham số phiên rồi sinh/chấm bộ sáu số 00–45 bằng bộ lấy mẫu tích trọng số cùng luật quota, giải sát và retry của MVP 1."
+ },
+ {
+  "id": "layer:date-search",
+  "name": "Tra ngày theo việc và hồ sơ",
+  "description": "Nhánh MVP 2 gồm contract, corpus raw đã ghim, builder và evaluator/engine tất định dựng hồ sơ một lần/chủ thể, chia interval, áp policy ứng viên v1 rồi trả gate, điểm và khung giờ với Tam Nương tắt."
+ },
+ {
+  "id": "layer:readonly-explanation",
+  "name": "Giải thích chỉ đọc và hợp đồng LLM",
+  "description": "Corpus nguồn và schema phục vụ đọc lại lời giải của phiên đã lưu; prompt/schema/fixture cùng validator LLM dự kiến nằm riêng trong tầng này và runtime chưa gọi provider/model LLM."
+ },
+ {
+  "id": "layer:pinned-sources",
+  "name": "Hai nguồn tham chiếu đã ghim",
+  "description": "Snapshot open-iching cung cấp văn bản Hán còn tinix-bazi cung cấp logic và bảng tham chiếu; manifest khóa commit/hash để port, build và kiểm nguồn thay vì thực thi JS trong runtime Python."
+ },
+ {
+  "id": "layer:policy-operations",
+  "name": "Luật, tài liệu và môi trường chạy",
+  "description": "Hợp đồng gieo dùng chung, cấu hình MVP 1, dependency và đặc tả/bàn giao hiện hành hướng dẫn validate, vận hành và bảo trì hai luồng của ứng dụng local."
+ },
+ {
+  "id": "layer:verification",
+  "name": "Kiểm thử, thí nghiệm và bằng chứng",
+  "description": "Tests, smoke HTTP/UI, audit, báo cáo và fixture tổng hợp kiểm bất biến/provenance của MVP 1 và MVP 2, tách khảo sát khả thi ban đầu khỏi phép đo local hiện hành và cold93 process riêng."
+ },
+ {
+  "id": "layer:legacy-research",
+  "name": "Lịch Việt, vị trí và nghiên cứu lưu trữ",
+  "description": "Adapter Việt/IP/GPS/TST, fixture và nghiên cứu lịch cũ cùng proposal MVP 2 trước R1 được giữ để tái lập lịch sử, tách khỏi runtime Bắc Kinh và policy chọn ngày đã chốt."
+ }
+]

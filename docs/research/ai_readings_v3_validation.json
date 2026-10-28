@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-26T23:50:05.472348+00:00",
+  "prompt_version": "plain-vietnamese-2026-10-27-v3.2",
+  "python_tests_passed": 189,
+  "javascript_tests_passed": 10,
+  "targeted_python_after_transport_change": 27,
+  "live_methods_passed": [
+    "BAZI",
+    "MAIHOA",
+    "LIUYAO"
+  ],
+  "cache_replay_identical": true,
+  "business_snapshots_unchanged": true,
+  "source_and_prompt_hashes": "PASS",
+  "public_secret_scan": "PASS",
+  "browser_console_errors_or_warnings": [],
+  "heldout_model_evaluation": "NOT_RUN",
+  "expert_review": "NOT_PERFORMED",
+  "known_editorial_limits_report": "docs/research/ai_readings_v3_comparison.json",
+  "blocked_attempts": [
+    {
+      "prompt_version": "plain-vietnamese-2026-10-27-v3.2",
+      "code": "AI_RESPONSE_INCOMPLETE",
+      "published": false,
+      "resolution": "Raised max_tokens from 6000 to 8000; final synthetic replay passed."
+    }
+  ]
+}

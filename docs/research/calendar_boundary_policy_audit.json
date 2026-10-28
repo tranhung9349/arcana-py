@@ -1,0 +1,262 @@
+{
+  "status": "User confirmed the standalone VN UTC+7 adapter for MVP 1 on 2026-10-11; full independent lunar-label and solar-term validation remains incomplete.",
+  "input_timezone": "UTC+7",
+  "confirmed_tier_1": {
+    "birth": {
+      "start_inclusive": "1950-01-01T00:00:00+07:00",
+      "end_exclusive": "2027-01-01T00:00:00+07:00",
+      "validate_before_TST": true
+    },
+    "casting": {
+      "start_inclusive": "2024-01-01T00:00:00+07:00",
+      "end_exclusive": "2031-01-01T00:00:00+07:00",
+      "validate_before_TST": true
+    }
+  },
+  "confirmed_tier_2": {
+    "start_inclusive": "1949-12-01T00:00:00+07:00",
+    "end_exclusive": "2031-02-01T00:00:00+07:00",
+    "last_civil_date_inclusive": "2031-01-31",
+    "lookup_only_not_public_input": true,
+    "date_count": 29647
+  },
+  "buffer_arithmetic": {
+    "user_nominal_padding_days": 30,
+    "actual_full_month_padding_days": {
+      "before_1950_start": 31,
+      "after_2030_end_exclusive": 31
+    },
+    "interpretation": "Preserve explicit user dates, which cover at least 30 days; do not narrow to exactly plus/minus 30 days."
+  },
+  "astronomical_dependency_scope": "New moons, winter solstices and principal solar terms may be needed outside the date-table window to construct lunar month 11 and leap-month metadata. Determine coverage from dependency checks, not a blanket 30-day cap.",
+  "source_findings": {
+    "tinix_algorithm_source": "vhphuoc1102/tinix-bazi at 80ff4463d0397c1b11db76f38d880255f55558bc uses lunar-javascript; normalization for selected VN/TST/23h rules remains required.",
+    "six_tail_JS_Python_independent_ground_truth": false,
+    "reason": "Both expose shared ShouXingUtil qiHigh/shuoHigh formulas and ONE_THIRD day shifts; consistency does not exclude shared errors.",
+    "lunar_python_default_is_VN_UTC7_converter": false,
+    "references": [
+      "https://github.com/6tail/lunar-javascript/blob/master/lunar.js",
+      "https://github.com/6tail/lunar-python/blob/master/lunar_python/util/ShouXingUtil.py",
+      "https://honguyenviet.com/amlich/calrules.html"
+    ],
+    "six_tail_research_revision": "Public master pages read on 2026-10-11; implementation versions are not yet selected or pinned."
+  },
+  "independent_corpus_candidates": {
+    "new_moons": {
+      "provider": "USNO",
+      "documentation": "https://aa.usno.navy.mil/data/MoonPhases",
+      "API": "https://aa.usno.navy.mil/data/api",
+      "documented_years": [
+        1700,
+        2100
+      ],
+      "time_scale_label": "Universal Time",
+      "documented_output_resolution": "minute",
+      "limitation": "Not by itself a seconds-accurate reference at a midnight boundary; normalize time scale with uncertainty."
+    },
+    "solar_terms": {
+      "provider": "JPL Horizons",
+      "documentation": "https://ssd.jpl.nasa.gov/horizons/manual.html",
+      "method_proposal": "Find crossings of geocentric apparent solar ecliptic longitude at the 24 term angles; time-scale conversion, sampling/root solver and tolerance need validation.",
+      "quantity": 31,
+      "angle_definition_source": "https://www.hko.gov.hk/en/gts/time/24solarterms.htm",
+      "angle_step_degrees": 15,
+      "lap_xuan_angle_degrees": 315
+    },
+    "status": "Proposed references; no event dataset downloaded and no date/term agreement measured."
+  },
+  "arithmetic_fixtures": [
+    {
+      "kind": "birth",
+      "civil_input": "1949-12-31T23:59:59+07:00",
+      "tier_1_accepts": false
+    },
+    {
+      "kind": "birth",
+      "civil_input": "1950-01-01T00:00:00+07:00",
+      "tier_1_accepts": true,
+      "synthetic_total_TST_offset_minutes": 0,
+      "nominal_TST": "1950-01-01T00:00:00",
+      "effective_date": "1950-01-01",
+      "internal_lookup_contains_date": true
+    },
+    {
+      "kind": "birth",
+      "civil_input": "1950-01-01T00:05:00+07:00",
+      "tier_1_accepts": true,
+      "synthetic_total_TST_offset_minutes": -10,
+      "nominal_TST": "1949-12-31T23:55:00",
+      "effective_date": "1950-01-01",
+      "internal_lookup_contains_date": true
+    },
+    {
+      "kind": "birth",
+      "civil_input": "2026-12-31T23:59:59+07:00",
+      "tier_1_accepts": true,
+      "synthetic_total_TST_offset_minutes": 0,
+      "nominal_TST": "2026-12-31T23:59:59",
+      "effective_date": "2027-01-01",
+      "internal_lookup_contains_date": true
+    },
+    {
+      "kind": "birth",
+      "civil_input": "2027-01-01T00:00:00+07:00",
+      "tier_1_accepts": false
+    },
+    {
+      "kind": "casting",
+      "civil_input": "2023-12-31T23:59:59+07:00",
+      "tier_1_accepts": false
+    },
+    {
+      "kind": "casting",
+      "civil_input": "2024-01-01T00:00:00+07:00",
+      "tier_1_accepts": true,
+      "synthetic_total_TST_offset_minutes": 0,
+      "nominal_TST": "2024-01-01T00:00:00",
+      "effective_date": "2024-01-01",
+      "internal_lookup_contains_date": true
+    },
+    {
+      "kind": "casting",
+      "civil_input": "2030-12-31T23:55:00+07:00",
+      "tier_1_accepts": true,
+      "synthetic_total_TST_offset_minutes": 10,
+      "nominal_TST": "2031-01-01T00:05:00",
+      "effective_date": "2031-01-01",
+      "internal_lookup_contains_date": true
+    },
+    {
+      "kind": "casting",
+      "civil_input": "2030-12-31T23:55:00+07:00",
+      "tier_1_accepts": true,
+      "synthetic_total_TST_offset_minutes": 0,
+      "nominal_TST": "2030-12-31T23:55:00",
+      "effective_date": "2031-01-01",
+      "internal_lookup_contains_date": true
+    },
+    {
+      "kind": "casting",
+      "civil_input": "2031-01-01T00:00:00+07:00",
+      "tier_1_accepts": false
+    }
+  ],
+  "fixture_scope": "Offsets are synthetic total longitude-plus-EoT minute values. No actual EoT, lunar date, leap month or Bazi pillar was calculated.",
+  "outstanding": [
+    "VN UTC+7 adapter selection and independent-source corpus generation",
+    "Astronomical dependency coverage beyond the date table",
+    "Source time scales, event error tolerances and all date/solar-term boundary comparisons"
+  ],
+  "library_configuration_review": {
+    "reviewed_on": "2026-10-11",
+    "status": "Source review completed; standalone experimental VN adapter now implemented. No 6tail fork or production integration.",
+    "6tail": {
+      "Solar_YMDHMS_timezone_parameter": false,
+      "Python_Solar_fromDate_preserves_tzinfo": false,
+      "setting_process_or_input_timezone_alone_changes_calendar_UTC8_to_UTC7": false,
+      "correcting_output_only_between_23_and_00_is_sufficient": false,
+      "fork_requires_rebuilding_months_leaps_and_auditing_exception_tables_and_caches": true,
+      "fork_makes_6tail_an_independent_reference": false,
+      "sources": [
+        "https://github.com/6tail/lunar-python/blob/master/lunar_python/Solar.py",
+        "https://github.com/6tail/lunar-python/blob/master/lunar_python/util/ShouXingUtil.py",
+        "https://github.com/6tail/lunar-python/blob/master/lunar_python/LunarYear.py",
+        "https://github.com/6tail/lunar-javascript/blob/master/lunar.js"
+      ]
+    },
+    "lunardate": {
+      "repo": "https://github.com/lidaobing/python-lunardate",
+      "source": "https://github.com/lidaobing/python-lunardate/blob/master/lunardate.py",
+      "documented_calendar": "Chinese",
+      "documented_year_range": [
+        1900,
+        2099
+      ],
+      "conversion_uses_precomputed_year_month_table": true,
+      "solar_conversion_accepts_timezone_parameter": false,
+      "supplies_solar_term_engine": false,
+      "accepted_as_VN_UTC7_converter": false,
+      "note": "Pure Python and year-range coverage do not establish Vietnamese calendar semantics."
+    },
+    "timezone_mode": {
+      "confirmed_MVP_mode": "fixed UTC+7",
+      "offset_minutes": 420,
+      "IANA_zone": "Asia/Ho_Chi_Minh",
+      "IANA_zone_is_fixed_UTC7_through_birth_range": false,
+      "source": "https://github.com/eggert/tz/blob/main/asia",
+      "local_zoneinfo_observations": [
+        {
+          "local_datetime": "1950-01-01T12:00:00+08:00",
+          "IANA_offset_minutes": 480
+        },
+        {
+          "local_datetime": "1960-01-01T12:00:00+08:00",
+          "IANA_offset_minutes": 480
+        },
+        {
+          "local_datetime": "1968-01-01T12:00:00+08:00",
+          "IANA_offset_minutes": 480
+        },
+        {
+          "local_datetime": "1970-01-01T12:00:00+08:00",
+          "IANA_offset_minutes": 480
+        },
+        {
+          "local_datetime": "1976-01-01T12:00:00+07:00",
+          "IANA_offset_minutes": 420
+        },
+        {
+          "local_datetime": "2026-01-01T12:00:00+07:00",
+          "IANA_offset_minutes": 420
+        }
+      ],
+      "note": "Historical civil-time interpretation is a separate unselected mode; preserve explicit +07:00 input under current policy."
+    },
+    "illustrative_new_moon_date_example": {
+      "synthetic_event_UTC": "2026-01-18T16:30:00+00:00",
+      "at_UTC7": "2026-01-18T23:30:00+07:00",
+      "at_UTC8": "2026-01-19T00:30:00+08:00",
+      "following_day_noon_calendar_date": "2026-01-19",
+      "illustrative_UTC7_lunar_day": 2,
+      "illustrative_UTC8_lunar_day": 1,
+      "is_real_queried_astronomical_event": false,
+      "scope": "Shows a differing month-start date affects lunar dates outside the 23:00-00:00 window; not a ground-truth fixture."
+    },
+    "preferred_direction_proposal": {
+      "converter": "Dedicated VN UTC+7 Python adapter using audited Vietnamese calendar rules",
+      "rule_reference": "https://honguyenviet.com/amlich/calrules.html",
+      "separate_solar_term_provider": true,
+      "keep_Tinix_analysis_logic": true,
+      "specific_package_or_implementation_confirmed": true,
+      "implementation_confirmation_date": "2026-10-11",
+      "selected_algorithm_id": "hnd-simplified-vn-utc7-v0.1",
+      "all_dates_verified": false,
+      "experimental_implementation": "calendar_adapter/vietnamese.py",
+      "trial_report": "docs/research/calendar_adapter_trial.json"
+    }
+  },
+  "adapter_trial": {
+    "implementation": "calendar_adapter/vietnamese.py",
+    "guide": "calendar_adapter/README.md",
+    "report": "docs/research/calendar_adapter_trial.json",
+    "status": "EXPERIMENTAL",
+    "production_ready": false,
+    "structural_dates_checked": 29647,
+    "NASA_new_moon_events_checked": 1004,
+    "NASA_new_moon_start_date_mismatches": 0,
+    "unit_tests_passed": 12,
+    "USNO_download_status": "Connection reset by peer; NASA published tables used instead",
+    "full_VN_lunar_label_corpus_verified": false,
+    "precise_solar_terms_implemented": false
+  },
+  "implementation_selection": {
+    "status": "CONFIRMED_BY_USER",
+    "date": "2026-10-11",
+    "implementation": "calendar_adapter/vietnamese.py",
+    "algorithm_id": "hnd-simplified-vn-utc7-v0.1",
+    "calendar_offset_minutes": 420,
+    "scope": "VN civil lunar conversion and Mai Hoa Y/M/D/H mapping for MVP 1; precise Bazi solar terms and EoT remain separate.",
+    "validation_status": "EXPERIMENTAL",
+    "production_ready": false
+  }
+}

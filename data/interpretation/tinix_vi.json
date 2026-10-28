@@ -1,0 +1,195 @@
+{
+  "stems": {
+    "甲": {
+      "verse": "Giáp mộc sâm thiên, thoát thai yếu hỏa. Xuân bất dung kim, thu bất dung thổ. Hỏa xí thừa long, thủy đãng kị hổ.",
+      "detail": "Giáp Mộc là cây đại thụ. Mùa Xuân vượng (Dần Mão) cần Hỏa để tiết tú, mùa Thu suy (Thân Dậu) cần Ấn hóa Sát. Gặp Hỏa mạnh cần có Thìn (Long) để giữ ẩm, gặp Thủy mạnh cần có Dần (Hổ) để nạp thủy.",
+      "seasonal": {
+        "Spring": "Mộc vượng cực điểm, hỷ Hỏa (Bính) phát huy tài năng, kỵ Kim (Canh) khắc phá làm tổn thương sinh khí.",
+        "Summer": "Mộc bị tiết khí nặng, hỷ Thủy (Quý) nhuận trạch để giữ sức sống, kỵ Hỏa vượng làm cây khô cháy.",
+        "Autumn": "Mộc điêu linh, hỷ Thổ sinh Kim hóa Ấn (Nhâm), kỵ Sát (Canh) quá vượng mà không có Thủy thông quan.",
+        "Winter": "Mộc hàn lạnh, hỷ Hỏa (Bính) sưởi ấm để sinh trưởng, kỵ Thủy vượng làm mục rễ và đất đóng băng."
+      }
+    },
+    "乙": {
+      "verse": "Ất mộc đằng lao, hệ nhiễu giáp mộc. Xuân như hồng nhạn, thu tự thiền quyên. Hoát cát can chi, phú quý thùy truyền.",
+      "detail": "Ất Mộc là dây leo, mộc âm nhu. Xuân hỷ Hỏa, Thu hỷ Mộc (Giáp). Có Giáp Mộc bên cạnh là thế 'đằng la hệ Giáp', giúp Ất mộc bất chấp sương gió vẫn có thể vươn cao và bền vững.",
+      "seasonal": {
+        "Spring": "Hỷ hướng dương (Bính hỏa), kỵ Thủy thiều (ẩm ướt quá mức) làm rễ mục nát.",
+        "Summer": "Hỷ Thủy nhuận (Quý thủy), kỵ táo nhiệt (Mậu Thổ, Bính hỏa) làm cỏ cây khô héo nhanh chóng.",
+        "Autumn": "Hỷ Kim mộc tương phụ (Giáp mộc), kỵ Thổ dày vùi lấp ánh sáng và không gian phát triển.",
+        "Winter": "Hỷ Hỏa ấm (Đinh hỏa), kỵ Thủy vượng làm chìm ngập cây cỏ trong giá rét."
+      }
+    },
+    "丙": {
+      "verse": "Bính hỏa mãnh liệt, khi sương đắc tuyết. Năng đoán canh kim, phùng tân phản khiếp. Thổ chúng thành từ, thủy chi tiết tiết.",
+      "detail": "Bính Hỏa là Thái Dương. Mùa Đông không sợ lạnh (sương tuyết), có thể rèn được Canh Kim cứng rắn nhưng lại sợ Tân Kim (hợp hóa). Gặp Thổ dày làm mờ ánh sáng, gặp Thủy vượng làm tiết bớt uy phong.",
+      "seasonal": {
+        "Spring": "Hỷ Thủy mộc tương sinh (Nhâm thủy), kỵ Thổ dày làm mờ đi ánh hào quang rực rỡ.",
+        "Summer": "Hỏa khí cực vượng, hỷ Thủy (Nhâm) chế ước để đạt thế 'Thủy hỏa tương tế', kỵ Hỏa vượng thêm gây khô cháy vạn vật.",
+        "Autumn": "Hỷ Kim thủy (Tân Kim), kỵ Mộc đa làm hỏa mờ mịt không chiếu sáng được xa.",
+        "Winter": "Hỏa thế yếu, hỷ Hỏa trợ (Đinh) và Thổ (Mậu) ngăn thủy, kỵ Thủy vượng dập tắt ánh dương."
+      }
+    },
+    "丁": {
+      "verse": "Đinh hỏa nhu trung, nội tính chiêu dung. Đắc hiếu từ mẫu, khả thu khả đông. Nhược hồng nhạn chi thu, tự thiền quyên chi hạ.",
+      "detail": "Đinh Hỏa là ngọn lửa lò, ánh sao. Tuy âm nhu nhưng bên trong sáng sủa. Hỷ Giáp mộc (Mẫu thân) làm bấc đèn. Có Giáp thì dù mùa Thu hay mùa Đông đều có thể tỏa sáng rực rỡ.",
+      "seasonal": {
+        "Spring": "Hỷ Mộc sinh (Giáp), kỵ Thổ tiết khí làm lửa mờ yếu.",
+        "Summer": "Hỷ Thủy nhuận (Nhâm), kỵ Kim vượng làm lửa nóng quá đại khó kiểm soát.",
+        "Autumn": "Hỷ Giáp mộc (Tiêu giáp sinh hỏa), kỵ Kim đa làm lửa bị vùi lấp hoặc yếu ớt.",
+        "Winter": "Hỷ Hỏa trợ (Bính), kỵ Thủy vượng dập tắt lửa đèn một cách đột ngột."
+      }
+    },
+    "戊": {
+      "verse": "Mậu thổ cố trọng, ký trung thả chính. Tĩnh hấp động tịch, vạn vật tư sinh. Thủy nhuận vật sinh, hỏa táo vật bệnh.",
+      "detail": "Mậu Thổ là đất núi cao, đê đập. Bản tính kiên cố, trung chính. Hỷ Thủy nhuận để vạn vật sinh sôi, kỵ Hỏa táo làm đất nứt nẻ, hoang mạc hóa.",
+      "seasonal": {
+        "Spring": "Thổ bạc, hỷ Hỏa sinh (Bính) và Thổ trợ (Kỷ), kỵ Mộc khắc (Giáp) làm đất bị xói mòn.",
+        "Summer": "Thổ táo, hỷ Thủy nhuận (Quý), kỵ Hỏa vượng (Bính) làm đất khô cháy không thể canh tác.",
+        "Autumn": "Thổ hư, hỷ Kim thủy (Canh), kỵ Mộc vượng làm đất bị xới tung mất gốc.",
+        "Winter": "Thổ hàn, hỷ Hỏa ấm (Bính), kỵ Thủy vượng làm đất bị lầy lội, đóng băng."
+      }
+    },
+    "己": {
+      "verse": "Kỷ thổ ti thấp, trung chính súc tàng. Bất sầu mộc thịnh, bất úy thủy cuồng. Hỏa thiếu hỏa linh, mộc đa mộc trù.",
+      "detail": "Kỷ Thổ là đất vườn tược, âm thổ nhu nhuyễn. Không sợ Mộc vượng (vì đất mềm dễ thích nghi), không sợ Thủy cuồng (vì có khả năng nạp thủy). Hỷ Kim thủy để sinh tài, Hỏa để sưởi ấm.",
+      "seasonal": {
+        "Spring": "Hỷ Hỏa ấm (Bính), kỵ Mộc quá vượng làm xới tung đất vườn không kịp phục hồi.",
+        "Summer": "Hỷ Thủy nhuận (Quý), kỵ Hỏa táo làm đất vườn khô cằn, cây cối héo úa.",
+        "Autumn": "Hỷ Kim sinh tài (Tân), kỵ Thổ dày lấp mất tài khí của kim.",
+        "Winter": "Hỷ Hỏa ấm (Bính), kỵ Thủy vượng làm đất lầy lội, rét mướt phá hỏng mùa màng."
+      }
+    },
+    "庚": {
+      "verse": "Canh kim đới sát, cương kiện vi tối. Đắc hỏa nhi duệ, đắc thủy nhi thanh. Thổ nhuận tắc sinh, thổ táo tắc thoái.",
+      "detail": "Canh Kim là sắt cứng, đao kiếm. Hỷ Đinh hỏa rèn luyện thành vật hữu dụng, Nhâm thủy rửa sạch để sáng bóng. Thổ ẩm sinh kim, thổ khô làm kim bị xỉn màu.",
+      "seasonal": {
+        "Spring": "Kim yếu, hỷ Thổ sinh (Mậu) và Kim trợ (Tân), kỵ Hỏa khắc (Bính) làm tan chảy kim khí chưa định hình.",
+        "Summer": "Kim táo, hỷ Thủy nhuận (Nhâm), kỵ Hỏa vượng (Đinh) làm chảy kim hoặc biến chất sắt thép.",
+        "Autumn": "Kim vượng, hỷ Hỏa rèn (Đinh), kỵ Thủy vượng làm kim bị trầm dưới đáy nước.",
+        "Winter": "Kim hàn, hỷ Hỏa ấm (Bính), kỵ Thủy vượng làm kim lạnh lẽo, giòn gãy."
+      }
+    },
+    "辛": {
+      "verse": "Tân kim châu ngọc, ôn nhuận nhi thanh. Sợ thổ chi đa, lạc thủy chi thịnh. Năng cứu xà nam, năng hối kiếm phong.",
+      "detail": "Tân Kim là châu ngọc, vàng trang sức. Hỷ Nhâm thủy rửa sạch khí thế, kỵ Thổ dày vùi lấp (Mậu thổ). Có thể hóa giải được sự hung hãn của Hỏa khi cần thiết.",
+      "seasonal": {
+        "Spring": "Hỷ Thổ sinh (Kỷ), kỵ Hỏa khắc (Đinh) làm xỉn màu và mất đi giá trị của châu ngọc.",
+        "Summer": "Hỷ Thủy nhuận (Nhâm), kỵ Hỏa táo (Bính) làm chảy ngọc hoặc nứt nẻ đồ trang sức.",
+        "Autumn": "Hỷ Nhâm thủy (Tẩy trạch), kỵ Thổ dày (Mậu) vùi lấp mất ánh hào quang.",
+        "Winter": "Hỷ Hỏa ấm (Bính), kỵ Thủy vượng làm lạnh ngọc, mất đi vẻ ôn nhuận."
+      }
+    },
+    "壬": {
+      "verse": "Nhâm thủy thông hà, năng tiết canh kim. Cương trung chi đức, chu lưu bất đình. Hỏa chi thủy tiết, thổ chi thủy bế.",
+      "detail": "Nhâm Thủy là nước sông ngòi, đại dương. Bản tính cương liệt, chảy mãi không ngừng. Hỷ Mậu thổ làm đê đập để thành quý hiển, tiết được khí của Canh Kim.",
+      "seasonal": {
+        "Spring": "Thủy tiết vào Mộc, hỷ Kim sinh (Canh), kỵ Thổ khắc (Kỷ) làm đục dòng nước.",
+        "Summer": "Thủy khô cạn, hỷ Kim thủy (Nhâm), kỵ Hỏa vượng (Bính) làm bốc hơi toàn bộ tài nguyên.",
+        "Autumn": "Thủy vượng địa, hỷ Thổ chế (Mậu) để thành đê đập, kỵ Kim đa làm thủy lụt lội vỡ bờ.",
+        "Winter": "Thủy hàn lạnh, hỷ Hỏa ấm (Bính), kỵ Thủy vượng dâng cao gây tai họa lũ lụt giá băng."
+      }
+    },
+    "癸": {
+      "verse": "Quý thủy chí nhu, đạt vu thiên tân. Đắc long nhi vận, công hóa tư thần. Bất ưu hỏa thổ, bất luận canh tân.",
+      "detail": "Quý Thủy là sương mù, nước mưa nhỏ. Cực kỳ âm nhu, có thể thấu đến tận mây xanh. Hỷ Thìn (Long) để biến hóa khôn lường. Không sợ Hỏa Thổ nếu có sự điều hòa tốt.",
+      "seasonal": {
+        "Spring": "Hỷ Hỏa ấm (Bính), kỵ Thổ dày (Mậu) lấp mất sương mù, làm đất đai u ám.",
+        "Summer": "Hỷ Kim mộc (Tân), kỵ Hỏa táo (Đinh) làm bốc hơi sạch khí lực.",
+        "Autumn": "Hỷ Thổ mộc (Mậu), kỵ Thủy vượng (Nhâm) làm mưa dầm dề che khuất ánh sáng.",
+        "Winter": "Hỷ Hỏa ấm (Bính), kỵ Thủy vượng làm giá băng, vạn vật tê liệt."
+      }
+    }
+  },
+  "structures": {
+    "Chính Quan Cách": {
+      "desc": "Cách cục của người quân tử, trọng danh dự và nề nếp. Quan tinh đại diện cho luật pháp, cấp trên, quy tắc.",
+      "strengths": "Chính trực, liêm khiết, có trách nhiệm cao, năng lực quản lý tốt, được mọi người kính trọng.",
+      "weaknesses": "Dễ bảo thủ, cứng nhắc, thiếu sự linh hoạt, đôi khi quá câu nệ hình thức.",
+      "success_key": "Dùng Ấn để hộ Quan (Quan Ấn tương sinh) sẽ có quyền lực thực sự. Dùng Tài để sinh Quan sẽ phú quý song toàn."
+    },
+    "Thất Sát Cách": {
+      "desc": "Cách cục của người hùng, tướng quân. Thất Sát là lực lượng khắc thân mạnh mẽ, đại diện cho quyền uy và sự sát phạt.",
+      "strengths": "Quyết đoán, dũng cảm, dám nghĩ dám làm, có khí chất uy nghiêm, thích hợp thời loạn hoặc sóng gió.",
+      "weaknesses": "Tính tình nóng nảy, độc đoán, dễ gây thù chuốc oán, cuộc đời nhiều thăng trầm biến động.",
+      "success_key": "Cần Thực Thần để chế Sát (hóa thành Quyền) hoặc dùng Ấn để hóa giải (Sát Ấn tương sinh). Kỵ nhất là Tài sinh Sát vượng mà không có chế hóa."
+    },
+    "Chính Tài Cách": {
+      "desc": "Cách cục của người quản lý tài sản, thực tế và cần cù. Chính Tài đại diện cho tiền lương, tài sản tích lũy chính đáng.",
+      "strengths": "Cần cù, tiết kiệm, biết quý trọng đồng tiền, đáng tin cậy, chung thủy trong tình cảm.",
+      "weaknesses": "Dễ trở nên keo kiệt, tính toán chi li, thiếu tầm nhìn xa, quá coi trọng vật chất.",
+      "success_key": "Cần Thân vượng để gánh Tài. Dùng Quan để bảo vệ Tài (Tài vượng sinh Quan). Kỵ Tỷ Kiếp cướp Tài."
+    },
+    "Thiên Tài Cách": {
+      "desc": "Cách cục của doanh nhân, hào sảng và mạo hiểm. Thiên Tài đại diện cho tiền thưởng, trúng số, đầu tư mạo hiểm.",
+      "strengths": "Hào phóng, giao thiệp rộng, nhạy bén với cơ hội kinh doanh, có khả năng kiếm tiền nhanh.",
+      "weaknesses": "Tiêu xài hoang phí, tình cảm phong lưu đa đoan, cuộc sống thiếu ổn định.",
+      "success_key": "Cần Thân vượng. Dùng Thực Thương để sinh Tài. Biết dừng đúng lúc để bảo toàn tài sản."
+    },
+    "Thực Thần Cách": {
+      "desc": "Cách cục của nghệ sĩ, người có phúc khí. Thực Thần đại diện cho sự sáng tạo, hưởng thụ, ăn uống.",
+      "strengths": "Thông minh, ôn hòa, rộng lượng, có gu thẩm mỹ tốt, cuộc đời an nhàn, ít sóng gió.",
+      "weaknesses": "Dễ lười biếng, thiếu ý chí phấn đấu mãnh liệt, đôi khi quá nuông chiều bản thân.",
+      "success_key": "Dùng Tài để phát phúc (Thực Thần sinh Tài). Tránh gặp Kiêu Thần (Thiên Ấn) vì sẽ bị 'Kiêu thần đoạt thực' (mất cơm, mất phúc)."
+    },
+    "Thương Quan Cách": {
+      "desc": "Cách cục của nhân tài kiệt xuất nhưng kiêu ngạo. Thương Quan đại diện cho sự nổi loạn, tài năng vượt trội, chống đối.",
+      "strengths": "Thông minh tuyệt đỉnh, đa tài đa nghệ, tư duy đột phá, không chịu khuất phục.",
+      "weaknesses": "Kiêu căng, tự phụ, hay chê bai người khác, dễ phạm pháp hoặc gây thị phi, hôn nhân trắc trở.",
+      "success_key": "Cần Ấn chế Thương (Thương quan bội Ấn) để điều hướng tài năng vào việc chính nghĩa. Hoặc dùng Tài để xì hơi Thương Quan (Thương quan sinh Tài)."
+    },
+    "Chính Ấn Cách": {
+      "desc": "Cách cục của học giả, người mẹ hiền. Ấn tinh đại diện cho học vấn, danh tiếng, sự che chở.",
+      "strengths": "Thông minh, hiếu học, nhân từ, trọng danh dự, được quý nhân phù trợ, cuộc đời êm ả.",
+      "weaknesses": "Dễ ỷ lại, thiếu thực tế, đôi khi quá thanh cao xa rời quần chúng, chậm chạp trong kinh doanh.",
+      "success_key": "Cần Quan Sát để sinh Ấn (Quan Ấn song toàn). Kỵ Tài tinh phá Ấn (mất danh dự, học hành dở dang)."
+    },
+    "Thiên Ấn Cách": {
+      "desc": "Cách cục của kỳ tài, người nghiên cứu độc lập. Thiên Ấn (Kiêu) đại diện cho sự sắc sảo, cô độc, huyền học.",
+      "strengths": "Nhạy bén, trực giác tốt, sáng tạo độc đáo, giỏi các môn ít người biết (y thuật, tướng số, nghệ thuật lạ).",
+      "weaknesses": "Cô độc, lập dị, ít bạn bè, tính tình thất thường, đa nghi, hay bỏ dở giữa chừng.",
+      "success_key": "Cần Thiên Tài để chế Kiêu. Nếu có Sát (Sát Ấn tương sinh) thì quyền uy hiển hách."
+    },
+    "Kiến Lộc Cách/Nguyệt Kiếp": {
+      "desc": "Cách cục Thân vượng tự cường. Nhật chủ đắc lệnh tháng sinh, khí thế mạnh mẽ.",
+      "strengths": "Sức khỏe tốt, ý chí kiên cường, tự lập tự cường, không dựa dẫm, giàu nghị lực.",
+      "weaknesses": "Khắc cha, khắc vợ (với nam), tài lộc khó tụ nếu không có Quan/Thực. Dễ bị bạn bè lợi dụng.",
+      "success_key": "Bắt buộc phải có Quan Sát để khắc chế bản thân thành người hữu dụng. Hoặc dùng Thực Thương để tiết khí sinh Tài."
+    },
+    "Tòng Vượng Cách": {
+      "desc": "Mệnh cục cực vượng, khí thế một hành chiếm toàn bộ, không có lực lượng khắc chế. Phải thuận theo thế vượng.",
+      "strengths": "Sức mạnh phi thường, nếu vận thuận (gặp Tỷ/Ấn/Thực) thì thăng tiến như diều gặp gió, làm nên nghiệp lớn.",
+      "weaknesses": "Nếu gặp vận ngược (Tài/Quan) kích nộ khí vượng thì tai họa khôn lường, phá sản, ngục tù hoặc bạo bệnh.",
+      "success_key": "Tuyệt đối không được khắc. Dụng thần là Tỷ Kiếp hoặc Ấn. Hỷ thần là Thực Thương (tiết tú)."
+    },
+    "Tòng Tài Cách": {
+      "desc": "Nhật chủ cực nhược, bốn bề là Tài tinh. Bỏ mình để theo Tài.",
+      "strengths": "Nhạy bén tuyệt vời với tiền bạc, có duyên kinh doanh, dễ trở thành cự phú, đại gia.",
+      "weaknesses": "Lệ thuộc vào tiền tài, vợ (với nam). Nếu gặp vận Ấn/Tỷ giúp thân thì lại phá cách, trở thành người nghèo hèn.",
+      "success_key": "Dụng thần là Tài hoặc Thực Thương. Kỵ Ấn và Tỷ Kiếp."
+    },
+    "Tòng Sát Cách": {
+      "desc": "Nhật chủ cực nhược, bốn bề là Quan Sát. Bỏ mình để theo Quyền lực.",
+      "strengths": "Quyền uy hiển hách, có thể làm quan to, tướng lớn, nắm quyền sinh sát.",
+      "weaknesses": "Áp lực tinh thần cực lớn, cuộc sống khắc nghiệt. Nếu vận giúp thân thì tai họa giáng xuống.",
+      "success_key": "Dụng thần là Quan Sát hoặc Tài. Kỵ Ấn và Tỷ Kiếp."
+    },
+    "Tòng Nhi Cách": {
+      "desc": "Nhật chủ cực nhược, bốn bề là Thực Thương. Bỏ mình để theo sự Sáng tạo/Con cái.",
+      "strengths": "Trí tuệ siêu phàm, học một biết mười, danh tiếng lẫy lừng trong giới học thuật/nghệ thuật.",
+      "weaknesses": "Cao ngạo, lập dị. Nữ mệnh thường khắc chồng con hoặc ở vậy.",
+      "success_key": "Dụng thần là Thực Thương hoặc Tài. Kỵ nhất là Ấn (Kiêu gặp Tòng Nhi là đại họa)."
+    }
+  },
+  "version": "tinix-source-prose-v1",
+  "label": "SOURCE_ORIGINAL",
+  "source_commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+  "source_sha256": {
+    "stems": "1108468d1d0a286d197567f11ee6965d63c5bba663502d995c596f25feae7bb8",
+    "structures": "3d0d7b87dfb141859f8b6e55d0abebc6f0ec4d8d30dafc0c05faac432b0bf739"
+  },
+  "source_paths": {
+    "stems": "backendjs/src/bazi/phan_tich/data/dich_thien_tuy_data.js",
+    "structures": "backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js"
+  }
+}

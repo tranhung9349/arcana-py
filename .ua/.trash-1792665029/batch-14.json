@@ -1,0 +1,345 @@
+{
+  "nodes": [
+    {
+      "id": "config:docs/research/mvp2_rule_matrix_counterexamples.json",
+      "type": "config",
+      "name": "mvp2_rule_matrix_counterexamples.json",
+      "filePath": "docs/research/mvp2_rule_matrix_counterexamples.json",
+      "summary": "Bằng chứng review thiết kế MVP 2 (provider lunar-python 1.4.8 được pin) gồm 4 fixture ngày với trực, thần, hoàng/hắc đạo, nghi/kỵ, và ví dụ số học chứng minh điểm -100 cố định không đủ làm veto khi tổng điểm thưởng không bị chặn.",
+      "tags": [
+        "bằng-chứng-nghiên-cứu",
+        "mvp2",
+        "quy-tắc-ngày",
+        "phản-ví-dụ",
+        "design-review"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:docs/research/mvp2_runtime_validation.json",
+      "type": "config",
+      "name": "mvp2_runtime_validation.json",
+      "filePath": "docs/research/mvp2_runtime_validation.json",
+      "summary": "Báo cáo xác thực runtime MVP 2 của một lần chạy: đo độ trễ HTTP cho 5 kịch bản (31/93 ngày, 1–2 hồ sơ), ghi hash corpus/quy tắc và các kiểm tra schema, tính tất định, lỗi 422 và lịch sử gieo không đổi; không phải kiểm thử tải.",
+      "tags": [
+        "bằng-chứng-nghiên-cứu",
+        "mvp2",
+        "runtime-validation",
+        "hiệu-năng",
+        "smoke-test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:docs/research/mvp2_ui_smoke.json",
+      "type": "config",
+      "name": "mvp2_ui_smoke.json",
+      "filePath": "docs/research/mvp2_ui_smoke.json",
+      "summary": "Kết quả smoke test giao diện MVP 2 thủ công trên trình duyệt với SQLite tạm và hồ sơ tổng hợp, xác nhận chuyển chế độ tra ngày, lưới 31/93 ngày, chi tiết khung giờ và liên kết nguồn.",
+      "tags": [
+        "bằng-chứng-nghiên-cứu",
+        "mvp2",
+        "ui-smoke",
+        "smoke-test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docs/research/remediation_audit_v2.json",
+      "type": "config",
+      "name": "remediation_audit_v2.json",
+      "filePath": "docs/research/remediation_audit_v2.json",
+      "summary": "Audit pseudocode chế hóa (remediation) chỉ dựa trên quan hệ ngũ hành cho toàn bộ 125 bộ ba P/Thể/Dụng, đếm chế độ SAFE_REMEDIATION/PROTECT_ONLY/CHE_SAT và các ca chọn đầu tiên cho điểm thấp hơn; thuộc nghiên cứu trước R1, không phản ánh trạng thái runtime hiện tại.",
+      "tags": [
+        "bằng-chứng-nghiên-cứu",
+        "ngũ-hành",
+        "remediation",
+        "audit",
+        "pre-r1"
+      ],
+      "complexity": "complex",
+      "languageNotes": "JSON lớn (~2200 dòng) chủ yếu là mảng `rows` 125 phần tử sinh tự động; chỉ các khóa tổng hợp cấp cao mang ý nghĩa tóm tắt."
+    },
+    {
+      "id": "config:docs/research/remediation_feasibility_v3.json",
+      "type": "config",
+      "name": "remediation_feasibility_v3.json",
+      "filePath": "docs/research/remediation_feasibility_v3.json",
+      "summary": "Audit khả thi toán học v3 cho 25 ngữ cảnh 'hung': liệt kê cấu hình 6 số trong pool 0..45 (3 chẵn/3 lẻ, không phần tử khắc P/Thể), xác định trần điểm thô và kiểm tra trần không bị thay ngầm khi thử lại; là nghiên cứu trước R1.",
+      "tags": [
+        "bằng-chứng-nghiên-cứu",
+        "remediation",
+        "feasibility",
+        "ngũ-hành",
+        "pre-r1"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Phương pháp liệt kê đầy đủ số lượng không âm trên 10 nhóm (5 hành × 2 tính chẵn lẻ) có ràng buộc dung lượng."
+    },
+    {
+      "id": "config:docs/research/remediation_feasibility_v4.json",
+      "type": "config",
+      "name": "remediation_feasibility_v4.json",
+      "filePath": "docs/research/remediation_feasibility_v4.json",
+      "summary": "Audit khả thi v4 với quota 3..4 và pool 00..45: cho 25 ngữ cảnh hung xác nhận luôn có cấu hình retry vượt ngưỡng, trần G_cap 120–186.7 vẫn đạt được, và so sánh quota 3 với 5; do research_tools/exponential_audit.py sinh ra, thuộc nghiên cứu trước R1.",
+      "tags": [
+        "bằng-chứng-nghiên-cứu",
+        "remediation",
+        "feasibility",
+        "tie-break",
+        "pre-r1"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:docs/research/soft_adjusters_source_audit.json",
+      "type": "config",
+      "name": "soft_adjusters_source_audit.json",
+      "filePath": "docs/research/soft_adjusters_source_audit.json",
+      "summary": "Audit nguồn cho các bộ điều chỉnh mềm (ngũ hành theo mùa, thần sát Thiên Ất/Thiên Đức/Văn Xương) đối chiếu repo tinix-bazi theo commit và SHA256, kèm quyết định người dùng đã xác nhận, cận đại số hệ số trọng số, kiểm tra dan_gian_config.json và nghiên cứu nguồn định vị.",
+      "tags": [
+        "bằng-chứng-nghiên-cứu",
+        "thần-sát",
+        "soft-adjuster",
+        "source-audit",
+        "bát-tự"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Ghi kèm SHA256 file nguồn bên thứ ba để bảo đảm truy vết; các cận là cận đại số, chưa chứng minh đạt được đồng thời."
+    },
+    {
+      "id": "config:docs/research/source_explanation_http_smoke.json",
+      "type": "config",
+      "name": "source_explanation_http_smoke.json",
+      "filePath": "docs/research/source_explanation_http_smoke.json",
+      "summary": "Kết quả smoke HTTP của tính năng giải thích nguồn: một context quẻ Trạch Thiên Quải hào động 1 với 5 thẻ Kinh Dịch, 7 thẻ Bát Tự, xác nhận bản gieo và lịch sử được giữ nguyên, schema hợp lệ và không gọi model.",
+      "tags": [
+        "bằng-chứng-nghiên-cứu",
+        "smoke-test",
+        "source-explanation",
+        "mvp1"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docs/research/source_explanation_validation.json",
+      "type": "config",
+      "name": "source_explanation_validation.json",
+      "filePath": "docs/research/source_explanation_validation.json",
+      "summary": "Báo cáo xác thực tính năng giải thích nguồn MVP 1 (schema source-explanation-v1): độ phủ 64 quẻ/384 hào và dữ liệu Bát Tự, kết quả 50 unit test, nhãn bản dịch AI chưa review, commit nguồn, smoke HTTP/trình duyệt và SHA256 các file liên quan.",
+      "tags": [
+        "bằng-chứng-nghiên-cứu",
+        "source-explanation",
+        "validation",
+        "mvp1",
+        "truy-vết"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:docs/research/mvp2_rule_matrix_counterexamples.json",
+      "target": "config:config/mvp2_date_rules.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/mvp2_rule_matrix_counterexamples.json",
+      "target": "file:randomyst/date_rules.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/mvp2_rule_matrix_counterexamples.json",
+      "target": "document:docs/logic_plan_mvp2.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/mvp2_runtime_validation.json",
+      "target": "file:scripts/smoke_dates.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/mvp2_runtime_validation.json",
+      "target": "config:config/mvp2_date_rules.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/mvp2_runtime_validation.json",
+      "target": "file:randomyst/date_engine.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/mvp2_runtime_validation.json",
+      "target": "resource:data/date_calendar/almanac_2024_2030.json.gz",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/mvp2_ui_smoke.json",
+      "target": "file:web/app.js",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/mvp2_ui_smoke.json",
+      "target": "file:web/index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/mvp2_ui_smoke.json",
+      "target": "document:docs/logic_plan_mvp2.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/remediation_audit_v2.json",
+      "target": "document:docs/archive/logic_plan_mvp1_v3.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/remediation_feasibility_v3.json",
+      "target": "document:docs/archive/logic_plan_mvp1_v3.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/remediation_feasibility_v4.json",
+      "target": "document:docs/archive/logic_plan_mvp1_v3.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/soft_adjusters_source_audit.json",
+      "target": "document:docs/archive/logic_plan_mvp1_v3.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/remediation_feasibility_v3.json",
+      "target": "config:docs/research/remediation_audit_v2.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/remediation_feasibility_v4.json",
+      "target": "config:docs/research/remediation_feasibility_v3.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/remediation_feasibility_v4.json",
+      "target": "file:research_tools/exponential_audit.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/soft_adjusters_source_audit.json",
+      "target": "config:dan_gian_config.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_http_smoke.json",
+      "target": "file:scripts/smoke_source_explanations.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_http_smoke.json",
+      "target": "file:randomyst/interpretation.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_validation.json",
+      "target": "config:docs/research/source_explanation_http_smoke.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_validation.json",
+      "target": "file:randomyst/interpretation.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_validation.json",
+      "target": "file:randomyst/api.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_validation.json",
+      "target": "schema:schemas/source_explanation.schema.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_validation.json",
+      "target": "config:data/interpretation/tinix_vi.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_validation.json",
+      "target": "config:data/interpretation/iching_vi_draft.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_validation.json",
+      "target": "file:tests/test_source_explanations.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_validation.json",
+      "target": "file:scripts/build_explanation_data.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/research/source_explanation_validation.json",
+      "target": "file:web/app.js",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

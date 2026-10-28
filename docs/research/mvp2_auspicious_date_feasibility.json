@@ -1,0 +1,1370 @@
+{
+  "audit_version": "mvp2-auspicious-date-feasibility-v2",
+  "created_at": "2026-10-12T19:21:20.594929+07:00",
+  "status": "FEASIBILITY_ONLY",
+  "runtime_changed": false,
+  "database_read_or_written": false,
+  "scope": "Pinned software capabilities, sampled coverage, integration boundaries and local timings; no traditional-method validation or outcome evidence.",
+  "provider": {
+    "name": "lunar-python",
+    "version": "1.4.8",
+    "source_files": [
+      {
+        "file": ".venv/lib/python3.13/site-packages/lunar_python/Lunar.py",
+        "sha256": "489a1725a2ba443f9e8acf0534f05a0ee28c24f8904adb129c8a30daa3ed7079"
+      },
+      {
+        "file": ".venv/lib/python3.13/site-packages/lunar_python/EightChar.py",
+        "sha256": "d38241e75b693f25fc8c2a3e1587fd028a0a52cc504f9d5c7b47326eef051c0c"
+      },
+      {
+        "file": ".venv/lib/python3.13/site-packages/lunar_python/util/LunarUtil.py",
+        "sha256": "87a84818a3ddd10925cbb28ec04a048b27e1ac46f291ff4d9a861f15fb59aa00"
+      }
+    ]
+  },
+  "graph_baseline": {
+    "baseline_file_count": 94,
+    "changed_baseline_files": [],
+    "missing_baseline_files": [],
+    "scope": "Existing graph baseline files only; newly added MVP 2 research/docs are not in the graph."
+  },
+  "available_methods": {
+    "getDayYi": true,
+    "getDayJi": true,
+    "getDayTianShen": true,
+    "getDayChong": true,
+    "getZhiXing": true,
+    "getDayJiShen": true,
+    "getDayXiongSha": true,
+    "getTimeYi": true,
+    "getTimeJi": true,
+    "getTimeTianShen": true,
+    "getNextJie": true,
+    "getTimes": true
+  },
+  "provider_method_policy": {
+    "day_yi_ji_sect1": "non-exact provider month Ganzhi; civil day Ganzhi",
+    "non_exact_month_basis": "Jie month changes on the Beijing civil DATE of Jie, not lunar-month number and not exact Jie instant",
+    "day_yi_ji_sect2": "exact Jie month Ganzhi; still civil day Ganzhi",
+    "bazi_sect1": "exact Jie year/month; day changes at 23:00 Beijing",
+    "hour_yi_ji": "exact day Ganzhi and hour Ganzhi",
+    "getTimes_count": 13,
+    "getTimes_warning": "Beijing civil-day list, includes early and late Zi; cannot copy directly into a UTC+7 date."
+  },
+  "activity_term_proposals": {
+    "MARRIAGE": "嫁娶",
+    "BUSINESS_OPENING": "开市",
+    "TRAVEL": "出行"
+  },
+  "coverage": {
+    "start": "2024-01-01",
+    "end": "2030-12-31",
+    "day_count": 2557,
+    "sample_clock": "12:00 UTC+7 = 13:00 Beijing; coverage probe only, not a whole-day recommendation",
+    "elapsed_seconds": 1.487178,
+    "activity_exact_term_counts": {
+      "MARRIAGE": {
+        "YI_ONLY": 887,
+        "JI_ONLY": 967,
+        "BOTH": 0,
+        "UNMENTIONED": 703
+      },
+      "BUSINESS_OPENING": {
+        "YI_ONLY": 560,
+        "JI_ONLY": 737,
+        "BOTH": 0,
+        "UNMENTIONED": 1260
+      },
+      "TRAVEL": {
+        "YI_ONLY": 867,
+        "JI_ONLY": 328,
+        "BOTH": 0,
+        "UNMENTIONED": 1362
+      }
+    },
+    "special_token_counts": {
+      "yi:馀事勿取": 613,
+      "ji:诸事不宜": 166,
+      "ji:无": 99,
+      "ji:馀事勿取": 9,
+      "yi:诸事不宜": 23,
+      "yi:无": 1
+    },
+    "observed_terms": [
+      "上梁",
+      "乘船",
+      "习艺",
+      "交易",
+      "伐木",
+      "会亲友",
+      "作梁",
+      "作灶",
+      "修坟",
+      "修造",
+      "修门",
+      "修饰垣墙",
+      "入学",
+      "入宅",
+      "入殓",
+      "冠笄",
+      "出火",
+      "出行",
+      "出货财",
+      "分居",
+      "割蜜",
+      "动土",
+      "取渔",
+      "合寿木",
+      "合帐",
+      "合脊",
+      "启钻",
+      "坏垣",
+      "塑绘",
+      "塞穴",
+      "嫁娶",
+      "安床",
+      "安机械",
+      "安碓磑",
+      "安葬",
+      "安门",
+      "安香",
+      "定磉",
+      "平治道涂",
+      "开仓",
+      "开光",
+      "开厕",
+      "开市",
+      "开柱眼",
+      "开池",
+      "开渠",
+      "开生坟",
+      "归宁",
+      "归岫",
+      "成服",
+      "扫舍",
+      "拆卸",
+      "挂匾",
+      "捕捉",
+      "掘井",
+      "探病",
+      "放水",
+      "教牛马",
+      "整手足甲",
+      "斋醮",
+      "断蚁",
+      "无",
+      "普渡",
+      "架马",
+      "栽种",
+      "求医",
+      "求嗣",
+      "沐浴",
+      "治病",
+      "牧养",
+      "理发",
+      "畋猎",
+      "盖屋",
+      "破土",
+      "破屋",
+      "祈福",
+      "祭祀",
+      "移徙",
+      "移柩",
+      "立券",
+      "立碑",
+      "竖柱",
+      "筑堤",
+      "纳婿",
+      "纳畜",
+      "纳财",
+      "纳采",
+      "经络",
+      "结网",
+      "置产",
+      "行丧",
+      "补垣",
+      "裁衣",
+      "解除",
+      "订盟",
+      "词讼",
+      "诸事不宜",
+      "谢土",
+      "赴任",
+      "起基",
+      "进人口",
+      "造仓",
+      "造庙",
+      "造桥",
+      "造畜稠",
+      "造船",
+      "造车器",
+      "酬神",
+      "针灸",
+      "问名",
+      "除服",
+      "雇佣",
+      "雕刻",
+      "馀事勿取"
+    ],
+    "examples": {
+      "MARRIAGE:UNMENTIONED": {
+        "civil_date": "2024-01-01",
+        "target": "嫁娶",
+        "yi": [
+          "交易",
+          "修坟",
+          "入殓",
+          "启钻",
+          "安葬",
+          "成服",
+          "捕捉",
+          "沐浴",
+          "祭祀",
+          "谢土",
+          "进人口",
+          "除服"
+        ],
+        "ji": [
+          "修造",
+          "入宅",
+          "动土",
+          "斋醮",
+          "破土"
+        ]
+      },
+      "BUSINESS_OPENING:UNMENTIONED": {
+        "civil_date": "2024-01-01",
+        "target": "开市",
+        "yi": [
+          "交易",
+          "修坟",
+          "入殓",
+          "启钻",
+          "安葬",
+          "成服",
+          "捕捉",
+          "沐浴",
+          "祭祀",
+          "谢土",
+          "进人口",
+          "除服"
+        ],
+        "ji": [
+          "修造",
+          "入宅",
+          "动土",
+          "斋醮",
+          "破土"
+        ]
+      },
+      "TRAVEL:UNMENTIONED": {
+        "civil_date": "2024-01-01",
+        "target": "出行",
+        "yi": [
+          "交易",
+          "修坟",
+          "入殓",
+          "启钻",
+          "安葬",
+          "成服",
+          "捕捉",
+          "沐浴",
+          "祭祀",
+          "谢土",
+          "进人口",
+          "除服"
+        ],
+        "ji": [
+          "修造",
+          "入宅",
+          "动土",
+          "斋醮",
+          "破土"
+        ]
+      },
+      "MARRIAGE:YI_ONLY": {
+        "civil_date": "2024-01-02",
+        "target": "嫁娶",
+        "yi": [
+          "上梁",
+          "交易",
+          "修造",
+          "入学",
+          "入宅",
+          "出火",
+          "出行",
+          "动土",
+          "嫁娶",
+          "安门",
+          "安香",
+          "归宁",
+          "求医",
+          "治病",
+          "盖屋",
+          "祈福",
+          "祭祀",
+          "立券",
+          "竖柱",
+          "纳采",
+          "订盟",
+          "起基",
+          "造庙",
+          "造车器"
+        ],
+        "ji": [
+          "伐木",
+          "作梁",
+          "安葬",
+          "斋醮",
+          "行丧"
+        ]
+      },
+      "TRAVEL:YI_ONLY": {
+        "civil_date": "2024-01-02",
+        "target": "出行",
+        "yi": [
+          "上梁",
+          "交易",
+          "修造",
+          "入学",
+          "入宅",
+          "出火",
+          "出行",
+          "动土",
+          "嫁娶",
+          "安门",
+          "安香",
+          "归宁",
+          "求医",
+          "治病",
+          "盖屋",
+          "祈福",
+          "祭祀",
+          "立券",
+          "竖柱",
+          "纳采",
+          "订盟",
+          "起基",
+          "造庙",
+          "造车器"
+        ],
+        "ji": [
+          "伐木",
+          "作梁",
+          "安葬",
+          "斋醮",
+          "行丧"
+        ]
+      },
+      "MARRIAGE:JI_ONLY": {
+        "civil_date": "2024-01-03",
+        "target": "嫁娶",
+        "yi": [
+          "上梁",
+          "交易",
+          "伐木",
+          "会亲友",
+          "修坟",
+          "入殓",
+          "出行",
+          "启钻",
+          "安床",
+          "安机械",
+          "安葬",
+          "安门",
+          "平治道涂",
+          "开市",
+          "成服",
+          "拆卸",
+          "盖屋",
+          "移柩",
+          "立券",
+          "立碑",
+          "竖柱",
+          "纳采",
+          "解除",
+          "订盟",
+          "起基",
+          "除服"
+        ],
+        "ji": [
+          "入宅",
+          "出火",
+          "动土",
+          "嫁娶",
+          "破土",
+          "祈福"
+        ]
+      },
+      "BUSINESS_OPENING:YI_ONLY": {
+        "civil_date": "2024-01-03",
+        "target": "开市",
+        "yi": [
+          "上梁",
+          "交易",
+          "伐木",
+          "会亲友",
+          "修坟",
+          "入殓",
+          "出行",
+          "启钻",
+          "安床",
+          "安机械",
+          "安葬",
+          "安门",
+          "平治道涂",
+          "开市",
+          "成服",
+          "拆卸",
+          "盖屋",
+          "移柩",
+          "立券",
+          "立碑",
+          "竖柱",
+          "纳采",
+          "解除",
+          "订盟",
+          "起基",
+          "除服"
+        ],
+        "ji": [
+          "入宅",
+          "出火",
+          "动土",
+          "嫁娶",
+          "破土",
+          "祈福"
+        ]
+      },
+      "yi:馀事勿取": {
+        "civil_date": "2024-01-04",
+        "yi": [
+          "安葬",
+          "平治道涂",
+          "成服",
+          "祭祀",
+          "除服",
+          "馀事勿取"
+        ],
+        "ji": [
+          "入宅",
+          "嫁娶",
+          "掘井",
+          "纳采",
+          "订盟"
+        ]
+      },
+      "BUSINESS_OPENING:JI_ONLY": {
+        "civil_date": "2024-01-05",
+        "target": "开市",
+        "yi": [
+          "上梁",
+          "会亲友",
+          "修造",
+          "入殓",
+          "出火",
+          "出行",
+          "动土",
+          "安床",
+          "安机械",
+          "安葬",
+          "安门",
+          "安香",
+          "定磉",
+          "开光",
+          "拆卸",
+          "盖屋",
+          "破土",
+          "祈福",
+          "祭祀",
+          "移徙",
+          "竖柱",
+          "纳采",
+          "订盟",
+          "起基",
+          "造桥",
+          "造船"
+        ],
+        "ji": [
+          "开市",
+          "掘井",
+          "置产",
+          "造庙"
+        ]
+      },
+      "TRAVEL:JI_ONLY": {
+        "civil_date": "2024-01-06",
+        "target": "出行",
+        "yi": [
+          "上梁",
+          "会亲友",
+          "修造",
+          "入宅",
+          "动土",
+          "塑绘",
+          "嫁娶",
+          "安床",
+          "安香",
+          "开光",
+          "斋醮",
+          "祈福",
+          "祭祀",
+          "移徙",
+          "竖柱",
+          "纳畜",
+          "纳采",
+          "进人口"
+        ],
+        "ji": [
+          "出行",
+          "安葬",
+          "开市",
+          "治病"
+        ]
+      },
+      "ji:诸事不宜": {
+        "civil_date": "2024-01-08",
+        "yi": [
+          "坏垣",
+          "破屋",
+          "解除",
+          "馀事勿取"
+        ],
+        "ji": [
+          "诸事不宜"
+        ]
+      },
+      "ji:无": {
+        "civil_date": "2024-01-14",
+        "yi": [
+          "扫舍",
+          "教牛马",
+          "祭祀",
+          "解除",
+          "馀事勿取"
+        ],
+        "ji": [
+          "无"
+        ]
+      },
+      "ji:馀事勿取": {
+        "civil_date": "2024-02-14",
+        "yi": [
+          "坏垣",
+          "扫舍",
+          "治病",
+          "破屋",
+          "祭祀",
+          "解除"
+        ],
+        "ji": [
+          "馀事勿取"
+        ]
+      },
+      "yi:诸事不宜": {
+        "civil_date": "2024-03-17",
+        "yi": [
+          "塞穴",
+          "诸事不宜"
+        ],
+        "ji": [
+          "作灶",
+          "嫁娶",
+          "安葬",
+          "安门"
+        ]
+      },
+      "yi:无": {
+        "civil_date": "2024-04-06",
+        "yi": [
+          "无"
+        ],
+        "ji": [
+          "诸事不宜"
+        ]
+      }
+    }
+  },
+  "boundary_fixtures": [
+    {
+      "civil_datetime": "2026-10-12T21:59:59+07:00",
+      "beijing_datetime": "2026-10-12T22:59:59+08:00",
+      "civil_day_ganzhi": "己未",
+      "bazi_day_ganzhi": "己未",
+      "hour_ganzhi": "乙亥",
+      "month_ganzhi_exact": "戊戌",
+      "lunar_date": {
+        "year": 2026,
+        "month": 9,
+        "day": 3
+      },
+      "day_yi": [
+        "嫁娶",
+        "祭祀",
+        "作灶",
+        "纳财"
+      ],
+      "day_ji": [
+        "安葬",
+        "开市",
+        "修坟",
+        "立碑"
+      ],
+      "hour_yi": [
+        "祈福",
+        "求嗣",
+        "订婚",
+        "嫁娶",
+        "求财",
+        "开市",
+        "交易",
+        "安床",
+        "修造",
+        "盖屋",
+        "移徙",
+        "作灶"
+      ],
+      "hour_ji": [
+        "赴任",
+        "出行"
+      ],
+      "month_ganzhi_provider_day": "戊戌",
+      "day_officer": "收",
+      "day_tian_shen": "朱雀",
+      "day_tian_shen_type": "黑道",
+      "day_xiong_sha": [
+        "河魁",
+        "月刑",
+        "五虚",
+        "八专",
+        "朱雀"
+      ]
+    },
+    {
+      "civil_datetime": "2026-10-12T22:00:00+07:00",
+      "beijing_datetime": "2026-10-12T23:00:00+08:00",
+      "civil_day_ganzhi": "己未",
+      "bazi_day_ganzhi": "庚申",
+      "hour_ganzhi": "丙子",
+      "month_ganzhi_exact": "戊戌",
+      "lunar_date": {
+        "year": 2026,
+        "month": 9,
+        "day": 3
+      },
+      "day_yi": [
+        "嫁娶",
+        "祭祀",
+        "作灶",
+        "纳财"
+      ],
+      "day_ji": [
+        "安葬",
+        "开市",
+        "修坟",
+        "立碑"
+      ],
+      "hour_yi": [
+        "祈福",
+        "求嗣",
+        "订婚",
+        "嫁娶",
+        "求财",
+        "开市",
+        "交易",
+        "安床"
+      ],
+      "hour_ji": [
+        "上梁",
+        "盖屋",
+        "入殓",
+        "赴任",
+        "出行"
+      ],
+      "month_ganzhi_provider_day": "戊戌",
+      "day_officer": "收",
+      "day_tian_shen": "朱雀",
+      "day_tian_shen_type": "黑道",
+      "day_xiong_sha": [
+        "河魁",
+        "月刑",
+        "五虚",
+        "八专",
+        "朱雀"
+      ]
+    },
+    {
+      "civil_datetime": "2026-10-12T22:59:59+07:00",
+      "beijing_datetime": "2026-10-12T23:59:59+08:00",
+      "civil_day_ganzhi": "己未",
+      "bazi_day_ganzhi": "庚申",
+      "hour_ganzhi": "丙子",
+      "month_ganzhi_exact": "戊戌",
+      "lunar_date": {
+        "year": 2026,
+        "month": 9,
+        "day": 3
+      },
+      "day_yi": [
+        "嫁娶",
+        "祭祀",
+        "作灶",
+        "纳财"
+      ],
+      "day_ji": [
+        "安葬",
+        "开市",
+        "修坟",
+        "立碑"
+      ],
+      "hour_yi": [
+        "祈福",
+        "求嗣",
+        "订婚",
+        "嫁娶",
+        "求财",
+        "开市",
+        "交易",
+        "安床"
+      ],
+      "hour_ji": [
+        "上梁",
+        "盖屋",
+        "入殓",
+        "赴任",
+        "出行"
+      ],
+      "month_ganzhi_provider_day": "戊戌",
+      "day_officer": "收",
+      "day_tian_shen": "朱雀",
+      "day_tian_shen_type": "黑道",
+      "day_xiong_sha": [
+        "河魁",
+        "月刑",
+        "五虚",
+        "八专",
+        "朱雀"
+      ]
+    },
+    {
+      "civil_datetime": "2026-10-12T23:00:00+07:00",
+      "beijing_datetime": "2026-10-13T00:00:00+08:00",
+      "civil_day_ganzhi": "庚申",
+      "bazi_day_ganzhi": "庚申",
+      "hour_ganzhi": "丙子",
+      "month_ganzhi_exact": "戊戌",
+      "lunar_date": {
+        "year": 2026,
+        "month": 9,
+        "day": 4
+      },
+      "day_yi": [
+        "嫁娶",
+        "祭祀",
+        "祈福",
+        "求嗣",
+        "开光",
+        "出行",
+        "解除",
+        "出火",
+        "进人口",
+        "开市",
+        "交易",
+        "立券",
+        "挂匾",
+        "纳财",
+        "入宅",
+        "移徙",
+        "栽种",
+        "破土",
+        "谢土"
+      ],
+      "day_ji": [
+        "安床",
+        "安葬"
+      ],
+      "hour_yi": [
+        "祈福",
+        "求嗣",
+        "订婚",
+        "嫁娶",
+        "求财",
+        "开市",
+        "交易",
+        "安床"
+      ],
+      "hour_ji": [
+        "上梁",
+        "盖屋",
+        "入殓",
+        "赴任",
+        "出行"
+      ],
+      "month_ganzhi_provider_day": "戊戌",
+      "day_officer": "开",
+      "day_tian_shen": "金匮",
+      "day_tian_shen_type": "黄道",
+      "day_xiong_sha": [
+        "厌对",
+        "招摇",
+        "五离",
+        "八专"
+      ]
+    },
+    {
+      "civil_datetime": "2030-12-31T23:59:59+07:00",
+      "beijing_datetime": "2031-01-01T00:59:59+08:00",
+      "civil_day_ganzhi": "辛丑",
+      "bazi_day_ganzhi": "辛丑",
+      "hour_ganzhi": "戊子",
+      "month_ganzhi_exact": "戊子",
+      "lunar_date": {
+        "year": 2030,
+        "month": 12,
+        "day": 8
+      },
+      "day_yi": [
+        "嫁娶",
+        "出行",
+        "求医",
+        "治病",
+        "祭祀",
+        "祈福",
+        "上梁",
+        "纳畜"
+      ],
+      "day_ji": [
+        "开市",
+        "安葬"
+      ],
+      "hour_yi": [
+        "祭祀",
+        "祈福",
+        "酬神",
+        "出行",
+        "求财",
+        "见贵",
+        "订婚",
+        "嫁娶",
+        "修造",
+        "安葬",
+        "赴任"
+      ],
+      "hour_ji": [
+        "无"
+      ],
+      "month_ganzhi_provider_day": "戊子",
+      "day_officer": "除",
+      "day_tian_shen": "天德",
+      "day_tian_shen_type": "黄道",
+      "day_xiong_sha": [
+        "无"
+      ]
+    }
+  ],
+  "jie_boundary_fixtures": [
+    {
+      "civil_datetime": "2026-10-08T13:29:16+07:00",
+      "beijing_datetime": "2026-10-08T14:29:16+08:00",
+      "civil_day_ganzhi": "乙卯",
+      "bazi_day_ganzhi": "乙卯",
+      "hour_ganzhi": "癸未",
+      "month_ganzhi_exact": "丁酉",
+      "lunar_date": {
+        "year": 2026,
+        "month": 8,
+        "day": 28
+      },
+      "day_yi": [
+        "祭祀",
+        "入殓",
+        "移柩",
+        "开生坟",
+        "破土",
+        "启钻",
+        "安葬",
+        "除服",
+        "成服",
+        "馀事勿取"
+      ],
+      "day_ji": [
+        "无"
+      ],
+      "hour_yi": [
+        "求嗣",
+        "订婚",
+        "嫁娶",
+        "求财",
+        "开市",
+        "交易",
+        "安床"
+      ],
+      "hour_ji": [
+        "祭祀",
+        "祈福",
+        "斋醮",
+        "开光",
+        "赴任",
+        "出行"
+      ],
+      "month_ganzhi_provider_day": "戊戌",
+      "day_officer": "执",
+      "day_tian_shen": "勾陈",
+      "day_tian_shen_type": "黑道",
+      "day_xiong_sha": [
+        "大时",
+        "大败",
+        "咸池",
+        "小耗",
+        "四废",
+        "五虚",
+        "勾陈"
+      ]
+    },
+    {
+      "civil_datetime": "2026-10-08T13:29:17+07:00",
+      "beijing_datetime": "2026-10-08T14:29:17+08:00",
+      "civil_day_ganzhi": "乙卯",
+      "bazi_day_ganzhi": "乙卯",
+      "hour_ganzhi": "癸未",
+      "month_ganzhi_exact": "戊戌",
+      "lunar_date": {
+        "year": 2026,
+        "month": 8,
+        "day": 28
+      },
+      "day_yi": [
+        "祭祀",
+        "入殓",
+        "移柩",
+        "开生坟",
+        "破土",
+        "启钻",
+        "安葬",
+        "除服",
+        "成服",
+        "馀事勿取"
+      ],
+      "day_ji": [
+        "无"
+      ],
+      "hour_yi": [
+        "求嗣",
+        "订婚",
+        "嫁娶",
+        "求财",
+        "开市",
+        "交易",
+        "安床"
+      ],
+      "hour_ji": [
+        "祭祀",
+        "祈福",
+        "斋醮",
+        "开光",
+        "赴任",
+        "出行"
+      ],
+      "month_ganzhi_provider_day": "戊戌",
+      "day_officer": "执",
+      "day_tian_shen": "勾陈",
+      "day_tian_shen_type": "黑道",
+      "day_xiong_sha": [
+        "大时",
+        "大败",
+        "咸池",
+        "小耗",
+        "四废",
+        "五虚",
+        "勾陈"
+      ]
+    },
+    {
+      "civil_datetime": "2026-10-08T13:29:18+07:00",
+      "beijing_datetime": "2026-10-08T14:29:18+08:00",
+      "civil_day_ganzhi": "乙卯",
+      "bazi_day_ganzhi": "乙卯",
+      "hour_ganzhi": "癸未",
+      "month_ganzhi_exact": "戊戌",
+      "lunar_date": {
+        "year": 2026,
+        "month": 8,
+        "day": 28
+      },
+      "day_yi": [
+        "祭祀",
+        "入殓",
+        "移柩",
+        "开生坟",
+        "破土",
+        "启钻",
+        "安葬",
+        "除服",
+        "成服",
+        "馀事勿取"
+      ],
+      "day_ji": [
+        "无"
+      ],
+      "hour_yi": [
+        "求嗣",
+        "订婚",
+        "嫁娶",
+        "求财",
+        "开市",
+        "交易",
+        "安床"
+      ],
+      "hour_ji": [
+        "祭祀",
+        "祈福",
+        "斋醮",
+        "开光",
+        "赴任",
+        "出行"
+      ],
+      "month_ganzhi_provider_day": "戊戌",
+      "day_officer": "执",
+      "day_tian_shen": "勾陈",
+      "day_tian_shen_type": "黑道",
+      "day_xiong_sha": [
+        "大时",
+        "大败",
+        "咸池",
+        "小耗",
+        "四废",
+        "五虚",
+        "勾陈"
+      ]
+    }
+  ],
+  "synthetic_profiles": [
+    {
+      "synthetic_birth_input": "1994-10-08T05:00:00+07:00",
+      "pillars": [
+        {
+          "pillar": "year",
+          "stem": "Giáp",
+          "branch": "Tuất",
+          "stem_zh": "甲",
+          "branch_zh": "戌"
+        },
+        {
+          "pillar": "month",
+          "stem": "Quý",
+          "branch": "Dậu",
+          "stem_zh": "癸",
+          "branch_zh": "酉"
+        },
+        {
+          "pillar": "day",
+          "stem": "Đinh",
+          "branch": "Mão",
+          "stem_zh": "丁",
+          "branch_zh": "卯"
+        },
+        {
+          "pillar": "hour",
+          "stem": "Quý",
+          "branch": "Mão",
+          "stem_zh": "癸",
+          "branch_zh": "卯"
+        }
+      ],
+      "primary_dung_than": "Hỏa",
+      "hy_than": [
+        "Mộc"
+      ],
+      "ky_than": [
+        "Thổ",
+        "Thủy"
+      ],
+      "reason_code": "WEAK_WEALTH"
+    },
+    {
+      "synthetic_birth_input": "1990-06-15T09:30:00+07:00",
+      "pillars": [
+        {
+          "pillar": "year",
+          "stem": "Canh",
+          "branch": "Ngọ",
+          "stem_zh": "庚",
+          "branch_zh": "午"
+        },
+        {
+          "pillar": "month",
+          "stem": "Nhâm",
+          "branch": "Ngọ",
+          "stem_zh": "壬",
+          "branch_zh": "午"
+        },
+        {
+          "pillar": "day",
+          "stem": "Tân",
+          "branch": "Hợi",
+          "stem_zh": "辛",
+          "branch_zh": "亥"
+        },
+        {
+          "pillar": "hour",
+          "stem": "Quý",
+          "branch": "Tỵ",
+          "stem_zh": "癸",
+          "branch_zh": "巳"
+        }
+      ],
+      "primary_dung_than": "Hỏa",
+      "hy_than": [
+        "Mộc"
+      ],
+      "ky_than": [
+        "Thổ",
+        "Kim",
+        "Thủy"
+      ],
+      "reason_code": "FOLLOW_OFFICER"
+    }
+  ],
+  "single_instant_activity_contrast": {
+    "civil_datetime": "2026-10-12T12:00:00+07:00",
+    "beijing_datetime": "2026-10-12T13:00:00+08:00",
+    "civil_day_ganzhi": "己未",
+    "bazi_day_ganzhi": "己未",
+    "hour_ganzhi": "辛未",
+    "month_ganzhi_exact": "戊戌",
+    "lunar_date": {
+      "year": 2026,
+      "month": 9,
+      "day": 3
+    },
+    "day_yi": [
+      "嫁娶",
+      "祭祀",
+      "作灶",
+      "纳财"
+    ],
+    "day_ji": [
+      "安葬",
+      "开市",
+      "修坟",
+      "立碑"
+    ],
+    "hour_yi": [
+      "祭祀",
+      "祈福",
+      "酬神",
+      "订婚",
+      "嫁娶",
+      "求财",
+      "入宅",
+      "安葬",
+      "见贵"
+    ],
+    "hour_ji": [
+      "造船",
+      "乘船",
+      "赴任",
+      "出行",
+      "修造",
+      "动土"
+    ],
+    "month_ganzhi_provider_day": "戊戌",
+    "day_officer": "收",
+    "day_tian_shen": "朱雀",
+    "day_tian_shen_type": "黑道",
+    "day_xiong_sha": [
+      "河魁",
+      "月刑",
+      "五虚",
+      "八专",
+      "朱雀"
+    ]
+  },
+  "user_three_filter_evidence": {
+    "six_hoang_dao": [
+      "司命",
+      "天德",
+      "明堂",
+      "玉堂",
+      "金匮",
+      "青龙"
+    ],
+    "six_hac_dao": [
+      "勾陈",
+      "天刑",
+      "天牢",
+      "朱雀",
+      "玄武",
+      "白虎"
+    ],
+    "twelve_day_officers_separate_system": [
+      "建",
+      "除",
+      "满",
+      "平",
+      "定",
+      "执",
+      "破",
+      "危",
+      "成",
+      "收",
+      "开",
+      "闭"
+    ],
+    "tian_shen_month_branch_offsets": {
+      "子": 4,
+      "丑": 2,
+      "寅": 0,
+      "卯": 10,
+      "辰": 8,
+      "巳": 6,
+      "午": 4,
+      "未": 2,
+      "申": 0,
+      "酉": 10,
+      "戌": 8,
+      "亥": 6
+    },
+    "calculation": "TIAN_SHEN[(civil_day_zhi_index + month_zhi_offset) % 12 + 1]",
+    "tinix_month_tables": {
+      "Sát Chủ": {
+        "寅": "Tỵ",
+        "卯": "Tý",
+        "辰": "Mùi",
+        "巳": "Mão",
+        "午": "Thân",
+        "未": "Tuất",
+        "申": "Thìn",
+        "酉": "Hợi",
+        "戌": "Sửu",
+        "亥": "Ngọ",
+        "子": "Dần",
+        "丑": "Dậu"
+      },
+      "Thọ Tử": {
+        "寅": "Tuất",
+        "卯": "Thìn",
+        "辰": "Hợi",
+        "巳": "Tỵ",
+        "午": "Tý",
+        "未": "Ngọ",
+        "申": "Sửu",
+        "酉": "Mùi",
+        "戌": "Dần",
+        "亥": "Thân",
+        "子": "Mão",
+        "丑": "Dậu"
+      },
+      "Nguyệt Phá": {
+        "寅": "Thân",
+        "卯": "Dậu",
+        "辰": "Tuất",
+        "巳": "Hợi",
+        "午": "Tý",
+        "未": "Sửu",
+        "申": "Dần",
+        "酉": "Mão",
+        "戌": "Thìn",
+        "亥": "Tỵ",
+        "子": "Ngọ",
+        "丑": "Mùi"
+      }
+    },
+    "tinix_source_path": "data/reference/tinix-bazi/shensha.js",
+    "tinix_source_sha256": "75aa8af1464fef4183addb384afe9f7d5375f3c2abb09958b20b98d1b42ab2fe",
+    "tinix_original_scope": "calculateShenSha(ctx): natal month branch against natal pillars",
+    "candidate_date_extension": "PROPOSED_NOT_VALIDATED",
+    "tam_nuong": "No rule imported or enabled; a full source table and calendar basis still required"
+  },
+  "user_reference_date_provider_facts": {
+    "civil_datetime": "2026-08-10T12:00:00+07:00",
+    "beijing_datetime": "2026-08-10T13:00:00+08:00",
+    "civil_day_ganzhi": "丙辰",
+    "bazi_day_ganzhi": "丙辰",
+    "hour_ganzhi": "乙未",
+    "month_ganzhi_exact": "丙申",
+    "lunar_date": {
+      "year": 2026,
+      "month": 6,
+      "day": 28
+    },
+    "day_yi": [
+      "嫁娶",
+      "出火",
+      "拆卸",
+      "祭祀",
+      "祈福",
+      "开光",
+      "伐木",
+      "动土",
+      "开市",
+      "交易",
+      "立券",
+      "入宅",
+      "移徙",
+      "安床",
+      "纳畜",
+      "入殓",
+      "安葬"
+    ],
+    "day_ji": [
+      "栽种",
+      "作灶",
+      "针灸",
+      "出行"
+    ],
+    "hour_yi": [
+      "赴任",
+      "见贵",
+      "求财",
+      "出行",
+      "嫁娶",
+      "进人口",
+      "移徙",
+      "安葬"
+    ],
+    "hour_ji": [
+      "修造",
+      "动土"
+    ],
+    "month_ganzhi_provider_day": "丙申",
+    "day_officer": "成",
+    "day_tian_shen": "金匮",
+    "day_tian_shen_type": "黄道",
+    "day_xiong_sha": [
+      "月厌",
+      "地火",
+      "四击",
+      "大煞",
+      "血忌"
+    ]
+  },
+  "benchmarks": [
+    {
+      "days": 31,
+      "segments_checked": 403,
+      "elapsed_seconds": 0.074002,
+      "scope": "13 base segments/day: calendar, four pillars and Yi/Ji only; excludes Jie splits, natal rules, ranking, HTTP/UI, caching."
+    },
+    {
+      "days": 93,
+      "segments_checked": 1209,
+      "elapsed_seconds": 0.946702,
+      "scope": "13 base segments/day: calendar, four pillars and Yi/Ji only; excludes Jie splits, natal rules, ranking, HTTP/UI, caching."
+    }
+  ],
+  "checks": {
+    "bazi_day_change_22_vn": true,
+    "civil_day_change_23_vn": true,
+    "exact_jie_month_change": true,
+    "coverage_counts_reconcile": true,
+    "three_activity_terms_have_yi_and_ji_coverage": true
+  },
+  "remaining_gaps": [
+    "Vietnamese activity mapping and special-token semantics need review",
+    "Personalized date rules and ranking remain product proposals",
+    "No independent almanac or expert validation",
+    "Full pipeline/API performance not measured"
+  ]
+}

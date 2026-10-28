@@ -1,0 +1,1843 @@
+[
+  {
+    "id": "date-hour-good",
+    "synthetic": true,
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "fixture": {
+      "activity": "BUSINESS_OPENING",
+      "subjects": [
+        {
+          "subject_id": "synthetic_0",
+          "birth": {
+            "civil_datetime": "1994-10-08T05:00:00+07:00",
+            "location": null,
+            "clock_uncertainty_seconds": null,
+            "override_dung_than": null
+          }
+        }
+      ],
+      "date_range": {
+        "start": "2026-10-13",
+        "end": "2026-10-13"
+      },
+      "allowed_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allowed_hours": {
+        "start": "00:00:00",
+        "end": null
+      },
+      "include_details": true
+    },
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "00000000-0000-0000-0000-000000000001",
+      "method": "DATE_SELECTION",
+      "analysis_profile": "mvp2-dates-2026-10-25-v2:20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8",
+      "topic": "BUSINESS_OPENING",
+      "question": "Vì sao ngày này được xếp như vậy cho việc khai trương?",
+      "signals": [
+        "DAY_AND_HOUR",
+        "GOOD",
+        "ONE_SUBJECT"
+      ],
+      "facts": [
+        {
+          "id": "date:activity",
+          "text": "{\"name\": \"Khai trương\", \"anchor\": \"Bắt đầu khai trương hoặc mở bán.\", \"mode\": \"DAY_AND_HOUR\", \"scope\": \"Nhập người đứng việc kinh doanh; ký văn khế và giao dịch được tra riêng.\"}"
+        },
+        {
+          "id": "date:decision",
+          "text": "{\"date\": \"2026-10-13\", \"grade\": \"GOOD\", \"score\": 75, \"assessment_state\": \"COMPLETE\", \"has_unresolved_periods\": false}"
+        },
+        {
+          "id": "date:recommended",
+          "text": "[{\"period_vietnam\": \"08:00–10:00\", \"score\": 75}]"
+        },
+        {
+          "id": "date:focus",
+          "text": "{\"period_vietnam\": \"08:00–10:00\", \"grade\": \"GOOD\", \"score\": 75, \"raw_score\": 75, \"assessment_state\": \"COMPLETE\", \"calendar_class\": \"HOANG_DAO\", \"day_officer\": \"开\", \"day_activity_status\": \"SUPPORTED\", \"hour_activity_status\": \"SUPPORTED\", \"hard_exclusions\": [], \"penalties\": [{\"rule_id\": \"DAY_SAME\", \"effect\": \"PENALTY\", \"points\": 5, \"message\": \"Can và Chi ngày cùng hành.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"DAY_SAME\"}, {\"rule_id\": \"NO_AMBIENT_SUPPORT\", \"effect\": \"PENALTY\", \"points\": 5, \"message\": \"Chưa gặp hợp chi ngày với tháng/năm.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"NO_AMBIENT_SUPPORT\"}, {\"rule_id\": \"PERSONAL_ELEMENTS\", \"points\": 15, \"message\": \"Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.\", \"source_id\": \"PRODUCT_PERSONAL_POLICY\"}], \"warnings\": []}"
+        },
+        {
+          "id": "date:profiles",
+          "text": "[{\"role\": \"Chủ sự kinh doanh\", \"primary\": \"Hỏa\", \"hy\": [\"Mộc\"], \"ky\": [\"Thổ\", \"Thủy\"], \"overridden\": false}]"
+        },
+        {
+          "id": "date:personal",
+          "text": "[{\"status\": \"SUPPORTED\", \"penalty\": 15, \"elements\": [\"Kim\", \"Kim\", \"Kim\", \"Hỏa\"], \"element_bands\": [\"NEUTRAL\", \"NEUTRAL\", \"NEUTRAL\", \"PRIMARY\"], \"blocked\": false, \"role\": \"Chủ sự kinh doanh\", \"natal_clash\": false, \"positions\": [\"Can ngày\", \"Can giờ\", \"Chi ngày\", \"Chi giờ\"]}]"
+        },
+        {
+          "id": "date:score_policy",
+          "text": "{\"base\": 100, \"good_threshold\": 75, \"normal_threshold\": 45, \"day_not_listed_penalty\": 15, \"hour_not_listed_penalty\": 5, \"personal_element_penalties\": {\"PRIMARY\": 0, \"HY\": 2, \"NEUTRAL\": 5, \"KY\": 10}, \"personal_clash_blocks\": true}"
+        }
+      ],
+      "findings": [
+        {
+          "id": "date:summary",
+          "text": "Ngày 13/10/2026 có 1 khung giờ bắt đầu đạt mức Ngày Đẹp cho khai trương. Điểm nổi bật nằm ở 08:00–10:00 (Giờ Việt Nam), đạt 75/100 điểm.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:decision",
+            "date:recommended",
+            "date:focus"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:0",
+          "text": "Lịch ngày có mục nên làm phù hợp với việc khai trương.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:1",
+          "text": "Lịch giờ cũng có mục nên làm phù hợp với việc đã chọn.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:2",
+          "text": "Chủ sự kinh doanh: hành của ngày và giờ được đối chiếu là Can ngày Kim (trung tính), Can giờ Kim (trung tính), Chi ngày Kim (trung tính), Chi giờ Hỏa (Dụng thần); trừ 15 điểm theo bảng đối chiếu hồ sơ.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:3",
+          "text": "Cách tính: 100 − (5 + 5 + 15), giới hạn trong 0–100, được 75 điểm thô; ngưỡng Ngày Đẹp là 75. Mức Ngày Đẹp còn cần lịch ngày và hồ sơ đạt điều kiện.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:4",
+          "text": "Trừ 5 điểm: Can và Chi ngày cùng hành.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:5",
+          "text": "Trừ 5 điểm: Chưa gặp hợp chi ngày với tháng/năm.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "date:policy",
+          "title": "Quy tắc tra ngày đã lưu",
+          "text": "Quy tắc tra ngày mvp2-dates-2026-10-25-v2; hash=20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8. Nên/kỵ theo đúng việc đã chọn; điều kiện loại trừ không được bù bằng điểm. Mức Ngày Đẹp còn cần lịch ngày hỗ trợ và tất cả hồ sơ SUPPORTED; DIRECT_YI_JI cần cả lịch giờ hỗ trợ. Hai hồ sơ lấy mức trừ hành lớn hơn. DAY_ONLY không đánh giá trụ giờ hay đưa ra giờ đẹp. Ngày được xếp theo khoảng đạt mức cao nhất; kết luận không bao trùm các khoảng còn lại. Hành cá nhân dùng bảng đối chiếu của tính năng tra ngày, chưa phải bài luận Bát Tự đầy đủ.",
+          "sha256": "f8124436fa81748015fed2b6b3e3f1e42268d8a9af25249e44d9a043240795f6",
+          "url": "/api/v2/auspicious-dates/rules",
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Kết luận áp dụng cho giờ bắt đầu trong các khung được khuyến nghị, không áp dụng cho toàn bộ ngày.",
+        "Bài luận chỉ phân tích khoảng được xếp cao nhất và liệt kê các khoảng được khuyến nghị; không suy rộng căn cứ đó sang mọi khung khác.",
+        "Chưa đánh giá Tam Nương; không thêm quy tắc chọn ngày, vận hạn, quẻ Dịch hay cam kết kết quả của sự kiện."
+      ]
+    },
+    "response": {
+      "context_id": "00000000-0000-0000-0000-000000000001",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Ngày 13/10/2026 có 1 khung giờ bắt đầu đạt mức Ngày Đẹp cho khai trương. Điểm nổi bật nằm ở 08:00–10:00 (Giờ Việt Nam), đạt 75/100 điểm. Lịch ngày hỗ trợ đúng việc và hồ sơ cá nhân không vướng điều kiện đang xét, nên lựa chọn có căn cứ rõ hơn một khung chỉ có điểm cao.",
+        "fact_refs": [
+          "date:decision",
+          "date:focus",
+          "date:personal"
+        ],
+        "evidence_refs": [
+          "date:policy"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Căn cứ theo việc là lịch ngày có mục nên làm phù hợp với việc khai trương. Lịch giờ cũng có mục nên làm phù hợp với việc đã chọn. Điều này gắn khuyến nghị với giờ bắt đầu khai trương, không suy ra mọi hoạt động trong ngày đều thuận.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Chủ sự kinh doanh: hành của ngày và giờ được đối chiếu là Can ngày Kim (trung tính), Can giờ Kim (trung tính), Chi ngày Kim (trung tính), Chi giờ Hỏa (Dụng thần); trừ 15 điểm theo bảng đối chiếu hồ sơ. Đó là đối chiếu theo bảng hành đã lưu; không phải kết luận rằng toàn bộ mệnh cục đều phù hợp với ngày này.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể đối chiếu lịch của người tham gia và điều kiện tổ chức trước khi chốt mốc thực hiện.",
+          "fact_refs": [
+            "date:activity"
+          ]
+        }
+      ],
+      "limits": [
+        "Kết luận áp dụng cho giờ bắt đầu trong các khung được khuyến nghị, không áp dụng cho toàn bộ ngày."
+      ]
+    }
+  },
+  {
+    "id": "date-hour-normal",
+    "synthetic": true,
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "fixture": {
+      "activity": "BUSINESS_OPENING",
+      "subjects": [
+        {
+          "subject_id": "synthetic_0",
+          "birth": {
+            "civil_datetime": "1994-10-08T05:00:00+07:00",
+            "location": null,
+            "clock_uncertainty_seconds": null,
+            "override_dung_than": null
+          }
+        }
+      ],
+      "date_range": {
+        "start": "2026-10-02",
+        "end": "2026-10-02"
+      },
+      "allowed_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allowed_hours": {
+        "start": "00:00:00",
+        "end": null
+      },
+      "include_details": true
+    },
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "00000000-0000-0000-0000-000000000002",
+      "method": "DATE_SELECTION",
+      "analysis_profile": "mvp2-dates-2026-10-25-v2:20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8",
+      "topic": "BUSINESS_OPENING",
+      "question": "Vì sao ngày này được xếp như vậy cho việc khai trương?",
+      "signals": [
+        "DAY_AND_HOUR",
+        "NORMAL",
+        "ONE_SUBJECT",
+        "PERSONAL_TENSION"
+      ],
+      "facts": [
+        {
+          "id": "date:activity",
+          "text": "{\"name\": \"Khai trương\", \"anchor\": \"Bắt đầu khai trương hoặc mở bán.\", \"mode\": \"DAY_AND_HOUR\", \"scope\": \"Nhập người đứng việc kinh doanh; ký văn khế và giao dịch được tra riêng.\"}"
+        },
+        {
+          "id": "date:decision",
+          "text": "{\"date\": \"2026-10-02\", \"grade\": \"NORMAL\", \"score\": 45, \"assessment_state\": \"COMPLETE\", \"has_unresolved_periods\": false}"
+        },
+        {
+          "id": "date:recommended",
+          "text": "[]"
+        },
+        {
+          "id": "date:focus",
+          "text": "{\"period_vietnam\": \"22:00–23:00\", \"grade\": \"NORMAL\", \"score\": 45, \"raw_score\": 45, \"assessment_state\": \"COMPLETE\", \"calendar_class\": \"HOANG_DAO\", \"day_officer\": \"建\", \"day_activity_status\": \"NOT_LISTED\", \"hour_activity_status\": \"NOT_LISTED\", \"hard_exclusions\": [], \"penalties\": [{\"rule_id\": \"DAY_BRANCH_GENERATES_STEM\", \"effect\": \"PENALTY\", \"points\": 10, \"message\": \"Chi ngày sinh Can ngày.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"DAY_BRANCH_GENERATES_STEM\"}, {\"rule_id\": \"DAY_NOT_LISTED\", \"points\": 15, \"message\": \"Lịch ngày không đề cập việc đã chọn.\", \"source_id\": \"6TAIL_CORPUS\"}, {\"rule_id\": \"HOUR_NOT_LISTED\", \"points\": 5, \"message\": \"Lịch giờ không đề cập việc đã chọn.\", \"source_id\": \"6TAIL_CORPUS\"}, {\"rule_id\": \"PERSONAL_ELEMENTS\", \"points\": 25, \"message\": \"Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.\", \"source_id\": \"PRODUCT_PERSONAL_POLICY\"}], \"warnings\": []}"
+        },
+        {
+          "id": "date:profiles",
+          "text": "[{\"role\": \"Chủ sự kinh doanh\", \"primary\": \"Hỏa\", \"hy\": [\"Mộc\"], \"ky\": [\"Thổ\", \"Thủy\"], \"overridden\": false}]"
+        },
+        {
+          "id": "date:personal",
+          "text": "[{\"status\": \"TENSION\", \"penalty\": 25, \"elements\": [\"Kim\", \"Hỏa\", \"Thổ\", \"Thủy\"], \"element_bands\": [\"NEUTRAL\", \"PRIMARY\", \"KY\", \"KY\"], \"blocked\": false, \"role\": \"Chủ sự kinh doanh\", \"natal_clash\": false, \"positions\": [\"Can ngày\", \"Can giờ\", \"Chi ngày\", \"Chi giờ\"]}]"
+        },
+        {
+          "id": "date:score_policy",
+          "text": "{\"base\": 100, \"good_threshold\": 75, \"normal_threshold\": 45, \"day_not_listed_penalty\": 15, \"hour_not_listed_penalty\": 5, \"personal_element_penalties\": {\"PRIMARY\": 0, \"HY\": 2, \"NEUTRAL\": 5, \"KY\": 10}, \"personal_clash_blocks\": true}"
+        }
+      ],
+      "findings": [
+        {
+          "id": "date:summary",
+          "text": "Ngày 02/10/2026 chưa có khung giờ bắt đầu đạt mức Ngày Đẹp cho khai trương. Khoảng được xếp cao nhất là 22:00–23:00 (Giờ Việt Nam), ở mức Ngày Bình Thường (45/100 điểm).",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:decision",
+            "date:recommended",
+            "date:focus"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:0",
+          "text": "Lịch ngày không đề cập việc khai trương; thiếu căn cứ này không được xem là thuận.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:1",
+          "text": "Lịch giờ không đề cập việc đã chọn; phần điểm thiếu này đã được trừ.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:2",
+          "text": "Chủ sự kinh doanh: hành của ngày và giờ được đối chiếu là Can ngày Kim (trung tính), Can giờ Hỏa (Dụng thần), Chi ngày Thổ (Kỵ thần), Chi giờ Thủy (Kỵ thần); trừ 25 điểm theo bảng đối chiếu hồ sơ.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:3",
+          "text": "Cách tính: 100 − (10 + 15 + 5 + 25), giới hạn trong 0–100, được 45 điểm thô; ngưỡng Ngày Đẹp là 75. Mức Ngày Đẹp còn cần lịch ngày và hồ sơ đạt điều kiện.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:4",
+          "text": "Trừ 10 điểm: Chi ngày sinh Can ngày.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:5",
+          "text": "Trừ 15 điểm: Lịch ngày không đề cập việc đã chọn.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:6",
+          "text": "Trừ 5 điểm: Lịch giờ không đề cập việc đã chọn.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "date:policy",
+          "title": "Quy tắc tra ngày đã lưu",
+          "text": "Quy tắc tra ngày mvp2-dates-2026-10-25-v2; hash=20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8. Nên/kỵ theo đúng việc đã chọn; điều kiện loại trừ không được bù bằng điểm. Mức Ngày Đẹp còn cần lịch ngày hỗ trợ và tất cả hồ sơ SUPPORTED; DIRECT_YI_JI cần cả lịch giờ hỗ trợ. Hai hồ sơ lấy mức trừ hành lớn hơn. DAY_ONLY không đánh giá trụ giờ hay đưa ra giờ đẹp. Ngày được xếp theo khoảng đạt mức cao nhất; kết luận không bao trùm các khoảng còn lại. Hành cá nhân dùng bảng đối chiếu của tính năng tra ngày, chưa phải bài luận Bát Tự đầy đủ.",
+          "sha256": "f8124436fa81748015fed2b6b3e3f1e42268d8a9af25249e44d9a043240795f6",
+          "url": "/api/v2/auspicious-dates/rules",
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Kết luận áp dụng cho giờ bắt đầu trong các khung được khuyến nghị, không áp dụng cho toàn bộ ngày.",
+        "Bài luận chỉ phân tích khoảng được xếp cao nhất và liệt kê các khoảng được khuyến nghị; không suy rộng căn cứ đó sang mọi khung khác.",
+        "Chưa đánh giá Tam Nương; không thêm quy tắc chọn ngày, vận hạn, quẻ Dịch hay cam kết kết quả của sự kiện."
+      ]
+    },
+    "response": {
+      "context_id": "00000000-0000-0000-0000-000000000002",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Ngày 02/10/2026 chưa có khung giờ bắt đầu đạt mức Ngày Đẹp cho khai trương. Khoảng được xếp cao nhất là 22:00–23:00 (Giờ Việt Nam), ở mức Ngày Bình Thường (45/100 điểm).",
+        "fact_refs": [
+          "date:decision",
+          "date:focus",
+          "date:personal"
+        ],
+        "evidence_refs": [
+          "date:policy"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Lịch ngày không đề cập việc khai trương; thiếu căn cứ này không được xem là thuận. Lịch giờ không đề cập việc đã chọn; phần điểm thiếu này đã được trừ. Không được coi việc lịch không đề cập là bằng chứng thuận; điểm còn lại chưa đủ để nâng nhãn.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Chủ sự kinh doanh: hành của ngày và giờ được đối chiếu là Can ngày Kim (trung tính), Can giờ Hỏa (Dụng thần), Chi ngày Thổ (Kỵ thần), Chi giờ Thủy (Kỵ thần); trừ 25 điểm theo bảng đối chiếu hồ sơ. Đối chiếu này giải thích phần điểm cá nhân; nó chưa cho phép dự đoán kết quả khai trương.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể đối chiếu lịch của người tham gia và điều kiện tổ chức trước khi chốt mốc thực hiện.",
+          "fact_refs": [
+            "date:activity"
+          ]
+        }
+      ],
+      "limits": [
+        "Kết luận áp dụng cho giờ bắt đầu trong các khung được khuyến nghị, không áp dụng cho toàn bộ ngày."
+      ]
+    }
+  },
+  {
+    "id": "date-hour-blocked",
+    "synthetic": true,
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "fixture": {
+      "activity": "BUSINESS_OPENING",
+      "subjects": [
+        {
+          "subject_id": "synthetic_0",
+          "birth": {
+            "civil_datetime": "1994-10-08T05:00:00+07:00",
+            "location": null,
+            "clock_uncertainty_seconds": null,
+            "override_dung_than": null
+          }
+        }
+      ],
+      "date_range": {
+        "start": "2026-10-01",
+        "end": "2026-10-01"
+      },
+      "allowed_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allowed_hours": {
+        "start": "00:00:00",
+        "end": null
+      },
+      "include_details": true
+    },
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "00000000-0000-0000-0000-000000000003",
+      "method": "DATE_SELECTION",
+      "analysis_profile": "mvp2-dates-2026-10-25-v2:20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8",
+      "topic": "BUSINESS_OPENING",
+      "question": "Vì sao ngày này được xếp như vậy cho việc khai trương?",
+      "signals": [
+        "DAY_AND_HOUR",
+        "BAD",
+        "ONE_SUBJECT",
+        "HARD_EXCLUSION",
+        "PERSONAL_TENSION"
+      ],
+      "facts": [
+        {
+          "id": "date:activity",
+          "text": "{\"name\": \"Khai trương\", \"anchor\": \"Bắt đầu khai trương hoặc mở bán.\", \"mode\": \"DAY_AND_HOUR\", \"scope\": \"Nhập người đứng việc kinh doanh; ký văn khế và giao dịch được tra riêng.\"}"
+        },
+        {
+          "id": "date:decision",
+          "text": "{\"date\": \"2026-10-01\", \"grade\": \"BAD\", \"score\": 0, \"assessment_state\": \"COMPLETE\", \"has_unresolved_periods\": false}"
+        },
+        {
+          "id": "date:recommended",
+          "text": "[]"
+        },
+        {
+          "id": "date:focus",
+          "text": "{\"period_vietnam\": \"00:00–02:00\", \"grade\": \"BAD\", \"score\": 0, \"raw_score\": 40, \"assessment_state\": \"COMPLETE\", \"calendar_class\": \"HAC_DAO\", \"day_officer\": \"闭\", \"day_activity_status\": \"AVOID\", \"hour_activity_status\": \"NOT_LISTED\", \"hard_exclusions\": [\"ACTIVITY_DAY_JI\"], \"penalties\": [{\"rule_id\": \"HAC_DAO\", \"effect\": \"PENALTY\", \"points\": 15, \"message\": \"Ngày thuộc Hắc Đạo theo provider.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"HAC_DAO\"}, {\"rule_id\": \"NO_AMBIENT_SUPPORT\", \"effect\": \"PENALTY\", \"points\": 5, \"message\": \"Chưa gặp hợp chi ngày với tháng/năm.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"NO_AMBIENT_SUPPORT\"}, {\"rule_id\": \"HOUR_NOT_LISTED\", \"points\": 5, \"message\": \"Lịch giờ không đề cập việc đã chọn.\", \"source_id\": \"6TAIL_CORPUS\"}, {\"rule_id\": \"PERSONAL_ELEMENTS\", \"points\": 35, \"message\": \"Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.\", \"source_id\": \"PRODUCT_PERSONAL_POLICY\"}], \"warnings\": []}"
+        },
+        {
+          "id": "date:profiles",
+          "text": "[{\"role\": \"Chủ sự kinh doanh\", \"primary\": \"Hỏa\", \"hy\": [\"Mộc\"], \"ky\": [\"Thổ\", \"Thủy\"], \"overridden\": false}]"
+        },
+        {
+          "id": "date:personal",
+          "text": "[{\"status\": \"TENSION\", \"penalty\": 35, \"elements\": [\"Thổ\", \"Thủy\", \"Kim\", \"Thổ\"], \"element_bands\": [\"KY\", \"KY\", \"NEUTRAL\", \"KY\"], \"blocked\": false, \"role\": \"Chủ sự kinh doanh\", \"natal_clash\": false, \"positions\": [\"Can ngày\", \"Can giờ\", \"Chi ngày\", \"Chi giờ\"]}]"
+        },
+        {
+          "id": "date:score_policy",
+          "text": "{\"base\": 100, \"good_threshold\": 75, \"normal_threshold\": 45, \"day_not_listed_penalty\": 15, \"hour_not_listed_penalty\": 5, \"personal_element_penalties\": {\"PRIMARY\": 0, \"HY\": 2, \"NEUTRAL\": 5, \"KY\": 10}, \"personal_clash_blocks\": true}"
+        }
+      ],
+      "findings": [
+        {
+          "id": "date:summary",
+          "text": "Ngày 01/10/2026 chưa có khung giờ bắt đầu đạt mức Ngày Đẹp cho khai trương. Khoảng được xếp cao nhất là 00:00–02:00 (Giờ Việt Nam), ở mức Ngày Xấu (0/100 điểm).",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:decision",
+            "date:recommended",
+            "date:focus"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:0",
+          "text": "Lịch ngày ghi kỵ việc khai trương; đây là điều kiện loại trừ, điểm số không bù được.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:1",
+          "text": "Lịch giờ không đề cập việc đã chọn; phần điểm thiếu này đã được trừ.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:2",
+          "text": "Chủ sự kinh doanh: hành của ngày và giờ được đối chiếu là Can ngày Thổ (Kỵ thần), Can giờ Thủy (Kỵ thần), Chi ngày Kim (trung tính), Chi giờ Thổ (Kỵ thần); trừ 35 điểm theo bảng đối chiếu hồ sơ.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:3",
+          "text": "Cách tính: 100 − (15 + 5 + 5 + 35), giới hạn trong 0–100, được 40 điểm thô; ngưỡng Ngày Đẹp là 75. Mức Ngày Đẹp còn cần lịch ngày và hồ sơ đạt điều kiện.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:4",
+          "text": "Trừ 15 điểm: Ngày thuộc Hắc Đạo theo provider.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:5",
+          "text": "Trừ 5 điểm: Chưa gặp hợp chi ngày với tháng/năm.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:6",
+          "text": "Trừ 5 điểm: Lịch giờ không đề cập việc đã chọn.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "date:policy",
+          "title": "Quy tắc tra ngày đã lưu",
+          "text": "Quy tắc tra ngày mvp2-dates-2026-10-25-v2; hash=20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8. Nên/kỵ theo đúng việc đã chọn; điều kiện loại trừ không được bù bằng điểm. Mức Ngày Đẹp còn cần lịch ngày hỗ trợ và tất cả hồ sơ SUPPORTED; DIRECT_YI_JI cần cả lịch giờ hỗ trợ. Hai hồ sơ lấy mức trừ hành lớn hơn. DAY_ONLY không đánh giá trụ giờ hay đưa ra giờ đẹp. Ngày được xếp theo khoảng đạt mức cao nhất; kết luận không bao trùm các khoảng còn lại. Hành cá nhân dùng bảng đối chiếu của tính năng tra ngày, chưa phải bài luận Bát Tự đầy đủ.",
+          "sha256": "f8124436fa81748015fed2b6b3e3f1e42268d8a9af25249e44d9a043240795f6",
+          "url": "/api/v2/auspicious-dates/rules",
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Điều kiện loại trừ tại khoảng này: lịch ngày kỵ việc đã chọn. Không cộng bù bằng điểm.",
+        "Kết luận áp dụng cho giờ bắt đầu trong các khung được khuyến nghị, không áp dụng cho toàn bộ ngày.",
+        "Bài luận chỉ phân tích khoảng được xếp cao nhất và liệt kê các khoảng được khuyến nghị; không suy rộng căn cứ đó sang mọi khung khác.",
+        "Chưa đánh giá Tam Nương; không thêm quy tắc chọn ngày, vận hạn, quẻ Dịch hay cam kết kết quả của sự kiện."
+      ]
+    },
+    "response": {
+      "context_id": "00000000-0000-0000-0000-000000000003",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Ngày 01/10/2026 chưa có khung giờ bắt đầu đạt mức Ngày Đẹp cho khai trương. Khoảng được xếp cao nhất là 00:00–02:00 (Giờ Việt Nam), ở mức Ngày Xấu (0/100 điểm).",
+        "fact_refs": [
+          "date:decision",
+          "date:focus",
+          "date:personal"
+        ],
+        "evidence_refs": [
+          "date:policy"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Lịch ngày ghi kỵ việc khai trương; đây là điều kiện loại trừ, điểm số không bù được. Điều kiện loại trừ tại khoảng này: lịch ngày kỵ việc đã chọn. Không cộng bù bằng điểm.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Các mục được hỗ trợ hoặc điểm thô còn lại không xóa điều kiện loại trừ. Vì vậy, khoảng xếp cao nhất trong kết quả này cũng chưa phải khoảng được khuyến nghị; cần cân nhắc ngày khác trong lịch tra.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể đối chiếu lịch của người tham gia và điều kiện tổ chức trước khi chốt mốc thực hiện.",
+          "fact_refs": [
+            "date:activity"
+          ]
+        }
+      ],
+      "limits": [
+        "Điều kiện loại trừ tại khoảng này: lịch ngày kỵ việc đã chọn. Không cộng bù bằng điểm.",
+        "Kết luận áp dụng cho giờ bắt đầu trong các khung được khuyến nghị, không áp dụng cho toàn bộ ngày."
+      ]
+    }
+  },
+  {
+    "id": "date-day-two-people",
+    "synthetic": true,
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "fixture": {
+      "activity": "BETROTHAL_NACAI",
+      "subjects": [
+        {
+          "subject_id": "synthetic_0",
+          "birth": {
+            "civil_datetime": "1994-10-08T05:00:00+07:00",
+            "location": null,
+            "clock_uncertainty_seconds": null,
+            "override_dung_than": null
+          }
+        },
+        {
+          "subject_id": "synthetic_1",
+          "birth": {
+            "civil_datetime": "1990-06-15T09:30:00+07:00",
+            "location": null,
+            "clock_uncertainty_seconds": null,
+            "override_dung_than": null
+          }
+        }
+      ],
+      "date_range": {
+        "start": "2026-10-02",
+        "end": "2026-10-02"
+      },
+      "allowed_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allowed_hours": {
+        "start": "00:00:00",
+        "end": null
+      },
+      "include_details": true
+    },
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "00000000-0000-0000-0000-000000000004",
+      "method": "DATE_SELECTION",
+      "analysis_profile": "mvp2-dates-2026-10-25-v2:20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8",
+      "topic": "BETROTHAL_NACAI",
+      "question": "Vì sao ngày này được xếp như vậy cho việc nạp thái — lễ ngỏ lời?",
+      "signals": [
+        "DAY_ONLY",
+        "NORMAL",
+        "TWO_SUBJECTS",
+        "PERSONAL_TENSION"
+      ],
+      "facts": [
+        {
+          "id": "date:activity",
+          "text": "{\"name\": \"Nạp thái — lễ ngỏ lời\", \"anchor\": \"Bắt đầu lễ nạp thái, ngỏ lời kết hôn.\", \"mode\": \"DAY_ONLY\", \"scope\": \"Chọn khi gia đình thực hiện lễ nạp thái; phạm vi này chưa bao gồm mọi nghi thức ăn hỏi.\"}"
+        },
+        {
+          "id": "date:decision",
+          "text": "{\"date\": \"2026-10-02\", \"grade\": \"NORMAL\", \"score\": 55, \"assessment_state\": \"COMPLETE\", \"has_unresolved_periods\": false}"
+        },
+        {
+          "id": "date:recommended",
+          "text": "[]"
+        },
+        {
+          "id": "date:focus",
+          "text": "{\"period_vietnam\": \"22:00–23:00\", \"grade\": \"NORMAL\", \"score\": 55, \"raw_score\": 55, \"assessment_state\": \"COMPLETE\", \"calendar_class\": \"HOANG_DAO\", \"day_officer\": \"建\", \"day_activity_status\": \"NOT_LISTED\", \"hard_exclusions\": [], \"penalties\": [{\"rule_id\": \"DAY_BRANCH_GENERATES_STEM\", \"effect\": \"PENALTY\", \"points\": 10, \"message\": \"Chi ngày sinh Can ngày.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"DAY_BRANCH_GENERATES_STEM\"}, {\"rule_id\": \"DAY_NOT_LISTED\", \"points\": 15, \"message\": \"Lịch ngày không đề cập việc đã chọn.\", \"source_id\": \"6TAIL_CORPUS\"}, {\"rule_id\": \"PERSONAL_ELEMENTS\", \"points\": 20, \"message\": \"Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.\", \"source_id\": \"PRODUCT_PERSONAL_POLICY\"}], \"warnings\": []}"
+        },
+        {
+          "id": "date:profiles",
+          "text": "[{\"role\": \"Đương sự thứ nhất\", \"primary\": \"Hỏa\", \"hy\": [\"Mộc\"], \"ky\": [\"Thổ\", \"Thủy\"], \"overridden\": false}, {\"role\": \"Đương sự thứ hai\", \"primary\": \"Hỏa\", \"hy\": [\"Mộc\"], \"ky\": [\"Thổ\", \"Kim\", \"Thủy\"], \"overridden\": false}]"
+        },
+        {
+          "id": "date:personal",
+          "text": "[{\"status\": \"TENSION\", \"penalty\": 15, \"elements\": [\"Kim\", \"Thổ\"], \"element_bands\": [\"NEUTRAL\", \"KY\"], \"blocked\": false, \"role\": \"Đương sự thứ nhất\", \"natal_clash\": false, \"positions\": [\"Can ngày\", \"Chi ngày\"]}, {\"status\": \"TENSION\", \"penalty\": 20, \"elements\": [\"Kim\", \"Thổ\"], \"element_bands\": [\"KY\", \"KY\"], \"blocked\": false, \"role\": \"Đương sự thứ hai\", \"natal_clash\": false, \"positions\": [\"Can ngày\", \"Chi ngày\"]}]"
+        },
+        {
+          "id": "date:score_policy",
+          "text": "{\"base\": 100, \"good_threshold\": 80, \"normal_threshold\": 50, \"day_not_listed_penalty\": 15, \"hour_not_listed_penalty\": 0, \"personal_element_penalties\": {\"PRIMARY\": 0, \"HY\": 2, \"NEUTRAL\": 5, \"KY\": 10}, \"personal_clash_blocks\": true}"
+        }
+      ],
+      "findings": [
+        {
+          "id": "date:summary",
+          "text": "Ngày 02/10/2026 chưa có khoảng hiệu lực đánh giá ngày đạt mức Ngày Đẹp cho nạp thái — lễ ngỏ lời. Khoảng được xếp cao nhất là 22:00–23:00 (Giờ Việt Nam), ở mức Ngày Bình Thường (55/100 điểm).",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:decision",
+            "date:recommended",
+            "date:focus"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:0",
+          "text": "Lịch ngày không đề cập việc nạp thái — lễ ngỏ lời; thiếu căn cứ này không được xem là thuận.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:1",
+          "text": "Đương sự thứ nhất: hành của ngày được đối chiếu là Can ngày Kim (trung tính), Chi ngày Thổ (Kỵ thần); trừ 15 điểm theo bảng đối chiếu hồ sơ.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:2",
+          "text": "Đương sự thứ hai: hành của ngày được đối chiếu là Can ngày Kim (Kỵ thần), Chi ngày Thổ (Kỵ thần); trừ 20 điểm theo bảng đối chiếu hồ sơ.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:3",
+          "text": "Hai hồ sơ được xét riêng. Điểm đối chiếu lấy mức trừ lớn hơn, không lấy trung bình để che đi hồ sơ kém phù hợp.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:4",
+          "text": "Cách tính: 100 − (10 + 15 + 20), giới hạn trong 0–100, được 55 điểm thô; ngưỡng Ngày Đẹp là 80. Mức Ngày Đẹp còn cần lịch ngày và hồ sơ đạt điều kiện.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:5",
+          "text": "Trừ 10 điểm: Chi ngày sinh Can ngày.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:6",
+          "text": "Trừ 15 điểm: Lịch ngày không đề cập việc đã chọn.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "date:policy",
+          "title": "Quy tắc tra ngày đã lưu",
+          "text": "Quy tắc tra ngày mvp2-dates-2026-10-25-v2; hash=20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8. Nên/kỵ theo đúng việc đã chọn; điều kiện loại trừ không được bù bằng điểm. Mức Ngày Đẹp còn cần lịch ngày hỗ trợ và tất cả hồ sơ SUPPORTED; DIRECT_YI_JI cần cả lịch giờ hỗ trợ. Hai hồ sơ lấy mức trừ hành lớn hơn. DAY_ONLY không đánh giá trụ giờ hay đưa ra giờ đẹp. Ngày được xếp theo khoảng đạt mức cao nhất; kết luận không bao trùm các khoảng còn lại. Hành cá nhân dùng bảng đối chiếu của tính năng tra ngày, chưa phải bài luận Bát Tự đầy đủ.",
+          "sha256": "f8124436fa81748015fed2b6b3e3f1e42268d8a9af25249e44d9a043240795f6",
+          "url": "/api/v2/auspicious-dates/rules",
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Các khoảng trên chỉ là phạm vi hiệu lực của đánh giá ngày; tính năng này chưa chọn giờ đẹp cho việc này.",
+        "Bài luận chỉ phân tích khoảng được xếp cao nhất và liệt kê các khoảng được khuyến nghị; không suy rộng căn cứ đó sang mọi khung khác.",
+        "Chưa đánh giá Tam Nương; không thêm quy tắc chọn ngày, vận hạn, quẻ Dịch hay cam kết kết quả của sự kiện."
+      ]
+    },
+    "response": {
+      "context_id": "00000000-0000-0000-0000-000000000004",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Ngày 02/10/2026 chưa có khoảng hiệu lực đánh giá ngày đạt mức Ngày Đẹp cho nạp thái — lễ ngỏ lời. Khoảng được xếp cao nhất là 22:00–23:00 (Giờ Việt Nam), ở mức Ngày Bình Thường (55/100 điểm). Lịch ngày chưa đề cập rõ việc đã chọn, và cả hai hồ sơ còn có hành thuộc Kỵ thần trong bảng đối chiếu. Vì vậy chưa đủ điều kiện gọi đây là ngày thuận cho cả hai.",
+        "fact_refs": [
+          "date:decision",
+          "date:focus",
+          "date:personal"
+        ],
+        "evidence_refs": [
+          "date:policy"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Đương sự thứ nhất: hành của ngày được đối chiếu là Can ngày Kim (trung tính), Chi ngày Thổ (Kỵ thần); trừ 15 điểm theo bảng đối chiếu hồ sơ. Đương sự thứ hai: hành của ngày được đối chiếu là Can ngày Kim (Kỵ thần), Chi ngày Thổ (Kỵ thần); trừ 20 điểm theo bảng đối chiếu hồ sơ.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Hai hồ sơ được đối chiếu riêng và lấy mức trừ lớn hơn, nên không thể dùng trung bình để kết luận cả hai cùng thuận. Những mốc giờ trong kết quả chỉ đánh dấu khoảng hiệu lực của đánh giá ngày; chưa có giờ đẹp được chọn.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể đối chiếu lịch của người tham gia và điều kiện tổ chức trước khi chốt mốc thực hiện.",
+          "fact_refs": [
+            "date:activity"
+          ]
+        }
+      ],
+      "limits": [
+        "Các khoảng trên chỉ là phạm vi hiệu lực của đánh giá ngày; tính năng này chưa chọn giờ đẹp cho việc này."
+      ]
+    }
+  },
+  {
+    "id": "date-day-blocked",
+    "synthetic": true,
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "fixture": {
+      "activity": "LAND_BREAKING",
+      "subjects": [
+        {
+          "subject_id": "synthetic_0",
+          "birth": {
+            "civil_datetime": "1994-10-08T05:00:00+07:00",
+            "location": null,
+            "clock_uncertainty_seconds": null,
+            "override_dung_than": null
+          }
+        }
+      ],
+      "date_range": {
+        "start": "2026-10-04",
+        "end": "2026-10-04"
+      },
+      "allowed_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allowed_hours": {
+        "start": "00:00:00",
+        "end": null
+      },
+      "include_details": true
+    },
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "00000000-0000-0000-0000-000000000005",
+      "method": "DATE_SELECTION",
+      "analysis_profile": "mvp2-dates-2026-10-25-v2:20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8",
+      "topic": "LAND_BREAKING",
+      "question": "Vì sao ngày này được xếp như vậy cho việc động thổ xây dựng?",
+      "signals": [
+        "DAY_ONLY",
+        "BAD",
+        "ONE_SUBJECT",
+        "HARD_EXCLUSION",
+        "PERSONAL_TENSION"
+      ],
+      "facts": [
+        {
+          "id": "date:activity",
+          "text": "{\"name\": \"Động thổ xây dựng\", \"anchor\": \"Bắt đầu động thổ công trình.\", \"mode\": \"DAY_ONLY\", \"scope\": \"Xét ngày khởi công động thổ xây dựng; phương vị, thế đất và phần mộ nằm ngoài phạm vi.\"}"
+        },
+        {
+          "id": "date:decision",
+          "text": "{\"date\": \"2026-10-04\", \"grade\": \"BAD\", \"score\": 0, \"assessment_state\": \"COMPLETE\", \"has_unresolved_periods\": false}"
+        },
+        {
+          "id": "date:recommended",
+          "text": "[]"
+        },
+        {
+          "id": "date:focus",
+          "text": "{\"period_vietnam\": \"00:00–22:00\", \"grade\": \"BAD\", \"score\": 0, \"raw_score\": 65, \"assessment_state\": \"COMPLETE\", \"calendar_class\": \"HAC_DAO\", \"day_officer\": \"满\", \"day_activity_status\": \"AVOID\", \"hard_exclusions\": [\"ACTIVITY_DAY_JI\"], \"penalties\": [{\"rule_id\": \"HAC_DAO\", \"effect\": \"PENALTY\", \"points\": 15, \"message\": \"Ngày thuộc Hắc Đạo theo provider.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"HAC_DAO\"}, {\"rule_id\": \"NO_AMBIENT_SUPPORT\", \"effect\": \"PENALTY\", \"points\": 5, \"message\": \"Chưa gặp hợp chi ngày với tháng/năm.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"NO_AMBIENT_SUPPORT\"}, {\"rule_id\": \"PERSONAL_ELEMENTS\", \"points\": 15, \"message\": \"Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.\", \"source_id\": \"PRODUCT_PERSONAL_POLICY\"}], \"warnings\": [{\"rule_id\": \"SAT_CHU_V2_NOTE\", \"effect\": \"WARN\", \"points\": null, \"message\": \"Sát Chủ theo bảng tham khảo; dùng cảnh báo cho việc này.\", \"source_id\": \"TINIX_MONTH_TABLES\", \"dedupe_group\": \"SAT_CHU\"}]}"
+        },
+        {
+          "id": "date:profiles",
+          "text": "[{\"role\": \"Chủ sự xây dựng\", \"primary\": \"Hỏa\", \"hy\": [\"Mộc\"], \"ky\": [\"Thổ\", \"Thủy\"], \"overridden\": false}]"
+        },
+        {
+          "id": "date:personal",
+          "text": "[{\"status\": \"TENSION\", \"penalty\": 15, \"elements\": [\"Kim\", \"Thủy\"], \"element_bands\": [\"NEUTRAL\", \"KY\"], \"blocked\": false, \"role\": \"Chủ sự xây dựng\", \"natal_clash\": false, \"positions\": [\"Can ngày\", \"Chi ngày\"]}]"
+        },
+        {
+          "id": "date:score_policy",
+          "text": "{\"base\": 100, \"good_threshold\": 80, \"normal_threshold\": 50, \"day_not_listed_penalty\": 15, \"hour_not_listed_penalty\": 0, \"personal_element_penalties\": {\"PRIMARY\": 0, \"HY\": 2, \"NEUTRAL\": 5, \"KY\": 10}, \"personal_clash_blocks\": true}"
+        }
+      ],
+      "findings": [
+        {
+          "id": "date:summary",
+          "text": "Ngày 04/10/2026 chưa có khoảng hiệu lực đánh giá ngày đạt mức Ngày Đẹp cho động thổ xây dựng. Khoảng được xếp cao nhất là 00:00–22:00 (Giờ Việt Nam), ở mức Ngày Xấu (0/100 điểm).",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:decision",
+            "date:recommended",
+            "date:focus"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:0",
+          "text": "Lịch ngày ghi kỵ việc động thổ xây dựng; đây là điều kiện loại trừ, điểm số không bù được.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:1",
+          "text": "Chủ sự xây dựng: hành của ngày được đối chiếu là Can ngày Kim (trung tính), Chi ngày Thủy (Kỵ thần); trừ 15 điểm theo bảng đối chiếu hồ sơ.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:2",
+          "text": "Cách tính: 100 − (15 + 5 + 15), giới hạn trong 0–100, được 65 điểm thô; ngưỡng Ngày Đẹp là 80. Mức Ngày Đẹp còn cần lịch ngày và hồ sơ đạt điều kiện.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:3",
+          "text": "Trừ 15 điểm: Ngày thuộc Hắc Đạo theo provider.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:4",
+          "text": "Trừ 5 điểm: Chưa gặp hợp chi ngày với tháng/năm.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "date:policy",
+          "title": "Quy tắc tra ngày đã lưu",
+          "text": "Quy tắc tra ngày mvp2-dates-2026-10-25-v2; hash=20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8. Nên/kỵ theo đúng việc đã chọn; điều kiện loại trừ không được bù bằng điểm. Mức Ngày Đẹp còn cần lịch ngày hỗ trợ và tất cả hồ sơ SUPPORTED; DIRECT_YI_JI cần cả lịch giờ hỗ trợ. Hai hồ sơ lấy mức trừ hành lớn hơn. DAY_ONLY không đánh giá trụ giờ hay đưa ra giờ đẹp. Ngày được xếp theo khoảng đạt mức cao nhất; kết luận không bao trùm các khoảng còn lại. Hành cá nhân dùng bảng đối chiếu của tính năng tra ngày, chưa phải bài luận Bát Tự đầy đủ.",
+          "sha256": "f8124436fa81748015fed2b6b3e3f1e42268d8a9af25249e44d9a043240795f6",
+          "url": "/api/v2/auspicious-dates/rules",
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Điều kiện loại trừ tại khoảng này: lịch ngày kỵ việc đã chọn. Không cộng bù bằng điểm.",
+        "Sát Chủ theo bảng tham khảo; dùng cảnh báo cho việc này.",
+        "Các khoảng trên chỉ là phạm vi hiệu lực của đánh giá ngày; tính năng này chưa chọn giờ đẹp cho việc này.",
+        "Bài luận chỉ phân tích khoảng được xếp cao nhất và liệt kê các khoảng được khuyến nghị; không suy rộng căn cứ đó sang mọi khung khác.",
+        "Chưa đánh giá Tam Nương; không thêm quy tắc chọn ngày, vận hạn, quẻ Dịch hay cam kết kết quả của sự kiện."
+      ]
+    },
+    "response": {
+      "context_id": "00000000-0000-0000-0000-000000000005",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Ngày 04/10/2026 chưa có khoảng hiệu lực đánh giá ngày đạt mức Ngày Đẹp cho động thổ xây dựng. Khoảng được xếp cao nhất là 00:00–22:00 (Giờ Việt Nam), ở mức Ngày Xấu (0/100 điểm).",
+        "fact_refs": [
+          "date:decision",
+          "date:focus",
+          "date:personal"
+        ],
+        "evidence_refs": [
+          "date:policy"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Lịch ngày ghi kỵ việc động thổ xây dựng; đây là điều kiện loại trừ, điểm số không bù được. Điều kiện loại trừ tại khoảng này: lịch ngày kỵ việc đã chọn. Không cộng bù bằng điểm.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Các mục được hỗ trợ hoặc điểm thô còn lại không xóa điều kiện loại trừ. Vì vậy, khoảng xếp cao nhất trong kết quả này cũng chưa phải khoảng được khuyến nghị; cần cân nhắc ngày khác trong lịch tra.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể đối chiếu lịch của người tham gia và điều kiện tổ chức trước khi chốt mốc thực hiện.",
+          "fact_refs": [
+            "date:activity"
+          ]
+        }
+      ],
+      "limits": [
+        "Điều kiện loại trừ tại khoảng này: lịch ngày kỵ việc đã chọn. Không cộng bù bằng điểm.",
+        "Sát Chủ theo bảng tham khảo; dùng cảnh báo cho việc này."
+      ]
+    }
+  },
+  {
+    "id": "date-hour-unresolved",
+    "synthetic": true,
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "fixture": {
+      "activity": "BUSINESS_OPENING",
+      "subjects": [
+        {
+          "subject_id": "synthetic_0",
+          "birth": {
+            "civil_datetime": "2026-10-08T13:29:17+07:00",
+            "location": null,
+            "clock_uncertainty_seconds": 2.0,
+            "override_dung_than": null
+          }
+        }
+      ],
+      "date_range": {
+        "start": "2026-10-13",
+        "end": "2026-10-13"
+      },
+      "allowed_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allowed_hours": {
+        "start": "00:00:00",
+        "end": null
+      },
+      "include_details": true
+    },
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "00000000-0000-0000-0000-000000000006",
+      "method": "DATE_SELECTION",
+      "analysis_profile": "mvp2-dates-2026-10-25-v2:20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8",
+      "topic": "BUSINESS_OPENING",
+      "question": "Vì sao ngày này được xếp như vậy cho việc khai trương?",
+      "signals": [
+        "DAY_AND_HOUR",
+        "UNRESOLVED",
+        "ONE_SUBJECT"
+      ],
+      "facts": [
+        {
+          "id": "date:activity",
+          "text": "{\"name\": \"Khai trương\", \"anchor\": \"Bắt đầu khai trương hoặc mở bán.\", \"mode\": \"DAY_AND_HOUR\", \"scope\": \"Nhập người đứng việc kinh doanh; ký văn khế và giao dịch được tra riêng.\"}"
+        },
+        {
+          "id": "date:decision",
+          "text": "{\"date\": \"2026-10-13\", \"grade\": null, \"score\": null, \"assessment_state\": \"UNRESOLVED\", \"has_unresolved_periods\": true}"
+        },
+        {
+          "id": "date:recommended",
+          "text": "[]"
+        },
+        {
+          "id": "date:focus",
+          "text": "{\"period_vietnam\": \"00:00–02:00\", \"grade\": null, \"score\": null, \"raw_score\": 50, \"assessment_state\": \"UNRESOLVED\", \"calendar_class\": \"HOANG_DAO\", \"day_officer\": \"开\", \"day_activity_status\": \"SUPPORTED\", \"hour_activity_status\": \"NOT_LISTED\", \"hard_exclusions\": [], \"penalties\": [{\"rule_id\": \"DAY_SAME\", \"effect\": \"PENALTY\", \"points\": 5, \"message\": \"Can và Chi ngày cùng hành.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"DAY_SAME\"}, {\"rule_id\": \"NO_AMBIENT_SUPPORT\", \"effect\": \"PENALTY\", \"points\": 5, \"message\": \"Chưa gặp hợp chi ngày với tháng/năm.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"NO_AMBIENT_SUPPORT\"}, {\"rule_id\": \"HOUR_NOT_LISTED\", \"points\": 5, \"message\": \"Lịch giờ không đề cập việc đã chọn.\", \"source_id\": \"6TAIL_CORPUS\"}, {\"rule_id\": \"PERSONAL_ELEMENTS\", \"points\": 35, \"message\": \"Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.\", \"source_id\": \"PRODUCT_PERSONAL_POLICY\"}], \"warnings\": []}"
+        },
+        {
+          "id": "date:profiles",
+          "text": "[{\"role\": \"Chủ sự kinh doanh\", \"primary\": \"Mộc\", \"hy\": [\"Thủy\"], \"ky\": [\"Hỏa\", \"Kim\"], \"overridden\": false}]"
+        },
+        {
+          "id": "date:personal",
+          "text": "[{\"status\": \"UNSTABLE_BIRTH\", \"penalty\": 35, \"elements\": [\"Kim\", \"Hỏa\", \"Kim\", \"Thổ\"], \"element_bands\": [\"KY\", \"KY\", \"KY\", \"NEUTRAL\"], \"blocked\": false, \"role\": \"Chủ sự kinh doanh\", \"natal_clash\": false, \"positions\": [\"Can ngày\", \"Can giờ\", \"Chi ngày\", \"Chi giờ\"]}]"
+        },
+        {
+          "id": "date:score_policy",
+          "text": "{\"base\": 100, \"good_threshold\": 75, \"normal_threshold\": 45, \"day_not_listed_penalty\": 15, \"hour_not_listed_penalty\": 5, \"personal_element_penalties\": {\"PRIMARY\": 0, \"HY\": 2, \"NEUTRAL\": 5, \"KY\": 10}, \"personal_clash_blocks\": true}"
+        }
+      ],
+      "findings": [
+        {
+          "id": "date:summary",
+          "text": "Ngày 13/10/2026 chưa đủ dữ liệu để kết luận phù hợp với khai trương; hiện chưa có khung giờ bắt đầu được khuyến nghị.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "date:decision",
+            "date:recommended",
+            "date:focus"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:0",
+          "text": "Lịch ngày có mục nên làm phù hợp với việc khai trương.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:1",
+          "text": "Lịch giờ không đề cập việc đã chọn; phần điểm thiếu này đã được trừ.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:2",
+          "text": "Chủ sự kinh doanh: hành của ngày và giờ được đối chiếu là Can ngày Kim (Kỵ thần), Can giờ Hỏa (Kỵ thần), Chi ngày Kim (Kỵ thần), Chi giờ Thổ (trung tính); trừ 35 điểm theo bảng đối chiếu hồ sơ. Sai số giờ sinh có thể làm đổi trụ nên chưa chốt kết quả.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:3",
+          "text": "Cách tính: 100 − (5 + 5 + 5 + 35), giới hạn trong 0–100, được 50 điểm thô; ngưỡng Ngày Đẹp là 75. Mức Ngày Đẹp còn cần lịch ngày và hồ sơ đạt điều kiện.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:4",
+          "text": "Trừ 5 điểm: Can và Chi ngày cùng hành.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:5",
+          "text": "Trừ 5 điểm: Chưa gặp hợp chi ngày với tháng/năm.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:6",
+          "text": "Trừ 5 điểm: Lịch giờ không đề cập việc đã chọn.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "date:policy",
+          "title": "Quy tắc tra ngày đã lưu",
+          "text": "Quy tắc tra ngày mvp2-dates-2026-10-25-v2; hash=20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8. Nên/kỵ theo đúng việc đã chọn; điều kiện loại trừ không được bù bằng điểm. Mức Ngày Đẹp còn cần lịch ngày hỗ trợ và tất cả hồ sơ SUPPORTED; DIRECT_YI_JI cần cả lịch giờ hỗ trợ. Hai hồ sơ lấy mức trừ hành lớn hơn. DAY_ONLY không đánh giá trụ giờ hay đưa ra giờ đẹp. Ngày được xếp theo khoảng đạt mức cao nhất; kết luận không bao trùm các khoảng còn lại. Hành cá nhân dùng bảng đối chiếu của tính năng tra ngày, chưa phải bài luận Bát Tự đầy đủ.",
+          "sha256": "f8124436fa81748015fed2b6b3e3f1e42268d8a9af25249e44d9a043240795f6",
+          "url": "/api/v2/auspicious-dates/rules",
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Điểm thô chỉ để kiểm tra phép tính; không dùng để khuyến nghị khi kết quả còn chưa rõ.",
+        "Kết luận áp dụng cho giờ bắt đầu trong các khung được khuyến nghị, không áp dụng cho toàn bộ ngày.",
+        "Trong ngày vẫn có khoảng chưa đủ dữ liệu kết luận; chỉ dùng các khoảng đã được khuyến nghị.",
+        "Bài luận chỉ phân tích khoảng được xếp cao nhất và liệt kê các khoảng được khuyến nghị; không suy rộng căn cứ đó sang mọi khung khác.",
+        "Chưa đánh giá Tam Nương; không thêm quy tắc chọn ngày, vận hạn, quẻ Dịch hay cam kết kết quả của sự kiện."
+      ]
+    },
+    "response": {
+      "context_id": "00000000-0000-0000-0000-000000000006",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Kết quả còn để ngỏ vì sai số giờ sinh đã khai báo có thể làm đổi trụ. Vì vậy, các điểm thô hiện có chưa đủ để khuyến nghị dùng ngày này cho việc đã chọn.",
+        "fact_refs": [
+          "date:decision",
+          "date:focus",
+          "date:personal"
+        ],
+        "evidence_refs": [
+          "date:policy"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Nên/kỵ của lịch và điểm số vẫn được lưu để đối chiếu, nhưng hồ sơ cá nhân chưa ổn định. Chọn khoảng có điểm cao hơn không giải quyết được điểm thiếu này.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Cần xác định lại độ chính xác của giờ sinh trước khi tra lại. Đây là giới hạn của dữ liệu đầu vào, không phải dự báo rằng sự kiện sẽ gặp trở ngại.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể đối chiếu lịch của người tham gia và điều kiện tổ chức trước khi chốt mốc thực hiện.",
+          "fact_refs": [
+            "date:activity"
+          ]
+        }
+      ],
+      "limits": [
+        "Điểm thô chỉ để kiểm tra phép tính; không dùng để khuyến nghị khi kết quả còn chưa rõ.",
+        "Kết luận áp dụng cho giờ bắt đầu trong các khung được khuyến nghị, không áp dụng cho toàn bộ ngày."
+      ]
+    }
+  },
+  {
+    "id": "date-day-unresolved",
+    "synthetic": true,
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "fixture": {
+      "activity": "LAND_BREAKING",
+      "subjects": [
+        {
+          "subject_id": "synthetic_0",
+          "birth": {
+            "civil_datetime": "2026-10-08T13:29:17+07:00",
+            "location": null,
+            "clock_uncertainty_seconds": 2.0,
+            "override_dung_than": null
+          }
+        }
+      ],
+      "date_range": {
+        "start": "2026-10-01",
+        "end": "2026-10-01"
+      },
+      "allowed_weekdays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "allowed_hours": {
+        "start": "00:00:00",
+        "end": null
+      },
+      "include_details": true
+    },
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "00000000-0000-0000-0000-000000000007",
+      "method": "DATE_SELECTION",
+      "analysis_profile": "mvp2-dates-2026-10-25-v2:20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8",
+      "topic": "LAND_BREAKING",
+      "question": "Vì sao ngày này được xếp như vậy cho việc động thổ xây dựng?",
+      "signals": [
+        "DAY_ONLY",
+        "UNRESOLVED",
+        "ONE_SUBJECT"
+      ],
+      "facts": [
+        {
+          "id": "date:activity",
+          "text": "{\"name\": \"Động thổ xây dựng\", \"anchor\": \"Bắt đầu động thổ công trình.\", \"mode\": \"DAY_ONLY\", \"scope\": \"Xét ngày khởi công động thổ xây dựng; phương vị, thế đất và phần mộ nằm ngoài phạm vi.\"}"
+        },
+        {
+          "id": "date:decision",
+          "text": "{\"date\": \"2026-10-01\", \"grade\": null, \"score\": null, \"assessment_state\": \"UNRESOLVED\", \"has_unresolved_periods\": true}"
+        },
+        {
+          "id": "date:recommended",
+          "text": "[]"
+        },
+        {
+          "id": "date:focus",
+          "text": "{\"period_vietnam\": \"00:00–22:00\", \"grade\": null, \"score\": null, \"raw_score\": 65, \"assessment_state\": \"UNRESOLVED\", \"calendar_class\": \"HAC_DAO\", \"day_officer\": \"闭\", \"day_activity_status\": \"SUPPORTED\", \"hard_exclusions\": [], \"penalties\": [{\"rule_id\": \"HAC_DAO\", \"effect\": \"PENALTY\", \"points\": 15, \"message\": \"Ngày thuộc Hắc Đạo theo provider.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"HAC_DAO\"}, {\"rule_id\": \"NO_AMBIENT_SUPPORT\", \"effect\": \"PENALTY\", \"points\": 5, \"message\": \"Chưa gặp hợp chi ngày với tháng/năm.\", \"source_id\": \"6TAIL_CORPUS\", \"dedupe_group\": \"NO_AMBIENT_SUPPORT\"}, {\"rule_id\": \"PERSONAL_ELEMENTS\", \"points\": 15, \"message\": \"Mức phạt hành của chủ thể có điểm thấp nhất; Dụng Thần nhập đè có ưu tiên.\", \"source_id\": \"PRODUCT_PERSONAL_POLICY\"}], \"warnings\": []}"
+        },
+        {
+          "id": "date:profiles",
+          "text": "[{\"role\": \"Chủ sự xây dựng\", \"primary\": \"Mộc\", \"hy\": [\"Thủy\"], \"ky\": [\"Hỏa\", \"Kim\"], \"overridden\": false}]"
+        },
+        {
+          "id": "date:personal",
+          "text": "[{\"status\": \"UNSTABLE_BIRTH\", \"penalty\": 15, \"elements\": [\"Thổ\", \"Kim\"], \"element_bands\": [\"NEUTRAL\", \"KY\"], \"blocked\": false, \"role\": \"Chủ sự xây dựng\", \"natal_clash\": false, \"positions\": [\"Can ngày\", \"Chi ngày\"]}]"
+        },
+        {
+          "id": "date:score_policy",
+          "text": "{\"base\": 100, \"good_threshold\": 80, \"normal_threshold\": 50, \"day_not_listed_penalty\": 15, \"hour_not_listed_penalty\": 0, \"personal_element_penalties\": {\"PRIMARY\": 0, \"HY\": 2, \"NEUTRAL\": 5, \"KY\": 10}, \"personal_clash_blocks\": true}"
+        }
+      ],
+      "findings": [
+        {
+          "id": "date:summary",
+          "text": "Ngày 01/10/2026 chưa đủ dữ liệu để kết luận phù hợp với động thổ xây dựng; hiện chưa có khoảng hiệu lực đánh giá ngày được khuyến nghị.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "date:decision",
+            "date:recommended",
+            "date:focus"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:0",
+          "text": "Lịch ngày có mục nên làm phù hợp với việc động thổ xây dựng.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:1",
+          "text": "Chủ sự xây dựng: hành của ngày được đối chiếu là Can ngày Thổ (trung tính), Chi ngày Kim (Kỵ thần); trừ 15 điểm theo bảng đối chiếu hồ sơ. Sai số giờ sinh có thể làm đổi trụ nên chưa chốt kết quả.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:2",
+          "text": "Cách tính: 100 − (15 + 5 + 15), giới hạn trong 0–100, được 65 điểm thô; ngưỡng Ngày Đẹp là 80. Mức Ngày Đẹp còn cần lịch ngày và hồ sơ đạt điều kiện.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:3",
+          "text": "Trừ 15 điểm: Ngày thuộc Hắc Đạo theo provider.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "id": "date:reason:4",
+          "text": "Trừ 5 điểm: Chưa gặp hợp chi ngày với tháng/năm.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "date:focus",
+            "date:personal",
+            "date:profiles",
+            "date:score_policy",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "date:policy",
+          "title": "Quy tắc tra ngày đã lưu",
+          "text": "Quy tắc tra ngày mvp2-dates-2026-10-25-v2; hash=20b2ccc5b71487bf88012d7bce455b961b51b132fe6392a488b4d547f3d26ce8. Nên/kỵ theo đúng việc đã chọn; điều kiện loại trừ không được bù bằng điểm. Mức Ngày Đẹp còn cần lịch ngày hỗ trợ và tất cả hồ sơ SUPPORTED; DIRECT_YI_JI cần cả lịch giờ hỗ trợ. Hai hồ sơ lấy mức trừ hành lớn hơn. DAY_ONLY không đánh giá trụ giờ hay đưa ra giờ đẹp. Ngày được xếp theo khoảng đạt mức cao nhất; kết luận không bao trùm các khoảng còn lại. Hành cá nhân dùng bảng đối chiếu của tính năng tra ngày, chưa phải bài luận Bát Tự đầy đủ.",
+          "sha256": "f8124436fa81748015fed2b6b3e3f1e42268d8a9af25249e44d9a043240795f6",
+          "url": "/api/v2/auspicious-dates/rules",
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Điểm thô chỉ để kiểm tra phép tính; không dùng để khuyến nghị khi kết quả còn chưa rõ.",
+        "Các khoảng trên chỉ là phạm vi hiệu lực của đánh giá ngày; tính năng này chưa chọn giờ đẹp cho việc này.",
+        "Trong ngày vẫn có khoảng chưa đủ dữ liệu kết luận; chỉ dùng các khoảng đã được khuyến nghị.",
+        "Bài luận chỉ phân tích khoảng được xếp cao nhất và liệt kê các khoảng được khuyến nghị; không suy rộng căn cứ đó sang mọi khung khác.",
+        "Chưa đánh giá Tam Nương; không thêm quy tắc chọn ngày, vận hạn, quẻ Dịch hay cam kết kết quả của sự kiện."
+      ]
+    },
+    "response": {
+      "context_id": "00000000-0000-0000-0000-000000000007",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Kết quả còn để ngỏ vì sai số giờ sinh đã khai báo có thể làm đổi trụ. Vì vậy, các điểm thô hiện có chưa đủ để khuyến nghị dùng ngày này cho việc đã chọn.",
+        "fact_refs": [
+          "date:decision",
+          "date:focus",
+          "date:personal"
+        ],
+        "evidence_refs": [
+          "date:policy"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Nên/kỵ của lịch và điểm số vẫn được lưu để đối chiếu, nhưng hồ sơ cá nhân chưa ổn định. Chọn khoảng có điểm cao hơn không giải quyết được điểm thiếu này.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Cần xác định lại độ chính xác của giờ sinh trước khi tra lại. Đây là giới hạn của dữ liệu đầu vào, không phải dự báo rằng sự kiện sẽ gặp trở ngại.",
+          "fact_refs": [
+            "date:activity",
+            "date:focus",
+            "date:personal",
+            "date:score_policy"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể đối chiếu lịch của người tham gia và điều kiện tổ chức trước khi chốt mốc thực hiện.",
+          "fact_refs": [
+            "date:activity"
+          ]
+        }
+      ],
+      "limits": [
+        "Điểm thô chỉ để kiểm tra phép tính; không dùng để khuyến nghị khi kết quả còn chưa rõ.",
+        "Các khoảng trên chỉ là phạm vi hiệu lực của đánh giá ngày; tính năng này chưa chọn giờ đẹp cho việc này."
+      ]
+    }
+  }
+]

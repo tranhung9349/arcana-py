@@ -1,0 +1,83 @@
+{
+  "checked_at": "2026-10-26T23:40:10.180667+00:00",
+  "provider": {
+    "configured": true,
+    "model": "deepseek-v4.1-flash",
+    "provider_host": "rexapf.com"
+  },
+  "synthetic_data_only": true,
+  "results": [
+    {
+      "method": "BAZI",
+      "consultation_id": "381711a8-5e4a-42f7-9935-2063dfaad195",
+      "ai_reading_id": "fc035fa5f46668f389bbd9fc637cbd3851bcbd92e70b27fbaf467352395fb153",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "9ca437ab5fa558442e7fc4b3e5c02ed6f6d702981ebe7ad35a473c60006dbb10",
+      "case_ids": [
+        "bazi-07-study",
+        "bazi-03-mixed"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 14466,
+        "completion_tokens": 3510,
+        "total_tokens": 17976
+      },
+      "generation_passes": 1,
+      "generate_seconds": 12.492,
+      "cache_replay_ms": 30.987,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 4,
+      "summary": "Điểm đáng chú ý nhất là khoảng cách giữa phần tiếp nhận kiến thức và phần tự diễn đạt: Ấn lộ trên can năm nhưng đứng xa Nhật chủ, còn Thực Thương chỉ nằm trong tàng can. Vì khí thế còn đan xen và hướng điều tiết chưa chốt, đây là giả thuyết để bạn tự đối chiếu, chưa phải kết luận về năng lực học."
+    },
+    {
+      "method": "MAIHOA",
+      "consultation_id": "338ea908-a663-437e-9113-6c6d6ccca155",
+      "ai_reading_id": "df86f10df5d849e9b1598c731d58108dd99fe016f080385bc7b350e88e453afd",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "18b4334293e055b397a033b9d42589fc83a6f67f78109227564b9e0d776cbf52",
+      "case_ids": [
+        "maihoa-01-support",
+        "maihoa-04-sequence"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 15200,
+        "completion_tokens": 5243,
+        "total_tokens": 20443
+      },
+      "generation_passes": 1,
+      "generate_seconds": 15.982,
+      "cache_replay_ms": 13.381,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Kế hoạch học thêm có cấu trúc quan hệ nghiêng thuận: phần đầu và cuối đều có Dụng sinh Thể, phần giữa có tương trợ và khả năng kiểm soát công việc. Điều cần chuẩn bị kỹ nhất là nhịp thực hiện và điều kiện hoàn tất ở phần giữa, vì phép mưu sự ghi “thành nhưng chậm” và độ mạnh của Thể chưa được xác định."
+    },
+    {
+      "method": "LIUYAO",
+      "consultation_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+      "ai_reading_id": "9b3c5ad3b15b5ccf193295386beae19c93ca17fcf5b735773ed5c49efcb6dee9",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "00e09ee4c420fffffb9471515e42db4af8485d23bb61f859a7885f5a85c04258",
+      "case_ids": [
+        "liuyao-04-document",
+        "liuyao-01-money"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 14029,
+        "completion_tokens": 5282,
+        "total_tokens": 19311
+      },
+      "generation_passes": 1,
+      "generate_seconds": 16.149,
+      "cache_replay_ms": 26.774,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 4,
+      "summary": "Hào đại diện bản đề cương có nền vững từ tháng và ngày, nhưng hào đại diện chính bạn đang ở Tuần Không và có biến hồi đầu khắc. Vì vậy điều cần rà soát là khả năng theo việc tới cùng — phạm vi, khối lượng, thời gian — chứ không phải xác nhận nội dung đã đúng."
+    }
+  ]
+}

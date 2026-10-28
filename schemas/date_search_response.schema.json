@@ -1,0 +1,857 @@
+{
+  "$defs": {
+    "ActivitySpec": {
+      "additionalProperties": false,
+      "properties": {
+        "activity": {
+          "enum": [
+            "MARRIAGE",
+            "BUSINESS_OPENING",
+            "TRAVEL",
+            "HOME_ENTRY",
+            "RELOCATION",
+            "RENOVATION",
+            "TRADE",
+            "LAND_BREAKING",
+            "ROOF_BEAM",
+            "CONTRACT_RITE",
+            "PROPERTY_ACQUISITION",
+            "RECEIVE_ASSETS",
+            "START_EDUCATION",
+            "START_JOB",
+            "ANCESTOR_RITE",
+            "BETROTHAL_NACAI",
+            "BETROTHAL_COVENANT",
+            "INCENSE_INSTALLATION",
+            "BED_SETUP",
+            "DEMOLITION",
+            "PRAYER"
+          ],
+          "title": "Activity",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "provider_token": {
+          "title": "Provider Token",
+          "type": "string"
+        },
+        "subject_count": {
+          "enum": [
+            1,
+            2
+          ],
+          "title": "Subject Count",
+          "type": "integer"
+        },
+        "group_id": {
+          "title": "Group Id",
+          "type": "string"
+        },
+        "provider_hour_token": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Provider Hour Token"
+        },
+        "subject_roles": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 1,
+          "title": "Subject Roles",
+          "type": "array"
+        },
+        "hour_evaluation_mode": {
+          "enum": [
+            "LEGACY_V1",
+            "DIRECT_YI_JI",
+            "DAY_ONLY"
+          ],
+          "title": "Hour Evaluation Mode",
+          "type": "string"
+        },
+        "rule_profile": {
+          "enum": [
+            "LEGACY_V1",
+            "CONSTRUCTIVE_V2",
+            "RITUAL_V2",
+            "DEFERRED"
+          ],
+          "title": "Rule Profile",
+          "type": "string"
+        },
+        "event_anchor": {
+          "title": "Event Anchor",
+          "type": "string"
+        },
+        "scope_note": {
+          "title": "Scope Note",
+          "type": "string"
+        },
+        "enabled": {
+          "title": "Enabled",
+          "type": "boolean"
+        },
+        "tier": {
+          "enum": [
+            "CORE",
+            "CONTEXTUAL"
+          ],
+          "title": "Tier",
+          "type": "string"
+        },
+        "review_status": {
+          "enum": [
+            "PRODUCT_POLICY",
+            "NOT_ENABLED"
+          ],
+          "title": "Review Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "activity",
+        "name",
+        "provider_token",
+        "subject_count",
+        "group_id",
+        "provider_hour_token",
+        "subject_roles",
+        "hour_evaluation_mode",
+        "rule_profile",
+        "event_anchor",
+        "scope_note",
+        "enabled",
+        "tier",
+        "review_status"
+      ],
+      "title": "ActivitySpec",
+      "type": "object"
+    },
+    "DateDay": {
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "title": "Date",
+          "type": "string"
+        },
+        "grade": {
+          "anyOf": [
+            {
+              "enum": [
+                "GOOD",
+                "NORMAL",
+                "BAD"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Grade"
+        },
+        "assessment_state": {
+          "enum": [
+            "COMPLETE",
+            "UNRESOLVED",
+            "FILTERED"
+          ],
+          "title": "Assessment State",
+          "type": "string"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Score"
+        },
+        "windows": {
+          "items": {
+            "$ref": "#/$defs/DateWindow"
+          },
+          "title": "Windows",
+          "type": "array"
+        },
+        "recommended_windows": {
+          "items": {
+            "$ref": "#/$defs/RecommendedWindow"
+          },
+          "title": "Recommended Windows",
+          "type": "array"
+        },
+        "evaluated_windows": {
+          "minimum": 0,
+          "title": "Evaluated Windows",
+          "type": "integer"
+        },
+        "recommended_minutes": {
+          "maximum": 1440,
+          "minimum": 0,
+          "title": "Recommended Minutes",
+          "type": "number"
+        },
+        "has_unresolved_windows": {
+          "title": "Has Unresolved Windows",
+          "type": "boolean"
+        },
+        "day_periods": {
+          "items": {
+            "$ref": "#/$defs/DayAssessment"
+          },
+          "title": "Day Periods",
+          "type": "array"
+        },
+        "recommended_day_periods": {
+          "items": {
+            "$ref": "#/$defs/DayPeriod"
+          },
+          "title": "Recommended Day Periods",
+          "type": "array"
+        },
+        "evaluated_periods": {
+          "minimum": 0,
+          "title": "Evaluated Periods",
+          "type": "integer"
+        },
+        "hour_evaluation": {
+          "enum": [
+            "NOT_SUPPORTED",
+            "NOT_EVALUATED",
+            "HAS_RECOMMENDATIONS",
+            "EVALUATED_NO_MATCH"
+          ],
+          "title": "Hour Evaluation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "date",
+        "grade",
+        "assessment_state",
+        "score",
+        "windows",
+        "recommended_windows",
+        "evaluated_windows",
+        "recommended_minutes",
+        "has_unresolved_windows",
+        "day_periods",
+        "recommended_day_periods",
+        "evaluated_periods",
+        "hour_evaluation"
+      ],
+      "title": "DateDay",
+      "type": "object"
+    },
+    "DateSource": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "basis": {
+          "title": "Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "path",
+        "sha256",
+        "url",
+        "basis"
+      ],
+      "title": "DateSource",
+      "type": "object"
+    },
+    "DateWindow": {
+      "additionalProperties": false,
+      "properties": {
+        "start_at": {
+          "title": "Start At",
+          "type": "string"
+        },
+        "end_at": {
+          "title": "End At",
+          "type": "string"
+        },
+        "hour_branch": {
+          "enum": [
+            "子",
+            "丑",
+            "寅",
+            "卯",
+            "辰",
+            "巳",
+            "午",
+            "未",
+            "申",
+            "酉",
+            "戌",
+            "亥"
+          ],
+          "title": "Hour Branch",
+          "type": "string"
+        },
+        "duration_seconds": {
+          "exclusiveMinimum": 0,
+          "title": "Duration Seconds",
+          "type": "number"
+        },
+        "calendar_class": {
+          "enum": [
+            "HOANG_DAO",
+            "HAC_DAO"
+          ],
+          "title": "Calendar Class",
+          "type": "string"
+        },
+        "day_officer": {
+          "title": "Day Officer",
+          "type": "string"
+        },
+        "tian_shen": {
+          "title": "Tian Shen",
+          "type": "string"
+        },
+        "civil_day_ganzhi": {
+          "title": "Civil Day Ganzhi",
+          "type": "string"
+        },
+        "bazi_day_ganzhi": {
+          "title": "Bazi Day Ganzhi",
+          "type": "string"
+        },
+        "month_ganzhi_exact": {
+          "title": "Month Ganzhi Exact",
+          "type": "string"
+        },
+        "lunar": {
+          "additionalProperties": true,
+          "title": "Lunar",
+          "type": "object"
+        },
+        "day_activity_status": {
+          "enum": [
+            "SUPPORTED",
+            "AVOID",
+            "NOT_LISTED",
+            "UNRESOLVED"
+          ],
+          "title": "Day Activity Status",
+          "type": "string"
+        },
+        "hour_activity_status": {
+          "enum": [
+            "SUPPORTED",
+            "AVOID",
+            "NOT_LISTED",
+            "UNRESOLVED"
+          ],
+          "title": "Hour Activity Status",
+          "type": "string"
+        },
+        "assessment_state": {
+          "enum": [
+            "COMPLETE",
+            "UNRESOLVED"
+          ],
+          "title": "Assessment State",
+          "type": "string"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Score"
+        },
+        "raw_score": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Raw Score",
+          "type": "integer"
+        },
+        "grade": {
+          "anyOf": [
+            {
+              "enum": [
+                "GOOD",
+                "NORMAL",
+                "BAD"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Grade"
+        },
+        "hard_exclusions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Hard Exclusions",
+          "type": "array"
+        },
+        "penalties": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Penalties",
+          "type": "array"
+        },
+        "subject_assessments": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Subject Assessments",
+          "type": "array"
+        },
+        "facts": {
+          "additionalProperties": true,
+          "title": "Facts",
+          "type": "object"
+        },
+        "rule_warnings": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Rule Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "start_at",
+        "end_at",
+        "hour_branch",
+        "duration_seconds",
+        "calendar_class",
+        "day_officer",
+        "tian_shen",
+        "civil_day_ganzhi",
+        "bazi_day_ganzhi",
+        "month_ganzhi_exact",
+        "lunar",
+        "day_activity_status",
+        "hour_activity_status",
+        "assessment_state",
+        "score",
+        "raw_score",
+        "grade",
+        "hard_exclusions",
+        "penalties",
+        "subject_assessments",
+        "facts"
+      ],
+      "title": "DateWindow",
+      "type": "object"
+    },
+    "DayAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "start_at": {
+          "title": "Start At",
+          "type": "string"
+        },
+        "end_at": {
+          "title": "End At",
+          "type": "string"
+        },
+        "duration_seconds": {
+          "exclusiveMinimum": 0,
+          "title": "Duration Seconds",
+          "type": "number"
+        },
+        "calendar_class": {
+          "enum": [
+            "HOANG_DAO",
+            "HAC_DAO"
+          ],
+          "title": "Calendar Class",
+          "type": "string"
+        },
+        "day_officer": {
+          "title": "Day Officer",
+          "type": "string"
+        },
+        "tian_shen": {
+          "title": "Tian Shen",
+          "type": "string"
+        },
+        "civil_day_ganzhi": {
+          "title": "Civil Day Ganzhi",
+          "type": "string"
+        },
+        "bazi_day_ganzhi": {
+          "title": "Bazi Day Ganzhi",
+          "type": "string"
+        },
+        "month_ganzhi_exact": {
+          "title": "Month Ganzhi Exact",
+          "type": "string"
+        },
+        "lunar": {
+          "additionalProperties": true,
+          "title": "Lunar",
+          "type": "object"
+        },
+        "day_activity_status": {
+          "enum": [
+            "SUPPORTED",
+            "AVOID",
+            "NOT_LISTED",
+            "UNRESOLVED"
+          ],
+          "title": "Day Activity Status",
+          "type": "string"
+        },
+        "assessment_state": {
+          "enum": [
+            "COMPLETE",
+            "UNRESOLVED"
+          ],
+          "title": "Assessment State",
+          "type": "string"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Score"
+        },
+        "raw_score": {
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Raw Score",
+          "type": "integer"
+        },
+        "grade": {
+          "anyOf": [
+            {
+              "enum": [
+                "GOOD",
+                "NORMAL",
+                "BAD"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Grade"
+        },
+        "hard_exclusions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Hard Exclusions",
+          "type": "array"
+        },
+        "penalties": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Penalties",
+          "type": "array"
+        },
+        "subject_assessments": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Subject Assessments",
+          "type": "array"
+        },
+        "facts": {
+          "additionalProperties": true,
+          "title": "Facts",
+          "type": "object"
+        },
+        "rule_warnings": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Rule Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "start_at",
+        "end_at",
+        "duration_seconds",
+        "calendar_class",
+        "day_officer",
+        "tian_shen",
+        "civil_day_ganzhi",
+        "bazi_day_ganzhi",
+        "month_ganzhi_exact",
+        "lunar",
+        "day_activity_status",
+        "assessment_state",
+        "score",
+        "raw_score",
+        "grade",
+        "hard_exclusions",
+        "penalties",
+        "subject_assessments",
+        "facts",
+        "rule_warnings"
+      ],
+      "title": "DayAssessment",
+      "type": "object"
+    },
+    "DayPeriod": {
+      "additionalProperties": false,
+      "description": "Validity interval for a day assessment, never a recommended hour.",
+      "properties": {
+        "start_at": {
+          "title": "Start At",
+          "type": "string"
+        },
+        "end_at": {
+          "title": "End At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start_at",
+        "end_at"
+      ],
+      "title": "DayPeriod",
+      "type": "object"
+    },
+    "RecommendedWindow": {
+      "additionalProperties": false,
+      "description": "Every GOOD interval, in chronological order, without bulky evidence.",
+      "properties": {
+        "start_at": {
+          "title": "Start At",
+          "type": "string"
+        },
+        "end_at": {
+          "title": "End At",
+          "type": "string"
+        },
+        "hour_branch": {
+          "enum": [
+            "子",
+            "丑",
+            "寅",
+            "卯",
+            "辰",
+            "巳",
+            "午",
+            "未",
+            "申",
+            "酉",
+            "戌",
+            "亥"
+          ],
+          "title": "Hour Branch",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start_at",
+        "end_at",
+        "hour_branch"
+      ],
+      "title": "RecommendedWindow",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "date-search-response-v2",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "date_rules_version": {
+      "title": "Date Rules Version",
+      "type": "string"
+    },
+    "calendar_policy": {
+      "const": "BEIJING_CIVIL_UTC8",
+      "title": "Calendar Policy",
+      "type": "string"
+    },
+    "activity": {
+      "enum": [
+        "MARRIAGE",
+        "BUSINESS_OPENING",
+        "TRAVEL",
+        "HOME_ENTRY",
+        "RELOCATION",
+        "RENOVATION",
+        "TRADE",
+        "LAND_BREAKING",
+        "ROOF_BEAM",
+        "CONTRACT_RITE",
+        "PROPERTY_ACQUISITION",
+        "RECEIVE_ASSETS",
+        "START_EDUCATION",
+        "START_JOB",
+        "ANCESTOR_RITE",
+        "BETROTHAL_NACAI",
+        "BETROTHAL_COVENANT",
+        "INCENSE_INSTALLATION",
+        "BED_SETUP",
+        "DEMOLITION",
+        "PRAYER"
+      ],
+      "title": "Activity",
+      "type": "string"
+    },
+    "activity_name": {
+      "title": "Activity Name",
+      "type": "string"
+    },
+    "disabled_rules": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Disabled Rules",
+      "type": "array"
+    },
+    "coverage_note": {
+      "title": "Coverage Note",
+      "type": "string"
+    },
+    "subject_summaries": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Subject Summaries",
+      "type": "array"
+    },
+    "days": {
+      "items": {
+        "$ref": "#/$defs/DateDay"
+      },
+      "title": "Days",
+      "type": "array"
+    },
+    "evaluated_windows": {
+      "title": "Evaluated Windows",
+      "type": "integer"
+    },
+    "personal_comparisons": {
+      "title": "Personal Comparisons",
+      "type": "integer"
+    },
+    "natal_analysis_count": {
+      "title": "Natal Analysis Count",
+      "type": "integer"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/DateSource"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "warnings": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Warnings",
+      "type": "array"
+    },
+    "activity_registry_version": {
+      "title": "Activity Registry Version",
+      "type": "string"
+    },
+    "activity_spec": {
+      "$ref": "#/$defs/ActivitySpec"
+    },
+    "evaluation_mode": {
+      "enum": [
+        "DAY_ONLY",
+        "DAY_AND_HOUR"
+      ],
+      "title": "Evaluation Mode",
+      "type": "string"
+    },
+    "evaluated_periods": {
+      "minimum": 0,
+      "title": "Evaluated Periods",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "schema_version",
+    "date_rules_version",
+    "calendar_policy",
+    "activity",
+    "activity_name",
+    "disabled_rules",
+    "coverage_note",
+    "subject_summaries",
+    "days",
+    "evaluated_windows",
+    "personal_comparisons",
+    "natal_analysis_count",
+    "sources",
+    "warnings",
+    "activity_registry_version",
+    "activity_spec",
+    "evaluation_mode",
+    "evaluated_periods"
+  ],
+  "title": "DateSearchResponse",
+  "type": "object"
+}

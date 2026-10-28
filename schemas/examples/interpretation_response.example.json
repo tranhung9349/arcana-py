@@ -1,0 +1,40 @@
+{
+  "schema_version": "interpretation-response-v1",
+  "context_id": "synthetic-example-17-line-2",
+  "summary": {
+    "label": "AI_INTERPRETATION",
+    "content": "Theo dữ kiện minh họa, quẻ chủ có hào 2 động. Thể Kim khắc Dụng Mộc nên engine phân loại Thứ Cát; chế độ giải sát không bật.",
+    "references": [
+      "facts:maihoa.original",
+      "facts:maihoa.moving_line",
+      "facts:maihoa.the_dung_relation"
+    ]
+  },
+  "translations": [
+    {
+      "label": "AI_TRANSLATION",
+      "evidence_id": "iching:17:hexagram",
+      "content": "Theo: khởi đầu hanh thông, lợi ở sự chính đáng, không lỗi."
+    },
+    {
+      "label": "AI_TRANSLATION",
+      "evidence_id": "iching:17:line:2",
+      "content": "Gắn với người nhỏ thì mất người lớn."
+    }
+  ],
+  "interpretations": [
+    {
+      "label": "AI_INTERPRETATION",
+      "content": "Lời hào có thể được đọc như lời nhắc cân nhắc sự lựa chọn và điều có thể đánh mất khi đi theo một hướng. Điểm 98,4 là mức phù hợp nội bộ của bộ số minh họa.",
+      "references": [
+        "iching:17:line:2",
+        "facts:number_result"
+      ]
+    }
+  ],
+  "limitations": [
+    "Đây là dữ liệu và lời luận mẫu viết để kiểm tra schema, chưa phải output từ model.",
+    "Không có cổ văn Bát Tự truy xuất để đối chiếu; Dụng Thần chỉ là giả định thử nghiệm.",
+    "Adapter lịch đang EXPERIMENTAL; TST minh họa chưa được tính bằng kinh độ/EoT và chưa có biên sai số."
+  ]
+}

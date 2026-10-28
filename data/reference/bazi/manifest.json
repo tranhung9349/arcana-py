@@ -1,0 +1,89 @@
+{
+  "corpus_version": "bazi-corpus-2026-10-26-v1",
+  "sources": [
+    {
+      "source_id": "text:strength",
+      "path": "data/reference/bazi/dtt_strength.wikitext",
+      "title": "滴天髓/12",
+      "revision_id": 844360,
+      "timestamp": "2017-03-23T15:44:57Z",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=844360"
+    },
+    {
+      "source_id": "text:month",
+      "path": "data/reference/bazi/dtt_month.wikitext",
+      "title": "滴天髓/17",
+      "revision_id": 844366,
+      "timestamp": "2017-03-23T15:45:47Z",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=844366"
+    },
+    {
+      "source_id": "text:climate",
+      "path": "data/reference/bazi/dtt_climate.wikitext",
+      "title": "滴天髓/16",
+      "revision_id": 844365,
+      "timestamp": "2017-03-23T15:45:37Z",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=844365"
+    },
+    {
+      "source_id": "text:relations",
+      "path": "data/reference/bazi/smt_relations.wikitext",
+      "title": "三命通會/卷二",
+      "revision_id": 2292392,
+      "timestamp": "2023-05-28T01:06:07Z",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=2292392"
+    }
+  ],
+  "files": [
+    {
+      "path": "config/bazi_rules.json",
+      "sha256": "ec24edd1b6dbe7a9cdfd6c7803a86b8c4322d2984a18e8f57c19210933fb1005"
+    },
+    {
+      "path": "data/reference/bazi/dtt_climate.wikitext",
+      "sha256": "fc7e7b33031a5fbaba4d02475a78b385490d65503ae9f504a40013e55ebb198d"
+    },
+    {
+      "path": "data/reference/bazi/dtt_month.wikitext",
+      "sha256": "babe20b4e4eed5c90ea577f9326b6b7be13bbac8d774c53b3b1b57212e68c93a"
+    },
+    {
+      "path": "data/reference/bazi/dtt_strength.wikitext",
+      "sha256": "c17a857454f0e545b63c90dac9ddac0361d61cfe07718f7a5a793b4a2ff2ec80"
+    },
+    {
+      "path": "data/reference/bazi/smt_relations.wikitext",
+      "sha256": "e58c3f48d5f983548a35783c8f4961768a5c71edfa6d88f8fb37bc07acd53e0d"
+    },
+    {
+      "path": "data/reference/bazi/dtt_climate.source.json",
+      "sha256": "d2bccf48fca9a436d60d0f06222d0eca4028b5d7b9dbd0c91b38727d39fc8355"
+    },
+    {
+      "path": "data/reference/bazi/dtt_month.source.json",
+      "sha256": "a064577419a95f09d131c72f6fd3b1db1472aeaf8333e3b33632f65adf4ae603"
+    },
+    {
+      "path": "data/reference/bazi/dtt_strength.source.json",
+      "sha256": "3a0c98bd49200a21dd2539ce83de6f852f11ed2378a873d0d47225a569c0ada3"
+    },
+    {
+      "path": "data/reference/bazi/smt_relations.source.json",
+      "sha256": "be8bd601fae354d00e20cd7fe243c886a20fd50b47eda864e461281c0a950f22"
+    }
+  ],
+  "provider_sources": [
+    {
+      "module": "lunar_python.EightChar",
+      "sha256": "d38241e75b693f25fc8c2a3e1587fd028a0a52cc504f9d5c7b47326eef051c0c"
+    },
+    {
+      "module": "lunar_python.Lunar",
+      "sha256": "489a1725a2ba443f9e8acf0534f05a0ee28c24f8904adb129c8a30daa3ed7079"
+    },
+    {
+      "module": "lunar_python.util.LunarUtil",
+      "sha256": "87a84818a3ddd10925cbb28ec04a048b27e1ac46f291ff4d9a861f15fb59aa00"
+    }
+  ]
+}

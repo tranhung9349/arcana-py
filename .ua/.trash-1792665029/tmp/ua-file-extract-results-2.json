@@ -1,0 +1,4719 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 9,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 9,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "randomyst/api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 84,
+      "nonEmptyLines": 65,
+      "functions": [
+        {
+          "name": "create_app",
+          "startLine": 20,
+          "endLine": 81,
+          "params": [
+            "db_path"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "create_app",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create_app",
+          "callee": "FastAPI",
+          "lineNumber": 21
+        },
+        {
+          "caller": "create_app",
+          "callee": "NumberEngine",
+          "lineNumber": 22
+        },
+        {
+          "caller": "create_app",
+          "callee": "ExplanationRepository",
+          "lineNumber": 23
+        },
+        {
+          "caller": "create_app",
+          "callee": "DrawStore",
+          "lineNumber": 24
+        },
+        {
+          "caller": "create_app",
+          "callee": "os.environ.get",
+          "lineNumber": 24
+        },
+        {
+          "caller": "create_app",
+          "callee": "str",
+          "lineNumber": 24
+        },
+        {
+          "caller": "create_app",
+          "callee": "DateEngine",
+          "lineNumber": 25
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.post",
+          "lineNumber": 27
+        },
+        {
+          "caller": "search_dates",
+          "callee": "app.state.date_engine.search",
+          "lineNumber": 29
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.get",
+          "lineNumber": 31
+        },
+        {
+          "caller": "date_rule_summary",
+          "callee": "x.model_dump",
+          "lineNumber": 34
+        },
+        {
+          "caller": "date_rule_summary",
+          "callee": "rules.scoring.model_dump",
+          "lineNumber": 35
+        },
+        {
+          "caller": "date_rule_summary",
+          "callee": "x.model_dump",
+          "lineNumber": 36
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.exception_handler",
+          "lineNumber": 38
+        },
+        {
+          "caller": "engine_error",
+          "callee": "JSONResponse",
+          "lineNumber": 40
+        },
+        {
+          "caller": "engine_error",
+          "callee": "str",
+          "lineNumber": 40
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.exception_handler",
+          "lineNumber": 42
+        },
+        {
+          "caller": "calendar_error",
+          "callee": "JSONResponse",
+          "lineNumber": 44
+        },
+        {
+          "caller": "calendar_error",
+          "callee": "str",
+          "lineNumber": 44
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.exception_handler",
+          "lineNumber": 46
+        },
+        {
+          "caller": "validation_error",
+          "callee": "JSONResponse",
+          "lineNumber": 48
+        },
+        {
+          "caller": "validation_error",
+          "callee": "\".\".join",
+          "lineNumber": 49
+        },
+        {
+          "caller": "validation_error",
+          "callee": "str",
+          "lineNumber": 49
+        },
+        {
+          "caller": "validation_error",
+          "callee": "exc.errors",
+          "lineNumber": 49
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.get",
+          "lineNumber": 51
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.post",
+          "lineNumber": 57
+        },
+        {
+          "caller": "draw",
+          "callee": "datetime.now",
+          "lineNumber": 60
+        },
+        {
+          "caller": "draw",
+          "callee": "app.state.store.execute",
+          "lineNumber": 61
+        },
+        {
+          "caller": "draw",
+          "callee": "app.state.engine.draw",
+          "lineNumber": 61
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.get",
+          "lineNumber": 63
+        },
+        {
+          "caller": "history",
+          "callee": "Query",
+          "lineNumber": 64
+        },
+        {
+          "caller": "history",
+          "callee": "app.state.store.history",
+          "lineNumber": 65
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.get",
+          "lineNumber": 67
+        },
+        {
+          "caller": "interpretation",
+          "callee": "app.state.explanations.explain",
+          "lineNumber": 69
+        },
+        {
+          "caller": "interpretation",
+          "callee": "app.state.store.get",
+          "lineNumber": 69
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.get",
+          "lineNumber": 71
+        },
+        {
+          "caller": "saved_draw",
+          "callee": "app.state.store.get",
+          "lineNumber": 73
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.mount",
+          "lineNumber": 75
+        },
+        {
+          "caller": "create_app",
+          "callee": "StaticFiles",
+          "lineNumber": 75
+        },
+        {
+          "caller": "create_app",
+          "callee": "app.get",
+          "lineNumber": 77
+        },
+        {
+          "caller": "index",
+          "callee": "FileResponse",
+          "lineNumber": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "randomyst/engine.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 127,
+      "nonEmptyLines": 120,
+      "classes": [
+        {
+          "name": "EngineError",
+          "startLine": 16,
+          "endLine": 19,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        },
+        {
+          "name": "NumberEngine",
+          "startLine": 22,
+          "endLine": 127,
+          "methods": [
+            "__init__",
+            "draw"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "EngineError",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "NumberEngine",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 18
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 18
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 24
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / \"config/mvp1_rules.json\").read_text",
+          "lineNumber": 24
+        },
+        {
+          "caller": "__init__",
+          "callee": "check_provider",
+          "lineNumber": 25
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 27
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 30
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 32
+        },
+        {
+          "caller": "__init__",
+          "callee": "IchingRepository",
+          "lineNumber": 33
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 34
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / \"dan_gian_config.json\").read_text",
+          "lineNumber": 34
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 36
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / \"config/interpretation_disclaimers.json\").read_text",
+          "lineNumber": 36
+        },
+        {
+          "caller": "draw",
+          "callee": "datetime.now",
+          "lineNumber": 39
+        },
+        {
+          "caller": "draw",
+          "callee": "abs",
+          "lineNumber": 42
+        },
+        {
+          "caller": "draw",
+          "callee": "(received_at - civil).total_seconds",
+          "lineNumber": 42
+        },
+        {
+          "caller": "draw",
+          "callee": "warnings.append",
+          "lineNumber": 44
+        },
+        {
+          "caller": "draw",
+          "callee": "beijing_clock",
+          "lineNumber": 45
+        },
+        {
+          "caller": "draw",
+          "callee": "beijing_clock",
+          "lineNumber": 46
+        },
+        {
+          "caller": "draw",
+          "callee": "resolve_maihoa",
+          "lineNumber": 47
+        },
+        {
+          "caller": "draw",
+          "callee": "resolve_maihoa",
+          "lineNumber": 48
+        },
+        {
+          "caller": "draw",
+          "callee": "pillars",
+          "lineNumber": 49
+        },
+        {
+          "caller": "draw",
+          "callee": "analyze",
+          "lineNumber": 50
+        },
+        {
+          "caller": "draw",
+          "callee": "bazi.update",
+          "lineNumber": 52
+        },
+        {
+          "caller": "draw",
+          "callee": "self.iching.calculate",
+          "lineNumber": 53
+        },
+        {
+          "caller": "draw",
+          "callee": "solar_month",
+          "lineNumber": 54
+        },
+        {
+          "caller": "draw",
+          "callee": "star_bonuses",
+          "lineNumber": 55
+        },
+        {
+          "caller": "draw",
+          "callee": "select_context",
+          "lineNumber": 56
+        },
+        {
+          "caller": "draw",
+          "callee": "configurations",
+          "lineNumber": 57
+        },
+        {
+          "caller": "draw",
+          "callee": "EngineError",
+          "lineNumber": 59
+        },
+        {
+          "caller": "draw",
+          "callee": "max",
+          "lineNumber": 60
+        },
+        {
+          "caller": "draw",
+          "callee": "EngineError",
+          "lineNumber": 62
+        },
+        {
+          "caller": "draw",
+          "callee": "relation_score",
+          "lineNumber": 65
+        },
+        {
+          "caller": "draw",
+          "callee": "relation_score",
+          "lineNumber": 65
+        },
+        {
+          "caller": "draw",
+          "callee": "max",
+          "lineNumber": 66
+        },
+        {
+          "caller": "draw",
+          "callee": "element_of",
+          "lineNumber": 66
+        },
+        {
+          "caller": "draw",
+          "callee": "range",
+          "lineNumber": 66
+        },
+        {
+          "caller": "draw",
+          "callee": "context.allowed",
+          "lineNumber": 66
+        },
+        {
+          "caller": "draw",
+          "callee": "element_of",
+          "lineNumber": 66
+        },
+        {
+          "caller": "draw",
+          "callee": "range",
+          "lineNumber": 68
+        },
+        {
+          "caller": "draw",
+          "callee": "element_of",
+          "lineNumber": 69
+        },
+        {
+          "caller": "draw",
+          "callee": "context.allowed",
+          "lineNumber": 70
+        },
+        {
+          "caller": "draw",
+          "callee": "exp",
+          "lineNumber": 75
+        },
+        {
+          "caller": "draw",
+          "callee": "sum",
+          "lineNumber": 77
+        },
+        {
+          "caller": "draw",
+          "callee": "deltas.values",
+          "lineNumber": 77
+        },
+        {
+          "caller": "draw",
+          "callee": "weight_trace.append",
+          "lineNumber": 80
+        },
+        {
+          "caller": "draw",
+          "callee": "Distribution",
+          "lineNumber": 83
+        },
+        {
+          "caller": "draw",
+          "callee": "configurations",
+          "lineNumber": 85
+        },
+        {
+          "caller": "draw",
+          "callee": "tuple",
+          "lineNumber": 86
+        },
+        {
+          "caller": "draw",
+          "callee": "c.meets",
+          "lineNumber": 86
+        },
+        {
+          "caller": "draw",
+          "callee": "Distribution",
+          "lineNumber": 87
+        },
+        {
+          "caller": "draw",
+          "callee": "SystemRandom",
+          "lineNumber": 88
+        },
+        {
+          "caller": "draw",
+          "callee": "range",
+          "lineNumber": 90
+        },
+        {
+          "caller": "draw",
+          "callee": "distribution.sample",
+          "lineNumber": 92
+        },
+        {
+          "caller": "draw",
+          "callee": "validate_sample",
+          "lineNumber": 94
+        },
+        {
+          "caller": "draw",
+          "callee": "EngineError",
+          "lineNumber": 95
+        },
+        {
+          "caller": "draw",
+          "callee": "config.score",
+          "lineNumber": 96
+        },
+        {
+          "caller": "draw",
+          "callee": "max",
+          "lineNumber": 98
+        },
+        {
+          "caller": "draw",
+          "callee": "min",
+          "lineNumber": 98
+        },
+        {
+          "caller": "draw",
+          "callee": "config.meets",
+          "lineNumber": 99
+        },
+        {
+          "caller": "draw",
+          "callee": "history.append",
+          "lineNumber": 100
+        },
+        {
+          "caller": "draw",
+          "callee": "warnings.append",
+          "lineNumber": 108
+        },
+        {
+          "caller": "draw",
+          "callee": "warnings.append",
+          "lineNumber": 111
+        },
+        {
+          "caller": "draw",
+          "callee": "str",
+          "lineNumber": 113
+        },
+        {
+          "caller": "draw",
+          "callee": "len",
+          "lineNumber": 115
+        },
+        {
+          "caller": "draw",
+          "callee": "next",
+          "lineNumber": 117
+        },
+        {
+          "caller": "draw",
+          "callee": "received_at.isoformat",
+          "lineNumber": 118
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "randomyst/interpretation.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 150,
+      "nonEmptyLines": 139,
+      "functions": [
+        {
+          "name": "digest",
+          "startLine": 17,
+          "endLine": 18,
+          "params": [
+            "text"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExplanationRepository",
+          "startLine": 21,
+          "endLine": 150,
+          "methods": [
+            "__init__",
+            "source",
+            "hexagram",
+            "natal",
+            "explain"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "digest",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "ExplanationRepository",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "digest",
+          "callee": "hashlib.sha256(text.encode()).hexdigest",
+          "lineNumber": 18
+        },
+        {
+          "caller": "digest",
+          "callee": "hashlib.sha256",
+          "lineNumber": 18
+        },
+        {
+          "caller": "digest",
+          "callee": "text.encode",
+          "lineNumber": 18
+        },
+        {
+          "caller": "__init__",
+          "callee": "IchingRepository",
+          "lineNumber": 23
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.iching.by_bits.values",
+          "lineNumber": 24
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 25
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / \"data/interpretation/iching_vi_draft.json\").read_text",
+          "lineNumber": 25
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 26
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / \"data/interpretation/tinix_vi.json\").read_text",
+          "lineNumber": 26
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 28
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 30
+        },
+        {
+          "caller": "__init__",
+          "callee": "set",
+          "lineNumber": 30
+        },
+        {
+          "caller": "__init__",
+          "callee": "set",
+          "lineNumber": 30
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 31
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.by_id.items",
+          "lineNumber": 32
+        },
+        {
+          "caller": "__init__",
+          "callee": "digest",
+          "lineNumber": 34
+        },
+        {
+          "caller": "__init__",
+          "callee": "digest",
+          "lineNumber": 35
+        },
+        {
+          "caller": "__init__",
+          "callee": "next",
+          "lineNumber": 35
+        },
+        {
+          "caller": "__init__",
+          "callee": "range",
+          "lineNumber": 36
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 37
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 38
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 39
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / \"data/reference/manifest.json\").read_text",
+          "lineNumber": 39
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.bazi[\"source_paths\"].items",
+          "lineNumber": 41
+        },
+        {
+          "caller": "__init__",
+          "callee": "upstream_path.removeprefix",
+          "lineNumber": 42
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / \"data/reference\" / local_path).read_bytes",
+          "lineNumber": 43
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256(raw).hexdigest",
+          "lineNumber": 44
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256",
+          "lineNumber": 44
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 45
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 46
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 47
+        },
+        {
+          "caller": "add",
+          "callee": "kind.lower",
+          "lineNumber": 58
+        },
+        {
+          "caller": "add",
+          "callee": "cards.append",
+          "lineNumber": 59
+        },
+        {
+          "caller": "add",
+          "callee": "self.source",
+          "lineNumber": 61
+        },
+        {
+          "caller": "add",
+          "callee": "digest",
+          "lineNumber": 64
+        },
+        {
+          "caller": "hexagram",
+          "callee": "add",
+          "lineNumber": 67
+        },
+        {
+          "caller": "hexagram",
+          "callee": "type",
+          "lineNumber": 69
+        },
+        {
+          "caller": "hexagram",
+          "callee": "ValueError",
+          "lineNumber": 70
+        },
+        {
+          "caller": "hexagram",
+          "callee": "next",
+          "lineNumber": 71
+        },
+        {
+          "caller": "hexagram",
+          "callee": "add",
+          "lineNumber": 72
+        },
+        {
+          "caller": "hexagram",
+          "callee": "add",
+          "lineNumber": 79
+        },
+        {
+          "caller": "hexagram",
+          "callee": "gaps.append",
+          "lineNumber": 81
+        },
+        {
+          "caller": "hexagram",
+          "callee": "self.source",
+          "lineNumber": 82
+        },
+        {
+          "caller": "hexagram",
+          "callee": "add",
+          "lineNumber": 85
+        },
+        {
+          "caller": "add",
+          "callee": "cards.append",
+          "lineNumber": 102
+        },
+        {
+          "caller": "add",
+          "callee": "self.source",
+          "lineNumber": 104
+        },
+        {
+          "caller": "natal",
+          "callee": "self.bazi[\"stems\"].get",
+          "lineNumber": 106
+        },
+        {
+          "caller": "natal",
+          "callee": "add",
+          "lineNumber": 109
+        },
+        {
+          "caller": "natal",
+          "callee": "add",
+          "lineNumber": 110
+        },
+        {
+          "caller": "natal",
+          "callee": "add",
+          "lineNumber": 111
+        },
+        {
+          "caller": "natal",
+          "callee": "self.bazi[\"structures\"].get",
+          "lineNumber": 113
+        },
+        {
+          "caller": "natal",
+          "callee": "add",
+          "lineNumber": 117
+        },
+        {
+          "caller": "natal",
+          "callee": "gaps.append",
+          "lineNumber": 121
+        },
+        {
+          "caller": "natal",
+          "callee": "list",
+          "lineNumber": 125
+        },
+        {
+          "caller": "natal",
+          "callee": "list",
+          "lineNumber": 126
+        },
+        {
+          "caller": "natal",
+          "callee": "list",
+          "lineNumber": 126
+        },
+        {
+          "caller": "explain",
+          "callee": "ValueError",
+          "lineNumber": 133
+        },
+        {
+          "caller": "explain",
+          "callee": "self.hexagram",
+          "lineNumber": 134
+        },
+        {
+          "caller": "explain",
+          "callee": "m[\"display_hexagrams\"].get",
+          "lineNumber": 137
+        },
+        {
+          "caller": "explain",
+          "callee": "self.hexagram",
+          "lineNumber": 138
+        },
+        {
+          "caller": "explain",
+          "callee": "self.natal",
+          "lineNumber": 142
+        },
+        {
+          "caller": "explain",
+          "callee": "deepcopy",
+          "lineNumber": 143
+        },
+        {
+          "caller": "explain",
+          "callee": "deepcopy",
+          "lineNumber": 143
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "randomyst/maihoa.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 78,
+      "nonEmptyLines": 72,
+      "classes": [
+        {
+          "name": "IchingRepository",
+          "startLine": 18,
+          "endLine": 78,
+          "methods": [
+            "__init__",
+            "metadata",
+            "calculate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IchingRepository",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 21
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / \"data/reference/manifest.json\").read_text",
+          "lineNumber": 21
+        },
+        {
+          "caller": "__init__",
+          "callee": "entry[\"path\"].startswith",
+          "lineNumber": 23
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256(path.read_bytes()).hexdigest",
+          "lineNumber": 25
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256",
+          "lineNumber": 25
+        },
+        {
+          "caller": "__init__",
+          "callee": "path.read_bytes",
+          "lineNumber": 25
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 26
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 27
+        },
+        {
+          "caller": "__init__",
+          "callee": "(directory / \"iching.json\").read_text",
+          "lineNumber": 27
+        },
+        {
+          "caller": "__init__",
+          "callee": "tuple",
+          "lineNumber": 28
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 29
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 29
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 29
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 30
+        },
+        {
+          "caller": "__init__",
+          "callee": "any",
+          "lineNumber": 33
+        },
+        {
+          "caller": "__init__",
+          "callee": "range",
+          "lineNumber": 33
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 34
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 35
+        },
+        {
+          "caller": "__init__",
+          "callee": "(directory / \"tuan.json\").read_text",
+          "lineNumber": 35
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 36
+        },
+        {
+          "caller": "__init__",
+          "callee": "(directory / \"xiang.json\").read_text",
+          "lineNumber": 36
+        },
+        {
+          "caller": "metadata",
+          "callee": "tuple",
+          "lineNumber": 39
+        },
+        {
+          "caller": "metadata",
+          "callee": "list",
+          "lineNumber": 40
+        },
+        {
+          "caller": "calculate",
+          "callee": "set",
+          "lineNumber": 43
+        },
+        {
+          "caller": "calculate",
+          "callee": "any",
+          "lineNumber": 43
+        },
+        {
+          "caller": "calculate",
+          "callee": "type",
+          "lineNumber": 43
+        },
+        {
+          "caller": "calculate",
+          "callee": "variables.values",
+          "lineNumber": 43
+        },
+        {
+          "caller": "calculate",
+          "callee": "ValueError",
+          "lineNumber": 44
+        },
+        {
+          "caller": "calculate",
+          "callee": "ValueError",
+          "lineNumber": 47
+        },
+        {
+          "caller": "calculate",
+          "callee": "list",
+          "lineNumber": 52
+        },
+        {
+          "caller": "calculate",
+          "callee": "self.metadata",
+          "lineNumber": 53
+        },
+        {
+          "caller": "calculate",
+          "callee": "next",
+          "lineNumber": 55
+        },
+        {
+          "caller": "add",
+          "callee": "evidence.append",
+          "lineNumber": 58
+        },
+        {
+          "caller": "calculate",
+          "callee": "add",
+          "lineNumber": 61
+        },
+        {
+          "caller": "calculate",
+          "callee": "add",
+          "lineNumber": 62
+        },
+        {
+          "caller": "calculate",
+          "callee": "add",
+          "lineNumber": 67
+        },
+        {
+          "caller": "calculate",
+          "callee": "gaps.append",
+          "lineNumber": 69
+        },
+        {
+          "caller": "calculate",
+          "callee": "add",
+          "lineNumber": 71
+        },
+        {
+          "caller": "calculate",
+          "callee": "state_of",
+          "lineNumber": 75
+        },
+        {
+          "caller": "calculate",
+          "callee": "self.metadata",
+          "lineNumber": 76
+        },
+        {
+          "caller": "calculate",
+          "callee": "self.metadata",
+          "lineNumber": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "randomyst/sampling.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 261,
+      "nonEmptyLines": 219,
+      "functions": [
+        {
+          "name": "element_of",
+          "startLine": 21,
+          "endLine": 22,
+          "params": [
+            "number"
+          ]
+        },
+        {
+          "name": "relation_score",
+          "startLine": 25,
+          "endLine": 36,
+          "params": [
+            "element",
+            "target"
+          ]
+        },
+        {
+          "name": "state_of",
+          "startLine": 39,
+          "endLine": 48,
+          "params": [
+            "the",
+            "dung"
+          ]
+        },
+        {
+          "name": "count_vectors",
+          "startLine": 95,
+          "endLine": 108,
+          "params": [
+            "capacities",
+            "total"
+          ]
+        },
+        {
+          "name": "grouped_pool",
+          "startLine": 111,
+          "endLine": 112,
+          "params": [
+            "pool"
+          ]
+        },
+        {
+          "name": "configurations",
+          "startLine": 116,
+          "endLine": 137,
+          "params": [
+            "context",
+            "pool",
+            "retry",
+            "quota_max"
+          ]
+        },
+        {
+          "name": "select_context",
+          "startLine": 140,
+          "endLine": 161,
+          "params": [
+            "primary",
+            "the",
+            "dung",
+            "pool",
+            "quota_max"
+          ]
+        },
+        {
+          "name": "elementary_symmetric",
+          "startLine": 164,
+          "endLine": 169,
+          "params": [
+            "weights",
+            "max_count"
+          ]
+        },
+        {
+          "name": "validate_sample",
+          "startLine": 248,
+          "endLine": 261,
+          "params": [
+            "numbers",
+            "context",
+            "quota_max",
+            "retry",
+            "pool"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "Context",
+          "startLine": 52,
+          "endLine": 70,
+          "methods": [
+            "state",
+            "threshold",
+            "allowed"
+          ],
+          "properties": [
+            "primary",
+            "the",
+            "dung",
+            "remedy",
+            "strategy"
+          ]
+        },
+        {
+          "name": "Configuration",
+          "startLine": 74,
+          "endLine": 91,
+          "methods": [
+            "yin_yang",
+            "score_numerator",
+            "score",
+            "meets"
+          ],
+          "properties": [
+            "counts",
+            "raw_units",
+            "conflicts",
+            "even_count"
+          ]
+        },
+        {
+          "name": "ProductSubsetSampler",
+          "startLine": 172,
+          "endLine": 199,
+          "methods": [
+            "__init__",
+            "sample"
+          ],
+          "properties": []
+        },
+        {
+          "name": "Distribution",
+          "startLine": 202,
+          "endLine": 245,
+          "methods": [
+            "__init__",
+            "sample",
+            "exact_metrics"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "element_of",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "relation_score",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "state_of",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "Context",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "Configuration",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "count_vectors",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "grouped_pool",
+          "line": 111,
+          "isDefault": false
+        },
+        {
+          "name": "configurations",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "select_context",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "elementary_symmetric",
+          "line": 164,
+          "isDefault": false
+        },
+        {
+          "name": "ProductSubsetSampler",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "Distribution",
+          "line": 202,
+          "isDefault": false
+        },
+        {
+          "name": "validate_sample",
+          "line": 248,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "relation_score",
+          "callee": "ValueError",
+          "lineNumber": 36
+        },
+        {
+          "caller": "state",
+          "callee": "state_of",
+          "lineNumber": 61
+        },
+        {
+          "caller": "score_numerator",
+          "callee": "max",
+          "lineNumber": 85
+        },
+        {
+          "caller": "score_numerator",
+          "callee": "min",
+          "lineNumber": 85
+        },
+        {
+          "caller": "score",
+          "callee": "self.score_numerator",
+          "lineNumber": 88
+        },
+        {
+          "caller": "meets",
+          "callee": "self.score_numerator",
+          "lineNumber": 91
+        },
+        {
+          "caller": "visit",
+          "callee": "len",
+          "lineNumber": 100
+        },
+        {
+          "caller": "visit",
+          "callee": "result.append",
+          "lineNumber": 102
+        },
+        {
+          "caller": "visit",
+          "callee": "tuple",
+          "lineNumber": 102
+        },
+        {
+          "caller": "visit",
+          "callee": "range",
+          "lineNumber": 104
+        },
+        {
+          "caller": "visit",
+          "callee": "min",
+          "lineNumber": 104
+        },
+        {
+          "caller": "visit",
+          "callee": "visit",
+          "lineNumber": 105
+        },
+        {
+          "caller": "count_vectors",
+          "callee": "visit",
+          "lineNumber": 107
+        },
+        {
+          "caller": "count_vectors",
+          "callee": "tuple",
+          "lineNumber": 108
+        },
+        {
+          "caller": "grouped_pool",
+          "callee": "tuple",
+          "lineNumber": 112
+        },
+        {
+          "caller": "grouped_pool",
+          "callee": "tuple",
+          "lineNumber": 112
+        },
+        {
+          "caller": "grouped_pool",
+          "callee": "element_of",
+          "lineNumber": 112
+        },
+        {
+          "caller": "configurations",
+          "callee": "tuple",
+          "lineNumber": 116
+        },
+        {
+          "caller": "configurations",
+          "callee": "range",
+          "lineNumber": 116
+        },
+        {
+          "caller": "configurations",
+          "callee": "grouped_pool",
+          "lineNumber": 117
+        },
+        {
+          "caller": "configurations",
+          "callee": "tuple",
+          "lineNumber": 118
+        },
+        {
+          "caller": "configurations",
+          "callee": "len",
+          "lineNumber": 118
+        },
+        {
+          "caller": "configurations",
+          "callee": "context.allowed",
+          "lineNumber": 118
+        },
+        {
+          "caller": "configurations",
+          "callee": "zip",
+          "lineNumber": 118
+        },
+        {
+          "caller": "configurations",
+          "callee": "relation_score",
+          "lineNumber": 119
+        },
+        {
+          "caller": "configurations",
+          "callee": "relation_score",
+          "lineNumber": 119
+        },
+        {
+          "caller": "configurations",
+          "callee": "relation_score",
+          "lineNumber": 120
+        },
+        {
+          "caller": "configurations",
+          "callee": "relation_score",
+          "lineNumber": 120
+        },
+        {
+          "caller": "configurations",
+          "callee": "count_vectors",
+          "lineNumber": 122
+        },
+        {
+          "caller": "configurations",
+          "callee": "sum",
+          "lineNumber": 123
+        },
+        {
+          "caller": "configurations",
+          "callee": "tuple",
+          "lineNumber": 126
+        },
+        {
+          "caller": "configurations",
+          "callee": "range",
+          "lineNumber": 126
+        },
+        {
+          "caller": "configurations",
+          "callee": "max",
+          "lineNumber": 127
+        },
+        {
+          "caller": "configurations",
+          "callee": "ValueError",
+          "lineNumber": 131
+        },
+        {
+          "caller": "configurations",
+          "callee": "ELEMENTS.index",
+          "lineNumber": 132
+        },
+        {
+          "caller": "configurations",
+          "callee": "sum",
+          "lineNumber": 134
+        },
+        {
+          "caller": "configurations",
+          "callee": "zip",
+          "lineNumber": 134
+        },
+        {
+          "caller": "configurations",
+          "callee": "sum",
+          "lineNumber": 135
+        },
+        {
+          "caller": "configurations",
+          "callee": "zip",
+          "lineNumber": 135
+        },
+        {
+          "caller": "configurations",
+          "callee": "output.append",
+          "lineNumber": 136
+        },
+        {
+          "caller": "configurations",
+          "callee": "Configuration",
+          "lineNumber": 136
+        },
+        {
+          "caller": "configurations",
+          "callee": "tuple",
+          "lineNumber": 137
+        },
+        {
+          "caller": "select_context",
+          "callee": "tuple",
+          "lineNumber": 140
+        },
+        {
+          "caller": "select_context",
+          "callee": "range",
+          "lineNumber": 140
+        },
+        {
+          "caller": "select_context",
+          "callee": "Context",
+          "lineNumber": 141
+        },
+        {
+          "caller": "select_context",
+          "callee": "tuple",
+          "lineNumber": 145
+        },
+        {
+          "caller": "select_context",
+          "callee": "Context",
+          "lineNumber": 149
+        },
+        {
+          "caller": "select_context",
+          "callee": "configurations",
+          "lineNumber": 150
+        },
+        {
+          "caller": "select_context",
+          "callee": "audited.append",
+          "lineNumber": 152
+        },
+        {
+          "caller": "select_context",
+          "callee": "max",
+          "lineNumber": 154
+        },
+        {
+          "caller": "select_context",
+          "callee": "relation_score",
+          "lineNumber": 155
+        },
+        {
+          "caller": "select_context",
+          "callee": "relation_score",
+          "lineNumber": 155
+        },
+        {
+          "caller": "select_context",
+          "callee": "audited.append",
+          "lineNumber": 156
+        },
+        {
+          "caller": "select_context",
+          "callee": "contexts.append",
+          "lineNumber": 158
+        },
+        {
+          "caller": "select_context",
+          "callee": "ELEMENTS.index",
+          "lineNumber": 158
+        },
+        {
+          "caller": "select_context",
+          "callee": "ValueError",
+          "lineNumber": 160
+        },
+        {
+          "caller": "select_context",
+          "callee": "max",
+          "lineNumber": 161
+        },
+        {
+          "caller": "elementary_symmetric",
+          "callee": "range",
+          "lineNumber": 167
+        },
+        {
+          "caller": "elementary_symmetric",
+          "callee": "tuple",
+          "lineNumber": 169
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 176
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 176
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 176
+        },
+        {
+          "caller": "__init__",
+          "callee": "set",
+          "lineNumber": 176
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 176
+        },
+        {
+          "caller": "__init__",
+          "callee": "ValueError",
+          "lineNumber": 177
+        },
+        {
+          "caller": "__init__",
+          "callee": "any",
+          "lineNumber": 178
+        },
+        {
+          "caller": "__init__",
+          "callee": "isfinite",
+          "lineNumber": 178
+        },
+        {
+          "caller": "__init__",
+          "callee": "ValueError",
+          "lineNumber": 179
+        },
+        {
+          "caller": "__init__",
+          "callee": "tuple",
+          "lineNumber": 180
+        },
+        {
+          "caller": "__init__",
+          "callee": "tuple",
+          "lineNumber": 180
+        },
+        {
+          "caller": "__init__",
+          "callee": "range",
+          "lineNumber": 181
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 181
+        },
+        {
+          "caller": "__init__",
+          "callee": "range",
+          "lineNumber": 182
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 182
+        },
+        {
+          "caller": "__init__",
+          "callee": "tuple",
+          "lineNumber": 184
+        },
+        {
+          "caller": "__init__",
+          "callee": "range",
+          "lineNumber": 184
+        },
+        {
+          "caller": "sample",
+          "callee": "min",
+          "lineNumber": 187
+        },
+        {
+          "caller": "sample",
+          "callee": "len",
+          "lineNumber": 187
+        },
+        {
+          "caller": "sample",
+          "callee": "ValueError",
+          "lineNumber": 188
+        },
+        {
+          "caller": "sample",
+          "callee": "enumerate",
+          "lineNumber": 190
+        },
+        {
+          "caller": "sample",
+          "callee": "rng.random",
+          "lineNumber": 194
+        },
+        {
+          "caller": "sample",
+          "callee": "chosen.append",
+          "lineNumber": 195
+        },
+        {
+          "caller": "sample",
+          "callee": "RuntimeError",
+          "lineNumber": 198
+        },
+        {
+          "caller": "__init__",
+          "callee": "tuple",
+          "lineNumber": 203
+        },
+        {
+          "caller": "__init__",
+          "callee": "range",
+          "lineNumber": 203
+        },
+        {
+          "caller": "__init__",
+          "callee": "tuple",
+          "lineNumber": 204
+        },
+        {
+          "caller": "__init__",
+          "callee": "grouped_pool",
+          "lineNumber": 205
+        },
+        {
+          "caller": "__init__",
+          "callee": "tuple",
+          "lineNumber": 209
+        },
+        {
+          "caller": "__init__",
+          "callee": "ProductSubsetSampler",
+          "lineNumber": 210
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.samplers.append",
+          "lineNumber": 211
+        },
+        {
+          "caller": "__init__",
+          "callee": "polynomials.append",
+          "lineNumber": 212
+        },
+        {
+          "caller": "__init__",
+          "callee": "tuple",
+          "lineNumber": 213
+        },
+        {
+          "caller": "__init__",
+          "callee": "prod",
+          "lineNumber": 213
+        },
+        {
+          "caller": "__init__",
+          "callee": "enumerate",
+          "lineNumber": 213
+        },
+        {
+          "caller": "__init__",
+          "callee": "fsum",
+          "lineNumber": 214
+        },
+        {
+          "caller": "__init__",
+          "callee": "isfinite",
+          "lineNumber": 215
+        },
+        {
+          "caller": "__init__",
+          "callee": "ValueError",
+          "lineNumber": 216
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.cdf.append",
+          "lineNumber": 221
+        },
+        {
+          "caller": "sample",
+          "callee": "min",
+          "lineNumber": 225
+        },
+        {
+          "caller": "sample",
+          "callee": "bisect_left",
+          "lineNumber": 225
+        },
+        {
+          "caller": "sample",
+          "callee": "rng.random",
+          "lineNumber": 225
+        },
+        {
+          "caller": "sample",
+          "callee": "len",
+          "lineNumber": 225
+        },
+        {
+          "caller": "sample",
+          "callee": "zip",
+          "lineNumber": 228
+        },
+        {
+          "caller": "sample",
+          "callee": "numbers.extend",
+          "lineNumber": 229
+        },
+        {
+          "caller": "sample",
+          "callee": "sampler.sample",
+          "lineNumber": 229
+        },
+        {
+          "caller": "sample",
+          "callee": "tuple",
+          "lineNumber": 230
+        },
+        {
+          "caller": "sample",
+          "callee": "sorted",
+          "lineNumber": 230
+        },
+        {
+          "caller": "exact_metrics",
+          "callee": "str",
+          "lineNumber": 234
+        },
+        {
+          "caller": "exact_metrics",
+          "callee": "range",
+          "lineNumber": 234
+        },
+        {
+          "caller": "exact_metrics",
+          "callee": "zip",
+          "lineNumber": 236
+        },
+        {
+          "caller": "exact_metrics",
+          "callee": "config.meets",
+          "lineNumber": 238
+        },
+        {
+          "caller": "exact_metrics",
+          "callee": "config.meets",
+          "lineNumber": 239
+        },
+        {
+          "caller": "exact_metrics",
+          "callee": "config.score",
+          "lineNumber": 240
+        },
+        {
+          "caller": "exact_metrics",
+          "callee": "str",
+          "lineNumber": 241
+        },
+        {
+          "caller": "exact_metrics",
+          "callee": "range",
+          "lineNumber": 242
+        },
+        {
+          "caller": "exact_metrics",
+          "callee": "dict",
+          "lineNumber": 245
+        },
+        {
+          "caller": "exact_metrics",
+          "callee": "zip",
+          "lineNumber": 245
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "tuple",
+          "lineNumber": 248
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "range",
+          "lineNumber": 248
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "len",
+          "lineNumber": 249
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "len",
+          "lineNumber": 249
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "set",
+          "lineNumber": 249
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "any",
+          "lineNumber": 249
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "element_of",
+          "lineNumber": 251
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "len",
+          "lineNumber": 252
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "set",
+          "lineNumber": 252
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "sum",
+          "lineNumber": 252
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "sum",
+          "lineNumber": 254
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "elements.count",
+          "lineNumber": 257
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "any",
+          "lineNumber": 259
+        },
+        {
+          "caller": "validate_sample",
+          "callee": "context.allowed",
+          "lineNumber": 259
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 9,
+        "classCount": 4
+      }
+    },
+    {
+      "path": "randomyst/storage.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 45,
+      "classes": [
+        {
+          "name": "DrawStore",
+          "startLine": 11,
+          "endLine": 52,
+          "methods": [
+            "__init__",
+            "connect",
+            "execute",
+            "history",
+            "get"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DrawStore",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "str",
+          "lineNumber": 13
+        },
+        {
+          "caller": "__init__",
+          "callee": "Path(path).parent.mkdir",
+          "lineNumber": 14
+        },
+        {
+          "caller": "__init__",
+          "callee": "Path",
+          "lineNumber": 14
+        },
+        {
+          "caller": "__init__",
+          "callee": "self.connect",
+          "lineNumber": 15
+        },
+        {
+          "caller": "__init__",
+          "callee": "connection.execute",
+          "lineNumber": 16
+        },
+        {
+          "caller": "connect",
+          "callee": "sqlite3.connect",
+          "lineNumber": 20
+        },
+        {
+          "caller": "connect",
+          "callee": "connection.close",
+          "lineNumber": 25
+        },
+        {
+          "caller": "execute",
+          "callee": "json.dumps",
+          "lineNumber": 28
+        },
+        {
+          "caller": "execute",
+          "callee": "request.model_dump",
+          "lineNumber": 28
+        },
+        {
+          "caller": "execute",
+          "callee": "hashlib.sha256(payload.encode()).hexdigest",
+          "lineNumber": 29
+        },
+        {
+          "caller": "execute",
+          "callee": "hashlib.sha256",
+          "lineNumber": 29
+        },
+        {
+          "caller": "execute",
+          "callee": "payload.encode",
+          "lineNumber": 29
+        },
+        {
+          "caller": "execute",
+          "callee": "self.connect",
+          "lineNumber": 30
+        },
+        {
+          "caller": "execute",
+          "callee": "connection.execute",
+          "lineNumber": 31
+        },
+        {
+          "caller": "execute",
+          "callee": "connection.execute(\"SELECT payload_hash, response FROM draws WHERE request_id=?\", (str(request.request_id),)).fetchone",
+          "lineNumber": 32
+        },
+        {
+          "caller": "execute",
+          "callee": "connection.execute",
+          "lineNumber": 32
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 32
+        },
+        {
+          "caller": "execute",
+          "callee": "EngineError",
+          "lineNumber": 35
+        },
+        {
+          "caller": "execute",
+          "callee": "json.loads",
+          "lineNumber": 36
+        },
+        {
+          "caller": "execute",
+          "callee": "builder",
+          "lineNumber": 37
+        },
+        {
+          "caller": "execute",
+          "callee": "connection.execute",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "str",
+          "lineNumber": 38
+        },
+        {
+          "caller": "execute",
+          "callee": "json.dumps",
+          "lineNumber": 39
+        },
+        {
+          "caller": "history",
+          "callee": "self.connect",
+          "lineNumber": 43
+        },
+        {
+          "caller": "history",
+          "callee": "connection.execute(\"SELECT request_id, created_at, response FROM draws ORDER BY rowid DESC LIMIT ?\", (limit,)).fetchall",
+          "lineNumber": 44
+        },
+        {
+          "caller": "history",
+          "callee": "connection.execute",
+          "lineNumber": 44
+        },
+        {
+          "caller": "history",
+          "callee": "json.loads",
+          "lineNumber": 45
+        },
+        {
+          "caller": "get",
+          "callee": "self.connect",
+          "lineNumber": 48
+        },
+        {
+          "caller": "get",
+          "callee": "connection.execute(\"SELECT response FROM draws WHERE request_id=?\", (str(request_id),)).fetchone",
+          "lineNumber": 49
+        },
+        {
+          "caller": "get",
+          "callee": "connection.execute",
+          "lineNumber": 49
+        },
+        {
+          "caller": "get",
+          "callee": "str",
+          "lineNumber": 49
+        },
+        {
+          "caller": "get",
+          "callee": "EngineError",
+          "lineNumber": 51
+        },
+        {
+          "caller": "get",
+          "callee": "json.loads",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_beijing_calendar.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 138,
+      "nonEmptyLines": 121,
+      "functions": [
+        {
+          "name": "request_at",
+          "startLine": 25,
+          "endLine": 27,
+          "params": [
+            "timestamp"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BeijingCalendarTests",
+          "startLine": 30,
+          "endLine": 138,
+          "methods": [
+            "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+            "test_chinese_new_year_rolls_all_ymd_at_midnight_beijing",
+            "test_23_beijing_changes_hour_without_advancing_lunar_date",
+            "test_leap_month_keeps_month_number",
+            "test_every_hour_branch_boundary_uses_beijing_clock",
+            "test_input_range_uses_vn_year_before_beijing_year_overflow",
+            "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+            "test_clock_boundary_uncertainty_only_no_location_or_eot_error",
+            "test_v4_interpretation_context_requires_beijing_contract",
+            "test_idempotency_preserves_historical_v3_result"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "request_at",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "BeijingCalendarTests",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "request_at",
+          "callee": "str",
+          "lineNumber": 26
+        },
+        {
+          "caller": "request_at",
+          "callee": "uuid4",
+          "lineNumber": 26
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 32
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "beijing_clock",
+          "lineNumber": 33
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "resolve_maihoa",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "self.assertEqual",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "self.assertEqual",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "self.assertEqual",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "NumberEngine",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "engine.draw",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "DrawRequest.model_validate",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "request_at",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "civil.isoformat",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "Random",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "self.assertEqual",
+          "lineNumber": 40
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "self.assertEqual",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+          "callee": "self.assertEqual",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_chinese_new_year_rolls_all_ymd_at_midnight_beijing",
+          "callee": "resolve_maihoa",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_chinese_new_year_rolls_all_ymd_at_midnight_beijing",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_chinese_new_year_rolls_all_ymd_at_midnight_beijing",
+          "callee": "resolve_maihoa",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_chinese_new_year_rolls_all_ymd_at_midnight_beijing",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_chinese_new_year_rolls_all_ymd_at_midnight_beijing",
+          "callee": "self.assertEqual",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_chinese_new_year_rolls_all_ymd_at_midnight_beijing",
+          "callee": "self.assertEqual",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_chinese_new_year_rolls_all_ymd_at_midnight_beijing",
+          "callee": "self.assertEqual",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_23_beijing_changes_hour_without_advancing_lunar_date",
+          "callee": "resolve_maihoa",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_23_beijing_changes_hour_without_advancing_lunar_date",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_23_beijing_changes_hour_without_advancing_lunar_date",
+          "callee": "resolve_maihoa",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_23_beijing_changes_hour_without_advancing_lunar_date",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_23_beijing_changes_hour_without_advancing_lunar_date",
+          "callee": "self.assertEqual",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_23_beijing_changes_hour_without_advancing_lunar_date",
+          "callee": "self.assertEqual",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_23_beijing_changes_hour_without_advancing_lunar_date",
+          "callee": "self.assertEqual",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_leap_month_keeps_month_number",
+          "callee": "resolve_maihoa",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_leap_month_keeps_month_number",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_leap_month_keeps_month_number",
+          "callee": "resolve_maihoa",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_leap_month_keeps_month_number",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_leap_month_keeps_month_number",
+          "callee": "self.assertEqual",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_leap_month_keeps_month_number",
+          "callee": "self.assertEqual",
+          "lineNumber": 65
+        },
+        {
+          "caller": "test_leap_month_keeps_month_number",
+          "callee": "self.assertEqual",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_every_hour_branch_boundary_uses_beijing_clock",
+          "callee": "timezone",
+          "lineNumber": 69
+        },
+        {
+          "caller": "test_every_hour_branch_boundary_uses_beijing_clock",
+          "callee": "timedelta",
+          "lineNumber": 69
+        },
+        {
+          "caller": "test_every_hour_branch_boundary_uses_beijing_clock",
+          "callee": "range",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_every_hour_branch_boundary_uses_beijing_clock",
+          "callee": "datetime",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_every_hour_branch_boundary_uses_beijing_clock",
+          "callee": "resolve_maihoa",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_every_hour_branch_boundary_uses_beijing_clock",
+          "callee": "timedelta",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_every_hour_branch_boundary_uses_beijing_clock",
+          "callee": "resolve_maihoa",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_every_hour_branch_boundary_uses_beijing_clock",
+          "callee": "self.assertEqual",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_every_hour_branch_boundary_uses_beijing_clock",
+          "callee": "self.assertEqual",
+          "lineNumber": 76
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "TestClient",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "create_app",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "Path",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "request_at",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "client.post",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "self.assertEqual",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "response.json",
+          "lineNumber": 84
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "self.assertEqual",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "self.assertEqual",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "str",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "uuid4",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "self.assertEqual",
+          "lineNumber": 89
+        },
+        {
+          "caller": "test_input_range_uses_vn_year_before_beijing_year_overflow",
+          "callee": "client.post",
+          "lineNumber": 89
+        },
+        {
+          "caller": "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+          "callee": "self.assertEqual",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+          "callee": "pillars",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+          "callee": "pillars",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+          "callee": "instant.astimezone",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+          "callee": "beijing_clock",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+          "callee": "beijing_clock",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+          "callee": "instant.astimezone",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+          "callee": "self.assertEqual",
+          "lineNumber": 95
+        },
+        {
+          "caller": "test_clock_boundary_uncertainty_only_no_location_or_eot_error",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_clock_boundary_uncertainty_only_no_location_or_eot_error",
+          "callee": "beijing_clock",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_clock_boundary_uncertainty_only_no_location_or_eot_error",
+          "callee": "self.assertEqual",
+          "lineNumber": 100
+        },
+        {
+          "caller": "test_clock_boundary_uncertainty_only_no_location_or_eot_error",
+          "callee": "self.assertEqual",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_clock_boundary_uncertainty_only_no_location_or_eot_error",
+          "callee": "self.assertEqual",
+          "lineNumber": 102
+        },
+        {
+          "caller": "test_clock_boundary_uncertainty_only_no_location_or_eot_error",
+          "callee": "self.assertNotIn",
+          "lineNumber": 103
+        },
+        {
+          "caller": "test_clock_boundary_uncertainty_only_no_location_or_eot_error",
+          "callee": "self.assertFalse",
+          "lineNumber": 104
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "json.loads",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "(ROOT/'schemas/interpretation_context.schema.json').read_text",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "Draft202012Validator",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "json.loads",
+          "lineNumber": 109
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "(ROOT/'schemas/examples/interpretation_context.example.json').read_text",
+          "lineNumber": 109
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "validator.validate",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "deepcopy",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "self.assertRaises",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "validator.validate",
+          "lineNumber": 114
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "validator.validate",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "self.assertRaises",
+          "lineNumber": 122
+        },
+        {
+          "caller": "test_v4_interpretation_context_requires_beijing_contract",
+          "callee": "validator.validate",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 126
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "create_app",
+          "lineNumber": 127
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "Path",
+          "lineNumber": 127
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "json.loads",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "(ROOT/'docs/archive/draw_request_v3.json').read_text",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "DrawRequest.model_validate",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "json.loads",
+          "lineNumber": 130
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "(ROOT/'docs/archive/draw_response_v3.json').read_text",
+          "lineNumber": 130
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "app.state.store.execute",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "TestClient",
+          "lineNumber": 132
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "client.post",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "self.assertEqual",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "self.assertEqual",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "replay.json",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "self.assertEqual",
+          "lineNumber": 136
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "client.get('/api/v1/history').json",
+          "lineNumber": 136
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "client.get",
+          "lineNumber": 136
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "str",
+          "lineNumber": 137
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "uuid4",
+          "lineNumber": 137
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "self.assertEqual",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "client.post('/api/v1/draw', json=data).json",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_idempotency_preserves_historical_v3_result",
+          "callee": "client.post",
+          "lineNumber": 138
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 233,
+      "nonEmptyLines": 207,
+      "functions": [
+        {
+          "name": "payload",
+          "startLine": 26,
+          "endLine": 28,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "RuntimeTests",
+          "startLine": 31,
+          "endLine": 180,
+          "methods": [
+            "setUpClass",
+            "test_all_64_hexagrams_and_384_changes",
+            "test_library_jie_changes_at_beijing_instant",
+            "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+            "test_clock_metadata_has_no_solar_correction",
+            "test_natal_stars_dedup_multi_element_and_casting_month",
+            "test_draw_output_and_frozen_retry",
+            "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+            "test_legacy_locations_do_not_change_calendar_or_numbers",
+            "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+            "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+            "test_pillars_match_6tail_converted_beijing_clock"
+          ],
+          "properties": []
+        },
+        {
+          "name": "ApiTests",
+          "startLine": 183,
+          "endLine": 230,
+          "methods": [
+            "setUp",
+            "tearDown",
+            "test_api_idempotency_history_and_conflicting_payload",
+            "test_concurrent_same_request_creates_one_result",
+            "test_invalid_input_timezone_range_and_multiple_sets_parameter",
+            "test_current_click_timestamp_preserved_with_clock_warning"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "payload",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "RuntimeTests",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "ApiTests",
+          "line": 183,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "payload",
+          "callee": "str",
+          "lineNumber": 27
+        },
+        {
+          "caller": "payload",
+          "callee": "uuid4",
+          "lineNumber": 27
+        },
+        {
+          "caller": "setUpClass",
+          "callee": "NumberEngine",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "IchingRepository",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "set",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "product",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "range",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "repository.metadata",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "seen.add",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "range",
+          "lineNumber": 43
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "list",
+          "lineNumber": 44
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "repository.metadata",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "self.assertEqual",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "sum",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "zip",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "self.assertEqual",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "len",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "repository.calculate",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "self.assertEqual",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "self.assertRaises",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "repository.calculate",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "next",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "repository.by_bits.items",
+          "lineNumber": 51
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_changes",
+          "callee": "self.assertNotIn",
+          "lineNumber": 52
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "timedelta",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "self.assertEqual",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "solar_month",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "self.assertEqual",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "solar_month",
+          "lineNumber": 58
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "self.assertEqual",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "pillars",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "self.assertEqual",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "pillars",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "self.assertEqual",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "resolve_maihoa",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "self.assertEqual",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_library_jie_changes_at_beijing_instant",
+          "callee": "resolve_maihoa",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "pillars",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "pillars",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "timedelta",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "pillars",
+          "lineNumber": 69
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "timedelta",
+          "lineNumber": 69
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "self.assertEqual",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "self.assertEqual",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "self.assertEqual",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "resolve_maihoa",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "timedelta",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+          "callee": "self.assertEqual",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_clock_metadata_has_no_solar_correction",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 77
+        },
+        {
+          "caller": "test_clock_metadata_has_no_solar_correction",
+          "callee": "beijing_clock",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_clock_metadata_has_no_solar_correction",
+          "callee": "self.assertEqual",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_clock_metadata_has_no_solar_correction",
+          "callee": "self.assertFalse",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_clock_metadata_has_no_solar_correction",
+          "callee": "self.assertEqual",
+          "lineNumber": 81
+        },
+        {
+          "caller": "test_clock_metadata_has_no_solar_correction",
+          "callee": "self.assertNotIn",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_natal_stars_dedup_multi_element_and_casting_month",
+          "callee": "star_bonuses",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_natal_stars_dedup_multi_element_and_casting_month",
+          "callee": "self.assertEqual",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_natal_stars_dedup_multi_element_and_casting_month",
+          "callee": "self.assertEqual",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_natal_stars_dedup_multi_element_and_casting_month",
+          "callee": "self.assertEqual",
+          "lineNumber": 89
+        },
+        {
+          "caller": "test_natal_stars_dedup_multi_element_and_casting_month",
+          "callee": "len",
+          "lineNumber": 89
+        },
+        {
+          "caller": "test_natal_stars_dedup_multi_element_and_casting_month",
+          "callee": "star_bonuses",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_natal_stars_dedup_multi_element_and_casting_month",
+          "callee": "self.assertEqual",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_natal_stars_dedup_multi_element_and_casting_month",
+          "callee": "self.assertEqual",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_natal_stars_dedup_multi_element_and_casting_month",
+          "callee": "len",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "DrawRequest.model_validate",
+          "lineNumber": 96
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "payload",
+          "lineNumber": 96
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "range",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "self.engine.draw",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "Random",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "self.assertEqual",
+          "lineNumber": 100
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "len",
+          "lineNumber": 100
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "set",
+          "lineNumber": 100
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "self.assertTrue",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "all",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "len",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "int",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "self.assertEqual",
+          "lineNumber": 102
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "self.assertLessEqual",
+          "lineNumber": 103
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "self.assertTrue",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "all",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "len",
+          "lineNumber": 106
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "self.assertEqual",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "sum",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "int",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_draw_output_and_frozen_retry",
+          "callee": "self.assertTrue",
+          "lineNumber": 109
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "Random",
+          "lineNumber": 112
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "product",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "select_context",
+          "lineNumber": 114
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "configurations",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "max",
+          "lineNumber": 116
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "configurations",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "c.meets",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "self.assertTrue",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "range",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "context.allowed",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "element_of",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "Distribution",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "Distribution",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "range",
+          "lineNumber": 121
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "distribution.sample",
+          "lineNumber": 122
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "self.assertTrue",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "validate_sample",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "self.assertTrue",
+          "lineNumber": 124
+        },
+        {
+          "caller": "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+          "callee": "configuration.meets",
+          "lineNumber": 124
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "payload",
+          "lineNumber": 127
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "self.engine.draw",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "DrawRequest.model_validate",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "Random",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "data['birth'].pop",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "self.engine.draw",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "DrawRequest.model_validate",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "Random",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "self.assertEqual",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "self.assertEqual",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_legacy_locations_do_not_change_calendar_or_numbers",
+          "callee": "self.assertFalse",
+          "lineNumber": 136
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "DrawRequest.model_validate",
+          "lineNumber": 139
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "payload",
+          "lineNumber": 139
+        },
+        {
+          "caller": "restricted",
+          "callee": "configurations",
+          "lineNumber": 141
+        },
+        {
+          "caller": "restricted",
+          "callee": "min",
+          "lineNumber": 143
+        },
+        {
+          "caller": "restricted",
+          "callee": "max",
+          "lineNumber": 144
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "patch",
+          "lineNumber": 146
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "self.engine.draw",
+          "lineNumber": 147
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "Random",
+          "lineNumber": 147
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "self.assertEqual",
+          "lineNumber": 148
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "self.assertEqual",
+          "lineNumber": 149
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "self.assertEqual",
+          "lineNumber": 150
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "self.assertEqual",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "len",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "set",
+          "lineNumber": 151
+        },
+        {
+          "caller": "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+          "callee": "self.assertLess",
+          "lineNumber": 152
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "DrawRequest.model_validate",
+          "lineNumber": 155
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "payload",
+          "lineNumber": 155
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "self.engine.draw",
+          "lineNumber": 156
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "Random",
+          "lineNumber": 156
+        },
+        {
+          "caller": "altered",
+          "callee": "original_calculate",
+          "lineNumber": 159
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "patch.object",
+          "lineNumber": 163
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "self.engine.draw",
+          "lineNumber": 164
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "Random",
+          "lineNumber": 164
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "self.assertEqual",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "self.assertEqual",
+          "lineNumber": 166
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "self.assertEqual",
+          "lineNumber": 167
+        },
+        {
+          "caller": "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+          "callee": "self.assertEqual",
+          "lineNumber": 168
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "Random",
+          "lineNumber": 172
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "range",
+          "lineNumber": 173
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "datetime",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "rng.randrange",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "rng.randrange",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "rng.randrange",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "rng.randrange",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "timezone",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "timedelta",
+          "lineNumber": 174
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "pillars",
+          "lineNumber": 175
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "civil.astimezone",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "Solar.fromYmdHms(utc8.year,utc8.month,utc8.day,utc8.hour,utc8.minute,utc8.second).getLunar().getEightChar",
+          "lineNumber": 177
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "Solar.fromYmdHms(utc8.year,utc8.month,utc8.day,utc8.hour,utc8.minute,utc8.second).getLunar",
+          "lineNumber": 177
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "Solar.fromYmdHms",
+          "lineNumber": 177
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "chart.setSect",
+          "lineNumber": 178
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "chart.getYear",
+          "lineNumber": 179
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "chart.getMonth",
+          "lineNumber": 179
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "chart.getDay",
+          "lineNumber": 179
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "chart.getTime",
+          "lineNumber": 179
+        },
+        {
+          "caller": "test_pillars_match_6tail_converted_beijing_clock",
+          "callee": "self.assertEqual",
+          "lineNumber": 180
+        },
+        {
+          "caller": "setUp",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 185
+        },
+        {
+          "caller": "setUp",
+          "callee": "TestClient",
+          "lineNumber": 186
+        },
+        {
+          "caller": "setUp",
+          "callee": "create_app",
+          "lineNumber": 186
+        },
+        {
+          "caller": "setUp",
+          "callee": "Path",
+          "lineNumber": 186
+        },
+        {
+          "caller": "tearDown",
+          "callee": "self.client.close",
+          "lineNumber": 189
+        },
+        {
+          "caller": "tearDown",
+          "callee": "self.directory.cleanup",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "payload",
+          "lineNumber": 192
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.client.post",
+          "lineNumber": 193
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.assertEqual",
+          "lineNumber": 194
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.client.post",
+          "lineNumber": 195
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.assertEqual",
+          "lineNumber": 196
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "first.json",
+          "lineNumber": 196
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "second.json",
+          "lineNumber": 196
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.assertEqual",
+          "lineNumber": 197
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "len",
+          "lineNumber": 197
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.client.get('/api/v1/history').json",
+          "lineNumber": 197
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.client.get",
+          "lineNumber": 197
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "deepcopy",
+          "lineNumber": 198
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.assertEqual",
+          "lineNumber": 199
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.client.post",
+          "lineNumber": 199
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.assertEqual",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.client.get('/api/v1/health').json",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.client.get",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.assertEqual",
+          "lineNumber": 201
+        },
+        {
+          "caller": "test_api_idempotency_history_and_conflicting_payload",
+          "callee": "self.client.get",
+          "lineNumber": 201
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "payload",
+          "lineNumber": 204
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "ThreadPoolExecutor",
+          "lineNumber": 205
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "list",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "pool.map",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "self.client.post",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "range",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "self.assertTrue",
+          "lineNumber": 207
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "all",
+          "lineNumber": 207
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "self.assertEqual",
+          "lineNumber": 208
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "responses[0].json",
+          "lineNumber": 208
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "responses[1].json",
+          "lineNumber": 208
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "self.assertEqual",
+          "lineNumber": 209
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "responses[0].json",
+          "lineNumber": 209
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "responses[2].json",
+          "lineNumber": 209
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "self.assertEqual",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "len",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "self.client.get('/api/v1/history').json",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_concurrent_same_request_creates_one_result",
+          "callee": "self.client.get",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_invalid_input_timezone_range_and_multiple_sets_parameter",
+          "callee": "payload",
+          "lineNumber": 214
+        },
+        {
+          "caller": "test_invalid_input_timezone_range_and_multiple_sets_parameter",
+          "callee": "self.client.post",
+          "lineNumber": 218
+        },
+        {
+          "caller": "test_invalid_input_timezone_range_and_multiple_sets_parameter",
+          "callee": "self.assertEqual",
+          "lineNumber": 219
+        },
+        {
+          "caller": "test_invalid_input_timezone_range_and_multiple_sets_parameter",
+          "callee": "self.assertEqual",
+          "lineNumber": 220
+        },
+        {
+          "caller": "test_invalid_input_timezone_range_and_multiple_sets_parameter",
+          "callee": "response.json",
+          "lineNumber": 220
+        },
+        {
+          "caller": "test_current_click_timestamp_preserved_with_clock_warning",
+          "callee": "payload",
+          "lineNumber": 223
+        },
+        {
+          "caller": "test_current_click_timestamp_preserved_with_clock_warning",
+          "callee": "self.client.post",
+          "lineNumber": 224
+        },
+        {
+          "caller": "test_current_click_timestamp_preserved_with_clock_warning",
+          "callee": "self.assertEqual",
+          "lineNumber": 225
+        },
+        {
+          "caller": "test_current_click_timestamp_preserved_with_clock_warning",
+          "callee": "response.json",
+          "lineNumber": 226
+        },
+        {
+          "caller": "test_current_click_timestamp_preserved_with_clock_warning",
+          "callee": "self.assertEqual",
+          "lineNumber": 227
+        },
+        {
+          "caller": "test_current_click_timestamp_preserved_with_clock_warning",
+          "callee": "self.assertIn",
+          "lineNumber": 228
+        },
+        {
+          "caller": "test_current_click_timestamp_preserved_with_clock_warning",
+          "callee": "self.assertEqual",
+          "lineNumber": 229
+        },
+        {
+          "caller": "test_current_click_timestamp_preserved_with_clock_warning",
+          "callee": "self.assertEqual",
+          "lineNumber": 230
+        },
+        {
+          "caller": "test_current_click_timestamp_preserved_with_clock_warning",
+          "callee": "self.client.get",
+          "lineNumber": 230
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "tests/test_source_explanations.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 135,
+      "nonEmptyLines": 121,
+      "classes": [
+        {
+          "name": "SourceExplanationTests",
+          "startLine": 21,
+          "endLine": 131,
+          "methods": [
+            "setUpClass",
+            "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+            "test_missing_thoan_32_is_not_filled_or_disguised_as_a_translation",
+            "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+            "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+            "test_reading_does_not_mutate_saved_numbers_or_computed_context",
+            "test_response_validation_rejects_wrong_references_hash_and_source_url",
+            "test_api_readonly_idempotent_and_historical_v3_supported"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SourceExplanationTests",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setUpClass",
+          "callee": "NumberEngine",
+          "lineNumber": 24
+        },
+        {
+          "caller": "setUpClass",
+          "callee": "ExplanationRepository",
+          "lineNumber": 25
+        },
+        {
+          "caller": "setUpClass",
+          "callee": "DrawRequest.model_validate",
+          "lineNumber": 26
+        },
+        {
+          "caller": "setUpClass",
+          "callee": "json.loads",
+          "lineNumber": 26
+        },
+        {
+          "caller": "setUpClass",
+          "callee": "(ROOT / \"examples/draw_request.json\").read_text",
+          "lineNumber": 26
+        },
+        {
+          "caller": "setUpClass",
+          "callee": "cls.engine.draw",
+          "lineNumber": 27
+        },
+        {
+          "caller": "setUpClass",
+          "callee": "Random",
+          "lineNumber": 27
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "self.repository.by_id.items",
+          "lineNumber": 30
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "range",
+          "lineNumber": 31
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "self.repository.hexagram",
+          "lineNumber": 32
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "self.assertEqual",
+          "lineNumber": 34
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "self.assertEqual",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "next",
+          "lineNumber": 35
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "self.assertEqual",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "SourceCard.model_validate",
+          "lineNumber": 38
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "self.assertEqual",
+          "lineNumber": 39
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "self.assertEqual",
+          "lineNumber": 40
+        },
+        {
+          "caller": "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+          "callee": "self.assertTrue",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_missing_thoan_32_is_not_filled_or_disguised_as_a_translation",
+          "callee": "self.repository.hexagram",
+          "lineNumber": 44
+        },
+        {
+          "caller": "test_missing_thoan_32_is_not_filled_or_disguised_as_a_translation",
+          "callee": "self.assertTrue",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_missing_thoan_32_is_not_filled_or_disguised_as_a_translation",
+          "callee": "any",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_missing_thoan_32_is_not_filled_or_disguised_as_a_translation",
+          "callee": "self.assertFalse",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_missing_thoan_32_is_not_filled_or_disguised_as_a_translation",
+          "callee": "any",
+          "lineNumber": 46
+        },
+        {
+          "caller": "test_missing_thoan_32_is_not_filled_or_disguised_as_a_translation",
+          "callee": "next",
+          "lineNumber": 48
+        },
+        {
+          "caller": "test_missing_thoan_32_is_not_filled_or_disguised_as_a_translation",
+          "callee": "self.assertEqual",
+          "lineNumber": 49
+        },
+        {
+          "caller": "test_missing_thoan_32_is_not_filled_or_disguised_as_a_translation",
+          "callee": "self.assertIsNone",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+          "callee": "self.repository.bazi[\"stems\"].items",
+          "lineNumber": 54
+        },
+        {
+          "caller": "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+          "callee": "deepcopy",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+          "callee": "self.repository.natal",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+          "callee": "self.assertEqual",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+          "callee": "self.assertEqual",
+          "lineNumber": 61
+        },
+        {
+          "caller": "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+          "callee": "self.assertEqual",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+          "callee": "self.assertTrue",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+          "callee": "all",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+          "callee": "self.assertTrue",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+          "callee": "all",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+          "callee": "deepcopy",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+          "callee": "bazi.update",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+          "callee": "self.repository.natal",
+          "lineNumber": 69
+        },
+        {
+          "caller": "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+          "callee": "self.assertEqual",
+          "lineNumber": 70
+        },
+        {
+          "caller": "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+          "callee": "self.assertEqual",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+          "callee": "len",
+          "lineNumber": 71
+        },
+        {
+          "caller": "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+          "callee": "self.assertTrue",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+          "callee": "self.assertEqual",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+          "callee": "self.assertEqual",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_reading_does_not_mutate_saved_numbers_or_computed_context",
+          "callee": "deepcopy",
+          "lineNumber": 77
+        },
+        {
+          "caller": "test_reading_does_not_mutate_saved_numbers_or_computed_context",
+          "callee": "self.repository.explain",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_reading_does_not_mutate_saved_numbers_or_computed_context",
+          "callee": "SourceExplanation.model_validate",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_reading_does_not_mutate_saved_numbers_or_computed_context",
+          "callee": "self.assertEqual",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_reading_does_not_mutate_saved_numbers_or_computed_context",
+          "callee": "self.assertFalse",
+          "lineNumber": 81
+        },
+        {
+          "caller": "test_reading_does_not_mutate_saved_numbers_or_computed_context",
+          "callee": "self.assertFalse",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_reading_does_not_mutate_saved_numbers_or_computed_context",
+          "callee": "self.assertFalse",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_reading_does_not_mutate_saved_numbers_or_computed_context",
+          "callee": "self.assertEqual",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_response_validation_rejects_wrong_references_hash_and_source_url",
+          "callee": "self.repository.hexagram",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_response_validation_rejects_wrong_references_hash_and_source_url",
+          "callee": "deepcopy",
+          "lineNumber": 90
+        },
+        {
+          "caller": "test_response_validation_rejects_wrong_references_hash_and_source_url",
+          "callee": "self.assertRaises",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_response_validation_rejects_wrong_references_hash_and_source_url",
+          "callee": "SourceCard.model_validate",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_response_validation_rejects_wrong_references_hash_and_source_url",
+          "callee": "deepcopy",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_response_validation_rejects_wrong_references_hash_and_source_url",
+          "callee": "self.assertRaises",
+          "lineNumber": 96
+        },
+        {
+          "caller": "test_response_validation_rejects_wrong_references_hash_and_source_url",
+          "callee": "SourceCard.model_validate",
+          "lineNumber": 97
+        },
+        {
+          "caller": "test_response_validation_rejects_wrong_references_hash_and_source_url",
+          "callee": "deepcopy",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_response_validation_rejects_wrong_references_hash_and_source_url",
+          "callee": "self.assertRaises",
+          "lineNumber": 100
+        },
+        {
+          "caller": "test_response_validation_rejects_wrong_references_hash_and_source_url",
+          "callee": "self.repository.explain",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 104
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "create_app",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "Path",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "TestClient",
+          "lineNumber": 106
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "json.loads",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "(ROOT / \"examples/draw_request.json\").read_text",
+          "lineNumber": 107
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "str",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "uuid4",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.post(\"/api/v1/draw\", json=payload).json",
+          "lineNumber": 109
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.post",
+          "lineNumber": 109
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get(\"/api/v1/history\").json",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "patch.object",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "AssertionError",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "range",
+          "lineNumber": 112
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "self.assertEqual",
+          "lineNumber": 114
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "self.assertEqual",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "response.json",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "SourceExplanation.model_validate",
+          "lineNumber": 116
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "response.json",
+          "lineNumber": 116
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "self.assertEqual",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get(\"/api/v1/draw/\" + payload[\"request_id\"]).json",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "self.assertEqual",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get(\"/api/v1/history\").json",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "self.assertEqual",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.post(\"/api/v1/draw\", json=payload).json",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.post",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "str",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "uuid4",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "self.assertEqual",
+          "lineNumber": 121
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "self.assertEqual",
+          "lineNumber": 122
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get",
+          "lineNumber": 122
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "json.loads",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "(ROOT / \"docs/archive/draw_response_v3.json\").read_text",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "app.state.store.connect",
+          "lineNumber": 124
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "connection.execute",
+          "lineNumber": 125
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "json.dumps",
+          "lineNumber": 127
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "self.assertEqual",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "self.assertEqual",
+          "lineNumber": 130
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "old.json",
+          "lineNumber": 130
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "self.assertEqual",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get(\"/api/v1/draw/\" + archived[\"request_id\"]).json",
+          "lineNumber": 131
+        },
+        {
+          "caller": "test_api_readonly_idempotent_and_historical_v3_supported",
+          "callee": "client.get",
+          "lineNumber": 131
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

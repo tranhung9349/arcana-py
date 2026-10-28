@@ -1,0 +1,44 @@
+{
+  "checked_date_utc7": "2026-10-15",
+  "url": "http://127.0.0.1:8766/",
+  "method": "Manual browser verification using the existing in-app browser, plus node --check web/dates.js",
+  "viewport": {"width": 690, "height": 988, "override_used": false},
+  "fixture": {
+    "activity": "BUSINESS_OPENING",
+    "birth_datetime_utc7": "1994-10-08T05:00:00+07:00",
+    "override_dung_than": "Thổ",
+    "date_range": {"start": "2026-12-22", "end": "2026-12-31"},
+    "allowed_hours": {"start": "06:00", "end": "22:00"},
+    "good_date": "2026-12-29",
+    "empty_date": "2026-12-30"
+  },
+  "checks": {
+    "javascript_syntax_passed": true,
+    "all_ten_cards_are_160px_high": true,
+    "no_card_content_overflow": true,
+    "cards_show_count_and_action_without_hour_list": true,
+    "popup_lists_all_six_good_windows_in_time_order": true,
+    "hour_branch_and_start_end_labels_retained": true,
+    "empty_day_shows_explanation_without_stale_good_hours": true,
+    "detail_disclosure_loads_all_eight_windows": true,
+    "detail_uses_gia_chu_label": true,
+    "long_detail_scrolls_inside_popup_with_close_button_visible": true,
+    "no_popup_horizontal_overflow": true,
+    "tab_and_shift_tab_wrap_within_popup": true,
+    "escape_closes_and_restores_card_focus": true,
+    "close_button_closes_and_restores_card_focus": true,
+    "outside_click_closes_and_restores_card_focus": true,
+    "background_scroll_locked_only_while_popup_open": true
+  },
+  "good_window_labels": [
+    "Giờ Thìn - Từ 06:00 đến 08:00",
+    "Giờ Tỵ - Từ 08:00 đến 10:00",
+    "Giờ Ngọ - Từ 10:00 đến 12:00",
+    "Giờ Thân - Từ 14:00 đến 16:00",
+    "Giờ Dậu - Từ 16:00 đến 18:00",
+    "Giờ Tuất - Từ 18:00 đến 20:00"
+  ],
+  "screenshots": {"cards": "mvp2_popup_cards.jpg", "popup": "mvp2_popup_ui.jpg"},
+  "scope": "Frontend display only; no API, schema, corpus or scoring changes. Backend suite was not rerun for this display-only change.",
+  "limitations": "Verified at the existing viewport. Detail error/retry and abort paths were reviewed in code, not simulated in the browser."
+}

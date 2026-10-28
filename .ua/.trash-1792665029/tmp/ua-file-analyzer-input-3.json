@@ -1,0 +1,13 @@
+{
+  "projectRoot": "/Users/tranduyhung/Work/randomyst_numbers",
+  "batchFiles": [
+    {"path": "randomyst/date_models.py", "language": "python", "sizeLines": 236, "fileCategory": "code"},
+    {"path": "randomyst/geolocation.py", "language": "python", "sizeLines": 28, "fileCategory": "code"},
+    {"path": "randomyst/models.py", "language": "python", "sizeLines": 218, "fileCategory": "code"},
+    {"path": "scripts/build_date_data.py", "language": "python", "sizeLines": 119, "fileCategory": "code"},
+    {"path": "scripts/smoke_dates.py", "language": "python", "sizeLines": 123, "fileCategory": "code"},
+    {"path": "scripts/smoke_mvp.py", "language": "python", "sizeLines": 38, "fileCategory": "code"},
+    {"path": "scripts/smoke_source_explanations.py", "language": "python", "sizeLines": 35, "fileCategory": "code"}
+  ],
+  "batchImportData": {"randomyst/date_models.py":["randomyst/models.py"],"randomyst/geolocation.py":["randomyst/models.py"],"randomyst/models.py":[],"scripts/build_date_data.py":["randomyst/date_models.py","randomyst/time_engine.py"],"scripts/smoke_dates.py":["randomyst/date_models.py"],"scripts/smoke_mvp.py":["randomyst/models.py"],"scripts/smoke_source_explanations.py":["randomyst/models.py"]}
+}

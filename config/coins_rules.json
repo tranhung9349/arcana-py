@@ -1,0 +1,25 @@
+{
+  "rules_version": "three-coins-liuyao-2026-10-26-v1",
+  "method": "THREE_COINS_SIX_THROWS",
+  "convention": "Mặt lưng (背, BACK) = 3; mặt chữ (字, INSCRIPTION) = 2. Lượt 1 là hào dưới cùng; lượt 6 là hào trên cùng.",
+  "palace_stages": ["Bản cung", "Nhất thế", "Nhị thế", "Tam thế", "Tứ thế", "Ngũ thế", "Du hồn", "Quy hồn"],
+  "najia": {
+    "1": {"lower_stem": 0, "upper_stem": 8, "branches": [0, 2, 4, 6, 8, 10]},
+    "2": {"lower_stem": 3, "upper_stem": 3, "branches": [5, 3, 1, 11, 9, 7]},
+    "3": {"lower_stem": 5, "upper_stem": 5, "branches": [3, 1, 11, 9, 7, 5]},
+    "4": {"lower_stem": 6, "upper_stem": 6, "branches": [0, 2, 4, 6, 8, 10]},
+    "5": {"lower_stem": 7, "upper_stem": 7, "branches": [1, 11, 9, 7, 5, 3]},
+    "6": {"lower_stem": 4, "upper_stem": 4, "branches": [2, 4, 6, 8, 10, 0]},
+    "7": {"lower_stem": 2, "upper_stem": 2, "branches": [4, 6, 8, 10, 0, 2]},
+    "8": {"lower_stem": 1, "upper_stem": 9, "branches": [7, 5, 3, 1, 11, 9]}
+  },
+  "spirits": ["Thanh Long", "Chu Tước", "Câu Trần", "Đằng Xà", "Bạch Hổ", "Huyền Vũ"],
+  "day_stem_spirit_start": [0, 0, 1, 1, 2, 3, 4, 4, 5, 5],
+  "calendar_policy": "Giờ nhập UTC+7 đổi sang Bắc Kinh UTC+8 một lần, theo profile lịch hiện có của app; tháng theo tiết khí, ngày Can Chi đổi lúc 23:00 Bắc Kinh. Đây là quy ước sản phẩm được công khai, không phải chuẩn múi giờ duy nhất của mọi phái Lục Hào.",
+  "sources": [
+    {"title": "Bốc Phệ Chính Tông · quyển 1", "url": "https://www.shidianguji.com/book/AMNL0060/chapter/1ma05akk4w74j", "sections": ["以錢代蓍法", "六十四卦名", "納甲裝卦歌", "安世應訣", "六獸歌", "六甲旬空起例", "月破定例"], "status": "ELECTRONIC_TRANSCRIPTION_OCR_VARIANTS"},
+    {"title": "Bốc Phệ Toàn Thư · Dùng tiền thay cỏ thi", "url": "https://www.shidianguji.com/zh/book/HY1394/chapter/1l3wdooougilw", "sections": ["以錢代蓍法"], "status": "ELECTRONIC_TRANSCRIPTION"},
+    {"title": "Bốc Phệ Chính Tông · Nạp Giáp trang quái ca", "url": "https://changxianyi.com/guji/bushi/wz-20260915/chapter-018/", "sections": ["納甲裝卦歌"], "status": "CROSS_CHECKED_TRANSCRIPTION"},
+    {"title": "University of Oregon · I Ching readings", "url": "https://hexadecimal.uoregon.edu/ching/explain.html", "sections": ["6/7/8/9 and bottom-to-top ordering"], "status": "REPRESENTATION_CROSS_CHECK"}
+  ]
+}

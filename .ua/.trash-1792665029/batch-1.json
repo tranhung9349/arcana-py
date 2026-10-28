@@ -1,0 +1,1429 @@
+{
+ "nodes": [
+  {
+   "id": "file:randomyst/bazi.py",
+   "type": "file",
+   "name": "bazi.py",
+   "filePath": "randomyst/bazi.py",
+   "summary": "Port số học của module ngu_hanh.js (tinix-bazi, commit đã ghim) để phân tích Bát Tự: xác định Thập Thần, cách cục, vượng/nhược và Dụng/Hỷ/Kỵ Thần, cùng tính điểm thưởng sao Thiên Ất, Văn Xương, Thiên Đức.",
+   "tags": [
+    "bazi",
+    "ngũ-hành",
+    "phân-tích-mệnh",
+    "domain-logic",
+    "utility"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Bảng tra cứu dạng tuple bất biến (JIAN_LU, THIEN_AT, THIEN_DUC) thay cho cấu trúc điều kiện, giúp port 1:1 từ JavaScript dễ đối chiếu."
+  },
+  {
+   "id": "function:randomyst/bazi.py:deity",
+   "type": "function",
+   "name": "deity",
+   "filePath": "randomyst/bazi.py",
+   "lineRange": [
+    17,
+    28
+   ],
+   "summary": "Xác định Thập Thần (Tỷ, Kiếp, Thực, Thương, Tài, Quan, Sát, Ấn, Kiêu) giữa can ngày và một can khác dựa trên ngũ hành và âm dương.",
+   "tags": [
+    "function",
+    "utility",
+    "bazi"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/bazi.py:structure",
+   "type": "function",
+   "name": "structure",
+   "filePath": "randomyst/bazi.py",
+   "lineRange": [
+    31,
+    38
+   ],
+   "summary": "Xác định cách cục nội cách từ can ngày và trụ tháng (Kiến Lộc hoặc ánh xạ Thập Thần sang tên cách).",
+   "tags": [
+    "function",
+    "utility",
+    "bazi"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/bazi.py:analyze",
+   "type": "function",
+   "name": "analyze",
+   "filePath": "randomyst/bazi.py",
+   "lineRange": [
+    41,
+    96
+   ],
+   "summary": "Phân tích Bát Tự từ 4 can và 4 chi: tính điểm hỗ trợ/khắc chế, nhận diện ngoại cách/nội cách, vượng nhược, Dụng/Hỷ/Kỵ Thần và điều hậu.",
+   "tags": [
+    "function",
+    "utility",
+    "bazi"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:randomyst/bazi.py:star_bonuses",
+   "type": "function",
+   "name": "star_bonuses",
+   "filePath": "randomyst/bazi.py",
+   "lineRange": [
+    106,
+    120
+   ],
+   "summary": "Tính các sao cát Thiên Ất, Văn Xương (theo can ngày) và Thiên Đức (theo tháng gieo) khớp với lá số, trả về điểm cộng theo ngũ hành.",
+   "tags": [
+    "function",
+    "utility",
+    "bazi"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:randomyst/date_calendar.py",
+   "type": "file",
+   "name": "date_calendar.py",
+   "filePath": "randomyst/date_calendar.py",
+   "summary": "Nạp corpus lịch vạn niên Yi/Ji đã nén gzip và kiểm tra hash (corpus, dữ liệu thô, mã nguồn provider), rồi cung cấp phân đoạn khung giờ trong ngày UTC+7, tra cứu dữ kiện lịch tại một thời điểm và cảnh báo biên giờ sinh.",
+   "tags": [
+    "calendar",
+    "data-loader",
+    "validation",
+    "service",
+    "lịch-bắc-kinh"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Kiểm tra tính toàn vẹn bằng SHA-256 ở cả ba tầng (file nén, dữ liệu giải nén, mã nguồn thư viện) trước khi dùng dữ liệu."
+  },
+  {
+   "id": "class:randomyst/date_calendar.py:DateDataError",
+   "type": "class",
+   "name": "DateDataError",
+   "filePath": "randomyst/date_calendar.py",
+   "lineRange": [
+    21,
+    22
+   ],
+   "summary": "Ngoại lệ báo lỗi dữ liệu corpus lịch ngày không hợp lệ hoặc sai hash.",
+   "tags": [
+    "class",
+    "service",
+    "calendar"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_calendar.py:DateCalendar",
+   "type": "class",
+   "name": "DateCalendar",
+   "filePath": "randomyst/date_calendar.py",
+   "lineRange": [
+    25,
+    91
+   ],
+   "summary": "Corpus lịch dùng chung, bất biến: kiểm hash khi khởi tạo, chia khung giờ theo giờ chi và tiết khí, tra dữ kiện can-chi/Yi-Ji tại một thời điểm, đánh giá biên bất định giờ sinh.",
+   "tags": [
+    "class",
+    "service",
+    "calendar"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:randomyst/date_engine.py",
+   "type": "file",
+   "name": "date_engine.py",
+   "filePath": "randomyst/date_engine.py",
+   "summary": "Engine tìm ngày/khung giờ đẹp tất định cho MVP 2: lập hồ sơ mệnh cho từng chủ thể đúng một lần, chấm điểm từng khung giờ theo luật ngày, trạng thái Yi/Ji và ngũ hành cá nhân, rồi xếp hạng và tổng hợp recommended_windows.",
+   "tags": [
+    "service",
+    "date-search",
+    "scoring",
+    "core-logic",
+    "auspicious-dates"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:randomyst/date_engine.py:DateEngine",
+   "type": "class",
+   "name": "DateEngine",
+   "filePath": "randomyst/date_engine.py",
+   "lineRange": [
+    11,
+    111
+   ],
+   "summary": "Engine tra ngày: tạo hồ sơ mệnh, đánh giá cá nhân và từng khung giờ, xếp hạng và trả response tìm kiếm đầy đủ với recommended_windows.",
+   "tags": [
+    "class",
+    "service",
+    "auspicious-dates"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:randomyst/date_rules.py",
+   "type": "file",
+   "name": "date_rules.py",
+   "filePath": "randomyst/date_rules.py",
+   "summary": "Bộ đánh giá luật ngày: tính quan hệ can-chi, trạng thái hoạt động từ danh sách Yi/Ji (SUPPORTED/AVOID/NOT_LISTED/UNRESOLVED) và áp các luật BLOCK/PENALTY theo cấu hình mvp2_date_rules.json đã kiểm hash.",
+   "tags": [
+    "rule-engine",
+    "validation",
+    "config",
+    "domain-logic",
+    "auspicious-dates"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:randomyst/date_rules.py:relation",
+   "type": "function",
+   "name": "relation",
+   "filePath": "randomyst/date_rules.py",
+   "lineRange": [
+    16,
+    24
+   ],
+   "summary": "Phân loại quan hệ ngũ hành giữa can và chi (đồng hành, sinh, khắc theo hai chiều).",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/date_rules.py:activity_status",
+   "type": "function",
+   "name": "activity_status",
+   "filePath": "randomyst/date_rules.py",
+   "lineRange": [
+    27,
+    35
+   ],
+   "summary": "Suy ra trạng thái hoạt động từ danh sách Yi/Ji, xử lý token đặc biệt 诸事不宜 và 余事勿取.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/date_rules.py:RuleEvaluator",
+   "type": "class",
+   "name": "RuleEvaluator",
+   "filePath": "randomyst/date_rules.py",
+   "lineRange": [
+    38,
+    67
+   ],
+   "summary": "Nạp và kiểm hash cấu hình luật ngày, tính các dữ kiện ngữ cảnh (tam hợp, lục hợp, xung năm, sát chủ, thọ tử, nguyệt phá) và trả về các luật khớp đã dedupe.",
+   "tags": [
+    "class",
+    "service",
+    "auspicious-dates"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:randomyst/time_engine.py",
+   "type": "file",
+   "name": "time_engine.py",
+   "filePath": "randomyst/time_engine.py",
+   "summary": "Lõi lịch Bắc Kinh UTC+8 dựa trên lunar-python 1.4.8: quy đổi thời điểm có múi giờ, tính đầu vào Mai Hoa, tháng tiết khí chính xác và Tứ Trụ (sect 1, đổi ngày lúc 23:00 Bắc Kinh), kèm hằng số can/chi/ngũ hành dùng chung.",
+   "tags": [
+    "calendar",
+    "time-conversion",
+    "core-logic",
+    "constants",
+    "lunar-python"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Mọi datetime phải timezone-aware; hàm _lunar luôn chuyển sang UTC+8 trước khi đưa wall-clock cho thư viện."
+  },
+  {
+   "id": "function:randomyst/time_engine.py:check_provider",
+   "type": "function",
+   "name": "check_provider",
+   "filePath": "randomyst/time_engine.py",
+   "lineRange": [
+    32,
+    34
+   ],
+   "summary": "Đảm bảo phiên bản lunar-python đã cài đúng bản ghim 1.4.8.",
+   "tags": [
+    "function",
+    "utility",
+    "calendar"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/time_engine.py:_lunar",
+   "type": "function",
+   "name": "_lunar",
+   "filePath": "randomyst/time_engine.py",
+   "lineRange": [
+    37,
+    43
+   ],
+   "summary": "Chuyển datetime có múi giờ sang giờ Bắc Kinh và tạo đối tượng Lunar tương ứng.",
+   "tags": [
+    "function",
+    "utility",
+    "calendar"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/time_engine.py:beijing_clock",
+   "type": "function",
+   "name": "beijing_clock",
+   "filePath": "randomyst/time_engine.py",
+   "lineRange": [
+    46,
+    65
+   ],
+   "summary": "Mô tả quy đổi đồng hồ Bắc Kinh và khoảng cách tới biên giờ/ngày để đánh giá độ bất định.",
+   "tags": [
+    "function",
+    "utility",
+    "calendar"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:randomyst/time_engine.py:resolve_maihoa",
+   "type": "function",
+   "name": "resolve_maihoa",
+   "filePath": "randomyst/time_engine.py",
+   "lineRange": [
+    68,
+    85
+   ],
+   "summary": "Kiểm phạm vi đầu vào UTC+7 và trả ngày âm lịch cùng biến Y/M/D/H cho phép gieo Mai Hoa.",
+   "tags": [
+    "function",
+    "utility",
+    "calendar"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/time_engine.py:solar_month",
+   "type": "function",
+   "name": "solar_month",
+   "filePath": "randomyst/time_engine.py",
+   "lineRange": [
+    88,
+    100
+   ],
+   "summary": "Xác định tháng tiết khí chính xác (Jie trước đó, chi tháng, can chi năm) tại một thời điểm.",
+   "tags": [
+    "function",
+    "utility",
+    "calendar"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:randomyst/time_engine.py:pillars",
+   "type": "function",
+   "name": "pillars",
+   "filePath": "randomyst/time_engine.py",
+   "lineRange": [
+    103,
+    116
+   ],
+   "summary": "Tính Tứ Trụ (năm, tháng, ngày, giờ) theo sect 1 kèm chỉ số can/chi và nhãn tiếng Việt/Trung.",
+   "tags": [
+    "function",
+    "utility",
+    "calendar"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:randomyst/time_engine.py:CalendarError",
+   "type": "class",
+   "name": "CalendarError",
+   "filePath": "randomyst/time_engine.py",
+   "lineRange": [
+    26,
+    29
+   ],
+   "summary": "Ngoại lệ ValueError có mã lỗi cho các lỗi đầu vào lịch (thiếu múi giờ, ngoài phạm vi).",
+   "tags": [
+    "class",
+    "service",
+    "calendar"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:research_tools/audit_activity_categories.py",
+   "type": "file",
+   "name": "audit_activity_categories.py",
+   "filePath": "research_tools/audit_activity_categories.py",
+   "summary": "Công cụ nghiên cứu chỉ đọc: đếm độ phủ token hoạt động (嫁娶, 开市, 出行…) trong corpus Yi/Ji 2024–2030 theo ngày và giờ, xuất báo cáo JSON về các ứng viên hoạt động cho MVP 2.",
+   "tags": [
+    "research",
+    "audit",
+    "script",
+    "data-analysis",
+    "auspicious-dates"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:research_tools/audit_activity_categories.py:summarize",
+   "type": "function",
+   "name": "summarize",
+   "filePath": "research_tools/audit_activity_categories.py",
+   "lineRange": [
+    44,
+    56
+   ],
+   "summary": "Đếm số lần token xuất hiện trong Yi/Ji và phân bố trạng thái activity_status, ghi lại các xung đột.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/audit_activity_categories.py:audit",
+   "type": "function",
+   "name": "audit",
+   "filePath": "research_tools/audit_activity_categories.py",
+   "lineRange": [
+    59,
+    79
+   ],
+   "summary": "Duyệt corpus 2024–2030 theo ngày và giờ, tổng hợp độ phủ cho từng ứng viên hoạt động theo năm.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:research_tools/auspicious_date_audit.py",
+   "type": "file",
+   "name": "auspicious_date_audit.py",
+   "filePath": "research_tools/auspicious_date_audit.py",
+   "summary": "Audit khả thi chỉ đọc cho MVP 2: thu thập dữ kiện từ lunar-python đã ghim (Yi/Ji, Tứ Trụ, tiết khí, Thiên Thần), kiểm tra biên ngày/giờ, độ phủ hoạt động, bảng sát chủ/thọ tử/nguyệt phá và benchmark, xuất báo cáo JSON.",
+   "tags": [
+    "research",
+    "audit",
+    "benchmark",
+    "script",
+    "feasibility"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:research_tools/auspicious_date_audit.py:lunar_at",
+   "type": "function",
+   "name": "lunar_at",
+   "filePath": "research_tools/auspicious_date_audit.py",
+   "lineRange": [
+    29,
+    32
+   ],
+   "summary": "Tạo đối tượng Lunar từ thời điểm dân sự đã quy đổi sang giờ Bắc Kinh.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/auspicious_date_audit.py:facts",
+   "type": "function",
+   "name": "facts",
+   "filePath": "research_tools/auspicious_date_audit.py",
+   "lineRange": [
+    35,
+    48
+   ],
+   "summary": "Thu thập dữ kiện provider tại một thời điểm: can chi ngày/giờ/tháng, Yi/Ji ngày và giờ, trực, Thiên Thần, hung sát.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/auspicious_date_audit.py:graph_freshness",
+   "type": "function",
+   "name": "graph_freshness",
+   "filePath": "research_tools/auspicious_date_audit.py",
+   "lineRange": [
+    51,
+    62
+   ],
+   "summary": "So sánh hash file hiện tại với fingerprints của knowledge graph để báo file đã đổi hoặc thiếu.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/auspicious_date_audit.py:scan_days",
+   "type": "function",
+   "name": "scan_days",
+   "filePath": "research_tools/auspicious_date_audit.py",
+   "lineRange": [
+    65,
+    91
+   ],
+   "summary": "Quét từng ngày trong khoảng, đếm trạng thái Yi/Ji cho ba hoạt động và token đặc biệt, kèm ví dụ.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:research_tools/auspicious_date_audit.py:benchmark",
+   "type": "function",
+   "name": "benchmark",
+   "filePath": "research_tools/auspicious_date_audit.py",
+   "lineRange": [
+    94,
+    102
+   ],
+   "summary": "Đo thời gian thu thập dữ kiện cho 13 mốc giờ mỗi ngày trên số ngày cho trước.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:research_tools/auspicious_date_audit.py:static_filter_evidence",
+   "type": "function",
+   "name": "static_filter_evidence",
+   "filePath": "research_tools/auspicious_date_audit.py",
+   "lineRange": [
+    105,
+    129
+   ],
+   "summary": "Trích bảng Sát Chủ, Thọ Tử, Nguyệt Phá từ shensha.js đã ghim và bảng Hoàng/Hắc Đạo, Thập Nhị Trực từ LunarUtil.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:research_tools/auspicious_date_audit.py:audit",
+   "type": "function",
+   "name": "audit",
+   "filePath": "research_tools/auspicious_date_audit.py",
+   "lineRange": [
+    132,
+    191
+   ],
+   "summary": "Chạy toàn bộ audit khả thi: kiểm phiên bản provider, fixture biên, hồ sơ mẫu, độ phủ, bằng chứng bảng lọc và benchmark.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:research_tools/auspicious_date_audit.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "research_tools/auspicious_date_audit.py",
+   "lineRange": [
+    194,
+    204
+   ],
+   "summary": "Điểm vào CLI: chạy audit, ghi báo cáo JSON và in tóm tắt.",
+   "tags": [
+    "function",
+    "utility",
+    "auspicious-dates"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/audit_beijing_calendar.py",
+   "type": "file",
+   "name": "audit_beijing_calendar.py",
+   "filePath": "scripts/audit_beijing_calendar.py",
+   "summary": "Script audit roundtrip toàn dải 1950–2030: gọi resolve_maihoa cho từng ngày, quy đổi ngược âm lịch sang dương lịch và kiểm tra phạm vi biến Mai Hoa, ghi báo cáo vào docs/research.",
+   "tags": [
+    "script",
+    "audit",
+    "calendar",
+    "validation",
+    "entry-point"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/audit_beijing_calendar.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/audit_beijing_calendar.py",
+   "lineRange": [
+    14,
+    40
+   ],
+   "summary": "Lặp từng ngày 1950–2030, kiểm roundtrip âm-dương lịch và phạm vi biến Mai Hoa, ghi báo cáo và thoát lỗi nếu có sai khác.",
+   "tags": [
+    "function",
+    "utility",
+    "calendar"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/compare_bazi_source.py",
+   "type": "file",
+   "name": "compare_bazi_source.py",
+   "filePath": "scripts/compare_bazi_source.py",
+   "summary": "Script so sánh bản port Python analyze với mã JS gốc tinix-bazi qua Node trên 1000 bộ trụ ngẫu nhiên có seed, ghi danh sách sai khác và hash nguồn vào docs/research.",
+   "tags": [
+    "script",
+    "validation",
+    "bazi",
+    "cross-language",
+    "entry-point"
+   ],
+   "complexity": "simple",
+   "languageNotes": "Dùng subprocess chạy `node -e` với JSON qua stdin để đối chiếu hai ngôn ngữ trên cùng đầu vào."
+  },
+  {
+   "id": "function:scripts/compare_bazi_source.py:run",
+   "type": "function",
+   "name": "run",
+   "filePath": "scripts/compare_bazi_source.py",
+   "lineRange": [
+    14,
+    42
+   ],
+   "summary": "Sinh ngẫu nhiên các bộ trụ, chạy song song bản JS gốc và bản port Python, trả danh sách sai khác và nhánh quyết định đã phủ.",
+   "tags": [
+    "function",
+    "utility",
+    "bazi"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:tests/test_auspicious_dates.py",
+   "type": "file",
+   "name": "test_auspicious_dates.py",
+   "filePath": "tests/test_auspicious_dates.py",
+   "summary": "Bộ unittest cho tính năng tra ngày đẹp MVP 2: kiểm schema luật, activity_status, bảng tháng, phân đoạn khung giờ qua biên múi giờ/tiết khí, chấm điểm và chặn, hợp đồng API qua TestClient.",
+   "tags": [
+    "test",
+    "integration-test",
+    "auspicious-dates",
+    "api-contract",
+    "unittest"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:tests/test_auspicious_dates.py:payload",
+   "type": "function",
+   "name": "payload",
+   "filePath": "tests/test_auspicious_dates.py",
+   "lineRange": [
+    23,
+    27
+   ],
+   "summary": "Dựng payload yêu cầu tìm ngày mẫu với hoạt động, khoảng ngày và cờ chi tiết.",
+   "tags": [
+    "test",
+    "fixture",
+    "auspicious-dates"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:tests/test_auspicious_dates.py:DateTests",
+   "type": "class",
+   "name": "DateTests",
+   "filePath": "tests/test_auspicious_dates.py",
+   "lineRange": [
+    30,
+    238
+   ],
+   "summary": "Test case unittest bao phủ schema luật, trạng thái hoạt động, khung giờ đề xuất, biên tiết khí/múi giờ, chặn điểm và hợp đồng API tra ngày.",
+   "tags": [
+    "test",
+    "test-suite",
+    "auspicious-dates"
+   ],
+   "complexity": "complex"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:randomyst/bazi.py",
+   "target": "function:randomyst/bazi.py:deity",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/bazi.py",
+   "target": "function:randomyst/bazi.py:deity",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/bazi.py",
+   "target": "function:randomyst/bazi.py:structure",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/bazi.py",
+   "target": "function:randomyst/bazi.py:structure",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/bazi.py",
+   "target": "function:randomyst/bazi.py:analyze",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/bazi.py",
+   "target": "function:randomyst/bazi.py:analyze",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/bazi.py",
+   "target": "function:randomyst/bazi.py:star_bonuses",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/bazi.py",
+   "target": "function:randomyst/bazi.py:star_bonuses",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/bazi.py",
+   "target": "file:randomyst/sampling.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/bazi.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/date_calendar.py",
+   "target": "class:randomyst/date_calendar.py:DateDataError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_calendar.py",
+   "target": "class:randomyst/date_calendar.py:DateDataError",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_calendar.py",
+   "target": "class:randomyst/date_calendar.py:DateCalendar",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_calendar.py",
+   "target": "class:randomyst/date_calendar.py:DateCalendar",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_calendar.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/date_engine.py",
+   "target": "class:randomyst/date_engine.py:DateEngine",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_engine.py",
+   "target": "class:randomyst/date_engine.py:DateEngine",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_engine.py",
+   "target": "file:randomyst/bazi.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/date_engine.py",
+   "target": "file:randomyst/date_calendar.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/date_engine.py",
+   "target": "file:randomyst/date_rules.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/date_engine.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "function:randomyst/date_rules.py:relation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "function:randomyst/date_rules.py:relation",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "function:randomyst/date_rules.py:activity_status",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "function:randomyst/date_rules.py:activity_status",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "class:randomyst/date_rules.py:RuleEvaluator",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "class:randomyst/date_rules.py:RuleEvaluator",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "file:randomyst/bazi.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "file:randomyst/date_models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "file:randomyst/sampling.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:check_provider",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:check_provider",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:_lunar",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:beijing_clock",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:beijing_clock",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:resolve_maihoa",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:resolve_maihoa",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:solar_month",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:solar_month",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:pillars",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "function:randomyst/time_engine.py:pillars",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "class:randomyst/time_engine.py:CalendarError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "class:randomyst/time_engine.py:CalendarError",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/audit_activity_categories.py",
+   "target": "function:research_tools/audit_activity_categories.py:summarize",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/audit_activity_categories.py",
+   "target": "function:research_tools/audit_activity_categories.py:summarize",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/audit_activity_categories.py",
+   "target": "function:research_tools/audit_activity_categories.py:audit",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/audit_activity_categories.py",
+   "target": "function:research_tools/audit_activity_categories.py:audit",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/audit_activity_categories.py",
+   "target": "file:randomyst/date_calendar.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:research_tools/audit_activity_categories.py",
+   "target": "file:randomyst/date_rules.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:lunar_at",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:lunar_at",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:facts",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:facts",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:graph_freshness",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:graph_freshness",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:scan_days",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:scan_days",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:benchmark",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:benchmark",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:static_filter_evidence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:static_filter_evidence",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:audit",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:audit",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "function:research_tools/auspicious_date_audit.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "file:randomyst/bazi.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:research_tools/auspicious_date_audit.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/audit_beijing_calendar.py",
+   "target": "function:scripts/audit_beijing_calendar.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/audit_beijing_calendar.py",
+   "target": "function:scripts/audit_beijing_calendar.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/audit_beijing_calendar.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/compare_bazi_source.py",
+   "target": "function:scripts/compare_bazi_source.py:run",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/compare_bazi_source.py",
+   "target": "function:scripts/compare_bazi_source.py:run",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/compare_bazi_source.py",
+   "target": "file:randomyst/bazi.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_auspicious_dates.py",
+   "target": "function:tests/test_auspicious_dates.py:payload",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:tests/test_auspicious_dates.py",
+   "target": "class:tests/test_auspicious_dates.py:DateTests",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:tests/test_auspicious_dates.py",
+   "target": "file:randomyst/api.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_auspicious_dates.py",
+   "target": "file:randomyst/date_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_auspicious_dates.py",
+   "target": "file:randomyst/date_models.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_auspicious_dates.py",
+   "target": "file:randomyst/date_rules.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:tests/test_auspicious_dates.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "class:randomyst/date_calendar.py:DateCalendar",
+   "target": "function:randomyst/time_engine.py:check_provider",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_engine.py:DateEngine",
+   "target": "function:randomyst/bazi.py:analyze",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_engine.py:DateEngine",
+   "target": "function:randomyst/time_engine.py:pillars",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_engine.py:DateEngine",
+   "target": "class:randomyst/date_calendar.py:DateCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_engine.py:DateEngine",
+   "target": "class:randomyst/date_rules.py:RuleEvaluator",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_engine.py:DateEngine",
+   "target": "function:randomyst/date_rules.py:activity_status",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:randomyst/date_rules.py:RuleEvaluator",
+   "target": "class:randomyst/date_models.py:DateRules",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/audit_activity_categories.py:summarize",
+   "target": "function:randomyst/date_rules.py:activity_status",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/audit_activity_categories.py:audit",
+   "target": "class:randomyst/date_calendar.py:DateCalendar",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/auspicious_date_audit.py:audit",
+   "target": "function:randomyst/bazi.py:analyze",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/auspicious_date_audit.py:audit",
+   "target": "function:randomyst/time_engine.py:pillars",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:scripts/audit_beijing_calendar.py:main",
+   "target": "function:randomyst/time_engine.py:resolve_maihoa",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:scripts/compare_bazi_source.py:run",
+   "target": "function:randomyst/bazi.py:analyze",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_auspicious_dates.py:DateTests",
+   "target": "class:randomyst/date_engine.py:DateEngine",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_auspicious_dates.py:DateTests",
+   "target": "function:randomyst/date_rules.py:activity_status",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_auspicious_dates.py:DateTests",
+   "target": "function:randomyst/api.py:create_app",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_auspicious_dates.py:DateTests",
+   "target": "class:randomyst/date_models.py:DateRules",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_auspicious_dates.py:DateTests",
+   "target": "class:randomyst/date_models.py:DateSearchRequest",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:tests/test_auspicious_dates.py:DateTests",
+   "target": "class:randomyst/date_models.py:DateSearchResponse",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:tests/test_auspicious_dates.py:payload",
+   "target": "class:randomyst/date_models.py:DateSearchRequest",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:randomyst/date_engine.py",
+   "target": "file:tests/test_auspicious_dates.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/date_rules.py",
+   "target": "file:tests/test_auspicious_dates.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/time_engine.py",
+   "target": "file:tests/test_auspicious_dates.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/api.py",
+   "target": "file:tests/test_auspicious_dates.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:randomyst/date_models.py",
+   "target": "file:tests/test_auspicious_dates.py",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

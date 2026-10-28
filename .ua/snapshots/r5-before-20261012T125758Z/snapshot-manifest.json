@@ -1,0 +1,16 @@
+{
+  "createdAt": "2026-10-12T12:57:58.091423+00:00",
+  "purpose": "Bản knowledge graph trước cập nhật R5, giữ nguyên để phục hồi.",
+  "files": {
+    ".understandignore": "3568e5fd6c205486cafbc452be4306109accd661c2f00b96f8418b8b074cc214",
+    "README.md": "ff7d9eb8870face5c6115c12d35748a7d5697308ab8304e5f6dd75a117ddd5c0",
+    "analysis-summary.md": "2ed39f95c271b246f595c562e574b4fbf5250673df3b3323837c18ad5b39255b",
+    "config.json": "aeabe1fd379c6e5094ea8815573f3c1b46ce6d0c11afdcc6db274ecb5c0b771b",
+    "fingerprints.json": "d0a729641c1a8b7e3b82f04aae46e811d02c4028bdf01301d9f7c1eb1cecb17f",
+    "intermediate/scan-result.json": "858d3f2f18e05d97cd7735df6c8238cdfb5040b20cae9f0242fbbee6290b0139",
+    "knowledge-graph.json": "cef59952f0d0d7335892eadd471ef035c5ad62d14db3b9e499780957845326ad",
+    "meta.json": "37eaf8e6c9b02f2c211198ae2dafb536d58da05cb07989f11f5ca98fc106b847",
+    "source-snapshot.json": "dabaae028e92657032749b99910b2e8a8233f184cfa3ba148c6d6b59d993ee72",
+    "validation-report.json": "a0ea820c1fc12c5d215b05227c4a462eb0d02438a39e79bb3e8e74fb2ac2f4fe"
+  }
+}

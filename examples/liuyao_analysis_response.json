@@ -1,0 +1,426 @@
+{
+  "schema_version": "liuyao-analysis-v1",
+  "session_id": "e6237512-d72b-4bc3-8f0a-dd90bb58d828",
+  "rules_version": "liuyao-analysis-2026-10-26-v2",
+  "rules_sha256": "2b523cfdf0c26002aaa0271f0f2d844445bbfc19be5f3155f2715a6939fb3dcb",
+  "snapshot_sha256": "910099f7f5912cef4d23ff73c1f2b118138f05a72cfc120a08d88aa4bb1c86a2",
+  "context": {
+    "topic": "PARTNERSHIP",
+    "use_relative": null,
+    "focus_line": null,
+    "intent_mode": "COMBINED",
+    "intent_acknowledged": false
+  },
+  "intent": {
+    "rules_version": "liuyao-question-intent-2026-10-26-v1",
+    "question_sha256": "175b662bbe405863113ef6d877398fd716d9a708d21d5b8e266bad65b0ee47cc",
+    "selected_topic": "PARTNERSHIP",
+    "status": "MATCH",
+    "suggested_topic": "PARTNERSHIP",
+    "candidates": [
+      {
+        "topic": "PARTNERSHIP",
+        "label": "Hợp tác · quan hệ hai bên",
+        "target": "RESPONSE",
+        "intent_labels": [
+          "Hợp tác · quan hệ hai bên"
+        ],
+        "terms": [
+          "hợp tác"
+        ],
+        "evidence_level": "KEYWORD"
+      }
+    ],
+    "matches": [
+      {
+        "rule_id": "PARTNERSHIP_COOPERATE",
+        "topic": "PARTNERSHIP",
+        "label": "Hợp tác · quan hệ hai bên",
+        "term": "hợp tác",
+        "disposition": "INTENT"
+      }
+    ],
+    "needs_review": false,
+    "message": "Câu hỏi có tín hiệu phù hợp với chủ đề Hợp tác · quan hệ hai bên. Giữ chủ đề này để chọn Dụng thần.",
+    "notes": [
+      "Nhận diện theo cụm từ tiếng Việt có hoặc không dấu; đây là gợi ý theo quy tắc, chưa hiểu mọi ngữ cảnh như con người.",
+      "Chủ đề được chọn và Lục thân chỉ định luôn được giữ; nhận diện không tự đổi Dụng thần.",
+      "Nếu câu hỏi có nhiều nhóm ý hoặc khác chủ đề, cần chọn lại hoặc xác nhận giữ phạm vi trước khi luận."
+    ]
+  },
+  "topic_label": "Hợp tác · quan hệ hai bên",
+  "method": "DETERMINISTIC_RULES",
+  "selection": {
+    "target": "RESPONSE",
+    "reason": "Chủ đề Hợp tác · quan hệ hai bên lấy hào Ứng làm trọng tâm. Chỉ có một hào phù hợp.",
+    "status": "SELECTED",
+    "selected_key": "L6",
+    "candidate_keys": [
+      "L6"
+    ],
+    "hidden": false,
+    "calendar_representatives": [],
+    "emerging_lines": []
+  },
+  "tendency": "MIXED",
+  "headline": "Có cả điều kiện hỗ trợ và điểm cần chờ hoặc làm rõ",
+  "narrative": [
+    "Với câu hỏi “Tôi cần cân nhắc điều gì khi hợp tác trong tháng tới?”, khung hợp tác · quan hệ hai bên tập trung vào bên đối tác hoặc người được hỏi. Chủ đề Hợp tác · quan hệ hai bên lấy hào Ứng làm trọng tâm. Chỉ có một hào phù hợp.",
+    "Ý được nhận diện trong phạm vi bạn chọn: Hợp tác · quan hệ hai bên. Tín hiệu: “hợp tác”.",
+    "Trọng tâm là hào 6, Huynh đệ Tý Thủy. Tháng Tuất Thổ khắc hào Thủy; ngày Dậu Kim sinh hào Thủy.",
+    "Điều kiện cần giữ trong kết luận: Tháng Tuất Thổ khắc hào Thủy; ngày Dậu Kim sinh hào Thủy. Khí mùa: Tử; đây là nền sơ bộ, còn phải đối chiếu động biến và các quan hệ khác. Tý Thủy → Mão Mộc: Hóa tiết khí. Hồi đầu xét biến hào tác động về chính hào gốc; không cho biến hào sinh khắc chéo mọi hào trong quẻ.",
+    "Kết luận này mô tả thế sinh khắc theo phạm vi quy tắc hiện có; cần kiểm tra các điều kiện trên trước khi suy ra hành động, chưa khẳng định thành bại của sự việc."
+  ],
+  "practical_questions": [
+    "Trao đổi mục tiêu, quyền hạn và cam kết của hai bên; quan hệ Thế–Ứng chỉ là khung đối chiếu.",
+    "Yếu tố nào trong phần điều kiện đã có bằng chứng thực tế, yếu tố nào vẫn chưa rõ?"
+  ],
+  "lines": [
+    {
+      "key": "L1",
+      "position": 1,
+      "visibility": "VISIBLE",
+      "branch": "Mão",
+      "element": "Mộc",
+      "relative": "Tử tôn",
+      "month_relation": "CONSUMES",
+      "day_relation": "CONTROLS",
+      "seasonal_state": "Tù",
+      "calendar_state": "WEAK",
+      "calendar_summary": "Tháng Tuất Thổ: hào Mộc khắc ra ngoài nên hao khí; ngày Dậu Kim khắc hào Mộc.",
+      "activity": "DAY_CLASH_WEAK",
+      "flags": [
+        "DAY_CLASH",
+        "MONTH_COMBINE"
+      ],
+      "transformation": [],
+      "caveats": [
+        "Tĩnh gặp Nhật xung khi chưa được tháng sinh phù: nghiêng về Nhật phá, chưa đủ căn cứ gọi ám động."
+      ]
+    },
+    {
+      "key": "L2",
+      "position": 2,
+      "visibility": "VISIBLE",
+      "branch": "Sửu",
+      "element": "Thổ",
+      "relative": "Quan quỷ",
+      "month_relation": "SAME",
+      "day_relation": "DRAINS",
+      "seasonal_state": "Vượng",
+      "calendar_state": "MIXED",
+      "calendar_summary": "Tháng Tuất Thổ đồng hành với hào Thổ; ngày Dậu Kim: hào Thổ sinh ra ngoài nên tiết khí.",
+      "activity": "STATIC",
+      "flags": [],
+      "transformation": [],
+      "caveats": []
+    },
+    {
+      "key": "L3",
+      "position": 3,
+      "visibility": "VISIBLE",
+      "branch": "Hợi",
+      "element": "Thủy",
+      "relative": "Huynh đệ",
+      "month_relation": "CONTROLS",
+      "day_relation": "GENERATES",
+      "seasonal_state": "Tử",
+      "calendar_state": "MIXED",
+      "calendar_summary": "Tháng Tuất Thổ khắc hào Thủy; ngày Dậu Kim sinh hào Thủy.",
+      "activity": "MOVING",
+      "flags": [
+        "VOID"
+      ],
+      "transformation": [
+        "RETURN_CONTROLS",
+        "CHANGED_MONTH_CLASH"
+      ],
+      "caveats": [
+        "Đang trong Tuần Không: cần xét xuất Không hoặc điền thực; không tự loại bỏ hào.",
+        "Hào biến gặp Không/Phá: tác dụng của biến hào có điều kiện thời gian, không xóa hồi đầu sinh/khắc."
+      ]
+    },
+    {
+      "key": "L4",
+      "position": 4,
+      "visibility": "VISIBLE",
+      "branch": "Thân",
+      "element": "Kim",
+      "relative": "Phụ mẫu",
+      "month_relation": "GENERATES",
+      "day_relation": "SAME",
+      "seasonal_state": "Tướng",
+      "calendar_state": "SUPPORTED",
+      "calendar_summary": "Tháng Tuất Thổ sinh hào Kim; ngày Dậu Kim đồng hành với hào Kim.",
+      "activity": "STATIC",
+      "flags": [],
+      "transformation": [],
+      "caveats": []
+    },
+    {
+      "key": "L5",
+      "position": 5,
+      "visibility": "VISIBLE",
+      "branch": "Tuất",
+      "element": "Thổ",
+      "relative": "Quan quỷ",
+      "month_relation": "SAME",
+      "day_relation": "DRAINS",
+      "seasonal_state": "Vượng",
+      "calendar_state": "MIXED",
+      "calendar_summary": "Tháng Tuất Thổ đồng hành với hào Thổ; ngày Dậu Kim: hào Thổ sinh ra ngoài nên tiết khí.",
+      "activity": "STATIC",
+      "flags": [
+        "VOID",
+        "MONTH_VALUE"
+      ],
+      "transformation": [],
+      "caveats": [
+        "Đang trong Tuần Không: cần xét xuất Không hoặc điền thực; không tự loại bỏ hào."
+      ]
+    },
+    {
+      "key": "L6",
+      "position": 6,
+      "visibility": "VISIBLE",
+      "branch": "Tý",
+      "element": "Thủy",
+      "relative": "Huynh đệ",
+      "month_relation": "CONTROLS",
+      "day_relation": "GENERATES",
+      "seasonal_state": "Tử",
+      "calendar_state": "MIXED",
+      "calendar_summary": "Tháng Tuất Thổ khắc hào Thủy; ngày Dậu Kim sinh hào Thủy.",
+      "activity": "MOVING",
+      "flags": [],
+      "transformation": [
+        "RETURN_DRAINS"
+      ],
+      "caveats": []
+    }
+  ],
+  "roles": [
+    {
+      "role": "Dụng thần",
+      "element": "Thủy",
+      "line_keys": [
+        "L3",
+        "L6"
+      ],
+      "active_line_keys": [
+        "L3",
+        "L6"
+      ]
+    },
+    {
+      "role": "Nguyên thần",
+      "element": "Kim",
+      "line_keys": [
+        "L4"
+      ],
+      "active_line_keys": []
+    },
+    {
+      "role": "Kỵ thần",
+      "element": "Thổ",
+      "line_keys": [
+        "L2",
+        "L5"
+      ],
+      "active_line_keys": []
+    },
+    {
+      "role": "Cừu thần",
+      "element": "Hỏa",
+      "line_keys": [],
+      "active_line_keys": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "F001",
+      "rule": "USE_SELECTION",
+      "effect": "CONTEXT",
+      "title": "Chọn Dụng thần",
+      "explanation": "Chủ đề Hợp tác · quan hệ hai bên lấy hào Ứng làm trọng tâm. Chỉ có một hào phù hợp.",
+      "evidence": [
+        "L6: Huynh đệ Tý Thủy"
+      ],
+      "source_ids": [
+        "USE",
+        "MULTIPLE"
+      ]
+    },
+    {
+      "id": "F002",
+      "rule": "CALENDAR_STRENGTH",
+      "effect": "CONDITION",
+      "title": "hào 6 · Huynh đệ Tý · Nhật–Nguyệt",
+      "explanation": "Tháng Tuất Thổ khắc hào Thủy; ngày Dậu Kim sinh hào Thủy. Khí mùa: Tử; đây là nền sơ bộ, còn phải đối chiếu động biến và các quan hệ khác.",
+      "evidence": [
+        "L6",
+        "calendar.month_branch",
+        "calendar.day_branch"
+      ],
+      "source_ids": [
+        "SEASON",
+        "MONTH",
+        "DAY"
+      ]
+    },
+    {
+      "id": "F003",
+      "rule": "FOCUS_TRANSFORM",
+      "effect": "CONDITION",
+      "title": "hào 6 · Huynh đệ Tý · động biến",
+      "explanation": "Tý Thủy → Mão Mộc: Hóa tiết khí. Hồi đầu xét biến hào tác động về chính hào gốc; không cho biến hào sinh khắc chéo mọi hào trong quẻ.",
+      "evidence": [
+        "L6",
+        "changed.L6",
+        "RETURN_DRAINS"
+      ],
+      "source_ids": [
+        "TRANSFORM",
+        "ADVANCE"
+      ]
+    },
+    {
+      "id": "F004",
+      "rule": "LINE_INTERACTION",
+      "effect": "CONDITION",
+      "title": "Hào 3 → hào 6 · Đồng hành với Dụng",
+      "explanation": "Hào 3 Huynh đệ Hợi (Đồng hành với Dụng) minh động, đồng hành đối với hào 6. Đang trong Tuần Không: cần xét xuất Không hoặc điền thực; không tự loại bỏ hào. Hào biến gặp Không/Phá: tác dụng của biến hào có điều kiện thời gian, không xóa hồi đầu sinh/khắc. Nguồn hào có hồi đầu khắc, tác dụng cần xét lại.",
+      "evidence": [
+        "L3",
+        "L6",
+        "Thủy→Thủy: SAME",
+        "RETURN_CONTROLS",
+        "CHANGED_MONTH_CLASH"
+      ],
+      "source_ids": [
+        "ROLES",
+        "MOTION"
+      ]
+    },
+    {
+      "id": "F005",
+      "rule": "WORLD_RESPONSE",
+      "effect": "CONTEXT",
+      "title": "Mình và bên đối diện · Thế–Ứng",
+      "explanation": "Thế hào 3 Hợi Thủy; Ứng hào 6 Tý Thủy. Xét chiều Ứng → Thế: đồng hành. Đây là quan hệ cấu trúc, không khẳng định ý định hay hành vi của người kia.",
+      "evidence": [
+        "L3",
+        "L6",
+        "SAME"
+      ],
+      "source_ids": [
+        "COMBINE",
+        "ROLES"
+      ]
+    },
+    {
+      "id": "F006",
+      "rule": "USE_WORLD",
+      "effect": "CONTEXT",
+      "title": "Đối tượng đang hỏi liên hệ với mình thế nào",
+      "explanation": "Dụng ở hào 6 Thủy → Thế hào 3 Thủy: đồng hành. Chiều Thế → Dụng: đồng hành. Đây là chiều quan hệ giữa đối tượng và người hỏi; tác dụng còn phụ thuộc sức hào và điều kiện động biến.",
+      "evidence": [
+        "L6",
+        "L3",
+        "SAME",
+        "Tháng Tuất Thổ khắc hào Thủy; ngày Dậu Kim sinh hào Thủy."
+      ],
+      "source_ids": [
+        "USE",
+        "MONTH"
+      ]
+    },
+    {
+      "id": "F007",
+      "rule": "WORLD_CAPACITY",
+      "effect": "CONDITION",
+      "title": "Sức tiếp nhận của người hỏi · hào Thế",
+      "explanation": "Thế hào 3 Hợi Thủy: Tháng Tuất Thổ khắc hào Thủy; ngày Dậu Kim sinh hào Thủy. Đang trong Tuần Không: cần xét xuất Không hoặc điền thực; không tự loại bỏ hào. Hào biến gặp Không/Phá: tác dụng của biến hào có điều kiện thời gian, không xóa hồi đầu sinh/khắc. Động biến của Thế: Hồi đầu khắc, Hóa Nguyệt Phá. Dụng có nền hỗ trợ vẫn cần kiểm tra điều kiện của Thế trước khi kết luận thuận lợi cho mình.",
+      "evidence": [
+        "L3",
+        "VOID",
+        "RETURN_CONTROLS",
+        "CHANGED_MONTH_CLASH"
+      ],
+      "source_ids": [
+        "MONTH",
+        "DAY"
+      ]
+    }
+  ],
+  "timing_conditions": [],
+  "limitations": [
+    "Đây là phân tích theo quy tắc Lục Hào truyền thống được mã hóa, chưa được chuyên gia hiệu đính và không phải xác suất dự báo thực nghiệm.",
+    "Chủ đề do bạn chọn quyết định Dụng thần. Chế độ kết hợp nhận diện cụm từ trong câu hỏi để gợi ý và nêu khác biệt; không tự đổi chủ đề hoặc Lục thân chỉ định. Một chủ đề không bao quát mọi cách hỏi trong lĩnh vực đó.",
+    "Vượng suy là phân tích sơ bộ Nhật–Nguyệt, không cộng điểm cát hung. Sinh khắc giữa các hào được nêu cùng điều kiện có thể làm thay đổi tác dụng.",
+    "Chưa giải toàn cục tam hợp hóa cục, tam hình, mộ tuyệt, liên hoàn sinh khắc hoặc mọi trường hợp cứu giải. Không lấy Lục thú hay tên quẻ để kết luận sự kiện.",
+    "Mốc ứng kỳ chỉ nêu điều kiện địa chi cần đối chiếu, chưa ấn định ngày xảy ra hoặc cam kết thành bại."
+  ],
+  "sources": [
+    {
+      "id": "USE",
+      "title": "Tăng San Bốc Dịch · Dụng thần",
+      "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy09.html"
+    },
+    {
+      "id": "ROLES",
+      "title": "Tăng San Bốc Dịch · Dụng, Nguyên, Kỵ, Cừu thần",
+      "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy10.html"
+    },
+    {
+      "id": "SEASON",
+      "title": "Tăng San Bốc Dịch · Tứ thời vượng tướng",
+      "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy17.html"
+    },
+    {
+      "id": "MONTH",
+      "title": "Tăng San Bốc Dịch · Nguyệt tướng",
+      "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy18.html"
+    },
+    {
+      "id": "DAY",
+      "title": "Tăng San Bốc Dịch · Nhật thần",
+      "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy19.html"
+    },
+    {
+      "id": "MOTION",
+      "title": "Tăng San Bốc Dịch · Động tĩnh sinh khắc",
+      "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy15.html"
+    },
+    {
+      "id": "TRANSFORM",
+      "title": "Tăng San Bốc Dịch · Động biến sinh khắc xung hợp",
+      "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy16.html"
+    },
+    {
+      "id": "COMBINE",
+      "title": "Tăng San Bốc Dịch · Lục hợp",
+      "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy21.html"
+    },
+    {
+      "id": "ADVANCE",
+      "title": "Tăng San Bốc Dịch · Tiến thần, thoái thần",
+      "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy37.html"
+    },
+    {
+      "id": "HIDDEN",
+      "title": "Tăng San Bốc Dịch · Phi, Phục thần",
+      "url": "https://www.quanxue.cn/qt_mingxiang/zengshanpy/zengshanpy36.html"
+    },
+    {
+      "id": "MULTIPLE",
+      "title": "Bốc Phệ Chính Tông · Quyển 14, câu hỏi 17",
+      "url": "https://www.shidianguji.com/book/AMNL0060/chapter/1ma05bb1p924m"
+    },
+    {
+      "id": "VOID",
+      "title": "Bốc Phệ Chính Tông · Phục thần, Nguyệt phá, Tuần không",
+      "url": "https://www.shidianguji.com/book/HY0057/chapter/1lpdfpdr8oqhb"
+    }
+  ]
+}

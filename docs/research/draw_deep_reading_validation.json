@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-26",
+  "schema_version": "source-explanation-v2",
+  "generation_rules_version": "mvp1-logic-2026-10-26-v6",
+  "module_versions": {
+    "bazi": "bazi-reading-2026-10-26-v1",
+    "maihoa": "draw-maihoa-reading-2026-10-26-v1"
+  },
+  "python_tests": {
+    "command": "RANDOMYST_DATABASE=/tmp/randomyst_deep_reading_tests.sqlite3 .venv/bin/python -m unittest discover -s tests -q",
+    "tests_run": 147,
+    "status": "PASSED",
+    "elapsed_seconds": 15.637,
+    "last_updated_legacy_compatibility_test_rechecked": true
+  },
+  "javascript_tests": {
+    "command": "node --test tests/test_draw_reading.cjs",
+    "tests_run": 5,
+    "status": "PASSED"
+  },
+  "coverage": {
+    "hexagrams": 64,
+    "moving_positions_per_hexagram": 6,
+    "bazi_reason_branches": 10,
+    "saved_birth_and_casting_seasons_kept_separate": true,
+    "manual_primary_override_distinguished": true,
+    "legacy_pure_mutual_preserved": true,
+    "legacy_calendar_preserved": true,
+    "missing_auxiliary_charts_disclosed": true,
+    "inconsistent_chart_rejected": true,
+    "no_rng_or_calendar_recalculation": true,
+    "evidence_references_validated": true,
+    "source_url_validation": true,
+    "legacy_v1_contract_accepted": true
+  },
+  "http": {
+    "context_id": "c6bebf0f-7c19-4ab0-8c25-a5995a4afdb1",
+    "hexagram": "Trạch Thiên Quải",
+    "moving_line": 1,
+    "source_cards": 5,
+    "bazi_cards": 7,
+    "saved_draw_preserved": true,
+    "history_unchanged": true,
+    "same_read_same_explanation": true,
+    "schema_valid": true,
+    "model_called": false,
+    "schema_version": "source-explanation-v2",
+    "module_versions": {
+      "bazi": "bazi-reading-2026-10-26-v1",
+      "maihoa": "draw-maihoa-reading-2026-10-26-v1"
+    },
+    "bazi_sections": 5,
+    "maihoa_sections": 7,
+    "saved_birth_and_casting_charts_preserved": true
+  },
+  "ui": {
+    "removed_view_matches": 0,
+    "maihoa_tab_verified": true,
+    "bazi_tab_verified": true,
+    "console_errors_or_warnings": [],
+    "screenshots": [
+      "docs/research/draw_deep_bazi_ui.png",
+      "docs/research/draw_deep_maihoa_ui.png"
+    ]
+  },
+  "scope": {
+    "bazi": "Saved natal chart, numeric reason branch, pattern, useful/supporting/avoided elements; no luck cycles or full life reading",
+    "maihoa": "Same interpretation core as consultations, GENERAL topic over saved chart and saved casting month",
+    "external_model_called": false,
+    "changes_generation_or_score": false
+  },
+  "implementation_sha256": {
+    "randomyst/bazi_reading.py": "217f3625f802b4b975e642bb6925bf0764395a099957badb4a6bc6cb612b8a9d",
+    "randomyst/maihoa_reading.py": "8ca68a58d9994fe94e0594428e85409aeb9edbe3f40c2abfd101b02d1675d4cd",
+    "randomyst/maihoa_service.py": "ed5295052e7a5a77de45e836b20ff211128594771014f4e87e8057a8eb52613c",
+    "randomyst/interpretation.py": "aabcaf792c6e7614c8f796d0db2e67adfdc5eee45b9595144228ad9715749e1d",
+    "randomyst/models.py": "a104865cf86b1fe7f083e7bda289232cd2872f287c6b783b5052fb0aa54de500",
+    "randomyst/api.py": "1c51b1c7486fe0a43022cf27520dd2d061964d2bd9b1524a0a2dc961ed4e1e55",
+    "schemas/source_explanation.schema.json": "464b321af13d58ee97b1d6081f5bb91b28457fbd2e06db5d0a3e65fb298326d1",
+    "web/index.html": "bb1d326cad354fea9b5c9721719ab042cda9b51b58681a2a74138d3444bb8fdf",
+    "web/app.js": "4d934a01d89d5242228a43cc2d811ae861f6e2a48a86f50af8387bc931290f54",
+    "web/style.css": "75f1998682ef204cc5b28bec0ab3b5a1153cf90dd42c8389a3bea450e35919ad",
+    "tests/test_deep_readings.py": "c59564de8ef1a19b2c27e5380aa3a8e76317cb1da2c24cef9b464ab13fe1218b",
+    "scripts/smoke_source_explanations.py": "994a22711d09c185ed4d193f7a021edda011e2b0b073b79bb1312c67638f5ec6"
+  }
+}

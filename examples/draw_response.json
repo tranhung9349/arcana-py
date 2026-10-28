@@ -1,0 +1,1940 @@
+{
+  "schema_version": "draw-response-v2",
+  "request_id": "c6bebf0f-7c19-4ab0-8c25-a5995a4afdb1",
+  "rules_version": "mvp1-logic-2026-10-26-v6",
+  "numbers": [
+    "06",
+    "42",
+    "55",
+    "65",
+    "73",
+    "96"
+  ],
+  "status": "OPTIMAL",
+  "score": 80.8,
+  "threshold": 80,
+  "attempts": 1,
+  "selected_attempt": 1,
+  "warnings": [
+    {
+      "code": "BOUNDARY_UNCERTAINTY_UNKNOWN",
+      "context": "birth",
+      "message": "Chưa có biên sai số đồng hồ để đánh giá vùng giáp ranh giờ/ngày Bắc Kinh."
+    },
+    {
+      "code": "BOUNDARY_UNCERTAINTY_UNKNOWN",
+      "context": "casting",
+      "message": "Chưa có biên sai số đồng hồ để đánh giá vùng giáp ranh giờ/ngày Bắc Kinh."
+    }
+  ],
+  "disclaimer": "Điểm bộ số thể hiện mức phù hợp với quy tắc của hệ thống, không phải xác suất trúng thưởng hoặc bằng chứng cải vận.",
+  "trace": {
+    "server_received_at": "2026-10-26T12:18:49.329629+00:00",
+    "client_server_difference_seconds": null,
+    "birth_time": {
+      "civil_datetime": "1994-10-08T05:00:00+07:00",
+      "utc_instant": "1994-10-07T22:00:00+00:00",
+      "beijing_datetime": "1994-10-08T06:00:00+08:00",
+      "clock_basis": "BEIJING_CIVIL_UTC8",
+      "timezone_offset_minutes": 480,
+      "conversion_offset_minutes": 60.0,
+      "true_solar_time_applied": false,
+      "location_affects_calculation": false,
+      "calculation_resolution_seconds": 1,
+      "boundary": {
+        "status": "UNDETERMINED",
+        "delta_t_seconds": null,
+        "missing_components": [
+          "clock_uncertainty"
+        ],
+        "distance_to_hour_boundary_seconds": 3600.0,
+        "distance_to_calendar_day_boundary_seconds": 21600.0,
+        "crosses_boundary_with_known_components": false
+      },
+      "provider": "lunar-python-1.4.8",
+      "validation_status": "INTEGRATION_TESTED"
+    },
+    "casting_time": {
+      "civil_datetime": "2026-10-11T10:00:00+07:00",
+      "utc_instant": "2026-10-11T03:00:00+00:00",
+      "beijing_datetime": "2026-10-11T11:00:00+08:00",
+      "clock_basis": "BEIJING_CIVIL_UTC8",
+      "timezone_offset_minutes": 480,
+      "conversion_offset_minutes": 60.0,
+      "true_solar_time_applied": false,
+      "location_affects_calculation": false,
+      "calculation_resolution_seconds": 1,
+      "boundary": {
+        "status": "UNDETERMINED",
+        "delta_t_seconds": null,
+        "missing_components": [
+          "clock_uncertainty"
+        ],
+        "distance_to_hour_boundary_seconds": 0.0,
+        "distance_to_calendar_day_boundary_seconds": 39600.0,
+        "crosses_boundary_with_known_components": false
+      },
+      "provider": "lunar-python-1.4.8",
+      "validation_status": "INTEGRATION_TESTED"
+    },
+    "birth_calendar": {
+      "algorithm_id": "6tail-chinese-utc8-v1",
+      "calendar": "CHINESE_LUNAR",
+      "offset_minutes": 480,
+      "provider": "lunar-python-1.4.8",
+      "source_url": "https://github.com/6tail/lunar-python",
+      "validation_status": "INTEGRATION_TESTED",
+      "civil_datetime": "1994-10-08T05:00:00+07:00",
+      "beijing_datetime": "1994-10-08T06:00:00+08:00",
+      "effective_date": "1994-10-08",
+      "day_boundary": "00:00_BEIJING",
+      "lunar": {
+        "year": 1994,
+        "month": 9,
+        "day": 4,
+        "is_leap_month": false,
+        "year_branch": "Tuất",
+        "hour_branch": "Mão"
+      },
+      "maihoa_inputs": {
+        "Y": 11,
+        "M": 9,
+        "D": 4,
+        "H": 4
+      }
+    },
+    "casting_calendar": {
+      "algorithm_id": "6tail-chinese-utc8-v1",
+      "calendar": "CHINESE_LUNAR",
+      "offset_minutes": 480,
+      "provider": "lunar-python-1.4.8",
+      "source_url": "https://github.com/6tail/lunar-python",
+      "validation_status": "INTEGRATION_TESTED",
+      "civil_datetime": "2026-10-11T10:00:00+07:00",
+      "beijing_datetime": "2026-10-11T11:00:00+08:00",
+      "effective_date": "2026-10-11",
+      "day_boundary": "00:00_BEIJING",
+      "lunar": {
+        "year": 2026,
+        "month": 9,
+        "day": 2,
+        "is_leap_month": false,
+        "year_branch": "Ngọ",
+        "hour_branch": "Ngọ"
+      },
+      "maihoa_inputs": {
+        "Y": 7,
+        "M": 9,
+        "D": 2,
+        "H": 7
+      }
+    },
+    "bazi": {
+      "dung_than": [
+        "Hỏa"
+      ],
+      "hy_than": [
+        "Mộc"
+      ],
+      "ky_than": [
+        "Thổ",
+        "Thủy"
+      ],
+      "primary_dung_than": "Hỏa",
+      "reason_code": "WEAK_WEALTH",
+      "structure": "Thất Sát Cách",
+      "strength": "Thân Nhược (Nội cách)",
+      "scores": {
+        "self": 0,
+        "resource": 34,
+        "output": 10,
+        "wealth": 40,
+        "officer": 16
+      },
+      "total_support": 34,
+      "total_oppose": 66,
+      "month_support": false,
+      "dieu_hau": null,
+      "source": {
+        "repository": "vhphuoc1102/tinix-bazi",
+        "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+        "path": "backendjs/src/bazi/phan_tich/ngu_hanh.js",
+        "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/ngu_hanh.js",
+        "implementation": "numeric-python-port-v1"
+      },
+      "primary_used": "Hỏa",
+      "overridden": false,
+      "natal": {
+        "gans": [
+          0,
+          9,
+          3,
+          9
+        ],
+        "zhis": [
+          10,
+          9,
+          3,
+          3
+        ],
+        "solar_month": {
+          "year_ganzhi_zh": "甲戌",
+          "month_branch_index": 9,
+          "month_branch": "Dậu",
+          "jie_name": "Bạch Lộ",
+          "jie_name_zh": "白露",
+          "jie_start_utc": "1994-09-07T20:55:07+00:00",
+          "jie_start_beijing": "1994-09-08T04:55:07+08:00",
+          "provider": "lunar-python-1.4.8",
+          "validation_status": "INTEGRATION_TESTED"
+        },
+        "beijing_datetime": "1994-10-08T06:00:00+08:00",
+        "day_boundary": "23:00_BEIJING",
+        "sect": 1,
+        "effective_date": "1994-10-08",
+        "provider": "lunar-python-1.4.8",
+        "pillars": [
+          {
+            "pillar": "year",
+            "stem": "Giáp",
+            "branch": "Tuất",
+            "stem_zh": "甲",
+            "branch_zh": "戌"
+          },
+          {
+            "pillar": "month",
+            "stem": "Quý",
+            "branch": "Dậu",
+            "stem_zh": "癸",
+            "branch_zh": "酉"
+          },
+          {
+            "pillar": "day",
+            "stem": "Đinh",
+            "branch": "Mão",
+            "stem_zh": "丁",
+            "branch_zh": "卯"
+          },
+          {
+            "pillar": "hour",
+            "stem": "Quý",
+            "branch": "Mão",
+            "stem_zh": "癸",
+            "branch_zh": "卯"
+          }
+        ]
+      }
+    },
+    "maihoa": {
+      "core_version": "maihoa-ymdh-v1",
+      "variables": {
+        "Y": 7,
+        "M": 9,
+        "D": 2,
+        "H": 7
+      },
+      "upper": 2,
+      "lower": 1,
+      "moving_line": 1,
+      "original": {
+        "hexagram_id": 43,
+        "name_zh": "夬",
+        "symbol": "䷪",
+        "lines_bottom_to_top": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "the": {
+        "trigram": 2,
+        "name": "Đoài",
+        "element": "Kim"
+      },
+      "dung": {
+        "trigram": 1,
+        "name": "Càn",
+        "element": "Kim"
+      },
+      "state": "BINH_HOA",
+      "display_hexagrams": {
+        "mutual": {
+          "hexagram_id": 1,
+          "name_zh": "乾",
+          "symbol": "䷀",
+          "lines_bottom_to_top": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "changed": {
+          "hexagram_id": 28,
+          "name_zh": "大过",
+          "symbol": "䷛",
+          "lines_bottom_to_top": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        "affects_generation": false,
+        "affects_evaluation": false,
+        "display_on_demand": true
+      },
+      "evidence": [
+        {
+          "evidence_id": "iching__43",
+          "label": "SOURCE_ORIGINAL",
+          "text_type": "HEXAGRAM_TEXT",
+          "language": "zh",
+          "text": "扬于王庭，孚号有厉；告自邑，不利即戎，利有攸往。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "iching/iching.json",
+            "key": "iching__43",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+          }
+        },
+        {
+          "evidence_id": "iching__43_1",
+          "label": "SOURCE_ORIGINAL",
+          "text_type": "LINE_TEXT",
+          "language": "zh",
+          "text": "壮于前趾，往不胜为咎。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "iching/iching.json",
+            "key": "iching__43_1",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+          }
+        },
+        {
+          "evidence_id": "iching__43_tuan",
+          "label": "SOURCE_ORIGINAL",
+          "text_type": "TUAN_COMMENTARY",
+          "language": "zh",
+          "text": "夬，决也，刚决柔也；健而说，决而和。“扬于王庭”，柔乘五刚也；“孚号有厉”，其危乃光也；“告自邑，不利即戎”，所尚乃穷也；“利有攸往”，刚长乃终也。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "ichuan/tuan.json",
+            "key": "iching__43_tuan",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/tuan.json"
+          }
+        },
+        {
+          "evidence_id": "iching__43_xiang",
+          "label": "SOURCE_ORIGINAL",
+          "text_type": "XIANG_COMMENTARY",
+          "language": "zh",
+          "text": "泽上于天，夬。君子以施禄及下，居德则忌。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "ichuan/xiang.json",
+            "key": "iching__43_xiang",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/xiang.json"
+          }
+        }
+      ],
+      "source_gaps": []
+    },
+    "casting_solar_month": {
+      "year_ganzhi_zh": "丙午",
+      "month_branch_index": 10,
+      "month_branch": "Tuất",
+      "jie_name": "Hàn Lộ",
+      "jie_name_zh": "寒露",
+      "jie_start_utc": "2026-10-08T06:29:17+00:00",
+      "jie_start_beijing": "2026-10-08T14:29:17+08:00",
+      "provider": "lunar-python-1.4.8",
+      "validation_status": "INTEGRATION_TESTED"
+    },
+    "stars": {
+      "active_stars": [
+        {
+          "name": "Thiên Ất",
+          "target_type": "branch",
+          "matched_tokens": [
+            "Dậu"
+          ],
+          "matched_elements": [
+            "Kim"
+          ]
+        },
+        {
+          "name": "Văn Xương",
+          "target_type": "branch",
+          "matched_tokens": [
+            "Dậu"
+          ],
+          "matched_elements": [
+            "Kim"
+          ]
+        }
+      ],
+      "delta_by_element": {
+        "Mộc": 0,
+        "Hỏa": 0,
+        "Thổ": 0,
+        "Kim": 0.30000000000000004,
+        "Thủy": 0
+      },
+      "source_commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+      "policy": "day-stem Thien At/Van Xuong; casting-Jie-month Thien Duc matched against natal pillars"
+    },
+    "remediation": {
+      "enabled": false,
+      "strategy": "NONE",
+      "target": null,
+      "quota_min": 3,
+      "quota_max": 4,
+      "candidates": []
+    },
+    "weights": [
+      {
+        "number": "00",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.01831563888873418,
+        "allowed": true
+      },
+      {
+        "number": "01",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.603692799703429,
+        "allowed": true
+      },
+      {
+        "number": "02",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.5488116360940264,
+        "allowed": true
+      },
+      {
+        "number": "03",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.05476577520465034,
+        "allowed": true
+      },
+      {
+        "number": "04",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.049787068367863944,
+        "allowed": true
+      },
+      {
+        "number": "05",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.25,
+        "allowed": true
+      },
+      {
+        "number": "06",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.15,
+        "allowed": true
+      },
+      {
+        "number": "07",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5702131338157357,
+        "allowed": true
+      },
+      {
+        "number": "08",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5334251896985914,
+        "allowed": true
+      },
+      {
+        "number": "09",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.0201472027776076,
+        "allowed": true
+      },
+      {
+        "number": "10",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.01831563888873418,
+        "allowed": true
+      },
+      {
+        "number": "11",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0.05
+        },
+        "weight": 0.6311333815081303,
+        "allowed": true
+      },
+      {
+        "number": "12",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.5488116360940264,
+        "allowed": true
+      },
+      {
+        "number": "13",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.05476577520465034,
+        "allowed": true
+      },
+      {
+        "number": "14",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.049787068367863944,
+        "allowed": true
+      },
+      {
+        "number": "15",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.25,
+        "allowed": true
+      },
+      {
+        "number": "16",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.15,
+        "allowed": true
+      },
+      {
+        "number": "17",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5702131338157357,
+        "allowed": true
+      },
+      {
+        "number": "18",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0.05
+        },
+        "weight": 0.5518191617571635,
+        "allowed": true
+      },
+      {
+        "number": "19",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.0201472027776076,
+        "allowed": true
+      },
+      {
+        "number": "20",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.01831563888873418,
+        "allowed": true
+      },
+      {
+        "number": "21",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.603692799703429,
+        "allowed": true
+      },
+      {
+        "number": "22",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0.05
+        },
+        "weight": 0.5762522178987277,
+        "allowed": true
+      },
+      {
+        "number": "23",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.05476577520465034,
+        "allowed": true
+      },
+      {
+        "number": "24",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.049787068367863944,
+        "allowed": true
+      },
+      {
+        "number": "25",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.25,
+        "allowed": true
+      },
+      {
+        "number": "26",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.15,
+        "allowed": true
+      },
+      {
+        "number": "27",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5702131338157357,
+        "allowed": true
+      },
+      {
+        "number": "28",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0.05
+        },
+        "weight": 0.5518191617571635,
+        "allowed": true
+      },
+      {
+        "number": "29",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.0201472027776076,
+        "allowed": true
+      },
+      {
+        "number": "30",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.01831563888873418,
+        "allowed": true
+      },
+      {
+        "number": "31",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.603692799703429,
+        "allowed": true
+      },
+      {
+        "number": "32",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.5488116360940264,
+        "allowed": true
+      },
+      {
+        "number": "33",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0.05
+        },
+        "weight": 0.05725512862304353,
+        "allowed": true
+      },
+      {
+        "number": "34",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.049787068367863944,
+        "allowed": true
+      },
+      {
+        "number": "35",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.25,
+        "allowed": true
+      },
+      {
+        "number": "36",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.15,
+        "allowed": true
+      },
+      {
+        "number": "37",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5702131338157357,
+        "allowed": true
+      },
+      {
+        "number": "38",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0.05
+        },
+        "weight": 0.5518191617571635,
+        "allowed": true
+      },
+      {
+        "number": "39",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.0201472027776076,
+        "allowed": true
+      },
+      {
+        "number": "40",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.01831563888873418,
+        "allowed": true
+      },
+      {
+        "number": "41",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.603692799703429,
+        "allowed": true
+      },
+      {
+        "number": "42",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.5488116360940264,
+        "allowed": true
+      },
+      {
+        "number": "43",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.05476577520465034,
+        "allowed": true
+      },
+      {
+        "number": "44",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0.05
+        },
+        "weight": 0.052276421786257146,
+        "allowed": true
+      },
+      {
+        "number": "45",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.25,
+        "allowed": true
+      },
+      {
+        "number": "46",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.15,
+        "allowed": true
+      },
+      {
+        "number": "47",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5702131338157357,
+        "allowed": true
+      },
+      {
+        "number": "48",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5334251896985914,
+        "allowed": true
+      },
+      {
+        "number": "49",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.0201472027776076,
+        "allowed": true
+      },
+      {
+        "number": "50",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.01831563888873418,
+        "allowed": true
+      },
+      {
+        "number": "51",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.603692799703429,
+        "allowed": true
+      },
+      {
+        "number": "52",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.5488116360940264,
+        "allowed": true
+      },
+      {
+        "number": "53",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.05476577520465034,
+        "allowed": true
+      },
+      {
+        "number": "54",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.049787068367863944,
+        "allowed": true
+      },
+      {
+        "number": "55",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.25,
+        "allowed": true
+      },
+      {
+        "number": "56",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.15,
+        "allowed": true
+      },
+      {
+        "number": "57",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5702131338157357,
+        "allowed": true
+      },
+      {
+        "number": "58",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5334251896985914,
+        "allowed": true
+      },
+      {
+        "number": "59",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.0201472027776076,
+        "allowed": true
+      },
+      {
+        "number": "60",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.01831563888873418,
+        "allowed": true
+      },
+      {
+        "number": "61",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.603692799703429,
+        "allowed": true
+      },
+      {
+        "number": "62",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.5488116360940264,
+        "allowed": true
+      },
+      {
+        "number": "63",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.05476577520465034,
+        "allowed": true
+      },
+      {
+        "number": "64",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.049787068367863944,
+        "allowed": true
+      },
+      {
+        "number": "65",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.25,
+        "allowed": true
+      },
+      {
+        "number": "66",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.15,
+        "allowed": true
+      },
+      {
+        "number": "67",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5702131338157357,
+        "allowed": true
+      },
+      {
+        "number": "68",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5334251896985914,
+        "allowed": true
+      },
+      {
+        "number": "69",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.0201472027776076,
+        "allowed": true
+      },
+      {
+        "number": "70",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.01831563888873418,
+        "allowed": true
+      },
+      {
+        "number": "71",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.603692799703429,
+        "allowed": true
+      },
+      {
+        "number": "72",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.5488116360940264,
+        "allowed": true
+      },
+      {
+        "number": "73",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.05476577520465034,
+        "allowed": true
+      },
+      {
+        "number": "74",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.049787068367863944,
+        "allowed": true
+      },
+      {
+        "number": "75",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.25,
+        "allowed": true
+      },
+      {
+        "number": "76",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.15,
+        "allowed": true
+      },
+      {
+        "number": "77",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5702131338157357,
+        "allowed": true
+      },
+      {
+        "number": "78",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5334251896985914,
+        "allowed": true
+      },
+      {
+        "number": "79",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.0201472027776076,
+        "allowed": true
+      },
+      {
+        "number": "80",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.01831563888873418,
+        "allowed": true
+      },
+      {
+        "number": "81",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.603692799703429,
+        "allowed": true
+      },
+      {
+        "number": "82",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.5488116360940264,
+        "allowed": true
+      },
+      {
+        "number": "83",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.05476577520465034,
+        "allowed": true
+      },
+      {
+        "number": "84",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.049787068367863944,
+        "allowed": true
+      },
+      {
+        "number": "85",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.25,
+        "allowed": true
+      },
+      {
+        "number": "86",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.15,
+        "allowed": true
+      },
+      {
+        "number": "87",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5702131338157357,
+        "allowed": true
+      },
+      {
+        "number": "88",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5334251896985914,
+        "allowed": true
+      },
+      {
+        "number": "89",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.0201472027776076,
+        "allowed": true
+      },
+      {
+        "number": "90",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.01831563888873418,
+        "allowed": true
+      },
+      {
+        "number": "91",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.603692799703429,
+        "allowed": true
+      },
+      {
+        "number": "92",
+        "element": "Mộc",
+        "single_raw_score": 100,
+        "base_weight": 0.5488116360940264,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.5488116360940264,
+        "allowed": true
+      },
+      {
+        "number": "93",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.05476577520465034,
+        "allowed": true
+      },
+      {
+        "number": "94",
+        "element": "Hỏa",
+        "single_raw_score": -20,
+        "base_weight": 0.049787068367863944,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.049787068367863944,
+        "allowed": true
+      },
+      {
+        "number": "95",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.25,
+        "allowed": true
+      },
+      {
+        "number": "96",
+        "element": "Thổ",
+        "single_raw_score": 130,
+        "base_weight": 1.0,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 1.15,
+        "allowed": true
+      },
+      {
+        "number": "97",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0.1,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5702131338157357,
+        "allowed": true
+      },
+      {
+        "number": "98",
+        "element": "Kim",
+        "single_raw_score": 80,
+        "base_weight": 0.36787944117144233,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0.15,
+          "hao_dong": 0,
+          "than_sat": 0.30000000000000004,
+          "dan_gian": 0
+        },
+        "weight": 0.5334251896985914,
+        "allowed": true
+      },
+      {
+        "number": "99",
+        "element": "Thủy",
+        "single_raw_score": -70,
+        "base_weight": 0.01831563888873418,
+        "remediation_multiplier": 1,
+        "deltas": {
+          "thien_thoi": 0,
+          "hao_dong": 0.1,
+          "than_sat": 0,
+          "dan_gian": 0
+        },
+        "weight": 0.0201472027776076,
+        "allowed": true
+      }
+    ],
+    "attempt_history": [
+      {
+        "attempt": 1,
+        "numbers": [
+          "06",
+          "42",
+          "55",
+          "65",
+          "73",
+          "96"
+        ],
+        "score": 80.8,
+        "g_raw": 85.0,
+        "g_cap": 125.0,
+        "yin_yang_score": 100,
+        "element_score": 68.0,
+        "conflicting_number_count": 1,
+        "meets_threshold": true
+      }
+    ],
+    "g_cap": 125.0,
+    "beta": 2,
+    "sampling_law": "CONDITIONAL_PRODUCT_WEIGHTS",
+    "rng": "SystemRandom",
+    "interpretation": {
+      "status": "NOT_REQUESTED",
+      "model_called": false
+    },
+    "calendar_policy": "BEIJING_CIVIL_UTC8",
+    "legacy_location_fields_used": false,
+    "validation_status": "EXPERIMENTAL"
+  }
+}

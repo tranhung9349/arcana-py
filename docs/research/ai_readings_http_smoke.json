@@ -1,0 +1,83 @@
+{
+  "checked_at": "2026-10-26T16:36:24.905530+00:00",
+  "provider": {
+    "configured": true,
+    "model": "deepseek-v4.1-flash",
+    "provider_host": "rexapf.com"
+  },
+  "synthetic_data_only": true,
+  "results": [
+    {
+      "method": "BAZI",
+      "consultation_id": "381711a8-5e4a-42f7-9935-2063dfaad195",
+      "ai_reading_id": "f1117c084c782abb13d05067d78002132a1e358d5295cdfb8c679f21c5fbb759",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "216ae84e0c4b38ea6672ab9ea06c5b8a0a9c87e0eacaf014e6eea8be281df920",
+      "case_ids": [
+        "bazi-07-study",
+        "bazi-03-mixed"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 22973,
+        "completion_tokens": 6188,
+        "total_tokens": 29161
+      },
+      "generation_passes": 2,
+      "generate_seconds": 37.172,
+      "cache_replay_ms": 15.93,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Điểm đáng chú ý nhất từ dữ kiện: lá số có cả phần tiếp nhận kiến thức (Ấn) lẫn phần làm ra, trình bày (Thực Thương), nhưng phần trình bày chỉ nằm trong tàng can nên không tự lộ ra. Vì engine chưa chốt hành ưu tiên, việc nên thử là chủ động tạo đầu ra sau khi đọc, chứ không phải tăng cường một hành nào."
+    },
+    {
+      "method": "MAIHOA",
+      "consultation_id": "338ea908-a663-437e-9113-6c6d6ccca155",
+      "ai_reading_id": "c2be1a6d3e5aaa08d4567fea8da7cf3c0280be4038ec0d9460e4c1b4f4af9a3b",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "0c144121aaa6f880b472a31d8fc2def3551a4c0d357670e66b3a9882fde659a6",
+      "case_ids": [
+        "maihoa-01-support",
+        "maihoa-04-sequence"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 12201,
+        "completion_tokens": 3054,
+        "total_tokens": 15255
+      },
+      "generation_passes": 1,
+      "generate_seconds": 17.476,
+      "cache_replay_ms": 8.927,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Điểm hữu ích nhất: ở chặng mở đầu, phía việc học được đọc là đang đưa hỗ trợ về cho bạn, nên kế hoạch không cần gắng ép. Phần nên chuẩn bị kỹ là khâu giữa, vì đó là chỗ bạn phải tự tay giữ tiến độ."
+    },
+    {
+      "method": "LIUYAO",
+      "consultation_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+      "ai_reading_id": "287119a18d43bac32828cd8c571a8e3e53408e7b1a1446756d4d525f8bf4225d",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "context_sha256": "1b5351357173c18a5dc62a534e5e9e6288a7c6ecf20da6658b8c33f78e774ecd",
+      "case_ids": [
+        "liuyao-01-money",
+        "liuyao-03-day-clash"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 11183,
+        "completion_tokens": 3097,
+        "total_tokens": 14280
+      },
+      "generation_passes": 1,
+      "generate_seconds": 16.426,
+      "cache_replay_ms": 10.906,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Điểm đáng yên tâm là phần khung và nội dung chính của bản đề cương có nền khá vững. Chỗ nên rà soát trước là lượng sức bạn bỏ vào đó và những yêu cầu bên ngoài chưa được chốt rõ."
+    }
+  ]
+}

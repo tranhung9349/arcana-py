@@ -1,0 +1,102 @@
+{
+  "version": "plain-vietnamese-2026-10-26-v2",
+  "model_called": false,
+  "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+  "case_count": 17,
+  "source_count": 20,
+  "heldout_count": 8,
+  "files": [
+    {
+      "path": "data/interpretation/plain_v2/cases.json",
+      "sha256": "a39012850829cdc2781c1afedeef4e15f30dd757c651e78ed65af19f65eded37"
+    },
+    {
+      "path": "data/interpretation/plain_v2/evals.json",
+      "sha256": "a13857c9a7eedf6ddbca02e77a1a878cae9d95b0b67f740ac2660736cf62814c"
+    },
+    {
+      "path": "data/interpretation/plain_v2/sources.json",
+      "sha256": "3324cc9d084260db8dcc1d4f9022b31f3148e79f42c15e341cad18ffc1b25f98"
+    },
+    {
+      "path": "data/reference/bazi/dtt_climate.wikitext",
+      "sha256": "fc7e7b33031a5fbaba4d02475a78b385490d65503ae9f504a40013e55ebb198d"
+    },
+    {
+      "path": "data/reference/bazi/dtt_month.wikitext",
+      "sha256": "babe20b4e4eed5c90ea577f9326b6b7be13bbac8d774c53b3b1b57212e68c93a"
+    },
+    {
+      "path": "data/reference/bazi/dtt_strength.wikitext",
+      "sha256": "c17a857454f0e545b63c90dac9ddac0361d61cfe07718f7a5a793b4a2ff2ec80"
+    },
+    {
+      "path": "data/reference/bazi/smt_relations.wikitext",
+      "sha256": "e58c3f48d5f983548a35783c8f4961768a5c71edfa6d88f8fb37bc07acd53e0d"
+    },
+    {
+      "path": "data/reference/interpretation/zhouyi_jiji.source.json",
+      "sha256": "ebde0ed7bb7f1046053d381da12aa2619936166cc9a4be2110fa6513676ee994"
+    },
+    {
+      "path": "data/reference/interpretation/zhouyi_jiji.wikitext",
+      "sha256": "e9099522d8013177a9316c8fc499a10b80d50edd18b3401cbd79b2d31ab58d78"
+    },
+    {
+      "path": "data/reference/interpretation/zhouyi_qian.source.json",
+      "sha256": "776e83d3dc0148c9950799a91084e29da464ab096fe3d82ffe8ec1dbed31d0d9"
+    },
+    {
+      "path": "data/reference/interpretation/zhouyi_qian.wikitext",
+      "sha256": "e8b8c4a93f7e1f86e00e83635a12423da0e134ec463ea21837f6a41b41661156"
+    },
+    {
+      "path": "data/reference/interpretation/zsby_16.source.json",
+      "sha256": "1bb9d2805762ba174b7bdada3b3b87cd44465dd6ccf53bc736cf2aacfb57b11b"
+    },
+    {
+      "path": "data/reference/interpretation/zsby_16.wikitext",
+      "sha256": "a053736328564883e7ebec893cee6b8bb8ed8a16918900c887ba955d73b6f21d"
+    },
+    {
+      "path": "data/reference/interpretation/zsby_17.source.json",
+      "sha256": "ce794262832fc5626c262dd6684dc53825f139dec468e7523cf8d9fd4a82fe71"
+    },
+    {
+      "path": "data/reference/interpretation/zsby_17.wikitext",
+      "sha256": "e70bfbed847449facf08d1801c5cfe37c3655761ad635b484d7c24e5a4361623"
+    },
+    {
+      "path": "data/reference/interpretation/zsby_8.source.json",
+      "sha256": "1ad61e9c67271358e403c9d581e0bd4de31e86e659ef721c2c14845b0c268890"
+    },
+    {
+      "path": "data/reference/interpretation/zsby_8.wikitext",
+      "sha256": "da83c3e47c04bb4813040e6cf5c3e43f8775e2293da3b32c9a8e2fb542e72a90"
+    },
+    {
+      "path": "data/reference/interpretation/zsby_9.source.json",
+      "sha256": "e0aed5d5d284b0378ca49d5ce037ad1197469ff0c679d01db6abea64e98170a9"
+    },
+    {
+      "path": "data/reference/interpretation/zsby_9.wikitext",
+      "sha256": "e84db11ae9a316ba00cb301e4e25c71496b32d9fcc495f16e09a575eb2159412"
+    },
+    {
+      "path": "data/reference/maihoa/volume_2.wikitext",
+      "sha256": "239523c6bb8b59d7ed3fe229c681cd1a1124a5216617e198f05dbf19cc6d2939"
+    },
+    {
+      "path": "docs/prompts/plain_vietnamese_v2.system.txt",
+      "sha256": "3c84c06075b74e3a60b9bf367c460c40a8b6f0e8734df1d4b30d8df68ee5498e"
+    },
+    {
+      "path": "schemas/plain_reading_context.schema.json",
+      "sha256": "1ffbf147e507a3b10755571b6f662e6a6052895312b98b9f20d61e27d4b5f15a"
+    },
+    {
+      "path": "schemas/plain_reading_response.schema.json",
+      "sha256": "cbf3773297da5293ab42e1946911725dadc7393e42e67ccb57a928c8426a39a0"
+    }
+  ]
+}

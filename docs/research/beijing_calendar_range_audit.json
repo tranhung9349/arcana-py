@@ -1,0 +1,13 @@
+{
+  "rules_version": "mvp1-logic-2026-10-11-v4",
+  "provider": "lunar-python==1.4.8",
+  "civil_range": [
+    "1950-01-01",
+    "2030-12-31"
+  ],
+  "days_checked": 29585,
+  "roundtrip_mismatches": [],
+  "scope": "Same-library roundtrip and integration; not independent astronomy validation",
+  "full_range_independent_calendar_verified": false,
+  "time_engine_sha256": "260e47e96650c0e167e8b091396f3515fc8899204a09fb3c0f792bcf0147b83a"
+}

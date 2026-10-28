@@ -1,0 +1,69 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "topic": {
+      "default": "GENERAL",
+      "enum": [
+        "GENERAL",
+        "WEALTH",
+        "CAREER",
+        "DOCUMENT",
+        "PARENTS",
+        "CHILDREN",
+        "SIBLINGS",
+        "PARTNERSHIP"
+      ],
+      "title": "Topic",
+      "type": "string"
+    },
+    "use_relative": {
+      "anyOf": [
+        {
+          "enum": [
+            "Phụ mẫu",
+            "Huynh đệ",
+            "Tử tôn",
+            "Thê tài",
+            "Quan quỷ"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Use Relative"
+    },
+    "focus_line": {
+      "anyOf": [
+        {
+          "maximum": 6,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Focus Line"
+    },
+    "intent_mode": {
+      "default": "TOPIC_ONLY",
+      "enum": [
+        "TOPIC_ONLY",
+        "COMBINED"
+      ],
+      "title": "Intent Mode",
+      "type": "string"
+    },
+    "intent_acknowledged": {
+      "default": false,
+      "title": "Intent Acknowledged",
+      "type": "boolean"
+    }
+  },
+  "title": "AnalysisContext",
+  "type": "object"
+}

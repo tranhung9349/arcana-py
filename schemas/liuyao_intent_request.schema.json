@@ -1,0 +1,31 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "question": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Question",
+      "type": "string"
+    },
+    "topic": {
+      "default": "GENERAL",
+      "enum": [
+        "GENERAL",
+        "WEALTH",
+        "CAREER",
+        "DOCUMENT",
+        "PARENTS",
+        "CHILDREN",
+        "SIBLINGS",
+        "PARTNERSHIP"
+      ],
+      "title": "Topic",
+      "type": "string"
+    }
+  },
+  "required": [
+    "question"
+  ],
+  "title": "QuestionIntentRequest",
+  "type": "object"
+}

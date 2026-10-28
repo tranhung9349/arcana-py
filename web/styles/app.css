@@ -1,0 +1,28 @@
+/* Build with npm run build:css. The browser only loads the generated style.css. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+@import "./arcana.css" layer(components);
+
+/* Explicit sources keep backend data and stored readings out of CSS detection. */
+@source "../index.html";
+@source "../*.js";
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-field: var(--field);
+  --color-parchment: var(--text);
+  --color-muted: var(--muted);
+  --color-control: var(--control-border);
+  --color-amethyst: var(--amethyst);
+  --color-gold: var(--gold);
+  --font-body: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Match the existing reading desk breakpoints without viewport-specific forms. */
+@theme {
+  --breakpoint-phone: 601px;
+  --breakpoint-desk: 851px;
+  --breakpoint-wide: 1101px;
+}

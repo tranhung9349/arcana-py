@@ -1,0 +1,41 @@
+{
+  "request_id": "e6237512-d72b-4bc3-8f0a-dd90bb58d828",
+  "question": "Tôi cần cân nhắc điều gì khi hợp tác trong tháng tới?",
+  "source": "MANUAL",
+  "casting": {
+    "mode": "CUSTOM",
+    "custom_timestamp": "2026-10-26T09:00:00+07:00"
+  },
+  "throws_bottom_to_top": [
+    [
+      "BACK",
+      "INSCRIPTION",
+      "INSCRIPTION"
+    ],
+    [
+      "BACK",
+      "BACK",
+      "INSCRIPTION"
+    ],
+    [
+      "BACK",
+      "BACK",
+      "BACK"
+    ],
+    [
+      "BACK",
+      "BACK",
+      "INSCRIPTION"
+    ],
+    [
+      "BACK",
+      "INSCRIPTION",
+      "INSCRIPTION"
+    ],
+    [
+      "INSCRIPTION",
+      "INSCRIPTION",
+      "INSCRIPTION"
+    ]
+  ]
+}

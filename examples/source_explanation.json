@@ -1,0 +1,1040 @@
+{
+  "schema_version": "source-explanation-v2",
+  "context_id": "c6bebf0f-7c19-4ab0-8c25-a5995a4afdb1",
+  "rules_version": "mvp1-logic-2026-10-26-v6",
+  "corpus_version": "iching-vi-draft-v1",
+  "model_called": false,
+  "affects_generation": false,
+  "affects_evaluation": false,
+  "original": {
+    "hexagram_id": 43,
+    "name_zh": "夬",
+    "name_vi": "Trạch Thiên Quải",
+    "symbol": "䷪",
+    "moving_line": 1,
+    "overview": {
+      "label": "AI_INTERPRETATION",
+      "language": "vi",
+      "text": "Quải là quyết định và loại bỏ điều không phù hợp. Cần nói rõ, có căn cứ và giữ bình tĩnh; mạnh bạo thiếu chuẩn bị dễ gặp lỗi.",
+      "review_status": "UNREVIEWED",
+      "references": [
+        "iching__43__hexagram_text"
+      ]
+    },
+    "cards": [
+      {
+        "evidence_id": "iching__43__hexagram_text",
+        "title": "Quẻ từ",
+        "text_type": "HEXAGRAM_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "扬于王庭，孚号有厉；告自邑，不利即戎，利有攸往。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__43",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Công bố ở sân vua, thành tín báo rõ điều nguy. Báo từ ấp mình; không lợi dùng binh, lợi tiến đi.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__43__hexagram_text"
+          ],
+          "source_text_sha256": "49c4c285e6b40b567d0933e33eb47b1f553d52f04c6220f24309872f440ba81e"
+        }
+      },
+      {
+        "evidence_id": "iching__43_1__line_text",
+        "title": "Hào 1 động · 初九",
+        "text_type": "LINE_TEXT",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "壮于前趾，往不胜为咎。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "iching/iching.json",
+          "key": "iching__43_1",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+        },
+        "translation": {
+          "label": "AI_TRANSLATION",
+          "language": "vi",
+          "text": "Mạnh ở ngón chân trước; tiến mà không thắng thì thành lỗi.",
+          "review_status": "UNREVIEWED",
+          "version": "iching-vi-draft-v1",
+          "references": [
+            "iching__43_1__line_text"
+          ],
+          "source_text_sha256": "961871f3f13758f3f93744f88222ce630c79b757a06ec7693288239b9b0f632f"
+        }
+      },
+      {
+        "evidence_id": "iching__43__tuan_commentary",
+        "title": "Thoán truyện",
+        "text_type": "TUAN_COMMENTARY",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "夬，决也，刚决柔也；健而说，决而和。“扬于王庭”，柔乘五刚也；“孚号有厉”，其危乃光也；“告自邑，不利即戎”，所尚乃穷也；“利有攸往”，刚长乃终也。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "ichuan/tuan.json",
+          "key": "iching__43",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/tuan.json"
+        },
+        "translation": null
+      },
+      {
+        "evidence_id": "iching__43__xiang_commentary",
+        "title": "Đại Tượng truyện",
+        "text_type": "XIANG_COMMENTARY",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "泽上于天，夬。君子以施禄及下，居德则忌。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "ichuan/xiang.json",
+          "key": "iching__43",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/xiang.json"
+        },
+        "translation": null
+      },
+      {
+        "evidence_id": "iching__43_1__line_xiang_commentary",
+        "title": "Tiểu Tượng · hào 1",
+        "text_type": "LINE_XIANG_COMMENTARY",
+        "language": "zh",
+        "label": "SOURCE_ORIGINAL",
+        "text": "“不胜”而“往”，咎也。",
+        "source": {
+          "repository": "john-walks-slow/open-iching",
+          "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+          "path": "ichuan/xiang.json",
+          "key": "iching__43_1",
+          "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/xiang.json"
+        },
+        "translation": null
+      }
+    ],
+    "source_gaps": []
+  },
+  "bazi": {
+    "day_master": "Đinh (丁)",
+    "structure": "Thất Sát Cách",
+    "strength": "Thân Nhược (Nội cách)",
+    "primary_used": "Hỏa",
+    "primary_calculated": "Hỏa",
+    "overridden": false,
+    "dung_than": [
+      "Hỏa"
+    ],
+    "hy_than": [
+      "Mộc"
+    ],
+    "ky_than": [
+      "Thổ",
+      "Thủy"
+    ],
+    "birth_season": "Thu",
+    "cards": [
+      {
+        "evidence_id": "tinix__STEM_ESSENCE.丁.verse",
+        "title": "Lời dẫn Hán Việt · Nhật Chủ Đinh",
+        "text_type": "BAZI_HAN_VIET_VERSE",
+        "language": "vi",
+        "label": "SOURCE_ORIGINAL",
+        "text": "Đinh hỏa nhu trung, nội tính chiêu dung. Đắc hiếu từ mẫu, khả thu khả đông. Nhược hồng nhạn chi thu, tự thiền quyên chi hạ.",
+        "source": {
+          "repository": "vhphuoc1102/tinix-bazi",
+          "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+          "path": "backendjs/src/bazi/phan_tich/data/dich_thien_tuy_data.js",
+          "key": "STEM_ESSENCE.丁.verse",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/dich_thien_tuy_data.js"
+        },
+        "translation": null
+      },
+      {
+        "evidence_id": "tinix__STEM_ESSENCE.丁.detail",
+        "title": "Nghĩa Nhật Chủ theo tinix-bazi",
+        "text_type": "BAZI_DAY_STEM",
+        "language": "vi",
+        "label": "SOURCE_ORIGINAL",
+        "text": "Đinh Hỏa là ngọn lửa lò, ánh sao. Tuy âm nhu nhưng bên trong sáng sủa. Hỷ Giáp mộc (Mẫu thân) làm bấc đèn. Có Giáp thì dù mùa Thu hay mùa Đông đều có thể tỏa sáng rực rỡ.",
+        "source": {
+          "repository": "vhphuoc1102/tinix-bazi",
+          "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+          "path": "backendjs/src/bazi/phan_tich/data/dich_thien_tuy_data.js",
+          "key": "STEM_ESSENCE.丁.detail",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/dich_thien_tuy_data.js"
+        },
+        "translation": null
+      },
+      {
+        "evidence_id": "tinix__STEM_ESSENCE.丁.seasonal.Autumn",
+        "title": "Theo mùa sinh Thu",
+        "text_type": "BAZI_BIRTH_SEASON",
+        "language": "vi",
+        "label": "SOURCE_ORIGINAL",
+        "text": "Hỷ Giáp mộc (Tiêu giáp sinh hỏa), kỵ Kim đa làm lửa bị vùi lấp hoặc yếu ớt.",
+        "source": {
+          "repository": "vhphuoc1102/tinix-bazi",
+          "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+          "path": "backendjs/src/bazi/phan_tich/data/dich_thien_tuy_data.js",
+          "key": "STEM_ESSENCE.丁.seasonal.Autumn",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/dich_thien_tuy_data.js"
+        },
+        "translation": null
+      },
+      {
+        "evidence_id": "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.desc",
+        "title": "Ý nghĩa cách cục",
+        "text_type": "BAZI_STRUCTURE",
+        "language": "vi",
+        "label": "SOURCE_ORIGINAL",
+        "text": "Cách cục của người hùng, tướng quân. Thất Sát là lực lượng khắc thân mạnh mẽ, đại diện cho quyền uy và sự sát phạt.",
+        "source": {
+          "repository": "vhphuoc1102/tinix-bazi",
+          "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+          "path": "backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js",
+          "key": "STRUCTURE_ANALYSIS.Thất Sát Cách.desc",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js"
+        },
+        "translation": null
+      },
+      {
+        "evidence_id": "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.strengths",
+        "title": "Điểm mạnh theo nguồn",
+        "text_type": "BAZI_STRUCTURE",
+        "language": "vi",
+        "label": "SOURCE_ORIGINAL",
+        "text": "Quyết đoán, dũng cảm, dám nghĩ dám làm, có khí chất uy nghiêm, thích hợp thời loạn hoặc sóng gió.",
+        "source": {
+          "repository": "vhphuoc1102/tinix-bazi",
+          "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+          "path": "backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js",
+          "key": "STRUCTURE_ANALYSIS.Thất Sát Cách.strengths",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js"
+        },
+        "translation": null
+      },
+      {
+        "evidence_id": "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.weaknesses",
+        "title": "Điểm cần lưu ý theo nguồn",
+        "text_type": "BAZI_STRUCTURE",
+        "language": "vi",
+        "label": "SOURCE_ORIGINAL",
+        "text": "Tính tình nóng nảy, độc đoán, dễ gây thù chuốc oán, cuộc đời nhiều thăng trầm biến động.",
+        "source": {
+          "repository": "vhphuoc1102/tinix-bazi",
+          "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+          "path": "backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js",
+          "key": "STRUCTURE_ANALYSIS.Thất Sát Cách.weaknesses",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js"
+        },
+        "translation": null
+      },
+      {
+        "evidence_id": "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.success_key",
+        "title": "Nguyên tắc phối hợp theo nguồn",
+        "text_type": "BAZI_STRUCTURE",
+        "language": "vi",
+        "label": "SOURCE_ORIGINAL",
+        "text": "Cần Thực Thần để chế Sát (hóa thành Quyền) hoặc dùng Ấn để hóa giải (Sát Ấn tương sinh). Kỵ nhất là Tài sinh Sát vượng mà không có chế hóa.",
+        "source": {
+          "repository": "vhphuoc1102/tinix-bazi",
+          "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+          "path": "backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js",
+          "key": "STRUCTURE_ANALYSIS.Thất Sát Cách.success_key",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js"
+        },
+        "translation": null
+      }
+    ],
+    "source_gaps": []
+  },
+  "display_hexagrams": {
+    "mutual": {
+      "hexagram_id": 1,
+      "name_zh": "乾",
+      "name_vi": "Thuần Càn",
+      "symbol": "䷀",
+      "moving_line": null,
+      "overview": {
+        "label": "AI_INTERPRETATION",
+        "language": "vi",
+        "text": "Càn tượng trưng cho sức sáng tạo và chủ động. Tiến lên cần đúng thời, giữ bền chí và tránh quá đà.",
+        "review_status": "UNREVIEWED",
+        "references": [
+          "iching__1__hexagram_text"
+        ]
+      },
+      "cards": [
+        {
+          "evidence_id": "iching__1__hexagram_text",
+          "title": "Quẻ từ",
+          "text_type": "HEXAGRAM_TEXT",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "元亨利贞。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "iching/iching.json",
+            "key": "iching__1",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+          },
+          "translation": {
+            "label": "AI_TRANSLATION",
+            "language": "vi",
+            "text": "Khởi đầu lớn, hanh thông; thuận lợi khi giữ sự chính bền.",
+            "review_status": "UNREVIEWED",
+            "version": "iching-vi-draft-v1",
+            "references": [
+              "iching__1__hexagram_text"
+            ],
+            "source_text_sha256": "a25e023d9cfe4d088ab7d0f9159d7f1df84c0db3e54f6d7f8405a407e1268110"
+          }
+        },
+        {
+          "evidence_id": "iching__1__tuan_commentary",
+          "title": "Thoán truyện",
+          "text_type": "TUAN_COMMENTARY",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "大哉乾元，万物资始，乃统天。云行雨施，品物流形。大明终始，六位时成，时乘六龙以御天。乾道变化，各正性命，保合太和，乃利贞。首出庶物，万国咸宁。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "ichuan/tuan.json",
+            "key": "iching__1",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/tuan.json"
+          },
+          "translation": null
+        },
+        {
+          "evidence_id": "iching__1__xiang_commentary",
+          "title": "Đại Tượng truyện",
+          "text_type": "XIANG_COMMENTARY",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "天行健，君子以自强不息。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "ichuan/xiang.json",
+            "key": "iching__1",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/xiang.json"
+          },
+          "translation": null
+        }
+      ],
+      "source_gaps": []
+    },
+    "changed": {
+      "hexagram_id": 28,
+      "name_zh": "大过",
+      "name_vi": "Trạch Phong Đại Quá",
+      "symbol": "䷛",
+      "moving_line": null,
+      "overview": {
+        "label": "AI_INTERPRETATION",
+        "language": "vi",
+        "text": "Đại Quá là gánh nặng vượt mức thường. Cần gia cố nền tảng và quyết đoán, nhưng phải biết giới hạn chịu lực.",
+        "review_status": "UNREVIEWED",
+        "references": [
+          "iching__28__hexagram_text"
+        ]
+      },
+      "cards": [
+        {
+          "evidence_id": "iching__28__hexagram_text",
+          "title": "Quẻ từ",
+          "text_type": "HEXAGRAM_TEXT",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "栋桡；利有攸往，亨。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "iching/iching.json",
+            "key": "iching__28",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/iching/iching.json"
+          },
+          "translation": {
+            "label": "AI_TRANSLATION",
+            "language": "vi",
+            "text": "Xà nhà bị cong; lợi khi có nơi để đi, hanh thông.",
+            "review_status": "UNREVIEWED",
+            "version": "iching-vi-draft-v1",
+            "references": [
+              "iching__28__hexagram_text"
+            ],
+            "source_text_sha256": "d6b4adde97b3267b692aacb991330c1b4a6f1e8806f4f46b21777a04cbe4ceca"
+          }
+        },
+        {
+          "evidence_id": "iching__28__tuan_commentary",
+          "title": "Thoán truyện",
+          "text_type": "TUAN_COMMENTARY",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "“大过”，大者过也。栋桡，本末弱也。刚过而中，巽而说行，“利有攸往”，乃“亨”。“大过”之时大矣哉！",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "ichuan/tuan.json",
+            "key": "iching__28",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/tuan.json"
+          },
+          "translation": null
+        },
+        {
+          "evidence_id": "iching__28__xiang_commentary",
+          "title": "Đại Tượng truyện",
+          "text_type": "XIANG_COMMENTARY",
+          "language": "zh",
+          "label": "SOURCE_ORIGINAL",
+          "text": "泽灭木，大过；君子以独立不惧，遁世无闷。",
+          "source": {
+            "repository": "john-walks-slow/open-iching",
+            "commit": "4c5f00f8cb62c6e0d2471243d28150b473ef592f",
+            "path": "ichuan/xiang.json",
+            "key": "iching__28",
+            "url": "https://github.com/john-walks-slow/open-iching/blob/4c5f00f8cb62c6e0d2471243d28150b473ef592f/ichuan/xiang.json"
+          },
+          "translation": null
+        }
+      ],
+      "source_gaps": []
+    }
+  },
+  "relation": {
+    "label": "ENGINE_EXPLANATION",
+    "the": {
+      "trigram": 2,
+      "name": "Đoài",
+      "element": "Kim"
+    },
+    "dung": {
+      "trigram": 1,
+      "name": "Càn",
+      "element": "Kim"
+    },
+    "state": "BINH_HOA",
+    "remediation_target": null
+  },
+  "limitations": [
+    "Nghĩa quẻ và hào tiếng Việt là bản nháp do AI soạn từ open-iching, chưa được chuyên gia hiệu đính.",
+    "Lời giải Bát Tự tiếng Việt được trích từ tinix-bazi; lời dẫn Hán Việt của repo không phải bản cổ văn Hán được khảo chứng.",
+    "Thoán truyện và Tượng truyện đang hiển thị nguyên văn Hán. Các phân loại lý số là quy ước của hệ thống, không phải dự báo chắc chắn."
+  ],
+  "disclaimer": "Điểm bộ số là mức phù hợp theo quy tắc nội bộ, không phải xác suất trúng thưởng hoặc bằng chứng cải vận.",
+  "readings": {
+    "bazi": {
+      "module": "BAZI",
+      "version": "bazi-reading-2026-10-26-v1",
+      "title": "Nhật chủ Đinh · trục cân bằng Hỏa",
+      "summary": "Lá số Thất Sát Cách, thuộc nhóm Thân Nhược (Nội cách). Củng cố hành của Nhật chủ: hành Hỏa là lựa chọn được tính từ thế lá số sinh.",
+      "sections": [
+        {
+          "title": "Nhật chủ và mùa sinh",
+          "text": "Nhật chủ Đinh mang hành Hỏa, là điểm quy chiếu để đọc các quan hệ trong lá số. Bạn sinh tháng Dậu, thuộc mùa Thu; hành của tháng là Kim. Hành tháng sinh không thuộc nhóm cùng hành hoặc sinh Hỏa, nên lá số không được tính là có trợ lực theo tháng.",
+          "references": [
+            "facts:bazi",
+            "rules:bazi"
+          ]
+        },
+        {
+          "title": "Củng cố hành của Nhật chủ",
+          "text": "Thân Nhược (Nội cách). Nhật chủ được xếp vào nhóm nhược, trong khi nhóm Tài nổi hơn nhóm sinh xuất. Nhánh này ưu tiên hành cùng Nhật chủ để tăng trợ lực cho phía đang yếu. Dụng Thần được tính cho lá số này là Hỏa.",
+          "references": [
+            "facts:bazi",
+            "rules:bazi"
+          ]
+        },
+        {
+          "title": "Cách cục nói lên điều gì?",
+          "text": "Thất Sát Cách. Sát thuộc nhóm khắc Nhật chủ. Điểm cần đọc là sức chế ước này có được cân bằng bằng trợ lực hoặc đường tiết chế hay không; tên cách không tự quyết định cả lá số tốt hay xấu.",
+          "references": [
+            "facts:bazi",
+            "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.desc",
+            "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.strengths",
+            "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.weaknesses",
+            "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.success_key"
+          ]
+        },
+        {
+          "title": "Hành ưu tiên, hành hỗ trợ và hành cần tiết chế",
+          "text": "Trong phép đọc lá số: Dụng Thần là nhóm được ưu tiên, Hỷ là nhóm hỗ trợ, Kỵ là nhóm cần tiết chế. Lá số này có Dụng: Hỏa; Hỷ: Mộc; Kỵ: Thổ, Thủy. Những tên gọi này nói về quan hệ ngũ hành, không phải phán xét tốt xấu về con người.",
+          "references": [
+            "facts:bazi",
+            "rules:bazi"
+          ]
+        },
+        {
+          "title": "Lá số liên hệ với bộ số như thế nào?",
+          "text": "Các số 42 · 73 cùng hành hoặc sinh hành Hỏa, tạo phần liên hệ trực tiếp với trục ưu tiên của hồ sơ. Bộ số được xét đồng thời với lá số sinh và quẻ tại thời điểm gieo, nên không chỉ có một hành hiện diện.",
+          "references": [
+            "facts:numbers",
+            "rules:bazi"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "facts:bazi",
+          "kind": "SAVED_FACT",
+          "title": "Lá số của phiên đã lưu",
+          "text": "Nhật chủ Đinh (Hỏa); tháng Dậu (Kim); Thân Nhược (Nội cách); Thất Sát Cách.",
+          "url": null
+        },
+        {
+          "evidence_id": "rules:bazi",
+          "kind": "IMPLEMENTATION_RULE",
+          "title": "Phép xét vượng nhược và Dụng Thần",
+          "text": "Nhánh tính Bát Tự đã dùng khi gieo: WEAK_WEALTH",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/ngu_hanh.js"
+        },
+        {
+          "evidence_id": "facts:numbers",
+          "kind": "SAVED_FACT",
+          "title": "Bộ số và hành ưu tiên đã dùng",
+          "text": "06 · 42 · 55 · 65 · 73 · 96; hành ưu tiên: Hỏa",
+          "url": null
+        },
+        {
+          "evidence_id": "tinix__STEM_ESSENCE.丁.verse",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Lời dẫn Hán Việt · Nhật Chủ Đinh",
+          "text": "Đinh hỏa nhu trung, nội tính chiêu dung. Đắc hiếu từ mẫu, khả thu khả đông. Nhược hồng nhạn chi thu, tự thiền quyên chi hạ.",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/dich_thien_tuy_data.js"
+        },
+        {
+          "evidence_id": "tinix__STEM_ESSENCE.丁.detail",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Nghĩa Nhật Chủ theo tinix-bazi",
+          "text": "Đinh Hỏa là ngọn lửa lò, ánh sao. Tuy âm nhu nhưng bên trong sáng sủa. Hỷ Giáp mộc (Mẫu thân) làm bấc đèn. Có Giáp thì dù mùa Thu hay mùa Đông đều có thể tỏa sáng rực rỡ.",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/dich_thien_tuy_data.js"
+        },
+        {
+          "evidence_id": "tinix__STEM_ESSENCE.丁.seasonal.Autumn",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Theo mùa sinh Thu",
+          "text": "Hỷ Giáp mộc (Tiêu giáp sinh hỏa), kỵ Kim đa làm lửa bị vùi lấp hoặc yếu ớt.",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/dich_thien_tuy_data.js"
+        },
+        {
+          "evidence_id": "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.desc",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Ý nghĩa cách cục",
+          "text": "Cách cục của người hùng, tướng quân. Thất Sát là lực lượng khắc thân mạnh mẽ, đại diện cho quyền uy và sự sát phạt.",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js"
+        },
+        {
+          "evidence_id": "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.strengths",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Điểm mạnh theo nguồn",
+          "text": "Quyết đoán, dũng cảm, dám nghĩ dám làm, có khí chất uy nghiêm, thích hợp thời loạn hoặc sóng gió.",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js"
+        },
+        {
+          "evidence_id": "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.weaknesses",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Điểm cần lưu ý theo nguồn",
+          "text": "Tính tình nóng nảy, độc đoán, dễ gây thù chuốc oán, cuộc đời nhiều thăng trầm biến động.",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js"
+        },
+        {
+          "evidence_id": "tinix__STRUCTURE_ANALYSIS.Thất Sát Cách.success_key",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Nguyên tắc phối hợp theo nguồn",
+          "text": "Cần Thực Thần để chế Sát (hóa thành Quyền) hoặc dùng Ấn để hóa giải (Sát Ấn tương sinh). Kỵ nhất là Tài sinh Sát vượng mà không có chế hóa.",
+          "url": "https://github.com/vhphuoc1102/tinix-bazi/blob/80ff4463d0397c1b11db76f38d880255f55558bc/backendjs/src/bazi/phan_tich/data/ngu_hanh_data.js"
+        }
+      ],
+      "facts": {
+        "reason_code": "WEAK_WEALTH",
+        "day_element": "Hỏa",
+        "birth_month_branch": "Dậu",
+        "birth_season": "Thu",
+        "primary_calculated": "Hỏa",
+        "primary_used": "Hỏa",
+        "strength": "Thân Nhược (Nội cách)",
+        "structure": "Thất Sát Cách",
+        "overridden": false,
+        "supportive_numbers": [
+          "42",
+          "73"
+        ],
+        "natal": {
+          "gans": [
+            0,
+            9,
+            3,
+            9
+          ],
+          "zhis": [
+            10,
+            9,
+            3,
+            3
+          ],
+          "solar_month": {
+            "year_ganzhi_zh": "甲戌",
+            "month_branch_index": 9,
+            "month_branch": "Dậu",
+            "jie_name": "Bạch Lộ",
+            "jie_name_zh": "白露",
+            "jie_start_utc": "1994-09-07T20:55:07+00:00",
+            "jie_start_beijing": "1994-09-08T04:55:07+08:00",
+            "provider": "lunar-python-1.4.8",
+            "validation_status": "INTEGRATION_TESTED"
+          },
+          "beijing_datetime": "1994-10-08T06:00:00+08:00",
+          "day_boundary": "23:00_BEIJING",
+          "sect": 1,
+          "effective_date": "1994-10-08",
+          "provider": "lunar-python-1.4.8",
+          "pillars": [
+            {
+              "pillar": "year",
+              "stem": "Giáp",
+              "branch": "Tuất",
+              "stem_zh": "甲",
+              "branch_zh": "戌"
+            },
+            {
+              "pillar": "month",
+              "stem": "Quý",
+              "branch": "Dậu",
+              "stem_zh": "癸",
+              "branch_zh": "酉"
+            },
+            {
+              "pillar": "day",
+              "stem": "Đinh",
+              "branch": "Mão",
+              "stem_zh": "丁",
+              "branch_zh": "卯"
+            },
+            {
+              "pillar": "hour",
+              "stem": "Quý",
+              "branch": "Mão",
+              "stem_zh": "癸",
+              "branch_zh": "卯"
+            }
+          ]
+        }
+      },
+      "limitations": [
+        "Phần luận diễn giải nhánh tính đã lưu của lá số; chưa triển khai đại vận, lưu niên hoặc luận toàn bộ đời người.",
+        "Các phân loại thuộc cách đọc Bát Tự của nguồn đã ghim; không phải đánh giá khoa học về tính cách hay năng lực."
+      ],
+      "provenance": "RULE_BASED_INTERPRETATION"
+    },
+    "maihoa": {
+      "module": "MAIHOA",
+      "version": "draw-maihoa-reading-2026-10-26-v1",
+      "title": "Trạch Thiên Quải · nhịp vận động của quẻ",
+      "summary": "Các quan hệ trong quẻ đang có chiều thuận. Quan hệ đầu và cuối đều có chiều thuận; vẫn cần xem phần trung gian và vượng suy.",
+      "sections": [
+        {
+          "title": "Hiểu Thể và Dụng trong quẻ này",
+          "text": "Thể Đoài (Kim) làm điểm quy chiếu của chủ thể; Dụng Càn (Kim) đại diện phía tình huống đang tác động. Hào 1 động nằm ở phía Dụng. Phần này luận tổng quát thời điểm gieo, vì phiên gieo số không có câu hỏi riêng.",
+          "references": [
+            "facts:maihoa",
+            "BODY_USE",
+            "GENERAL_SAME"
+          ]
+        },
+        {
+          "title": "Thời khí nâng đỡ hay làm yếu quẻ?",
+          "text": "Tháng Tuất được xét theo tháng tiết khí đã lưu: hành Thổ vượng, hành Thủy suy. Hành Kim của Thể không được gán riêng là vượng hay suy trong bảng thời khí của tháng này.",
+          "references": [
+            "facts:maihoa",
+            "STRONG",
+            "WEAK",
+            "STRENGTH"
+          ]
+        },
+        {
+          "title": "Khởi sự · Thể và Dụng",
+          "text": "Càn (Kim) cùng hành với Thể nên có thế tỷ hòa: hai phía được đọc như có sự đồng nhịp. Quan hệ này nghiêng về chiều thuận trong phép đọc Mai Hoa.",
+          "references": [
+            "facts:maihoa",
+            "GENERAL_SAME"
+          ]
+        },
+        {
+          "title": "Diễn tiến giữa chặng · phía chủ thể",
+          "text": "Càn (Kim) cùng hành với Thể nên có thế tỷ hòa: hai phía được đọc như có sự đồng nhịp. Quan hệ này nghiêng về chiều thuận trong phép đọc Mai Hoa.",
+          "references": [
+            "facts:maihoa",
+            "AUX_SAME",
+            "PHASES"
+          ]
+        },
+        {
+          "title": "Diễn tiến giữa chặng · phía hoàn cảnh",
+          "text": "Càn (Kim) cùng hành với Thể nên có thế tỷ hòa: hai phía được đọc như có sự đồng nhịp. Quan hệ này nghiêng về chiều thuận trong phép đọc Mai Hoa.",
+          "references": [
+            "facts:maihoa",
+            "AUX_SAME",
+            "PHASES"
+          ]
+        },
+        {
+          "title": "Chiều biến chuyển · Dụng biến",
+          "text": "Tốn (Mộc) bị hành của Thể khắc, tạo thế chủ thể chủ động điều tiết hoàn cảnh. Quan hệ này nghiêng về chiều thuận trong phép đọc Mai Hoa.",
+          "references": [
+            "facts:maihoa",
+            "AUX_BODY_CONTROLS_USE",
+            "PHASES"
+          ]
+        },
+        {
+          "title": "Ghép các phần để hiểu toàn quẻ",
+          "text": "Quan hệ đầu và cuối đều có chiều thuận; vẫn cần xem phần trung gian và vượng suy.",
+          "references": [
+            "facts:maihoa",
+            "SYNTHESIS",
+            "STRENGTH",
+            "CONTEXT"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "facts:maihoa",
+          "kind": "SAVED_FACT",
+          "title": "Quẻ và tháng gieo đã lưu",
+          "text": "Quẻ Trạch Thiên Quải, hào 1 động; Thể Đoài (Kim), Dụng Càn (Kim); tháng Tuất.",
+          "url": null
+        },
+        {
+          "evidence_id": "AUX_BODY_CONTROLS_USE",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Sinh khắc với Thể · BODY_CONTROLS_USE",
+          "text": "體克用，諸事吉",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921"
+        },
+        {
+          "evidence_id": "AUX_SAME",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Sinh khắc với Thể · SAME",
+          "text": "體用之間，比和則吉",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921"
+        },
+        {
+          "evidence_id": "BODY_USE",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Quái động làm Dụng, quái tĩnh làm Thể",
+          "text": "體用於變爻，作動靜取之。動者為用，靜者為體。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441927"
+        },
+        {
+          "evidence_id": "CONTEXT",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Không câu nệ một dấu hiệu trong Thể Dụng",
+          "text": "凡占卜決斷，固以體用為主，然有不拘體用者。如起例中西林寺額得山地剝，體用互變，俱比和，則為吉，而乃不吉，何也？蓋寺者，純陽人居之地，而純陰爻象，則群陰剝陽之義顯然也。此理甚明，不必拘體用也。又若有人問：「今日動靜如何？」得地風升，初爻動，用克體卦，俱無飲食矣，而亦有人相請，雖飲食不豐而終有請，何也？此人當時必有當日之應，又有「如何」二安帶口，為重兌之義。又有用不生體，互變生之而吉者，若少年有喜色，占得山火賁是也。又有用不生體，互變俱克之而凶者，如牛哀鳴占得地水師是也。蓋少年有喜色，占則略知其有喜，而《易辭》又有「束帛戔戔」之吉，是二者俱吉，互變俱生，愈見其吉矣。雖用不生體不吉，不為其害也。牛鳴之哀，則略知其有凶，而易爻複有「輿屍」之凶，互變俱克，愈見其凶。雖用爻不克，不能掩其凶也。蓋用《易》斷卦，當用理勝處驗之，不可拘執於一也。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921"
+        },
+        {
+          "evidence_id": "ELEMENTS",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Ngũ hành của tám quái",
+          "text": "乾、兌，金；坤、艮，土；震、巽，木；坎，水；離，火。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2690596"
+        },
+        {
+          "evidence_id": "FINAL",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Quan hệ với Thể ở cuối việc",
+          "text": "大凡占卦，變卦克體，事於末後，必有不吉。變生體及比和，則事事臨終有吉利。此用互變之訣也。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441927"
+        },
+        {
+          "evidence_id": "GENERAL_SAME",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Nhân sự — việc nói chung · SAME",
+          "text": "體用比和，謀為吉利",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921"
+        },
+        {
+          "evidence_id": "GENERATES",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Ngũ hành sinh khắc",
+          "text": "金生水，水生木，木生火，火生土，土生金；",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2690596"
+        },
+        {
+          "evidence_id": "MOD6",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Lấy hào theo số dư sáu",
+          "text": "凡起動爻，以重卦總數除六，以餘數作動爻。如不滿六，止用此數為動爻，不必再除。如過六數，則除之一六，不盡再除二六、三六，直至除盡，以餘數作動爻。若一爻動，則看此一爻，是陽爻則變陰爻，陰爻則變陽爻。取爻當以時加之。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2690596"
+        },
+        {
+          "evidence_id": "MOD8",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Lấy quái theo số dư tám",
+          "text": "凡起卦不問數多少，即以此數作卦數，過八數即以八數遞除。一八除不盡，再除二八，三八，直至除盡，以餘數作卦。如得八數整，即坤卦，更不必除也。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2690596"
+        },
+        {
+          "evidence_id": "MUTUAL",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Cách lấy hỗ quẻ",
+          "text": "互卦只用八卦，不必取六十四卦名。互卦以重卦去了初爻及第六爻，以中間四爻分作兩卦，看得何卦。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2690596"
+        },
+        {
+          "evidence_id": "PHASES",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Dụng, Thể hỗ, Dụng hỗ và biến",
+          "text": "大凡占卜，以體為其主，互用變皆為應。卦用最緊，互次之，變卦又次之。故曰用為占之即應，互為中間之應，變為事占之終應。然互卦則分其有體之互，有用之互。如體在上，則上互為體之互，下互為用之互，體卦在下，則下互為體之互，上互為用之互。體互最緊，用互次之。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441927"
+        },
+        {
+          "evidence_id": "STRENGTH",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Cần xét vượng suy cùng các quan hệ sinh khắc",
+          "text": "凡體卦宜乘旺，克體之卦宜衰。蓋體卦之氣，如春木、夏火、秋金、冬水、四季之月土，此得令之卦，乘旺之氣，雖有他卦克之，亦無大害。用互變卦，乘旺皆吉，但不要克體之卦氣旺。而體卦氣衰是不吉之占。占者有此，若問病必死，問訟必敗。若非問訟與病而常占，則防有官病之事。末臨其期，在於克體卦氣之月日也。若卦體旺而複有生體之卦，吉事之來，可刻期而至矣。若內卦外卦有生體者，體卦雖衰，亦無大害也。內外並也生體，雖體之卦黨多，皆是衰卦，終不吉也。故體用之卦，必須詳其盛衰也。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441927"
+        },
+        {
+          "evidence_id": "STRONG",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Quái khí vượng",
+          "text": "震、巽木旺於春，離火旺于夏，乾、兌金旺於秋，坎水旺於冬，坤、艮土旺於辰戌丑未月。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2690596"
+        },
+        {
+          "evidence_id": "SYNTHESIS",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Diễn tiến theo quan hệ đầu và cuối",
+          "text": "體用之間，比和則吉，互乃中間之應，變乃末後之期。故用吉變凶者，先吉後凶；用凶變吉者，先凶後吉。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921"
+        },
+        {
+          "evidence_id": "TEXT_METHOD",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Vai trò của lời Dịch trong phép luận",
+          "text": "先天卦斷吉凶，止以卦論，不甚用《易》之爻辭。後天則用爻辭，兼用卦辭，何也？蓋先天者未得卦、先得數，是未有《易》書，先有《易》理，辭前之《易》也。故不必用《易》書之辭，專以卦斷。後天則以先得卦，必用卦畫，辭後之《易》也。故用爻之辭，兼《易》卦辭以斷之也。又後天起卦，與先天不同，其數不一。今人多以坎一、坤二、震三、巽四、中五、乾六、兌七、艮八、離九之數為用。蓋聖人作《易》畫卦，始乙太極、兩儀、四象、八卦加一倍，數自成乾一、兌二、離三、震四、巽五、坎六、艮七、坤八。故占卜起卦，合以此數為用。又今人起後天卦，多不加時，得此一卦，止此一爻動，更無移易變通之道。故後天起卦定爻必加時而後可。又先天之卦，定事應之期，則取之卦氣，如乾、兌則應如庚、辛及申金之日，或坤為戌、亥之日時，兌為酉日時。如震、巽當應於甲、乙及支木之日，或震取卯，巽取辰之類。後天則以卦數加時數，總之而分行臥坐立之遲速，以為事應之期。卦數時類，應近而不能決諸遠者，必合先後之卦數取訣可也。又凡占卦中決斷吉凶，其理洞見，止于全卦體用生克之理，及參《易》辭，斯可矣。今日以後天卦，卻於六十甲子之日取其對方之魁，破敗亡滅跡等以助斷決。蓋曆象選時，並于《周易》不相干涉，不可用也。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921"
+        },
+        {
+          "evidence_id": "TIME",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Lập quẻ theo năm tháng ngày giờ",
+          "text": "年月日為上卦。年月日加時總數為下卦。又以年月日時總數取爻。如子年一數，丑年二數，直至亥年十二數。月如正月一數，直至十二月，亦作十二數。日數如初一一數，直至三十日，為三十數。以上年月日共計幾數，以八除之，以餘數作卦。如子時一數直至亥時十二數，就將年月日數加時之數，總計幾數，以八除之，餘數作下卦；以六除，餘數作動爻。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2690596"
+        },
+        {
+          "evidence_id": "TRIGRAMS",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Số Tiên Thiên của tám quái",
+          "text": "乾，一；兌，二；離，三；震，四；巽，五；坎，六；艮，七；坤，八。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2690596"
+        },
+        {
+          "evidence_id": "WEAK",
+          "kind": "SOURCE_ORIGINAL",
+          "title": "Quái khí suy",
+          "text": "春坤、艮，夏乾、兌，秋震、巽，冬離，辰戌丑未坎。",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2690596"
+        }
+      ],
+      "facts": {
+        "chart": {
+          "core_version": "maihoa-ymdh-v1",
+          "variables": {
+            "Y": 7,
+            "M": 9,
+            "D": 2,
+            "H": 7
+          },
+          "upper": 2,
+          "lower": 1,
+          "moving_line": 1,
+          "original": {
+            "hexagram_id": 43,
+            "name_zh": "夬",
+            "symbol": "䷪",
+            "lines_bottom_to_top": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          "mutual_basis": "ORIGINAL",
+          "mutual": {
+            "hexagram_id": 1,
+            "name_zh": "乾",
+            "symbol": "䷀",
+            "lines_bottom_to_top": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          "changed": {
+            "hexagram_id": 28,
+            "name_zh": "大过",
+            "symbol": "䷛",
+            "lines_bottom_to_top": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          "the": {
+            "trigram": 2,
+            "name": "Đoài",
+            "element": "Kim",
+            "position": "UPPER",
+            "strength": "NOT_SPECIFIED"
+          },
+          "dung": {
+            "trigram": 1,
+            "name": "Càn",
+            "element": "Kim",
+            "position": "LOWER",
+            "strength": "NOT_SPECIFIED"
+          },
+          "mutual_body": {
+            "trigram": 1,
+            "name": "Càn",
+            "element": "Kim",
+            "position": "UPPER",
+            "strength": "NOT_SPECIFIED"
+          },
+          "mutual_use": {
+            "trigram": 1,
+            "name": "Càn",
+            "element": "Kim",
+            "position": "LOWER",
+            "strength": "NOT_SPECIFIED"
+          },
+          "changed_use": {
+            "trigram": 5,
+            "name": "Tốn",
+            "element": "Mộc",
+            "position": "LOWER",
+            "strength": "NOT_SPECIFIED"
+          }
+        },
+        "season": {
+          "year_ganzhi_zh": "丙午",
+          "month_branch_index": 10,
+          "month_branch": "Tuất",
+          "jie_name": "Hàn Lộ",
+          "jie_name_zh": "寒露",
+          "jie_start_utc": "2026-10-08T06:29:17+00:00",
+          "jie_start_beijing": "2026-10-08T14:29:17+08:00",
+          "provider": "lunar-python-1.4.8",
+          "validation_status": "INTEGRATION_TESTED",
+          "period": "EARTH_MONTH",
+          "strong_element": "Thổ",
+          "weak_element": "Thủy",
+          "provenance": "PRODUCT_CONVENTION"
+        },
+        "findings": [
+          {
+            "rule_id": "MH.GENERAL.SAME",
+            "phase": "BEGINNING",
+            "title": "Dụng · việc đang hỏi",
+            "relation": "SAME",
+            "indication": "FAVOURABLE",
+            "text_vi": "Tỷ hòa, nguồn luận việc mưu tính có chiều thuận.",
+            "translation_status": "AI_DRAFT_UNREVIEWED",
+            "evidence_refs": [
+              "GENERAL_SAME"
+            ]
+          },
+          {
+            "rule_id": "MH.AUX.SAME",
+            "phase": "MIDDLE_BODY",
+            "title": "Thể hỗ · diễn tiến trung gian",
+            "relation": "SAME",
+            "indication": "FAVOURABLE",
+            "text_vi": "Tỷ hòa với Thể, nguồn luận có chiều thuận.",
+            "translation_status": "AI_DRAFT_UNREVIEWED",
+            "evidence_refs": [
+              "AUX_SAME",
+              "PHASES"
+            ]
+          },
+          {
+            "rule_id": "MH.AUX.SAME",
+            "phase": "MIDDLE_USE",
+            "title": "Dụng hỗ · diễn tiến trung gian",
+            "relation": "SAME",
+            "indication": "FAVOURABLE",
+            "text_vi": "Tỷ hòa với Thể, nguồn luận có chiều thuận.",
+            "translation_status": "AI_DRAFT_UNREVIEWED",
+            "evidence_refs": [
+              "AUX_SAME",
+              "PHASES"
+            ]
+          },
+          {
+            "rule_id": "MH.AUX.BODY_CONTROLS_USE",
+            "phase": "ENDING",
+            "title": "Dụng biến · chiều cuối việc",
+            "relation": "BODY_CONTROLS_USE",
+            "indication": "FAVOURABLE",
+            "text_vi": "Thể khắc quái đang xét, nguồn luận có chiều thuận.",
+            "translation_status": "AI_DRAFT_UNREVIEWED",
+            "evidence_refs": [
+              "AUX_BODY_CONTROLS_USE",
+              "PHASES"
+            ]
+          }
+        ],
+        "summary": {
+          "pattern": "FAVOURABLE_RELATIONS",
+          "text": "Các quan hệ trong quẻ đang có chiều thuận.",
+          "sequence": "Quan hệ đầu và cuối đều có chiều thuận; vẫn cần xem phần trung gian và vượng suy.",
+          "provenance": "PRODUCT_DERIVED",
+          "is_full_divination_verdict": false,
+          "priority": [
+            "BEGINNING",
+            "MIDDLE_BODY",
+            "MIDDLE_USE",
+            "ENDING"
+          ]
+        },
+        "warnings": [],
+        "rules_version": "maihoa-source-2026-10-25-v1",
+        "rules_sha256": "68346dabb2135b62ed2ebb57c4b0721929b94cff45d756c35779f48dfa6c8823",
+        "topic": "GENERAL",
+        "uses_saved_chart": true,
+        "missing_phases": []
+      },
+      "limitations": [
+        "Luận tổng quát từ đúng quẻ đã lưu; không tự chuyển thành lời đoán cầu tài, giao dịch hay trúng thưởng.",
+        "Hỗ và Biến được dùng để diễn giải diễn tiến, không thay đổi bộ số hoặc điểm đã chốt.",
+        "Ngoại ứng, ứng kỳ cụ thể và ngữ cảnh một việc hỏi chưa được suy đoán trong phần đọc này."
+      ],
+      "provenance": "RULE_BASED_INTERPRETATION"
+    }
+  }
+}

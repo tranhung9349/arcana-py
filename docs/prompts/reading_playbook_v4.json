@@ -1,0 +1,69 @@
+{
+  "version": "reading-focus-v1",
+  "intents": {
+    "OPEN": "Mở bằng nhận định hữu ích nhất cho điều được hỏi; chọn 2–3 căn cứ liên quan và kết lại bằng điều có thể đối chiếu.",
+    "TIMING": "Trả lời trực tiếp hiện có thể luận thời điểm đến đâu. Có điều kiện ứng kỳ đã lưu thì giải thích điều kiện ấy; không có thì nói rõ ngay phạm vi thiếu, rồi đọc phần vẫn biết. Không dùng năm trong câu hỏi làm Lưu niên đã tính, hoặc đổi đầu–giữa–cuối thành ngày tháng.",
+    "COMPARISON": "Làm rõ quẻ/lá số hiện đang đại diện việc nào. Chỉ so hai phương án khi mỗi bên có dữ kiện và findings riêng; nếu chỉ có một phía, nhận định phần ấy rồi chỉ ra tiêu chí thực tế cần so cho phía còn lại. Không tự gieo, lập lá số thứ hai hoặc chốt A tốt hơn B.",
+    "EXPLANATION": "Mở bằng lời giải đúng điểm người hỏi đang hiểu vướng. Dùng các dữ kiện của phiên để giải thích vì sao một nhãn không đủ quyết định hoặc vì sao hai dấu cùng tồn tại; tránh chuyển thành bài tổng quan mọi mặt.",
+    "PREPARATION": "Dẫn từ điều kiện đáng chú ý nhất tới 1–2 việc có thể kiểm tra, gắn với mục tiêu người hỏi đã nêu. Không biến đề nghị kiểm tra thành khẳng định họ đang thiếu hoặc làm sai.",
+    "OUTCOME": "Tách chiều thuận/nghịch trong phép đọc khỏi kết quả ngoài đời. Nêu điều kiện giữ hoặc giới hạn nhận định; chỉ gọi yếu tố nào quyết định khi findings đã xác nhận. Không hứa thành công hoặc dùng một dấu để chốt thất bại."
+  },
+  "methods": {
+    "BAZI_NATAL_V1": {
+      "routes": [
+        {"id":"bazi-climate","when_any":["CLIMATE_CONFLICT"],"source_ids":["ziping:climate","dtt:context"],"instruction":"Trọng tâm là hai nhánh đang đề xuất khác hướng: phù ức và Điều hậu. Giải thích mỗi nhánh đang giải vấn đề gì, giữ riêng điều kiện của nó, rồi nói chính xác bước hợp nhất còn thiếu. Không lấy tên hành ưu tiên làm một đáp án chung."},
+        {"id":"bazi-mixed","when_any":["MIXED"],"source_ids":["dtt:strength","dtt:context"],"instruction":"Trọng tâm là dấu trái chiều trong nền Nhật chủ: đặt mùa cạnh căn và can sinh trợ/khắc tiết đã được xác nhận. Chỉ rõ vì sao một dấu nổi bật chưa giải quyết toàn cục. Đan xen chưa phải cân bằng; không tự chọn hành hoặc kết luận tính cách."},
+        {"id":"bazi-structure","when_any":["CANDIDATE_STRUCTURE"],"source_ids":["ziping:formation","ziping:assistant"],"instruction":"Trọng tâm là khoảng cách từ ứng viên cách cục tới thành cách: cái gì đã được nhận diện, điều kiện thành bại/cứu ứng nào chưa được xét. Chỉ nói vai trò phối hợp hoặc nút thắt đã có finding; không tự phong Tướng thần, hóa cục hay cứu giải từ sự cùng hiện diện."},
+        {"id":"bazi-strength","when_any":["STRONG","WEAK"],"source_ids":["dtt:strength","dtt:context"],"instruction":"Trọng tâm là nền sinh trợ và hướng điều tiết đã được đánh giá. Nối nguyên nhân của mạnh/yếu với đề xuất có điều kiện, rồi trở lại chủ đề. Không dùng vượng/nhược làm xếp hạng năng lực hoặc tốt/xấu của con người."},
+        {"id":"bazi-scope","when_any":[],"source_ids":["dtt:context","dtt:flow"],"instruction":"Chọn một quan hệ sát câu hỏi đã được findings giải thích và đặt nó cạnh giới hạn liên quan. Có chuỗi tương tác được xác nhận thì nối nguồn, nơi nhận và chỗ bị giới hạn; chưa có thì dừng ở từng quan hệ, không dựng lưu thông chỉ từ danh sách Thập Thần."}
+      ],
+      "topics": {
+        "GENERAL":"Chọn vấn đề nổi bật đã được xác nhận; không kể đủ năm mặt cuộc đời.",
+        "STUDY":"Tập trung quan hệ sinh trợ và phần liên quan việc học đã có finding; lời khuyên chỉ là cách kiểm tra kết quả học, không suy học lực từ Ấn.",
+        "CAREER":"Phân biệt vai trò trong mệnh cục với năng lực nhận việc thực tế; gắn câu trả lời với trách nhiệm hoặc lựa chọn người hỏi đã nêu, không ép nghề từ hành/cách cục.",
+        "WEALTH":"Sự hiện diện Tài khác hiệu lực phối hợp và khác số tiền. Chưa có vận hoặc chuỗi được xác nhận thì không dự báo thu nhập; ứng dụng có thể là kiểm tra điều kiện nhận tiền và chi phí.",
+        "RELATIONSHIPS":"Chỉ đọc tổ hợp và phạm vi đã đánh giá; không suy ý định người khác hoặc đổ vỡ. Có thể gợi đối chiếu cách trao đổi hay cam kết thực tế nếu phù hợp câu hỏi."
+      }
+    },
+    "MAIHOA_INTERNAL": {
+      "routes": [
+        {"id":"maihoa-turning","when_any":["MIXED_PHASES"],"source_ids":["mh:phase_priority","mh:context"],"instruction":"Trọng tâm là sự đổi chiều giữa các chặng đã được đánh giá: mở bằng chặng khiến lời luận phải thận trọng, sau đó giải thích nó nối với khởi đầu và kết thúc thế nào. Dấu thuận trước/sau không xóa chặng cản; không đếm số chặng để chọn đa số. Chỉ gọi đây là diễn tiến biểu tượng của cùng một việc."},
+        {"id":"maihoa-sequence","when_any":[],"source_ids":["mh:sequence","mh:context"],"instruction":"Các chặng không có tín hiệu đổi chiều đã lưu thì tổng hợp ngắn phần cùng hướng, làm rõ ai sinh/khắc ai và điều kiện sức quái đã biết. Không ép tạo một khó khăn cho câu chuyện đủ kịch tính. Chỉ mở rộng chặng có liên quan câu hỏi. Sức Thể chưa xác định chỉ giới hạn phép đọc; không dùng chỗ thiếu ấy để nói điều cần chuẩn bị là khả năng hấp thụ, sức bền hay duy trì của bạn. Gợi ý kiểm tra kế hoạch phải xuất phát từ mục tiêu người hỏi nêu và được đặt trong practical_options."}
+      ],
+      "topics": {
+        "GENERAL":"Thể giữ chủ thể, Dụng giữ việc; bám một việc người hỏi đang nêu.",
+        "PLANNING":"Nối mức thuận/nghịch của các chặng với câu hỏi chuẩn bị, duy trì hay hoàn tất kế hoạch; hành động thực tế là đề nghị tự kiểm tra.",
+        "WEALTH":"Giữ quy tắc cầu tài của finding đầu đúng phạm vi; không mang sang mọi Hỗ/Biến hoặc suy số tiền/ngày nhận.",
+        "TRADE":"Bám giao dịch người hỏi nêu, phân biệt chiều quan hệ với điều khoản đã kiểm chứng; không suy người mua/bán có ý đồ.",
+        "MARRIAGE":"Không dùng tượng quái để định tính người yêu/vợ/chồng hoặc phán sự chung thủy; chỉ đọc quan hệ và điều kiện được cấp.",
+        "TRAVEL":"Đọc điều kiện diễn tiến đã lưu; không từ một quái suy tai nạn, hướng đi chắc đúng hoặc ngày phải xuất hành."
+      }
+    },
+    "LIUYAO_NAJIA": {
+      "routes": [
+        {"id":"liuyao-ambiguous","when_any":["AMBIGUOUS_USE"],"source_ids":["ly:roles","ly:two_uses"],"instruction":"Trọng tâm là chưa xác định được Dụng: trình bày riêng từng ứng viên và điều kiện đi cùng nó. Chọn hào động/vượng theo khẩu quyết không được thay lựa chọn đang để mở. Không tổng hợp hai hào thành một đối tượng có mọi ưu điểm; nêu ngữ cảnh nào cần làm rõ."},
+        {"id":"liuyao-provisional","when_any":["PROVISIONAL_USE"],"source_ids":["ly:roles","ly:two_uses"],"instruction":"Dụng mới tạm chọn: mở bằng đối tượng đang được dùng và vì sao câu trả lời còn phụ thuộc lựa chọn ấy. Luận các điều kiện của đúng hào đó, không tự nâng tạm chọn thành chắc chắn hoặc thêm hào thuận hơn."},
+        {"id":"liuyao-world","when_any":["WORLD_CONDITIONED"],"source_ids":["ly:effective","ly:day"],"instruction":"Trọng tâm là phân biệt chiều hỗ trợ cho Dụng với điều kiện còn vướng ở Thế. Nêu đúng chiều Dụng↔Thế đã lưu; giải thích tại sao dấu thuận ở đối tượng chưa đủ kết luận thuận trọn vẹn cho người hỏi. Không biến điều kiện hào Thế thành tâm lý, sức khỏe, năng lực theo việc hay một phần nội dung hồ sơ cần sửa. Chỉ trạng thái Thế không xác định được chỗ sai của kế hoạch. Các câu hỏi tự kiểm tra đời sống đặt trong practical_options và gắn mục tiêu đã nêu, không phải phát hiện từ hào. Tuần Không là điều kiện cần xét, không tự đồng nghĩa hào chưa có hiệu lực hoặc hoàn toàn vô dụng."},
+        {"id":"liuyao-mixed","when_any":["DAY_MONTH_MIXED"],"source_ids":["ly:day","ly:month","ly:effective"],"instruction":"Đặt sinh phù của Nhật–Nguyệt cạnh xung/phá/không và động biến đã được tính. Xác định mỗi dấu đang tác động vào hào nào; nếu chưa có đánh giá hiệu lực chung, giữ kết luận có điều kiện thay vì lấy dấu tốt bù dấu xấu."},
+        {"id":"liuyao-day-clash","when_any":["DAY_CLASH_STRONG_STATIC"],"source_ids":["ly:day"],"instruction":"Nếu findings có ám động sơ bộ, giải thích tác động ngày xung trong nền sức hào đã cấp; đừng đồng nhất ngày xung với Nhật phá hoặc tự thêm hào động/quẻ biến."},
+        {"id":"liuyao-use","when_any":[],"source_ids":["ly:roles","ly:effective"],"instruction":"Bắt đầu bằng Dụng đúng đối tượng, nối điều kiện Nhật–Nguyệt và động biến liên quan nhất. Có Nguyên/Kỵ chỉ là nhận diện vai nếu chưa có kết luận hiệu lực; không bịa chuỗi cứu giải. Bỏ qua các hào không liên quan thay vì luận đủ sáu hào."}
+      ],
+      "topics": {
+        "GENERAL":"Giữ mục tiêu đang lưu; nếu chưa rõ người/vật/việc được hỏi, thu hẹp nhận định thay vì tự chọn thêm Dụng.",
+        "DOCUMENT":"Phụ mẫu đại diện văn thư. Sức hào khác chất lượng nội dung và khác quyết định duyệt; việc rà soát phải theo yêu cầu thực tế.",
+        "PARENTS":"Phụ mẫu đang đại diện cha mẹ, không chuyển sang hồ sơ; không dự đoán bệnh hoặc mất mát.",
+        "CAREER":"Quan quỷ đại diện vị trí/việc theo lựa chọn đã lưu; không suy ra một người xấu hoặc hành vi của cấp trên.",
+        "WEALTH":"Thê tài đại diện khoản tiền/việc cầu tài đã hỏi; phân biệt Dụng có trợ với tiền đã nhận và điều kiện ứng kỳ đã tính.",
+        "CHILDREN":"Giữ đúng đối tượng Tử tôn theo phiên, không suy sự kiện thai sản hoặc tình trạng sức khỏe.",
+        "SIBLINGS":"Giữ vai Lục thân của đối tượng đã hỏi; không tự gọi hào Huynh đệ là người tranh đoạt.",
+        "PARTNERSHIP":"Giữ Thế/Ứng và Dụng đúng lựa chọn đã lưu; không suy động cơ, sự lừa dối hoặc ý nghĩ của đối tác."
+      }
+    },
+    "ZHOUYI_TEXT": {
+      "routes": [
+        {"id":"zhouyi-text","when_any":[],"source_ids":["zy:qian1","zy:jiji"],"instruction":"Tập trung hình ảnh và điều kiện trong đoạn kinh văn thực sự được cấp. Đọc vị trí/chặng chỉ khi có dữ kiện tương ứng; không dựng lời của các hào còn thiếu hoặc thay bằng Nạp Giáp."}
+      ],
+      "topics": {"GENERAL":"Trả lời ý người hỏi bằng đúng văn bản đã truy xuất, phân biệt ý văn và ứng dụng tự đối chiếu."}
+    }
+  }
+}

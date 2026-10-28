@@ -1,0 +1,488 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 4
+    }
+  },
+  "results": [
+    {
+      "path": "docs/archive/draw_request_v3.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 20,
+      "nonEmptyLines": 20,
+      "sections": [
+        {
+          "heading": "request_id",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "birth",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "casting",
+          "level": 1,
+          "line": 11
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "docs/archive/draw_response_v3.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1148,
+      "nonEmptyLines": 1148,
+      "sections": [
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "request_id",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "numbers",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "score",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "threshold",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "attempts",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "selected_attempt",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "warnings",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "disclaimer",
+          "level": 1,
+          "line": 30
+        },
+        {
+          "heading": "trace",
+          "level": 1,
+          "line": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "docs/archive/logic_plan_mvp1_v3.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 834,
+      "nonEmptyLines": 579,
+      "sections": [
+        {
+          "heading": "Lưu trữ v3 — đã được thay thế bởi lịch Trung Quốc UTC+8 ở v4",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Plan logic MVP 1 — Randomyst Numbers",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "1. Phạm vi đã chốt",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "2. Các quy tắc Mai Hoa đã chốt",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "2.1. Tách thời điểm thật, giờ mặt trời và ngày dùng để lập quẻ",
+          "level": 3,
+          "line": 78
+        },
+        {
+          "heading": "2.2. Lịch Việt Nam và khả năng thật của thư viện nguồn",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "2.2.1. Kiểm tra biên hai tầng",
+          "level": 4,
+          "line": 109
+        },
+        {
+          "heading": "2.2.2. Phạm vi dữ liệu thiên văn và đối chiếu độc lập",
+          "level": 4,
+          "line": 128
+        },
+        {
+          "heading": "2.2.3. Đánh giá phương án cấu hình 6tail và thay converter",
+          "level": 4,
+          "line": 158
+        },
+        {
+          "heading": "2.2.4. Kết quả chạy thử adapter Việt Nam riêng",
+          "level": 4,
+          "line": 185
+        },
+        {
+          "heading": "2.3. Kinh độ nơi gieo — định vị và dự phòng",
+          "level": 3,
+          "line": 199
+        },
+        {
+          "heading": "2.3.1. Chuỗi nguồn và dữ liệu cần giữ",
+          "level": 4,
+          "line": 203
+        },
+        {
+          "heading": "2.3.2. Độ mới, làm tròn và giờ mặt trời",
+          "level": 4,
+          "line": 237
+        },
+        {
+          "heading": "2.3.3. Vùng giáp ranh theo sai số tổng hợp",
+          "level": 4,
+          "line": 252
+        },
+        {
+          "heading": "2.3.4. Thông tin thời gian trên giao diện",
+          "level": 4,
+          "line": 279
+        },
+        {
+          "heading": "3. Nguồn dữ liệu đã kiểm tra",
+          "level": 2,
+          "line": 291
+        },
+        {
+          "heading": "3.1. tinix-bazi",
+          "level": 3,
+          "line": 293
+        },
+        {
+          "heading": "3.2. open-iching",
+          "level": 3,
+          "line": 310
+        },
+        {
+          "heading": "4. Ma trận chấm từng số đã được người dùng đề xuất",
+          "level": 2,
+          "line": 331
+        },
+        {
+          "heading": "4.1. Hành theo đuôi số",
+          "level": 3,
+          "line": 333
+        },
+        {
+          "heading": "4.2. Chiều quan hệ",
+          "level": 3,
+          "line": 345
+        },
+        {
+          "heading": "5. Điểm cả bộ và chuẩn hóa theo ngữ cảnh",
+          "level": 2,
+          "line": 371
+        },
+        {
+          "heading": "5.1. Âm dương",
+          "level": 3,
+          "line": 373
+        },
+        {
+          "heading": "5.2. Ngũ hành",
+          "level": 3,
+          "line": 382
+        },
+        {
+          "heading": "6. Hai tầng engine và bốn lớp điều hướng trọng số — đã chốt",
+          "level": 2,
+          "line": 411
+        },
+        {
+          "heading": "6.1. Tầng chọn từng số",
+          "level": 3,
+          "line": 413
+        },
+        {
+          "heading": "6.2. Tầng đánh giá cả bộ",
+          "level": 3,
+          "line": 420
+        },
+        {
+          "heading": "6.3. Định nghĩa trọng số rõ chiều và đơn vị",
+          "level": 3,
+          "line": 430
+        },
+        {
+          "heading": "6.4. Thiên Thời — +15%",
+          "level": 3,
+          "line": 446
+        },
+        {
+          "heading": "6.5. Hào Động — +10%",
+          "level": 3,
+          "line": 489
+        },
+        {
+          "heading": "6.6. Thần Sát — mục tiêu thực tế và thưởng giảm dần",
+          "level": 3,
+          "line": 496
+        },
+        {
+          "heading": "6.7. Dân Gian — +5%, danh sách MVP 1 đã chốt",
+          "level": 3,
+          "line": 536
+        },
+        {
+          "heading": "6.8. Lượt retry, nhóm điểm và truy vết",
+          "level": 3,
+          "line": 555
+        },
+        {
+          "heading": "7. Trạng thái và thuật toán giải sát tổng quát",
+          "level": 2,
+          "line": 564
+        },
+        {
+          "heading": "7.1. Ngưỡng, trọng số và quota đã chốt",
+          "level": 3,
+          "line": 566
+        },
+        {
+          "heading": "7.2. Quy tắc quan hệ và ba nhánh do người dùng đề xuất",
+          "level": 3,
+          "line": 586
+        },
+        {
+          "heading": "7.3. Kết quả kiểm tra logic của pseudo-code",
+          "level": 3,
+          "line": 600
+        },
+        {
+          "heading": "7.4. Chọn hành theo điểm thô khả thi — đã chốt",
+          "level": 3,
+          "line": 617
+        },
+        {
+          "heading": "8. Đề xuất sinh số có kiểm tra tính khả thi",
+          "level": 2,
+          "line": 638
+        },
+        {
+          "heading": "9. Luận giải và dữ liệu đầu ra đề xuất",
+          "level": 2,
+          "line": 687
+        },
+        {
+          "heading": "10. Tiêu chí hiệu quả đã được người dùng chốt",
+          "level": 2,
+          "line": 704
+        },
+        {
+          "heading": "11. Các mốc hoàn thiện logic trước khi triển khai",
+          "level": 2,
+          "line": 740
+        },
+        {
+          "heading": "12. Quyết định mới và phần còn lại",
+          "level": 2,
+          "line": 755
+        },
+        {
+          "heading": "12.1. Các quyết định đã khóa ngày 11/10/2026",
+          "level": 3,
+          "line": 757
+        },
+        {
+          "heading": "12.2. Kết quả thử hàm mũ và bước cần làm tiếp",
+          "level": 3,
+          "line": 768
+        },
+        {
+          "heading": "12.3. Các công việc kỹ thuật và nghiệm thu còn lại",
+          "level": 3,
+          "line": 783
+        },
+        {
+          "heading": "12.4. Rà soát trước triển khai theo mục tiêu một bộ sáu số",
+          "level": 3,
+          "line": 793
+        },
+        {
+          "heading": "13. Bằng chứng nghiên cứu và giới hạn của kết luận",
+          "level": 2,
+          "line": 808
+        },
+        {
+          "heading": "14. Bản chạy MVP 1 ngày 11/10/2026",
+          "level": 2,
+          "line": 822
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 49
+      }
+    },
+    {
+      "path": "docs/archive/logic_plan_mvp2_pre_r1.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 240,
+      "nonEmptyLines": 171,
+      "sections": [
+        {
+          "heading": "Kế hoạch MVP 2 — Tra ngày theo việc và hồ sơ sinh",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Mục tiêu và hướng đã trao đổi",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "2. Baseline đã đọc và bằng chứng",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "3. Phạm vi lần phát triển đầu",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "4. Ba bộ lọc ngày chung",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "Bộ lọc 1 — Hoàng Đạo/Hắc Đạo",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "Bộ lọc 2 — Tương tác Can Chi ngày/tháng/năm",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "Bộ lọc 3 — Ngày kỵ lớn và điều kiện loại trừ",
+          "level": 3,
+          "line": 65
+        },
+        {
+          "heading": "5. Hai điều kiện để thành kết quả cá nhân hóa",
+          "level": 2,
+          "line": 78
+        },
+        {
+          "heading": "Điều kiện của công việc",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "Điều kiện của chủ thể",
+          "level": 3,
+          "line": 89
+        },
+        {
+          "heading": "6. Chấm điểm trừ lùi và gắn nhãn",
+          "level": 2,
+          "line": 97
+        },
+        {
+          "heading": "7. Ranh thời gian phải xử lý",
+          "level": 2,
+          "line": 129
+        },
+        {
+          "heading": "8. Kiến trúc và contract đề xuất",
+          "level": 2,
+          "line": 147
+        },
+        {
+          "heading": "9. Thứ tự triển khai và tiêu chí qua bước",
+          "level": 2,
+          "line": 183
+        },
+        {
+          "heading": "10. Những phần chưa chốt",
+          "level": 2,
+          "line": 211
+        },
+        {
+          "heading": "11. Đánh giá đề xuất ma trận rẽ nhánh và cộng/trừ điểm",
+          "level": 2,
+          "line": 221
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 17
+      }
+    }
+  ]
+}

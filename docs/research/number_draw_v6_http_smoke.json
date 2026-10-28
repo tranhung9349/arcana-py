@@ -1,0 +1,50 @@
+{
+  "health": {
+    "status": "ok",
+    "mvp": 1,
+    "pool": [
+      0,
+      99
+    ],
+    "set_size": 6,
+    "beta": 2,
+    "rules_version": "mvp1-logic-2026-10-26-v6",
+    "calendar": {
+      "implementation": "randomyst/time_engine.py",
+      "algorithm_id": "6tail-chinese-utc8-v1",
+      "provider": "lunar-python",
+      "provider_version": "1.4.8",
+      "source_url": "https://github.com/6tail/lunar-python",
+      "calendar_system": "CHINESE_LUNAR",
+      "input_offset_minutes": 420,
+      "offset_minutes": 480,
+      "conversion": "Same aware instant converted to fixed UTC+8 before passing fields to Solar.fromYmdHms",
+      "effective_date": "date(Beijing civil datetime); no added hour/day",
+      "maihoa_day_boundary": "00:00_BEIJING",
+      "bazi_day_boundary": "23:00_BEIJING",
+      "bazi_sect": 1,
+      "bazi_year_month": "Exact library Jie instant in Beijing time",
+      "true_solar_time_applied": false,
+      "location_affects_calculation": false,
+      "validation_status": "INTEGRATION_TESTED"
+    },
+    "validation_status": "EXPERIMENTAL"
+  },
+  "numbers": [
+    "06",
+    "42",
+    "55",
+    "65",
+    "73",
+    "96"
+  ],
+  "status": "OPTIMAL",
+  "score": 80.8,
+  "threshold": 80,
+  "attempts": 1,
+  "same_request_same_output": true,
+  "formal_response_valid": true,
+  "cached_v3_result_preserved": null,
+  "http_elapsed_ms": 94.34,
+  "measurement_scope": "One localhost request, not a latency benchmark"
+}

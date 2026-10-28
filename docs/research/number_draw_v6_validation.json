@@ -1,0 +1,80 @@
+{
+  "rules_version": "mvp1-logic-2026-10-26-v6",
+  "threshold_by_state": {
+    "DAI_CAT": 80,
+    "THU_CAT": 80,
+    "BINH_HOA": 80,
+    "TIEU_HAO": 80,
+    "DAI_HUNG": 85
+  },
+  "python_tests": {
+    "command": "RANDOMYST_DATABASE=/tmp/randomyst_draw6_tests.sqlite3 .venv/bin/python -m unittest discover -s tests -q",
+    "tests_run": 139,
+    "status": "PASSED",
+    "elapsed_seconds": 15.768
+  },
+  "javascript_tests": {
+    "command": "node --test tests/test_draw_reading.cjs",
+    "tests_run": 5,
+    "status": "PASSED"
+  },
+  "schema_examples": {
+    "valid_examples": 2,
+    "rejected_invalid_examples": 6,
+    "status": "PASSED"
+  },
+  "sampling_audit": {
+    "contexts_per_profile": 125,
+    "profiles": 2,
+    "sampled_first_sets": 12500,
+    "sampled_conditional_retry_sets": 5054,
+    "hard_rule_violations": 0,
+    "all_25_hung_have_passing_retry": true
+  },
+  "http": {
+    "numbers": [
+      "06",
+      "42",
+      "55",
+      "65",
+      "73",
+      "96"
+    ],
+    "score": 80.8,
+    "threshold": 80,
+    "same_request_same_result": true,
+    "formal_response_valid": true,
+    "reading_preserves_saved_draw": true,
+    "reading_preserves_history": true
+  },
+  "ui": {
+    "caption": "Sáu con số. Một dấu ấn riêng — được chắt lọc từ hồ sơ sinh và thời điểm bạn chọn.",
+    "missing_uncertainty_notifications_hidden": true,
+    "other_warnings_retained": true,
+    "attempt_label": "Số lần gieo số",
+    "selected_attempt_score_breakdown": true,
+    "legacy_draw_75_preserved_and_displayed": true,
+    "current_draw_threshold_80_displayed": true,
+    "console_errors_or_warnings": [],
+    "screenshots": [
+      "docs/research/number_draw_v6_ui.png",
+      "docs/research/number_draw_reading_v6_ui.png"
+    ]
+  },
+  "implementation_sha256": {
+    "config/mvp1_rules.json": "236849937fbbfcf13e8ad8c73d98ca8aaa82e0f48295324d1e757da0ddc01dc0",
+    "randomyst/sampling.py": "5c07627bda24a5bd925c6cd0f35f51f9a7acecc0511f12ba91370b83049a157a",
+    "randomyst/engine.py": "38be845750164f58ce8eb6e2ceda9bc8a4afb358b88260722daf53ea219f8c02",
+    "randomyst/models.py": "c03da6d41367d09d005ebb33fa951376915377cf565fd70a8e387f09a22e0373",
+    "schemas/interpretation_context.schema.json": "3829735c7f535563a2a807ace9f0851a63c324870ef7c555e64bb3a1a2d081ba",
+    "research_tools/weighted_sampling.py": "4a7d78dc5f44c804be60c14ba6f111b02c228714bf9b232842d40e4dfa7db5d4",
+    "research_tools/exponential_audit.py": "92754477ee19101fd78780d7b2efa4aae4958986ac74df675e96bc1a6253b190",
+    "web/draw_reading.js": "8e587e5854942378e3261747a82ea9249f90f3f03330b7e04f445471fce47a43",
+    "web/app.js": "2dc445203f90300fd99c7d46c6504a27a80b23324529de3ddc6cef30e3958e61",
+    "web/index.html": "92138c2607a3901061637ca9a97476a250811ef469230d51b5bbf56031191260",
+    "web/style.css": "4cfa82ef73935e06e7bfcfe834e3f47238abcaf27368fddad8ce4d7bfd68b283",
+    "tests/test_draw_reading.cjs": "de240ce860fe7fd8419f5e02d957cc3659ff7597ea739d79d10a2724734b7df7",
+    "tests/test_runtime.py": "b096560677d7f998e5ffb23c30a60479e2471841bf101278b4e4314c3996a1d6",
+    "tests/test_beijing_calendar.py": "cb2b561e06042b4d4760df80b709e14f236563a1b8b7d15e7a51e4c94214812f"
+  }
+}

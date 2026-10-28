@@ -1,0 +1,69 @@
+{
+  "rules_version": "mvp1-logic-2026-10-26-v5",
+  "pool": {
+    "min": 0,
+    "max": 99,
+    "size": 100,
+    "numbers_per_element": 20,
+    "numbers_per_element_and_parity": 10
+  },
+  "unit_tests": {
+    "command": "RANDOMYST_DATABASE=/tmp/randomyst_pool99_tests.sqlite3 .venv/bin/python -m unittest discover -s tests -q",
+    "tests_run": 138,
+    "status": "PASSED",
+    "elapsed_seconds": 14.761
+  },
+  "audit": {
+    "command": ".venv/bin/python -m research_tools.exponential_audit --betas 2 --samples-per-context 50 --seed 20261026 --output-dir docs/research",
+    "contexts_per_profile": 125,
+    "profiles": 2,
+    "sampled_first_sets": 12500,
+    "sampled_conditional_retry_sets": 3669,
+    "hard_rule_violations": 0,
+    "all_25_hung_contexts_have_passing_retry": true,
+    "all_hung_caps_attainable_in_retry": true
+  },
+  "http": {
+    "pool": [
+      0,
+      99
+    ],
+    "sample_numbers": [
+      "01",
+      "06",
+      "46",
+      "71",
+      "75",
+      "86"
+    ],
+    "idempotent": true,
+    "response_schema_valid": true,
+    "explanation_preserves_saved_draw": true,
+    "explanation_preserves_history": true
+  },
+  "ui": {
+    "verified": true,
+    "screenshot": "docs/research/number_pool_99_ui.png",
+    "console_errors_or_warnings": []
+  },
+  "historical_tests": [
+    "test_idempotency_preserves_historical_v3_result",
+    "test_api_readonly_idempotent_and_historical_v3_supported"
+  ],
+  "implementation_sha256": {
+    "config/mvp1_rules.json": "9912d50fb142ca1da7b616b90f0559f10a118ab43038376d778d51eeddb15de6",
+    "dan_gian_config.json": "3c19aacf68101e02df55186a970ec41b8e498d7a2481bfc9b314acd6f054d86e",
+    "randomyst/engine.py": "f095df6600a9b5e5453f89011c77201aad4ea66ebb52389027b6c5fe2e278539",
+    "randomyst/sampling.py": "25ff678e60a36dd29d5faa247273214bdd1c00abc93dd4ef83131825fc89830b",
+    "randomyst/models.py": "ea730b5c72426d24b405293737e85ba78451c77ae95a2c073671dec17a7813de",
+    "randomyst/api.py": "5be84b509222e363f60481e1b70a8b840dea03bc86e7241238c4b5a124da1500",
+    "schemas/interpretation_context.schema.json": "a2f94a04015fcb3741098e52149aca14749a45dade5f62c6cc92f36197923037",
+    "tests/test_runtime.py": "b2e3f251557bcc00aa9fd9dd1746e8f9bd97919fe02174993237c2cb46739c46",
+    "tests/test_beijing_calendar.py": "eaf03f368827f5c1c7025e3b2fdf8404b036e6013dc3e7a4de5f4df06bd56ffa",
+    "research_tools/weighted_sampling.py": "c2cdb67e5c6eb9b1102d4b0f0ea8721333ab34ca8c1b369eefbbca4b64370600",
+    "research_tools/exponential_audit.py": "87d0686d953140f158acdf98876fd683d575971462804848511e4ba887cb0e43",
+    "scripts/smoke_mvp.py": "acf2c837abd92d8e7790ce662abb6b49cba1be47cb7928aea9d8cb7bd7f8ed41",
+    "scripts/smoke_source_explanations.py": "9781d1115d4255ece5c0d57d92f4a526623556ab3a7faa00d0c421ffd394321f",
+    "web/index.html": "662c7cece766efb9412b73f460fc10436d0a331c2640b824df56194ecfcee012"
+  }
+}

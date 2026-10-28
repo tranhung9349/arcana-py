@@ -1,0 +1,146 @@
+{
+  "prompt_version": "plain-vietnamese-2026-10-27-v4.1",
+  "scope": "OFFLINE_PROMPT_ASSEMBLY_NOT_MODEL_ANSWERS",
+  "results": [
+    {
+      "case_id": "bazi-07-study",
+      "question": "Tôi cần chuẩn bị gì để học tốt hơn?",
+      "reading_plan": {
+        "version": "reading-focus-v1",
+        "primary_id": "bazi-mixed",
+        "qualifier_ids": [],
+        "intent": "PREPARATION",
+        "topic": "STUDY",
+        "source_ids": [
+          "dtt:strength",
+          "dtt:context"
+        ]
+      },
+      "case_ids": [
+        "bazi-07-study",
+        "bazi-03-mixed"
+      ],
+      "messages_sha256": "3d3c02af1bfda022c5cda48f4018ac27107e4451f2ca5594b6d96cc1b8ffa542",
+      "unchanged_context_except_question_sha256": "ea26345081e3e50df4cf5a1d641c64d5fb89a4d4c7d337a3e68a765bb2cce1e1",
+      "model_called": false
+    },
+    {
+      "case_id": "bazi-07-study",
+      "question": "Năm nay khi nào có kết quả học tập?",
+      "reading_plan": {
+        "version": "reading-focus-v1",
+        "primary_id": "bazi-mixed",
+        "qualifier_ids": [],
+        "intent": "TIMING",
+        "topic": "STUDY",
+        "source_ids": [
+          "dtt:strength",
+          "dtt:context"
+        ]
+      },
+      "case_ids": [
+        "bazi-07-study",
+        "bazi-03-mixed"
+      ],
+      "messages_sha256": "19d391dc19a30fb0df2297039553a6636a9b091d54c8dc5d616b795e19a3d325",
+      "unchanged_context_except_question_sha256": "ea26345081e3e50df4cf5a1d641c64d5fb89a4d4c7d337a3e68a765bb2cce1e1",
+      "model_called": false
+    },
+    {
+      "case_id": "maihoa-06-comparison",
+      "question": "Kế hoạch này có gì cần chú ý?",
+      "reading_plan": {
+        "version": "reading-focus-v1",
+        "primary_id": "maihoa-sequence",
+        "qualifier_ids": [],
+        "intent": "PREPARATION",
+        "topic": "PLANNING",
+        "source_ids": [
+          "mh:sequence",
+          "mh:context"
+        ]
+      },
+      "case_ids": [
+        "maihoa-06-comparison",
+        "maihoa-05-turning"
+      ],
+      "messages_sha256": "121fd372453974cab94936a4880c5ef3d8532cfd2a37c21de7a437a1e1252ece",
+      "unchanged_context_except_question_sha256": "5d397ebd8227ef95b7825608407c7c84b5a51eccf70c32dc17c7392790063dc2",
+      "model_called": false
+    },
+    {
+      "case_id": "maihoa-06-comparison",
+      "question": "Tôi nên chọn phương án A hay B?",
+      "reading_plan": {
+        "version": "reading-focus-v1",
+        "primary_id": "maihoa-sequence",
+        "qualifier_ids": [],
+        "intent": "COMPARISON",
+        "topic": "PLANNING",
+        "source_ids": [
+          "mh:sequence",
+          "mh:context"
+        ]
+      },
+      "case_ids": [
+        "maihoa-06-comparison",
+        "maihoa-05-turning"
+      ],
+      "messages_sha256": "6409e63a4639801147fbc43272fb59311fb641023a85c088f72d359af43b86ff",
+      "unchanged_context_except_question_sha256": "5d397ebd8227ef95b7825608407c7c84b5a51eccf70c32dc17c7392790063dc2",
+      "model_called": false
+    },
+    {
+      "case_id": "liuyao-05-provisional",
+      "question": "Khoản tiền có được nhận không?",
+      "reading_plan": {
+        "version": "reading-focus-v1",
+        "primary_id": "liuyao-provisional",
+        "qualifier_ids": [
+          "liuyao-mixed"
+        ],
+        "intent": "OUTCOME",
+        "topic": "WEALTH",
+        "source_ids": [
+          "ly:roles",
+          "ly:two_uses",
+          "ly:day",
+          "ly:month",
+          "ly:effective"
+        ]
+      },
+      "case_ids": [
+        "liuyao-05-provisional"
+      ],
+      "messages_sha256": "bec8ac5d5ab3a451f0af1320453ea95bff31cfa0806c0734229494578438b9d9",
+      "unchanged_context_except_question_sha256": "c3be3689f7ab9c49d647f3ffd3cf6225f02c914ac5dd844e36b5f12076054051",
+      "model_called": false
+    },
+    {
+      "case_id": "liuyao-05-provisional",
+      "question": "Bao giờ khoản tiền đến?",
+      "reading_plan": {
+        "version": "reading-focus-v1",
+        "primary_id": "liuyao-provisional",
+        "qualifier_ids": [
+          "liuyao-mixed"
+        ],
+        "intent": "TIMING",
+        "topic": "WEALTH",
+        "source_ids": [
+          "ly:roles",
+          "ly:two_uses",
+          "ly:day",
+          "ly:month",
+          "ly:effective"
+        ]
+      },
+      "case_ids": [
+        "liuyao-05-provisional"
+      ],
+      "messages_sha256": "a1806f04c1cb950bdec57dc6fb03094e2edb9b869fdd1a0c43011d0ce3d4acc5",
+      "unchanged_context_except_question_sha256": "c3be3689f7ab9c49d647f3ffd3cf6225f02c914ac5dd844e36b5f12076054051",
+      "model_called": false
+    }
+  ]
+}

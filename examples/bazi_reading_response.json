@@ -1,0 +1,81 @@
+{
+  "reading_id": "f86fcbf9-a207-4f81-9c10-449b31cb7e10",
+  "consultation_id": "09d08920-c3f3-4fa0-8678-4a64d3ec7c74",
+  "created_at": "2026-10-26T15:35:09.316017Z",
+  "analysis_rules_version": "bazi-natal-2026-10-26-v1",
+  "chart_sha256": "fc2dfb26e4d388afc98ca9cb1efac8dd3ee7e0301aa4b92809dacf9a4da439cd",
+  "reading": {
+    "topic": "CAREER",
+    "topic_name": "Công việc",
+    "question": "",
+    "title": "Đinh Hỏa · Công việc",
+    "summary": "Nhật chủ Đinh (Âm Hỏa), sinh tháng Dậu. Khí thế có tín hiệu đan xen, với 1 vị trí căn cùng hành và 1 can sinh trợ ngoài Nhật chủ. Phần lấy dụng được giữ mở để tránh ép các tín hiệu khác hướng thành một kết luận.",
+    "highlights": [
+      "strength",
+      "roots",
+      "balance",
+      "relations"
+    ],
+    "sections": [
+      {
+        "title": "Công việc trong lá số này",
+        "text": "Nhóm Quan Sát lộ qua Quý (Thất Sát) ở can tháng; Quý (Thất Sát) ở can giờ. Không thấy nhóm này trong tàng can của bốn chi.  Nhóm Thực Thương chưa lộ trên can. Trong tàng can có Mậu (Thương Quan) ở chi năm. \n\nTrong tầng can lộ, phía trách nhiệm hiện rõ hơn phía biểu đạt. Điểm đáng khảo sát là đường để năng lực tạo đầu ra cùng gánh những yêu cầu đang nổi lên. Khí thế có tín hiệu đan xen; ưu tiên xem điều kiện hỗ trợ và điểm cần cân nhắc, chưa xếp chủ đề này là thuận hoặc nghịch toàn diện.\n\nQuan Sát cho biết trục khuôn phép và trách nhiệm; Thực Thương cho biết đường biểu đạt và tạo ra kết quả. Đọc hai phía cùng khí thế Nhật chủ để cân nhắc giữa gánh trách nhiệm và khoảng chủ động.",
+        "finding_refs": [
+          "group:OFFICER",
+          "group:OUTPUT",
+          "strength"
+        ]
+      },
+      {
+        "title": "Nhật chủ Đinh · Âm Hỏa",
+        "text": "Nhật chủ Đinh (Âm Hỏa) là điểm quy chiếu của lá số. Bạn sinh tháng Dậu, sau tiết Bạch Lộ; bản khí của chi tháng là Tân (Thiên Tài). Các quan hệ được đọc theo Nhật chủ và tháng tiết khí này, không theo tháng âm lịch hoặc ngày đang xem.",
+        "finding_refs": [
+          "natal_context"
+        ]
+      },
+      {
+        "title": "Gốc khí và sinh trợ",
+        "text": "Hành Hỏa có gốc ở chi: năm có Đinh trong tàng can. Ngoài Nhật chủ, có 1 can sinh trợ và 2 can thuộc nhóm khắc, tiết hoặc hao. Căn bản khí và căn trong tàng can được ghi riêng; số lần hiện diện không phải điểm mạnh yếu.",
+        "finding_refs": [
+          "roots"
+        ]
+      },
+      {
+        "title": "Khí thế có tín hiệu đan xen",
+        "text": "Hành tháng Kim không cùng hành và không sinh Hỏa. Các dấu hiệu về mùa sinh, căn khí và can sinh trợ chưa cùng một hướng đủ rõ để chốt vượng hoặc nhược bằng bộ điều kiện hiện tại. Cần đọc thêm các quan hệ phối hợp để hiểu bên nào đang được trợ lực hoặc bị điều tiết.",
+        "finding_refs": [
+          "strength"
+        ]
+      },
+      {
+        "title": "Nguyệt lệnh và ứng viên cách cục",
+        "text": "Thiên Tài ở nguyệt lệnh: chưa thấu ra các can năm, tháng, giờ. Bản khí được xét cùng tàng can có thấu. Đây là các trục cần khảo sát, chưa xác nhận thành cách, phá cách hay hóa cách; không lấy riêng can tháng để chốt tên cách.",
+        "finding_refs": [
+          "structure"
+        ]
+      },
+      {
+        "title": "Hướng phù ức · Dụng, Hỷ, Kỵ",
+        "text": "Chưa chốt một hành Dụng/Hỷ/Kỵ theo phù ức: khí thế đang có các dấu hiệu trái chiều. Hướng phù ức nhằm điều tiết phần sinh trợ và hao lực; nhu cầu hàn noãn được đọc riêng ở phần Điều hậu.",
+        "finding_refs": [
+          "balance"
+        ]
+      },
+      {
+        "title": "Hàn noãn và Điều hậu",
+        "text": "Tháng Dậu không thuộc hai nhóm mùa nóng/lạnh mà bộ gợi ý hiện tại xét. Không suy ra rằng lá số đã đủ cân bằng về hàn noãn. Nhận định còn ở mức gợi ý mùa sinh; cần xét toàn cục trước khi chốt dụng Điều hậu.",
+        "finding_refs": [
+          "climate"
+        ]
+      },
+      {
+        "title": "Những tương tác cần đọc cùng nhau",
+        "text": "Tuất–Dậu tương hại (năm–tháng); Tuất–Mão lục hợp (năm–ngày); Tuất–Mão lục hợp (năm–giờ); Dậu–Mão lục xung (tháng–ngày); Dậu–Mão lục xung (tháng–giờ). Các quan hệ có thể cùng tồn tại; hợp chưa có nghĩa đã hóa, xung/hình/hại chưa đủ để phán một sự kiện xấu.",
+        "finding_refs": [
+          "relations"
+        ]
+      }
+    ],
+    "narrative_version": "bazi-narrative-2026-10-26-v1"
+  }
+}

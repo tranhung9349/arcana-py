@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-26",
+  "python_tests": 184,
+  "python_test_seconds": 22.329,
+  "javascript_tests": 10,
+  "live_methods": [
+    "BAZI",
+    "MAIHOA",
+    "LIUYAO"
+  ],
+  "provider_host": "rexapf.com",
+  "model_requested": "deepseek-v4.1-flash",
+  "credential_scan": "PASS",
+  "credential_file_ignored": true,
+  "credential_file_mode": "600",
+  "browser_console_errors": [],
+  "transport": "OpenAI-compatible Chat Completions over HTTPS",
+  "external_gateway": "none",
+  "schema_check": "PASS",
+  "semantic_expert_review": "NOT_RUN",
+  "live_smoke_report": "docs/research/ai_readings_http_smoke.json",
+  "screenshots": [
+    "docs/research/ai_bazi_ui.png",
+    "docs/research/ai_maihoa_ui.png",
+    "docs/research/ai_liuyao_ui.png"
+  ],
+  "rule_sha256": "ec24edd1b6dbe7a9cdfd6c7803a86b8c4322d2984a18e8f57c19210933fb1005"
+}

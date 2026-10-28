@@ -1,0 +1,38 @@
+{
+  "BAZI_NATAL_V1": {
+    "source_ids": [
+      "dtt:month",
+      "dtt:strength",
+      "ziping:use",
+      "ziping:formation",
+      "ziping:rescue",
+      "ziping:climate"
+    ],
+    "instruction": "BÁT TỰ: Lấy Nhật chủ và nguyệt lệnh làm nền, đặt mùa sinh cạnh căn khí và can sinh trợ/khắc tiết đã được cung cấp. Sau đó mới nối nhóm Thập Thần sát câu hỏi vào bức tranh ấy. Phân biệt vị trí hiện diện với hiệu lực: lộ không tự mạnh, tàng không tự yếu hoặc khó bộc lộ; số lượng không quyết định vượng suy. Nếu MIXED, giải thích các dấu trái chiều cụ thể và giữ hướng phù ức UNRESOLVED. Cách cục ứng viên chưa thành cách; không tự dựng Sát Ấn tương sinh, Thực Thương sinh Tài hoặc cứu ứng chỉ vì thấy các nhãn cùng có mặt. Nguyệt lệnh/cách cục, phù ức và Điều hậu là các nhánh khác nhau, chỉ nối khi findings đã cung cấp kết luận. Với câu hỏi học/việc, tổng hợp nền sinh trợ rồi nêu một liên hệ có điều kiện; không viết từng đoạn thành một định nghĩa Thập Thần. Không đoán tính cách, bệnh, thu nhập hoặc thời điểm khi chỉ có mệnh cục. Điểm mở bài phải bắt nguồn từ bức tranh mệnh cục được findings xác nhận, không mở bằng một khoảng cách tiếp nhận–thực hành suy từ lộ/tàng. Không coi vị trí can năm là xa nên ít tác dụng nếu chưa có finding đánh giá khoảng cách. Chỉ nói Quý Thủy khắc Đinh Hỏa theo nhóm Quan Sát đã cấp, không gọi cùng quan hệ ấy là vừa khắc vừa tiết. Sự có mặt của một nhóm chỉ cho phép nêu vai trò, không kết luận nó khó hoặc dễ hoạt động."
+  },
+  "MAIHOA_INTERNAL": {
+    "source_ids": [
+      "mh:roles",
+      "mh:sequence",
+      "mh:reason",
+      "mh:phase_priority"
+    ],
+    "instruction": "MAI HOA: Giữ Thể cố định làm chủ thể, Dụng là việc. Nối quan hệ đầu, Hỗ phía Thể, Hỗ phía Dụng và Biến thành một diễn tiến; so dấu đầu/cuối và điểm làm thay đổi cách đọc ở giữa. Không đổi hai Hỗ thành hai quẻ chủ, không đếm nhãn để bỏ cảnh báo của một chặng. Phần thuận có thể đi cùng phần cần thận trọng, cần nói rõ chúng thuộc chặng nào. SAME/tỷ hòa là quan hệ cùng hành theo finding, không tự đổi thành trung tính, trì trệ hoặc chủ quan. BODY_CONTROLS_USE khác USE_CONTROLS_BODY; nói rõ chiều. Vượng suy chỉ dùng mức được cấp; NOT_SPECIFIED là chưa xác định, không phải yếu hoặc thiếu sức bền của người hỏi. Khi chưa có nguyên văn quẻ/hào trong evidence, không tự lấy tên Độn/Bĩ/Ký Tế làm kết luận đảo ngược Thể Dụng. Thiếu ngoại ứng hoặc ứng kỳ thì không bịa; đầu–giữa–cuối là chặng trong phép đọc, chưa phải lịch. Dịch sang vấn đề thực tế bằng khả năng để đối chiếu, không suy từ quái sang một sự kiện đã xảy ra. Mỗi finding có phase và quy tắc riêng: quy tắc mưu sự cho Dụng ban đầu không tự áp vào Hỗ. Nếu Hỗ Thể khắc Hỗ Dụng chỉ được finding AUX đánh giá thuận, giữ đúng chiều thuận đó; không thêm thành chậm, chướng ngại hoặc phải siết tiến độ từ một trích đoạn khác. Có thể đề xuất kiểm tra tiến độ như ứng dụng hiện đại, nhưng không viết thành điều quẻ đã kết luận."
+  },
+  "LIUYAO_NAJIA": {
+    "source_ids": [
+      "ly:roles",
+      "ly:month",
+      "ly:day",
+      "ly:effective"
+    ],
+    "instruction": "LỤC HÀO: Bắt đầu đúng Dụng đã chọn; Phụ mẫu/Thê tài/Quan quỷ phải hiểu theo đối tượng của câu hỏi. selection AMBIGUOUS giữ riêng từng ứng viên, không ghép dữ kiện của hai hào; PROVISIONAL vẫn tạm chọn. Sau đó đặt Nhật–Nguyệt của Dụng cạnh động/tĩnh, Không/Phá và biến hóa đã được tính; xét thêm điều kiện Thế khi nó giới hạn chiều thuận của Dụng. reading:anchors xác định đúng Thế/Ứng; relation:use_world ghi chiều nguồn→đích từ mã quan hệ đã lưu, ưu tiên cách diễn đạt rõ chiều này. GENERATES: nguồn sinh đích; DRAINS: nguồn được đích sinh; CONTROLS: nguồn khắc đích; CONSUMES: nguồn bị đích khắc. Không đảo chiều hoặc xem có Nguyên thần là đã được cứu: phải có lực/hoạt động và đánh giá hiệu lực được cấp. Nguyên/Kỵ cùng có mặt chưa đủ tự giải chuỗi tham sinh quên khắc. Sinh phù của Dụng không xóa điều kiện xấu của Thế; Không/Phá không tự xóa hào hoặc tự thành thất bại. Tendency=MIXED phải giữ cả phần nâng đỡ và điều kiện cản. Hào văn thư vượng chưa chứng minh nội dung đúng; Thế bị khắc chưa chứng minh người hỏi quá tải. Chỉ nêu điều kiện ứng kỳ đã có, không biến nó thành ngày chắc có kết quả. Không tự xếp hào nào mạnh nhất toàn quẻ hoặc kết luận Cừu/Kỵ không gây sức ép khi findings chưa so hiệu lực. Điều kiện bất lợi của Thế chỉ giới hạn kết luận thuận cho người hỏi; không chỉ ra người hỏi thiếu sức, khó theo việc hoặc dễ dừng. Nêu tách biệt tác động của hào với chuyện thực tế cần kiểm tra. roles đã gán tên và hành từng vai: chỉ Kỵ thần là nhóm khắc Dụng; Cừu thần là nhóm khắc Nguyên, sinh Kỵ, không phải tên khác của hào khắc Dụng. Không tự gán lại vai. Ví dụ Dụng Kim thì Kỵ là Hỏa, Nguyên là Thổ, Cừu là Mộc; không viết Mộc khắc Kim. Đó là ví dụ giải thích hướng, không phải dữ kiện bổ sung cho phiên."
+  },
+  "ZHOUYI_TEXT": {
+    "source_ids": [
+      "zy:qian1",
+      "zy:jiji"
+    ],
+    "instruction": "KINH VĂN: Chỉ đọc quẻ từ hoặc hào từ thực sự được truy xuất. Nối hình ảnh, vị trí và điều kiện trong văn bản thành một ý nghĩa sát câu hỏi. Không thêm kinh văn từ trí nhớ, không coi nghĩa quẻ là kết luận Nạp Giáp và không gán chặng biểu tượng thành thời gian chắc chắn."
+  }
+}

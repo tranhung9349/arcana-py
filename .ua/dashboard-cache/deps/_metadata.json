@@ -1,0 +1,124 @@
+{
+  "hash": "8c3d12d6",
+  "configHash": "0eccb8e6",
+  "lockfileHash": "4e6153da",
+  "browserHash": "2d8d6dd0",
+  "optimized": {
+    "react": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/react@19.3.0/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "17d18edb",
+      "needsInterop": true
+    },
+    "react-dom": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "86f70b22",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/react@19.3.0/node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "bda7f419",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/react@19.3.0/node_modules/react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "d53a1d69",
+      "needsInterop": true
+    },
+    "@dagrejs/dagre": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/@dagrejs+dagre@2.0.4/node_modules/@dagrejs/dagre/dist/dagre.esm.js",
+      "file": "@dagrejs_dagre.js",
+      "fileHash": "a27556cf",
+      "needsInterop": false
+    },
+    "@xyflow/react": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/@xyflow+react@12.12.0_@types+react-dom@19.3.0_@types+react@19.3.0_react-dom@19.3.0_react@19.3.0/node_modules/@xyflow/react/dist/esm/index.js",
+      "file": "@xyflow_react.js",
+      "fileHash": "ed01fa53",
+      "needsInterop": false
+    },
+    "elkjs/lib/elk.bundled.js": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/elkjs@0.9.3/node_modules/elkjs/lib/elk.bundled.js",
+      "file": "elkjs_lib_elk__bundled__js.js",
+      "fileHash": "60344937",
+      "needsInterop": true
+    },
+    "fuse.js": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/fuse.js@7.5.0/node_modules/fuse.js/dist/fuse.mjs",
+      "file": "fuse__js.js",
+      "fileHash": "04ed711f",
+      "needsInterop": false
+    },
+    "graphology": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/graphology@0.25.4_graphology-types@0.24.8/node_modules/graphology/dist/graphology.esm.js",
+      "file": "graphology.js",
+      "fileHash": "60a2f257",
+      "needsInterop": false
+    },
+    "graphology-communities-louvain": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/graphology-communities-louvain@2.0.2_graphology-types@0.24.8/node_modules/graphology-communities-louvain/index.js",
+      "file": "graphology-communities-louvain.js",
+      "fileHash": "685ed6ac",
+      "needsInterop": true
+    },
+    "prism-react-renderer": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/prism-react-renderer@2.4.1_react@19.3.0/node_modules/prism-react-renderer/dist/index.mjs",
+      "file": "prism-react-renderer.js",
+      "fileHash": "292d8d4b",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/react-dom@19.3.0_react@19.3.0/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "3dc0cf62",
+      "needsInterop": true
+    },
+    "react-markdown": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/react-markdown@10.1.0_@types+react@19.3.0_react@19.3.0/node_modules/react-markdown/index.js",
+      "file": "react-markdown.js",
+      "fileHash": "c5284d6c",
+      "needsInterop": false
+    },
+    "remark-gfm": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/remark-gfm@4.0.1/node_modules/remark-gfm/index.js",
+      "file": "remark-gfm.js",
+      "fileHash": "79b83216",
+      "needsInterop": false
+    },
+    "zod": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/zod@4.6.5/node_modules/zod/index.js",
+      "file": "zod.js",
+      "fileHash": "fef35e53",
+      "needsInterop": false
+    },
+    "zustand": {
+      "src": "../../../../../.understand-anything/repo/understand-anything-plugin/node_modules/.pnpm/zustand@5.0.15_@types+react@19.3.0_react@19.3.0/node_modules/zustand/esm/index.mjs",
+      "file": "zustand.js",
+      "fileHash": "ad7cd0dc",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-HLZJV7TF": {
+      "file": "chunk-HLZJV7TF.js"
+    },
+    "chunk-PGRZYY3V": {
+      "file": "chunk-PGRZYY3V.js"
+    },
+    "chunk-473XMLLZ": {
+      "file": "chunk-473XMLLZ.js"
+    },
+    "chunk-OLD52B2G": {
+      "file": "chunk-OLD52B2G.js"
+    },
+    "chunk-CZ6VAFRC": {
+      "file": "chunk-CZ6VAFRC.js"
+    },
+    "chunk-2TUXWMP5": {
+      "file": "chunk-2TUXWMP5.js"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "validation_date_utc": "2026-10-11T09:12:29.845633+00:00",
+  "rules_version": "mvp1-logic-2026-10-11-v3",
+  "runtime_status": "RUNNABLE_LOCAL_MVP",
+  "validation_status": "EXPERIMENTAL",
+  "output_contract": {
+    "number_sets": 1,
+    "set_size": 6,
+    "pool_inclusive": [
+      0,
+      45
+    ],
+    "distinct_within_set": true,
+    "display": "ascending two-digit strings"
+  },
+  "unit_and_integration_tests": {
+    "command": ".venv/bin/python -m unittest discover -s tests -v",
+    "tests_passed": 33,
+    "tests_failed": 0,
+    "elapsed_seconds": 2.626,
+    "contexts_checked": 125,
+    "conditional_samples_checked": 750,
+    "pillar_fixtures_vs_6tail_away_from_jie": 100,
+    "original_hexagrams_checked": 64,
+    "one_line_changes_checked": 384,
+    "includes_concurrent_idempotency_and_five_attempt_suboptimal_fallback": true,
+    "includes_display_hexagram_noninterference": true
+  },
+  "bazi_port_comparison": {
+    "cases": 1000,
+    "mismatches": 0,
+    "decision_branches_covered": 10,
+    "report": "docs/research/bazi_python_port_validation.json",
+    "scope": "Same supplied four pillars; not an independent calendar or Bazi correctness proof"
+  },
+  "astronomy_spot_checks": {
+    "independent_2026_jie_checks": 12,
+    "all_within_published_minute_tolerance": true,
+    "internal_solver_root_checks": 996,
+    "report": "docs/research/astronomy_runtime_spot_checks.json",
+    "full_range_independent_validation": false,
+    "certified_error_bound_seconds": null
+  },
+  "live_http_smoke": {
+    "base_url": "http://127.0.0.1:8765",
+    "numbers": [
+      "05",
+      "21",
+      "25",
+      "26",
+      "27",
+      "36"
+    ],
+    "status": "OPTIMAL",
+    "score": 84.0,
+    "attempts": 1,
+    "same_request_same_output": true,
+    "example_response_validates_against_runtime_model": true,
+    "observed_one_request_elapsed_ms": 9.08,
+    "latency_is_benchmark": false,
+    "response": "examples/draw_response.json"
+  },
+  "browser_smoke": {
+    "successful_form_submission": true,
+    "numbers": [
+      "01",
+      "05",
+      "22",
+      "35",
+      "36",
+      "42"
+    ],
+    "score": 95.2,
+    "threshold": 75,
+    "attempts": 1,
+    "screenshot": "docs/research/mvp1_ui_smoke.jpg"
+  },
+  "configuration": {
+    "beta": 2,
+    "sampling": "Product-weight subsets conditioned on valid configurations",
+    "remediation_target_quota": [
+      3,
+      4
+    ],
+    "max_attempts_total": 5,
+    "g_cap_and_context_frozen": true,
+    "current_time": "Client click before geolocation; preserve and compare server receipt"
+  },
+  "llm": {
+    "provider_integrated": false,
+    "model_called": false,
+    "prompt_and_schema_prepared": true,
+    "schema_report": "docs/research/interpretation_schema_validation.json"
+  },
+  "geolocation": {
+    "device_supported": true,
+    "manual_override_supported": true,
+    "local_geoip_database_configured": false,
+    "fallback_when_ip_database_unavailable": "105 degrees E with low-confidence flag; EoT remains enabled"
+  },
+  "remaining_validation": [
+    "Independent Vietnamese lunar month/leap-year labels over the full supported range.",
+    "Certified EoT and position/clock uncertainty bounds; currently boundary status can remain UNDETERMINED.",
+    "LLM provider integration and Vietnamese translation quality.",
+    "Observed set score is internal rule compliance, not evidence of lottery or real-world predictive performance."
+  ],
+  "sha256": {
+    "calendar_adapter/__init__.py": "2b12fdac6fc895fc34a7636956839baeddfd638be2dd695b6a0715a68339dcfa",
+    "calendar_adapter/__main__.py": "e2d34447d9c619678a2117bd29ffc735ff1f4b9eb68083aeb30d4b5d01f495c8",
+    "calendar_adapter/audit.py": "a25334e90ee596c70defbd93c262a5da07f8537f11acaeb75da9598781ecdcb3",
+    "calendar_adapter/vietnamese.py": "ae9a66ec6d5190bd7a484261c06a9795bc2fb77f0640382e85efbb519c6ac1d1",
+    "randomyst/__init__.py": "0a3b9e58e3081ce62e96a882e9432125e7855dd934de05bccbfdd9ab4c6f1193",
+    "randomyst/api.py": "ed4a67200c97b1117abbe0b28066467193e74b3e791f4ce9f9542b8c2f91297b",
+    "randomyst/bazi.py": "db20073e469fbf39c0de4c7160daf1615682158c5b064defc24c86306f78f958",
+    "randomyst/engine.py": "ce718ad8bf1a408b38a677528f2326575980537a76ccbd53cd57cfc8665671e7",
+    "randomyst/geolocation.py": "05a5d1094f0ff6479fcbb0324d5dba0ee455e9b5487b4efeb09ed5e9f4e0846d",
+    "randomyst/maihoa.py": "bcad341d77a4e85f4f9c9f52cdcebe6c702f2a8f884b5075f69de42551497c05",
+    "randomyst/models.py": "1c11e1b494557d4ab5bd26e021fec41110df694492fa4935dd5075fdb4384779",
+    "randomyst/sampling.py": "6c116079c321370ce972b4fa798e9e7fe601178e3b8000db5a89570ad0983f49",
+    "randomyst/storage.py": "ca1e2d6b29d5c3491021ee55aed2bb2a0fc7ee228f1b983f9ad749193ec13066",
+    "randomyst/time_engine.py": "375253d6374f56becabc82b85b4a36a6adc2443fd1145a0c002a277bd3716800",
+    "config/mvp1_rules.json": "c70cf952cbc5736c5b1d455727ba8967f28a4b47fb229675d86df62f08d3f20c",
+    "requirements.txt": "1be4d60fe7fb84385c3e0e8d7e94ad0aa31b195d1a90538e960739adaa732f6f",
+    "requirements-dev.txt": "9c09052c8e7c5ac1d606aa35f676399055b6b66238ac686b9007422ab2fc1ace",
+    "web/index.html": "5908e1ac3ad9a8f7ecbf75a3acf7aa647edb12d36deff671a68d3475c476ceae",
+    "web/style.css": "23d7375dc14bb027058ff4fa115bb4d32c9895773e24cc4e8bd963482394ed90",
+    "web/app.js": "39dd033fc7ca2311b304684252b650cd2e80a606347cecbe15ade0ba1ff98f07",
+    "tests/test_runtime.py": "15bf5c4cf9e65f45fcdb69c4ab05186642f9001ea564a2d191d6b07a9e6b16ba"
+  }
+}

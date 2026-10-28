@@ -1,0 +1,35 @@
+{
+  "schema_version": "date-corpus-manifest-v1",
+  "provider": "lunar-python",
+  "provider_version": "1.4.8",
+  "corpus_path": "data/date_calendar/almanac_2024_2030.json.gz",
+  "sha256": "a046dbf8187bd7bd6b8e3208118f6b584f5d9f3541e663422d69c30ff586ef28",
+  "uncompressed_sha256": "fe5fefccd3d601becaa46172c0a29756612d416a31bffdd1c032bebc6b2fd325",
+  "provider_sources": [
+    {
+      "module": "lunar_python.Lunar",
+      "sha256": "489a1725a2ba443f9e8acf0534f05a0ee28c24f8904adb129c8a30daa3ed7079"
+    },
+    {
+      "module": "lunar_python.EightChar",
+      "sha256": "d38241e75b693f25fc8c2a3e1587fd028a0a52cc504f9d5c7b47326eef051c0c"
+    },
+    {
+      "module": "lunar_python.util.LunarUtil",
+      "sha256": "87a84818a3ddd10925cbb28ec04a048b27e1ac46f291ff4d9a861f15fb59aa00"
+    }
+  ],
+  "day_count": 2558,
+  "hour_count": 33254,
+  "jie_count": 100,
+  "public_range_utc7": [
+    "2024-01-01",
+    "2030-12-31"
+  ],
+  "raw_tokens": [
+    "嫁娶",
+    "开市",
+    "出行"
+  ],
+  "coverage_note": "Full raw day/hour arrays, not a noon-only sample or recommendations"
+}

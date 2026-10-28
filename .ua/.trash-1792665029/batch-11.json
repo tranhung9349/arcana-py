@@ -1,0 +1,352 @@
+{
+  "nodes": [
+    {
+      "id": "document:docs/architect_idea.md",
+      "type": "document",
+      "name": "architect_idea.md",
+      "filePath": "docs/architect_idea.md",
+      "summary": "Sơ đồ Mermaid ý tưởng kiến trúc ban đầu: năm luồng payload (Bát Tự, Lịch Thiên Mệnh, Số Học, Thiên Thời, Kinh Dịch/RAG) hợp nhất vào engine trung tâm với ma trận trọng số 7 lớp, gieo sáu số trong pool 00–45 rồi chuyển cho lớp LLM luận giải.",
+      "tags": [
+        "documentation",
+        "kiến-trúc",
+        "mermaid-diagram",
+        "ý-tưởng-thiết-kế"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Tài liệu chủ yếu là một khối Mermaid flowchart TD với subgraph lồng nhau và classDef; tên module trong sơ đồ (input_user_bazi.py, engine_core.py…) là ý tưởng, không trùng với file thực tế trong randomyst/."
+    },
+    {
+      "id": "document:docs/logic_plan_mvp1.md",
+      "type": "document",
+      "name": "logic_plan_mvp1.md",
+      "filePath": "docs/logic_plan_mvp1.md",
+      "summary": "Đặc tả hiện hành MVP 1 rules v4: chuyển lịch sang Bắc Kinh UTC+8 qua lunar-python 1.4.8, công thức Mai Hoa Y/M/D/H, nguồn Bát Tự tinix-bazi và kinh văn open-iching, điểm nghiệm thu G/Âm Dương, trọng số delta, giải sát tối đa 5 lượt, API/trace/lịch sử và phần giải thích quẻ display-only.",
+      "tags": [
+        "documentation",
+        "đặc-tả",
+        "mvp1",
+        "thuật-toán-gieo-số",
+        "lịch-âm"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/logic_plan_mvp2.md",
+      "type": "document",
+      "name": "logic_plan_mvp2.md",
+      "filePath": "docs/logic_plan_mvp2.md",
+      "summary": "Đặc tả final MVP 2 (rules mvp2-dates-2026-10-12-v1) cho tra ngày cưới hỏi, khai trương, xuất hành: schema/config đã đóng, corpus Yi/Ji ghim, ba bộ lọc ngày chung, đối chiếu hồ sơ sinh, bảng penalty và nhãn GOOD/NORMAL/BAD, ranh lịch, API/UI với popup recommended_windows/hour_branch, kiểm chứng và benchmark R1–R5.",
+      "tags": [
+        "documentation",
+        "đặc-tả",
+        "mvp2",
+        "chọn-ngày",
+        "scoring-policy"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:docs/architect_idea.md",
+      "target": "file:randomyst/engine.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/architect_idea.md",
+      "target": "file:randomyst/maihoa.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/architect_idea.md",
+      "target": "file:randomyst/bazi.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/architect_idea.md",
+      "target": "file:randomyst/sampling.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/architect_idea.md",
+      "target": "document:docs/logic_plan_mvp1.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "file:randomyst/time_engine.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "file:randomyst/maihoa.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "file:randomyst/bazi.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "file:randomyst/engine.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "file:randomyst/sampling.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "file:randomyst/interpretation.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "file:randomyst/api.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "file:randomyst/storage.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "file:randomyst/models.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "config:config/mvp1_rules.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "config:dan_gian_config.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "document:docs/archive/logic_plan_mvp1_v3.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "config:docs/research/beijing_calendar_migration_validation.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "schema:schemas/source_explanation.schema.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp1.md",
+      "target": "file:scripts/build_explanation_data.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "file:randomyst/date_models.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "file:randomyst/date_calendar.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "file:randomyst/date_rules.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "file:randomyst/date_engine.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "file:randomyst/api.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "file:web/dates.js",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "file:scripts/build_date_data.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "config:config/mvp2_date_rules.json",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "schema:schemas/mvp2_date_rules.schema.json",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "document:docs/archive/logic_plan_mvp2_pre_r1.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "document:data/date_calendar/README.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "config:data/date_calendar/manifest.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "document:docs/research/mvp2_activity_expansion.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "config:examples/date_search_request.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "config:examples/marriage_date_search_request.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "config:examples/date_search_response.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "config:docs/research/mvp2_runtime_validation.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "config:docs/research/mvp2_cold_93_runtime_validation.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "config:docs/research/mvp2_ui_smoke.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "document:MVP2_HANDOFF.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "document:docs/research/mvp2_auspicious_date_research.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "config:docs/research/mvp2_auspicious_date_feasibility.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/logic_plan_mvp2.md",
+      "target": "config:docs/research/mvp2_rule_matrix_counterexamples.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

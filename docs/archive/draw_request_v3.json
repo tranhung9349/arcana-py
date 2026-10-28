@@ -1,0 +1,20 @@
+{
+  "request_id": "b18fed83-9714-4fd2-8635-b98c963e71f7",
+  "birth": {
+    "civil_datetime": "1994-10-08T05:00:00+07:00",
+    "location": {
+      "longitude": 105.85,
+      "latitude": 21.03,
+      "source": "MANUAL"
+    }
+  },
+  "casting": {
+    "mode": "CUSTOM",
+    "custom_timestamp": "2026-10-11T01:30:00+07:00",
+    "location": {
+      "longitude": 106.66,
+      "latitude": 10.78,
+      "source": "MANUAL"
+    }
+  }
+}

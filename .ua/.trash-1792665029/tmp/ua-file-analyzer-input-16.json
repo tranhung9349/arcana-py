@@ -1,0 +1,8 @@
+{"projectRoot":"/Users/tranduyhung/Work/randomyst_numbers","batchFiles":[
+{"path":"schemas/date_search_request.schema.json","language":"json","sizeLines":273,"fileCategory":"config"},
+{"path":"schemas/date_search_response.schema.json","language":"json","sizeLines":453,"fileCategory":"config"},
+{"path":"schemas/interpretation_context.schema.json","language":"json","sizeLines":677,"fileCategory":"config"},
+{"path":"schemas/interpretation_response.schema.json","language":"json","sizeLines":30,"fileCategory":"config"},
+{"path":"schemas/mvp2_date_rules.schema.json","language":"json","sizeLines":390,"fileCategory":"config"},
+{"path":"schemas/source_explanation.schema.json","language":"json","sizeLines":492,"fileCategory":"config"}],
+"batchImportData":{}}

@@ -1,0 +1,658 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 9,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 9
+    }
+  },
+  "results": [
+    {
+      "path": "docs/research/mvp2_rule_matrix_counterexamples.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 108,
+      "nonEmptyLines": 108,
+      "sections": [
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "created_at",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "provider_version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "provider_lunar_py_sha256",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "fixtures",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "arithmetic_example",
+          "level": 1,
+          "line": 99
+        },
+        {
+          "heading": "unbounded_bonus_finding",
+          "level": 1,
+          "line": 106
+        },
+        {
+          "heading": "runtime_modified",
+          "level": 1,
+          "line": 107
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "docs/research/mvp2_runtime_validation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 95,
+      "nonEmptyLines": 95,
+      "sections": [
+        {
+          "heading": "checked_at_utc",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "python",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "platform",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "corpus_sha256",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "rules_sha256",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "fresh_server_ready_seconds",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "http_measurements",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "checks",
+          "level": 1,
+          "line": 86
+        },
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 94
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/research/mvp2_ui_smoke.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 19,
+      "nonEmptyLines": 19,
+      "sections": [
+        {
+          "heading": "checked_at_utc",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "url",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "database_scope",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "checks",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "screenshot",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "docs/research/remediation_audit_v2.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 2223,
+      "nonEmptyLines": 2223,
+      "sections": [
+        {
+          "heading": "all_125_mode_counts",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "hung_25_mode_counts",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "hung_first_safe_lower_score_cases",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "example_first_safe",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "fallback_cases",
+          "level": 1,
+          "line": 30
+        },
+        {
+          "heading": "rows",
+          "level": 1,
+          "line": 92
+        },
+        {
+          "heading": "method",
+          "level": 1,
+          "line": 2194
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "docs/research/remediation_feasibility_v3.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1416,
+      "nonEmptyLines": 1416,
+      "sections": [
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "hung_contexts",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "all_have_feasible_configuration",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "minimum_positive_raw_cap",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "maximum_raw_cap",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "rows",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "method",
+          "level": 1,
+          "line": 1054
+        },
+        {
+          "heading": "cap_freeze_check",
+          "level": 1,
+          "line": 1082
+        },
+        {
+          "heading": "candidate_ranking_ties",
+          "level": 1,
+          "line": 1415
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "docs/research/remediation_feasibility_v4.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1124,
+      "nonEmptyLines": 1124,
+      "sections": [
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "quota",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "hung_contexts",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "all_hung_have_passing_retry",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "all_hung_caps_remain_attainable_in_retry",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "minimum_G_cap",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "maximum_G_cap",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "caps_changed_from_quota_3_to_5",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "selected_remedies_changed_from_quota_3_to_5",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "tie_break_used_in_experiment",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "rows",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "non_hung_target_pairs",
+          "level": 1,
+          "line": 972
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "docs/research/soft_adjusters_source_audit.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 607,
+      "nonEmptyLines": 607,
+      "sections": [
+        {
+          "heading": "source_repo",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "commit",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "files_sha256",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "findings",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "conditional_math_examples",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "confirmed_user_decisions",
+          "level": 1,
+          "line": 106
+        },
+        {
+          "heading": "unresolved",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "diminishing_returns_examples",
+          "level": 1,
+          "line": 167
+        },
+        {
+          "heading": "mvp_algebraic_bounds",
+          "level": 1,
+          "line": 189
+        },
+        {
+          "heading": "source_table_checks",
+          "level": 1,
+          "line": 197
+        },
+        {
+          "heading": "logic_fixture_checks",
+          "level": 1,
+          "line": 208
+        },
+        {
+          "heading": "folk_config_checks",
+          "level": 1,
+          "line": 372
+        },
+        {
+          "heading": "historical_non_exhaustive_folk_examples",
+          "level": 1,
+          "line": 450
+        },
+        {
+          "heading": "seasonality_model_checks",
+          "level": 1,
+          "line": 458
+        },
+        {
+          "heading": "calendar_scope",
+          "level": 1,
+          "line": 559
+        },
+        {
+          "heading": "location_source_research",
+          "level": 1,
+          "line": 589
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "docs/research/source_explanation_http_smoke.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 12,
+      "nonEmptyLines": 12,
+      "sections": [
+        {
+          "heading": "context_id",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "hexagram",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "moving_line",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "source_cards",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "bazi_cards",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "saved_draw_preserved",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "history_unchanged",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "same_read_same_explanation",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "schema_valid",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "model_called",
+          "level": 1,
+          "line": 11
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/research/source_explanation_validation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 92,
+      "nonEmptyLines": 92,
+      "sections": [
+        {
+          "heading": "created_at_utc",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "corpus_version",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "coverage",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "unit_tests",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "validation_scope",
+          "level": 1,
+          "line": 22
+        },
+        {
+          "heading": "translation_labels",
+          "level": 1,
+          "line": 23
+        },
+        {
+          "heading": "translation_review_status",
+          "level": 1,
+          "line": 27
+        },
+        {
+          "heading": "bazi_prose_label",
+          "level": 1,
+          "line": 28
+        },
+        {
+          "heading": "bazi_verse_language",
+          "level": 1,
+          "line": 29
+        },
+        {
+          "heading": "source_commits",
+          "level": 1,
+          "line": 30
+        },
+        {
+          "heading": "new_source_git_blob_verified",
+          "level": 1,
+          "line": 34
+        },
+        {
+          "heading": "missing_thoan_32_preserved",
+          "level": 1,
+          "line": 35
+        },
+        {
+          "heading": "runtime_model_called",
+          "level": 1,
+          "line": 36
+        },
+        {
+          "heading": "numbers_rules_changed",
+          "level": 1,
+          "line": 37
+        },
+        {
+          "heading": "http_smoke",
+          "level": 1,
+          "line": 38
+        },
+        {
+          "heading": "browser",
+          "level": 1,
+          "line": 50
+        },
+        {
+          "heading": "file_sha256",
+          "level": 1,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    }
+  ]
+}

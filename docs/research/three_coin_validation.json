@@ -1,0 +1,96 @@
+{
+  "validated_at": "2026-10-26T14:50:58.826209+07:00",
+  "rules_version": "three-coins-liuyao-2026-10-26-v1",
+  "method": "THREE_COINS_SIX_THROWS",
+  "status": "PASSED",
+  "regression": {
+    "command": "RANDOMYST_DATABASE=/tmp/randomyst_coins_test_import.sqlite3 .venv/bin/python -m unittest discover -s tests -v",
+    "tests": 106,
+    "seconds": 14.052,
+    "passed": true,
+    "coin_specific_tests": 13
+  },
+  "coverage": {
+    "coin_faces_per_throw": 3,
+    "throws": 6,
+    "enumerated_line_vectors": 4096,
+    "original_hexagrams": 64,
+    "original_changed_pairs": 4096,
+    "moving_counts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "palaces": 8,
+    "reference_line_texts": 384,
+    "single_throw_counts": {
+      "6": 1,
+      "7": 3,
+      "8": 3,
+      "9": 1
+    },
+    "concurrent_same_uuid_requests": 6,
+    "rng_calls_for_concurrent_retries": 18,
+    "same_payload_replays_snapshot": true,
+    "different_payload_same_uuid_http": 409,
+    "day_boundary_beijing": "23:00",
+    "timezone_conversion": "UTC+7 -> UTC+8, same instant"
+  },
+  "schemas": {
+    "request_example_valid": true,
+    "response_example_valid": true,
+    "draft": "2020-12"
+  },
+  "javascript_syntax": {
+    "coins.js": "PASSED",
+    "dates.js": "PASSED"
+  },
+  "ui": {
+    "browser": "Codex in-app browser, localhost",
+    "viewport_observed": [
+      686,
+      979
+    ],
+    "checked": [
+      "random complete six-throw session",
+      "manual faces 7/8/9/8/7/6 -> #63 to #42, moving 3 and 6",
+      "source mode and required input toggling",
+      "all 64 library entries",
+      "accent-insensitive search dia -> 14 matches",
+      "read-only library lookup",
+      "history survives reload and opens saved #63 -> #42",
+      "hexagram lines and Na Jia table visibly rendered"
+    ],
+    "screenshots": [
+      "docs/research/three_coin_result_ui.png",
+      "docs/research/three_coin_najia_ui.png"
+    ],
+    "test_database": "/tmp/randomyst_coins_ui.sqlite3",
+    "normal_user_history_modified": false
+  },
+  "limits": [
+    "Not a full Liu Yao verdict engine: no automatic useful-spirit selection or event timing",
+    "Vietnamese translations and overviews remain AI drafts, unreviewed",
+    "Electronic classical transcriptions cross-checked, not a facsimile critical edition",
+    "Predictive accuracy not evaluated",
+    "Not a load test or a real mobile-device test"
+  ],
+  "input_sha256": {
+    "randomyst/api.py": "eb5af0b5a76515b1945284546d186182d7a6dc7713d924171a44cddaa2fd1350",
+    "randomyst/coins_models.py": "8ce322b24bbf943982effd955993f7464019f0d6a5de5ecafe11e943e65286ba",
+    "randomyst/coins_service.py": "79cacb5a62f648610c65998c6bed1a81521ba80c90cbacac146fa09e8afbcc11",
+    "randomyst/liuyao.py": "c6a998d8a7bd73a8183a41b86033f70350eaa856a4203a97148a7e2fd50b644a",
+    "config/coins_rules.json": "35794199d9344df42afefda754a0e2d9484d90658080f4bff685d0ed02f96392",
+    "tests/test_coin_consultations.py": "616cec9a7a3c32804a7d0bb0fd02166eba3b666396c0d42e0de07467f66c12d6",
+    "web/index.html": "a5d85f6fa21dbea1bd0d01f12b3e298810e998021f16807c210511b58ee914cb",
+    "web/dates.js": "33141b0edea6df869a26947d922300ca3e685423c2e453765e4a5a2d1c91cb64",
+    "web/coins.js": "115f4c6bd5cf53a39b134d81f8b6cf39b9744d439e395798a30889f635d9a874",
+    "web/style.css": "12d149fb8a3975b1596276aec6079fcdf362d887be3aa591d630518b9459490b",
+    "data/reference/open-iching/iching.json": "7fe029a32c51f2da39d702f8064825262cfd3a7d004353738cd893b0a017ab10",
+    "data/interpretation/iching_vi_draft.json": "8f7cd817793bb00015051f1814422071ce9103aff3365c02fc284390c3187a36"
+  }
+}

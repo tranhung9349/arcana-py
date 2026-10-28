@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-27T13:58:25.064136+00:00",
+  "python_tests": {
+    "passed": 200,
+    "seconds": 28.937
+  },
+  "javascript_tests": {
+    "passed": 15,
+    "seconds": 0.141
+  },
+  "prompt_packs_hash_validation": "PASS",
+  "public_credential_scan": {
+    "checked_files": 286,
+    "passed": true
+  },
+  "date_few_shot_cases": 7,
+  "live_results_file": "docs/research/date_readings_http_smoke.json",
+  "live_paid_generations": 2,
+  "ui_checks": {
+    "day_hour_reasons_visible": true,
+    "live_ai_reading_visible": true,
+    "same_page_reopen_uses_saved_ai": true,
+    "day_only_two_subject_reasons_visible": true,
+    "no_ai_generation_on_popup_open": true
+  },
+  "no_score_or_rule_changes": true,
+  "not_expert_or_predictive_validation": true,
+  "remaining_limits": [
+    "Seven teaching cases are editorial synthetic fixtures, not expert reviewed.",
+    "Some provider prose still repeats facts and can use broad wording about the day; interpretation should remain scoped to the focus interval.",
+    "Date UI has no history or automatic restoration after a page reload; saved-ID cache persists on the backend."
+  ]
+}

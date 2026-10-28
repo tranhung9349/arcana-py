@@ -1,0 +1,1402 @@
+{
+ "nodes": [
+  {
+   "id": "document:calendar_adapter/README.md",
+   "type": "document",
+   "name": "README.md",
+   "summary": "Tài liệu adapter lịch Việt Nam UTC+7 thử nghiệm (thuật toán Hồ Ngọc Đức giản lược), nay đã ngừng dùng từ rules v4; mô tả CLI, giao diện Python, phạm vi tra cứu và kết quả đối chiếu Sóc với bảng NASA. Chỉ giữ để tái lập nghiên cứu v3.",
+   "tags": [
+    "tài-liệu",
+    "lịch-âm",
+    "legacy",
+    "nghiên-cứu",
+    "calendar-adapter"
+   ],
+   "complexity": "moderate",
+   "filePath": "calendar_adapter/README.md"
+  },
+  {
+   "id": "document:data/date_calendar/README.md",
+   "type": "document",
+   "name": "README.md",
+   "summary": "Mô tả corpus lịch MVP 2: mảng Yi/Ji nguyên văn theo ngày và giờ từ lunar-python 1.4.8 (2.558 ngày, 33.254 mốc giờ, 100 mốc Jie), map việc v1 cưới hỏi/khai trương/xuất hành, cách build tái lập và quy tắc đọc token như 诸事不宜 hay UNRESOLVED.",
+   "tags": [
+    "tài-liệu",
+    "corpus-lịch",
+    "dữ-liệu",
+    "chọn-ngày",
+    "mvp2"
+   ],
+   "complexity": "simple",
+   "filePath": "data/date_calendar/README.md"
+  },
+  {
+   "id": "document:data/reference/README.md",
+   "type": "document",
+   "name": "README.md",
+   "summary": "Ghi chú các nguồn được khóa commit cho MVP 1 (tinix-bazi, open-iching): runtime kiểm hash dữ liệu open-iching, mã JS tinix chỉ chạy bằng Node khi build/đối chiếu; giải thích cách bazi.py port logic và lời giải Bát Tự được dựng từ STEM_ESSENCE/STRUCTURE_ANALYSIS.",
+   "tags": [
+    "tài-liệu",
+    "nguồn-tham-chiếu",
+    "provenance",
+    "bát-tự",
+    "kinh-dịch"
+   ],
+   "complexity": "simple",
+   "filePath": "data/reference/README.md"
+  },
+  {
+   "id": "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "type": "document",
+   "name": "vietnamese_interpretation_v1.md",
+   "summary": "Đặc tả prompt luận giải Việt ngữ vietnamese-interpretation-v1 cho lớp LLM tương lai (chưa nối provider): system prompt với quy tắc nhãn AI_TRANSLATION/AI_INTERPRETATION, fact-reference hợp lệ, disclaimer cố định và quy trình kiểm định output trước khi hiển thị.",
+   "tags": [
+    "tài-liệu",
+    "prompt-llm",
+    "contract",
+    "luận-giải",
+    "kiểm-định"
+   ],
+   "complexity": "moderate",
+   "filePath": "docs/prompts/vietnamese_interpretation_v1.md"
+  },
+  {
+   "id": "document:research_tools/README.md",
+   "type": "document",
+   "name": "README.md",
+   "summary": "Hướng dẫn các script nghiên cứu: khảo sát chọn ngày MVP 2, audit mở rộng category, phép thử phân bố trọng số hàm mũ (β) và kiểm tra schema/prompt luận giải; ghi rõ legacy_time_engine và calendar_adapter chỉ phục vụ báo cáo v3.",
+   "tags": [
+    "tài-liệu",
+    "nghiên-cứu",
+    "audit",
+    "kiểm-chứng",
+    "research-tools"
+   ],
+   "complexity": "moderate",
+   "filePath": "research_tools/README.md"
+  },
+  {
+   "id": "resource:data/date_calendar/almanac_2024_2030.json.gz",
+   "type": "resource",
+   "name": "almanac_2024_2030.json.gz",
+   "summary": "Corpus lịch nhị phân gzip (~421 KB) chứa toàn bộ mảng Yi/Ji theo 2.558 ngày dân sự Bắc Kinh và 33.254 mốc giờ cùng 100 mốc tiết Jie cho 2024–2030 (thêm ngày đệm 01/01/2031), sinh từ lunar-python 1.4.8; hash nén/giải nén được khóa trong manifest.",
+   "tags": [
+    "corpus-lịch",
+    "dữ-liệu-nhị-phân",
+    "gzip",
+    "chọn-ngày",
+    "mvp2"
+   ],
+   "complexity": "complex",
+   "filePath": "data/date_calendar/almanac_2024_2030.json.gz",
+   "languageNotes": "JSON canonical được gzip với mtime=0 để build tái lập byte-for-byte; runtime kiểm cả SHA-256 bản nén và bản giải nén."
+  },
+  {
+   "id": "config:data/date_calendar/manifest.json",
+   "type": "config",
+   "name": "manifest.json",
+   "summary": "Manifest date-corpus-manifest-v1 khóa provider lunar-python 1.4.8, đường dẫn corpus, SHA-256 bản nén/giải nén, hash ba module nguồn, số ngày/giờ/Jie, phạm vi công khai UTC+7 và ba token việc 嫁娶/开市/出行.",
+   "tags": [
+    "cấu-hình",
+    "manifest",
+    "checksum",
+    "corpus-lịch",
+    "provenance"
+   ],
+   "complexity": "simple",
+   "filePath": "data/date_calendar/manifest.json"
+  },
+  {
+   "id": "config:data/reference/manifest.json",
+   "type": "config",
+   "name": "manifest.json",
+   "summary": "Manifest khóa commit tinix-bazi và open-iching cùng SHA-256 của từng file nguồn được vendored (ganzhi, geju, ngu_hanh, shensha, iching/tuan/xiang, dich_thien_tuy_data...), dùng để kiểm toàn vẹn khi runtime khởi động và khi build dữ liệu giải thích.",
+   "tags": [
+    "cấu-hình",
+    "manifest",
+    "checksum",
+    "nguồn-tham-chiếu",
+    "provenance"
+   ],
+   "complexity": "simple",
+   "filePath": "data/reference/manifest.json"
+  },
+  {
+   "id": "config:schemas/examples/interpretation_context.example.json",
+   "type": "config",
+   "name": "interpretation_context.example.json",
+   "summary": "Ví dụ tổng hợp interpretation-context-v1 (không phải phiên thật): computed_facts Mai Hoa quẻ 17 hào 2 động, kết quả bộ số/điểm/ngưỡng, display_hexagrams, evidence, source_gaps và cảnh báo — fixture cho validate schema.",
+   "tags": [
+    "ví-dụ",
+    "fixture",
+    "contract",
+    "luận-giải",
+    "schema-example"
+   ],
+   "complexity": "moderate",
+   "filePath": "schemas/examples/interpretation_context.example.json"
+  },
+  {
+   "id": "config:schemas/examples/interpretation_response.example.json",
+   "type": "config",
+   "name": "interpretation_response.example.json",
+   "summary": "Ví dụ minh họa interpretation-response-v1 với summary, translations (AI_TRANSLATION gắn evidence_id) và interpretations (AI_INTERPRETATION kèm references) cùng limitations, khớp context_id của ví dụ context.",
+   "tags": [
+    "ví-dụ",
+    "fixture",
+    "contract",
+    "luận-giải",
+    "schema-example"
+   ],
+   "complexity": "simple",
+   "filePath": "schemas/examples/interpretation_response.example.json"
+  },
+  {
+   "id": "file:data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js",
+   "type": "file",
+   "name": "dich_thien_tuy_data.js",
+   "summary": "Bảng hằng STEM_ESSENCE vendored từ tinix-bazi: với mỗi thiên can có câu verse Hán Việt (Địch Thiên Tủy), phần giải chi tiết và luận theo bốn mùa, xuất qua module.exports; chỉ được Node đọc lúc build dữ liệu giải thích, không chạy ở runtime.",
+   "tags": [
+    "dữ-liệu-tham-chiếu",
+    "bát-tự",
+    "vendored",
+    "hằng-số",
+    "thiên-can"
+   ],
+   "complexity": "moderate",
+   "filePath": "data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js",
+   "languageNotes": "Module CommonJS chỉ chứa object literal; được nạp bằng require() trong một lệnh node -e từ script Python."
+  },
+  {
+   "id": "file:docs/research/calendar_sources/nasa-phases1901.html",
+   "type": "file",
+   "name": "nasa-phases1901.html",
+   "summary": "Bản lưu trang NASA “Phases of the Moon 1901–2000” (Fred Espenak, GSFC) làm nguồn đối chiếu ngày Sóc cho nghiên cứu adapter lịch v3 cũ; parser audit chỉ dùng cột New Moon.",
+   "tags": [
+    "nguồn-nghiên-cứu",
+    "thiên-văn",
+    "pha-mặt-trăng",
+    "legacy",
+    "html-snapshot"
+   ],
+   "complexity": "complex",
+   "filePath": "docs/research/calendar_sources/nasa-phases1901.html"
+  },
+  {
+   "id": "file:docs/research/calendar_sources/nasa-phases2001.html",
+   "type": "file",
+   "name": "nasa-phases2001.html",
+   "summary": "Bản lưu trang NASA “Phases of the Moon 2001–2100” (Fred Espenak, GSFC) làm nguồn đối chiếu ngày Sóc cho nghiên cứu adapter lịch v3 cũ; parser audit chỉ dùng cột New Moon.",
+   "tags": [
+    "nguồn-nghiên-cứu",
+    "thiên-văn",
+    "pha-mặt-trăng",
+    "legacy",
+    "html-snapshot"
+   ],
+   "complexity": "complex",
+   "filePath": "docs/research/calendar_sources/nasa-phases2001.html"
+  },
+  {
+   "id": "file:randomyst/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "summary": "Đánh dấu package randomyst (engine MVP) với docstring một dòng; không chứa logic hay re-export.",
+   "tags": [
+    "entry-point",
+    "package-marker",
+    "python"
+   ],
+   "complexity": "simple",
+   "filePath": "randomyst/__init__.py"
+  },
+  {
+   "id": "file:research_tools/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "summary": "Đánh dấu package research_tools, nêu rõ đây là các thí nghiệm logic/phân bố tái lập, không phải engine ứng dụng.",
+   "tags": [
+    "entry-point",
+    "package-marker",
+    "nghiên-cứu"
+   ],
+   "complexity": "simple",
+   "filePath": "research_tools/__init__.py"
+  },
+  {
+   "id": "file:research_tools/legacy_time_engine.py",
+   "type": "file",
+   "name": "legacy_time_engine.py",
+   "summary": "Engine thời gian cũ đã lưu trữ: tính EoT theo NOAA, giờ mặt trời thật (TST) theo kinh độ UTC+7, mốc tiết Jie bằng astronomy-engine và dựng bốn trụ; không dùng trong ứng dụng, chỉ để tái lập báo cáo thiên văn v3.",
+   "tags": [
+    "legacy",
+    "thiên-văn",
+    "tiết-khí",
+    "bát-tự",
+    "nghiên-cứu"
+   ],
+   "complexity": "moderate",
+   "filePath": "research_tools/legacy_time_engine.py",
+   "languageNotes": "jie_for_year dùng functools.lru_cache để tránh tìm lại kinh độ Mặt Trời cho cùng một năm."
+  },
+  {
+   "id": "function:research_tools/legacy_time_engine.py:noaa_eot_minutes",
+   "type": "function",
+   "name": "noaa_eot_minutes",
+   "summary": "Tính phương trình thời gian (phút) theo xấp xỉ năm phân số của NOAA tại thời điểm UTC.",
+   "tags": [
+    "thiên-văn",
+    "eot",
+    "công-thức"
+   ],
+   "complexity": "simple",
+   "filePath": "research_tools/legacy_time_engine.py",
+   "lineRange": [
+    22,
+    31
+   ]
+  },
+  {
+   "id": "function:research_tools/legacy_time_engine.py:longitude_error_from_radius",
+   "type": "function",
+   "name": "longitude_error_from_radius",
+   "summary": "Quy đổi bán kính sai số vị trí (mét) sang sai số kinh độ (độ) theo WGS84 một cách bảo thủ.",
+   "tags": [
+    "địa-lý",
+    "sai-số",
+    "wgs84"
+   ],
+   "complexity": "simple",
+   "filePath": "research_tools/legacy_time_engine.py",
+   "lineRange": [
+    34,
+    44
+   ]
+  },
+  {
+   "id": "function:research_tools/legacy_time_engine.py:solar_clock",
+   "type": "function",
+   "name": "solar_clock",
+   "summary": "Tính giờ mặt trời thật từ giờ dân sự và vị trí, kèm metadata EoT, các thành phần bất định còn thiếu và trạng thái giáp ranh giờ.",
+   "tags": [
+    "tst",
+    "thiên-văn",
+    "biên-giờ"
+   ],
+   "complexity": "moderate",
+   "filePath": "research_tools/legacy_time_engine.py",
+   "lineRange": [
+    47,
+    81
+   ]
+  },
+  {
+   "id": "function:research_tools/legacy_time_engine.py:jie_for_year",
+   "type": "function",
+   "name": "jie_for_year",
+   "summary": "Tìm 12 mốc tiết Jie của một năm bằng astronomy.SearchSunLongitude, trả tuple (thời điểm UTC, chi tháng, tên tiết, góc).",
+   "tags": [
+    "tiết-khí",
+    "thiên-văn",
+    "cache"
+   ],
+   "complexity": "simple",
+   "filePath": "research_tools/legacy_time_engine.py",
+   "lineRange": [
+    84,
+    94
+   ]
+  },
+  {
+   "id": "function:research_tools/legacy_time_engine.py:solar_month",
+   "type": "function",
+   "name": "solar_month",
+   "summary": "Xác định tháng tiết khí và năm Bát Tự (theo Lập Xuân) cho một thời điểm.",
+   "tags": [
+    "tiết-khí",
+    "bát-tự",
+    "tháng"
+   ],
+   "complexity": "simple",
+   "filePath": "research_tools/legacy_time_engine.py",
+   "lineRange": [
+    97,
+    105
+   ]
+  },
+  {
+   "id": "function:research_tools/legacy_time_engine.py:pillars",
+   "type": "function",
+   "name": "pillars",
+   "summary": "Dựng bốn trụ năm/tháng/ngày/giờ (can chi Việt và Hán) từ thời điểm dân sự và TST.",
+   "tags": [
+    "bát-tự",
+    "tứ-trụ",
+    "can-chi"
+   ],
+   "complexity": "simple",
+   "filePath": "research_tools/legacy_time_engine.py",
+   "lineRange": [
+    108,
+    124
+   ]
+  },
+  {
+   "id": "file:research_tools/validate_interpretation_examples.py",
+   "type": "file",
+   "name": "validate_interpretation_examples.py",
+   "summary": "Script phát triển kiểm hai JSON Schema 2020-12 luận giải và ví dụ của chúng bằng jsonschema, kiểm tra chéo evidence_id/reference và công thức Mai Hoa của fixture, đồng thời xác nhận các bản sửa sai bị từ chối.",
+   "tags": [
+    "validation",
+    "contract-test",
+    "json-schema",
+    "luận-giải",
+    "nghiên-cứu"
+   ],
+   "complexity": "moderate",
+   "filePath": "research_tools/validate_interpretation_examples.py"
+  },
+  {
+   "id": "function:research_tools/validate_interpretation_examples.py:main",
+   "type": "function",
+   "name": "main",
+   "summary": "Nạp schema và ví dụ, validate, kiểm tham chiếu và quan hệ chéo (thượng/hạ quái, hào động, quẻ hổ/biến), rồi thử sáu ví dụ vi phạm phải bị từ chối.",
+   "tags": [
+    "validation",
+    "entry-point",
+    "fixture"
+   ],
+   "complexity": "moderate",
+   "filePath": "research_tools/validate_interpretation_examples.py",
+   "lineRange": [
+    20,
+    77
+   ]
+  },
+  {
+   "id": "file:scripts/astronomy_smoke_audit.py",
+   "type": "file",
+   "name": "astronomy_smoke_audit.py",
+   "summary": "Script kiểm tra điểm các mốc Jie 2026 của legacy_time_engine so với bảng NAOJ (UTC+9) và dư số kinh độ Mặt Trời 1949–2031, ghi báo cáo astronomy_runtime_spot_checks.json với trạng thái EXPERIMENTAL.",
+   "tags": [
+    "audit",
+    "thiên-văn",
+    "tiết-khí",
+    "script",
+    "legacy"
+   ],
+   "complexity": "simple",
+   "filePath": "scripts/astronomy_smoke_audit.py"
+  },
+  {
+   "id": "file:scripts/build_explanation_data.py",
+   "type": "file",
+   "name": "build_explanation_data.py",
+   "summary": "Script build corpus hiển thị: kiểm checksum nguồn đã ghim, gọi Node để trích STEM_ESSENCE/STRUCTURE_ANALYSIS thành tinix_vi.json và gắn hash nguyên văn Hán vào bản nháp dịch 64 quẻ/384 hào iching_vi_draft.json.",
+   "tags": [
+    "build-script",
+    "dữ-liệu-giải-thích",
+    "checksum",
+    "provenance",
+    "node-bridge"
+   ],
+   "complexity": "moderate",
+   "filePath": "scripts/build_explanation_data.py",
+   "languageNotes": "Dùng subprocess chạy `node -e` với require() để đọc hằng JS upstream mà không đưa Node thành dependency runtime."
+  },
+  {
+   "id": "function:scripts/build_explanation_data.py:digest",
+   "type": "function",
+   "name": "digest",
+   "summary": "Trả SHA-256 hex của một chuỗi văn bản.",
+   "tags": [
+    "utility",
+    "hash",
+    "sha256"
+   ],
+   "complexity": "simple",
+   "filePath": "scripts/build_explanation_data.py",
+   "lineRange": [
+    16,
+    17
+   ]
+  },
+  {
+   "id": "function:scripts/build_explanation_data.py:build",
+   "type": "function",
+   "name": "build",
+   "summary": "Kiểm hash manifest, trích bảng tinix qua Node, ghi tinix_vi.json, rồi kiểm đủ 64 quẻ × 6 hào và gắn/kiểm source_text_sha256 cho bản nháp dịch.",
+   "tags": [
+    "build",
+    "validation",
+    "provenance"
+   ],
+   "complexity": "moderate",
+   "filePath": "scripts/build_explanation_data.py",
+   "lineRange": [
+    20,
+    62
+   ]
+  },
+  {
+   "id": "file:scripts/run_mvp.sh",
+   "type": "file",
+   "name": "run_mvp.sh",
+   "summary": "Script shell khởi chạy ứng dụng: kiểm .venv rồi exec uvicorn randomyst.api:app tại 127.0.0.1:8765, hướng dẫn tạo venv nếu thiếu.",
+   "tags": [
+    "entry-point",
+    "script",
+    "khởi-chạy",
+    "uvicorn"
+   ],
+   "complexity": "simple",
+   "filePath": "scripts/run_mvp.sh"
+  },
+  {
+   "id": "file:web/app.js",
+   "type": "file",
+   "name": "app.js",
+   "summary": "Script giao diện MVP 1: gửi POST /api/v1/draw với hồ sơ sinh và thời điểm gieo, hiển thị bộ 6 số/điểm/cảnh báo, tải lịch sử và phiên cũ, rồi gọi GET /api/v1/interpretation/{id} để dựng tab giải thích Kinh Dịch/Bát Tự.",
+   "tags": [
+    "ui",
+    "frontend",
+    "api-client",
+    "gieo-số",
+    "luận-giải"
+   ],
+   "complexity": "complex",
+   "filePath": "web/app.js",
+   "languageNotes": "Mã minified nhiều câu lệnh trên một dòng; dùng AbortController/AbortSignal.timeout để hủy request cũ và tránh race."
+  },
+  {
+   "id": "function:web/app.js:render",
+   "type": "function",
+   "name": "render",
+   "summary": "Hiển thị kết quả phiên gieo: bộ số, điểm, ngưỡng, lượt, cảnh báo, dữ kiện thời gian và nguyên văn.",
+   "tags": [
+    "ui",
+    "render",
+    "gieo-số"
+   ],
+   "complexity": "moderate",
+   "filePath": "web/app.js",
+   "lineRange": [
+    9,
+    30
+   ]
+  },
+  {
+   "id": "function:web/app.js:renderExplanation",
+   "type": "function",
+   "name": "renderExplanation",
+   "summary": "Dựng nội dung tab Kinh Dịch và Bát Tự từ response giải thích nguồn (quẻ, quan hệ Thể/Dụng, bản dịch nháp, truyện, dữ kiện Bát Tự).",
+   "tags": [
+    "ui",
+    "render",
+    "luận-giải"
+   ],
+   "complexity": "moderate",
+   "filePath": "web/app.js",
+   "lineRange": [
+    43,
+    72
+   ]
+  },
+  {
+   "id": "function:web/app.js:loadExplanation",
+   "type": "function",
+   "name": "loadExplanation",
+   "summary": "Gọi GET /api/v1/interpretation/{id} với AbortController, xử lý trạng thái tải/lỗi và chuyển dữ liệu cho renderExplanation.",
+   "tags": [
+    "api-client",
+    "async",
+    "luận-giải"
+   ],
+   "complexity": "simple",
+   "filePath": "web/app.js",
+   "lineRange": [
+    73,
+    91
+   ]
+  },
+  {
+   "id": "function:web/app.js:send",
+   "type": "function",
+   "name": "send",
+   "summary": "Gửi POST /api/v1/draw, báo lỗi theo trường, rồi render kết quả, tải giải thích và làm mới lịch sử.",
+   "tags": [
+    "api-client",
+    "async",
+    "gieo-số"
+   ],
+   "complexity": "simple",
+   "filePath": "web/app.js",
+   "lineRange": [
+    103,
+    108
+   ]
+  },
+  {
+   "id": "function:web/app.js:perform",
+   "type": "function",
+   "name": "perform",
+   "summary": "Tạo payload mới (request_id ngẫu nhiên, hồ sơ sinh, thời điểm hiện tại/tùy chọn) hoặc thử lại payload đang chờ, rồi gọi send.",
+   "tags": [
+    "event-handler",
+    "gieo-số",
+    "retry"
+   ],
+   "complexity": "simple",
+   "filePath": "web/app.js",
+   "lineRange": [
+    109,
+    121
+   ]
+  },
+  {
+   "id": "file:web/dates.js",
+   "type": "file",
+   "name": "dates.js",
+   "summary": "Script giao diện tra ngày MVP 2 (IIFE độc lập với phần gieo số): gửi POST /api/v2/auspicious-dates/search, vẽ lưới ô ngày chiều cao cố định với số khung giờ đẹp, mở popup dialog liệt kê khung theo mẫu “Giờ Tuất - Từ 18:00 đến 20:00” và tải lý do chi tiết khi mở phần đánh giá.",
+   "tags": [
+    "ui",
+    "frontend",
+    "api-client",
+    "chọn-ngày",
+    "dialog"
+   ],
+   "complexity": "complex",
+   "filePath": "web/dates.js",
+   "languageNotes": "Popup dùng <dialog>.showModal() với focus trap thủ công bằng Tab, đóng qua nút/Esc (cancel)/bấm backdrop; biến revision và AbortController chặn kết quả request cũ."
+  },
+  {
+   "id": "function:web/dates.js:fetchDates",
+   "type": "function",
+   "name": "fetchDates",
+   "summary": "Gọi POST /api/v2/auspicious-dates/search với payload và signal, ném lỗi gộp thông điệp trường khi response không ok.",
+   "tags": [
+    "api-client",
+    "async",
+    "chọn-ngày"
+   ],
+   "complexity": "simple",
+   "filePath": "web/dates.js",
+   "lineRange": [
+    52,
+    57
+   ]
+  },
+  {
+   "id": "function:web/dates.js:render",
+   "type": "function",
+   "name": "render",
+   "summary": "Hiển thị tóm tắt hồ sơ (Dụng/Hỷ/Kỵ), cảnh báo và lưới ô ngày kèm nhãn hạng, số khung giờ đẹp và nút mở popup.",
+   "tags": [
+    "ui",
+    "render",
+    "chọn-ngày"
+   ],
+   "complexity": "moderate",
+   "filePath": "web/dates.js",
+   "lineRange": [
+    58,
+    81
+   ]
+  },
+  {
+   "id": "function:web/dates.js:openDatePopup",
+   "type": "function",
+   "name": "openDatePopup",
+   "summary": "Mở dialog cho một ngày: tiêu đề, tóm tắt hạng, danh sách recommended_windows theo nhãn giờ chi, thông báo khi không có khung đẹp.",
+   "tags": [
+    "ui",
+    "dialog",
+    "chọn-ngày"
+   ],
+   "complexity": "simple",
+   "filePath": "web/dates.js",
+   "lineRange": [
+    90,
+    105
+   ]
+  },
+  {
+   "id": "function:web/dates.js:detail",
+   "type": "function",
+   "name": "detail",
+   "summary": "Tải lười chi tiết đánh giá của ngày trong popup (include_details), dựng từng khung với hạng, điểm, Hoàng/Hắc Đạo, trực, loại trừ, đánh giá theo chủ thể và Yi/Ji nguồn.",
+   "tags": [
+    "ui",
+    "async",
+    "lazy-load",
+    "chọn-ngày"
+   ],
+   "complexity": "moderate",
+   "filePath": "web/dates.js",
+   "lineRange": [
+    106,
+    132
+   ]
+  },
+  {
+   "id": "file:web/index.html",
+   "type": "file",
+   "name": "index.html",
+   "summary": "Trang HTML một trang của MVP 2: tab Gieo bộ số và Tra ngày theo việc, form hồ sơ sinh/phiên gieo, vùng kết quả và giải thích Kinh Dịch/Bát Tự, form chọn việc với nhãn chủ thể, lưới ngày và dialog date-popup cho khung giờ.",
+   "tags": [
+    "ui",
+    "markup",
+    "entry-point",
+    "frontend",
+    "accessibility"
+   ],
+   "complexity": "moderate",
+   "filePath": "web/index.html",
+   "languageNotes": "Dùng thuộc tính ARIA (role=tab/tabpanel, aria-live, aria-pressed) và phần tử <dialog> gốc cho popup."
+  },
+  {
+   "id": "file:web/style.css",
+   "type": "file",
+   "name": "style.css",
+   "summary": "Stylesheet tông xanh rêu cho giao diện: layout workspace, ô số, tab giải thích, lịch sử, lưới ô ngày chiều cao cố định theo hạng (good/bad/unknown), dialog date-popup có backdrop và khóa cuộn body, cùng media query cho màn hẹp.",
+   "tags": [
+    "styling",
+    "css",
+    "ui",
+    "responsive"
+   ],
+   "complexity": "moderate",
+   "filePath": "web/style.css"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:calendar_adapter/README.md",
+   "target": "file:calendar_adapter/__init__.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:calendar_adapter/README.md",
+   "target": "file:calendar_adapter/vietnamese.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:calendar_adapter/README.md",
+   "target": "file:calendar_adapter/__main__.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:calendar_adapter/README.md",
+   "target": "file:calendar_adapter/audit.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:calendar_adapter/README.md",
+   "target": "file:docs/research/calendar_sources/nasa-phases1901.html",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:calendar_adapter/README.md",
+   "target": "file:docs/research/calendar_sources/nasa-phases2001.html",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:calendar_adapter/README.md",
+   "target": "config:docs/research/calendar_adapter_trial.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/date_calendar/README.md",
+   "target": "resource:data/date_calendar/almanac_2024_2030.json.gz",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/date_calendar/README.md",
+   "target": "config:data/date_calendar/manifest.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/date_calendar/README.md",
+   "target": "file:scripts/build_date_data.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/date_calendar/README.md",
+   "target": "file:randomyst/date_calendar.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/date_calendar/README.md",
+   "target": "file:tests/test_auspicious_dates.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/reference/README.md",
+   "target": "config:data/reference/manifest.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/reference/README.md",
+   "target": "file:randomyst/bazi.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/reference/README.md",
+   "target": "file:data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/reference/README.md",
+   "target": "file:data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/reference/README.md",
+   "target": "file:data/reference/tinix-bazi/geju.js",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:data/reference/README.md",
+   "target": "config:data/interpretation/iching_vi_draft.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "target": "schema:schemas/interpretation_context.schema.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "target": "schema:schemas/interpretation_response.schema.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "target": "file:randomyst/interpretation.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "target": "config:schemas/examples/interpretation_context.example.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "target": "config:schemas/examples/interpretation_response.example.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/prompts/vietnamese_interpretation_v1.md",
+   "target": "config:config/interpretation_disclaimers.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:research_tools/README.md",
+   "target": "file:research_tools/legacy_time_engine.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:research_tools/README.md",
+   "target": "file:research_tools/validate_interpretation_examples.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:research_tools/README.md",
+   "target": "file:research_tools/auspicious_date_audit.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:research_tools/README.md",
+   "target": "file:research_tools/exponential_audit.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:research_tools/README.md",
+   "target": "file:research_tools/audit_activity_categories.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:research_tools/README.md",
+   "target": "document:docs/logic_plan_mvp2.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:research_tools/README.md",
+   "target": "document:MVP2_HANDOFF.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:research_tools/README.md",
+   "target": "config:config/mvp1_rules.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "resource:data/date_calendar/almanac_2024_2030.json.gz",
+   "target": "file:scripts/build_date_data.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "resource:data/date_calendar/almanac_2024_2030.json.gz",
+   "target": "file:randomyst/date_calendar.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:data/date_calendar/manifest.json",
+   "target": "file:randomyst/date_calendar.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:data/date_calendar/manifest.json",
+   "target": "resource:data/date_calendar/almanac_2024_2030.json.gz",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:data/date_calendar/manifest.json",
+   "target": "file:scripts/build_date_data.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:data/reference/manifest.json",
+   "target": "file:randomyst/interpretation.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:data/reference/manifest.json",
+   "target": "file:randomyst/maihoa.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:data/reference/manifest.json",
+   "target": "file:scripts/build_explanation_data.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:data/reference/manifest.json",
+   "target": "file:data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:data/reference/manifest.json",
+   "target": "config:data/reference/open-iching/iching.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:schemas/examples/interpretation_context.example.json",
+   "target": "schema:schemas/interpretation_context.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:schemas/examples/interpretation_response.example.json",
+   "target": "schema:schemas/interpretation_response.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:schemas/examples/interpretation_response.example.json",
+   "target": "config:schemas/examples/interpretation_context.example.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:docs/research/calendar_sources/nasa-phases1901.html",
+   "target": "file:calendar_adapter/audit.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:docs/research/calendar_sources/nasa-phases2001.html",
+   "target": "file:calendar_adapter/audit.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:noaa_eot_minutes",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:noaa_eot_minutes",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:longitude_error_from_radius",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:longitude_error_from_radius",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:solar_clock",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:solar_clock",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:jie_for_year",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:jie_for_year",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:solar_month",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:solar_month",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:pillars",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/legacy_time_engine.py",
+   "target": "function:research_tools/legacy_time_engine.py:pillars",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/legacy_time_engine.py:solar_clock",
+   "target": "function:research_tools/legacy_time_engine.py:noaa_eot_minutes",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/legacy_time_engine.py:solar_clock",
+   "target": "function:research_tools/legacy_time_engine.py:longitude_error_from_radius",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/legacy_time_engine.py:solar_month",
+   "target": "function:research_tools/legacy_time_engine.py:jie_for_year",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:research_tools/legacy_time_engine.py:pillars",
+   "target": "function:research_tools/legacy_time_engine.py:solar_month",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/validate_interpretation_examples.py",
+   "target": "function:research_tools/validate_interpretation_examples.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:research_tools/validate_interpretation_examples.py",
+   "target": "function:research_tools/validate_interpretation_examples.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:research_tools/validate_interpretation_examples.py",
+   "target": "schema:schemas/interpretation_context.schema.json",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:research_tools/validate_interpretation_examples.py",
+   "target": "schema:schemas/interpretation_response.schema.json",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:research_tools/validate_interpretation_examples.py",
+   "target": "config:schemas/examples/interpretation_context.example.json",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:research_tools/validate_interpretation_examples.py",
+   "target": "config:schemas/examples/interpretation_response.example.json",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:scripts/astronomy_smoke_audit.py",
+   "target": "file:research_tools/legacy_time_engine.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/astronomy_smoke_audit.py",
+   "target": "function:research_tools/legacy_time_engine.py:jie_for_year",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/astronomy_smoke_audit.py",
+   "target": "file:randomyst/time_engine.py",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:scripts/build_explanation_data.py",
+   "target": "function:scripts/build_explanation_data.py:digest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/build_explanation_data.py",
+   "target": "function:scripts/build_explanation_data.py:digest",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/build_explanation_data.py",
+   "target": "function:scripts/build_explanation_data.py:build",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/build_explanation_data.py",
+   "target": "function:scripts/build_explanation_data.py:build",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:scripts/build_explanation_data.py:build",
+   "target": "function:scripts/build_explanation_data.py:digest",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/build_explanation_data.py",
+   "target": "file:data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:scripts/build_explanation_data.py",
+   "target": "file:data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:scripts/build_explanation_data.py",
+   "target": "config:data/reference/open-iching/iching.json",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:scripts/build_explanation_data.py",
+   "target": "config:data/interpretation/iching_vi_draft.json",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:scripts/build_explanation_data.py",
+   "target": "config:data/interpretation/tinix_vi.json",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:scripts/run_mvp.sh",
+   "target": "file:randomyst/api.py",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:scripts/run_mvp.sh",
+   "target": "document:requirements.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:web/app.js",
+   "target": "function:web/app.js:render",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:web/app.js",
+   "target": "function:web/app.js:renderExplanation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:web/app.js",
+   "target": "function:web/app.js:loadExplanation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:web/app.js",
+   "target": "function:web/app.js:send",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:web/app.js",
+   "target": "function:web/app.js:perform",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "function:web/app.js:perform",
+   "target": "function:web/app.js:send",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:web/app.js:send",
+   "target": "function:web/app.js:render",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:web/app.js:send",
+   "target": "function:web/app.js:loadExplanation",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:web/app.js:loadExplanation",
+   "target": "function:web/app.js:renderExplanation",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:web/app.js",
+   "target": "file:randomyst/api.py",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:web/dates.js",
+   "target": "function:web/dates.js:fetchDates",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:web/dates.js",
+   "target": "function:web/dates.js:render",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:web/dates.js",
+   "target": "function:web/dates.js:openDatePopup",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:web/dates.js",
+   "target": "function:web/dates.js:detail",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "function:web/dates.js:render",
+   "target": "function:web/dates.js:openDatePopup",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:web/dates.js:detail",
+   "target": "function:web/dates.js:fetchDates",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:web/dates.js",
+   "target": "file:randomyst/api.py",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:web/index.html",
+   "target": "file:web/app.js",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:web/index.html",
+   "target": "file:web/dates.js",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:web/index.html",
+   "target": "file:web/style.css",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  }
+ ]
+}

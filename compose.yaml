@@ -1,0 +1,29 @@
+name: arcana
+
+services:
+  app:
+    image: arcana:${ARCANA_IMAGE_TAG:-local}
+    build:
+      context: .
+      target: runtime
+    restart: unless-stopped
+    init: true
+    env_file:
+      - ${ARCANA_ENV_FILE:-.env.production}
+    ports:
+      - "127.0.0.1:${ARCANA_PORT:-8765}:8765"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 128
+    stop_grace_period: 190s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+

@@ -1,0 +1,120 @@
+{
+  "provider": "astronomy-engine-2.1.19",
+  "independent_reference_source": "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html.en",
+  "reference_year": 2026,
+  "reference_timezone": "UTC+9 JCST",
+  "reference_resolution_seconds": 60,
+  "independent_spot_checks": [
+    {
+      "term": "Tiểu Hàn",
+      "target_longitude": 285,
+      "published_jcst": "2026-01-05T17:23:00+09:00",
+      "calculated_utc": "2026-01-05T08:23:03.114483+00:00",
+      "difference_from_published_minute_seconds": 3.114483,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Lập Xuân",
+      "target_longitude": 315,
+      "published_jcst": "2026-02-04T05:02:00+09:00",
+      "calculated_utc": "2026-02-03T20:01:54.541403+00:00",
+      "difference_from_published_minute_seconds": -5.458597,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Kinh Trập",
+      "target_longitude": 345,
+      "published_jcst": "2026-03-05T22:59:00+09:00",
+      "calculated_utc": "2026-03-05T13:58:43.971600+00:00",
+      "difference_from_published_minute_seconds": -16.0284,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Thanh Minh",
+      "target_longitude": 15,
+      "published_jcst": "2026-04-05T03:40:00+09:00",
+      "calculated_utc": "2026-04-04T18:39:59.161916+00:00",
+      "difference_from_published_minute_seconds": -0.838084,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Lập Hạ",
+      "target_longitude": 45,
+      "published_jcst": "2026-05-05T20:49:00+09:00",
+      "calculated_utc": "2026-05-05T11:49:09.475687+00:00",
+      "difference_from_published_minute_seconds": 9.475687,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Mang Chủng",
+      "target_longitude": 75,
+      "published_jcst": "2026-06-06T00:48:00+09:00",
+      "calculated_utc": "2026-06-05T15:48:59.457159+00:00",
+      "difference_from_published_minute_seconds": 59.457159,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Tiểu Thử",
+      "target_longitude": 105,
+      "published_jcst": "2026-07-07T10:57:00+09:00",
+      "calculated_utc": "2026-07-07T01:57:22.386016+00:00",
+      "difference_from_published_minute_seconds": 22.386016,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Lập Thu",
+      "target_longitude": 135,
+      "published_jcst": "2026-08-07T20:43:00+09:00",
+      "calculated_utc": "2026-08-07T11:42:56.663996+00:00",
+      "difference_from_published_minute_seconds": -3.336004,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Bạch Lộ",
+      "target_longitude": 165,
+      "published_jcst": "2026-09-07T23:41:00+09:00",
+      "calculated_utc": "2026-09-07T14:41:44.296470+00:00",
+      "difference_from_published_minute_seconds": 44.29647,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Hàn Lộ",
+      "target_longitude": 195,
+      "published_jcst": "2026-10-08T15:29:00+09:00",
+      "calculated_utc": "2026-10-08T06:29:58.055584+00:00",
+      "difference_from_published_minute_seconds": 58.055584,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Lập Đông",
+      "target_longitude": 225,
+      "published_jcst": "2026-11-07T18:52:00+09:00",
+      "calculated_utc": "2026-11-07T09:52:33.362863+00:00",
+      "difference_from_published_minute_seconds": 33.362863,
+      "within_60_seconds": true
+    },
+    {
+      "term": "Đại Tuyết",
+      "target_longitude": 255,
+      "published_jcst": "2026-12-07T11:53:00+09:00",
+      "calculated_utc": "2026-12-07T02:52:47.191147+00:00",
+      "difference_from_published_minute_seconds": -12.808853,
+      "within_60_seconds": true
+    }
+  ],
+  "all_12_within_one_minute": true,
+  "internal_root_checks": 996,
+  "internal_root_years": [
+    1949,
+    2031
+  ],
+  "max_internal_longitude_residual_degrees": 1.0851508136511256e-07,
+  "full_range_independent_validation": false,
+  "error_bound_seconds": null,
+  "validation_status": "EXPERIMENTAL",
+  "limitations": [
+    "Root residual is solver consistency, not independent physical accuracy.",
+    "NOAA EoT error bound and lunar month/year/leap labels not certified by this audit."
+  ],
+  "time_engine_sha256": "375253d6374f56becabc82b85b4a36a6adc2443fd1145a0c002a277bd3716800"
+}

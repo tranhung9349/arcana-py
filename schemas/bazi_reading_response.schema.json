@@ -1,0 +1,137 @@
+{
+  "$defs": {
+    "NatalReading": {
+      "additionalProperties": false,
+      "properties": {
+        "topic": {
+          "enum": [
+            "GENERAL",
+            "CAREER",
+            "WEALTH",
+            "STUDY",
+            "RELATIONSHIPS"
+          ],
+          "title": "Topic",
+          "type": "string"
+        },
+        "topic_name": {
+          "title": "Topic Name",
+          "type": "string"
+        },
+        "question": {
+          "title": "Question",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "highlights": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 3,
+          "title": "Highlights",
+          "type": "array"
+        },
+        "sections": {
+          "items": {
+            "$ref": "#/$defs/NatalSection"
+          },
+          "minItems": 5,
+          "title": "Sections",
+          "type": "array"
+        },
+        "narrative_version": {
+          "title": "Narrative Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "topic",
+        "topic_name",
+        "question",
+        "title",
+        "summary",
+        "highlights",
+        "sections",
+        "narrative_version"
+      ],
+      "title": "NatalReading",
+      "type": "object"
+    },
+    "NatalSection": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "finding_refs": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Finding Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "title",
+        "text",
+        "finding_refs"
+      ],
+      "title": "NatalSection",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "reading_id": {
+      "format": "uuid",
+      "title": "Reading Id",
+      "type": "string"
+    },
+    "consultation_id": {
+      "format": "uuid",
+      "title": "Consultation Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "analysis_rules_version": {
+      "title": "Analysis Rules Version",
+      "type": "string"
+    },
+    "chart_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Chart Sha256",
+      "type": "string"
+    },
+    "reading": {
+      "$ref": "#/$defs/NatalReading"
+    }
+  },
+  "required": [
+    "reading_id",
+    "consultation_id",
+    "created_at",
+    "analysis_rules_version",
+    "chart_sha256",
+    "reading"
+  ],
+  "title": "BaziReadingSnapshot",
+  "type": "object"
+}

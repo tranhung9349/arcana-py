@@ -1,0 +1,178 @@
+{
+  "checked_at_utc": "2026-10-25T03:44:06.207Z",
+  "browser": "IAB tab 1",
+  "url": "http://127.0.0.1:8766/",
+  "viewport": {
+    "cardHeights": [
+      160,
+      160,
+      160
+    ],
+    "height": 979,
+    "noCardOverflow": true,
+    "scrollWidth": 686,
+    "width": 686
+  },
+  "group_inventory": [
+    {
+      "activities": [
+        {
+          "name": "Thành hôn",
+          "value": "MARRIAGE"
+        },
+        {
+          "name": "Nạp thái — lễ ngỏ lời",
+          "value": "BETROTHAL_NACAI"
+        },
+        {
+          "name": "Đính ước",
+          "value": "BETROTHAL_COVENANT"
+        }
+      ],
+      "group": "MARRIAGE_FAMILY"
+    },
+    {
+      "activities": [
+        {
+          "name": "Nhập trạch",
+          "value": "HOME_ENTRY"
+        },
+        {
+          "name": "Chuyển nơi cư trú",
+          "value": "RELOCATION"
+        }
+      ],
+      "group": "HOME_RESIDENCE"
+    },
+    {
+      "activities": [
+        {
+          "name": "Động thổ xây dựng",
+          "value": "LAND_BREAKING"
+        },
+        {
+          "name": "Tu tạo, sửa chữa lớn",
+          "value": "RENOVATION"
+        },
+        {
+          "name": "Thượng lương — gác đòn nóc",
+          "value": "ROOF_BEAM"
+        }
+      ],
+      "group": "BUILDING_RENOVATION"
+    },
+    {
+      "activities": [
+        {
+          "name": "Khai trương",
+          "value": "BUSINESS_OPENING"
+        },
+        {
+          "name": "Lập văn khế — ký kết mua bán",
+          "value": "CONTRACT_RITE"
+        },
+        {
+          "name": "Giao dịch tài sản lớn",
+          "value": "TRADE"
+        },
+        {
+          "name": "Mua nhà đất — điền sản",
+          "value": "PROPERTY_ACQUISITION"
+        },
+        {
+          "name": "Nạp tài — thu nhận tài vật",
+          "value": "RECEIVE_ASSETS"
+        }
+      ],
+      "group": "BUSINESS_ASSETS"
+    },
+    {
+      "activities": [
+        {
+          "name": "Nhậm chức, nhận nhiệm vụ",
+          "value": "START_JOB"
+        },
+        {
+          "name": "Nhập học",
+          "value": "START_EDUCATION"
+        }
+      ],
+      "group": "CAREER_EDUCATION"
+    },
+    {
+      "activities": [
+        {
+          "name": "Xuất hành",
+          "value": "TRAVEL"
+        }
+      ],
+      "group": "MAJOR_TRAVEL"
+    },
+    {
+      "activities": [
+        {
+          "name": "Tế lễ gia tiên",
+          "value": "ANCESTOR_RITE"
+        },
+        {
+          "name": "An hương",
+          "value": "INCENSE_INSTALLATION"
+        }
+      ],
+      "group": "FAMILY_RITES"
+    }
+  ],
+  "mode_checks": [
+    {
+      "datesVisible": false,
+      "drawVisible": true,
+      "maihoaVisible": false
+    },
+    {
+      "datesVisible": false,
+      "drawVisible": false,
+      "maihoaVisible": true
+    },
+    {
+      "datesVisible": true,
+      "drawVisible": false,
+      "maihoaVisible": false
+    }
+  ],
+  "checks": {
+    "seven_groups_eighteen_enabled": true,
+    "betrothal_two_subjects_and_hour_inputs_disabled": true,
+    "day_only_submission_success": true,
+    "old_result_role_snapshot": true,
+    "direct_hour_popup_labels": [
+      "Giờ Thìn - Từ 06:00 đến 08:00",
+      "Giờ Tỵ - Từ 08:00 đến 10:00",
+      "Giờ Mùi - Từ 12:00 đến 14:00"
+    ],
+    "day_only_popup_has_no_branch_hour_labels": true,
+    "escape_closes_and_returns_focus": true,
+    "no_horizontal_overflow": true,
+    "all_cards_160px": true,
+    "no_card_overflow": true,
+    "console_errors": []
+  },
+  "fixtures": {
+    "birth1": "1994-10-08T05:00:00+07:00",
+    "birth2": "1990-06-15T09:30:00+07:00",
+    "jie_day": "2026-10-08",
+    "good_home_and_day_only_cases": {
+      "range": [
+        "2026-11-15",
+        "2026-11-17"
+      ],
+      "override_dung_than": "Thổ",
+      "note": "Synthetic fixture; not a real-person recommendation."
+    }
+  },
+  "screenshots": [
+    "mvp2_major_event_groups_ui.jpg",
+    "mvp2_major_events_ui.jpg",
+    "mvp2_major_events_day_only_ui.jpg"
+  ],
+  "scope": "Natural 686x979 viewport; no viewport override, network-error injection or separate 390px simulation."
+}

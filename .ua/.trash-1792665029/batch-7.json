@@ -1,0 +1,405 @@
+{
+ "nodes": [
+  {
+   "id": "document:MVP1_HANDOFF.md",
+   "type": "document",
+   "name": "MVP1_HANDOFF.md",
+   "filePath": "MVP1_HANDOFF.md",
+   "summary": "Bản bàn giao chốt MVP 1 (12/10/2026): tóm tắt baseline gieo sáu số theo rules v4, lịch Bắc Kinh UTC+8 qua lunar-python, luật sampling/giải sát, bằng chứng đã lưu và các lưu ý cần mang sang phiên MVP 2.",
+   "tags": [
+    "tài-liệu",
+    "bàn-giao",
+    "mvp1",
+    "baseline"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:MVP2_HANDOFF.md",
+   "type": "document",
+   "name": "MVP2_HANDOFF.md",
+   "filePath": "MVP2_HANDOFF.md",
+   "summary": "Bản bàn giao MVP 2 mô tả tính năng tra ngày cho cưới hỏi, khai trương, xuất hành; cập nhật popup khung giờ đẹp 15/10, audit 23 category chưa bật, liên kết đặc tả/schema/engine và lệnh kiểm chứng.",
+   "tags": [
+    "tài-liệu",
+    "bàn-giao",
+    "mvp2",
+    "tra-ngày"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:README.md",
+   "type": "document",
+   "name": "README.md",
+   "filePath": "README.md",
+   "summary": "Tài liệu tổng quan dự án: cách cài đặt và chạy app FastAPI local, luồng lịch Trung Quốc UTC+8 rules v4, luật sinh sáu số, danh sách API v1/v2, lịch sử SQLite, lệnh kiểm chứng và phần giải thích Kinh Dịch/Bát Tự.",
+   "tags": [
+    "documentation",
+    "entry-point",
+    "tổng-quan",
+    "api"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "config:dan_gian_config.json",
+   "type": "config",
+   "name": "dan_gian_config.json",
+   "filePath": "dan_gian_config.json",
+   "summary": "Cấu hình số dân gian (mvp1-v1) cho pool 00–45: danh sách số Thần Tài/Ông Địa, số cát tường và số kép kèm nhãn/ý nghĩa, cộng bonus_delta 0.05 mỗi số với điều kiện không khắc Dụng Thần chính.",
+   "tags": [
+    "configuration",
+    "số-dân-gian",
+    "scoring",
+    "mvp1"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:requirements-dev.txt",
+   "type": "document",
+   "name": "requirements-dev.txt",
+   "filePath": "requirements-dev.txt",
+   "summary": "Danh sách dependency cho môi trường dev: kế thừa requirements.txt, thêm httpx và jsonschema cho kiểm thử/kiểm schema, cùng astronomy-engine chỉ để tái lập nghiên cứu thiên văn v3 lưu trữ.",
+   "tags": [
+    "dependency",
+    "build-system",
+    "dev",
+    "kiểm-thử"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:requirements-lock.txt",
+   "type": "document",
+   "name": "requirements-lock.txt",
+   "filePath": "requirements-lock.txt",
+   "summary": "Snapshot ghim phiên bản toàn bộ môi trường dev (FastAPI, Pydantic, Uvicorn, lunar_python 1.4.8, httpx, jsonschema) kèm cả thư viện nghiên cứu lưu trữ như astronomy-engine, geoip2, aiohttp.",
+   "tags": [
+    "dependency",
+    "lockfile",
+    "build-system",
+    "tái-lập"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:requirements.txt",
+   "type": "document",
+   "name": "requirements.txt",
+   "filePath": "requirements.txt",
+   "summary": "Danh sách dependency runtime tối thiểu: fastapi, lunar-python 1.4.8, pydantic và uvicorn được ghim phiên bản.",
+   "tags": [
+    "dependency",
+    "runtime",
+    "build-system",
+    "python"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:MVP1_HANDOFF.md",
+   "target": "file:scripts/run_mvp.sh",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP1_HANDOFF.md",
+   "target": "file:randomyst/time_engine.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP1_HANDOFF.md",
+   "target": "document:docs/logic_plan_mvp1.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP1_HANDOFF.md",
+   "target": "config:config/mvp1_rules.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP1_HANDOFF.md",
+   "target": "document:README.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "file:randomyst/date_calendar.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "file:randomyst/date_rules.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "file:randomyst/date_engine.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "file:randomyst/date_models.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "file:web/dates.js",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "file:scripts/smoke_dates.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "file:research_tools/audit_activity_categories.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "file:scripts/run_mvp.sh",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "document:docs/logic_plan_mvp2.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "config:config/mvp2_date_rules.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "document:data/date_calendar/README.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:MVP2_HANDOFF.md",
+   "target": "document:MVP1_HANDOFF.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:randomyst/api.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:randomyst/time_engine.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:randomyst/interpretation.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:scripts/run_mvp.sh",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:scripts/smoke_mvp.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:scripts/smoke_dates.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:scripts/compare_bazi_source.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:scripts/audit_beijing_calendar.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:scripts/build_explanation_data.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:research_tools/legacy_time_engine.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "file:research_tools/validate_interpretation_examples.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "document:MVP2_HANDOFF.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "document:docs/logic_plan_mvp2.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "document:docs/logic_plan_mvp1.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "config:config/mvp1_rules.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "document:data/date_calendar/README.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "document:requirements.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "document:requirements-dev.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "document:requirements-lock.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:dan_gian_config.json",
+   "target": "file:randomyst/engine.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:dan_gian_config.json",
+   "target": "config:config/mvp1_rules.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:requirements-dev.txt",
+   "target": "document:requirements.txt",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "document:requirements-dev.txt",
+   "target": "file:research_tools/legacy_time_engine.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:requirements-lock.txt",
+   "target": "document:requirements-dev.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:requirements.txt",
+   "target": "file:randomyst/api.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "document:requirements.txt",
+   "target": "file:randomyst/time_engine.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  }
+ ]
+}

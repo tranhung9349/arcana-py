@@ -1,0 +1,726 @@
+{
+  "schema_version": "bazi-consultation-v1",
+  "request_id": "09d08920-c3f3-4fa0-8678-4a64d3ec7c74",
+  "created_at": "2026-10-26T15:35:09.314859Z",
+  "display_name": "Lá số mẫu",
+  "analysis_profile": "bazi_natal_v1",
+  "rules_version": "bazi-natal-2026-10-26-v1",
+  "corpus_version": "bazi-corpus-2026-10-26-v1",
+  "rules_sha256": "ec24edd1b6dbe7a9cdfd6c7803a86b8c4322d2984a18e8f57c19210933fb1005",
+  "calendar_policy": "VN_INSTANT_TO_BEIJING_SECT1",
+  "chart": {
+    "civil_datetime": "1994-10-08T05:00:00+07:00",
+    "beijing_datetime": "1994-10-08T06:00:00+08:00",
+    "provider": "lunar-python-1.4.8",
+    "sect": 1,
+    "day_boundary": "23:00_BEIJING",
+    "pillars": [
+      {
+        "fact_id": "pillar:year",
+        "position": "year",
+        "label": "Năm",
+        "stem": {
+          "fact_id": "stem:year",
+          "index": 0,
+          "name": "Giáp",
+          "zh": "甲",
+          "element": "Mộc",
+          "polarity": "Dương",
+          "ten_god": "DIRECT_RESOURCE",
+          "ten_god_name": "Chính Ấn"
+        },
+        "branch_index": 10,
+        "branch": "Tuất",
+        "branch_zh": "戌",
+        "branch_element": "Thổ",
+        "hidden_stems": [
+          {
+            "fact_id": "hidden:year:0",
+            "index": 4,
+            "name": "Mậu",
+            "zh": "戊",
+            "element": "Thổ",
+            "polarity": "Dương",
+            "ten_god": "HURTING_OFFICER",
+            "ten_god_name": "Thương Quan"
+          },
+          {
+            "fact_id": "hidden:year:1",
+            "index": 7,
+            "name": "Tân",
+            "zh": "辛",
+            "element": "Kim",
+            "polarity": "Âm",
+            "ten_god": "INDIRECT_WEALTH",
+            "ten_god_name": "Thiên Tài"
+          },
+          {
+            "fact_id": "hidden:year:2",
+            "index": 3,
+            "name": "Đinh",
+            "zh": "丁",
+            "element": "Hỏa",
+            "polarity": "Âm",
+            "ten_god": "PEER",
+            "ten_god_name": "Tỷ Kiên"
+          }
+        ]
+      },
+      {
+        "fact_id": "pillar:month",
+        "position": "month",
+        "label": "Tháng",
+        "stem": {
+          "fact_id": "stem:month",
+          "index": 9,
+          "name": "Quý",
+          "zh": "癸",
+          "element": "Thủy",
+          "polarity": "Âm",
+          "ten_god": "SEVEN_KILLINGS",
+          "ten_god_name": "Thất Sát"
+        },
+        "branch_index": 9,
+        "branch": "Dậu",
+        "branch_zh": "酉",
+        "branch_element": "Kim",
+        "hidden_stems": [
+          {
+            "fact_id": "hidden:month:0",
+            "index": 7,
+            "name": "Tân",
+            "zh": "辛",
+            "element": "Kim",
+            "polarity": "Âm",
+            "ten_god": "INDIRECT_WEALTH",
+            "ten_god_name": "Thiên Tài"
+          }
+        ]
+      },
+      {
+        "fact_id": "pillar:day",
+        "position": "day",
+        "label": "Ngày",
+        "stem": {
+          "fact_id": "stem:day",
+          "index": 3,
+          "name": "Đinh",
+          "zh": "丁",
+          "element": "Hỏa",
+          "polarity": "Âm",
+          "ten_god": "DAY_MASTER",
+          "ten_god_name": "Nhật chủ"
+        },
+        "branch_index": 3,
+        "branch": "Mão",
+        "branch_zh": "卯",
+        "branch_element": "Mộc",
+        "hidden_stems": [
+          {
+            "fact_id": "hidden:day:0",
+            "index": 1,
+            "name": "Ất",
+            "zh": "乙",
+            "element": "Mộc",
+            "polarity": "Âm",
+            "ten_god": "INDIRECT_RESOURCE",
+            "ten_god_name": "Thiên Ấn"
+          }
+        ]
+      },
+      {
+        "fact_id": "pillar:hour",
+        "position": "hour",
+        "label": "Giờ",
+        "stem": {
+          "fact_id": "stem:hour",
+          "index": 9,
+          "name": "Quý",
+          "zh": "癸",
+          "element": "Thủy",
+          "polarity": "Âm",
+          "ten_god": "SEVEN_KILLINGS",
+          "ten_god_name": "Thất Sát"
+        },
+        "branch_index": 3,
+        "branch": "Mão",
+        "branch_zh": "卯",
+        "branch_element": "Mộc",
+        "hidden_stems": [
+          {
+            "fact_id": "hidden:hour:0",
+            "index": 1,
+            "name": "Ất",
+            "zh": "乙",
+            "element": "Mộc",
+            "polarity": "Âm",
+            "ten_god": "INDIRECT_RESOURCE",
+            "ten_god_name": "Thiên Ấn"
+          }
+        ]
+      }
+    ],
+    "month": {
+      "fact_id": "facts:season",
+      "branch": "Dậu",
+      "branch_index": 9,
+      "element": "Kim",
+      "jie_name": "Bạch Lộ",
+      "jie_start_beijing": "1994-09-08T04:55:07+08:00",
+      "seasonal_support": false
+    }
+  },
+  "facts": {
+    "roots": [
+      {
+        "fact_id": "root:year:2",
+        "pillar": "year",
+        "stem_ref": "hidden:year:2",
+        "stem": "Đinh",
+        "level": "OTHER_QI"
+      }
+    ],
+    "visible_support_refs": [
+      "stem:year"
+    ],
+    "visible_drain_refs": [
+      "stem:month",
+      "stem:hour"
+    ],
+    "resource_refs": [
+      "stem:year",
+      "hidden:day:0",
+      "hidden:hour:0"
+    ],
+    "relations": [
+      {
+        "fact_id": "relation:0",
+        "kind": "HARM",
+        "name": "Tuất–Dậu",
+        "pillar_refs": [
+          "pillar:year",
+          "pillar:month"
+        ],
+        "tokens": [
+          "Tuất",
+          "Dậu"
+        ],
+        "evidence_id": "text:relations",
+        "transformation_assumed": false
+      },
+      {
+        "fact_id": "relation:1",
+        "kind": "SIX_COMBINATION",
+        "name": "Tuất–Mão",
+        "pillar_refs": [
+          "pillar:year",
+          "pillar:day"
+        ],
+        "tokens": [
+          "Tuất",
+          "Mão"
+        ],
+        "evidence_id": "provider:tables",
+        "transformation_assumed": false
+      },
+      {
+        "fact_id": "relation:2",
+        "kind": "SIX_COMBINATION",
+        "name": "Tuất–Mão",
+        "pillar_refs": [
+          "pillar:year",
+          "pillar:hour"
+        ],
+        "tokens": [
+          "Tuất",
+          "Mão"
+        ],
+        "evidence_id": "provider:tables",
+        "transformation_assumed": false
+      },
+      {
+        "fact_id": "relation:3",
+        "kind": "CLASH",
+        "name": "Dậu–Mão",
+        "pillar_refs": [
+          "pillar:month",
+          "pillar:day"
+        ],
+        "tokens": [
+          "Dậu",
+          "Mão"
+        ],
+        "evidence_id": "provider:tables",
+        "transformation_assumed": false
+      },
+      {
+        "fact_id": "relation:4",
+        "kind": "CLASH",
+        "name": "Dậu–Mão",
+        "pillar_refs": [
+          "pillar:month",
+          "pillar:hour"
+        ],
+        "tokens": [
+          "Dậu",
+          "Mão"
+        ],
+        "evidence_id": "provider:tables",
+        "transformation_assumed": false
+      }
+    ],
+    "distribution": [
+      {
+        "element": "Mộc",
+        "visible_stems": 1,
+        "hidden_occurrences": 2
+      },
+      {
+        "element": "Hỏa",
+        "visible_stems": 1,
+        "hidden_occurrences": 1
+      },
+      {
+        "element": "Thổ",
+        "visible_stems": 0,
+        "hidden_occurrences": 1
+      },
+      {
+        "element": "Kim",
+        "visible_stems": 0,
+        "hidden_occurrences": 2
+      },
+      {
+        "element": "Thủy",
+        "visible_stems": 2,
+        "hidden_occurrences": 0
+      }
+    ]
+  },
+  "assessment": {
+    "strength": "MIXED",
+    "strength_name": "Khí thế có tín hiệu đan xen",
+    "possible_following": false,
+    "structures": [
+      {
+        "name": "Thiên Tài ở nguyệt lệnh",
+        "ten_god": "INDIRECT_WEALTH",
+        "hidden_stem_ref": "hidden:month:0",
+        "exposed_refs": [],
+        "state": "CONDITIONAL"
+      }
+    ],
+    "balance": {
+      "state": "UNRESOLVED",
+      "preferred": [],
+      "supporting": [],
+      "restrain": []
+    },
+    "climate_element": null,
+    "climate_conflict": false
+  },
+  "findings": [
+    {
+      "finding_id": "natal_context",
+      "rule_id": "NATAL_CONTEXT",
+      "title": "Nhật chủ Đinh · Âm Hỏa",
+      "text": "Nhật chủ Đinh (Âm Hỏa) là điểm quy chiếu của lá số. Bạn sinh tháng Dậu, sau tiết Bạch Lộ; bản khí của chi tháng là Tân (Thiên Tài). Các quan hệ được đọc theo Nhật chủ và tháng tiết khí này, không theo tháng âm lịch hoặc ngày đang xem.",
+      "state": "SUPPORTED",
+      "fact_refs": [
+        "stem:day",
+        "pillar:month",
+        "facts:season",
+        "hidden:month:0"
+      ],
+      "evidence_refs": [
+        "provider:tables",
+        "text:month"
+      ]
+    },
+    {
+      "finding_id": "roots",
+      "rule_id": "ROOTS",
+      "title": "Gốc khí và sinh trợ",
+      "text": "Hành Hỏa có gốc ở chi: năm có Đinh trong tàng can. Ngoài Nhật chủ, có 1 can sinh trợ và 2 can thuộc nhóm khắc, tiết hoặc hao. Căn bản khí và căn trong tàng can được ghi riêng; số lần hiện diện không phải điểm mạnh yếu.",
+      "state": "SUPPORTED",
+      "fact_refs": [
+        "stem:day",
+        "root:year:2",
+        "stem:year",
+        "stem:month",
+        "stem:hour",
+        "pillar:year",
+        "pillar:month",
+        "pillar:day",
+        "pillar:hour"
+      ],
+      "evidence_refs": [
+        "provider:tables",
+        "policy:strength"
+      ]
+    },
+    {
+      "finding_id": "strength",
+      "rule_id": "STRENGTH",
+      "title": "Khí thế có tín hiệu đan xen",
+      "text": "Hành tháng Kim không cùng hành và không sinh Hỏa. Các dấu hiệu về mùa sinh, căn khí và can sinh trợ chưa cùng một hướng đủ rõ để chốt vượng hoặc nhược bằng bộ điều kiện hiện tại. Cần đọc thêm các quan hệ phối hợp để hiểu bên nào đang được trợ lực hoặc bị điều tiết.",
+      "state": "CONDITIONAL",
+      "fact_refs": [
+        "stem:day",
+        "facts:season",
+        "root:year:2",
+        "stem:year",
+        "stem:month",
+        "stem:hour"
+      ],
+      "evidence_refs": [
+        "text:strength",
+        "policy:strength"
+      ]
+    },
+    {
+      "finding_id": "structure",
+      "rule_id": "STRUCTURE",
+      "title": "Nguyệt lệnh và ứng viên cách cục",
+      "text": "Thiên Tài ở nguyệt lệnh: chưa thấu ra các can năm, tháng, giờ. Bản khí được xét cùng tàng can có thấu. Đây là các trục cần khảo sát, chưa xác nhận thành cách, phá cách hay hóa cách; không lấy riêng can tháng để chốt tên cách.",
+      "state": "CONDITIONAL",
+      "fact_refs": [
+        "pillar:month",
+        "hidden:month:0",
+        "stem:year",
+        "stem:month",
+        "stem:day",
+        "stem:hour"
+      ],
+      "evidence_refs": [
+        "text:month",
+        "policy:structure"
+      ]
+    },
+    {
+      "finding_id": "balance",
+      "rule_id": "BALANCE",
+      "title": "Hướng phù ức · Dụng, Hỷ, Kỵ",
+      "text": "Chưa chốt một hành Dụng/Hỷ/Kỵ theo phù ức: khí thế đang có các dấu hiệu trái chiều. Hướng phù ức nhằm điều tiết phần sinh trợ và hao lực; nhu cầu hàn noãn được đọc riêng ở phần Điều hậu.",
+      "state": "UNRESOLVED",
+      "fact_refs": [
+        "stem:day",
+        "facts:season",
+        "root:year:2",
+        "stem:year",
+        "stem:month",
+        "stem:hour"
+      ],
+      "evidence_refs": [
+        "text:strength",
+        "policy:balance"
+      ]
+    },
+    {
+      "finding_id": "climate",
+      "rule_id": "CLIMATE",
+      "title": "Hàn noãn và Điều hậu",
+      "text": "Tháng Dậu không thuộc hai nhóm mùa nóng/lạnh mà bộ gợi ý hiện tại xét. Không suy ra rằng lá số đã đủ cân bằng về hàn noãn. Nhận định còn ở mức gợi ý mùa sinh; cần xét toàn cục trước khi chốt dụng Điều hậu.",
+      "state": "CONDITIONAL",
+      "fact_refs": [
+        "facts:season",
+        "facts:distribution",
+        "pillar:year",
+        "pillar:month",
+        "pillar:day",
+        "pillar:hour"
+      ],
+      "evidence_refs": [
+        "text:climate",
+        "policy:balance"
+      ]
+    },
+    {
+      "finding_id": "relations",
+      "rule_id": "RELATIONS",
+      "title": "Những tương tác cần đọc cùng nhau",
+      "text": "Tuất–Dậu tương hại (năm–tháng); Tuất–Mão lục hợp (năm–ngày); Tuất–Mão lục hợp (năm–giờ); Dậu–Mão lục xung (tháng–ngày); Dậu–Mão lục xung (tháng–giờ). Các quan hệ có thể cùng tồn tại; hợp chưa có nghĩa đã hóa, xung/hình/hại chưa đủ để phán một sự kiện xấu.",
+      "state": "SUPPORTED",
+      "fact_refs": [
+        "relation:0",
+        "relation:1",
+        "relation:2",
+        "relation:3",
+        "relation:4"
+      ],
+      "evidence_refs": [
+        "policy:relations",
+        "text:relations",
+        "provider:tables"
+      ]
+    },
+    {
+      "finding_id": "group:SELF",
+      "rule_id": "TEN_GODS",
+      "title": "Nhóm Tỷ Kiếp",
+      "text": "Nhóm Tỷ Kiếp chưa lộ trên can. Trong tàng can có Đinh (Tỷ Kiên) ở chi năm. ",
+      "state": "SUPPORTED",
+      "fact_refs": [
+        "hidden:year:2"
+      ],
+      "evidence_refs": [
+        "provider:tables",
+        "policy:narrative"
+      ]
+    },
+    {
+      "finding_id": "group:OUTPUT",
+      "rule_id": "TEN_GODS",
+      "title": "Nhóm Thực Thương",
+      "text": "Nhóm Thực Thương chưa lộ trên can. Trong tàng can có Mậu (Thương Quan) ở chi năm. ",
+      "state": "SUPPORTED",
+      "fact_refs": [
+        "hidden:year:0"
+      ],
+      "evidence_refs": [
+        "provider:tables",
+        "policy:narrative"
+      ]
+    },
+    {
+      "finding_id": "group:WEALTH",
+      "rule_id": "TEN_GODS",
+      "title": "Nhóm Tài",
+      "text": "Nhóm Tài chưa lộ trên can. Trong tàng can có Tân (Thiên Tài) ở chi năm; Tân (Thiên Tài) ở chi tháng. ",
+      "state": "SUPPORTED",
+      "fact_refs": [
+        "hidden:year:1",
+        "hidden:month:0"
+      ],
+      "evidence_refs": [
+        "provider:tables",
+        "policy:narrative"
+      ]
+    },
+    {
+      "finding_id": "group:OFFICER",
+      "rule_id": "TEN_GODS",
+      "title": "Nhóm Quan Sát",
+      "text": "Nhóm Quan Sát lộ qua Quý (Thất Sát) ở can tháng; Quý (Thất Sát) ở can giờ. Không thấy nhóm này trong tàng can của bốn chi. ",
+      "state": "SUPPORTED",
+      "fact_refs": [
+        "stem:month",
+        "stem:hour"
+      ],
+      "evidence_refs": [
+        "provider:tables",
+        "policy:narrative"
+      ]
+    },
+    {
+      "finding_id": "group:RESOURCE",
+      "rule_id": "TEN_GODS",
+      "title": "Nhóm Ấn",
+      "text": "Nhóm Ấn lộ qua Giáp (Chính Ấn) ở can năm. Trong tàng can có Ất (Thiên Ấn) ở chi ngày; Ất (Thiên Ấn) ở chi giờ. ",
+      "state": "SUPPORTED",
+      "fact_refs": [
+        "stem:year",
+        "hidden:day:0",
+        "hidden:hour:0"
+      ],
+      "evidence_refs": [
+        "provider:tables",
+        "policy:narrative"
+      ]
+    }
+  ],
+  "reading": {
+    "topic": "GENERAL",
+    "topic_name": "Tổng quan",
+    "question": "",
+    "title": "Đinh Hỏa · Tổng quan",
+    "summary": "Nhật chủ Đinh (Âm Hỏa), sinh tháng Dậu. Khí thế có tín hiệu đan xen, với 1 vị trí căn cùng hành và 1 can sinh trợ ngoài Nhật chủ. Phần lấy dụng được giữ mở để tránh ép các tín hiệu khác hướng thành một kết luận.",
+    "highlights": [
+      "strength",
+      "roots",
+      "balance",
+      "relations"
+    ],
+    "sections": [
+      {
+        "title": "Nhật chủ Đinh · Âm Hỏa",
+        "text": "Nhật chủ Đinh (Âm Hỏa) là điểm quy chiếu của lá số. Bạn sinh tháng Dậu, sau tiết Bạch Lộ; bản khí của chi tháng là Tân (Thiên Tài). Các quan hệ được đọc theo Nhật chủ và tháng tiết khí này, không theo tháng âm lịch hoặc ngày đang xem.",
+        "finding_refs": [
+          "natal_context"
+        ]
+      },
+      {
+        "title": "Gốc khí và sinh trợ",
+        "text": "Hành Hỏa có gốc ở chi: năm có Đinh trong tàng can. Ngoài Nhật chủ, có 1 can sinh trợ và 2 can thuộc nhóm khắc, tiết hoặc hao. Căn bản khí và căn trong tàng can được ghi riêng; số lần hiện diện không phải điểm mạnh yếu.",
+        "finding_refs": [
+          "roots"
+        ]
+      },
+      {
+        "title": "Khí thế có tín hiệu đan xen",
+        "text": "Hành tháng Kim không cùng hành và không sinh Hỏa. Các dấu hiệu về mùa sinh, căn khí và can sinh trợ chưa cùng một hướng đủ rõ để chốt vượng hoặc nhược bằng bộ điều kiện hiện tại. Cần đọc thêm các quan hệ phối hợp để hiểu bên nào đang được trợ lực hoặc bị điều tiết.",
+        "finding_refs": [
+          "strength"
+        ]
+      },
+      {
+        "title": "Thập Thần đang lộ ra",
+        "text": "Năm: Giáp là Chính Ấn; tháng: Quý là Thất Sát; giờ: Quý là Thất Sát. Đây là ba vai trò đang lộ trên can. Những vai trò còn lại cần xem trong tàng can và các quan hệ phối hợp; vắng trên can chưa có nghĩa vắng khỏi lá số.",
+        "finding_refs": [
+          "group:OFFICER",
+          "group:RESOURCE"
+        ]
+      },
+      {
+        "title": "Nguyệt lệnh và ứng viên cách cục",
+        "text": "Thiên Tài ở nguyệt lệnh: chưa thấu ra các can năm, tháng, giờ. Bản khí được xét cùng tàng can có thấu. Đây là các trục cần khảo sát, chưa xác nhận thành cách, phá cách hay hóa cách; không lấy riêng can tháng để chốt tên cách.",
+        "finding_refs": [
+          "structure"
+        ]
+      },
+      {
+        "title": "Hướng phù ức · Dụng, Hỷ, Kỵ",
+        "text": "Chưa chốt một hành Dụng/Hỷ/Kỵ theo phù ức: khí thế đang có các dấu hiệu trái chiều. Hướng phù ức nhằm điều tiết phần sinh trợ và hao lực; nhu cầu hàn noãn được đọc riêng ở phần Điều hậu.",
+        "finding_refs": [
+          "balance"
+        ]
+      },
+      {
+        "title": "Hàn noãn và Điều hậu",
+        "text": "Tháng Dậu không thuộc hai nhóm mùa nóng/lạnh mà bộ gợi ý hiện tại xét. Không suy ra rằng lá số đã đủ cân bằng về hàn noãn. Nhận định còn ở mức gợi ý mùa sinh; cần xét toàn cục trước khi chốt dụng Điều hậu.",
+        "finding_refs": [
+          "climate"
+        ]
+      },
+      {
+        "title": "Những tương tác cần đọc cùng nhau",
+        "text": "Tuất–Dậu tương hại (năm–tháng); Tuất–Mão lục hợp (năm–ngày); Tuất–Mão lục hợp (năm–giờ); Dậu–Mão lục xung (tháng–ngày); Dậu–Mão lục xung (tháng–giờ). Các quan hệ có thể cùng tồn tại; hợp chưa có nghĩa đã hóa, xung/hình/hại chưa đủ để phán một sự kiện xấu.",
+        "finding_refs": [
+          "relations"
+        ]
+      }
+    ],
+    "narrative_version": "bazi-narrative-2026-10-26-v1"
+  },
+  "evidence": [
+    {
+      "evidence_id": "text:strength",
+      "kind": "PRIMARY_TEXT",
+      "title": "Địch Thiên Tủy · Suy vượng",
+      "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+      "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6"
+    },
+    {
+      "evidence_id": "text:month",
+      "kind": "PRIMARY_TEXT",
+      "title": "Địch Thiên Tủy · Nguyệt lệnh",
+      "text": "月令提綱，譬之宅也，人元用事之神，宅之向也，不可以不卜。",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=844366",
+      "sha256": "0529be4cdaede0b047426f5651add5f5800a970fd6e915cdf01cea70d05fa224"
+    },
+    {
+      "evidence_id": "text:climate",
+      "kind": "PRIMARY_TEXT",
+      "title": "Địch Thiên Tủy · Hàn noãn",
+      "text": "天道有寒暖，發育萬物，人道得之，不可過也。",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=844365",
+      "sha256": "32b1264d49a00be96b7f6c4c76eaa7dba20af24f7d60c04089ef45bd089154a3"
+    },
+    {
+      "evidence_id": "text:relations",
+      "kind": "PRIMARY_TEXT",
+      "title": "Tam Mệnh Thông Hội · Hợp, hại, hình và xung",
+      "text": "凡见刑不可便以凶论",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=2292392",
+      "sha256": "8a5c0bfee3b3b8e2e2a6f354891067acdc72a977fc1ea366fe31b55ff3e02b94"
+    },
+    {
+      "evidence_id": "provider:tables",
+      "kind": "PROVIDER",
+      "title": "Bảng tra 6tail · bản 1.4.8",
+      "text": "Tứ Trụ sect 1; tàng can, Âm Dương, ngũ hành, 100 cặp Thập Thần; bảng ngũ hợp Can, lục hợp Chi và lục xung. Mã cài được kiểm hash lúc khởi tạo.",
+      "url": "https://github.com/6tail/lunar-python",
+      "sha256": "7a8c36fb506874b38c1c90d696ce58f98325618ee0fd2906d7792a4e2b1c2021"
+    },
+    {
+      "evidence_id": "policy:strength",
+      "kind": "PRODUCT_POLICY",
+      "title": "Quy ước xét khí thế natal v1",
+      "text": "Thiên vượng khi cùng có trợ lực hành tháng, căn bản khí và ít nhất một can sinh trợ ngoài Nhật chủ. Thiên nhược khi không có trợ lực hành tháng, không có căn cùng hành, không có can sinh trợ lộ nhưng có Ấn trong tàng can. Các trường hợp còn lại giữ MIXED. Không có căn, Ấn và can trợ thì giữ nghi vấn thuận thế; không tự chốt ngoại cách. Đây là bộ điều kiện định tính của sản phẩm, chưa phải toàn bộ phép luận cổ thư.",
+      "url": null,
+      "sha256": "26e7e32c754ca629d38da33c973c63760624c112af7f88c6db144a9ee396271c"
+    },
+    {
+      "evidence_id": "policy:structure",
+      "kind": "PRODUCT_POLICY",
+      "title": "Quy ước nguyệt lệnh và ứng viên cách cục",
+      "text": "Xét bản khí chi tháng cùng tàng can thấu đúng Can ở năm/tháng/giờ. Kiến Lộc và Dương Nhận chỉ nhận diện theo bảng điều kiện. Mọi tên cách giữ ở mức ứng viên; chưa xét đủ thành bại, cứu ứng, tư lệnh theo số ngày trong tiết hoặc tòng hóa.",
+      "url": null,
+      "sha256": "6c13fe33ddb233c1896c9c81b9394f672e932fee6ab09ce4f4f9319181aad53c"
+    },
+    {
+      "evidence_id": "policy:balance",
+      "kind": "PRODUCT_POLICY",
+      "title": "Quy ước phù ức và Điều hậu",
+      "text": "Thiên vượng: khảo sát sinh xuất trước, Tài theo sau; thiên nhược: khảo sát Ấn và đồng hành. MIXED hoặc nghi ngoại cách không chốt Dụng/Hỷ/Kỵ. Gợi ý mùa lạnh Hỏa/mùa nóng Thủy tách riêng, không coi là bảng Điều hậu 120 trường hợp và không ghi đè hướng phù ức.",
+      "url": null,
+      "sha256": "12efbd744805402ad0def2c1c89ebe3ddc9d7ac1a41c181a8d1d33f29605f2fb"
+    },
+    {
+      "evidence_id": "policy:relations",
+      "kind": "PRODUCT_POLICY",
+      "title": "Phạm vi nhận diện quan hệ",
+      "text": "Mỗi cặp vị trí chỉ ghi một lần cho từng loại quan hệ. Tam hợp/tam hội cần đủ ba chi khác nhau; ghi cả các vị trí chi lặp, không suy hóa hành. Nhóm hình Dần–Tỵ–Thân và Sửu–Tuất–Mùi chỉ ghi khi đủ bộ; cặp Tý–Mão và tự hình Thìn/Ngọ/Dậu/Hợi ghi riêng. Chưa xét bán hình, phá và chuỗi cứu giải toàn cục.",
+      "url": null,
+      "sha256": "efdaa32ef940c4f13813bfd33c1b1b058c2c8866183613b9c01d5fca29710070"
+    },
+    {
+      "evidence_id": "policy:narrative",
+      "kind": "PRODUCT_POLICY",
+      "title": "Phạm vi diễn giải theo chủ đề",
+      "text": "Thập Thần được đọc tương đối với Nhật chủ. Chủ đề sắp xếp dữ kiện và các lực phối hợp, không thay lá số. Câu hỏi tự do được lưu làm ngữ cảnh; chưa phân tích ngữ nghĩa để trả lời sự kiện hoặc thời điểm. Không dự đoán bệnh, tử, mức giàu có hoặc hôn kỳ từ một nhãn đơn.",
+      "url": null,
+      "sha256": "96cd9579c5c5512ea31511262e3e6e139bf74f4e67ae6689a660b869c78da2fd"
+    }
+  ],
+  "coverage": [
+    {
+      "feature": "Tứ Trụ, tàng can và Thập Thần",
+      "status": "SUPPORTED",
+      "detail": "Theo provider 1.4.8 đã ghim, giờ Việt Nam chuyển cùng thời điểm sang Bắc Kinh, sect 1."
+    },
+    {
+      "feature": "Thông căn, can lộ và quan hệ Can Chi",
+      "status": "SUPPORTED",
+      "detail": "Nhận diện theo bảng; chưa kết luận hợp hóa hay dùng một quan hệ để phán cát hung toàn cục."
+    },
+    {
+      "feature": "Vượng nhược và hướng phù ức",
+      "status": "PARTIAL",
+      "detail": "Bộ điều kiện định tính; giữ kết luận mở khi tín hiệu khác hướng hoặc nghi ngoại cách."
+    },
+    {
+      "feature": "Cách cục và Điều hậu",
+      "status": "PARTIAL",
+      "detail": "Ứng viên nguyệt lệnh và gợi ý mùa; chưa đủ thành bại/cứu ứng, tòng hóa và bảng Điều hậu 120 trường hợp."
+    },
+    {
+      "feature": "Phá, bán hình và cứu giải toàn cục",
+      "status": "DEFERRED",
+      "detail": "Chưa có quy tắc đã đối chiếu đủ; không coi phần chưa xét là không có."
+    },
+    {
+      "feature": "Đại vận, Lưu niên và hợp hai lá số",
+      "status": "DEFERRED",
+      "detail": "Bản đầu đọc mệnh cục sinh; chưa xác định thời điểm sự kiện."
+    },
+    {
+      "feature": "Không rõ giờ sinh và nhận diện ý hỏi",
+      "status": "DEFERRED",
+      "detail": "Cần giờ sinh xác định. Chủ đề chọn trực tiếp; câu hỏi được giữ nguyên làm ngữ cảnh."
+    }
+  ],
+  "model_called": false,
+  "review_status": "RULES_TESTED_NOT_EXPERT_REVIEWED"
+}

@@ -1,0 +1,112 @@
+{
+  "rules_version": "mvp1-logic-2026-10-26-v6",
+  "confirmation_date": "2026-10-26",
+  "calendar": {
+    "implementation": "randomyst/time_engine.py",
+    "algorithm_id": "6tail-chinese-utc8-v1",
+    "provider": "lunar-python",
+    "provider_version": "1.4.8",
+    "source_url": "https://github.com/6tail/lunar-python",
+    "calendar_system": "CHINESE_LUNAR",
+    "input_offset_minutes": 420,
+    "offset_minutes": 480,
+    "conversion": "Same aware instant converted to fixed UTC+8 before passing fields to Solar.fromYmdHms",
+    "effective_date": "date(Beijing civil datetime); no added hour/day",
+    "maihoa_day_boundary": "00:00_BEIJING",
+    "bazi_day_boundary": "23:00_BEIJING",
+    "bazi_sect": 1,
+    "bazi_year_month": "Exact library Jie instant in Beijing time",
+    "true_solar_time_applied": false,
+    "location_affects_calculation": false,
+    "validation_status": "INTEGRATION_TESTED"
+  },
+  "maihoa": {
+    "core_version": "maihoa-ymdh-v1",
+    "status": "LOCKED_BY_USER",
+    "year": "Chinese lunar-year branch at midnight lunar New Year, Ty=1..Hoi=12",
+    "month": "Chinese lunar month 1..12; abs(getMonth()) retains leap month number",
+    "day": "Chinese civil lunar day 1..30; midnight Beijing boundary",
+    "hour": "Beijing civil hour branch, Ty=1..Hoi=12",
+    "upper": "((Y + M + D - 1) % 8) + 1",
+    "lower": "((Y + M + D + H - 1) % 8) + 1",
+    "moving_line": "((Y + M + D + H - 1) % 6) + 1",
+    "extra_minute_second_or_draw_terms": false,
+    "line_order": "bottom_to_top; lower_trigram_then_upper_trigram",
+    "mutual_and_changed": {
+      "schema_prepared": true,
+      "affects_generation": false,
+      "affects_evaluation": false,
+      "display_on_demand": true
+    }
+  },
+  "numbers": {
+    "pool_min": 0,
+    "pool_max": 99,
+    "set_size": 6,
+    "without_replacement": true,
+    "reject_single_parity": true,
+    "reject_six_of_one_element": true
+  },
+  "remediation": {
+    "only_dai_hung": true,
+    "ban_controlling_primary_from_attempt": 1,
+    "target_weight_multiplier": 3,
+    "target_quota_min": 3,
+    "target_quota_max": 4
+  },
+  "evaluation": {
+    "yin_yang_weight": 0.4,
+    "element_weight": 0.6,
+    "thresholds": {
+      "DAI_CAT": 80,
+      "NORMAL": 80,
+      "DAI_HUNG": 85
+    },
+    "cap_frozen_before_attempt_one": true,
+    "auxiliary_bonuses_affect_score": false
+  },
+  "exponential_weights": {
+    "status": "CONFIRMED_BY_USER",
+    "formula": "exp(beta * (S_i - max_allowed_S) / 100)",
+    "beta_meaning": "Higher beta concentrates more strongly on high S_i",
+    "trial_betas": [
+      0,
+      0.25,
+      0.5,
+      1,
+      2,
+      4,
+      8
+    ],
+    "selected_beta": 2,
+    "trial_sampling_law": "P(set | hard constraints) proportional to product of number weights",
+    "production_sampling_law_confirmed": true
+  },
+  "vietnamese_interpretation": {
+    "status": "SCHEMA_AND_LABEL_POLICY_CONFIRMED",
+    "original_text_label": "SOURCE_ORIGINAL",
+    "translation_label": "AI_TRANSLATION",
+    "interpretation_label": "AI_INTERPRETATION",
+    "missing_source_policy": "Report missing; never fabricate source text",
+    "disclaimers_inserted_by_application": true
+  },
+  "generation": {
+    "max_attempts": 5,
+    "retry": "Product-weight sampling conditioned on valid 3-3 configurations meeting the frozen mode threshold",
+    "retry_hung_bans_controlling_the": true,
+    "remedy_tie_break": [
+      "best_raw",
+      "fewest_conflicts_at_best",
+      "highest_single_target_score",
+      "fixed_element_order"
+    ],
+    "best_set_tie_break": "Keep earliest attempt",
+    "numbers_display": "ascending two-digit strings",
+    "idempotent_request_id": true
+  },
+  "casting_time": {
+    "current": "Client button timestamp UTC+7; convert same instant to UTC+8, preserve and compare to server receipt",
+    "custom": "validated client custom timestamp; preserve",
+    "clock_skew_warning_seconds": 30
+  }
+}

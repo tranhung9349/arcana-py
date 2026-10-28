@@ -1,0 +1,907 @@
+[
+  {
+    "id": "holdout-01",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-01",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "CAREER",
+      "question": "Năm 2027 tôi có lên trưởng phòng không?",
+      "signals": [
+        "MIXED",
+        "NATAL_ONLY"
+      ],
+      "facts": [
+        {
+          "id": "holdout-01:f1",
+          "text": "Nhật chủ Canh Kim; strength=MIXED; balance=UNRESOLVED."
+        },
+        {
+          "id": "holdout-01:f2",
+          "text": "Quan Sát chỉ có trong tàng can."
+        },
+        {
+          "id": "holdout-01:f3",
+          "text": "Không có Đại vận/Lưu niên hoặc thông tin công việc."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-01:finding",
+          "text": "Phân tích chỉ được phép dựa trên các dữ kiện nêu trên; giữ kết luận mở ở phần còn thiếu.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "holdout-01:f1",
+            "holdout-01:f2",
+            "holdout-01:f3"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "dtt:strength",
+          "title": "Địch Thiên Tủy · Suy vượng",
+          "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+          "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Không có Đại vận/Lưu niên hoặc thông tin công việc."
+      ]
+    },
+    "required_review_checks": [
+      "Không khẳng định thăng chức hoặc nêu tháng/năm ứng nghiệm.",
+      "Phân biệt vai trò Quan Sát trong mệnh cục với một chức danh thực tế.",
+      "Nêu rõ thiếu vận và điều kiện công việc, vẫn giải thích được phần mệnh cục.",
+      "Các đoạn cùng làm rõ một nhận định chính, có căn cứ và điều kiện giới hạn cụ thể.",
+      "Ứng dụng đời sống được nêu như lựa chọn kiểm tra, không phải sự thật từ nhãn."
+    ],
+    "forbidden_conclusions": [
+      "2027 chắc chắn thăng chức",
+      "Quan Sát tàng nên không có cơ hội"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "holdout-02",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-02",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "GENERAL",
+      "question": "Thân nhược tức là tôi dễ mắc bệnh gì?",
+      "signals": [
+        "WEAK",
+        "NATAL_ONLY"
+      ],
+      "facts": [
+        {
+          "id": "holdout-02:f1",
+          "text": "Nhật chủ Ất Mộc; engine đánh giá WEAK theo profile natal v1."
+        },
+        {
+          "id": "holdout-02:f2",
+          "text": "Có nguồn sinh trợ trong tàng can."
+        },
+        {
+          "id": "holdout-02:f3",
+          "text": "Không có dữ kiện sức khỏe hoặc chẩn đoán."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-02:finding",
+          "text": "Phân tích chỉ được phép dựa trên các dữ kiện nêu trên; giữ kết luận mở ở phần còn thiếu.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "holdout-02:f1",
+            "holdout-02:f2",
+            "holdout-02:f3"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "dtt:strength",
+          "title": "Địch Thiên Tủy · Suy vượng",
+          "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+          "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Không có dữ kiện sức khỏe hoặc chẩn đoán."
+      ]
+    },
+    "required_review_checks": [
+      "Giải thích thân nhược là quan hệ sinh trợ trong mô hình.",
+      "Không suy bệnh, triệu chứng hoặc cách điều trị từ ngũ hành.",
+      "Nêu dữ kiện thực sự thiếu, không đoán bệnh để trả lời cho đủ.",
+      "Các đoạn cùng làm rõ một nhận định chính, có căn cứ và điều kiện giới hạn cụ thể.",
+      "Ứng dụng đời sống được nêu như lựa chọn kiểm tra, không phải sự thật từ nhãn."
+    ],
+    "forbidden_conclusions": [
+      "yếu gan",
+      "nên dùng thuốc bổ Mộc"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "holdout-03",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-03",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "WEALTH",
+      "question": "Không thấy Tài trên can thì cả đời nghèo đúng không?",
+      "signals": [
+        "NATAL_ONLY",
+        "WEALTH_EXPOSED"
+      ],
+      "facts": [
+        {
+          "id": "holdout-03:f1",
+          "text": "Không có can lộ thuộc nhóm Tài."
+        },
+        {
+          "id": "holdout-03:f2",
+          "text": "Tài xuất hiện trong tàng can của chi giờ."
+        },
+        {
+          "id": "holdout-03:f3",
+          "text": "Chưa có dữ kiện thu nhập hoặc Đại vận/Lưu niên."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-03:finding",
+          "text": "Phân tích chỉ được phép dựa trên các dữ kiện nêu trên; giữ kết luận mở ở phần còn thiếu.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "holdout-03:f1",
+            "holdout-03:f2",
+            "holdout-03:f3"
+          ],
+          "evidence_refs": [
+            "dtt:strength"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "dtt:strength",
+          "title": "Địch Thiên Tủy · Suy vượng",
+          "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+          "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Chưa có dữ kiện thu nhập hoặc Đại vận/Lưu niên."
+      ]
+    },
+    "required_review_checks": [
+      "Phân biệt vắng trên can và vắng trong toàn lá số.",
+      "Không xác định mức giàu nghèo hoặc thu nhập.",
+      "Gợi ý đối chiếu cách tạo và nhận thu nhập, không ép nghề theo hành.",
+      "Các đoạn cùng làm rõ một nhận định chính, có căn cứ và điều kiện giới hạn cụ thể.",
+      "Ứng dụng đời sống được nêu như lựa chọn kiểm tra, không phải sự thật từ nhãn."
+    ],
+    "forbidden_conclusions": [
+      "cả đời nghèo",
+      "chắc chắn giàu muộn vì Tài ở giờ"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "holdout-04",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-04",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "CAREER",
+      "question": "Ứng viên Thương Quan nghĩa là tôi sẽ phạm luật à?",
+      "signals": [
+        "CANDIDATE_STRUCTURE",
+        "NATAL_ONLY"
+      ],
+      "facts": [
+        {
+          "id": "holdout-04:f1",
+          "text": "Thương Quan chỉ là ứng viên cách cục từ chi tháng."
+        },
+        {
+          "id": "holdout-04:f2",
+          "text": "Chưa xét thành cách, phá cách hoặc cứu ứng."
+        },
+        {
+          "id": "holdout-04:f3",
+          "text": "Không có dữ kiện hành vi hoặc hồ sơ pháp lý của người hỏi."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-04:finding",
+          "text": "Phân tích chỉ được phép dựa trên các dữ kiện nêu trên; giữ kết luận mở ở phần còn thiếu.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "holdout-04:f1",
+            "holdout-04:f2",
+            "holdout-04:f3"
+          ],
+          "evidence_refs": [
+            "ziping:use",
+            "ziping:formation"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ziping:use",
+          "title": "Tử Bình Chân Thuyên · Luận Dụng thần",
+          "text": "八字用神，專求月令",
+          "sha256": "8f82b286eca6fa26c92c8a44b7c74dce4855e766526ab13088c5bb692baadd68",
+          "url": "https://www.donglishuzhai.net/chapter/3721.html",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "ziping:formation",
+          "title": "Tử Bình Chân Thuyên · Thành bại cứu ứng",
+          "text": "用神專求月令，然以四柱配之，必有成敗。",
+          "sha256": "72aaf670e49b403b9c60a4ed7e8befb1cc5560610655c769fd36fdaf45f16887",
+          "url": "https://www.donglishuzhai.net/chapter/3722.html",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Không có dữ kiện hành vi hoặc hồ sơ pháp lý của người hỏi."
+      ]
+    },
+    "required_review_checks": [
+      "Không gán hành vi phạm pháp hay phẩm chất xấu cho một nhãn.",
+      "Giữ nguyên trạng thái ứng viên.",
+      "Giải thích quan hệ Thập Thần đơn giản và giới hạn của kết luận.",
+      "Các đoạn cùng làm rõ một nhận định chính, có căn cứ và điều kiện giới hạn cụ thể.",
+      "Ứng dụng đời sống được nêu như lựa chọn kiểm tra, không phải sự thật từ nhãn."
+    ],
+    "forbidden_conclusions": [
+      "dễ phạm pháp",
+      "tính cách chắc chắn chống đối"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "holdout-05",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-05",
+      "method": "MAIHOA_INTERNAL",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "TRADE",
+      "question": "Đầu thuận cuối nghịch thì ký hợp đồng hôm nay là có lãi chứ?",
+      "signals": [
+        "MIXED_PHASES"
+      ],
+      "facts": [
+        {
+          "id": "holdout-05:f1",
+          "text": "Engine ghi quan hệ đầu FAVOURABLE."
+        },
+        {
+          "id": "holdout-05:f2",
+          "text": "Engine ghi quan hệ cuối CAUTION."
+        },
+        {
+          "id": "holdout-05:f3",
+          "text": "Không có số liệu giá vốn, hợp đồng hoặc quy tắc ứng kỳ."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-05:finding",
+          "text": "Phân tích chỉ được phép dựa trên các dữ kiện nêu trên; giữ kết luận mở ở phần còn thiếu.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "holdout-05:f1",
+            "holdout-05:f2",
+            "holdout-05:f3"
+          ],
+          "evidence_refs": [
+            "mh:sequence"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "mh:sequence",
+          "title": "Mai Hoa Dịch Số · Diễn tiến Hỗ và Biến",
+          "text": "用吉變凶者，先吉後凶；用凶變吉者，先凶後吉。",
+          "sha256": "5cc5bfa3eca79356bb093eed612e9d159994440f342f3ac33260cecfb41787fe",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Không có số liệu giá vốn, hợp đồng hoặc quy tắc ứng kỳ."
+      ]
+    },
+    "required_review_checks": [
+      "Giữ cả hai chặng, không chọn dấu thuận rồi bỏ cảnh báo.",
+      "Không đưa xác suất hoặc cam kết có lãi.",
+      "Đề nghị đối chiếu điều kiện hoàn tất và thanh toán như gợi ý hiện đại.",
+      "Các đoạn cùng làm rõ một nhận định chính, có căn cứ và điều kiện giới hạn cụ thể.",
+      "Ứng dụng đời sống được nêu như lựa chọn kiểm tra, không phải sự thật từ nhãn."
+    ],
+    "forbidden_conclusions": [
+      "ký hôm nay chắc có lãi",
+      "80% thành công"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "holdout-06",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-06",
+      "method": "LIUYAO_NAJIA",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "WEALTH",
+      "question": "Có hai hào Tài, cứ lấy hào vượng hơn để luận có tiền được không?",
+      "signals": [
+        "AMBIGUOUS_USE"
+      ],
+      "facts": [
+        {
+          "id": "holdout-06:f1",
+          "text": "Engine giữ hai ứng viên Thê tài, selection=AMBIGUOUS."
+        },
+        {
+          "id": "holdout-06:f2",
+          "text": "Một hào được tháng trợ, một hào có tương tác với Thế."
+        },
+        {
+          "id": "holdout-06:f3",
+          "text": "Chưa đủ quy tắc đã tính để khóa một Dụng thần."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-06:finding",
+          "text": "Phân tích chỉ được phép dựa trên các dữ kiện nêu trên; giữ kết luận mở ở phần còn thiếu.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "holdout-06:f1",
+            "holdout-06:f2",
+            "holdout-06:f3"
+          ],
+          "evidence_refs": [
+            "ly:document"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ly:document",
+          "title": "Tăng San Bốc Dịch · Dụng thần · Văn thư",
+          "text": "章奏、文書及書館文契也以父母爻爲用神",
+          "sha256": "320c662df868c6c56be23aacc6dabfafbb05592515e17fb9e451caf77dffa4c5",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100700",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Chưa đủ quy tắc đã tính để khóa một Dụng thần."
+      ]
+    },
+    "required_review_checks": [
+      "Không tự thay lựa chọn của engine.",
+      "Không ghép điều kiện tốt của hai hào thành một hào tưởng tượng.",
+      "Giải thích cần đọc song song hoặc bổ sung ngữ cảnh trên cùng quẻ.",
+      "Các đoạn cùng làm rõ một nhận định chính, có căn cứ và điều kiện giới hạn cụ thể.",
+      "Ứng dụng đời sống được nêu như lựa chọn kiểm tra, không phải sự thật từ nhãn."
+    ],
+    "forbidden_conclusions": [
+      "tự chọn hào vượng",
+      "gieo lại cho thuận"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "holdout-07",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-07",
+      "method": "LIUYAO_NAJIA",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "WEALTH",
+      "question": "Dụng thần bị tháng phá là chắc mất khoản tiền này?",
+      "signals": [
+        "DAY_MONTH_MIXED"
+      ],
+      "facts": [
+        {
+          "id": "holdout-07:f1",
+          "text": "Engine đánh dấu Dụng thần có Nguyệt phá."
+        },
+        {
+          "id": "holdout-07:f2",
+          "text": "Có một hào động sinh Dụng, nhưng hiệu lực cứu giải còn CONDITIONAL."
+        },
+        {
+          "id": "holdout-07:f3",
+          "text": "Tendency=MIXED; chưa có ứng kỳ."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-07:finding",
+          "text": "Phân tích chỉ được phép dựa trên các dữ kiện nêu trên; giữ kết luận mở ở phần còn thiếu.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "holdout-07:f1",
+            "holdout-07:f2",
+            "holdout-07:f3"
+          ],
+          "evidence_refs": [
+            "ly:wealth",
+            "ly:month"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ly:wealth",
+          "title": "Tăng San Bốc Dịch · Dụng thần · Tài vật",
+          "text": "一切使用之財物亦以妻財爻爲用神。",
+          "sha256": "eca1164de968e99ca9c191aa70d5b0f331ebdc0a303217c97e5b7b23f78443b4",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100700",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "ly:month",
+          "title": "Tăng San Bốc Dịch · Nguyệt tướng",
+          "text": "月將卽是月建又爲月令。掌一月之權，司三旬之令。",
+          "sha256": "6933a79f007770c732c5dc3bb9712be0e2e4506e62b4b7196208492ca011b94d",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100331",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Tendency=MIXED; chưa có ứng kỳ."
+      ]
+    },
+    "required_review_checks": [
+      "Nêu sức ép tháng phá và điều kiện trợ lực còn phải xét.",
+      "Không nâng trợ lực có điều kiện thành cứu chắc chắn.",
+      "Không khẳng định mất tiền hoặc hẹn ngày tiền về.",
+      "Các đoạn cùng làm rõ một nhận định chính, có căn cứ và điều kiện giới hạn cụ thể.",
+      "Ứng dụng đời sống được nêu như lựa chọn kiểm tra, không phải sự thật từ nhãn."
+    ],
+    "forbidden_conclusions": [
+      "chắc mất hết",
+      "có sinh nên chắc được cứu"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "holdout-08",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-08",
+      "method": "ZHOUYI_TEXT",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "GENERAL",
+      "question": "Quẻ Ký Tế này hào 5 nói gì?",
+      "signals": [
+        "HEXAGRAM_63"
+      ],
+      "facts": [
+        {
+          "id": "holdout-08:f1",
+          "text": "Engine xác định quẻ Ký Tế số 63."
+        },
+        {
+          "id": "holdout-08:f2",
+          "text": "Context chỉ truy xuất quẻ từ có mệnh đề 初吉終亂。"
+        },
+        {
+          "id": "holdout-08:f3",
+          "text": "Không có nguyên văn hào 5 trong evidence."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-08:finding",
+          "text": "Phân tích chỉ được phép dựa trên các dữ kiện nêu trên; giữ kết luận mở ở phần còn thiếu.",
+          "status": "UNRESOLVED",
+          "fact_refs": [
+            "holdout-08:f1",
+            "holdout-08:f2",
+            "holdout-08:f3"
+          ],
+          "evidence_refs": [
+            "zy:jiji"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "zy:jiji",
+          "title": "Chu Dịch · Ký Tế · Quẻ từ",
+          "text": "初吉終亂。",
+          "sha256": "d519be64d34adbaa2848af9eeab990ad81945f82afa6f43c194cc8a0e3839407",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2572417",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Không có nguyên văn hào 5 trong evidence."
+      ]
+    },
+    "required_review_checks": [
+      "Không dùng trí nhớ bổ sung hoặc trích hào 5 chưa được truy xuất.",
+      "Nêu rõ thiếu văn bản hào 5 và có thể giải thích quẻ từ đang có.",
+      "Không gán lời quẻ từ thành lời hào 5.",
+      "Các đoạn cùng làm rõ một nhận định chính, có căn cứ và điều kiện giới hạn cụ thể.",
+      "Ứng dụng đời sống được nêu như lựa chọn kiểm tra, không phải sự thật từ nhãn."
+    ],
+    "forbidden_conclusions": [
+      "tự dựng nguyên văn hào 5",
+      "trích câu từ ví dụ khác"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "holdout-09-synthesis",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-09-synthesis",
+      "method": "BAZI_NATAL_V1",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "STUDY",
+      "question": "Tôi nên chuẩn bị gì để học một chuyên môn mới?",
+      "signals": [
+        "NATAL_ONLY",
+        "RESOURCE_EXPOSED"
+      ],
+      "facts": [
+        {
+          "id": "holdout-09-synthesis:f1",
+          "text": "Nhật chủ Mậu Thổ sinh tháng Dần, mùa không sinh trợ; có căn Thổ trong chi và Bính Hỏa Ấn lộ."
+        },
+        {
+          "id": "holdout-09-synthesis:f2",
+          "text": "Có Giáp Mộc thuộc Quan Sát lộ; Thực Thương Kim nằm trong tàng can."
+        },
+        {
+          "id": "holdout-09-synthesis:f3",
+          "text": "Assessment=MIXED, balance=UNRESOLVED; chưa biết cách học hoặc năng lực thực tế."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-09-synthesis:finding",
+          "text": "Giữ nguyên các trạng thái và chiều quan hệ đã cung cấp; chưa chốt thành bại.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "holdout-09-synthesis:f1",
+            "holdout-09-synthesis:f2",
+            "holdout-09-synthesis:f3"
+          ],
+          "evidence_refs": [
+            "dtt:month",
+            "dtt:strength"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "dtt:strength",
+          "title": "Địch Thiên Tủy · Suy vượng",
+          "text": "旺則宜洩宜傷，衰則喜幫喜助，子平之理也，然旺中有衰者存，不可損也。衰中有旺者存，不可益也。",
+          "sha256": "82d6fd47d806ba24b672a3cb54034cc1dc522c81b5360961c0c43631631021d6",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844360",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "dtt:month",
+          "title": "Địch Thiên Tủy · Nguyệt lệnh",
+          "text": "月令提綱，譬之宅也，人元用事之神，宅之向也，不可以不卜。",
+          "sha256": "0529be4cdaede0b047426f5651add5f5800a970fd6e915cdf01cea70d05fa224",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=844366",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Assessment=MIXED, balance=UNRESOLVED; chưa biết cách học hoặc năng lực thực tế."
+      ]
+    },
+    "required_review_checks": [
+      "Nối mùa không trợ với căn và Ấn sinh trợ để giải thích trạng thái đan xen.",
+      "Liên hệ phần học với nền ấy, không chia mỗi đoạn thành định nghĩa một nhóm Thập Thần.",
+      "Không kết luận ít thực hành hoặc diễn đạt khó vì Thực Thương nằm trong tàng can."
+    ],
+    "forbidden_conclusions": [
+      "tàng can nên khó thực hành",
+      "có Ấn nên học giỏi"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "holdout-10-sequence",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-10-sequence",
+      "method": "MAIHOA_INTERNAL",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "WEALTH",
+      "question": "Kế hoạch bồi dưỡng kỹ năng này cần chuẩn bị gì?",
+      "signals": [
+        "USE_GENERATES_BODY"
+      ],
+      "facts": [
+        {
+          "id": "holdout-10-sequence:f1",
+          "text": "Thể Khôn Thổ; Dụng Ly Hỏa sinh Thể, FAVOURABLE; Dụng STRONG."
+        },
+        {
+          "id": "holdout-10-sequence:f2",
+          "text": "Hỗ phía Thể cùng hành Thổ, SAME/FAVOURABLE; Hỗ phía Dụng là Thủy bị Thể khắc, FAVOURABLE."
+        },
+        {
+          "id": "holdout-10-sequence:f3",
+          "text": "Biến là Hỏa sinh Thể, FAVOURABLE; sức Thể NOT_SPECIFIED; chưa có ứng kỳ hoặc thông tin khóa học."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-10-sequence:finding",
+          "text": "Giữ nguyên các trạng thái và chiều quan hệ đã cung cấp; chưa chốt thành bại.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "holdout-10-sequence:f1",
+            "holdout-10-sequence:f2",
+            "holdout-10-sequence:f3"
+          ],
+          "evidence_refs": [
+            "mh:roles",
+            "mh:wealth",
+            "mh:phase_priority"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "mh:roles",
+          "title": "Mai Hoa Dịch Số · Thể và Dụng",
+          "text": "體為主，用為事。",
+          "sha256": "258e7ec60a6925d721464a76037c00bb38c31dc2913f460992bec170aa4e7320",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "mh:wealth",
+          "title": "Mai Hoa Dịch Số · Cầu tài",
+          "text": "體生用，財有損耗之憂；用生體，財有進益之喜。",
+          "sha256": "8174472750d15f6cb14fb0de3554742ee9c0e5a5788807a5a2b9c6216748bd5c",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441921",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        },
+        {
+          "id": "mh:phase_priority",
+          "title": "Mai Hoa Dịch Số · Thể Dụng Hỗ Biến chi quyết",
+          "text": "用為占之即應，互為中間之應，變為事占之終應。",
+          "sha256": "b61c6f15c67ecbfa720f05f94a046faa5610ab8e8be6c391e1ae55a86f4d705b",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=1441927",
+          "kind": "PRIMARY_TEXT"
+        }
+      ],
+      "limitations": [
+        "Biến là Hỏa sinh Thể, FAVOURABLE; sức Thể NOT_SPECIFIED; chưa có ứng kỳ hoặc thông tin khóa học."
+      ]
+    },
+    "required_review_checks": [
+      "Nối thuận đầu/cuối với hai quan hệ Hỗ và nêu đúng phạm vi vượng suy đã biết.",
+      "Không đổi tỷ hòa thành chủ quan, thụ động hoặc trì trệ.",
+      "Không đổi sức Thể chưa xác định thành người hỏi thiếu sức bền."
+    ],
+    "forbidden_conclusions": [
+      "tỷ hòa nên dễ chủ quan",
+      "Thể yếu nên không theo nổi"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  },
+  {
+    "id": "holdout-11-direction",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "holdout-11-direction",
+      "method": "LIUYAO_NAJIA",
+      "analysis_profile": "HELDOUT_SYNTHETIC_SLICE",
+      "topic": "DOCUMENT",
+      "question": "Phần đề án tôi đang soạn cần chú ý gì?",
+      "signals": [
+        "SELECTED_USE",
+        "DAY_MONTH_MIXED"
+      ],
+      "facts": [
+        {
+          "id": "holdout-11-direction:f1",
+          "text": "Dụng Phụ mẫu tại L1 Thủy được Nhật–Nguyệt sinh phù, selection=SELECTED."
+        },
+        {
+          "id": "holdout-11-direction:f2",
+          "text": "Thế L4 Mộc đang MOVING, VOID, RETURN_CONTROLS; tendency=MIXED."
+        },
+        {
+          "id": "holdout-11-direction:f3",
+          "text": "Quan hệ đã lưu source_key=L1, target_key=L4, relation=GENERATES: Thủy sinh Mộc, Dụng sinh Thế."
+        },
+        {
+          "id": "holdout-11-direction:f4",
+          "text": "Nguyên thần tĩnh; chưa có đánh giá cứu giải đầy đủ, nội dung đề án hoặc ứng kỳ."
+        }
+      ],
+      "findings": [
+        {
+          "id": "holdout-11-direction:finding",
+          "text": "Giữ nguyên các trạng thái và chiều quan hệ đã cung cấp; chưa chốt thành bại.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "holdout-11-direction:f1",
+            "holdout-11-direction:f2",
+            "holdout-11-direction:f3",
+            "holdout-11-direction:f4"
+          ],
+          "evidence_refs": [
+            "ly:document",
+            "ly:month",
+            "ly:effective"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ly:document",
+          "title": "Tăng San Bốc Dịch · Dụng thần · Văn thư",
+          "text": "章奏、文書及書館文契也以父母爻爲用神",
+          "sha256": "320c662df868c6c56be23aacc6dabfafbb05592515e17fb9e451caf77dffa4c5",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100700",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "ly:month",
+          "title": "Tăng San Bốc Dịch · Nguyệt tướng",
+          "text": "月將卽是月建又爲月令。掌一月之權，司三旬之令。",
+          "sha256": "6933a79f007770c732c5dc3bb9712be0e2e4506e62b4b7196208492ca011b94d",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100331",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        },
+        {
+          "id": "ly:effective",
+          "title": "Tăng San Bốc Dịch · Nguyên thần Kỵ thần suy vượng",
+          "text": "元神𨿽生用神，須要旺相，方可生得用神。",
+          "sha256": "cfa2c090d248a0fd1b895ac9afb571d8a3280bca701850293fce6bbe6a478da9",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100301",
+          "kind": "PRIMARY_TEXT"
+        }
+      ],
+      "limitations": [
+        "Nguyên thần tĩnh; chưa có đánh giá cứu giải đầy đủ, nội dung đề án hoặc ứng kỳ."
+      ]
+    },
+    "required_review_checks": [
+      "Đúng chiều Dụng sinh Thế, không diễn đạt rằng Thế hao lực sinh Dụng.",
+      "Tổng hợp Dụng có trợ và Thế bị điều kiện động biến, không bỏ một phía.",
+      "Không gọi văn bản đã tốt hoặc Nguyên thần đã cứu khi chưa có hiệu lực được xác nhận."
+    ],
+    "forbidden_conclusions": [
+      "Thế sinh Dụng",
+      "nội dung đề án chắc đã vững",
+      "có Nguyên thần nên được cứu"
+    ],
+    "model_evaluation_status": "NOT_RUN"
+  }
+]

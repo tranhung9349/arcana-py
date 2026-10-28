@@ -1,0 +1,33 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "topic": {
+      "default": "GENERAL",
+      "enum": [
+        "GENERAL",
+        "CAREER",
+        "WEALTH",
+        "STUDY",
+        "RELATIONSHIPS"
+      ],
+      "title": "Topic",
+      "type": "string"
+    },
+    "question": {
+      "default": "",
+      "maxLength": 2000,
+      "title": "Question",
+      "type": "string"
+    },
+    "reading_id": {
+      "format": "uuid",
+      "title": "Reading Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "reading_id"
+  ],
+  "title": "BaziReadingRequest",
+  "type": "object"
+}

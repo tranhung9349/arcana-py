@@ -1,0 +1,63 @@
+{
+  "prompt_version": "plain-vietnamese-2026-10-27-v4.1",
+  "checked_at": "2026-10-27T07:35:01.460281+00:00",
+  "python_unittest": {
+    "passed": 193,
+    "failed": 0,
+    "seconds": 23.532,
+    "scope": "FINAL_FULL_SUITE"
+  },
+  "javascript_node_test": {
+    "passed": 10,
+    "failed": 0,
+    "files": [
+      "tests/test_draw_reading.cjs",
+      "tests/test_ai_reading.cjs"
+    ]
+  },
+  "live_http_final": {
+    "methods": [
+      "BAZI",
+      "MAIHOA",
+      "LIUYAO"
+    ],
+    "passed": 3,
+    "cache_identical": true,
+    "original_snapshots_unchanged": true,
+    "report": "ai_readings_v4_http_smoke.json"
+  },
+  "earlier_development_calls": {
+    "blocked_truncated_at_8000": 1,
+    "completed_v4_before_editorial_revision": 3,
+    "automatic_retry_on_truncation": false,
+    "final_transport_cap": 12000
+  },
+  "offline_question_routing_probes": {
+    "passed": 6,
+    "model_called": false,
+    "report": "ai_readings_v4_routing_probes.json"
+  },
+  "source_manifest_hash_binding": "PASS",
+  "secret_scan": {
+    "public_files_checked": 325,
+    "status": "PASS"
+  },
+  "heldout_cases": {
+    "count": 11,
+    "model_evaluation_status": "NOT_RUN"
+  },
+  "adaptive_question_probes": {
+    "count": 3,
+    "model_evaluation_status": "NOT_RUN",
+    "independent_heldout": false
+  },
+  "expert_review": "NOT_PERFORMED",
+  "semantic_accuracy_verified": false,
+  "ui_changed": false,
+  "browser_visual_check": "NOT_RUN_NO_UI_CHANGE",
+  "post_restart_cached_lookup": {
+    "passed": 3,
+    "prompt_version": "plain-vietnamese-2026-10-27-v4.1",
+    "new_model_calls": 0
+  }
+}

@@ -1,0 +1,1359 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 20,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 20,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 20
+    }
+  },
+  "results": [
+    {
+      "path": "docs/research/astronomy_runtime_spot_checks.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 120,
+      "nonEmptyLines": 120,
+      "sections": [
+        {
+          "heading": "provider",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "independent_reference_source",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "reference_year",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "reference_timezone",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "reference_resolution_seconds",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "independent_spot_checks",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "all_12_within_one_minute",
+          "level": 1,
+          "line": 105
+        },
+        {
+          "heading": "internal_root_checks",
+          "level": 1,
+          "line": 106
+        },
+        {
+          "heading": "internal_root_years",
+          "level": 1,
+          "line": 107
+        },
+        {
+          "heading": "max_internal_longitude_residual_degrees",
+          "level": 1,
+          "line": 111
+        },
+        {
+          "heading": "full_range_independent_validation",
+          "level": 1,
+          "line": 112
+        },
+        {
+          "heading": "error_bound_seconds",
+          "level": 1,
+          "line": 113
+        },
+        {
+          "heading": "validation_status",
+          "level": 1,
+          "line": 114
+        },
+        {
+          "heading": "limitations",
+          "level": 1,
+          "line": 115
+        },
+        {
+          "heading": "time_engine_sha256",
+          "level": 1,
+          "line": 119
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "docs/research/bazi_python_port_validation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 20,
+      "nonEmptyLines": 20,
+      "sections": [
+        {
+          "heading": "cases",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "mismatches",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "decision_branches_covered",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "comparison_scope",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "source_commit",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "source_sha256",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "port_sha256",
+          "level": 1,
+          "line": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "docs/research/beijing_calendar_http_smoke.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 49,
+      "nonEmptyLines": 49,
+      "sections": [
+        {
+          "heading": "health",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "numbers",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "score",
+          "level": 1,
+          "line": 42
+        },
+        {
+          "heading": "attempts",
+          "level": 1,
+          "line": 43
+        },
+        {
+          "heading": "same_request_same_output",
+          "level": 1,
+          "line": 44
+        },
+        {
+          "heading": "formal_response_valid",
+          "level": 1,
+          "line": 45
+        },
+        {
+          "heading": "cached_v3_result_preserved",
+          "level": 1,
+          "line": 46
+        },
+        {
+          "heading": "http_elapsed_ms",
+          "level": 1,
+          "line": 47
+        },
+        {
+          "heading": "measurement_scope",
+          "level": 1,
+          "line": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/research/beijing_calendar_migration_validation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 207,
+      "nonEmptyLines": 207,
+      "sections": [
+        {
+          "heading": "checked_at_utc",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "calendar",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "tests",
+          "level": 1,
+          "line": 21
+        },
+        {
+          "heading": "source_fixtures",
+          "level": 1,
+          "line": 42
+        },
+        {
+          "heading": "range_audit",
+          "level": 1,
+          "line": 60
+        },
+        {
+          "heading": "bazi_port",
+          "level": 1,
+          "line": 73
+        },
+        {
+          "heading": "live_http",
+          "level": 1,
+          "line": 81
+        },
+        {
+          "heading": "browser",
+          "level": 1,
+          "line": 130
+        },
+        {
+          "heading": "interpretation_schema",
+          "level": 1,
+          "line": 157
+        },
+        {
+          "heading": "retained_rules",
+          "level": 1,
+          "line": 165
+        },
+        {
+          "heading": "remaining_limits",
+          "level": 1,
+          "line": 181
+        },
+        {
+          "heading": "file_sha256",
+          "level": 1,
+          "line": 186
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "docs/research/beijing_calendar_range_audit.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 13,
+      "nonEmptyLines": 13,
+      "sections": [
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "provider",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "civil_range",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "days_checked",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "roundtrip_mismatches",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "full_range_independent_calendar_verified",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "time_engine_sha256",
+          "level": 1,
+          "line": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "docs/research/calendar_adapter_trial.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 274,
+      "nonEmptyLines": 274,
+      "sections": [
+        {
+          "heading": "algorithm_id",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "lookup_range",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "structural",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "published_new_moons",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "production_ready",
+          "level": 1,
+          "line": 268
+        },
+        {
+          "heading": "remaining_validation",
+          "level": 1,
+          "line": 269
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "docs/research/calendar_boundary_policy_audit.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 262,
+      "nonEmptyLines": 262,
+      "sections": [
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "input_timezone",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "confirmed_tier_1",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "confirmed_tier_2",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "buffer_arithmetic",
+          "level": 1,
+          "line": 23
+        },
+        {
+          "heading": "astronomical_dependency_scope",
+          "level": 1,
+          "line": 31
+        },
+        {
+          "heading": "source_findings",
+          "level": 1,
+          "line": 32
+        },
+        {
+          "heading": "independent_corpus_candidates",
+          "level": 1,
+          "line": 44
+        },
+        {
+          "heading": "arithmetic_fixtures",
+          "level": 1,
+          "line": 68
+        },
+        {
+          "heading": "fixture_scope",
+          "level": 1,
+          "line": 144
+        },
+        {
+          "heading": "outstanding",
+          "level": 1,
+          "line": 145
+        },
+        {
+          "heading": "library_configuration_review",
+          "level": 1,
+          "line": 150
+        },
+        {
+          "heading": "adapter_trial",
+          "level": 1,
+          "line": 238
+        },
+        {
+          "heading": "implementation_selection",
+          "level": 1,
+          "line": 252
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "docs/research/exponential_distribution_trial.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 45650,
+      "nonEmptyLines": 45650,
+      "sections": [
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "rules_sha256",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "folk_config_sha256",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "implementation_sha256",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "seed",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "samples_per_context",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "beta_formula",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "selected_beta",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "sampling_law",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "context_distribution",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "bonus_profile_is_synthetic",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "sampling_checks",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "results",
+          "level": 1,
+          "line": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "docs/research/exponential_distribution_trial.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 34,
+      "nonEmptyLines": 25,
+      "sections": [
+        {
+          "heading": "Thử phân bố trọng số hàm mũ — MVP 1",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "docs/research/geolocation_policy_audit.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 149,
+      "nonEmptyLines": 149,
+      "sections": [
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "confirmed_user_policy",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "unresolved",
+          "level": 1,
+          "line": 36
+        },
+        {
+          "heading": "arithmetic_checks",
+          "level": 1,
+          "line": 41
+        },
+        {
+          "heading": "sources",
+          "level": 1,
+          "line": 85
+        },
+        {
+          "heading": "superseded_boundary_policy",
+          "level": 1,
+          "line": 91
+        },
+        {
+          "heading": "boundary_model_proposal",
+          "level": 1,
+          "line": 97
+        },
+        {
+          "heading": "policy_boundary_examples",
+          "level": 1,
+          "line": 106
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "docs/research/interpretation_schema_validation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 17,
+      "nonEmptyLines": 17,
+      "sections": [
+        {
+          "heading": "schema_definitions_valid",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "valid_examples",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "rejected_invalid_examples",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "fixture_references_and_cross_fields_valid",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "validation_date",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "validator",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "model_called",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "translation_quality_evaluated",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "source_gap_policy",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "sha256",
+          "level": 1,
+          "line": 11
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/research/mvp1_runtime_validation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 130,
+      "nonEmptyLines": 130,
+      "sections": [
+        {
+          "heading": "validation_date_utc",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "runtime_status",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "validation_status",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "output_contract",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "unit_and_integration_tests",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "bazi_port_comparison",
+          "level": 1,
+          "line": 29
+        },
+        {
+          "heading": "astronomy_spot_checks",
+          "level": 1,
+          "line": 36
+        },
+        {
+          "heading": "live_http_smoke",
+          "level": 1,
+          "line": 44
+        },
+        {
+          "heading": "browser_smoke",
+          "level": 1,
+          "line": 63
+        },
+        {
+          "heading": "configuration",
+          "level": 1,
+          "line": 78
+        },
+        {
+          "heading": "llm",
+          "level": 1,
+          "line": 89
+        },
+        {
+          "heading": "geolocation",
+          "level": 1,
+          "line": 95
+        },
+        {
+          "heading": "remaining_validation",
+          "level": 1,
+          "line": 101
+        },
+        {
+          "heading": "sha256",
+          "level": 1,
+          "line": 107
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "docs/research/mvp2_activity_expansion.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 100,
+      "nonEmptyLines": 69,
+      "sections": [
+        {
+          "heading": "Mở rộng “Việc dự định” và cách hiển thị hồ sơ, giờ đẹp",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Căn cứ và giới hạn",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Phân nhóm và thứ tự mở rộng",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "Độ phủ nhóm ưu tiên",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "Các việc cần làm khi triển khai category mới",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "Cách gọi chủ thể trên client",
+          "level": 2,
+          "line": 78
+        },
+        {
+          "heading": "Hiển thị khung giờ — đã triển khai",
+          "level": 2,
+          "line": 94
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "docs/research/mvp2_activity_token_coverage.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 5433,
+      "nonEmptyLines": 5433,
+      "sections": [
+        {
+          "heading": "schema_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "research_date_utc7",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "provider",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "corpus_gzip_sha256",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "basis",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "day_count",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "hour_anchor_count",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "meaning",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "sources",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "candidates",
+          "level": 1,
+          "line": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/research/mvp2_auspicious_date_feasibility.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1370,
+      "nonEmptyLines": 1370,
+      "sections": [
+        {
+          "heading": "audit_version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "created_at",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "runtime_changed",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "database_read_or_written",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "provider",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "graph_baseline",
+          "level": 1,
+          "line": 26
+        },
+        {
+          "heading": "available_methods",
+          "level": 1,
+          "line": 32
+        },
+        {
+          "heading": "provider_method_policy",
+          "level": 1,
+          "line": 46
+        },
+        {
+          "heading": "activity_term_proposals",
+          "level": 1,
+          "line": 55
+        },
+        {
+          "heading": "coverage",
+          "level": 1,
+          "line": 60
+        },
+        {
+          "heading": "boundary_fixtures",
+          "level": 1,
+          "line": 589
+        },
+        {
+          "heading": "jie_boundary_fixtures",
+          "level": 1,
+          "line": 866
+        },
+        {
+          "heading": "synthetic_profiles",
+          "level": 1,
+          "line": 1042
+        },
+        {
+          "heading": "single_instant_activity_contrast",
+          "level": 1,
+          "line": 1129
+        },
+        {
+          "heading": "user_three_filter_evidence",
+          "level": 1,
+          "line": 1184
+        },
+        {
+          "heading": "user_reference_date_provider_facts",
+          "level": 1,
+          "line": 1280
+        },
+        {
+          "heading": "benchmarks",
+          "level": 1,
+          "line": 1343
+        },
+        {
+          "heading": "checks",
+          "level": 1,
+          "line": 1357
+        },
+        {
+          "heading": "remaining_gaps",
+          "level": 1,
+          "line": 1364
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 21
+      }
+    },
+    {
+      "path": "docs/research/mvp2_auspicious_date_research.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 71,
+      "nonEmptyLines": 43,
+      "sections": [
+        {
+          "heading": "Nghiên cứu chọn ngày MVP 2",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Kết luận khả thi",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Những gì đã chạy",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Hai phát hiện cần khóa trước khi lập trình",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "Đối chiếu các link người dùng đưa",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Nguồn cho các ngày kỵ",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "Ranh và hiệu năng",
+          "level": 2,
+          "line": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "docs/research/mvp2_cold_93_runtime_validation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 50,
+      "nonEmptyLines": 50,
+      "sections": [
+        {
+          "heading": "checked_at_utc",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "python",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "platform",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "corpus_sha256",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "rules_sha256",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "fresh_server_ready_seconds",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "http_measurements",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "checks",
+          "level": 1,
+          "line": 41
+        },
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/research/mvp2_display_runtime_validation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 95,
+      "nonEmptyLines": 95,
+      "sections": [
+        {
+          "heading": "checked_at_utc",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "python",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "platform",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "rules_version",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "corpus_sha256",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "rules_sha256",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "fresh_server_ready_seconds",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "http_measurements",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "checks",
+          "level": 1,
+          "line": 86
+        },
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 94
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/research/mvp2_display_ui_validation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 39,
+      "nonEmptyLines": 39,
+      "sections": [
+        {
+          "heading": "checked_at_utc",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "url",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "database_scope",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "checks",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "fixture",
+          "level": 1,
+          "line": 19
+        },
+        {
+          "heading": "screenshot",
+          "level": 1,
+          "line": 37
+        },
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 38
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "docs/research/mvp2_popup_ui_validation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 44,
+      "nonEmptyLines": 44,
+      "sections": [
+        {
+          "heading": "checked_date_utc7",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "url",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "method",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "viewport",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "fixture",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "checks",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "good_window_labels",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "screenshots",
+          "level": 1,
+          "line": 41
+        },
+        {
+          "heading": "scope",
+          "level": 1,
+          "line": 42
+        },
+        {
+          "heading": "limitations",
+          "level": 1,
+          "line": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    }
+  ]
+}

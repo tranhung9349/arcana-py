@@ -1,0 +1,2254 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 7,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 7,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "randomyst/date_models.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 236,
+      "nonEmptyLines": 195,
+      "classes": [
+        {
+          "name": "DateSubject",
+          "startLine": 12,
+          "endLine": 14,
+          "methods": [],
+          "properties": [
+            "subject_id",
+            "birth"
+          ]
+        },
+        {
+          "name": "DateRange",
+          "startLine": 17,
+          "endLine": 27,
+          "methods": [
+            "valid_range"
+          ],
+          "properties": [
+            "start",
+            "end"
+          ]
+        },
+        {
+          "name": "AllowedHours",
+          "startLine": 30,
+          "endLine": 40,
+          "methods": [
+            "valid_hours"
+          ],
+          "properties": [
+            "start",
+            "end"
+          ]
+        },
+        {
+          "name": "DateSearchRequest",
+          "startLine": 43,
+          "endLine": 60,
+          "methods": [
+            "scope"
+          ],
+          "properties": [
+            "activity",
+            "subjects",
+            "date_range",
+            "allowed_weekdays",
+            "allowed_hours",
+            "include_details"
+          ]
+        },
+        {
+          "name": "DateSource",
+          "startLine": 63,
+          "endLine": 68,
+          "methods": [],
+          "properties": [
+            "source_id",
+            "path",
+            "sha256",
+            "url",
+            "basis"
+          ]
+        },
+        {
+          "name": "RuleWhen",
+          "startLine": 71,
+          "endLine": 73,
+          "methods": [],
+          "properties": [
+            "fact",
+            "equals"
+          ]
+        },
+        {
+          "name": "DateRule",
+          "startLine": 76,
+          "endLine": 103,
+          "methods": [
+            "effect_points"
+          ],
+          "properties": [
+            "rule_id",
+            "enabled",
+            "when",
+            "activity_scope",
+            "subject_scope",
+            "effect",
+            "points",
+            "dedupe_group",
+            "message",
+            "source_id",
+            "review_status"
+          ]
+        },
+        {
+          "name": "ActivitySpec",
+          "startLine": 106,
+          "endLine": 110,
+          "methods": [],
+          "properties": [
+            "activity",
+            "name",
+            "provider_token",
+            "subject_count"
+          ]
+        },
+        {
+          "name": "DateScoring",
+          "startLine": 113,
+          "endLine": 128,
+          "methods": [
+            "thresholds"
+          ],
+          "properties": [
+            "base",
+            "good_threshold",
+            "normal_threshold",
+            "day_not_listed_penalty",
+            "hour_not_listed_penalty",
+            "personal_element_penalties",
+            "personal_clash_blocks"
+          ]
+        },
+        {
+          "name": "MonthTables",
+          "startLine": 131,
+          "endLine": 140,
+          "methods": [
+            "indices"
+          ],
+          "properties": [
+            "sat_chu",
+            "tho_tu",
+            "nguyet_pha"
+          ]
+        },
+        {
+          "name": "DateRules",
+          "startLine": 143,
+          "endLine": 171,
+          "methods": [
+            "references"
+          ],
+          "properties": [
+            "schema_version",
+            "rules_version",
+            "provider_version",
+            "calendar_policy",
+            "major_taboo_basis",
+            "disabled_rules",
+            "sources",
+            "activities",
+            "month_tables",
+            "scoring",
+            "rules"
+          ]
+        },
+        {
+          "name": "RecommendedWindow",
+          "startLine": 174,
+          "endLine": 178,
+          "methods": [],
+          "properties": [
+            "start_at",
+            "end_at",
+            "hour_branch"
+          ]
+        },
+        {
+          "name": "DateWindow",
+          "startLine": 181,
+          "endLine": 207,
+          "methods": [
+            "decision"
+          ],
+          "properties": [
+            "duration_seconds",
+            "calendar_class",
+            "day_officer",
+            "tian_shen",
+            "civil_day_ganzhi",
+            "bazi_day_ganzhi",
+            "month_ganzhi_exact",
+            "lunar",
+            "day_activity_status",
+            "hour_activity_status",
+            "assessment_state",
+            "score",
+            "raw_score",
+            "grade",
+            "hard_exclusions",
+            "penalties",
+            "subject_assessments",
+            "facts"
+          ]
+        },
+        {
+          "name": "DateDay",
+          "startLine": 210,
+          "endLine": 219,
+          "methods": [],
+          "properties": [
+            "date",
+            "grade",
+            "assessment_state",
+            "score",
+            "windows",
+            "recommended_windows",
+            "evaluated_windows",
+            "recommended_minutes",
+            "has_unresolved_windows"
+          ]
+        },
+        {
+          "name": "DateSearchResponse",
+          "startLine": 222,
+          "endLine": 236,
+          "methods": [],
+          "properties": [
+            "schema_version",
+            "date_rules_version",
+            "calendar_policy",
+            "activity",
+            "activity_name",
+            "disabled_rules",
+            "coverage_note",
+            "subject_summaries",
+            "days",
+            "evaluated_windows",
+            "personal_comparisons",
+            "natal_analysis_count",
+            "sources",
+            "warnings"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DateSubject",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "DateRange",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "AllowedHours",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "DateSearchRequest",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "DateSource",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "RuleWhen",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "DateRule",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "ActivitySpec",
+          "line": 106,
+          "isDefault": false
+        },
+        {
+          "name": "DateScoring",
+          "line": 113,
+          "isDefault": false
+        },
+        {
+          "name": "MonthTables",
+          "line": 131,
+          "isDefault": false
+        },
+        {
+          "name": "DateRules",
+          "line": 143,
+          "isDefault": false
+        },
+        {
+          "name": "RecommendedWindow",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "DateWindow",
+          "line": 181,
+          "isDefault": false
+        },
+        {
+          "name": "DateDay",
+          "line": 210,
+          "isDefault": false
+        },
+        {
+          "name": "DateSearchResponse",
+          "line": 222,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "valid_range",
+          "callee": "ValueError",
+          "lineNumber": 24
+        },
+        {
+          "caller": "valid_range",
+          "callee": "date",
+          "lineNumber": 25
+        },
+        {
+          "caller": "valid_range",
+          "callee": "date",
+          "lineNumber": 25
+        },
+        {
+          "caller": "valid_range",
+          "callee": "ValueError",
+          "lineNumber": 26
+        },
+        {
+          "caller": "valid_hours",
+          "callee": "ValueError",
+          "lineNumber": 37
+        },
+        {
+          "caller": "valid_hours",
+          "callee": "ValueError",
+          "lineNumber": 39
+        },
+        {
+          "caller": "scope",
+          "callee": "len",
+          "lineNumber": 54
+        },
+        {
+          "caller": "scope",
+          "callee": "ValueError",
+          "lineNumber": 55
+        },
+        {
+          "caller": "scope",
+          "callee": "len",
+          "lineNumber": 56
+        },
+        {
+          "caller": "scope",
+          "callee": "ValueError",
+          "lineNumber": 57
+        },
+        {
+          "caller": "scope",
+          "callee": "len",
+          "lineNumber": 58
+        },
+        {
+          "caller": "scope",
+          "callee": "set",
+          "lineNumber": 58
+        },
+        {
+          "caller": "scope",
+          "callee": "len",
+          "lineNumber": 58
+        },
+        {
+          "caller": "scope",
+          "callee": "any",
+          "lineNumber": 58
+        },
+        {
+          "caller": "scope",
+          "callee": "type",
+          "lineNumber": 58
+        },
+        {
+          "caller": "scope",
+          "callee": "ValueError",
+          "lineNumber": 59
+        },
+        {
+          "caller": "effect_points",
+          "callee": "ValueError",
+          "lineNumber": 92
+        },
+        {
+          "caller": "effect_points",
+          "callee": "ValueError",
+          "lineNumber": 94
+        },
+        {
+          "caller": "effect_points",
+          "callee": "type",
+          "lineNumber": 99
+        },
+        {
+          "caller": "effect_points",
+          "callee": "ValueError",
+          "lineNumber": 100
+        },
+        {
+          "caller": "effect_points",
+          "callee": "type",
+          "lineNumber": 101
+        },
+        {
+          "caller": "effect_points",
+          "callee": "ValueError",
+          "lineNumber": 102
+        },
+        {
+          "caller": "thresholds",
+          "callee": "ValueError",
+          "lineNumber": 125
+        },
+        {
+          "caller": "thresholds",
+          "callee": "set",
+          "lineNumber": 126
+        },
+        {
+          "caller": "thresholds",
+          "callee": "any",
+          "lineNumber": 126
+        },
+        {
+          "caller": "thresholds",
+          "callee": "self.personal_element_penalties.values",
+          "lineNumber": 126
+        },
+        {
+          "caller": "thresholds",
+          "callee": "ValueError",
+          "lineNumber": 127
+        },
+        {
+          "caller": "indices",
+          "callee": "any",
+          "lineNumber": 138
+        },
+        {
+          "caller": "indices",
+          "callee": "type",
+          "lineNumber": 138
+        },
+        {
+          "caller": "indices",
+          "callee": "ValueError",
+          "lineNumber": 139
+        },
+        {
+          "caller": "references",
+          "callee": "len",
+          "lineNumber": 160
+        },
+        {
+          "caller": "references",
+          "callee": "set",
+          "lineNumber": 160
+        },
+        {
+          "caller": "references",
+          "callee": "len",
+          "lineNumber": 160
+        },
+        {
+          "caller": "references",
+          "callee": "len",
+          "lineNumber": 160
+        },
+        {
+          "caller": "references",
+          "callee": "set",
+          "lineNumber": 160
+        },
+        {
+          "caller": "references",
+          "callee": "len",
+          "lineNumber": 160
+        },
+        {
+          "caller": "references",
+          "callee": "ValueError",
+          "lineNumber": 161
+        },
+        {
+          "caller": "references",
+          "callee": "ValueError",
+          "lineNumber": 163
+        },
+        {
+          "caller": "references",
+          "callee": "any",
+          "lineNumber": 165
+        },
+        {
+          "caller": "references",
+          "callee": "ValueError",
+          "lineNumber": 166
+        },
+        {
+          "caller": "references",
+          "callee": "any",
+          "lineNumber": 167
+        },
+        {
+          "caller": "references",
+          "callee": "ValueError",
+          "lineNumber": 168
+        },
+        {
+          "caller": "references",
+          "callee": "set",
+          "lineNumber": 169
+        },
+        {
+          "caller": "references",
+          "callee": "ValueError",
+          "lineNumber": 170
+        },
+        {
+          "caller": "decision",
+          "callee": "ValueError",
+          "lineNumber": 204
+        },
+        {
+          "caller": "decision",
+          "callee": "ValueError",
+          "lineNumber": 206
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 15,
+        "functionCount": 0,
+        "classCount": 15
+      }
+    },
+    {
+      "path": "randomyst/geolocation.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 25,
+      "functions": [
+        {
+          "name": "ip_location",
+          "startLine": 9,
+          "endLine": 28,
+          "params": [
+            "address"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ip_location",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ip_location",
+          "callee": "ip_address",
+          "lineNumber": 12
+        },
+        {
+          "caller": "ip_location",
+          "callee": "os.environ.get",
+          "lineNumber": 15
+        },
+        {
+          "caller": "ip_location",
+          "callee": "geoip2.database.Reader",
+          "lineNumber": 17
+        },
+        {
+          "caller": "ip_location",
+          "callee": "reader.city",
+          "lineNumber": 18
+        },
+        {
+          "caller": "ip_location",
+          "callee": "str",
+          "lineNumber": 18
+        },
+        {
+          "caller": "ip_location",
+          "callee": "Location",
+          "lineNumber": 20
+        },
+        {
+          "caller": "ip_location",
+          "callee": "datetime.now",
+          "lineNumber": 21
+        },
+        {
+          "caller": "ip_location",
+          "callee": "Location",
+          "lineNumber": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "randomyst/models.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 218,
+      "nonEmptyLines": 178,
+      "functions": [
+        {
+          "name": "civil_validator",
+          "startLine": 42,
+          "endLine": 45,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "StrictModel",
+          "startLine": 11,
+          "endLine": 12,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "Location",
+          "startLine": 15,
+          "endLine": 39,
+          "methods": [
+            "aware_timestamp",
+            "source_fields"
+          ],
+          "properties": [
+            "longitude",
+            "latitude",
+            "source",
+            "accuracy_m",
+            "longitude_uncertainty_degrees",
+            "acquired_at",
+            "fallback_reason"
+          ]
+        },
+        {
+          "name": "Birth",
+          "startLine": 48,
+          "endLine": 60,
+          "methods": [
+            "valid_birth"
+          ],
+          "properties": [
+            "civil_datetime",
+            "location",
+            "clock_uncertainty_seconds",
+            "override_dung_than"
+          ]
+        },
+        {
+          "name": "Casting",
+          "startLine": 63,
+          "endLine": 85,
+          "methods": [
+            "valid_casting",
+            "timestamp_choice"
+          ],
+          "properties": [
+            "mode",
+            "clicked_at",
+            "custom_timestamp",
+            "location",
+            "clock_uncertainty_seconds"
+          ]
+        },
+        {
+          "name": "DrawRequest",
+          "startLine": 88,
+          "endLine": 91,
+          "methods": [],
+          "properties": [
+            "request_id",
+            "birth",
+            "casting"
+          ]
+        },
+        {
+          "name": "DrawResponse",
+          "startLine": 94,
+          "endLine": 114,
+          "methods": [
+            "unique_result"
+          ],
+          "properties": [
+            "schema_version",
+            "request_id",
+            "rules_version",
+            "numbers",
+            "status",
+            "score",
+            "threshold",
+            "attempts",
+            "selected_attempt",
+            "warnings",
+            "disclaimer",
+            "trace"
+          ]
+        },
+        {
+          "name": "SourceReference",
+          "startLine": 117,
+          "endLine": 122,
+          "methods": [],
+          "properties": [
+            "repository",
+            "commit",
+            "path",
+            "key",
+            "url"
+          ]
+        },
+        {
+          "name": "SourceTranslation",
+          "startLine": 125,
+          "endLine": 132,
+          "methods": [],
+          "properties": [
+            "label",
+            "language",
+            "text",
+            "review_status",
+            "version",
+            "references",
+            "source_text_sha256"
+          ]
+        },
+        {
+          "name": "SourceCard",
+          "startLine": 135,
+          "endLine": 156,
+          "methods": [
+            "translation_binding"
+          ],
+          "properties": [
+            "evidence_id",
+            "title",
+            "text_type",
+            "language",
+            "label",
+            "text",
+            "source",
+            "translation"
+          ]
+        },
+        {
+          "name": "SourceOverview",
+          "startLine": 159,
+          "endLine": 164,
+          "methods": [],
+          "properties": [
+            "label",
+            "language",
+            "text",
+            "review_status",
+            "references"
+          ]
+        },
+        {
+          "name": "HexagramExplanation",
+          "startLine": 167,
+          "endLine": 182,
+          "methods": [
+            "references_present"
+          ],
+          "properties": [
+            "hexagram_id",
+            "name_zh",
+            "name_vi",
+            "symbol",
+            "moving_line",
+            "overview",
+            "cards",
+            "source_gaps"
+          ]
+        },
+        {
+          "name": "BaziExplanation",
+          "startLine": 185,
+          "endLine": 197,
+          "methods": [],
+          "properties": [
+            "day_master",
+            "structure",
+            "strength",
+            "primary_used",
+            "primary_calculated",
+            "overridden",
+            "dung_than",
+            "hy_than",
+            "ky_than",
+            "birth_season",
+            "cards",
+            "source_gaps"
+          ]
+        },
+        {
+          "name": "DisplayExplanations",
+          "startLine": 200,
+          "endLine": 202,
+          "methods": [],
+          "properties": [
+            "mutual",
+            "changed"
+          ]
+        },
+        {
+          "name": "SourceExplanation",
+          "startLine": 205,
+          "endLine": 218,
+          "methods": [],
+          "properties": [
+            "schema_version",
+            "context_id",
+            "rules_version",
+            "corpus_version",
+            "model_called",
+            "affects_generation",
+            "affects_evaluation",
+            "original",
+            "bazi",
+            "display_hexagrams",
+            "relation",
+            "limitations",
+            "disclaimer"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "StrictModel",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "Location",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "civil_validator",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "Birth",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "Casting",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "DrawRequest",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "DrawResponse",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "SourceReference",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "SourceTranslation",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "SourceCard",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "SourceOverview",
+          "line": 159,
+          "isDefault": false
+        },
+        {
+          "name": "HexagramExplanation",
+          "line": 167,
+          "isDefault": false
+        },
+        {
+          "name": "BaziExplanation",
+          "line": 185,
+          "isDefault": false
+        },
+        {
+          "name": "DisplayExplanations",
+          "line": 200,
+          "isDefault": false
+        },
+        {
+          "name": "SourceExplanation",
+          "line": 205,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "aware_timestamp",
+          "callee": "value.utcoffset",
+          "lineNumber": 27
+        },
+        {
+          "caller": "aware_timestamp",
+          "callee": "ValueError",
+          "lineNumber": 28
+        },
+        {
+          "caller": "source_fields",
+          "callee": "ValueError",
+          "lineNumber": 34
+        },
+        {
+          "caller": "source_fields",
+          "callee": "ValueError",
+          "lineNumber": 36
+        },
+        {
+          "caller": "source_fields",
+          "callee": "ValueError",
+          "lineNumber": 38
+        },
+        {
+          "caller": "civil_validator",
+          "callee": "value.utcoffset",
+          "lineNumber": 43
+        },
+        {
+          "caller": "civil_validator",
+          "callee": "timedelta",
+          "lineNumber": 43
+        },
+        {
+          "caller": "civil_validator",
+          "callee": "ValueError",
+          "lineNumber": 44
+        },
+        {
+          "caller": "valid_birth",
+          "callee": "civil_validator",
+          "lineNumber": 57
+        },
+        {
+          "caller": "valid_birth",
+          "callee": "ValueError",
+          "lineNumber": 59
+        },
+        {
+          "caller": "valid_casting",
+          "callee": "civil_validator",
+          "lineNumber": 74
+        },
+        {
+          "caller": "valid_casting",
+          "callee": "ValueError",
+          "lineNumber": 76
+        },
+        {
+          "caller": "timestamp_choice",
+          "callee": "ValueError",
+          "lineNumber": 82
+        },
+        {
+          "caller": "timestamp_choice",
+          "callee": "ValueError",
+          "lineNumber": 84
+        },
+        {
+          "caller": "unique_result",
+          "callee": "len",
+          "lineNumber": 110
+        },
+        {
+          "caller": "unique_result",
+          "callee": "set",
+          "lineNumber": 110
+        },
+        {
+          "caller": "unique_result",
+          "callee": "sorted",
+          "lineNumber": 110
+        },
+        {
+          "caller": "unique_result",
+          "callee": "ValueError",
+          "lineNumber": 111
+        },
+        {
+          "caller": "unique_result",
+          "callee": "ValueError",
+          "lineNumber": 113
+        },
+        {
+          "caller": "translation_binding",
+          "callee": "ValueError",
+          "lineNumber": 150
+        },
+        {
+          "caller": "translation_binding",
+          "callee": "hashlib.sha256(self.text.encode()).hexdigest",
+          "lineNumber": 151
+        },
+        {
+          "caller": "translation_binding",
+          "callee": "hashlib.sha256",
+          "lineNumber": 151
+        },
+        {
+          "caller": "translation_binding",
+          "callee": "self.text.encode",
+          "lineNumber": 151
+        },
+        {
+          "caller": "translation_binding",
+          "callee": "ValueError",
+          "lineNumber": 152
+        },
+        {
+          "caller": "translation_binding",
+          "callee": "ValueError",
+          "lineNumber": 155
+        },
+        {
+          "caller": "references_present",
+          "callee": "len",
+          "lineNumber": 180
+        },
+        {
+          "caller": "references_present",
+          "callee": "set",
+          "lineNumber": 180
+        },
+        {
+          "caller": "references_present",
+          "callee": "len",
+          "lineNumber": 180
+        },
+        {
+          "caller": "references_present",
+          "callee": "set(self.overview.references).issubset",
+          "lineNumber": 180
+        },
+        {
+          "caller": "references_present",
+          "callee": "set",
+          "lineNumber": 180
+        },
+        {
+          "caller": "references_present",
+          "callee": "ValueError",
+          "lineNumber": 181
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 15,
+        "functionCount": 1,
+        "classCount": 14
+      }
+    },
+    {
+      "path": "scripts/build_date_data.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 119,
+      "nonEmptyLines": 111,
+      "functions": [
+        {
+          "name": "digest",
+          "startLine": 23,
+          "endLine": 24,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 27,
+          "endLine": 115,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "digest",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "digest",
+          "callee": "hashlib.sha256(path.read_bytes()).hexdigest",
+          "lineNumber": 24
+        },
+        {
+          "caller": "digest",
+          "callee": "hashlib.sha256",
+          "lineNumber": 24
+        },
+        {
+          "caller": "digest",
+          "callee": "path.read_bytes",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "version",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "target.mkdir",
+          "lineNumber": 30
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 33
+        },
+        {
+          "caller": "main",
+          "callee": "inspect.getfile",
+          "lineNumber": 33
+        },
+        {
+          "caller": "main",
+          "callee": "sources.append",
+          "lineNumber": 34
+        },
+        {
+          "caller": "main",
+          "callee": "digest",
+          "lineNumber": 34
+        },
+        {
+          "caller": "main",
+          "callee": "set",
+          "lineNumber": 35
+        },
+        {
+          "caller": "main",
+          "callee": "date",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "date",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "Solar.fromYmdHms(current.year, current.month, current.day, 12, 0, 0).getLunar",
+          "lineNumber": 38
+        },
+        {
+          "caller": "main",
+          "callee": "Solar.fromYmdHms",
+          "lineNumber": 38
+        },
+        {
+          "caller": "main",
+          "callee": "range",
+          "lineNumber": 40
+        },
+        {
+          "caller": "main",
+          "callee": "Solar.fromYmdHms(current.year, current.month, current.day, hour, 0, 0).getLunar",
+          "lineNumber": 41
+        },
+        {
+          "caller": "main",
+          "callee": "Solar.fromYmdHms",
+          "lineNumber": 41
+        },
+        {
+          "caller": "main",
+          "callee": "hours.append",
+          "lineNumber": 42
+        },
+        {
+          "caller": "main",
+          "callee": "clock.getTimeInGanZhi",
+          "lineNumber": 42
+        },
+        {
+          "caller": "main",
+          "callee": "clock.getTimeYi",
+          "lineNumber": 43
+        },
+        {
+          "caller": "main",
+          "callee": "clock.getTimeJi",
+          "lineNumber": 43
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 44
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getYear",
+          "lineNumber": 44
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getMonth",
+          "lineNumber": 44
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getDay",
+          "lineNumber": 44
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getDayInGanZhi",
+          "lineNumber": 45
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getMonthInGanZhi",
+          "lineNumber": 45
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getYearInGanZhiByLiChun",
+          "lineNumber": 46
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getZhiXing",
+          "lineNumber": 46
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getDayTianShen",
+          "lineNumber": 47
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getDayTianShenType",
+          "lineNumber": 47
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getDayYi",
+          "lineNumber": 48
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getDayJi",
+          "lineNumber": 48
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getDayXiongSha",
+          "lineNumber": 48
+        },
+        {
+          "caller": "main",
+          "callee": "lunar.getJieQiTable",
+          "lineNumber": 51
+        },
+        {
+          "caller": "main",
+          "callee": "jie.add",
+          "lineNumber": 52
+        },
+        {
+          "caller": "main",
+          "callee": "point.toYmdHms().replace",
+          "lineNumber": 52
+        },
+        {
+          "caller": "main",
+          "callee": "point.toYmdHms",
+          "lineNumber": 52
+        },
+        {
+          "caller": "main",
+          "callee": "timedelta",
+          "lineNumber": 53
+        },
+        {
+          "caller": "main",
+          "callee": "sorted",
+          "lineNumber": 57
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps(raw, ensure_ascii=False, separators=(\",\", \":\")).encode",
+          "lineNumber": 58
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 58
+        },
+        {
+          "caller": "main",
+          "callee": "path.write_bytes",
+          "lineNumber": 60
+        },
+        {
+          "caller": "main",
+          "callee": "gzip.compress",
+          "lineNumber": 60
+        },
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 62
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT / \"data/reference/manifest.json\").read_text",
+          "lineNumber": 62
+        },
+        {
+          "caller": "main",
+          "callee": "next",
+          "lineNumber": 63
+        },
+        {
+          "caller": "main",
+          "callee": "digest",
+          "lineNumber": 64
+        },
+        {
+          "caller": "main",
+          "callee": "re.search",
+          "lineNumber": 67
+        },
+        {
+          "caller": "main",
+          "callee": "re.escape",
+          "lineNumber": 67
+        },
+        {
+          "caller": "main",
+          "callee": "source.read_text",
+          "lineNumber": 67
+        },
+        {
+          "caller": "main",
+          "callee": "dict",
+          "lineNumber": 68
+        },
+        {
+          "caller": "main",
+          "callee": "re.findall",
+          "lineNumber": 68
+        },
+        {
+          "caller": "main",
+          "callee": "section.group",
+          "lineNumber": 68
+        },
+        {
+          "caller": "main",
+          "callee": "set",
+          "lineNumber": 69
+        },
+        {
+          "caller": "main",
+          "callee": "set",
+          "lineNumber": 69
+        },
+        {
+          "caller": "main",
+          "callee": "BRANCHES.index",
+          "lineNumber": 70
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 71
+        },
+        {
+          "caller": "main",
+          "callee": "path.relative_to",
+          "lineNumber": 71
+        },
+        {
+          "caller": "main",
+          "callee": "digest",
+          "lineNumber": 71
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 73
+        },
+        {
+          "caller": "main",
+          "callee": "source.relative_to",
+          "lineNumber": 73
+        },
+        {
+          "caller": "main",
+          "callee": "digest",
+          "lineNumber": 85
+        },
+        {
+          "caller": "main",
+          "callee": "rule",
+          "lineNumber": 94
+        },
+        {
+          "caller": "main",
+          "callee": "rule",
+          "lineNumber": 95
+        },
+        {
+          "caller": "main",
+          "callee": "rule",
+          "lineNumber": 98
+        },
+        {
+          "caller": "main",
+          "callee": "rule",
+          "lineNumber": 99
+        },
+        {
+          "caller": "main",
+          "callee": "rule",
+          "lineNumber": 100
+        },
+        {
+          "caller": "main",
+          "callee": "rule",
+          "lineNumber": 101
+        },
+        {
+          "caller": "main",
+          "callee": "rule",
+          "lineNumber": 102
+        },
+        {
+          "caller": "main",
+          "callee": "rule",
+          "lineNumber": 103
+        },
+        {
+          "caller": "main",
+          "callee": "DateRules.model_validate",
+          "lineNumber": 104
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT / \"config/mvp2_date_rules.json\").write_text",
+          "lineNumber": 105
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 105
+        },
+        {
+          "caller": "main",
+          "callee": "validated.model_dump",
+          "lineNumber": 105
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT / \"schemas/mvp2_date_rules.schema.json\").write_text",
+          "lineNumber": 106
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 106
+        },
+        {
+          "caller": "main",
+          "callee": "DateRules.model_json_schema",
+          "lineNumber": 106
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT / f\"schemas/{name}.schema.json\").write_text",
+          "lineNumber": 108
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 108
+        },
+        {
+          "caller": "main",
+          "callee": "model.model_json_schema",
+          "lineNumber": 108
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "path.relative_to",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "digest",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "hashlib.sha256(canonical).hexdigest",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "hashlib.sha256",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 111
+        },
+        {
+          "caller": "main",
+          "callee": "sum",
+          "lineNumber": 111
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 111
+        },
+        {
+          "caller": "main",
+          "callee": "days.values",
+          "lineNumber": 111
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 112
+        },
+        {
+          "caller": "main",
+          "callee": "(target / \"manifest.json\").write_text",
+          "lineNumber": 114
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 114
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 115
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 115
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/smoke_dates.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 123,
+      "nonEmptyLines": 116,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 27,
+          "endLine": 119,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 29
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 30
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 31
+        },
+        {
+          "caller": "main",
+          "callee": "socket.socket",
+          "lineNumber": 32
+        },
+        {
+          "caller": "main",
+          "callee": "reservation.bind",
+          "lineNumber": 33
+        },
+        {
+          "caller": "main",
+          "callee": "reservation.getsockname",
+          "lineNumber": 34
+        },
+        {
+          "caller": "main",
+          "callee": "Draft202012Validator",
+          "lineNumber": 35
+        },
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 35
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT/'schemas/date_search_request.schema.json').read_text",
+          "lineNumber": 35
+        },
+        {
+          "caller": "main",
+          "callee": "Draft202012Validator",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT/'schemas/date_search_response.schema.json').read_text",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 37
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT/'examples/date_search_request.json').read_text",
+          "lineNumber": 37
+        },
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 38
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT/'examples/marriage_date_search_request.json').read_text",
+          "lineNumber": 38
+        },
+        {
+          "caller": "main",
+          "callee": "request_validator.validate",
+          "lineNumber": 40
+        },
+        {
+          "caller": "main",
+          "callee": "DateSearchRequest.model_validate",
+          "lineNumber": 41
+        },
+        {
+          "caller": "main",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 43
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 44
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 44
+        },
+        {
+          "caller": "main",
+          "callee": "(Path(tmp)/'server.log').open",
+          "lineNumber": 45
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 45
+        },
+        {
+          "caller": "main",
+          "callee": "time.perf_counter",
+          "lineNumber": 46
+        },
+        {
+          "caller": "main",
+          "callee": "subprocess.Popen",
+          "lineNumber": 47
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 47
+        },
+        {
+          "caller": "main",
+          "callee": "httpx.Client",
+          "lineNumber": 49
+        },
+        {
+          "caller": "main",
+          "callee": "range",
+          "lineNumber": 50
+        },
+        {
+          "caller": "main",
+          "callee": "client.get",
+          "lineNumber": 52
+        },
+        {
+          "caller": "main",
+          "callee": "health.raise_for_status",
+          "lineNumber": 53
+        },
+        {
+          "caller": "main",
+          "callee": "server.poll",
+          "lineNumber": 56
+        },
+        {
+          "caller": "main",
+          "callee": "log.seek",
+          "lineNumber": 57
+        },
+        {
+          "caller": "main",
+          "callee": "RuntimeError",
+          "lineNumber": 58
+        },
+        {
+          "caller": "main",
+          "callee": "log.read",
+          "lineNumber": 58
+        },
+        {
+          "caller": "main",
+          "callee": "time.sleep",
+          "lineNumber": 59
+        },
+        {
+          "caller": "main",
+          "callee": "RuntimeError",
+          "lineNumber": 61
+        },
+        {
+          "caller": "main",
+          "callee": "time.perf_counter",
+          "lineNumber": 62
+        },
+        {
+          "caller": "main",
+          "callee": "client.get('/api/v1/history').json",
+          "lineNumber": 63
+        },
+        {
+          "caller": "main",
+          "callee": "client.get",
+          "lineNumber": 63
+        },
+        {
+          "caller": "main",
+          "callee": "deepcopy",
+          "lineNumber": 65
+        },
+        {
+          "caller": "main",
+          "callee": "time.perf_counter",
+          "lineNumber": 73
+        },
+        {
+          "caller": "main",
+          "callee": "client.post",
+          "lineNumber": 74
+        },
+        {
+          "caller": "main",
+          "callee": "time.perf_counter",
+          "lineNumber": 75
+        },
+        {
+          "caller": "main",
+          "callee": "response.raise_for_status",
+          "lineNumber": 76
+        },
+        {
+          "caller": "main",
+          "callee": "response.json",
+          "lineNumber": 77
+        },
+        {
+          "caller": "main",
+          "callee": "DateSearchResponse.model_validate",
+          "lineNumber": 78
+        },
+        {
+          "caller": "main",
+          "callee": "response_validator.validate",
+          "lineNumber": 79
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 80
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 81
+        },
+        {
+          "caller": "main",
+          "callee": "all",
+          "lineNumber": 83
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 85
+        },
+        {
+          "caller": "main",
+          "callee": "measurements.append",
+          "lineNumber": 89
+        },
+        {
+          "caller": "main",
+          "callee": "round",
+          "lineNumber": 89
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 90
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 90
+        },
+        {
+          "caller": "main",
+          "callee": "sum",
+          "lineNumber": 93
+        },
+        {
+          "caller": "main",
+          "callee": "deepcopy",
+          "lineNumber": 94
+        },
+        {
+          "caller": "main",
+          "callee": "client.post('/api/v2/auspicious-dates/search',json=detail).json",
+          "lineNumber": 97
+        },
+        {
+          "caller": "main",
+          "callee": "client.post",
+          "lineNumber": 97
+        },
+        {
+          "caller": "main",
+          "callee": "DateSearchResponse.model_validate",
+          "lineNumber": 98
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT/'examples/date_search_response.json').write_text",
+          "lineNumber": 99
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 99
+        },
+        {
+          "caller": "main",
+          "callee": "deepcopy",
+          "lineNumber": 100
+        },
+        {
+          "caller": "main",
+          "callee": "client.post",
+          "lineNumber": 102
+        },
+        {
+          "caller": "main",
+          "callee": "client.get('/api/v1/history').json",
+          "lineNumber": 103
+        },
+        {
+          "caller": "main",
+          "callee": "client.get",
+          "lineNumber": 103
+        },
+        {
+          "caller": "main",
+          "callee": "client.get('/api/v2/auspicious-dates/rules').json",
+          "lineNumber": 104
+        },
+        {
+          "caller": "main",
+          "callee": "client.get",
+          "lineNumber": 104
+        },
+        {
+          "caller": "main",
+          "callee": "server.terminate",
+          "lineNumber": 107
+        },
+        {
+          "caller": "main",
+          "callee": "server.wait",
+          "lineNumber": 108
+        },
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 109
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT/'data/date_calendar/manifest.json').read_text",
+          "lineNumber": 109
+        },
+        {
+          "caller": "main",
+          "callee": "datetime.now(timezone.utc).isoformat",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "datetime.now",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "platform.python_version",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "platform.system",
+          "lineNumber": 111
+        },
+        {
+          "caller": "main",
+          "callee": "platform.machine",
+          "lineNumber": 111
+        },
+        {
+          "caller": "main",
+          "callee": "hashlib.sha256((ROOT/'config/mvp2_date_rules.json').read_bytes()).hexdigest",
+          "lineNumber": 112
+        },
+        {
+          "caller": "main",
+          "callee": "hashlib.sha256",
+          "lineNumber": 112
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT/'config/mvp2_date_rules.json').read_bytes",
+          "lineNumber": 112
+        },
+        {
+          "caller": "main",
+          "callee": "round",
+          "lineNumber": 113
+        },
+        {
+          "caller": "main",
+          "callee": "args.output.parent.mkdir",
+          "lineNumber": 117
+        },
+        {
+          "caller": "main",
+          "callee": "args.output.write_text",
+          "lineNumber": 118
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 118
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 119
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 119
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/smoke_mvp.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 38,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/smoke_source_explanations.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "get",
+          "startLine": 11,
+          "endLine": 13,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 16,
+          "endLine": 31,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "get",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get",
+          "callee": "urllib.request.urlopen",
+          "lineNumber": 12
+        },
+        {
+          "caller": "get",
+          "callee": "json.load",
+          "lineNumber": 13
+        },
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 17
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT / \"examples/draw_response.json\").read_text",
+          "lineNumber": 17
+        },
+        {
+          "caller": "main",
+          "callee": "get",
+          "lineNumber": 18
+        },
+        {
+          "caller": "main",
+          "callee": "get",
+          "lineNumber": 19
+        },
+        {
+          "caller": "main",
+          "callee": "SourceExplanation.model_validate",
+          "lineNumber": 20
+        },
+        {
+          "caller": "main",
+          "callee": "get",
+          "lineNumber": 21
+        },
+        {
+          "caller": "main",
+          "callee": "get",
+          "lineNumber": 22
+        },
+        {
+          "caller": "main",
+          "callee": "get",
+          "lineNumber": 23
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT / \"examples/source_explanation.json\").write_text",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT / \"docs/research/source_explanation_http_smoke.json\").write_text",
+          "lineNumber": 30
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 30
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 31
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    }
+  ]
+}

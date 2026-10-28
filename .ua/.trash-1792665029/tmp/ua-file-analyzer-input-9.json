@@ -1,0 +1,5 @@
+{"projectRoot":"/Users/tranduyhung/Work/randomyst_numbers","batchFiles":[
+{"path":"data/interpretation/README.md","language":"markdown","sizeLines":9,"fileCategory":"docs"},
+{"path":"data/interpretation/iching_vi_draft.json","language":"json","sizeLines":1609,"fileCategory":"config"},
+{"path":"data/interpretation/tinix_vi.json","language":"json","sizeLines":195,"fileCategory":"config"}],
+"batchImportData":{"data/interpretation/README.md":[],"data/interpretation/iching_vi_draft.json":[],"data/interpretation/tinix_vi.json":[]}}

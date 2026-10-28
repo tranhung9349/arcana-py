@@ -1,0 +1,37 @@
+{
+  "version": "date-selection-2026-10-27-v1",
+  "system_prompt": "docs/prompts/date_selection_v1.system.txt",
+  "model_called": false,
+  "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+  "case_count": 7,
+  "files": [
+    {
+      "path": "docs/prompts/date_selection_v1.system.txt",
+      "sha256": "ca132a7a36036a00d55112273b868ba80dfa64bd5227f8f4d9ab4758b324ccb4"
+    },
+    {
+      "path": "data/interpretation/date_v1/cases.json",
+      "sha256": "bf5ad4467d76401c6daebfa4c52e86de661ca7bceb31b122f4f98e64e687b2c7"
+    },
+    {
+      "path": "research_tools/date_interpretation_prompt.py",
+      "sha256": "e67b1a054a1620f941cccc73c4899aa0bbc80ec696a8762b0370b30b3bb21702"
+    },
+    {
+      "path": "randomyst/date_ai_context.py",
+      "sha256": "8b9c92d4c8fced470807a4a9c70921849210ed8b226f0235e153fa4c73fed99b"
+    },
+    {
+      "path": "randomyst/date_reading.py",
+      "sha256": "4f31ae82afc51cd3eb0c6861c53e956b6b8536511bea114d096e1a5879833cd5"
+    },
+    {
+      "path": "config/mvp2_date_rules.json",
+      "sha256": "fc95e9b3013825e44382b2c53377c61837986b8f76ad940419f6bbec258c128e"
+    },
+    {
+      "path": "schemas/date_reading_context.schema.json",
+      "sha256": "69c4e2789ec17ec41eb47c827329f9b2d3ad4eabf8fed846ed8a394e852086c9"
+    }
+  ]
+}

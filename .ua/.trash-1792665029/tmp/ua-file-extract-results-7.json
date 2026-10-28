@@ -1,0 +1,192 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [
+    "requirements-dev.txt",
+    "requirements-lock.txt",
+    "requirements.txt"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 4
+    }
+  },
+  "results": [
+    {
+      "path": "MVP1_HANDOFF.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 35,
+      "nonEmptyLines": 26,
+      "sections": [
+        {
+          "heading": "Bàn giao MVP 1 → MVP 2",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Baseline giữ lại",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Bằng chứng và tài liệu",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Điểm cần mang sang phiên MVP 2",
+          "level": 2,
+          "line": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "MVP2_HANDOFF.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 47,
+      "nonEmptyLines": 34,
+      "sections": [
+        {
+          "heading": "MVP 2 — Bản bàn giao local",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 111,
+      "nonEmptyLines": 75,
+      "sections": [
+        {
+          "heading": "Randomyst Numbers — MVP 2",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Tra ngày theo việc — MVP 2",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Chạy",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "Luồng lịch Trung Quốc UTC+8 — rules v4",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "Luật sinh số",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "API và lịch sử",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "Kiểm chứng",
+          "level": 2,
+          "line": 82
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "dan_gian_config.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 67,
+      "nonEmptyLines": 67,
+      "sections": [
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "source",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "pool",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "display_width",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "bonus_delta",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "award_mode",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "deduplication",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "requires_not_controlling_primary_useful_god",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "entries",
+          "level": 1,
+          "line": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    }
+  ]
+}

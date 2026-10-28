@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-10-27T07:32:24.620264+00:00",
+  "provider": {
+    "configured": true,
+    "model": "deepseek-v4.1-flash",
+    "provider_host": "rexapf.com"
+  },
+  "synthetic_data_only": true,
+  "results": [
+    {
+      "method": "BAZI",
+      "consultation_id": "381711a8-5e4a-42f7-9935-2063dfaad195",
+      "ai_reading_id": "2910d840f48f45c18aec720e9fadf7737c557a82474e5c5db3e51cf048f79df6",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "prompt_version": "plain-vietnamese-2026-10-27-v4.1",
+      "context_sha256": "cf67150c15a72c56a9a5260d9c98625a5dbf6161040eae4acf4ead7650552407",
+      "case_ids": [
+        "bazi-07-study",
+        "bazi-09-priority"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 16628,
+        "completion_tokens": 7538,
+        "total_tokens": 24166
+      },
+      "generation_passes": 1,
+      "generate_seconds": 41.034,
+      "cache_replay_ms": 27.063,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Điều đáng chú ý nhất là không nên chốt một cách học chỉ vì một nhóm Thập Thần lộ hay tàng, hoặc vì một cặp hợp–xung. Nhật chủ Đinh Hỏa sinh vào tháng Dậu, mùa Kim không trợ lực, lại có căn Hỏa trong tàng can năm và can Ấn sinh trợ; các dấu hiệu chưa cùng hướng nên khí thế và hướng điều tiết còn mở. Khi học và thực hành, điều hữu ích là dùng một vòng tự kiểm tra giữa tiếp nhận và làm lại, thay vì suy năng lực từ nhãn."
+    },
+    {
+      "method": "MAIHOA",
+      "consultation_id": "338ea908-a663-437e-9113-6c6d6ccca155",
+      "ai_reading_id": "3085cdc6449c7a128bfc1a7b8ea62c517ab53e266a1d128daabc3a50f827b6f2",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "prompt_version": "plain-vietnamese-2026-10-27-v4.1",
+      "context_sha256": "3c46d6b347375343b92bd801057ad8d2fafcdabf60f272522b1ada62fe1ac41d",
+      "case_ids": [
+        "maihoa-06-comparison",
+        "maihoa-05-turning"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 16790,
+        "completion_tokens": 7819,
+        "total_tokens": 24609
+      },
+      "generation_passes": 1,
+      "generate_seconds": 38.404,
+      "cache_replay_ms": 34.837,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Kế hoạch học thêm kỹ năng đang có các quan hệ nghiêng thuận ở phần đầu, phần giữa và phần cuối: Dụng sinh Thể, Hỗ phía Thể tỷ hòa, Thể khắc Hỗ phía Dụng, và Biến sinh Thể. Điều cần chuẩn bị kỹ là chặng giữa và tiêu chí hoàn tất, vì sức Thể chưa được xác định và các nhận định này đều còn ở mức có điều kiện."
+    },
+    {
+      "method": "LIUYAO",
+      "consultation_id": "8bf6aa3b-5bfc-496c-be70-f6d67269a484",
+      "ai_reading_id": "630228143629a449905c87aece35550f0b31be91319c4f59f0b2dbd1f7e171e4",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "prompt_version": "plain-vietnamese-2026-10-27-v4.1",
+      "context_sha256": "f032f102e0b1b8ade9d55aa325973c1a10685dec74226e66a3d676d68f190bc9",
+      "case_ids": [
+        "liuyao-04-document",
+        "liuyao-06-timing"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 15310,
+        "completion_tokens": 7747,
+        "total_tokens": 23057
+      },
+      "generation_passes": 1,
+      "generate_seconds": 32.522,
+      "cache_replay_ms": 37.832,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "analysis_sections": 3,
+      "summary": "Hào Phụ mẫu đại diện bản đề cương có nền sinh phù và sinh cho Thế, nhưng Thế còn Tuần Không, bị hồi đầu khắc và hóa Nguyệt Phá, nên chưa đủ kết luận bản đề cương đã thuận trọn vẹn. Việc rà soát nên bám vào yêu cầu thực tế của nơi dùng, vì trạng thái hào Thế không chỉ ra mục nội dung nào cần sửa."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "config:docs/archive/draw_request_v3.json",
+      "type": "config",
+      "name": "draw_request_v3.json",
+      "filePath": "docs/archive/draw_request_v3.json",
+      "summary": "Mẫu request gieo số lưu trữ từ rules v3, gồm request_id, thông tin sinh (giờ dân sự UTC+7, kinh/vĩ độ MANUAL) và cấu hình gieo CUSTOM với timestamp và vị trí riêng. Đây là bản lịch sử, không phản ánh contract runtime hiện hành.",
+      "tags": ["lưu-trữ", "mẫu-request", "api-schema", "dữ-liệu-mẫu"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:docs/archive/draw_response_v3.json",
+      "type": "config",
+      "name": "draw_response_v3.json",
+      "filePath": "docs/archive/draw_response_v3.json",
+      "summary": "Response gieo số mẫu lưu trữ theo schema draw-response-v1 và rules mvp1-logic-2026-10-11-v3, chứa sáu số, trạng thái OPTIMAL, điểm/ngưỡng, cảnh báo vùng giáp ranh Can Chi, disclaimer và trace chi tiết (giờ mặt trời thật, EoT, kinh độ). Lưu lại hành vi cũ dựa trên lịch Việt Nam/TST, nay đã thay bằng v4.",
+      "tags": ["lưu-trữ", "mẫu-response", "api-schema", "truy-vết", "dữ-liệu-mẫu"],
+      "complexity": "complex",
+      "languageNotes": "JSON lớn (~1.100 dòng) chủ yếu do khối trace lồng sâu ghi lại toàn bộ quá trình tính thời gian, Bát Tự, Mai Hoa và từng lượt chọn số."
+    },
+    {
+      "id": "document:docs/archive/logic_plan_mvp1_v3.md",
+      "type": "document",
+      "name": "logic_plan_mvp1_v3.md",
+      "filePath": "docs/archive/logic_plan_mvp1_v3.md",
+      "summary": "Bản lưu trữ đặc tả logic MVP 1 phiên bản v3 (lịch Việt Nam, giờ mặt trời thật TST, kinh độ nơi gieo), mô tả quy tắc Mai Hoa, ma trận chấm số, bốn lớp trọng số (Thiên Thời, Hào Động, Thần Sát, Dân Gian), thuật toán giải sát, bộ sinh β = 2 và trạng thái bản chạy 11/10/2026. Đã được thay thế bởi rules v4 dùng lịch Bắc Kinh UTC+8, không dùng làm cấu hình runtime.",
+      "tags": ["documentation", "lưu-trữ", "đặc-tả-logic", "mai-hoa", "lịch-việt-nam"],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/archive/logic_plan_mvp2_pre_r1.md",
+      "type": "document",
+      "name": "logic_plan_mvp2_pre_r1.md",
+      "filePath": "docs/archive/logic_plan_mvp2_pre_r1.md",
+      "summary": "Proposal MVP 2 trước vòng R1 cho tính năng tra ngày đẹp theo việc (cưới hỏi, khai trương, xuất hành) và hồ sơ sinh, gồm ba bộ lọc ngày chung, chấm điểm trừ lùi, ranh thời gian, kiến trúc module/endpoint đề xuất và thứ tự triển khai. Là bản lịch sử; đặc tả final nằm ở docs/logic_plan_mvp2.md.",
+      "tags": ["documentation", "lưu-trữ", "proposal", "tra-ngày-đẹp", "kiến-trúc"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {"source": "config:docs/archive/draw_request_v3.json", "target": "config:examples/draw_request.json", "type": "related", "direction": "forward", "weight": 0.5},
+    {"source": "config:docs/archive/draw_request_v3.json", "target": "config:docs/archive/draw_response_v3.json", "type": "related", "direction": "forward", "weight": 0.5},
+    {"source": "config:docs/archive/draw_response_v3.json", "target": "config:examples/draw_response.json", "type": "related", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp1_v3.md", "target": "document:docs/logic_plan_mvp1.md", "type": "related", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp1_v3.md", "target": "config:docs/archive/draw_response_v3.json", "type": "related", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp1_v3.md", "target": "file:randomyst/engine.py", "type": "documents", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp1_v3.md", "target": "file:randomyst/time_engine.py", "type": "documents", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp1_v3.md", "target": "file:randomyst/maihoa.py", "type": "documents", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp1_v3.md", "target": "file:randomyst/bazi.py", "type": "documents", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp1_v3.md", "target": "file:randomyst/sampling.py", "type": "documents", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp1_v3.md", "target": "file:calendar_adapter/vietnamese.py", "type": "documents", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp1_v3.md", "target": "file:research_tools/legacy_time_engine.py", "type": "related", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp2_pre_r1.md", "target": "document:docs/logic_plan_mvp2.md", "type": "related", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp2_pre_r1.md", "target": "file:randomyst/date_calendar.py", "type": "documents", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp2_pre_r1.md", "target": "file:randomyst/date_rules.py", "type": "documents", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp2_pre_r1.md", "target": "file:randomyst/date_engine.py", "type": "documents", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp2_pre_r1.md", "target": "file:randomyst/bazi.py", "type": "documents", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp2_pre_r1.md", "target": "config:config/mvp2_date_rules.json", "type": "related", "direction": "forward", "weight": 0.5},
+    {"source": "document:docs/archive/logic_plan_mvp2_pre_r1.md", "target": "file:tests/test_auspicious_dates.py", "type": "related", "direction": "forward", "weight": 0.5}
+  ]
+}

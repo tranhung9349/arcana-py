@@ -1,0 +1,202 @@
+{
+  "$defs": {
+    "Casting": {
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "default": "CURRENT",
+          "enum": [
+            "CURRENT",
+            "CUSTOM"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "clicked_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Clicked At"
+        },
+        "custom_timestamp": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Custom Timestamp"
+        },
+        "location": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Location"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "clock_uncertainty_seconds": {
+          "anyOf": [
+            {
+              "maximum": 86400,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Clock Uncertainty Seconds"
+        }
+      },
+      "title": "Casting",
+      "type": "object"
+    },
+    "Location": {
+      "additionalProperties": false,
+      "properties": {
+        "longitude": {
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Longitude",
+          "type": "number"
+        },
+        "latitude": {
+          "anyOf": [
+            {
+              "maximum": 90,
+              "minimum": -90,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Latitude"
+        },
+        "source": {
+          "default": "MANUAL",
+          "enum": [
+            "MANUAL",
+            "DEVICE",
+            "IP",
+            "DEFAULT"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "accuracy_m": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Accuracy M"
+        },
+        "longitude_uncertainty_degrees": {
+          "anyOf": [
+            {
+              "maximum": 180,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Longitude Uncertainty Degrees"
+        },
+        "acquired_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Acquired At"
+        },
+        "fallback_reason": {
+          "anyOf": [
+            {
+              "maxLength": 200,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fallback Reason"
+        }
+      },
+      "required": [
+        "longitude"
+      ],
+      "title": "Location",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "request_id": {
+      "format": "uuid",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "question": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Question",
+      "type": "string"
+    },
+    "topic": {
+      "default": "GENERAL",
+      "enum": [
+        "GENERAL",
+        "WEALTH",
+        "TRADE",
+        "PLANNING",
+        "MARRIAGE",
+        "TRAVEL"
+      ],
+      "title": "Topic",
+      "type": "string"
+    },
+    "casting": {
+      "$ref": "#/$defs/Casting"
+    }
+  },
+  "required": [
+    "request_id",
+    "question",
+    "casting"
+  ],
+  "title": "MaiHoaRequest",
+  "type": "object"
+}

@@ -1,0 +1,357 @@
+{
+  "success": true,
+  "issues": [],
+  "inventoryFiles": 123,
+  "coveredFiles": 123,
+  "deterministicImportEdges": 71,
+  "coreSchemaValid": true,
+  "coreIssues": [],
+  "sourceSnapshotSha256": "4434be3a79bba589cdd293665257a536c50bb21c7abcd53f1358511564a659ec",
+  "sourceUnchanged": true,
+  "gitAvailable": false,
+  "previousSymbolsChecked": 1,
+  "missingPreviousSymbols": [],
+  "validatedAt": "2026-10-12T16:13:34.981Z",
+  "warnings": [
+    "Node 'file:randomyst/__init__.py' has no edges (orphan)",
+    "Node 'file:research_tools/__init__.py' has no edges (orphan)"
+  ],
+  "phaseWarnings": [
+    "Các method Python chỉ có tên trong classes.methods, không có range parser; node method bỏ lineRange.",
+    "Parser JavaScript bỏ sót khai báo function trong IIFE; 4 named function của dates.js bổ sung từ source, không có range parser.",
+    "Callback submit ẩn danh được ghi ở hành vi/quan hệ file dates.js, không tạo pseudo-symbol.",
+    "gz/html/css bị parser skip nhưng vẫn có parent được đọc metadata hoặc source; không có filesUnreadable.",
+    "Các method validator Pydantic ngắn được giữ như validation hooks công khai của contract xuất JSON Schema.",
+    "Audit khả thi giữ scope nghiên cứu trước R1; không dùng các remaining_gaps lịch sử làm trạng thái runtime hiện tại.",
+    "Phase3 đã sửa nhận định writes không được hỗ trợ: global schema có writes_to/reads_from/validates; candidate đã ghi đúng quan hệ đọc/ghi artifact và canonical schema IDs. Batch gốc còn giữ evidence ban đầu, không dùng để merge lại candidate đã review."
+  ],
+  "stats": {
+    "totalNodes": 382,
+    "totalEdges": 1245,
+    "totalLayers": 10,
+    "tourSteps": 15,
+    "nodeTypes": {
+      "file": 53,
+      "class": 57,
+      "function": 176,
+      "table": 1,
+      "config": 43,
+      "document": 20,
+      "schema": 14,
+      "concept": 6,
+      "module": 3,
+      "endpoint": 8,
+      "resource": 1
+    },
+    "edgeTypes": {
+      "imports": 71,
+      "contains": 326,
+      "exports": 159,
+      "tested_by": 19,
+      "configures": 12,
+      "reads_from": 39,
+      "writes_to": 26,
+      "calls": 108,
+      "related": 185,
+      "depends_on": 96,
+      "inherits": 27,
+      "documents": 129,
+      "defines_schema": 21,
+      "validates": 27
+    }
+  },
+  "fileCategories": {
+    "code": 49,
+    "config": 49,
+    "docs": 20,
+    "infra": 0,
+    "data": 0,
+    "script": 1,
+    "markup": 4
+  },
+  "fingerprintFiles": 123,
+  "fingerprintCoverageComplete": true,
+  "fingerprintHashesValid": true,
+  "architecture": {
+    "layers": 10,
+    "fileLevelNodeCount": 140,
+    "sourceFileCount": 123,
+    "exactlyOnceCoverage": true,
+    "preservedLayerIds": 9,
+    "newLayerId": "layer:date-search",
+    "mergedLayerId": "layer:future-llm",
+    "counts": {
+      "layer:ui": 4,
+      "layer:api-storage": 13,
+      "layer:calendar-divination": 3,
+      "layer:generation-scoring": 2,
+      "layer:date-search": 12,
+      "layer:readonly-explanation": 21,
+      "layer:pinned-sources": 12,
+      "layer:policy-operations": 12,
+      "layer:verification": 37,
+      "layer:legacy-research": 24
+    },
+    "notes": [
+      "Phân tầng dùng 140 file-level nodes gồm endpoint/table và schema definitions, thuộc 123 source files; không gán function/class/concept/module.",
+      "Giữ chín ID tầng baseline, gộp future LLM vào readonly-explanation và thêm tầng date-search riêng để tổng tầng là mười.",
+      "Structural script đã tránh nhầm migration_validation reports thành migration files, loại test khỏi API-handler inventory và deduplicate physical paths ở pipeline metadata; không re-resolve imports hoặc đọc lại source.",
+      "Không có Docker/Compose/K8s/Terraform/CI deployment trong inventory; gzip corpus resource thuộc nhánh dữ liệu chọn ngày."
+    ]
+  },
+  "tour": {
+    "steps": 15,
+    "references": 63,
+    "uniqueNodeReferences": 57,
+    "titles": [
+      "Tổng quan ứng dụng",
+      "Điểm vào API",
+      "Hợp đồng hai luồng",
+      "Lịch và lá số",
+      "Gieo bộ sáu số",
+      "Lưu phiên, đọc lời giải",
+      "Corpus và ranh ngày",
+      "Luật ứng viên v1",
+      "Dựng hồ sơ một lần",
+      "Gate trước điểm số",
+      "Lịch và chi tiết giờ",
+      "Kiểm thử và HTTP",
+      "Phạm vi bằng chứng",
+      "Ranh giới bản lưu",
+      "Hợp đồng LLM dự kiến"
+    ],
+    "allReferencesValid": true,
+    "allLayersVisited": true,
+    "layerCoverage": {
+      "layer:ui": 3,
+      "layer:api-storage": 5,
+      "layer:calendar-divination": 3,
+      "layer:generation-scoring": 2,
+      "layer:date-search": 12,
+      "layer:readonly-explanation": 7,
+      "layer:pinned-sources": 3,
+      "layer:policy-operations": 6,
+      "layer:verification": 12,
+      "layer:legacy-research": 4
+    },
+    "notes": [
+      "Topology structural script thành công trên current input: 140 file-level nodes, all 1245 edges, 508 file-level edges phân tích.",
+      "Heuristic entrypoint/BFS chọn CLI calendar_adapter/__main__.py do tên và fan-in/out; tour dùng README và FastAPI API entrypoint theo summary/runtime context, đặt CLI legacy ở bước 14.",
+      "Tour giữ facts dùng corpus ghim và policy v1, Tam Nương tắt, natal một lần/chủ thể, hard gate cùng UNRESOLVED khi evidence thực sự chưa rõ.",
+      "Report cold93 riêng được phân biệt với report suite 31→93; không suy load/P95 hay OS-cache cold từ lần đo first date-search local."
+    ]
+  },
+  "reuse": {
+    "mode": "full-scan-with-source-hash-reuse",
+    "unchangedFiles": 89,
+    "newFiles": 29,
+    "modifiedFiles": 5,
+    "removedFiles": 0,
+    "reusedNodes": 272,
+    "reusedEdges": 765
+  },
+  "parserCoverage": {
+    "runtime": [
+      {
+        "batchIndex": 1,
+        "outputs": [
+          "batch-1.json"
+        ],
+        "nodes": 10,
+        "edges": 37,
+        "deterministicImports": 7,
+        "files": 1,
+        "parserFilesAnalyzed": 1,
+        "filesSkipped": [],
+        "filesUnreadable": [],
+        "previousSymbols": {
+          "checked": 1,
+          "surviving": [
+            "function:randomyst/api.py:create_app"
+          ],
+          "deleted": [],
+          "unresolved": []
+        },
+        "partSizes": [
+          {
+            "file": "batch-1.json",
+            "nodes": 10,
+            "edges": 37
+          }
+        ]
+      },
+      {
+        "batchIndex": 2,
+        "outputs": [
+          "batch-2-part-1.json",
+          "batch-2-part-2.json"
+        ],
+        "nodes": 43,
+        "edges": 124,
+        "deterministicImports": 16,
+        "files": 5,
+        "parserFilesAnalyzed": 5,
+        "filesSkipped": [],
+        "filesUnreadable": [],
+        "previousSymbols": {
+          "checked": 0,
+          "surviving": [],
+          "deleted": [],
+          "unresolved": []
+        },
+        "partSizes": [
+          {
+            "file": "batch-2-part-1.json",
+            "nodes": 19,
+            "edges": 64
+          },
+          {
+            "file": "batch-2-part-2.json",
+            "nodes": 24,
+            "edges": 60
+          }
+        ]
+      },
+      {
+        "batchIndex": 3,
+        "outputs": [
+          "batch-3.json"
+        ],
+        "nodes": 28,
+        "edges": 105,
+        "deterministicImports": 4,
+        "files": 3,
+        "parserFilesAnalyzed": 3,
+        "filesSkipped": [],
+        "filesUnreadable": [],
+        "previousSymbols": {
+          "checked": 0,
+          "surviving": [],
+          "deleted": [],
+          "unresolved": []
+        },
+        "partSizes": [
+          {
+            "file": "batch-3.json",
+            "nodes": 28,
+            "edges": 105
+          }
+        ]
+      },
+      {
+        "batchIndex": 17,
+        "outputs": [
+          "batch-17.json"
+        ],
+        "nodes": 11,
+        "edges": 39,
+        "deterministicImports": 0,
+        "files": 7,
+        "parserFilesAnalyzed": 4,
+        "filesSkipped": [
+          "data/date_calendar/almanac_2024_2030.json.gz",
+          "web/index.html",
+          "web/style.css"
+        ],
+        "filesUnreadable": [],
+        "previousSymbols": {
+          "checked": 0,
+          "surviving": [],
+          "deleted": [],
+          "unresolved": []
+        },
+        "partSizes": [
+          {
+            "file": "batch-17.json",
+            "nodes": 11,
+            "edges": 39
+          }
+        ]
+      }
+    ],
+    "support": [
+      {
+        "batchIndex": 7,
+        "files": 3,
+        "nodes": 3,
+        "edges": 43,
+        "imports": 0,
+        "skipped": 0,
+        "unreadable": 0,
+        "output": "/Users/tranduyhung/Work/randomyst_numbers/.ua/intermediate/batch-7.json"
+      },
+      {
+        "batchIndex": 8,
+        "files": 1,
+        "nodes": 1,
+        "edges": 7,
+        "imports": 0,
+        "skipped": 0,
+        "unreadable": 0,
+        "output": "/Users/tranduyhung/Work/randomyst_numbers/.ua/intermediate/batch-8.json"
+      },
+      {
+        "batchIndex": 11,
+        "files": 1,
+        "nodes": 1,
+        "edges": 20,
+        "imports": 0,
+        "skipped": 0,
+        "unreadable": 0,
+        "output": "/Users/tranduyhung/Work/randomyst_numbers/.ua/intermediate/batch-11.json"
+      },
+      {
+        "batchIndex": 12,
+        "files": 1,
+        "nodes": 1,
+        "edges": 7,
+        "imports": 0,
+        "skipped": 0,
+        "unreadable": 0,
+        "output": "/Users/tranduyhung/Work/randomyst_numbers/.ua/intermediate/batch-12.json"
+      },
+      {
+        "batchIndex": 13,
+        "files": 5,
+        "nodes": 5,
+        "edges": 25,
+        "imports": 0,
+        "skipped": 0,
+        "unreadable": 0,
+        "output": "/Users/tranduyhung/Work/randomyst_numbers/.ua/intermediate/batch-13.json"
+      },
+      {
+        "batchIndex": 15,
+        "files": 3,
+        "nodes": 3,
+        "edges": 12,
+        "imports": 0,
+        "skipped": 0,
+        "unreadable": 0,
+        "output": "/Users/tranduyhung/Work/randomyst_numbers/.ua/intermediate/batch-15.json"
+      },
+      {
+        "batchIndex": 16,
+        "files": 3,
+        "nodes": 3,
+        "edges": 19,
+        "imports": 0,
+        "skipped": 0,
+        "unreadable": 0,
+        "output": "/Users/tranduyhung/Work/randomyst_numbers/.ua/intermediate/batch-16.json"
+      }
+    ]
+  },
+  "notes": [
+    "Không có Git; dùng snapshot SHA256 của 123 tệp, baseline unversioned và autoUpdate=false.",
+    "Hai orphan là package initializer rỗng; không thêm quan hệ thiếu bằng chứng chỉ để xóa warning.",
+    "Method Python và function JavaScript trong IIFE không có range parser thì không bịa lineRange; source/metadata được phân tích bổ sung.",
+    "HTML/CSS/gzip không có AST trong bộ trích xuất này nhưng vẫn có parent node và fingerprint. Corpus gzip chỉ được đưa vào graph bằng metadata.",
+    "Bundled fingerprint của gzip dùng nội dung giải mã UTF-8; snapshot độc lập kiểm SHA256 bytes nguyên bản của corpus.",
+    "Các luật/ngưỡng MVP 2 là policy v1; graph mô tả code và bằng chứng, không xác nhận hiệu quả chọn ngày ngoài thực tế.",
+    "Bản graph trước R5 giữ tại snapshots/r5-before-20261012T125758Z/.",
+    "Phiên agent cuối dừng vì hạn mức sử dụng sau khi hoàn tất architecture/tour; root chạy lại core schema, source, inventory, import, fingerprint gates và lưu kết quả bằng công cụ local."
+  ],
+  "dashboardVerified": false,
+  "dashboardNote": "Không mở lại dashboard trong refresh R5; schema và tham chiếu graph đã kiểm bằng core validator. Preview ứng dụng sản phẩm vẫn giữ tại localhost:8766."
+}

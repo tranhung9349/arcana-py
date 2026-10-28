@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "issues": [],
+  "inventoryFiles": 94,
+  "coveredFiles": 94,
+  "deterministicImportEdges": 49,
+  "coreSchemaValid": true,
+  "coreIssues": [],
+  "sourceSnapshotSha256": "568f2d128174d6c2fcdb4a9631a22a46d85eac0e78cbdc6b858f023c8646c5c8",
+  "warnings": [],
+  "stats": {
+    "totalNodes": 284,
+    "totalEdges": 840,
+    "totalLayers": 10,
+    "tourSteps": 15,
+    "nodeTypes": {
+      "file": 44,
+      "function": 128,
+      "class": 38,
+      "endpoint": 6,
+      "table": 1,
+      "document": 14,
+      "config": 33,
+      "schema": 11,
+      "concept": 6,
+      "module": 3
+    },
+    "edgeTypes": {
+      "imports": 49,
+      "contains": 227,
+      "exports": 126,
+      "tested_by": 17,
+      "calls": 103,
+      "defines_schema": 22,
+      "serves": 1,
+      "configures": 9,
+      "reads_from": 27,
+      "writes_to": 8,
+      "related": 119,
+      "depends_on": 41,
+      "inherits": 13,
+      "documents": 65,
+      "deploys": 1,
+      "validates": 12
+    }
+  },
+  "sourceUnchanged": true,
+  "gitAvailable": false,
+  "notes": [
+    "Đồ thị gắn với SHA256 snapshot; project chưa có Git nên autoUpdate giữ false.",
+    "Không bịa lineRange cho method khi parser không cung cấp."
+  ],
+  "dashboardVerified": true,
+  "dashboardNote": "Dashboard tải được graph; banner freshness xuất hiện vì project chưa có Git HEAD. SHA256 của cả 94 file đã kiểm khớp snapshot."
+}

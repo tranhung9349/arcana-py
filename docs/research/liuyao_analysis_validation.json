@@ -1,0 +1,74 @@
+{
+  "status": "PASSED",
+  "recorded_at": "2026-10-26T08:51:39.446104+00:00",
+  "rules_version": "liuyao-analysis-2026-10-26-v1",
+  "rules_sha256": "5553fe5258ca5c7f396d4f877fa97575b5be83799206d7208b8c29199fbc8834",
+  "tests": {
+    "command": "RANDOMYST_DATABASE=/tmp/randomyst_analysis_test.sqlite3 .venv/bin/python -m unittest discover -s tests -v",
+    "passed": 122,
+    "new_test_methods": 16,
+    "seconds": 12.836,
+    "log": "/tmp/randomyst_liuyao_full_tests.log",
+    "coverage": [
+      "64 hexagrams × 8 explicit topics (512 cases)",
+      "4096 synthetic Na Jia 6/7/8/9 patterns, moving positions preserved",
+      "Classical Heng→Da Guo: Shen month, Gui Mao day, dark-active Shi line, advancing fifth line",
+      "Gou hidden wealth Yin under Hai at line 2",
+      "Visible void use-god is not replaced by hidden line",
+      "Returning generation/control; all eight advance pairs and reversals; changed void/month clash",
+      "Multiple candidates, provisional selection, explicit override and ambiguous result",
+      "Conditional adversary and generation chain remain unresolved",
+      "Supported career use-god with void world line remains mixed",
+      "Old casting snapshots unchanged, cached replay, concurrent compute once, rules hash change, DB reopen, 404/422"
+    ]
+  },
+  "artifact_checks": {
+    "python_schema": "JSON Schema Draft 2020-12 with format checks: request and response examples passed",
+    "javascript": "node --check web/liuyao.js and web/coins.js passed"
+  },
+  "ui": {
+    "url": "http://127.0.0.1:8765/",
+    "viewport": {
+      "width": 686,
+      "height": 979
+    },
+    "document_scroll_width": 686,
+    "console_errors_and_warnings": [],
+    "verified": [
+      "Open prior saved Ký Tế consultation and create analysis",
+      "Switch old consultation from general to wealth; show hidden wealth Ngọ at line 3",
+      "Create new random consultation with CAREER topic selected; original Tỉnh and changed Tốn",
+      "Select explicit Quan quỷ Thân at line 4; reanalyse without new coins",
+      "Reload and open history; CAREER, line 4 and saved narrative retained",
+      "Visually inspect selected use-god, world-line constraint, narrative and four role cards"
+    ],
+    "screenshot": "docs/research/liuyao_analysis_ui.png"
+  },
+  "limits": [
+    "Not a predictive accuracy or professional Liu Yao validation",
+    "No full tam-hop transformations, tomb/absolute or all interaction rescues",
+    "Timing conditions do not promise a date",
+    "No real mobile device or load testing; viewport inspection only",
+    "Local preview uses /tmp/randomyst_coins_ui.sqlite3"
+  ],
+  "files_sha256": {
+    "randomyst/liuyao_analysis.py": "22f232f5c4950986b02e7665888422f4b1e4f419333a15934ac964a1b55af69e",
+    "randomyst/liuyao_models.py": "bd154be85faf870271c5c318658aaff8f6d5415ab865d2f9d1fc33b78e79c3d9",
+    "randomyst/liuyao_store.py": "a2fc9cc7b11c915f33c0122b84d64f3ea9a6a7c38a8d8d06b1ec05b4f0f08faa",
+    "config/liuyao_analysis_rules.json": "4bb6fb1b1f924ead84215223df0bda8410e32ca6142e5458327ba2e15c0d26d9",
+    "randomyst/api.py": "806cb544f98186c26c68cb2e671a45c34d509e74b71061c00bcb4b956c86a419",
+    "randomyst/coins_service.py": "6305f2bbba049f0b65216850651d6096286b980584809eb23e99c006e6a8709e",
+    "web/liuyao.js": "c2f9e01116bec81ac240878a91585fbef80f6e6d2b68b7d65ac8b203965df7da",
+    "web/coins.js": "d2aa80f1d7fb6107b57ac3ae2eb73a55ef6219ffe749bbd210511c5af2a8c9f7",
+    "web/index.html": "15d04d26186f6855b93cee6b6c3f313453ebb6504e2f7751a22c96959f0ec930",
+    "web/style.css": "f4d39af8d600a39e645a9276d20a8cf867b3d2e1c3efc59b8ec26db39a179e6e",
+    "tests/test_liuyao_analysis.py": "4533cded939b92d58dec5c00e518349aba69b4a9d28f1c93e1388e38bfddcf0e",
+    "docs/research/liuyao_analysis_research.md": "50b8dee67e9004d300c86582a3a838cca526abbab4bacce3182c3e9a86179d01",
+    "docs/liuyao_analysis_handoff.md": "3802c572f75815de0267905748c3e356a0779e3c1303b91d5a1037da581f2c2e",
+    "schemas/liuyao_analysis_request.schema.json": "1aeb470e02c2b3232aa8d89001d1624307ba2e0d8a0dd404a4b09b4b4b87d5ca",
+    "schemas/liuyao_analysis_response.schema.json": "f6f0f683af11b9d3d1c52fbe1dae2a83d407cc525ee649247d9c540ab924462c",
+    "examples/liuyao_analysis_request.json": "f390c2fa1009b0356febcae1c18bf69ef180ffd713274e5f42aceef967aa532d",
+    "examples/liuyao_analysis_response.json": "df35c7e9fe53d46bb44135df925ac46520a6c92e35df69ee2937a7f53ab8e209",
+    "docs/research/liuyao_analysis_ui.png": "fd4f8689af30d039cd05246cb8bab04db7ec83c2fcbf38e6a347e869b46f45fb"
+  }
+}

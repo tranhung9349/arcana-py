@@ -1,0 +1,1095 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 6,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "data/reference/tinix-bazi/ganzhi.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 292,
+      "nonEmptyLines": 249,
+      "functions": [
+        {
+          "name": "ganToVN",
+          "startLine": 111,
+          "endLine": 115,
+          "params": [
+            "gan"
+          ]
+        },
+        {
+          "name": "zhiToVN",
+          "startLine": 118,
+          "endLine": 121,
+          "params": [
+            "zhi"
+          ]
+        },
+        {
+          "name": "ganToElement",
+          "startLine": 124,
+          "endLine": 130,
+          "params": [
+            "gan"
+          ]
+        },
+        {
+          "name": "zhiToElement",
+          "startLine": 133,
+          "endLine": 138,
+          "params": [
+            "zhi"
+          ]
+        },
+        {
+          "name": "getNapAm",
+          "startLine": 141,
+          "endLine": 144,
+          "params": [
+            "gan",
+            "zhi"
+          ]
+        },
+        {
+          "name": "getTangCan",
+          "startLine": 147,
+          "endLine": 149,
+          "params": [
+            "zhi"
+          ]
+        },
+        {
+          "name": "getZhiMainGan",
+          "startLine": 152,
+          "endLine": 155,
+          "params": [
+            "zhi"
+          ]
+        },
+        {
+          "name": "getThapThan",
+          "startLine": 158,
+          "endLine": 196,
+          "params": [
+            "dayGan",
+            "otherGan"
+          ]
+        },
+        {
+          "name": "generates",
+          "startLine": 199,
+          "endLine": 202,
+          "params": [
+            "e1",
+            "e2"
+          ]
+        },
+        {
+          "name": "controls",
+          "startLine": 205,
+          "endLine": 208,
+          "params": [
+            "e1",
+            "e2"
+          ]
+        },
+        {
+          "name": "getCanKhi",
+          "startLine": 211,
+          "endLine": 219,
+          "params": [
+            "dayElement",
+            "monthZhi"
+          ]
+        },
+        {
+          "name": "getFavorable",
+          "startLine": 222,
+          "endLine": 226,
+          "params": [
+            "dayElement"
+          ]
+        },
+        {
+          "name": "getUnfavorable",
+          "startLine": 229,
+          "endLine": 233,
+          "params": [
+            "dayElement"
+          ]
+        },
+        {
+          "name": "getVongTrangSinh",
+          "startLine": 244,
+          "endLine": 265,
+          "params": [
+            "gan",
+            "zhi"
+          ]
+        },
+        {
+          "name": "removeDiacritics",
+          "startLine": 276,
+          "endLine": 278,
+          "params": [
+            "str"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ganToVN",
+          "callee": "GANS.indexOf",
+          "lineNumber": 113
+        },
+        {
+          "caller": "zhiToVN",
+          "callee": "ZHIS.indexOf",
+          "lineNumber": 119
+        },
+        {
+          "caller": "ganToElement",
+          "callee": "GANS.indexOf",
+          "lineNumber": 125
+        },
+        {
+          "caller": "ganToElement",
+          "callee": "GANS_VN.indexOf",
+          "lineNumber": 128
+        },
+        {
+          "caller": "zhiToElement",
+          "callee": "ZHIS.indexOf",
+          "lineNumber": 134
+        },
+        {
+          "caller": "zhiToElement",
+          "callee": "ZHIS_VN.indexOf",
+          "lineNumber": 136
+        },
+        {
+          "caller": "getZhiMainGan",
+          "callee": "getTangCan",
+          "lineNumber": 153
+        },
+        {
+          "caller": "getThapThan",
+          "callee": "GANS.indexOf",
+          "lineNumber": 159
+        },
+        {
+          "caller": "getThapThan",
+          "callee": "GANS.indexOf",
+          "lineNumber": 159
+        },
+        {
+          "caller": "getThapThan",
+          "callee": "GANS_VN.indexOf",
+          "lineNumber": 159
+        },
+        {
+          "caller": "getThapThan",
+          "callee": "GANS.indexOf",
+          "lineNumber": 160
+        },
+        {
+          "caller": "getThapThan",
+          "callee": "GANS.indexOf",
+          "lineNumber": 160
+        },
+        {
+          "caller": "getThapThan",
+          "callee": "GANS_VN.indexOf",
+          "lineNumber": 160
+        },
+        {
+          "caller": "getThapThan",
+          "callee": "generates",
+          "lineNumber": 176
+        },
+        {
+          "caller": "getThapThan",
+          "callee": "generates",
+          "lineNumber": 181
+        },
+        {
+          "caller": "getThapThan",
+          "callee": "controls",
+          "lineNumber": 186
+        },
+        {
+          "caller": "getThapThan",
+          "callee": "controls",
+          "lineNumber": 191
+        },
+        {
+          "caller": "getCanKhi",
+          "callee": "zhiToElement",
+          "lineNumber": 212
+        },
+        {
+          "caller": "getCanKhi",
+          "callee": "generates",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCanKhi",
+          "callee": "generates",
+          "lineNumber": 215
+        },
+        {
+          "caller": "getCanKhi",
+          "callee": "controls",
+          "lineNumber": 216
+        },
+        {
+          "caller": "getCanKhi",
+          "callee": "controls",
+          "lineNumber": 217
+        },
+        {
+          "caller": "getFavorable",
+          "callee": "Object.keys({ 'Mộc': 'Hỏa', 'Hỏa': 'Thổ', 'Thổ': 'Kim', 'Kim': 'Thủy', 'Thủy': 'Mộc' })\n        .find",
+          "lineNumber": 223
+        },
+        {
+          "caller": "getFavorable",
+          "callee": "Object.keys",
+          "lineNumber": 223
+        },
+        {
+          "caller": "getFavorable",
+          "callee": "[dayElement, generating].filter",
+          "lineNumber": 225
+        },
+        {
+          "caller": "getUnfavorable",
+          "callee": "Object.keys({ 'Mộc': 'Thổ', 'Thổ': 'Thủy', 'Thủy': 'Hỏa', 'Hỏa': 'Kim', 'Kim': 'Mộc' })\n        .find",
+          "lineNumber": 230
+        },
+        {
+          "caller": "getUnfavorable",
+          "callee": "Object.keys",
+          "lineNumber": 230
+        },
+        {
+          "caller": "getUnfavorable",
+          "callee": "[controlling].filter",
+          "lineNumber": 232
+        },
+        {
+          "caller": "getVongTrangSinh",
+          "callee": "ganToVN",
+          "lineNumber": 245
+        },
+        {
+          "caller": "getVongTrangSinh",
+          "callee": "zhiToVN",
+          "lineNumber": 246
+        },
+        {
+          "caller": "getVongTrangSinh",
+          "callee": "ZHIS_VN.indexOf",
+          "lineNumber": 251
+        },
+        {
+          "caller": "getVongTrangSinh",
+          "callee": "ZHIS_VN.indexOf",
+          "lineNumber": 252
+        },
+        {
+          "caller": "getVongTrangSinh",
+          "callee": "GANS_VN.indexOf",
+          "lineNumber": 254
+        },
+        {
+          "caller": "removeDiacritics",
+          "callee": "str.normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\").replace(/đ/g, \"d\").replace",
+          "lineNumber": 277
+        },
+        {
+          "caller": "removeDiacritics",
+          "callee": "str.normalize(\"NFD\").replace(/[\\u0300-\\u036f]/g, \"\").replace",
+          "lineNumber": 277
+        },
+        {
+          "caller": "removeDiacritics",
+          "callee": "str.normalize(\"NFD\").replace",
+          "lineNumber": 277
+        },
+        {
+          "caller": "removeDiacritics",
+          "callee": "str.normalize",
+          "lineNumber": 277
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 15,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "data/reference/tinix-bazi/ganzhi_data.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 1106,
+      "nonEmptyLines": 1024,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "data/reference/tinix-bazi/geju.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 112,
+      "nonEmptyLines": 97,
+      "functions": [
+        {
+          "name": "determineCach",
+          "startLine": 24,
+          "endLine": 66,
+          "params": [
+            "ctx"
+          ]
+        },
+        {
+          "name": "isJianLu",
+          "startLine": 71,
+          "endLine": 77,
+          "params": [
+            "dayGan",
+            "monthZhi"
+          ]
+        },
+        {
+          "name": "analyzeSanHe",
+          "startLine": 82,
+          "endLine": 106,
+          "params": [
+            "ctx"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "determineCach",
+          "callee": "ganzhi.getThapThan",
+          "lineNumber": 30
+        },
+        {
+          "caller": "determineCach",
+          "callee": "isJianLu",
+          "lineNumber": 36
+        },
+        {
+          "caller": "determineCach",
+          "callee": "cach.push",
+          "lineNumber": 37
+        },
+        {
+          "caller": "determineCach",
+          "callee": "monthShishen.replace('+', '').replace",
+          "lineNumber": 42
+        },
+        {
+          "caller": "determineCach",
+          "callee": "monthShishen.replace",
+          "lineNumber": 42
+        },
+        {
+          "caller": "determineCach",
+          "callee": "cach.push",
+          "lineNumber": 44
+        },
+        {
+          "caller": "determineCach",
+          "callee": "cach.push",
+          "lineNumber": 46
+        },
+        {
+          "caller": "determineCach",
+          "callee": "cach.push",
+          "lineNumber": 48
+        },
+        {
+          "caller": "determineCach",
+          "callee": "cach.push",
+          "lineNumber": 50
+        },
+        {
+          "caller": "determineCach",
+          "callee": "cach.push",
+          "lineNumber": 52
+        },
+        {
+          "caller": "determineCach",
+          "callee": "cach.push",
+          "lineNumber": 54
+        },
+        {
+          "caller": "determineCach",
+          "callee": "cach.push",
+          "lineNumber": 56
+        },
+        {
+          "caller": "determineCach",
+          "callee": "cach.push",
+          "lineNumber": 62
+        },
+        {
+          "caller": "analyzeSanHe",
+          "callee": "Object.entries",
+          "lineNumber": 94
+        },
+        {
+          "caller": "analyzeSanHe",
+          "callee": "combination.filter",
+          "lineNumber": 95
+        },
+        {
+          "caller": "analyzeSanHe",
+          "callee": "zhis.includes",
+          "lineNumber": 95
+        },
+        {
+          "caller": "analyzeSanHe",
+          "callee": "results.push",
+          "lineNumber": 97
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 273,
+      "nonEmptyLines": 265,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 320,
+      "nonEmptyLines": 287,
+      "functions": [
+        {
+          "name": "analyzeNguHanh",
+          "startLine": 18,
+          "endLine": 318,
+          "params": [
+            "ctx"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "ganzhi.ganToElement",
+          "lineNumber": 20
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "ganzhi.zhiToElement",
+          "lineNumber": 22
+        },
+        {
+          "caller": "calcScore",
+          "callee": "position.includes",
+          "lineNumber": 37
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "ctx.gans.forEach",
+          "lineNumber": 47
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "calcScore",
+          "lineNumber": 47
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "ganzhi.ganToElement",
+          "lineNumber": 47
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "ctx.zhis.forEach",
+          "lineNumber": 48
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "calcScore",
+          "lineNumber": 50
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "ganzhi.zhiToElement",
+          "lineNumber": 50
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "Math.max",
+          "lineNumber": 66
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "determineCach",
+          "lineNumber": 72
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "rawType.includes",
+          "lineNumber": 86
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "ganzhi.getZhiMainGan",
+          "lineNumber": 90
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "ganzhi.getThapThan",
+          "lineNumber": 91
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "specialType.includes",
+          "lineNumber": 111
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "ganzhi.zhiToVN",
+          "lineNumber": 206
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "winterZhis.includes",
+          "lineNumber": 210
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "summerZhis.includes",
+          "lineNumber": 211
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "dungThan.includes",
+          "lineNumber": 217
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "hyThan.includes",
+          "lineNumber": 217
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "kyThan.includes",
+          "lineNumber": 218
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "hyThan.push",
+          "lineNumber": 221
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "Math.max",
+          "lineNumber": 244
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "Math.floor",
+          "lineNumber": 244
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "selectedJobs.push",
+          "lineNumber": 246
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "selectedJobs.join",
+          "lineNumber": 249
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "[...dungThan, ...hyThan].join",
+          "lineNumber": 314
+        },
+        {
+          "caller": "analyzeNguHanh",
+          "callee": "kyThan.join",
+          "lineNumber": 315
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "data/reference/tinix-bazi/shensha.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 800,
+      "nonEmptyLines": 775,
+      "functions": [
+        {
+          "name": "calculateShenSha",
+          "startLine": 603,
+          "endLine": 794,
+          "params": [
+            "ctx"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "addStar",
+          "callee": "result[pillarKeys[idx]].includes",
+          "lineNumber": 617
+        },
+        {
+          "caller": "addStar",
+          "callee": "result[pillarKeys[idx]].push",
+          "lineNumber": 618
+        },
+        {
+          "caller": "addStar",
+          "callee": "result.summary.push",
+          "lineNumber": 619
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "getZhiKanji",
+          "lineNumber": 640
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "getZhiKanji",
+          "lineNumber": 641
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "getGanKanji",
+          "lineNumber": 642
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "getZhiKanji",
+          "lineNumber": 643
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ctx.zhis.map",
+          "lineNumber": 644
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ctx.gans.map",
+          "lineNumber": 645
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "zhisOrder.indexOf",
+          "lineNumber": 649
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "zhisOrder.indexOf",
+          "lineNumber": 651
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "Object.entries",
+          "lineNumber": 653
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 655
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "Object.entries",
+          "lineNumber": 661
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.zhiToVN",
+          "lineNumber": 665
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "targetStr.includes",
+          "lineNumber": 666
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 666
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "Object.entries",
+          "lineNumber": 672
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.zhiToVN",
+          "lineNumber": 676
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "targetStr.includes",
+          "lineNumber": 677
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 677
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "Object.entries",
+          "lineNumber": 683
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.zhiToVN",
+          "lineNumber": 687
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "targetStr.includes",
+          "lineNumber": 688
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 688
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "Object.entries",
+          "lineNumber": 694
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.zhiToVN",
+          "lineNumber": 698
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "targetStr.includes",
+          "lineNumber": 699
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 699
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "Object.entries",
+          "lineNumber": 705
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.ganToVN",
+          "lineNumber": 710
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "targetStr.includes",
+          "lineNumber": 711
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 711
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.zhiToVN",
+          "lineNumber": 715
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "targetStr.includes",
+          "lineNumber": 716
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 716
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ctx.zhis.map",
+          "lineNumber": 722
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.zhiToVN",
+          "lineNumber": 722
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "allZhisVN.includes",
+          "lineNumber": 723
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "allZhisVN.includes",
+          "lineNumber": 723
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "result.summary.push",
+          "lineNumber": 724
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "allZhisVN.includes",
+          "lineNumber": 726
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "allZhisVN.includes",
+          "lineNumber": 726
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "result.summary.push",
+          "lineNumber": 727
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ctx.gans.map",
+          "lineNumber": 731
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.ganToVN",
+          "lineNumber": 731
+        },
+        {
+          "caller": "checkTamKy",
+          "callee": "gans.join",
+          "lineNumber": 736
+        },
+        {
+          "caller": "checkTamKy",
+          "callee": "s.includes",
+          "lineNumber": 737
+        },
+        {
+          "caller": "checkTamKy",
+          "callee": "tamKy1.join",
+          "lineNumber": 737
+        },
+        {
+          "caller": "checkTamKy",
+          "callee": "s.includes",
+          "lineNumber": 737
+        },
+        {
+          "caller": "checkTamKy",
+          "callee": "tamKy2.join",
+          "lineNumber": 737
+        },
+        {
+          "caller": "checkTamKy",
+          "callee": "s.includes",
+          "lineNumber": 737
+        },
+        {
+          "caller": "checkTamKy",
+          "callee": "tamKy3.join",
+          "lineNumber": 737
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "checkTamKy",
+          "lineNumber": 739
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "allGansVN.slice",
+          "lineNumber": 739
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "checkTamKy",
+          "lineNumber": 739
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "allGansVN.slice",
+          "lineNumber": 739
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "result.summary.push",
+          "lineNumber": 740
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.ganToVN",
+          "lineNumber": 745
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.zhiToVN",
+          "lineNumber": 745
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "saiThoDays.includes",
+          "lineNumber": 746
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 747
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "coLoanDays.includes",
+          "lineNumber": 752
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 753
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "Math.floor",
+          "lineNumber": 759
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "monthsZhi.indexOf",
+          "lineNumber": 759
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "Object.entries",
+          "lineNumber": 762
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.ganToVN",
+          "lineNumber": 766
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.zhiToVN",
+          "lineNumber": 766
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "targetStr.includes",
+          "lineNumber": 767
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "targetStr.includes",
+          "lineNumber": 767
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.ganToVN",
+          "lineNumber": 767
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 768
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.ganToVN",
+          "lineNumber": 774
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.ganToVN",
+          "lineNumber": 775
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "ganzhi.zhiToVN",
+          "lineNumber": 775
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "thapAc[yearGanVN].includes",
+          "lineNumber": 781
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 782
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "zhisOrder.indexOf",
+          "lineNumber": 788
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "zhisOrder.indexOf",
+          "lineNumber": 789
+        },
+        {
+          "caller": "calculateShenSha",
+          "callee": "addStar",
+          "lineNumber": 791
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

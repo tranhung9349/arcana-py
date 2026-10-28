@@ -1,0 +1,4035 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 10,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 10,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 10,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "randomyst/bazi.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 120,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "deity",
+          "startLine": 17,
+          "endLine": 28,
+          "params": [
+            "day",
+            "other"
+          ]
+        },
+        {
+          "name": "structure",
+          "startLine": 31,
+          "endLine": 38,
+          "params": [
+            "day",
+            "month_gan",
+            "month_zhi"
+          ]
+        },
+        {
+          "name": "analyze",
+          "startLine": 41,
+          "endLine": 96,
+          "params": [
+            "gans",
+            "zhis"
+          ]
+        },
+        {
+          "name": "star_bonuses",
+          "startLine": 106,
+          "endLine": 120,
+          "params": [
+            "gans",
+            "zhis",
+            "casting_month_branch"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "deity",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "structure",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "analyze",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "star_bonuses",
+          "line": 106,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "structure",
+          "callee": "deity",
+          "lineNumber": 34
+        },
+        {
+          "caller": "structure",
+          "callee": "mapping.get",
+          "lineNumber": 38
+        },
+        {
+          "caller": "analyze",
+          "callee": "len",
+          "lineNumber": 42
+        },
+        {
+          "caller": "analyze",
+          "callee": "len",
+          "lineNumber": 42
+        },
+        {
+          "caller": "analyze",
+          "callee": "any",
+          "lineNumber": 42
+        },
+        {
+          "caller": "analyze",
+          "callee": "type",
+          "lineNumber": 42
+        },
+        {
+          "caller": "analyze",
+          "callee": "any",
+          "lineNumber": 42
+        },
+        {
+          "caller": "analyze",
+          "callee": "type",
+          "lineNumber": 42
+        },
+        {
+          "caller": "analyze",
+          "callee": "ValueError",
+          "lineNumber": 43
+        },
+        {
+          "caller": "analyze",
+          "callee": "dict.fromkeys",
+          "lineNumber": 47
+        },
+        {
+          "caller": "analyze",
+          "callee": "enumerate",
+          "lineNumber": 49
+        },
+        {
+          "caller": "analyze",
+          "callee": "enumerate",
+          "lineNumber": 52
+        },
+        {
+          "caller": "analyze",
+          "callee": "max",
+          "lineNumber": 61
+        },
+        {
+          "caller": "analyze",
+          "callee": "structure",
+          "lineNumber": 64
+        },
+        {
+          "caller": "analyze",
+          "callee": "hy.append",
+          "lineNumber": 90
+        },
+        {
+          "caller": "analyze",
+          "callee": "list",
+          "lineNumber": 91
+        },
+        {
+          "caller": "analyze",
+          "callee": "dict.fromkeys",
+          "lineNumber": 91
+        },
+        {
+          "caller": "analyze",
+          "callee": "list",
+          "lineNumber": 91
+        },
+        {
+          "caller": "analyze",
+          "callee": "dict.fromkeys",
+          "lineNumber": 91
+        },
+        {
+          "caller": "analyze",
+          "callee": "list",
+          "lineNumber": 91
+        },
+        {
+          "caller": "analyze",
+          "callee": "dict.fromkeys",
+          "lineNumber": 91
+        },
+        {
+          "caller": "star_bonuses",
+          "callee": "sorted",
+          "lineNumber": 109
+        },
+        {
+          "caller": "star_bonuses",
+          "callee": "set(targets).intersection",
+          "lineNumber": 109
+        },
+        {
+          "caller": "star_bonuses",
+          "callee": "set",
+          "lineNumber": 109
+        },
+        {
+          "caller": "star_bonuses",
+          "callee": "matches.append",
+          "lineNumber": 111
+        },
+        {
+          "caller": "star_bonuses",
+          "callee": "sorted",
+          "lineNumber": 112
+        },
+        {
+          "caller": "star_bonuses",
+          "callee": "matches.append",
+          "lineNumber": 115
+        },
+        {
+          "caller": "star_bonuses",
+          "callee": "sum",
+          "lineNumber": 117
+        },
+        {
+          "caller": "star_bonuses",
+          "callee": "max",
+          "lineNumber": 118
+        },
+        {
+          "caller": "star_bonuses",
+          "callee": "counts.items",
+          "lineNumber": 118
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "randomyst/date_calendar.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 91,
+      "nonEmptyLines": 80,
+      "classes": [
+        {
+          "name": "DateDataError",
+          "startLine": 21,
+          "endLine": 22,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "DateCalendar",
+          "startLine": 25,
+          "endLine": 91,
+          "methods": [
+            "__init__",
+            "intervals",
+            "at",
+            "birth_boundary_warning"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DateDataError",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "DateCalendar",
+          "line": 25,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "check_provider",
+          "lineNumber": 27
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 28
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / \"data/date_calendar/manifest.json\").read_text",
+          "lineNumber": 28
+        },
+        {
+          "caller": "__init__",
+          "callee": "path.read_bytes",
+          "lineNumber": 30
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256(packed).hexdigest",
+          "lineNumber": 31
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256",
+          "lineNumber": 31
+        },
+        {
+          "caller": "__init__",
+          "callee": "DateDataError",
+          "lineNumber": 32
+        },
+        {
+          "caller": "__init__",
+          "callee": "gzip.decompress",
+          "lineNumber": 33
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256(raw).hexdigest",
+          "lineNumber": 34
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256",
+          "lineNumber": 34
+        },
+        {
+          "caller": "__init__",
+          "callee": "DateDataError",
+          "lineNumber": 35
+        },
+        {
+          "caller": "__init__",
+          "callee": "Path",
+          "lineNumber": 37
+        },
+        {
+          "caller": "__init__",
+          "callee": "inspect.getfile",
+          "lineNumber": 37
+        },
+        {
+          "caller": "__init__",
+          "callee": "importlib.import_module",
+          "lineNumber": 37
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256(path.read_bytes()).hexdigest",
+          "lineNumber": 38
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256",
+          "lineNumber": 38
+        },
+        {
+          "caller": "__init__",
+          "callee": "path.read_bytes",
+          "lineNumber": 38
+        },
+        {
+          "caller": "__init__",
+          "callee": "DateDataError",
+          "lineNumber": 39
+        },
+        {
+          "caller": "__init__",
+          "callee": "json.loads",
+          "lineNumber": 40
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 41
+        },
+        {
+          "caller": "__init__",
+          "callee": "DateDataError",
+          "lineNumber": 42
+        },
+        {
+          "caller": "__init__",
+          "callee": "tuple",
+          "lineNumber": 44
+        },
+        {
+          "caller": "__init__",
+          "callee": "sorted",
+          "lineNumber": 44
+        },
+        {
+          "caller": "__init__",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 44
+        },
+        {
+          "caller": "intervals",
+          "callee": "datetime.combine",
+          "lineNumber": 47
+        },
+        {
+          "caller": "intervals",
+          "callee": "datetime.combine",
+          "lineNumber": 48
+        },
+        {
+          "caller": "intervals",
+          "callee": "datetime.min.time",
+          "lineNumber": 48
+        },
+        {
+          "caller": "intervals",
+          "callee": "datetime.combine",
+          "lineNumber": 49
+        },
+        {
+          "caller": "intervals",
+          "callee": "timedelta",
+          "lineNumber": 49
+        },
+        {
+          "caller": "intervals",
+          "callee": "range",
+          "lineNumber": 51
+        },
+        {
+          "caller": "intervals",
+          "callee": "timedelta",
+          "lineNumber": 52
+        },
+        {
+          "caller": "intervals",
+          "callee": "cuts.add",
+          "lineNumber": 54
+        },
+        {
+          "caller": "intervals",
+          "callee": "cuts.update",
+          "lineNumber": 55
+        },
+        {
+          "caller": "intervals",
+          "callee": "point.astimezone",
+          "lineNumber": 55
+        },
+        {
+          "caller": "intervals",
+          "callee": "sorted",
+          "lineNumber": 56
+        },
+        {
+          "caller": "intervals",
+          "callee": "list",
+          "lineNumber": 57
+        },
+        {
+          "caller": "intervals",
+          "callee": "zip",
+          "lineNumber": 57
+        },
+        {
+          "caller": "at",
+          "callee": "instant.astimezone",
+          "lineNumber": 60
+        },
+        {
+          "caller": "at",
+          "callee": "bj.date().isoformat",
+          "lineNumber": 61
+        },
+        {
+          "caller": "at",
+          "callee": "bj.date",
+          "lineNumber": 61
+        },
+        {
+          "caller": "at",
+          "callee": "Solar.fromYmdHms(bj.year, bj.month, bj.day, bj.hour, bj.minute, bj.second).getLunar",
+          "lineNumber": 64
+        },
+        {
+          "caller": "at",
+          "callee": "Solar.fromYmdHms",
+          "lineNumber": 64
+        },
+        {
+          "caller": "at",
+          "callee": "lunar.getEightChar",
+          "lineNumber": 65
+        },
+        {
+          "caller": "at",
+          "callee": "chart.setSect",
+          "lineNumber": 66
+        },
+        {
+          "caller": "at",
+          "callee": "chart.getYear",
+          "lineNumber": 67
+        },
+        {
+          "caller": "at",
+          "callee": "chart.getMonth",
+          "lineNumber": 67
+        },
+        {
+          "caller": "at",
+          "callee": "chart.getDay",
+          "lineNumber": 67
+        },
+        {
+          "caller": "at",
+          "callee": "chart.getTime",
+          "lineNumber": 67
+        },
+        {
+          "caller": "at",
+          "callee": "bj.date().isoformat",
+          "lineNumber": 68
+        },
+        {
+          "caller": "at",
+          "callee": "bj.date",
+          "lineNumber": 68
+        },
+        {
+          "caller": "at",
+          "callee": "tuple",
+          "lineNumber": 69
+        },
+        {
+          "caller": "at",
+          "callee": "STEMS_ZH.index",
+          "lineNumber": 69
+        },
+        {
+          "caller": "at",
+          "callee": "tuple",
+          "lineNumber": 69
+        },
+        {
+          "caller": "at",
+          "callee": "BRANCHES_ZH.index",
+          "lineNumber": 69
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "timedelta",
+          "lineNumber": 79
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "timedelta",
+          "lineNumber": 79
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "min",
+          "lineNumber": 82
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "abs",
+          "lineNumber": 82
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "range",
+          "lineNumber": 82
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "birth.civil_datetime.astimezone",
+          "lineNumber": 83
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "Solar.fromYmdHms(bj.year, bj.month, bj.day, bj.hour, bj.minute, bj.second).getLunar",
+          "lineNumber": 84
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "Solar.fromYmdHms",
+          "lineNumber": 84
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "lunar.getJieQiTable",
+          "lineNumber": 85
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "datetime",
+          "lineNumber": 88
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "point.getYear",
+          "lineNumber": 88
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "point.getMonth",
+          "lineNumber": 88
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "point.getDay",
+          "lineNumber": 88
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "point.getHour",
+          "lineNumber": 88
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "point.getMinute",
+          "lineNumber": 88
+        },
+        {
+          "caller": "birth_boundary_warning",
+          "callee": "point.getSecond",
+          "lineNumber": 88
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "randomyst/date_engine.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 111,
+      "nonEmptyLines": 103,
+      "classes": [
+        {
+          "name": "DateEngine",
+          "startLine": 11,
+          "endLine": 111,
+          "methods": [
+            "__init__",
+            "profile",
+            "personal",
+            "window",
+            "rank",
+            "search"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DateEngine",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "DateCalendar",
+          "lineNumber": 13
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuleEvaluator",
+          "lineNumber": 14
+        },
+        {
+          "caller": "profile",
+          "callee": "pillars",
+          "lineNumber": 17
+        },
+        {
+          "caller": "profile",
+          "callee": "analyze",
+          "lineNumber": 18
+        },
+        {
+          "caller": "profile",
+          "callee": "self.calendar.birth_boundary_warning",
+          "lineNumber": 20
+        },
+        {
+          "caller": "profile",
+          "callee": "tuple",
+          "lineNumber": 23
+        },
+        {
+          "caller": "profile",
+          "callee": "tuple",
+          "lineNumber": 23
+        },
+        {
+          "caller": "profile",
+          "callee": "tuple",
+          "lineNumber": 24
+        },
+        {
+          "caller": "personal",
+          "callee": "sum",
+          "lineNumber": 31
+        },
+        {
+          "caller": "personal",
+          "callee": "sorted",
+          "lineNumber": 32
+        },
+        {
+          "caller": "personal",
+          "callee": "bool",
+          "lineNumber": 36
+        },
+        {
+          "caller": "window",
+          "callee": "self.calendar.at",
+          "lineNumber": 39
+        },
+        {
+          "caller": "window",
+          "callee": "self.evaluator.evaluate",
+          "lineNumber": 40
+        },
+        {
+          "caller": "window",
+          "callee": "activity_status",
+          "lineNumber": 42
+        },
+        {
+          "caller": "window",
+          "callee": "activity_status",
+          "lineNumber": 43
+        },
+        {
+          "caller": "window",
+          "callee": "self.personal",
+          "lineNumber": 44
+        },
+        {
+          "caller": "window",
+          "callee": "blocks.append",
+          "lineNumber": 46
+        },
+        {
+          "caller": "window",
+          "callee": "blocks.append",
+          "lineNumber": 47
+        },
+        {
+          "caller": "window",
+          "callee": "blocks.extend",
+          "lineNumber": 48
+        },
+        {
+          "caller": "window",
+          "callee": "any",
+          "lineNumber": 49
+        },
+        {
+          "caller": "window",
+          "callee": "penalties.append",
+          "lineNumber": 52
+        },
+        {
+          "caller": "window",
+          "callee": "penalties.append",
+          "lineNumber": 53
+        },
+        {
+          "caller": "window",
+          "callee": "max",
+          "lineNumber": 54
+        },
+        {
+          "caller": "window",
+          "callee": "penalties.append",
+          "lineNumber": 55
+        },
+        {
+          "caller": "window",
+          "callee": "max",
+          "lineNumber": 56
+        },
+        {
+          "caller": "window",
+          "callee": "min",
+          "lineNumber": 56
+        },
+        {
+          "caller": "window",
+          "callee": "sum",
+          "lineNumber": 56
+        },
+        {
+          "caller": "window",
+          "callee": "all",
+          "lineNumber": 63
+        },
+        {
+          "caller": "window",
+          "callee": "start.isoformat",
+          "lineNumber": 65
+        },
+        {
+          "caller": "window",
+          "callee": "end.isoformat",
+          "lineNumber": 65
+        },
+        {
+          "caller": "window",
+          "callee": "(end-start).total_seconds",
+          "lineNumber": 65
+        },
+        {
+          "caller": "window",
+          "callee": "sorted",
+          "lineNumber": 72
+        },
+        {
+          "caller": "window",
+          "callee": "set",
+          "lineNumber": 72
+        },
+        {
+          "caller": "search",
+          "callee": "tuple",
+          "lineNumber": 82
+        },
+        {
+          "caller": "search",
+          "callee": "self.profile",
+          "lineNumber": 82
+        },
+        {
+          "caller": "search",
+          "callee": "current.weekday",
+          "lineNumber": 87
+        },
+        {
+          "caller": "search",
+          "callee": "days.append",
+          "lineNumber": 88
+        },
+        {
+          "caller": "search",
+          "callee": "str",
+          "lineNumber": 88
+        },
+        {
+          "caller": "search",
+          "callee": "self.window",
+          "lineNumber": 91
+        },
+        {
+          "caller": "search",
+          "callee": "self.calendar.intervals",
+          "lineNumber": 91
+        },
+        {
+          "caller": "search",
+          "callee": "len",
+          "lineNumber": 92
+        },
+        {
+          "caller": "search",
+          "callee": "sorted",
+          "lineNumber": 93
+        },
+        {
+          "caller": "search",
+          "callee": "days.append",
+          "lineNumber": 96
+        },
+        {
+          "caller": "search",
+          "callee": "str",
+          "lineNumber": 96
+        },
+        {
+          "caller": "search",
+          "callee": "len",
+          "lineNumber": 99
+        },
+        {
+          "caller": "search",
+          "callee": "sum",
+          "lineNumber": 99
+        },
+        {
+          "caller": "search",
+          "callee": "any",
+          "lineNumber": 100
+        },
+        {
+          "caller": "search",
+          "callee": "timedelta",
+          "lineNumber": 101
+        },
+        {
+          "caller": "search",
+          "callee": "list",
+          "lineNumber": 108
+        },
+        {
+          "caller": "search",
+          "callee": "len",
+          "lineNumber": 109
+        },
+        {
+          "caller": "search",
+          "callee": "len",
+          "lineNumber": 109
+        },
+        {
+          "caller": "search",
+          "callee": "x.model_dump",
+          "lineNumber": 110
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "randomyst/date_rules.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 58,
+      "functions": [
+        {
+          "name": "relation",
+          "startLine": 16,
+          "endLine": 24,
+          "params": [
+            "stem",
+            "branch"
+          ]
+        },
+        {
+          "name": "activity_status",
+          "startLine": 27,
+          "endLine": 35,
+          "params": [
+            "yi",
+            "ji",
+            "token"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RuleEvaluator",
+          "startLine": 38,
+          "endLine": 67,
+          "methods": [
+            "__init__",
+            "evaluate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "relation",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "activity_status",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "RuleEvaluator",
+          "line": 38,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "activity_status",
+          "callee": "any",
+          "lineNumber": 30
+        },
+        {
+          "caller": "__init__",
+          "callee": "DateRules.model_validate_json",
+          "lineNumber": 40
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / \"config/mvp2_date_rules.json\").read_text",
+          "lineNumber": 40
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256((ROOT / source.path).read_bytes()).hexdigest",
+          "lineNumber": 42
+        },
+        {
+          "caller": "__init__",
+          "callee": "hashlib.sha256",
+          "lineNumber": 42
+        },
+        {
+          "caller": "__init__",
+          "callee": "(ROOT / source.path).read_bytes",
+          "lineNumber": 42
+        },
+        {
+          "caller": "__init__",
+          "callee": "RuntimeError",
+          "lineNumber": 43
+        },
+        {
+          "caller": "evaluate",
+          "callee": "next",
+          "lineNumber": 49
+        },
+        {
+          "caller": "evaluate",
+          "callee": "any",
+          "lineNumber": 51
+        },
+        {
+          "caller": "evaluate",
+          "callee": "any",
+          "lineNumber": 51
+        },
+        {
+          "caller": "evaluate",
+          "callee": "relation",
+          "lineNumber": 53
+        },
+        {
+          "caller": "evaluate",
+          "callee": "set",
+          "lineNumber": 57
+        },
+        {
+          "caller": "evaluate",
+          "callee": "RuntimeError",
+          "lineNumber": 62
+        },
+        {
+          "caller": "evaluate",
+          "callee": "seen.add",
+          "lineNumber": 64
+        },
+        {
+          "caller": "evaluate",
+          "callee": "found.append",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "randomyst/time_engine.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 99,
+      "functions": [
+        {
+          "name": "check_provider",
+          "startLine": 32,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "_lunar",
+          "startLine": 37,
+          "endLine": 43,
+          "params": [
+            "civil"
+          ]
+        },
+        {
+          "name": "beijing_clock",
+          "startLine": 46,
+          "endLine": 65,
+          "params": [
+            "civil",
+            "clock_uncertainty_seconds"
+          ]
+        },
+        {
+          "name": "resolve_maihoa",
+          "startLine": 68,
+          "endLine": 85,
+          "params": [
+            "civil",
+            "kind"
+          ]
+        },
+        {
+          "name": "solar_month",
+          "startLine": 88,
+          "endLine": 100,
+          "params": [
+            "civil"
+          ]
+        },
+        {
+          "name": "pillars",
+          "startLine": 103,
+          "endLine": 116,
+          "params": [
+            "civil"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CalendarError",
+          "startLine": 26,
+          "endLine": 29,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CalendarError",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "check_provider",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "_lunar",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "beijing_clock",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "resolve_maihoa",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "solar_month",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "pillars",
+          "line": 103,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 28
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 28
+        },
+        {
+          "caller": "check_provider",
+          "callee": "version",
+          "lineNumber": 33
+        },
+        {
+          "caller": "check_provider",
+          "callee": "RuntimeError",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_lunar",
+          "callee": "civil.utcoffset",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_lunar",
+          "callee": "CalendarError",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_lunar",
+          "callee": "civil.astimezone",
+          "lineNumber": 40
+        },
+        {
+          "caller": "_lunar",
+          "callee": "Solar.fromYmdHms(beijing.year, beijing.month, beijing.day,\n                            beijing.hour, beijing.minute, beijing.second).getLunar",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_lunar",
+          "callee": "Solar.fromYmdHms",
+          "lineNumber": 41
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "_lunar",
+          "lineNumber": 47
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "min",
+          "lineNumber": 49
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "abs",
+          "lineNumber": 49
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "range",
+          "lineNumber": 49
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "min",
+          "lineNumber": 50
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "min",
+          "lineNumber": 52
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "civil.isoformat",
+          "lineNumber": 53
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "civil.astimezone(timezone.utc).isoformat",
+          "lineNumber": 54
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "civil.astimezone",
+          "lineNumber": 54
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "beijing.isoformat",
+          "lineNumber": 55
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "(BEIJING.utcoffset(None)-civil.utcoffset()).total_seconds",
+          "lineNumber": 56
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "BEIJING.utcoffset",
+          "lineNumber": 56
+        },
+        {
+          "caller": "beijing_clock",
+          "callee": "civil.utcoffset",
+          "lineNumber": 56
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "CalendarError",
+          "lineNumber": 71
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "civil.utcoffset",
+          "lineNumber": 73
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "timedelta",
+          "lineNumber": 73
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "CalendarError",
+          "lineNumber": 74
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "_lunar",
+          "lineNumber": 75
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "civil.isoformat",
+          "lineNumber": 79
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "beijing.isoformat",
+          "lineNumber": 79
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "beijing.date().isoformat",
+          "lineNumber": 80
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "beijing.date",
+          "lineNumber": 80
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "lunar.getYear",
+          "lineNumber": 81
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "abs",
+          "lineNumber": 81
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "lunar.getMonth",
+          "lineNumber": 81
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "lunar.getDay",
+          "lineNumber": 82
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "lunar.getMonth",
+          "lineNumber": 82
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "lunar.getYearZhiIndex",
+          "lineNumber": 83
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "lunar.getTimeZhiIndex",
+          "lineNumber": 83
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "lunar.getYearZhiIndex",
+          "lineNumber": 84
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "abs",
+          "lineNumber": 84
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "lunar.getMonth",
+          "lineNumber": 84
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "lunar.getDay",
+          "lineNumber": 85
+        },
+        {
+          "caller": "resolve_maihoa",
+          "callee": "lunar.getTimeZhiIndex",
+          "lineNumber": 85
+        },
+        {
+          "caller": "solar_month",
+          "callee": "_lunar",
+          "lineNumber": 89
+        },
+        {
+          "caller": "solar_month",
+          "callee": "lunar.getPrevJie",
+          "lineNumber": 90
+        },
+        {
+          "caller": "solar_month",
+          "callee": "previous.getSolar",
+          "lineNumber": 91
+        },
+        {
+          "caller": "solar_month",
+          "callee": "datetime",
+          "lineNumber": 92
+        },
+        {
+          "caller": "solar_month",
+          "callee": "start.getYear",
+          "lineNumber": 92
+        },
+        {
+          "caller": "solar_month",
+          "callee": "start.getMonth",
+          "lineNumber": 92
+        },
+        {
+          "caller": "solar_month",
+          "callee": "start.getDay",
+          "lineNumber": 92
+        },
+        {
+          "caller": "solar_month",
+          "callee": "start.getHour",
+          "lineNumber": 93
+        },
+        {
+          "caller": "solar_month",
+          "callee": "start.getMinute",
+          "lineNumber": 93
+        },
+        {
+          "caller": "solar_month",
+          "callee": "start.getSecond",
+          "lineNumber": 93
+        },
+        {
+          "caller": "solar_month",
+          "callee": "lunar.getMonthZhiIndexExact",
+          "lineNumber": 94
+        },
+        {
+          "caller": "solar_month",
+          "callee": "lunar.getYearInGanZhiExact",
+          "lineNumber": 95
+        },
+        {
+          "caller": "solar_month",
+          "callee": "previous.getName",
+          "lineNumber": 97
+        },
+        {
+          "caller": "solar_month",
+          "callee": "previous.getName",
+          "lineNumber": 97
+        },
+        {
+          "caller": "solar_month",
+          "callee": "start_beijing.astimezone(timezone.utc).isoformat",
+          "lineNumber": 98
+        },
+        {
+          "caller": "solar_month",
+          "callee": "start_beijing.astimezone",
+          "lineNumber": 98
+        },
+        {
+          "caller": "solar_month",
+          "callee": "start_beijing.isoformat",
+          "lineNumber": 99
+        },
+        {
+          "caller": "pillars",
+          "callee": "_lunar",
+          "lineNumber": 104
+        },
+        {
+          "caller": "pillars",
+          "callee": "lunar.getEightChar",
+          "lineNumber": 105
+        },
+        {
+          "caller": "pillars",
+          "callee": "chart.setSect",
+          "lineNumber": 106
+        },
+        {
+          "caller": "pillars",
+          "callee": "chart.getYear",
+          "lineNumber": 107
+        },
+        {
+          "caller": "pillars",
+          "callee": "chart.getMonth",
+          "lineNumber": 107
+        },
+        {
+          "caller": "pillars",
+          "callee": "chart.getDay",
+          "lineNumber": 107
+        },
+        {
+          "caller": "pillars",
+          "callee": "chart.getTime",
+          "lineNumber": 107
+        },
+        {
+          "caller": "pillars",
+          "callee": "STEMS_ZH.index",
+          "lineNumber": 108
+        },
+        {
+          "caller": "pillars",
+          "callee": "BRANCHES_ZH.index",
+          "lineNumber": 109
+        },
+        {
+          "caller": "pillars",
+          "callee": "solar_month",
+          "lineNumber": 110
+        },
+        {
+          "caller": "pillars",
+          "callee": "beijing.isoformat",
+          "lineNumber": 111
+        },
+        {
+          "caller": "pillars",
+          "callee": "(beijing + timedelta(hours=1)).date().isoformat",
+          "lineNumber": 112
+        },
+        {
+          "caller": "pillars",
+          "callee": "(beijing + timedelta(hours=1)).date",
+          "lineNumber": 112
+        },
+        {
+          "caller": "pillars",
+          "callee": "timedelta",
+          "lineNumber": 112
+        },
+        {
+          "caller": "pillars",
+          "callee": "zip",
+          "lineNumber": 116
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "research_tools/audit_activity_categories.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 86,
+      "nonEmptyLines": 77,
+      "functions": [
+        {
+          "name": "summarize",
+          "startLine": 44,
+          "endLine": 56,
+          "params": [
+            "rows",
+            "token"
+          ]
+        },
+        {
+          "name": "audit",
+          "startLine": 59,
+          "endLine": 79,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "summarize",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "audit",
+          "line": 59,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "summarize",
+          "callee": "Counter",
+          "lineNumber": 45
+        },
+        {
+          "caller": "summarize",
+          "callee": "activity_status",
+          "lineNumber": 50
+        },
+        {
+          "caller": "summarize",
+          "callee": "conflicts.append",
+          "lineNumber": 53
+        },
+        {
+          "caller": "summarize",
+          "callee": "len",
+          "lineNumber": 54
+        },
+        {
+          "caller": "audit",
+          "callee": "DateCalendar",
+          "lineNumber": 60
+        },
+        {
+          "caller": "audit",
+          "callee": "sorted",
+          "lineNumber": 61
+        },
+        {
+          "caller": "audit",
+          "callee": "calendar.data['days'].items",
+          "lineNumber": 61
+        },
+        {
+          "caller": "audit",
+          "callee": "candidates.append",
+          "lineNumber": 65
+        },
+        {
+          "caller": "audit",
+          "callee": "summarize",
+          "lineNumber": 68
+        },
+        {
+          "caller": "audit",
+          "callee": "summarize",
+          "lineNumber": 68
+        },
+        {
+          "caller": "audit",
+          "callee": "str",
+          "lineNumber": 69
+        },
+        {
+          "caller": "audit",
+          "callee": "summarize",
+          "lineNumber": 69
+        },
+        {
+          "caller": "audit",
+          "callee": "r[0].startswith",
+          "lineNumber": 69
+        },
+        {
+          "caller": "audit",
+          "callee": "str",
+          "lineNumber": 69
+        },
+        {
+          "caller": "audit",
+          "callee": "summarize",
+          "lineNumber": 70
+        },
+        {
+          "caller": "audit",
+          "callee": "r[0].startswith",
+          "lineNumber": 70
+        },
+        {
+          "caller": "audit",
+          "callee": "str",
+          "lineNumber": 70
+        },
+        {
+          "caller": "audit",
+          "callee": "range",
+          "lineNumber": 71
+        },
+        {
+          "caller": "audit",
+          "callee": "len",
+          "lineNumber": 75
+        },
+        {
+          "caller": "audit",
+          "callee": "len",
+          "lineNumber": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "research_tools/auspicious_date_audit.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 208,
+      "nonEmptyLines": 186,
+      "functions": [
+        {
+          "name": "lunar_at",
+          "startLine": 29,
+          "endLine": 32,
+          "params": [
+            "civil"
+          ]
+        },
+        {
+          "name": "facts",
+          "startLine": 35,
+          "endLine": 48,
+          "params": [
+            "civil"
+          ]
+        },
+        {
+          "name": "graph_freshness",
+          "startLine": 51,
+          "endLine": 62,
+          "params": []
+        },
+        {
+          "name": "scan_days",
+          "startLine": 65,
+          "endLine": 91,
+          "params": [
+            "start",
+            "end"
+          ]
+        },
+        {
+          "name": "benchmark",
+          "startLine": 94,
+          "endLine": 102,
+          "params": [
+            "days"
+          ]
+        },
+        {
+          "name": "static_filter_evidence",
+          "startLine": 105,
+          "endLine": 129,
+          "params": []
+        },
+        {
+          "name": "audit",
+          "startLine": 132,
+          "endLine": 191,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 194,
+          "endLine": 204,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "lunar_at",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "facts",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "graph_freshness",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "scan_days",
+          "line": 65,
+          "isDefault": false
+        },
+        {
+          "name": "benchmark",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "static_filter_evidence",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "audit",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 194,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "lunar_at",
+          "callee": "civil.astimezone",
+          "lineNumber": 30
+        },
+        {
+          "caller": "lunar_at",
+          "callee": "Solar.fromYmdHms(clock.year, clock.month, clock.day,\n                            clock.hour, clock.minute, clock.second).getLunar",
+          "lineNumber": 31
+        },
+        {
+          "caller": "lunar_at",
+          "callee": "Solar.fromYmdHms",
+          "lineNumber": 31
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar_at",
+          "lineNumber": 36
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getEightChar",
+          "lineNumber": 37
+        },
+        {
+          "caller": "facts",
+          "callee": "chart.setSect",
+          "lineNumber": 38
+        },
+        {
+          "caller": "facts",
+          "callee": "civil.isoformat",
+          "lineNumber": 39
+        },
+        {
+          "caller": "facts",
+          "callee": "civil.astimezone(BEIJING).isoformat",
+          "lineNumber": 39
+        },
+        {
+          "caller": "facts",
+          "callee": "civil.astimezone",
+          "lineNumber": 39
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getDayInGanZhi",
+          "lineNumber": 40
+        },
+        {
+          "caller": "facts",
+          "callee": "chart.getDay",
+          "lineNumber": 40
+        },
+        {
+          "caller": "facts",
+          "callee": "chart.getTime",
+          "lineNumber": 41
+        },
+        {
+          "caller": "facts",
+          "callee": "chart.getMonth",
+          "lineNumber": 41
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getYear",
+          "lineNumber": 42
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getMonth",
+          "lineNumber": 42
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getDay",
+          "lineNumber": 42
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getDayYi",
+          "lineNumber": 43
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getDayJi",
+          "lineNumber": 43
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getTimeYi",
+          "lineNumber": 44
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getTimeJi",
+          "lineNumber": 44
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getMonthInGanZhi",
+          "lineNumber": 45
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getZhiXing",
+          "lineNumber": 46
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getDayTianShen",
+          "lineNumber": 47
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getDayTianShenType",
+          "lineNumber": 47
+        },
+        {
+          "caller": "facts",
+          "callee": "lunar.getDayXiongSha",
+          "lineNumber": 48
+        },
+        {
+          "caller": "graph_freshness",
+          "callee": "json.loads",
+          "lineNumber": 52
+        },
+        {
+          "caller": "graph_freshness",
+          "callee": "(ROOT / \".ua/fingerprints.json\").read_text",
+          "lineNumber": 52
+        },
+        {
+          "caller": "graph_freshness",
+          "callee": "snapshot[\"files\"].items",
+          "lineNumber": 54
+        },
+        {
+          "caller": "graph_freshness",
+          "callee": "path.is_file",
+          "lineNumber": 56
+        },
+        {
+          "caller": "graph_freshness",
+          "callee": "missing.append",
+          "lineNumber": 57
+        },
+        {
+          "caller": "graph_freshness",
+          "callee": "hashlib.sha256(path.read_bytes()).hexdigest",
+          "lineNumber": 58
+        },
+        {
+          "caller": "graph_freshness",
+          "callee": "hashlib.sha256",
+          "lineNumber": 58
+        },
+        {
+          "caller": "graph_freshness",
+          "callee": "path.read_bytes",
+          "lineNumber": 58
+        },
+        {
+          "caller": "graph_freshness",
+          "callee": "changed.append",
+          "lineNumber": 59
+        },
+        {
+          "caller": "graph_freshness",
+          "callee": "len",
+          "lineNumber": 60
+        },
+        {
+          "caller": "scan_days",
+          "callee": "Counter",
+          "lineNumber": 66
+        },
+        {
+          "caller": "scan_days",
+          "callee": "Counter",
+          "lineNumber": 67
+        },
+        {
+          "caller": "scan_days",
+          "callee": "Counter",
+          "lineNumber": 67
+        },
+        {
+          "caller": "scan_days",
+          "callee": "perf_counter",
+          "lineNumber": 69
+        },
+        {
+          "caller": "scan_days",
+          "callee": "datetime.combine",
+          "lineNumber": 71
+        },
+        {
+          "caller": "scan_days",
+          "callee": "datetime.min.time",
+          "lineNumber": 71
+        },
+        {
+          "caller": "scan_days",
+          "callee": "timedelta",
+          "lineNumber": 71
+        },
+        {
+          "caller": "scan_days",
+          "callee": "lunar_at",
+          "lineNumber": 72
+        },
+        {
+          "caller": "scan_days",
+          "callee": "set",
+          "lineNumber": 73
+        },
+        {
+          "caller": "scan_days",
+          "callee": "lunar.getDayYi",
+          "lineNumber": 73
+        },
+        {
+          "caller": "scan_days",
+          "callee": "set",
+          "lineNumber": 73
+        },
+        {
+          "caller": "scan_days",
+          "callee": "lunar.getDayJi",
+          "lineNumber": 73
+        },
+        {
+          "caller": "scan_days",
+          "callee": "terms.update",
+          "lineNumber": 75
+        },
+        {
+          "caller": "scan_days",
+          "callee": "examples.setdefault",
+          "lineNumber": 80
+        },
+        {
+          "caller": "scan_days",
+          "callee": "str",
+          "lineNumber": 80
+        },
+        {
+          "caller": "scan_days",
+          "callee": "sorted",
+          "lineNumber": 80
+        },
+        {
+          "caller": "scan_days",
+          "callee": "sorted",
+          "lineNumber": 80
+        },
+        {
+          "caller": "scan_days",
+          "callee": "ACTIVITIES.items",
+          "lineNumber": 81
+        },
+        {
+          "caller": "scan_days",
+          "callee": "examples.setdefault",
+          "lineNumber": 84
+        },
+        {
+          "caller": "scan_days",
+          "callee": "str",
+          "lineNumber": 84
+        },
+        {
+          "caller": "scan_days",
+          "callee": "sorted",
+          "lineNumber": 85
+        },
+        {
+          "caller": "scan_days",
+          "callee": "sorted",
+          "lineNumber": 85
+        },
+        {
+          "caller": "scan_days",
+          "callee": "timedelta",
+          "lineNumber": 86
+        },
+        {
+          "caller": "scan_days",
+          "callee": "str",
+          "lineNumber": 87
+        },
+        {
+          "caller": "scan_days",
+          "callee": "str",
+          "lineNumber": 87
+        },
+        {
+          "caller": "scan_days",
+          "callee": "round",
+          "lineNumber": 89
+        },
+        {
+          "caller": "scan_days",
+          "callee": "perf_counter",
+          "lineNumber": 89
+        },
+        {
+          "caller": "scan_days",
+          "callee": "dict",
+          "lineNumber": 91
+        },
+        {
+          "caller": "scan_days",
+          "callee": "sorted",
+          "lineNumber": 91
+        },
+        {
+          "caller": "benchmark",
+          "callee": "datetime",
+          "lineNumber": 95
+        },
+        {
+          "caller": "benchmark",
+          "callee": "perf_counter",
+          "lineNumber": 96
+        },
+        {
+          "caller": "benchmark",
+          "callee": "range",
+          "lineNumber": 97
+        },
+        {
+          "caller": "benchmark",
+          "callee": "range",
+          "lineNumber": 98
+        },
+        {
+          "caller": "benchmark",
+          "callee": "facts",
+          "lineNumber": 99
+        },
+        {
+          "caller": "benchmark",
+          "callee": "timedelta",
+          "lineNumber": 99
+        },
+        {
+          "caller": "benchmark",
+          "callee": "round",
+          "lineNumber": 101
+        },
+        {
+          "caller": "benchmark",
+          "callee": "perf_counter",
+          "lineNumber": 101
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "path.read_text",
+          "lineNumber": 107
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "tuple",
+          "lineNumber": 109
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "re.search",
+          "lineNumber": 111
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "re.escape",
+          "lineNumber": 111
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "ValueError",
+          "lineNumber": 113
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "dict",
+          "lineNumber": 114
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "re.findall",
+          "lineNumber": 114
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "section.group",
+          "lineNumber": 114
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "set",
+          "lineNumber": 115
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "set",
+          "lineNumber": 115
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "len",
+          "lineNumber": 115
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "sorted",
+          "lineNumber": 117
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "LunarUtil.TIAN_SHEN_TYPE.items",
+          "lineNumber": 117
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "sorted",
+          "lineNumber": 118
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "LunarUtil.TIAN_SHEN_TYPE.items",
+          "lineNumber": 118
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "len",
+          "lineNumber": 119
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "len",
+          "lineNumber": 119
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "len",
+          "lineNumber": 120
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "list",
+          "lineNumber": 122
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "str",
+          "lineNumber": 125
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "path.relative_to",
+          "lineNumber": 125
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "hashlib.sha256(path.read_bytes()).hexdigest",
+          "lineNumber": 126
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "hashlib.sha256",
+          "lineNumber": 126
+        },
+        {
+          "caller": "static_filter_evidence",
+          "callee": "path.read_bytes",
+          "lineNumber": 126
+        },
+        {
+          "caller": "audit",
+          "callee": "version",
+          "lineNumber": 133
+        },
+        {
+          "caller": "audit",
+          "callee": "RuntimeError",
+          "lineNumber": 135
+        },
+        {
+          "caller": "audit",
+          "callee": "Path",
+          "lineNumber": 139
+        },
+        {
+          "caller": "audit",
+          "callee": "inspect.getfile",
+          "lineNumber": 139
+        },
+        {
+          "caller": "audit",
+          "callee": "sources.append",
+          "lineNumber": 140
+        },
+        {
+          "caller": "audit",
+          "callee": "str",
+          "lineNumber": 140
+        },
+        {
+          "caller": "audit",
+          "callee": "path.relative_to",
+          "lineNumber": 140
+        },
+        {
+          "caller": "audit",
+          "callee": "hashlib.sha256(path.read_bytes()).hexdigest",
+          "lineNumber": 140
+        },
+        {
+          "caller": "audit",
+          "callee": "hashlib.sha256",
+          "lineNumber": 140
+        },
+        {
+          "caller": "audit",
+          "callee": "path.read_bytes",
+          "lineNumber": 140
+        },
+        {
+          "caller": "audit",
+          "callee": "lunar_at",
+          "lineNumber": 144
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime",
+          "lineNumber": 144
+        },
+        {
+          "caller": "audit",
+          "callee": "anchor.getJieQiTable",
+          "lineNumber": 145
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime(jie.getYear(), jie.getMonth(), jie.getDay(), jie.getHour(), jie.getMinute(), jie.getSecond(), tzinfo=BEIJING).astimezone",
+          "lineNumber": 146
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime",
+          "lineNumber": 146
+        },
+        {
+          "caller": "audit",
+          "callee": "jie.getYear",
+          "lineNumber": 146
+        },
+        {
+          "caller": "audit",
+          "callee": "jie.getMonth",
+          "lineNumber": 146
+        },
+        {
+          "caller": "audit",
+          "callee": "jie.getDay",
+          "lineNumber": 146
+        },
+        {
+          "caller": "audit",
+          "callee": "jie.getHour",
+          "lineNumber": 146
+        },
+        {
+          "caller": "audit",
+          "callee": "jie.getMinute",
+          "lineNumber": 146
+        },
+        {
+          "caller": "audit",
+          "callee": "jie.getSecond",
+          "lineNumber": 146
+        },
+        {
+          "caller": "audit",
+          "callee": "facts",
+          "lineNumber": 147
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 147
+        },
+        {
+          "caller": "audit",
+          "callee": "facts",
+          "lineNumber": 148
+        },
+        {
+          "caller": "audit",
+          "callee": "timedelta",
+          "lineNumber": 148
+        },
+        {
+          "caller": "audit",
+          "callee": "pillars",
+          "lineNumber": 155
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 155
+        },
+        {
+          "caller": "audit",
+          "callee": "analyze",
+          "lineNumber": 156
+        },
+        {
+          "caller": "audit",
+          "callee": "profiles.append",
+          "lineNumber": 157
+        },
+        {
+          "caller": "audit",
+          "callee": "scan_days",
+          "lineNumber": 159
+        },
+        {
+          "caller": "audit",
+          "callee": "date",
+          "lineNumber": 159
+        },
+        {
+          "caller": "audit",
+          "callee": "date",
+          "lineNumber": 159
+        },
+        {
+          "caller": "audit",
+          "callee": "probe[\"activity_exact_term_counts\"].values",
+          "lineNumber": 160
+        },
+        {
+          "caller": "audit",
+          "callee": "sum",
+          "lineNumber": 161
+        },
+        {
+          "caller": "audit",
+          "callee": "row.values",
+          "lineNumber": 161
+        },
+        {
+          "caller": "audit",
+          "callee": "facts",
+          "lineNumber": 163
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime",
+          "lineNumber": 163
+        },
+        {
+          "caller": "audit",
+          "callee": "static_filter_evidence",
+          "lineNumber": 165
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime.now(timezone.utc).astimezone(VN).isoformat",
+          "lineNumber": 167
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime.now(timezone.utc).astimezone",
+          "lineNumber": 167
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime.now",
+          "lineNumber": 167
+        },
+        {
+          "caller": "audit",
+          "callee": "graph_freshness",
+          "lineNumber": 171
+        },
+        {
+          "caller": "audit",
+          "callee": "hasattr",
+          "lineNumber": 171
+        },
+        {
+          "caller": "audit",
+          "callee": "len",
+          "lineNumber": 177
+        },
+        {
+          "caller": "audit",
+          "callee": "anchor.getTimes",
+          "lineNumber": 177
+        },
+        {
+          "caller": "audit",
+          "callee": "facts",
+          "lineNumber": 183
+        },
+        {
+          "caller": "audit",
+          "callee": "datetime",
+          "lineNumber": 183
+        },
+        {
+          "caller": "audit",
+          "callee": "benchmark",
+          "lineNumber": 184
+        },
+        {
+          "caller": "audit",
+          "callee": "benchmark",
+          "lineNumber": 184
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 195
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 197
+        },
+        {
+          "caller": "main",
+          "callee": "audit",
+          "lineNumber": 198
+        },
+        {
+          "caller": "main",
+          "callee": "args.output.parent.mkdir",
+          "lineNumber": 199
+        },
+        {
+          "caller": "main",
+          "callee": "args.output.write_text",
+          "lineNumber": 200
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 200
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 201
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 201
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 201
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/audit_beijing_calendar.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 14,
+          "endLine": 40,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "date",
+          "lineNumber": 15
+        },
+        {
+          "caller": "main",
+          "callee": "date",
+          "lineNumber": 15
+        },
+        {
+          "caller": "main",
+          "callee": "datetime",
+          "lineNumber": 19
+        },
+        {
+          "caller": "main",
+          "callee": "timezone",
+          "lineNumber": 19
+        },
+        {
+          "caller": "main",
+          "callee": "timedelta",
+          "lineNumber": 19
+        },
+        {
+          "caller": "main",
+          "callee": "resolve_maihoa",
+          "lineNumber": 21
+        },
+        {
+          "caller": "main",
+          "callee": "Lunar.fromYmdHms(lunar['year'], signed_month, lunar['day'], 11, 0, 0).getSolar",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "Lunar.fromYmdHms",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "back.toYmdHms",
+          "lineNumber": 25
+        },
+        {
+          "caller": "main",
+          "callee": "day.isoformat",
+          "lineNumber": 25
+        },
+        {
+          "caller": "main",
+          "callee": "errors.append",
+          "lineNumber": 26
+        },
+        {
+          "caller": "main",
+          "callee": "day.isoformat",
+          "lineNumber": 26
+        },
+        {
+          "caller": "main",
+          "callee": "errors.append",
+          "lineNumber": 29
+        },
+        {
+          "caller": "main",
+          "callee": "day.isoformat",
+          "lineNumber": 29
+        },
+        {
+          "caller": "main",
+          "callee": "timedelta",
+          "lineNumber": 31
+        },
+        {
+          "caller": "main",
+          "callee": "start.isoformat",
+          "lineNumber": 33
+        },
+        {
+          "caller": "main",
+          "callee": "end.isoformat",
+          "lineNumber": 33
+        },
+        {
+          "caller": "main",
+          "callee": "hashlib.sha256((ROOT/'randomyst/time_engine.py').read_bytes()).hexdigest",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "hashlib.sha256",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT/'randomyst/time_engine.py').read_bytes",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "(ROOT/'docs/research/beijing_calendar_range_audit.json').write_text",
+          "lineNumber": 37
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 37
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 38
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 38
+        },
+        {
+          "caller": "main",
+          "callee": "SystemExit",
+          "lineNumber": 40
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/compare_bazi_source.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 45,
+      "functions": [
+        {
+          "name": "run",
+          "startLine": 14,
+          "endLine": 42,
+          "params": [
+            "count"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "run",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "run",
+          "callee": "random.Random",
+          "lineNumber": 15
+        },
+        {
+          "caller": "run",
+          "callee": "rng.randrange",
+          "lineNumber": 16
+        },
+        {
+          "caller": "run",
+          "callee": "range",
+          "lineNumber": 16
+        },
+        {
+          "caller": "run",
+          "callee": "rng.randrange",
+          "lineNumber": 16
+        },
+        {
+          "caller": "run",
+          "callee": "range",
+          "lineNumber": 16
+        },
+        {
+          "caller": "run",
+          "callee": "range",
+          "lineNumber": 16
+        },
+        {
+          "caller": "run",
+          "callee": "subprocess.run",
+          "lineNumber": 28
+        },
+        {
+          "caller": "run",
+          "callee": "str",
+          "lineNumber": 28
+        },
+        {
+          "caller": "run",
+          "callee": "json.dumps",
+          "lineNumber": 28
+        },
+        {
+          "caller": "run",
+          "callee": "json.loads",
+          "lineNumber": 29
+        },
+        {
+          "caller": "run",
+          "callee": "set",
+          "lineNumber": 31
+        },
+        {
+          "caller": "run",
+          "callee": "enumerate",
+          "lineNumber": 32
+        },
+        {
+          "caller": "run",
+          "callee": "zip",
+          "lineNumber": 32
+        },
+        {
+          "caller": "run",
+          "callee": "analyze",
+          "lineNumber": 33
+        },
+        {
+          "caller": "run",
+          "callee": "reasons.add",
+          "lineNumber": 34
+        },
+        {
+          "caller": "run",
+          "callee": "mismatches.append",
+          "lineNumber": 37
+        },
+        {
+          "caller": "run",
+          "callee": "sorted",
+          "lineNumber": 38
+        },
+        {
+          "caller": "run",
+          "callee": "hashlib.sha256(source.read_bytes()).hexdigest",
+          "lineNumber": 41
+        },
+        {
+          "caller": "run",
+          "callee": "hashlib.sha256",
+          "lineNumber": 41
+        },
+        {
+          "caller": "run",
+          "callee": "source.read_bytes",
+          "lineNumber": 41
+        },
+        {
+          "caller": "run",
+          "callee": "hashlib.sha256((ROOT/'randomyst/bazi.py').read_bytes()).hexdigest",
+          "lineNumber": 42
+        },
+        {
+          "caller": "run",
+          "callee": "hashlib.sha256",
+          "lineNumber": 42
+        },
+        {
+          "caller": "run",
+          "callee": "(ROOT/'randomyst/bazi.py').read_bytes",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_auspicious_dates.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 241,
+      "nonEmptyLines": 215,
+      "functions": [
+        {
+          "name": "payload",
+          "startLine": 23,
+          "endLine": 27,
+          "params": [
+            "activity",
+            "start",
+            "end",
+            "details"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DateTests",
+          "startLine": 30,
+          "endLine": 238,
+          "methods": [
+            "setUpClass",
+            "search",
+            "test_rules_schema_and_invalid_effect_unknown_fact",
+            "test_activity_status_missing_global_and_conflicting_tokens",
+            "test_all_candidate_month_tables_and_distinct_triple_support",
+            "test_two_twelve_systems_and_penalty_dedupe",
+            "test_full_93_day_request_initializes_two_profiles_only_once",
+            "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+            "test_recommendations_only_include_good_windows_and_respect_filters",
+            "test_repetition_and_subject_order_keep_scores_and_decisions",
+            "test_interval_partition_timezone_boundaries_and_last_year",
+            "test_exact_jie_split_and_corpus_changes_month_earlier",
+            "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+            "test_no_point_total_overrides_a_block_or_unknown_activity",
+            "test_same_day_activity_and_natal_override_are_distinct",
+            "test_birth_uncertainty_checks_exact_jie_even_away_from_hour",
+            "test_request_constraints_and_weekday_hour_clipping",
+            "test_api_contract_and_no_draw_storage_or_generator_calls"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "payload",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "DateTests",
+          "line": 30,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "payload",
+          "callee": "subjects.append",
+          "lineNumber": 26
+        },
+        {
+          "caller": "setUpClass",
+          "callee": "DateEngine",
+          "lineNumber": 33
+        },
+        {
+          "caller": "search",
+          "callee": "self.engine.search",
+          "lineNumber": 36
+        },
+        {
+          "caller": "search",
+          "callee": "DateSearchRequest.model_validate",
+          "lineNumber": 36
+        },
+        {
+          "caller": "search",
+          "callee": "DateSearchResponse.model_validate",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_rules_schema_and_invalid_effect_unknown_fact",
+          "callee": "json.loads",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_rules_schema_and_invalid_effect_unknown_fact",
+          "callee": "(ROOT / 'config/mvp2_date_rules.json').read_text",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_rules_schema_and_invalid_effect_unknown_fact",
+          "callee": "Draft202012Validator(json.loads((ROOT / 'schemas/mvp2_date_rules.schema.json').read_text())).validate",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_rules_schema_and_invalid_effect_unknown_fact",
+          "callee": "Draft202012Validator",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_rules_schema_and_invalid_effect_unknown_fact",
+          "callee": "json.loads",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_rules_schema_and_invalid_effect_unknown_fact",
+          "callee": "(ROOT / 'schemas/mvp2_date_rules.schema.json').read_text",
+          "lineNumber": 42
+        },
+        {
+          "caller": "test_rules_schema_and_invalid_effect_unknown_fact",
+          "callee": "DateRules.model_validate",
+          "lineNumber": 43
+        },
+        {
+          "caller": "test_rules_schema_and_invalid_effect_unknown_fact",
+          "callee": "deepcopy",
+          "lineNumber": 45
+        },
+        {
+          "caller": "test_rules_schema_and_invalid_effect_unknown_fact",
+          "callee": "self.assertRaises",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_rules_schema_and_invalid_effect_unknown_fact",
+          "callee": "DateRules.model_validate",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_activity_status_missing_global_and_conflicting_tokens",
+          "callee": "self.assertEqual",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_activity_status_missing_global_and_conflicting_tokens",
+          "callee": "activity_status",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_all_candidate_month_tables_and_distinct_triple_support",
+          "callee": "enumerate",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_all_candidate_month_tables_and_distinct_triple_support",
+          "callee": "evaluator.evaluate",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_all_candidate_month_tables_and_distinct_triple_support",
+          "callee": "self.assertTrue",
+          "lineNumber": 65
+        },
+        {
+          "caller": "test_all_candidate_month_tables_and_distinct_triple_support",
+          "callee": "self.assertIn",
+          "lineNumber": 66
+        },
+        {
+          "caller": "test_all_candidate_month_tables_and_distinct_triple_support",
+          "callee": "evaluator.evaluate",
+          "lineNumber": 68
+        },
+        {
+          "caller": "test_all_candidate_month_tables_and_distinct_triple_support",
+          "callee": "self.assertEqual",
+          "lineNumber": 69
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "list",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "self.engine.calendar.data['days'].values",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "self.assertEqual",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "len",
+          "lineNumber": 73
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "self.assertEqual",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "len",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "first.model_copy",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "evaluator.config.model_copy",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "patch.object",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "evaluator.evaluate",
+          "lineNumber": 81
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "self.assertEqual",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_two_twelve_systems_and_penalty_dedupe",
+          "callee": "len",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "payload",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "patch",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "patch",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "self.search",
+          "lineNumber": 87
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "self.assertEqual",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "self.assertEqual",
+          "lineNumber": 89
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "len",
+          "lineNumber": 89
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "self.assertGreaterEqual",
+          "lineNumber": 90
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "self.assertEqual",
+          "lineNumber": 91
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "self.assertEqual",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "self.assertTrue",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "all",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "self.assertTrue",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "all",
+          "lineNumber": 94
+        },
+        {
+          "caller": "test_full_93_day_request_initializes_two_profiles_only_once",
+          "callee": "len",
+          "lineNumber": 94
+        },
+        {
+          "caller": "good_window",
+          "callee": "original_window",
+          "lineNumber": 100
+        },
+        {
+          "caller": "good_window",
+          "callee": "row.update",
+          "lineNumber": 101
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "payload",
+          "lineNumber": 104
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "patch.object",
+          "lineNumber": 105
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "self.search",
+          "lineNumber": 106
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "self.search",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "self.assertEqual",
+          "lineNumber": 109
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "len",
+          "lineNumber": 109
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "self.assertGreater",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "len",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "self.assertEqual",
+          "lineNumber": 112
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "self.assertEqual",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "self.assertEqual",
+          "lineNumber": 114
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "self.assertEqual",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "str(datetime.fromisoformat(day)+timedelta(days=1)).replace",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "str",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "timedelta",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "datetime.fromisoformat(row['start_at']).astimezone",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "self.assertEqual",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "Solar.fromYmdHms(dt.year,dt.month,dt.day,dt.hour,dt.minute,dt.second).getLunar().getTimeZhi",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "Solar.fromYmdHms(dt.year,dt.month,dt.day,dt.hour,dt.minute,dt.second).getLunar",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "Solar.fromYmdHms",
+          "lineNumber": 118
+        },
+        {
+          "caller": "test_all_recommended_intervals_survive_summary_limit_and_boundaries",
+          "callee": "self.assertIn",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "payload",
+          "lineNumber": 123
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "self.search",
+          "lineNumber": 126
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "self.search",
+          "lineNumber": 128
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "self.assertGreater",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "len",
+          "lineNumber": 129
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "zip",
+          "lineNumber": 130
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "self.assertEqual",
+          "lineNumber": 132
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "self.assertEqual",
+          "lineNumber": 133
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "self.assertEqual",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "sum",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "(datetime.fromisoformat(r['end_at'])-datetime.fromisoformat(r['start_at'])).total_seconds",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 134
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "self.assertTrue",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "all",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "self.assertEqual",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_recommendations_only_include_good_windows_and_respect_filters",
+          "callee": "self.search",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_repetition_and_subject_order_keep_scores_and_decisions",
+          "callee": "payload",
+          "lineNumber": 141
+        },
+        {
+          "caller": "test_repetition_and_subject_order_keep_scores_and_decisions",
+          "callee": "self.search",
+          "lineNumber": 142
+        },
+        {
+          "caller": "test_repetition_and_subject_order_keep_scores_and_decisions",
+          "callee": "self.assertEqual",
+          "lineNumber": 143
+        },
+        {
+          "caller": "test_repetition_and_subject_order_keep_scores_and_decisions",
+          "callee": "self.search",
+          "lineNumber": 143
+        },
+        {
+          "caller": "test_repetition_and_subject_order_keep_scores_and_decisions",
+          "callee": "data['subjects'].reverse",
+          "lineNumber": 144
+        },
+        {
+          "caller": "test_repetition_and_subject_order_keep_scores_and_decisions",
+          "callee": "self.search",
+          "lineNumber": 145
+        },
+        {
+          "caller": "test_repetition_and_subject_order_keep_scores_and_decisions",
+          "callee": "zip",
+          "lineNumber": 146
+        },
+        {
+          "caller": "test_repetition_and_subject_order_keep_scores_and_decisions",
+          "callee": "self.assertEqual",
+          "lineNumber": 147
+        },
+        {
+          "caller": "test_repetition_and_subject_order_keep_scores_and_decisions",
+          "callee": "zip",
+          "lineNumber": 148
+        },
+        {
+          "caller": "test_repetition_and_subject_order_keep_scores_and_decisions",
+          "callee": "self.assertEqual",
+          "lineNumber": 149
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "self.search",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "payload",
+          "lineNumber": 153
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "self.assertEqual",
+          "lineNumber": 155
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "sum",
+          "lineNumber": 155
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "zip",
+          "lineNumber": 156
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "self.assertEqual",
+          "lineNumber": 156
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "self.assertTrue",
+          "lineNumber": 157
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "all",
+          "lineNumber": 157
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "w['start_at'].endswith",
+          "lineNumber": 157
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "self.search",
+          "lineNumber": 158
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "payload",
+          "lineNumber": 158
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "next",
+          "lineNumber": 159
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "next",
+          "lineNumber": 160
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "self.assertNotEqual",
+          "lineNumber": 161
+        },
+        {
+          "caller": "test_interval_partition_timezone_boundaries_and_last_year",
+          "callee": "self.assertEqual",
+          "lineNumber": 162
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "self.search",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "payload",
+          "lineNumber": 165
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "next",
+          "lineNumber": 167
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "enumerate",
+          "lineNumber": 167
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "self.assertNotEqual",
+          "lineNumber": 168
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 170
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "self.engine.calendar.at",
+          "lineNumber": 170
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "self.assertEqual",
+          "lineNumber": 171
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "Solar.fromYmdHms(*[getattr(dt.astimezone(BEIJING),x) for x in ('year','month','day','hour','minute','second')]).getLunar().getMonthInGanZhi",
+          "lineNumber": 171
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "Solar.fromYmdHms(*[getattr(dt.astimezone(BEIJING),x) for x in ('year','month','day','hour','minute','second')]).getLunar",
+          "lineNumber": 171
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "Solar.fromYmdHms",
+          "lineNumber": 171
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "getattr",
+          "lineNumber": 171
+        },
+        {
+          "caller": "test_exact_jie_split_and_corpus_changes_month_earlier",
+          "callee": "dt.astimezone",
+          "lineNumber": 171
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "self.assertEqual",
+          "lineNumber": 175
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "len",
+          "lineNumber": 175
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "self.assertEqual",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "sum",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "len",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "cal.data['days'].values",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 178
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "dt.astimezone",
+          "lineNumber": 178
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "Solar.fromYmdHms(bj.year,bj.month,bj.day,bj.hour,bj.minute,bj.second).getLunar",
+          "lineNumber": 179
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "Solar.fromYmdHms",
+          "lineNumber": 179
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "cal.at",
+          "lineNumber": 180
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "self.assertEqual",
+          "lineNumber": 181
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "l.getDayYi",
+          "lineNumber": 181
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "l.getDayJi",
+          "lineNumber": 181
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "self.assertEqual",
+          "lineNumber": 182
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "l.getTimeYi",
+          "lineNumber": 182
+        },
+        {
+          "caller": "test_full_raw_corpus_day_hour_integrity_and_provider_spot_checks",
+          "callee": "l.getTimeJi",
+          "lineNumber": 182
+        },
+        {
+          "caller": "test_no_point_total_overrides_a_block_or_unknown_activity",
+          "callee": "self.search",
+          "lineNumber": 185
+        },
+        {
+          "caller": "test_no_point_total_overrides_a_block_or_unknown_activity",
+          "callee": "payload",
+          "lineNumber": 185
+        },
+        {
+          "caller": "test_no_point_total_overrides_a_block_or_unknown_activity",
+          "callee": "self.assertTrue",
+          "lineNumber": 187
+        },
+        {
+          "caller": "test_no_point_total_overrides_a_block_or_unknown_activity",
+          "callee": "self.assertTrue",
+          "lineNumber": 188
+        },
+        {
+          "caller": "test_no_point_total_overrides_a_block_or_unknown_activity",
+          "callee": "all",
+          "lineNumber": 188
+        },
+        {
+          "caller": "test_no_point_total_overrides_a_block_or_unknown_activity",
+          "callee": "self.assertEqual",
+          "lineNumber": 191
+        },
+        {
+          "caller": "test_no_point_total_overrides_a_block_or_unknown_activity",
+          "callee": "self.assertTrue",
+          "lineNumber": 192
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "self.search",
+          "lineNumber": 195
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "payload",
+          "lineNumber": 195
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "self.search",
+          "lineNumber": 196
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "payload",
+          "lineNumber": 196
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "self.assertEqual",
+          "lineNumber": 197
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "self.assertEqual",
+          "lineNumber": 198
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "payload",
+          "lineNumber": 199
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "self.search",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "self.assertEqual",
+          "lineNumber": 201
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "self.engine.profile",
+          "lineNumber": 202
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "DateSearchRequest.model_validate",
+          "lineNumber": 202
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "self.engine.calendar.at",
+          "lineNumber": 204
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "datetime.fromisoformat",
+          "lineNumber": 204
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "self.engine.personal",
+          "lineNumber": 205
+        },
+        {
+          "caller": "test_same_day_activity_and_natal_override_are_distinct",
+          "callee": "self.assertEqual",
+          "lineNumber": 206
+        },
+        {
+          "caller": "test_birth_uncertainty_checks_exact_jie_even_away_from_hour",
+          "callee": "payload",
+          "lineNumber": 209
+        },
+        {
+          "caller": "test_birth_uncertainty_checks_exact_jie_even_away_from_hour",
+          "callee": "self.engine.profile",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_birth_uncertainty_checks_exact_jie_even_away_from_hour",
+          "callee": "DateSearchRequest.model_validate",
+          "lineNumber": 210
+        },
+        {
+          "caller": "test_birth_uncertainty_checks_exact_jie_even_away_from_hour",
+          "callee": "self.assertEqual",
+          "lineNumber": 211
+        },
+        {
+          "caller": "test_birth_uncertainty_checks_exact_jie_even_away_from_hour",
+          "callee": "self.search",
+          "lineNumber": 213
+        },
+        {
+          "caller": "test_birth_uncertainty_checks_exact_jie_even_away_from_hour",
+          "callee": "self.assertEqual",
+          "lineNumber": 214
+        },
+        {
+          "caller": "test_birth_uncertainty_checks_exact_jie_even_away_from_hour",
+          "callee": "self.assertTrue",
+          "lineNumber": 215
+        },
+        {
+          "caller": "test_birth_uncertainty_checks_exact_jie_even_away_from_hour",
+          "callee": "all",
+          "lineNumber": 215
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "payload",
+          "lineNumber": 218
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "payload",
+          "lineNumber": 218
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "bad['subjects'].pop",
+          "lineNumber": 219
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "self.assertRaises",
+          "lineNumber": 220
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "DateSearchRequest.model_validate",
+          "lineNumber": 220
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "payload",
+          "lineNumber": 221
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "self.search",
+          "lineNumber": 222
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "self.assertEqual",
+          "lineNumber": 223
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "self.assertEqual",
+          "lineNumber": 224
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "self.assertEqual",
+          "lineNumber": 225
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "sum",
+          "lineNumber": 225
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "self.assertEqual",
+          "lineNumber": 227
+        },
+        {
+          "caller": "test_request_constraints_and_weekday_hour_clipping",
+          "callee": "self.search",
+          "lineNumber": 227
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "tempfile.TemporaryDirectory",
+          "lineNumber": 230
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "TestClient",
+          "lineNumber": 230
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "create_app",
+          "lineNumber": 230
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "Path",
+          "lineNumber": 230
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "client.get('/api/v1/history').json",
+          "lineNumber": 231
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "client.get",
+          "lineNumber": 231
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "patch.object",
+          "lineNumber": 232
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "AssertionError",
+          "lineNumber": 232
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "client.post",
+          "lineNumber": 233
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "payload",
+          "lineNumber": 233
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "self.assertEqual",
+          "lineNumber": 234
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "Draft202012Validator(json.loads((ROOT/'schemas/date_search_response.schema.json').read_text())).validate",
+          "lineNumber": 235
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "Draft202012Validator",
+          "lineNumber": 235
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "json.loads",
+          "lineNumber": 235
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "(ROOT/'schemas/date_search_response.schema.json').read_text",
+          "lineNumber": 235
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "response.json",
+          "lineNumber": 235
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "self.assertEqual",
+          "lineNumber": 236
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "client.get('/api/v1/history').json",
+          "lineNumber": 236
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "client.get",
+          "lineNumber": 236
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "payload",
+          "lineNumber": 237
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "self.assertEqual",
+          "lineNumber": 238
+        },
+        {
+          "caller": "test_api_contract_and_no_draw_storage_or_generator_calls",
+          "callee": "client.post",
+          "lineNumber": 238
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    }
+  ]
+}

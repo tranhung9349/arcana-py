@@ -1,0 +1,211 @@
+{
+  "checked_at": "2026-10-27T13:55:56.760528+00:00",
+  "synthetic_data_only": true,
+  "kind": "DEVELOPMENT_SMOKE_NOT_EXPERT_OR_PREDICTIVE_VALIDATION",
+  "results": [
+    {
+      "consultation_id": "410ad5a6-e374-43cf-acd8-335dca6ff50e",
+      "activity": "BUSINESS_OPENING",
+      "evaluation_mode": "DAY_AND_HOUR",
+      "day_grade": "GOOD",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "prompt_version": "date-selection-2026-10-27-v1",
+      "case_ids": [
+        "date-hour-good"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 9089,
+        "completion_tokens": 3496,
+        "total_tokens": 12585
+      },
+      "generation_passes": 1,
+      "cached_before_test": true,
+      "test_seconds": 0.019,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "no_birth_timestamp_in_ai_context": true,
+      "reading": {
+        "schema_version": "plain-reading-response-v2",
+        "context_id": "410ad5a6-e374-43cf-acd8-335dca6ff50e",
+        "summary": {
+          "label": "AI_INTERPRETATION",
+          "text": "Ngày 13/10/2026 có được khuyến nghị cho việc bắt đầu khai trương hoặc mở bán, nhưng phạm vi chỉ là khung bắt đầu 08:00–10:00 Giờ Việt Nam. Đây là khung duy nhất đạt mức Ngày Đẹp với 75/100 điểm. Căn cứ mạnh nhất là lịch ngày và lịch giờ của đúng khung này đều ghi nhận việc khai trương thuộc mục nên làm, đồng thời hồ sơ người đứng việc không bị chặn.",
+          "fact_refs": [
+            "date:decision",
+            "date:recommended",
+            "date:focus",
+            "date:activity"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        "analysis": [
+          {
+            "label": "AI_INTERPRETATION",
+            "text": "Sự phù hợp nằm ở đúng việc: lịch ngày ghi khai trương thuộc mục nên làm, và lịch giờ của khung 08:00–10:00 cũng vậy. Vì chế độ xét cả ngày và giờ bắt đầu, khuyến nghị chỉ dành cho việc bắt đầu trong khung này; không suy ra các giờ khác trong ngày cũng thuận. Ngày cũng không ghi nhận điều kiện loại trừ nào.",
+            "fact_refs": [
+              "date:activity",
+              "date:focus",
+              "date:personal"
+            ],
+            "evidence_refs": [
+              "date:policy"
+            ]
+          },
+          {
+            "label": "AI_INTERPRETATION",
+            "text": "Đối chiếu hồ sơ: người đứng việc kinh doanh có hành chính là Hỏa, hành được ưa là Mộc, hành cần tránh là Thổ và Thủy. Bốn vị trí Can ngày, Can giờ, Chi ngày, Chi giờ lần lượt là Kim, Kim, Kim, Hỏa. Ba vị trí Kim được xếp trung tính, không phải sinh phù; vị trí Hỏa đúng hành chính nên không bị trừ. Hồ sơ không bị chặn và không có xung với ngày sinh; trạng thái đạt chỉ nói không vướng điều kiện cá nhân đang xét.",
+            "fact_refs": [
+              "date:profiles",
+              "date:personal",
+              "date:focus",
+              "date:score_policy"
+            ],
+            "evidence_refs": [
+              "date:policy"
+            ]
+          },
+          {
+            "label": "AI_INTERPRETATION",
+            "text": "Vì sao đạt 75: khởi điểm 100, trừ 5 điểm do Can và Chi ngày cùng hành, trừ 5 điểm do chưa gặp hợp chi ngày với tháng/năm, và trừ 15 điểm theo bảng đối chiếu hành của hồ sơ; còn 75, đúng ngưỡng Ngày Đẹp. Các mức trừ này là chính sách chấm của tính năng tra ngày, không phải định luật cổ điển. Việc ngày thuộc nhóm Hoàng Đạo và Trực Khai chỉ là đặc điểm lịch; kết quả đã lưu không gắn điểm cộng hay điều kiện nào cho chúng, và không có điều kiện loại trừ nào bị bỏ qua để bù điểm.",
+            "fact_refs": [
+              "date:focus",
+              "date:score_policy",
+              "date:decision"
+            ],
+            "evidence_refs": [
+              "date:policy"
+            ]
+          }
+        ],
+        "practical_options": [
+          {
+            "kind": "MODERN_APPLICATION",
+            "text": "Chốt và thông báo giờ bắt đầu trong khung 08:00–10:00, kèm danh sách việc cần xong trước giờ mở.",
+            "fact_refs": [
+              "date:focus",
+              "date:recommended"
+            ]
+          },
+          {
+            "kind": "MODERN_APPLICATION",
+            "text": "Tách việc ký văn khế và giao dịch ra tra riêng, vì phạm vi việc đã chọn chỉ là bắt đầu khai trương hoặc mở bán.",
+            "fact_refs": [
+              "date:activity"
+            ]
+          }
+        ],
+        "limits": [
+          "Khuyến nghị chỉ áp dụng cho giờ bắt đầu trong khung đã liệt kê, không áp dụng cho toàn bộ ngày hay các giờ khác.",
+          "Bài luận chỉ phân tích khung được xếp cao nhất; các khung còn lại không có đủ căn cứ để diễn giải chi tiết.",
+          "Chưa đánh giá Tam Nương; không thêm quy tắc chọn ngày, vận hạn hay cam kết kết quả của sự kiện."
+        ]
+      }
+    },
+    {
+      "consultation_id": "81684d7b-ebc4-41a7-9971-38ad4ca9a4c9",
+      "activity": "BETROTHAL_NACAI",
+      "evaluation_mode": "DAY_ONLY",
+      "day_grade": "NORMAL",
+      "model_returned": "deepseek-v4.1-flash:1017",
+      "prompt_version": "date-selection-2026-10-27-v1",
+      "case_ids": [
+        "date-day-two-people"
+      ],
+      "validation": "SCHEMA_AND_REFERENCES_CHECKED",
+      "usage": {
+        "prompt_tokens": 9655,
+        "completion_tokens": 3602,
+        "total_tokens": 13257
+      },
+      "generation_passes": 1,
+      "cached_before_test": false,
+      "test_seconds": 14.594,
+      "cache_identical": true,
+      "original_snapshot_unchanged": true,
+      "no_birth_timestamp_in_ai_context": true,
+      "reading": {
+        "schema_version": "plain-reading-response-v2",
+        "context_id": "81684d7b-ebc4-41a7-9971-38ad4ca9a4c9",
+        "summary": {
+          "label": "AI_INTERPRETATION",
+          "text": "Ngày 02/10/2026 chưa được khuyến nghị như Ngày Đẹp cho nạp thái — lễ ngỏ lời; kết quả là Ngày Bình Thường, 55/100 điểm. Khoảng được xếp cao nhất là 22:00–23:00 (Giờ Việt Nam), nhưng đây chỉ là phạm vi hiệu lực của đánh giá ngày, không phải giờ đẹp. Căn cứ mạnh nhất là lịch ngày không đề cập việc đã chọn và cả hai hồ sơ còn vướng hành Kỵ, nên chưa đủ điều kiện để gọi là ngày thuận.",
+          "fact_refs": [
+            "date:decision",
+            "date:recommended",
+            "date:focus",
+            "date:personal"
+          ],
+          "evidence_refs": [
+            "date:policy"
+          ]
+        },
+        "analysis": [
+          {
+            "label": "AI_INTERPRETATION",
+            "text": "Việc đã chọn là bắt đầu lễ nạp thái, ngỏ lời kết hôn; phạm vi này chưa bao gồm mọi nghi thức ăn hỏi. Lịch ngày không đề cập việc đã chọn nên bị trừ 15 điểm; theo quy tắc của tính năng, thiếu hỗ trợ này không được xem là thuận và không thể bù bằng điểm ở chỗ khác.",
+            "fact_refs": [
+              "date:activity",
+              "date:focus",
+              "date:score_policy"
+            ],
+            "evidence_refs": [
+              "date:policy"
+            ]
+          },
+          {
+            "label": "AI_INTERPRETATION",
+            "text": "Đương sự thứ nhất bị trừ 15 điểm vì Can ngày Kim ở mức trung tính còn Chi ngày Thổ là Kỵ; đương sự thứ hai bị trừ 20 điểm vì cả Can ngày Kim và Chi ngày Thổ đều là Kỵ. Hai hồ sơ được xét riêng và lấy mức trừ lớn hơn là 20, nên không thể nói cả hai cùng hợp; chỉ cần một người còn vướng là đủ để kết luận chưa đạt.",
+            "fact_refs": [
+              "date:personal",
+              "date:profiles",
+              "date:score_policy",
+              "date:focus"
+            ],
+            "evidence_refs": [
+              "date:policy"
+            ]
+          },
+          {
+            "label": "AI_INTERPRETATION",
+            "text": "Tổng mức trừ quyết định gồm 10 điểm do Chi ngày sinh Can ngày, 15 điểm do lịch ngày không đề cập việc đã chọn và 20 điểm do đối chiếu hồ sơ; 100 trừ 45 còn 55, dưới ngưỡng 80 của Ngày Đẹp. Vì vậy Ngày Bình Thường phản ánh điều kiện còn thiếu, không phải một Ngày Đẹp bị xếp thấp.",
+            "fact_refs": [
+              "date:focus",
+              "date:decision",
+              "date:score_policy",
+              "date:personal"
+            ],
+            "evidence_refs": [
+              "date:policy"
+            ]
+          }
+        ],
+        "practical_options": [
+          {
+            "kind": "MODERN_APPLICATION",
+            "text": "Trước khi chốt, bạn có thể xác nhận lại với hai gia đình rằng buổi lễ chỉ gồm nạp thái — ngỏ lời, chưa gộp ăn hỏi, để phạm vi đánh giá khớp với việc thực hiện.",
+            "fact_refs": [
+              "date:activity"
+            ]
+          },
+          {
+            "kind": "MODERN_APPLICATION",
+            "text": "Nếu vẫn cân nhắc ngày này, hãy ghi rõ đây là phương án ở mức Ngày Bình Thường và kiểm tra lịch thực tế của người tham gia; không dùng mốc 22:00–23:00 như một giờ đẹp đã được chọn.",
+            "fact_refs": [
+              "date:focus",
+              "date:activity"
+            ]
+          }
+        ],
+        "limits": [
+          "Các khoảng giờ nêu trên chỉ là phạm vi hiệu lực của đánh giá ngày; tính năng này chưa chọn giờ đẹp cho việc nạp thái.",
+          "Bài luận chỉ phân tích khoảng được xếp cao nhất; không suy rộng căn cứ đó sang mọi khung khác trong ngày.",
+          "Chưa đánh giá Tam Nương, nên không thể coi ngày này đã được kiểm tra sạch; cũng không thêm quy tắc chọn ngày hay cam kết kết quả của sự kiện."
+        ]
+      }
+    }
+  ],
+  "draw_history_unchanged": true
+}

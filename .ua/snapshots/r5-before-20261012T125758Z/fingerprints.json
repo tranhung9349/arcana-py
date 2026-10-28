@@ -1,0 +1,3857 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "unversioned",
+  "generatedAt": "2026-10-12T11:09:47.008Z",
+  "files": {
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "9b4596b535cd1a8f51caff3d5844f720ca61ed9a8e792d31323686b7adbc2274",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 87,
+      "hasStructuralAnalysis": false
+    },
+    "calendar_adapter/README.md": {
+      "filePath": "calendar_adapter/README.md",
+      "contentHash": "ed45fd5e46720354114888782ea0cd4d02bc748d37e436641ab2960b95751c39",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 81,
+      "hasStructuralAnalysis": false
+    },
+    "calendar_adapter/__init__.py": {
+      "filePath": "calendar_adapter/__init__.py",
+      "contentHash": "2b12fdac6fc895fc34a7636956839baeddfd638be2dd695b6a0715a68339dcfa",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": ".vietnamese",
+          "specifiers": [
+            "CalendarError",
+            "LunarDate",
+            "VietnameseCalendar",
+            "resolve_maihoa"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "calendar_adapter/__main__.py": {
+      "filePath": "calendar_adapter/__main__.py",
+      "contentHash": "e2d34447d9c619678a2117bd29ffc735ff1f4b9eb68083aeb30d4b5d01f495c8",
+      "functions": [
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "date",
+            "datetime"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": ".vietnamese",
+          "specifiers": [
+            "CalendarError",
+            "VietnameseCalendar",
+            "resolve_maihoa"
+          ]
+        }
+      ],
+      "exports": [
+        "main"
+      ],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    "calendar_adapter/audit.py": {
+      "filePath": "calendar_adapter/audit.py",
+      "contentHash": "a25334e90ee596c70defbd93c262a5da07f8537f11acaeb75da9598781ecdcb3",
+      "functions": [
+        {
+          "name": "read_moons",
+          "params": [
+            "path"
+          ],
+          "returnType": "list[datetime]",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "structural_check",
+          "params": [
+            "calendar"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "audit",
+          "params": [
+            "reference_paths"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 53
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [
+        {
+          "name": "_PreText",
+          "methods": [
+            "__init__",
+            "handle_starttag",
+            "handle_endtag",
+            "handle_data"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "asdict"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "date",
+            "datetime",
+            "timedelta"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "html.parser",
+          "specifiers": [
+            "HTMLParser"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": ".vietnamese",
+          "specifiers": [
+            "ALGORITHM_ID",
+            "LOOKUP_END",
+            "LOOKUP_START",
+            "VietnameseCalendar",
+            "_EPOCH",
+            "_SYNODIC_MONTH",
+            "_jdn",
+            "_new_moon_day",
+            "_new_moon_jd"
+          ]
+        }
+      ],
+      "exports": [
+        "_PreText",
+        "read_moons",
+        "structural_check",
+        "audit",
+        "main"
+      ],
+      "totalLines": 170,
+      "hasStructuralAnalysis": true
+    },
+    "calendar_adapter/vietnamese.py": {
+      "filePath": "calendar_adapter/vietnamese.py",
+      "contentHash": "ae9a66ec6d5190bd7a484261c06a9795bc2fb77f0640382e85efbb519c6ac1d1",
+      "functions": [
+        {
+          "name": "_jdn",
+          "params": [
+            "value"
+          ],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "_date_from_jdn",
+          "params": [
+            "value"
+          ],
+          "returnType": "date",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_new_moon_jd",
+          "params": [
+            "k"
+          ],
+          "returnType": "float",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "_new_moon_day",
+          "params": [
+            "k",
+            "offset_hours"
+          ],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_principal_term_sector",
+          "params": [
+            "jdn",
+            "offset_hours"
+          ],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "_month_eleven_start",
+          "params": [
+            "year",
+            "offset_hours"
+          ],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "_leap_offset",
+          "params": [
+            "month_eleven_start",
+            "offset_hours"
+          ],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "_solar_to_lunar",
+          "params": [
+            "value",
+            "offset_hours"
+          ],
+          "returnType": "LunarDate",
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "resolve_maihoa",
+          "params": [
+            "civil_datetime",
+            "true_solar_datetime",
+            "kind"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 38
+        }
+      ],
+      "classes": [
+        {
+          "name": "CalendarError",
+          "methods": [
+            "__init__"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "LunarDate",
+          "methods": [
+            "__post_init__",
+            "year_branch_index"
+          ],
+          "properties": [
+            "year",
+            "month",
+            "day",
+            "is_leap_month"
+          ],
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "VietnameseCalendar",
+          "methods": [
+            "_validate_date",
+            "to_lunar",
+            "to_solar",
+            "describe"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 60
+        }
+      ],
+      "imports": [
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "asdict",
+            "dataclass"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "date",
+            "datetime",
+            "timedelta",
+            "timezone"
+          ]
+        },
+        {
+          "source": "functools",
+          "specifiers": [
+            "lru_cache"
+          ]
+        },
+        {
+          "source": "math",
+          "specifiers": [
+            "floor",
+            "isfinite",
+            "pi",
+            "sin"
+          ]
+        }
+      ],
+      "exports": [
+        "CalendarError",
+        "LunarDate",
+        "_jdn",
+        "_date_from_jdn",
+        "_new_moon_jd",
+        "_new_moon_day",
+        "_principal_term_sector",
+        "_month_eleven_start",
+        "_leap_offset",
+        "_solar_to_lunar",
+        "VietnameseCalendar",
+        "resolve_maihoa"
+      ],
+      "totalLines": 254,
+      "hasStructuralAnalysis": true
+    },
+    "config/interpretation_disclaimers.json": {
+      "filePath": "config/interpretation_disclaimers.json",
+      "contentHash": "4f98a559db0302c44e9fe25f5d7c907ebe8ceab75e7be24c085d9b40d574c2e8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "config/mvp1_rules.json": {
+      "filePath": "config/mvp1_rules.json",
+      "contentHash": "7544d8a1354f24a1adfeed1f3d4bdd8697baf9e8767e7fd8aabbcdc9720fc64b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 113,
+      "hasStructuralAnalysis": false
+    },
+    "dan_gian_config.json": {
+      "filePath": "dan_gian_config.json",
+      "contentHash": "d3ec139bfbf5c16740489ea88f62b34d71302e622fefa2ec86d381a5c13fa539",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": false
+    },
+    "data/interpretation/README.md": {
+      "filePath": "data/interpretation/README.md",
+      "contentHash": "e30968a2fac307e200a07a2d7c73f2d431df92531c4317185764c7343fe70240",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "data/interpretation/iching_vi_draft.json": {
+      "filePath": "data/interpretation/iching_vi_draft.json",
+      "contentHash": "8f7cd817793bb00015051f1814422071ce9103aff3365c02fc284390c3187a36",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1610,
+      "hasStructuralAnalysis": false
+    },
+    "data/interpretation/tinix_vi.json": {
+      "filePath": "data/interpretation/tinix_vi.json",
+      "contentHash": "2cfb45bf36435c31767e563cc01102bd218ba44739f0c59a412c3e9b7f68e64e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 196,
+      "hasStructuralAnalysis": false
+    },
+    "data/reference/README.md": {
+      "filePath": "data/reference/README.md",
+      "contentHash": "bf4a5a7dfa3bcf80961d54e103e1495bc0480083a3b280ebbda686215b7b359c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    "data/reference/manifest.json": {
+      "filePath": "data/reference/manifest.json",
+      "contentHash": "d1b41abf83f8d37a1dc894f7fed589acdf66ec116c650528cc611f881401a17f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": false
+    },
+    "data/reference/open-iching/iching.json": {
+      "filePath": "data/reference/open-iching/iching.json",
+      "contentHash": "7fe029a32c51f2da39d702f8064825262cfd3a7d004353738cd893b0a017ab10",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3598,
+      "hasStructuralAnalysis": false
+    },
+    "data/reference/open-iching/tuan.json": {
+      "filePath": "data/reference/open-iching/tuan.json",
+      "contentHash": "14453a0ef7d3b1dc05e65c0d272dd97104375ba315364b70105353ada73d1668",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 65,
+      "hasStructuralAnalysis": false
+    },
+    "data/reference/open-iching/xiang.json": {
+      "filePath": "data/reference/open-iching/xiang.json",
+      "contentHash": "e346a62a41107f35f7e33955cf018b11749d80781847e681a088c2ee3412cc98",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 452,
+      "hasStructuralAnalysis": false
+    },
+    "data/reference/tinix-bazi/ganzhi.js": {
+      "filePath": "data/reference/tinix-bazi/ganzhi.js",
+      "contentHash": "d2f3db7c3c7a720b66e879cf85f377b28ac6b86df0b9bffaf020ea5f352d5bd8",
+      "functions": [
+        {
+          "name": "ganToVN",
+          "params": [
+            "gan"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "zhiToVN",
+          "params": [
+            "zhi"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "ganToElement",
+          "params": [
+            "gan"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "zhiToElement",
+          "params": [
+            "zhi"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "getNapAm",
+          "params": [
+            "gan",
+            "zhi"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "getTangCan",
+          "params": [
+            "zhi"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "getZhiMainGan",
+          "params": [
+            "zhi"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "getThapThan",
+          "params": [
+            "dayGan",
+            "otherGan"
+          ],
+          "exported": false,
+          "lineCount": 39
+        },
+        {
+          "name": "generates",
+          "params": [
+            "e1",
+            "e2"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "controls",
+          "params": [
+            "e1",
+            "e2"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "getCanKhi",
+          "params": [
+            "dayElement",
+            "monthZhi"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "getFavorable",
+          "params": [
+            "dayElement"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "getUnfavorable",
+          "params": [
+            "dayElement"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "getVongTrangSinh",
+          "params": [
+            "gan",
+            "zhi"
+          ],
+          "exported": false,
+          "lineCount": 22
+        },
+        {
+          "name": "removeDiacritics",
+          "params": [
+            "str"
+          ],
+          "exported": false,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 293,
+      "hasStructuralAnalysis": true
+    },
+    "data/reference/tinix-bazi/ganzhi_data.js": {
+      "filePath": "data/reference/tinix-bazi/ganzhi_data.js",
+      "contentHash": "836e4d49f46bb87f39b3b086f15798205cbc0c5cc13a1cd9a07b3ba56fb70ca5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1107,
+      "hasStructuralAnalysis": true
+    },
+    "data/reference/tinix-bazi/geju.js": {
+      "filePath": "data/reference/tinix-bazi/geju.js",
+      "contentHash": "f8848a27dbeeedf9fee77d85fa7c94f918f68094d9fd6cc6c5b51cf289badb69",
+      "functions": [
+        {
+          "name": "determineCach",
+          "params": [
+            "ctx"
+          ],
+          "exported": false,
+          "lineCount": 43
+        },
+        {
+          "name": "isJianLu",
+          "params": [
+            "dayGan",
+            "monthZhi"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "analyzeSanHe",
+          "params": [
+            "ctx"
+          ],
+          "exported": false,
+          "lineCount": 25
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 113,
+      "hasStructuralAnalysis": true
+    },
+    "data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js": {
+      "filePath": "data/reference/tinix-bazi/phan_tich/data/dich_thien_tuy_data.js",
+      "contentHash": "1108468d1d0a286d197567f11ee6965d63c5bba663502d995c596f25feae7bb8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 111,
+      "hasStructuralAnalysis": true
+    },
+    "data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js": {
+      "filePath": "data/reference/tinix-bazi/phan_tich/data/ngu_hanh_data.js",
+      "contentHash": "3d0d7b87dfb141859f8b6e55d0abebc6f0ec4d8d30dafc0c05faac432b0bf739",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 274,
+      "hasStructuralAnalysis": true
+    },
+    "data/reference/tinix-bazi/phan_tich/ngu_hanh.js": {
+      "filePath": "data/reference/tinix-bazi/phan_tich/ngu_hanh.js",
+      "contentHash": "3efb4f7b131c5ffa7475eb32e53bd0b662ee1deb9541a5e4f03207a0bfe4942b",
+      "functions": [
+        {
+          "name": "analyzeNguHanh",
+          "params": [
+            "ctx"
+          ],
+          "exported": false,
+          "lineCount": 301
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 321,
+      "hasStructuralAnalysis": true
+    },
+    "data/reference/tinix-bazi/shensha.js": {
+      "filePath": "data/reference/tinix-bazi/shensha.js",
+      "contentHash": "75aa8af1464fef4183addb384afe9f7d5375f3c2abb09958b20b98d1b42ab2fe",
+      "functions": [
+        {
+          "name": "calculateShenSha",
+          "params": [
+            "ctx"
+          ],
+          "exported": false,
+          "lineCount": 192
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 801,
+      "hasStructuralAnalysis": true
+    },
+    "docs/architect_idea.md": {
+      "filePath": "docs/architect_idea.md",
+      "contentHash": "2521a6a78bdf62eb768f92312a69556b4bace460880878542991bc6bb855d53a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 78,
+      "hasStructuralAnalysis": false
+    },
+    "docs/archive/draw_request_v3.json": {
+      "filePath": "docs/archive/draw_request_v3.json",
+      "contentHash": "b7fb3cbe3d7010d63ed98ac881ff5d329c3de3d30e991a705906ccc95761bdfc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": false
+    },
+    "docs/archive/draw_response_v3.json": {
+      "filePath": "docs/archive/draw_response_v3.json",
+      "contentHash": "48483e5cb51bd51e19607488fef238e1b300fb4ac4309a92b7ff86ac155ae18e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1149,
+      "hasStructuralAnalysis": false
+    },
+    "docs/archive/logic_plan_mvp1_v3.md": {
+      "filePath": "docs/archive/logic_plan_mvp1_v3.md",
+      "contentHash": "0103d96e03e41b5a7c1b78093eccc6e21bf12820df06167c7e653ac60a4c61e2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 835,
+      "hasStructuralAnalysis": false
+    },
+    "docs/logic_plan_mvp1.md": {
+      "filePath": "docs/logic_plan_mvp1.md",
+      "contentHash": "f2f624ef9de6c6cb6acb7f1926de2778dc1ea519b1b63ef91a1fb7716122ba8b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 100,
+      "hasStructuralAnalysis": false
+    },
+    "docs/prompts/vietnamese_interpretation_v1.md": {
+      "filePath": "docs/prompts/vietnamese_interpretation_v1.md",
+      "contentHash": "b70b7ee0c3d5af75367c0da01e34139aa3c75d4f4b9f387a46b7506eb656c544",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 63,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/astronomy_runtime_spot_checks.json": {
+      "filePath": "docs/research/astronomy_runtime_spot_checks.json",
+      "contentHash": "4a84e6be8bf1963b19f45fab5cfbbd8370112944359db9fc49ade09b610300e0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 121,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/bazi_python_port_validation.json": {
+      "filePath": "docs/research/bazi_python_port_validation.json",
+      "contentHash": "0e04960757de0510a8aa8fe5afb8318931ad89dd1c6f6f6173827dda831396c9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/beijing_calendar_http_smoke.json": {
+      "filePath": "docs/research/beijing_calendar_http_smoke.json",
+      "contentHash": "454c9e781af7c4a728c2f407ca814614b0fc283d2194268ab61ce391c56eb44b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/beijing_calendar_migration_validation.json": {
+      "filePath": "docs/research/beijing_calendar_migration_validation.json",
+      "contentHash": "e374d002e6274437efa1e8c352d7060d0978384e087bf6bd6a045cb585e6dd87",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 208,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/beijing_calendar_range_audit.json": {
+      "filePath": "docs/research/beijing_calendar_range_audit.json",
+      "contentHash": "21e140728dcef0d773554fdfa2ed29e5e43166d24929e86b145b825649a50330",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/calendar_adapter_trial.json": {
+      "filePath": "docs/research/calendar_adapter_trial.json",
+      "contentHash": "296f0af06a68f1bda5f42692ef05bbb29d26dc6a438e6fcf6b8fb3ab39996272",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 275,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/calendar_boundary_policy_audit.json": {
+      "filePath": "docs/research/calendar_boundary_policy_audit.json",
+      "contentHash": "4470fdf411f934d31b6846b6810eb7a130e9ac4dca9e94c1895d373e83fc1244",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 263,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/calendar_sources/nasa-phases1901.html": {
+      "filePath": "docs/research/calendar_sources/nasa-phases1901.html",
+      "contentHash": "0ee4dd03d8f2661b2315993228f096c91deb63727d78fe7d7796e4b50279f4ce",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1851,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/calendar_sources/nasa-phases2001.html": {
+      "filePath": "docs/research/calendar_sources/nasa-phases2001.html",
+      "contentHash": "ceb16de952edaf9bf1f7c6d1daf13c7487632c3a5ad78808bd40120a76c9fbd8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1851,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/exponential_distribution_trial.json": {
+      "filePath": "docs/research/exponential_distribution_trial.json",
+      "contentHash": "be01a8ccad7f4d2699c64e4bc77814df5fffad72b60c541a1f2fe06095d4053a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45651,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/exponential_distribution_trial.md": {
+      "filePath": "docs/research/exponential_distribution_trial.md",
+      "contentHash": "43c918108922fc9ffc4b36b81eb12031f69eeccf1453837af95a5b7c494a5492",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/geolocation_policy_audit.json": {
+      "filePath": "docs/research/geolocation_policy_audit.json",
+      "contentHash": "828da06467efe34676f8a67fb068069f2fd0ee59affda33ccd73ef825b8afefa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 150,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/interpretation_schema_validation.json": {
+      "filePath": "docs/research/interpretation_schema_validation.json",
+      "contentHash": "9a18f0292590aaa2e01b39b5ac2787f5478c643cf3445ede8607affcfcc9056c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/mvp1_runtime_validation.json": {
+      "filePath": "docs/research/mvp1_runtime_validation.json",
+      "contentHash": "898b2a02219f85343a9cd5dc096f3555eb6c1f2d7229269b1d9799a7402684e6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 131,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/remediation_audit_v2.json": {
+      "filePath": "docs/research/remediation_audit_v2.json",
+      "contentHash": "91bf8f39daf87d27c64a1944f15ce120160470e110953976b9c979deb882e43c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2224,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/remediation_feasibility_v3.json": {
+      "filePath": "docs/research/remediation_feasibility_v3.json",
+      "contentHash": "3e5ddde294f05d167943e5e586338d1968611dc2c52fe1f5a6edd041725c1a92",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1417,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/remediation_feasibility_v4.json": {
+      "filePath": "docs/research/remediation_feasibility_v4.json",
+      "contentHash": "87eae3e5bb36f2f352514b6d4fb651d95052f7c153c610f9c990bbeec1d656e5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1125,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/soft_adjusters_source_audit.json": {
+      "filePath": "docs/research/soft_adjusters_source_audit.json",
+      "contentHash": "43d550de864bbb761179c5dd652acec3bccfb94dca17825689edb9076a2fa0ff",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 608,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/source_explanation_http_smoke.json": {
+      "filePath": "docs/research/source_explanation_http_smoke.json",
+      "contentHash": "18149ee515ebfb58339d861c8547953027374b36fd732c12d887da8480c11a0d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    "docs/research/source_explanation_validation.json": {
+      "filePath": "docs/research/source_explanation_validation.json",
+      "contentHash": "537aed754d3bae36683a4c4bd41680b99a5fad43add0d5b18ad66430b5fbe674",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 93,
+      "hasStructuralAnalysis": false
+    },
+    "examples/README.md": {
+      "filePath": "examples/README.md",
+      "contentHash": "ff5979044208243f265d0811b9441778cbfaef555e7299793359a7dad03eba92",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": false
+    },
+    "examples/draw_request.json": {
+      "filePath": "examples/draw_request.json",
+      "contentHash": "4d6c5204dffd2416878f37daf59305e2aa10b526b0555ab0e7686e5a2201ace2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": false
+    },
+    "examples/draw_response.json": {
+      "filePath": "examples/draw_response.json",
+      "contentHash": "ccd2b032b7459936ecce4f139175f0b8bfedee7eb87f7190cb0809c0a9268fed",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1131,
+      "hasStructuralAnalysis": false
+    },
+    "examples/source_explanation.json": {
+      "filePath": "examples/source_explanation.json",
+      "contentHash": "01a9a07500afc350e65026a42d953e4e98b791a0b42561233bdbf4c329346ea8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 440,
+      "hasStructuralAnalysis": false
+    },
+    "randomyst/__init__.py": {
+      "filePath": "randomyst/__init__.py",
+      "contentHash": "0a3b9e58e3081ce62e96a882e9432125e7855dd934de05bccbfdd9ab4c6f1193",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "randomyst/api.py": {
+      "filePath": "randomyst/api.py",
+      "contentHash": "f5637e4222b52d092071e5608504b8758d8f1be57d46fdfac027f52dea35fc97",
+      "functions": [
+        {
+          "name": "create_app",
+          "params": [
+            "db_path"
+          ],
+          "exported": true,
+          "lineCount": 50
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timezone"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "uuid",
+          "specifiers": [
+            "UUID"
+          ]
+        },
+        {
+          "source": "fastapi",
+          "specifiers": [
+            "FastAPI",
+            "Request",
+            "Query"
+          ]
+        },
+        {
+          "source": "fastapi.exceptions",
+          "specifiers": [
+            "RequestValidationError"
+          ]
+        },
+        {
+          "source": "fastapi.responses",
+          "specifiers": [
+            "FileResponse",
+            "JSONResponse"
+          ]
+        },
+        {
+          "source": "fastapi.staticfiles",
+          "specifiers": [
+            "StaticFiles"
+          ]
+        },
+        {
+          "source": ".time_engine",
+          "specifiers": [
+            "CalendarError"
+          ]
+        },
+        {
+          "source": ".engine",
+          "specifiers": [
+            "EngineError",
+            "NumberEngine",
+            "ROOT"
+          ]
+        },
+        {
+          "source": ".models",
+          "specifiers": [
+            "DrawRequest",
+            "DrawResponse",
+            "SourceExplanation"
+          ]
+        },
+        {
+          "source": ".storage",
+          "specifiers": [
+            "DrawStore"
+          ]
+        },
+        {
+          "source": ".interpretation",
+          "specifiers": [
+            "ExplanationRepository"
+          ]
+        }
+      ],
+      "exports": [
+        "create_app"
+      ],
+      "totalLines": 71,
+      "hasStructuralAnalysis": true
+    },
+    "randomyst/bazi.py": {
+      "filePath": "randomyst/bazi.py",
+      "contentHash": "d0ab6d26d8cbb389d052e85616ef2b12f3facf132c596d152d35e6fc41c44297",
+      "functions": [
+        {
+          "name": "deity",
+          "params": [
+            "day",
+            "other"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "structure",
+          "params": [
+            "day",
+            "month_gan",
+            "month_zhi"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "analyze",
+          "params": [
+            "gans",
+            "zhis"
+          ],
+          "exported": true,
+          "lineCount": 56
+        },
+        {
+          "name": "star_bonuses",
+          "params": [
+            "gans",
+            "zhis",
+            "casting_month_branch"
+          ],
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": ".sampling",
+          "specifiers": [
+            "ELEMENTS",
+            "GENERATES",
+            "CONTROLS"
+          ]
+        },
+        {
+          "source": ".time_engine",
+          "specifiers": [
+            "BRANCHES",
+            "BRANCH_ELEMENTS",
+            "STEMS"
+          ]
+        }
+      ],
+      "exports": [
+        "deity",
+        "structure",
+        "analyze",
+        "star_bonuses"
+      ],
+      "totalLines": 121,
+      "hasStructuralAnalysis": true
+    },
+    "randomyst/engine.py": {
+      "filePath": "randomyst/engine.py",
+      "contentHash": "524ce884792fd8d7f4de6c74ee156ff1f55ee2538db4e4410c58b3bbb1f78e0b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "EngineError",
+          "methods": [
+            "__init__"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "NumberEngine",
+          "methods": [
+            "__init__",
+            "draw"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 106
+        }
+      ],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timezone"
+          ]
+        },
+        {
+          "source": "math",
+          "specifiers": [
+            "exp"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "SystemRandom"
+          ]
+        },
+        {
+          "source": ".bazi",
+          "specifiers": [
+            "analyze",
+            "star_bonuses"
+          ]
+        },
+        {
+          "source": ".maihoa",
+          "specifiers": [
+            "IchingRepository"
+          ]
+        },
+        {
+          "source": ".sampling",
+          "specifiers": [
+            "ELEMENTS",
+            "GENERATES",
+            "CONTROLS",
+            "BUCKETS",
+            "Configuration",
+            "Distribution",
+            "configurations",
+            "element_of",
+            "relation_score",
+            "select_context",
+            "validate_sample"
+          ]
+        },
+        {
+          "source": ".time_engine",
+          "specifiers": [
+            "BRANCH_ELEMENTS",
+            "beijing_clock",
+            "check_provider",
+            "pillars",
+            "resolve_maihoa",
+            "solar_month"
+          ]
+        }
+      ],
+      "exports": [
+        "EngineError",
+        "NumberEngine"
+      ],
+      "totalLines": 128,
+      "hasStructuralAnalysis": true
+    },
+    "randomyst/geolocation.py": {
+      "filePath": "randomyst/geolocation.py",
+      "contentHash": "05a5d1094f0ff6479fcbb0324d5dba0ee455e9b5487b4efeb09ed5e9f4e0846d",
+      "functions": [
+        {
+          "name": "ip_location",
+          "params": [
+            "address"
+          ],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timezone"
+          ]
+        },
+        {
+          "source": "ipaddress",
+          "specifiers": [
+            "ip_address"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": ".models",
+          "specifiers": [
+            "Location"
+          ]
+        }
+      ],
+      "exports": [
+        "ip_location"
+      ],
+      "totalLines": 29,
+      "hasStructuralAnalysis": true
+    },
+    "randomyst/interpretation.py": {
+      "filePath": "randomyst/interpretation.py",
+      "contentHash": "c5da81a3dd322de52e69f2cff0f38621f4cdc3cc616ba0f75864ddff40f8e1f4",
+      "functions": [
+        {
+          "name": "digest",
+          "params": [
+            "text"
+          ],
+          "exported": true,
+          "lineCount": 2
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExplanationRepository",
+          "methods": [
+            "__init__",
+            "source",
+            "hexagram",
+            "natal",
+            "explain"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 130
+        }
+      ],
+      "imports": [
+        {
+          "source": "copy",
+          "specifiers": [
+            "deepcopy"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": ".maihoa",
+          "specifiers": [
+            "COMMIT",
+            "IchingRepository"
+          ]
+        },
+        {
+          "source": ".bazi",
+          "specifiers": [
+            "SOURCE_COMMIT"
+          ]
+        }
+      ],
+      "exports": [
+        "digest",
+        "ExplanationRepository"
+      ],
+      "totalLines": 151,
+      "hasStructuralAnalysis": true
+    },
+    "randomyst/maihoa.py": {
+      "filePath": "randomyst/maihoa.py",
+      "contentHash": "bcad341d77a4e85f4f9c9f52cdcebe6c702f2a8f884b5075f69de42551497c05",
+      "functions": [],
+      "classes": [
+        {
+          "name": "IchingRepository",
+          "methods": [
+            "__init__",
+            "metadata",
+            "calculate"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 61
+        }
+      ],
+      "imports": [
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": ".sampling",
+          "specifiers": [
+            "state_of"
+          ]
+        }
+      ],
+      "exports": [
+        "IchingRepository"
+      ],
+      "totalLines": 79,
+      "hasStructuralAnalysis": true
+    },
+    "randomyst/models.py": {
+      "filePath": "randomyst/models.py",
+      "contentHash": "eadb932af63f59ddb950729d71f2e13be3bdd11994c3c145800e0825f07ea5d7",
+      "functions": [
+        {
+          "name": "civil_validator",
+          "params": [
+            "value"
+          ],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "StrictModel",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "Location",
+          "methods": [
+            "aware_timestamp",
+            "source_fields"
+          ],
+          "properties": [
+            "longitude",
+            "latitude",
+            "source",
+            "accuracy_m",
+            "longitude_uncertainty_degrees",
+            "acquired_at",
+            "fallback_reason"
+          ],
+          "exported": true,
+          "lineCount": 25
+        },
+        {
+          "name": "Birth",
+          "methods": [
+            "valid_birth"
+          ],
+          "properties": [
+            "civil_datetime",
+            "location",
+            "clock_uncertainty_seconds",
+            "override_dung_than"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "Casting",
+          "methods": [
+            "valid_casting",
+            "timestamp_choice"
+          ],
+          "properties": [
+            "mode",
+            "clicked_at",
+            "custom_timestamp",
+            "location",
+            "clock_uncertainty_seconds"
+          ],
+          "exported": true,
+          "lineCount": 23
+        },
+        {
+          "name": "DrawRequest",
+          "methods": [],
+          "properties": [
+            "request_id",
+            "birth",
+            "casting"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "DrawResponse",
+          "methods": [
+            "unique_result"
+          ],
+          "properties": [
+            "schema_version",
+            "request_id",
+            "rules_version",
+            "numbers",
+            "status",
+            "score",
+            "threshold",
+            "attempts",
+            "selected_attempt",
+            "warnings",
+            "disclaimer",
+            "trace"
+          ],
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "SourceReference",
+          "methods": [],
+          "properties": [
+            "repository",
+            "commit",
+            "path",
+            "key",
+            "url"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "SourceTranslation",
+          "methods": [],
+          "properties": [
+            "label",
+            "language",
+            "text",
+            "review_status",
+            "version",
+            "references",
+            "source_text_sha256"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "SourceCard",
+          "methods": [
+            "translation_binding"
+          ],
+          "properties": [
+            "evidence_id",
+            "title",
+            "text_type",
+            "language",
+            "label",
+            "text",
+            "source",
+            "translation"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "SourceOverview",
+          "methods": [],
+          "properties": [
+            "label",
+            "language",
+            "text",
+            "review_status",
+            "references"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "HexagramExplanation",
+          "methods": [
+            "references_present"
+          ],
+          "properties": [
+            "hexagram_id",
+            "name_zh",
+            "name_vi",
+            "symbol",
+            "moving_line",
+            "overview",
+            "cards",
+            "source_gaps"
+          ],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "BaziExplanation",
+          "methods": [],
+          "properties": [
+            "day_master",
+            "structure",
+            "strength",
+            "primary_used",
+            "primary_calculated",
+            "overridden",
+            "dung_than",
+            "hy_than",
+            "ky_than",
+            "birth_season",
+            "cards",
+            "source_gaps"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "DisplayExplanations",
+          "methods": [],
+          "properties": [
+            "mutual",
+            "changed"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "SourceExplanation",
+          "methods": [],
+          "properties": [
+            "schema_version",
+            "context_id",
+            "rules_version",
+            "corpus_version",
+            "model_called",
+            "affects_generation",
+            "affects_evaluation",
+            "original",
+            "bazi",
+            "display_hexagrams",
+            "relation",
+            "limitations",
+            "disclaimer"
+          ],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "imports": [
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timedelta"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Literal"
+          ]
+        },
+        {
+          "source": "uuid",
+          "specifiers": [
+            "UUID"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Annotated"
+          ]
+        },
+        {
+          "source": "pydantic",
+          "specifiers": [
+            "BaseModel",
+            "ConfigDict",
+            "Field",
+            "field_validator",
+            "model_validator"
+          ]
+        }
+      ],
+      "exports": [
+        "StrictModel",
+        "Location",
+        "civil_validator",
+        "Birth",
+        "Casting",
+        "DrawRequest",
+        "DrawResponse",
+        "SourceReference",
+        "SourceTranslation",
+        "SourceCard",
+        "SourceOverview",
+        "HexagramExplanation",
+        "BaziExplanation",
+        "DisplayExplanations",
+        "SourceExplanation"
+      ],
+      "totalLines": 219,
+      "hasStructuralAnalysis": true
+    },
+    "randomyst/sampling.py": {
+      "filePath": "randomyst/sampling.py",
+      "contentHash": "6c116079c321370ce972b4fa798e9e7fe601178e3b8000db5a89570ad0983f49",
+      "functions": [
+        {
+          "name": "element_of",
+          "params": [
+            "number"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "relation_score",
+          "params": [
+            "element",
+            "target"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "state_of",
+          "params": [
+            "the",
+            "dung"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "count_vectors",
+          "params": [
+            "capacities",
+            "total"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "grouped_pool",
+          "params": [
+            "pool"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "configurations",
+          "params": [
+            "context",
+            "pool",
+            "retry",
+            "quota_max"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "select_context",
+          "params": [
+            "primary",
+            "the",
+            "dung",
+            "pool",
+            "quota_max"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "elementary_symmetric",
+          "params": [
+            "weights",
+            "max_count"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "validate_sample",
+          "params": [
+            "numbers",
+            "context",
+            "quota_max",
+            "retry",
+            "pool"
+          ],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [
+        {
+          "name": "Context",
+          "methods": [
+            "state",
+            "threshold",
+            "allowed"
+          ],
+          "properties": [
+            "primary",
+            "the",
+            "dung",
+            "remedy",
+            "strategy"
+          ],
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "Configuration",
+          "methods": [
+            "yin_yang",
+            "score_numerator",
+            "score",
+            "meets"
+          ],
+          "properties": [
+            "counts",
+            "raw_units",
+            "conflicts",
+            "even_count"
+          ],
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "ProductSubsetSampler",
+          "methods": [
+            "__init__",
+            "sample"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "Distribution",
+          "methods": [
+            "__init__",
+            "sample",
+            "exact_metrics"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 44
+        }
+      ],
+      "imports": [
+        {
+          "source": "bisect",
+          "specifiers": [
+            "bisect_left"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass"
+          ]
+        },
+        {
+          "source": "functools",
+          "specifiers": [
+            "lru_cache"
+          ]
+        },
+        {
+          "source": "itertools",
+          "specifiers": [
+            "product"
+          ]
+        },
+        {
+          "source": "math",
+          "specifiers": [
+            "exp",
+            "fsum",
+            "isfinite",
+            "prod"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "Random"
+          ]
+        }
+      ],
+      "exports": [
+        "element_of",
+        "relation_score",
+        "state_of",
+        "Context",
+        "Configuration",
+        "count_vectors",
+        "grouped_pool",
+        "configurations",
+        "select_context",
+        "elementary_symmetric",
+        "ProductSubsetSampler",
+        "Distribution",
+        "validate_sample"
+      ],
+      "totalLines": 262,
+      "hasStructuralAnalysis": true
+    },
+    "randomyst/storage.py": {
+      "filePath": "randomyst/storage.py",
+      "contentHash": "5d44f6d552a318f6eb70982033e2f829271c090d6de252cec23df292a0bc5dbe",
+      "functions": [],
+      "classes": [
+        {
+          "name": "DrawStore",
+          "methods": [
+            "__init__",
+            "connect",
+            "execute",
+            "history",
+            "get"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 42
+        }
+      ],
+      "imports": [
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "sqlite3",
+          "specifiers": [
+            "sqlite3"
+          ]
+        },
+        {
+          "source": "contextlib",
+          "specifiers": [
+            "contextmanager"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": ".engine",
+          "specifiers": [
+            "EngineError"
+          ]
+        }
+      ],
+      "exports": [
+        "DrawStore"
+      ],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "randomyst/time_engine.py": {
+      "filePath": "randomyst/time_engine.py",
+      "contentHash": "260e47e96650c0e167e8b091396f3515fc8899204a09fb3c0f792bcf0147b83a",
+      "functions": [
+        {
+          "name": "check_provider",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "_lunar",
+          "params": [
+            "civil"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "beijing_clock",
+          "params": [
+            "civil",
+            "clock_uncertainty_seconds"
+          ],
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "resolve_maihoa",
+          "params": [
+            "civil",
+            "kind"
+          ],
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "solar_month",
+          "params": [
+            "civil"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "pillars",
+          "params": [
+            "civil"
+          ],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [
+        {
+          "name": "CalendarError",
+          "methods": [
+            "__init__"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "imports": [
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timedelta",
+            "timezone"
+          ]
+        },
+        {
+          "source": "importlib.metadata",
+          "specifiers": [
+            "version"
+          ]
+        },
+        {
+          "source": "lunar_python",
+          "specifiers": [
+            "Solar"
+          ]
+        }
+      ],
+      "exports": [
+        "CalendarError",
+        "check_provider",
+        "_lunar",
+        "beijing_clock",
+        "resolve_maihoa",
+        "solar_month",
+        "pillars"
+      ],
+      "totalLines": 117,
+      "hasStructuralAnalysis": true
+    },
+    "requirements-dev.txt": {
+      "filePath": "requirements-dev.txt",
+      "contentHash": "edb15de5cff61826b77e4b6c14375a04022063ff60160ddbb1f8ac8e36a795d6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    "requirements-lock.txt": {
+      "filePath": "requirements-lock.txt",
+      "contentHash": "e608a97a005706d81f8edb6525fa531d50562beea1fb91465a81cb4994d57903",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": false
+    },
+    "requirements.txt": {
+      "filePath": "requirements.txt",
+      "contentHash": "5712c7fcf4c31fa17a99f6fcc58dfea08a70320c36bae0dbb9e97e76515aa7ea",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": false
+    },
+    "research_tools/README.md": {
+      "filePath": "research_tools/README.md",
+      "contentHash": "2935178e5033ca75431d05e4e97f9c4157e9cfdbdfb99d3a6632aaf3badd9410",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": false
+    },
+    "research_tools/__init__.py": {
+      "filePath": "research_tools/__init__.py",
+      "contentHash": "8d1ddf00a3cbbd97e60669debfd2d077ed594943d4cd7f062f624c85a2a3c009",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "research_tools/exponential_audit.py": {
+      "filePath": "research_tools/exponential_audit.py",
+      "contentHash": "c31808f1f82c7ee42fcf5f2713a14183ce0bcf1a60ff90031df4aa57f3f5c51f",
+      "functions": [
+        {
+          "name": "digest",
+          "params": [
+            "path"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "average_metrics",
+          "params": [
+            "rows"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "feasibility_report",
+          "params": [
+            "quota_max"
+          ],
+          "exported": true,
+          "lineCount": 46
+        },
+        {
+          "name": "run",
+          "params": [
+            "betas",
+            "samples_per_context",
+            "seed",
+            "quota_max",
+            "folk_numbers"
+          ],
+          "exported": true,
+          "lineCount": 52
+        },
+        {
+          "name": "markdown_report",
+          "params": [
+            "report"
+          ],
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 43
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "collections",
+          "specifiers": [
+            "Counter",
+            "defaultdict"
+          ]
+        },
+        {
+          "source": "math",
+          "specifiers": [
+            "fsum",
+            "isfinite"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "Random"
+          ]
+        },
+        {
+          "source": ".weighted_sampling",
+          "specifiers": [
+            "ELEMENTS",
+            "Context",
+            "Distribution",
+            "all_contexts",
+            "configurations",
+            "select_context",
+            "validate_sample",
+            "weights_for"
+          ]
+        }
+      ],
+      "exports": [
+        "digest",
+        "average_metrics",
+        "feasibility_report",
+        "run",
+        "markdown_report",
+        "main"
+      ],
+      "totalLines": 206,
+      "hasStructuralAnalysis": true
+    },
+    "research_tools/legacy_time_engine.py": {
+      "filePath": "research_tools/legacy_time_engine.py",
+      "contentHash": "e60c9eeb5e2a650e880824f440576a7e302f53d8fe3a708b3de92c41bf20950b",
+      "functions": [
+        {
+          "name": "noaa_eot_minutes",
+          "params": [
+            "instant"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "longitude_error_from_radius",
+          "params": [
+            "latitude",
+            "radius_m"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "solar_clock",
+          "params": [
+            "civil",
+            "location",
+            "clock_uncertainty_seconds"
+          ],
+          "exported": true,
+          "lineCount": 35
+        },
+        {
+          "name": "jie_for_year",
+          "params": [
+            "year"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "solar_month",
+          "params": [
+            "instant"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "pillars",
+          "params": [
+            "civil",
+            "tst"
+          ],
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "calendar",
+          "specifiers": [
+            "isleap"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timedelta",
+            "timezone"
+          ]
+        },
+        {
+          "source": "functools",
+          "specifiers": [
+            "lru_cache"
+          ]
+        },
+        {
+          "source": "math",
+          "specifiers": [
+            "cos",
+            "sin",
+            "pi",
+            "radians",
+            "sqrt"
+          ]
+        },
+        {
+          "source": "astronomy",
+          "specifiers": [
+            "astronomy"
+          ]
+        }
+      ],
+      "exports": [
+        "noaa_eot_minutes",
+        "longitude_error_from_radius",
+        "solar_clock",
+        "jie_for_year",
+        "solar_month",
+        "pillars"
+      ],
+      "totalLines": 125,
+      "hasStructuralAnalysis": true
+    },
+    "research_tools/validate_interpretation_examples.py": {
+      "filePath": "research_tools/validate_interpretation_examples.py",
+      "contentHash": "7b49866276c867aa695dcc46c7fea0d27dd58a8f609813570ecc3ccff6917612",
+      "functions": [
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 58
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "copy",
+          "specifiers": [
+            "copy"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "jsonschema",
+          "specifiers": [
+            "Draft202012Validator",
+            "ValidationError"
+          ]
+        }
+      ],
+      "exports": [
+        "main"
+      ],
+      "totalLines": 82,
+      "hasStructuralAnalysis": true
+    },
+    "research_tools/weighted_sampling.py": {
+      "filePath": "research_tools/weighted_sampling.py",
+      "contentHash": "fdf62a75ff2aae08752fa6f07c71646d0b950ed7f7a2363900e818a3cc0f001e",
+      "functions": [
+        {
+          "name": "element_of",
+          "params": [
+            "number"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "relation_score",
+          "params": [
+            "element",
+            "target"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "state_of",
+          "params": [
+            "the",
+            "dung"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "count_vectors",
+          "params": [
+            "capacities",
+            "total"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "grouped_pool",
+          "params": [
+            "pool"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "configurations",
+          "params": [
+            "context",
+            "pool",
+            "retry",
+            "quota_max"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "select_context",
+          "params": [
+            "primary",
+            "the",
+            "dung",
+            "pool",
+            "quota_max"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "elementary_symmetric",
+          "params": [
+            "weights",
+            "max_count"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "weights_for",
+          "params": [
+            "context",
+            "beta",
+            "folk_numbers",
+            "profile",
+            "pool"
+          ],
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "all_contexts",
+          "params": [
+            "pool",
+            "quota_max"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "validate_sample",
+          "params": [
+            "numbers",
+            "context",
+            "quota_max",
+            "retry",
+            "pool"
+          ],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [
+        {
+          "name": "Context",
+          "methods": [
+            "state",
+            "threshold",
+            "allowed"
+          ],
+          "properties": [
+            "primary",
+            "the",
+            "dung",
+            "remedy",
+            "strategy"
+          ],
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "Configuration",
+          "methods": [
+            "yin_yang",
+            "score_numerator",
+            "score",
+            "meets"
+          ],
+          "properties": [
+            "counts",
+            "raw_units",
+            "conflicts",
+            "even_count"
+          ],
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "ProductSubsetSampler",
+          "methods": [
+            "__init__",
+            "sample"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "Distribution",
+          "methods": [
+            "__init__",
+            "sample",
+            "exact_metrics"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 44
+        }
+      ],
+      "imports": [
+        {
+          "source": "bisect",
+          "specifiers": [
+            "bisect_left"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass"
+          ]
+        },
+        {
+          "source": "functools",
+          "specifiers": [
+            "lru_cache"
+          ]
+        },
+        {
+          "source": "itertools",
+          "specifiers": [
+            "product"
+          ]
+        },
+        {
+          "source": "math",
+          "specifiers": [
+            "exp",
+            "fsum",
+            "isfinite",
+            "prod"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "Random"
+          ]
+        }
+      ],
+      "exports": [
+        "element_of",
+        "relation_score",
+        "state_of",
+        "Context",
+        "Configuration",
+        "count_vectors",
+        "grouped_pool",
+        "configurations",
+        "select_context",
+        "elementary_symmetric",
+        "ProductSubsetSampler",
+        "weights_for",
+        "Distribution",
+        "all_contexts",
+        "validate_sample"
+      ],
+      "totalLines": 292,
+      "hasStructuralAnalysis": true
+    },
+    "schemas/examples/interpretation_context.example.json": {
+      "filePath": "schemas/examples/interpretation_context.example.json",
+      "contentHash": "5ca85810832bda7c804522f2ff5e0289e1ad2115b413a9ea07c35ea7319d2116",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 149,
+      "hasStructuralAnalysis": false
+    },
+    "schemas/examples/interpretation_response.example.json": {
+      "filePath": "schemas/examples/interpretation_response.example.json",
+      "contentHash": "996dd3d703529b49381ca79b52162c07d5c784ea718e328ac189da432c2ebd22",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": false
+    },
+    "schemas/interpretation_context.schema.json": {
+      "filePath": "schemas/interpretation_context.schema.json",
+      "contentHash": "796874b21fb82acaf84e6f8ce8e5fbdc240dbacf820f7fe92ab536bfb9e7bc73",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 678,
+      "hasStructuralAnalysis": false
+    },
+    "schemas/interpretation_response.schema.json": {
+      "filePath": "schemas/interpretation_response.schema.json",
+      "contentHash": "db1ffc4a469c8a636742e6f676d64f943b27b7b5ad6f0e3b47d87cb6d416d1dd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": false
+    },
+    "schemas/source_explanation.schema.json": {
+      "filePath": "schemas/source_explanation.schema.json",
+      "contentHash": "2c7726d802625ee7cfe52b7e2db87fe734ece430fa15ff532752b67ab6e43a88",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 493,
+      "hasStructuralAnalysis": false
+    },
+    "scripts/astronomy_smoke_audit.py": {
+      "filePath": "scripts/astronomy_smoke_audit.py",
+      "contentHash": "bb5216d649fb38ab9d62006d3ec173b703f9ee4ba4fd22658f866514e3cab8f1",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timedelta",
+            "timezone"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "astronomy",
+          "specifiers": [
+            "astronomy"
+          ]
+        },
+        {
+          "source": "research_tools.legacy_time_engine",
+          "specifiers": [
+            "jie_for_year"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/audit_beijing_calendar.py": {
+      "filePath": "scripts/audit_beijing_calendar.py",
+      "contentHash": "b4e7f77e74e8abc0c36031a7d447be44868320a349af0de6fcdab9672254865a",
+      "functions": [
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 27
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "datetime",
+          "specifiers": [
+            "date",
+            "datetime",
+            "timedelta",
+            "timezone"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "lunar_python",
+          "specifiers": [
+            "Lunar"
+          ]
+        },
+        {
+          "source": "randomyst.time_engine",
+          "specifiers": [
+            "resolve_maihoa"
+          ]
+        }
+      ],
+      "exports": [
+        "main"
+      ],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/build_explanation_data.py": {
+      "filePath": "scripts/build_explanation_data.py",
+      "contentHash": "8b786eaa0f0865c9a5a208567341bd29e275d2eda4f524f198f1f3751a38f26a",
+      "functions": [
+        {
+          "name": "digest",
+          "params": [
+            "text"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "build",
+          "params": [],
+          "exported": true,
+          "lineCount": 43
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        }
+      ],
+      "exports": [
+        "digest",
+        "build"
+      ],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/compare_bazi_source.py": {
+      "filePath": "scripts/compare_bazi_source.py",
+      "contentHash": "cdb6c4cfa601d0731682686fe2e226d23a85386c281acb9386b1e9eae5a887a9",
+      "functions": [
+        {
+          "name": "run",
+          "params": [
+            "count"
+          ],
+          "exported": true,
+          "lineCount": 29
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "random"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "randomyst.bazi",
+          "specifiers": [
+            "analyze"
+          ]
+        }
+      ],
+      "exports": [
+        "run"
+      ],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/run_mvp.sh": {
+      "filePath": "scripts/run_mvp.sh",
+      "contentHash": "2e70f5e876aafb6770acb88a569c3d980b67ba4374397472f10c992c40710f6c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "scripts/smoke_mvp.py": {
+      "filePath": "scripts/smoke_mvp.py",
+      "contentHash": "ca82800ed1b1a30578b105a979011cfdda07584614ca6faad7b83753f19d13a7",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "httpx",
+          "specifiers": [
+            "httpx"
+          ]
+        },
+        {
+          "source": "randomyst.models",
+          "specifiers": [
+            "DrawRequest",
+            "DrawResponse"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/smoke_source_explanations.py": {
+      "filePath": "scripts/smoke_source_explanations.py",
+      "contentHash": "3e197496c8fbf51565ef55e40f87ff1561ac004b843d63255d14c02c10a40d5f",
+      "functions": [
+        {
+          "name": "get",
+          "params": [
+            "path"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        },
+        {
+          "source": "randomyst.models",
+          "specifiers": [
+            "SourceExplanation"
+          ]
+        }
+      ],
+      "exports": [
+        "get",
+        "main"
+      ],
+      "totalLines": 36,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_beijing_calendar.py": {
+      "filePath": "tests/test_beijing_calendar.py",
+      "contentHash": "91589d4006112354e552009f32bebd0c894ac5e87272b3a29300cca2712c33e8",
+      "functions": [
+        {
+          "name": "request_at",
+          "params": [
+            "timestamp"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [
+        {
+          "name": "BeijingCalendarTests",
+          "methods": [
+            "test_ten_vietnam_is_eleven_beijing_and_ngo_hour",
+            "test_chinese_new_year_rolls_all_ymd_at_midnight_beijing",
+            "test_23_beijing_changes_hour_without_advancing_lunar_date",
+            "test_leap_month_keeps_month_number",
+            "test_every_hour_branch_boundary_uses_beijing_clock",
+            "test_input_range_uses_vn_year_before_beijing_year_overflow",
+            "test_same_instant_keeps_bazi_and_clock_even_with_other_offset",
+            "test_clock_boundary_uncertainty_only_no_location_or_eot_error",
+            "test_v4_interpretation_context_requires_beijing_contract",
+            "test_idempotency_preserves_historical_v3_result"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 109
+        }
+      ],
+      "imports": [
+        {
+          "source": "copy",
+          "specifiers": [
+            "deepcopy"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timedelta",
+            "timezone"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "Random"
+          ]
+        },
+        {
+          "source": "tempfile",
+          "specifiers": [
+            "tempfile"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "uuid",
+          "specifiers": [
+            "uuid4"
+          ]
+        },
+        {
+          "source": "fastapi.testclient",
+          "specifiers": [
+            "TestClient"
+          ]
+        },
+        {
+          "source": "jsonschema",
+          "specifiers": [
+            "Draft202012Validator",
+            "ValidationError"
+          ]
+        },
+        {
+          "source": "randomyst.api",
+          "specifiers": [
+            "create_app"
+          ]
+        },
+        {
+          "source": "randomyst.engine",
+          "specifiers": [
+            "NumberEngine"
+          ]
+        },
+        {
+          "source": "randomyst.models",
+          "specifiers": [
+            "DrawRequest"
+          ]
+        },
+        {
+          "source": "randomyst.time_engine",
+          "specifiers": [
+            "beijing_clock",
+            "pillars",
+            "resolve_maihoa"
+          ]
+        }
+      ],
+      "exports": [
+        "request_at",
+        "BeijingCalendarTests"
+      ],
+      "totalLines": 139,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_runtime.py": {
+      "filePath": "tests/test_runtime.py",
+      "contentHash": "06623cf95d381a90b28661125ad7d535c1087ada6f976356ab87ef4b2892b8b7",
+      "functions": [
+        {
+          "name": "payload",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [
+        {
+          "name": "RuntimeTests",
+          "methods": [
+            "setUpClass",
+            "test_all_64_hexagrams_and_384_changes",
+            "test_library_jie_changes_at_beijing_instant",
+            "test_bazi_day_rollover_at_23_beijing_and_maihoa_midnight",
+            "test_clock_metadata_has_no_solar_correction",
+            "test_natal_stars_dedup_multi_element_and_casting_month",
+            "test_draw_output_and_frozen_retry",
+            "test_all_125_runtime_contexts_hard_rules_and_retry_cap",
+            "test_legacy_locations_do_not_change_calendar_or_numbers",
+            "test_suboptimal_fallback_keeps_best_valid_set_after_five",
+            "test_display_hexagrams_cannot_change_numbers_weights_or_score",
+            "test_pillars_match_6tail_converted_beijing_clock"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 150
+        },
+        {
+          "name": "ApiTests",
+          "methods": [
+            "setUp",
+            "tearDown",
+            "test_api_idempotency_history_and_conflicting_payload",
+            "test_concurrent_same_request_creates_one_result",
+            "test_invalid_input_timezone_range_and_multiple_sets_parameter",
+            "test_current_click_timestamp_preserved_with_clock_warning"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 48
+        }
+      ],
+      "imports": [
+        {
+          "source": "concurrent.futures",
+          "specifiers": [
+            "ThreadPoolExecutor"
+          ]
+        },
+        {
+          "source": "copy",
+          "specifiers": [
+            "deepcopy"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timedelta",
+            "timezone"
+          ]
+        },
+        {
+          "source": "itertools",
+          "specifiers": [
+            "product"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "Random"
+          ]
+        },
+        {
+          "source": "tempfile",
+          "specifiers": [
+            "tempfile"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "uuid",
+          "specifiers": [
+            "uuid4"
+          ]
+        },
+        {
+          "source": "unittest.mock",
+          "specifiers": [
+            "patch"
+          ]
+        },
+        {
+          "source": "fastapi.testclient",
+          "specifiers": [
+            "TestClient"
+          ]
+        },
+        {
+          "source": "lunar_python",
+          "specifiers": [
+            "Solar"
+          ]
+        },
+        {
+          "source": "randomyst.api",
+          "specifiers": [
+            "create_app"
+          ]
+        },
+        {
+          "source": "randomyst.bazi",
+          "specifiers": [
+            "analyze",
+            "star_bonuses"
+          ]
+        },
+        {
+          "source": "randomyst.engine",
+          "specifiers": [
+            "EngineError",
+            "NumberEngine"
+          ]
+        },
+        {
+          "source": "randomyst.maihoa",
+          "specifiers": [
+            "IchingRepository",
+            "TRIGRAMS"
+          ]
+        },
+        {
+          "source": "randomyst.models",
+          "specifiers": [
+            "DrawRequest",
+            "Location"
+          ]
+        },
+        {
+          "source": "randomyst.sampling",
+          "specifiers": [
+            "ELEMENTS",
+            "Distribution",
+            "configurations",
+            "element_of",
+            "select_context",
+            "validate_sample"
+          ]
+        },
+        {
+          "source": "randomyst.time_engine",
+          "specifiers": [
+            "BEIJING",
+            "beijing_clock",
+            "pillars",
+            "resolve_maihoa",
+            "solar_month"
+          ]
+        }
+      ],
+      "exports": [
+        "payload",
+        "RuntimeTests",
+        "ApiTests"
+      ],
+      "totalLines": 234,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_source_explanations.py": {
+      "filePath": "tests/test_source_explanations.py",
+      "contentHash": "cdc7ef3fe015b77f57553add0f1c84989e4c16cdf057cd8bb33ba2da24a10e2c",
+      "functions": [],
+      "classes": [
+        {
+          "name": "SourceExplanationTests",
+          "methods": [
+            "setUpClass",
+            "test_all_64_hexagrams_and_384_lines_bind_to_exact_original",
+            "test_missing_thoan_32_is_not_filled_or_disguised_as_a_translation",
+            "test_bazi_stem_and_birth_season_match_source_without_casting_season",
+            "test_unknown_structure_is_a_gap_and_override_does_not_rewrite_source",
+            "test_reading_does_not_mutate_saved_numbers_or_computed_context",
+            "test_response_validation_rejects_wrong_references_hash_and_source_url",
+            "test_api_readonly_idempotent_and_historical_v3_supported"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 111
+        }
+      ],
+      "imports": [
+        {
+          "source": "copy",
+          "specifiers": [
+            "deepcopy"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "Random"
+          ]
+        },
+        {
+          "source": "tempfile",
+          "specifiers": [
+            "tempfile"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "unittest.mock",
+          "specifiers": [
+            "patch"
+          ]
+        },
+        {
+          "source": "uuid",
+          "specifiers": [
+            "uuid4"
+          ]
+        },
+        {
+          "source": "fastapi.testclient",
+          "specifiers": [
+            "TestClient"
+          ]
+        },
+        {
+          "source": "pydantic",
+          "specifiers": [
+            "ValidationError"
+          ]
+        },
+        {
+          "source": "randomyst.api",
+          "specifiers": [
+            "create_app"
+          ]
+        },
+        {
+          "source": "randomyst.engine",
+          "specifiers": [
+            "NumberEngine"
+          ]
+        },
+        {
+          "source": "randomyst.interpretation",
+          "specifiers": [
+            "ExplanationRepository"
+          ]
+        },
+        {
+          "source": "randomyst.models",
+          "specifiers": [
+            "DrawRequest",
+            "SourceCard",
+            "SourceExplanation"
+          ]
+        }
+      ],
+      "exports": [
+        "SourceExplanationTests"
+      ],
+      "totalLines": 136,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_vietnamese_calendar.py": {
+      "filePath": "tests/test_vietnamese_calendar.py",
+      "contentHash": "9d2f7cfe2ab6d83e03f5a8ea0c4b170174c169e61d1477246d70b6ed96ebe134",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CalendarTests",
+          "methods": [
+            "setUp",
+            "assert_code",
+            "test_published_hnd_1984_dates",
+            "test_published_hnd_2004_leap_month",
+            "test_utc7_and_utc8_differ_away_from_midnight",
+            "test_buffer_endpoints_round_trip",
+            "test_outside_internal_buffer",
+            "test_invalid_lunar_days_and_leap_months",
+            "test_input_types",
+            "test_month_end_rolls_all_fields_at_23",
+            "test_tst_boundary_not_civil_clock_boundary",
+            "test_upstream_tst_may_cross_input_year_bounds",
+            "test_input_range_rejected_before_tst",
+            "test_timezone_and_tst_are_separate"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 75
+        }
+      ],
+      "imports": [
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "date",
+            "datetime"
+          ]
+        },
+        {
+          "source": "calendar_adapter",
+          "specifiers": [
+            "CalendarError",
+            "LunarDate",
+            "VietnameseCalendar",
+            "resolve_maihoa"
+          ]
+        },
+        {
+          "source": "calendar_adapter.vietnamese",
+          "specifiers": [
+            "_solar_to_lunar"
+          ]
+        }
+      ],
+      "exports": [
+        "CalendarTests"
+      ],
+      "totalLines": 91,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_weighted_sampling.py": {
+      "filePath": "tests/test_weighted_sampling.py",
+      "contentHash": "4ea0f00465f5ba2c277a20ae0ad8806239dba84f195f33d585ceba7469ca96d0",
+      "functions": [],
+      "classes": [
+        {
+          "name": "WeightedSamplingTest",
+          "methods": [
+            "test_direction_of_relation_and_zero_tail",
+            "test_optimizer_matches_bruteforce_small_pool",
+            "test_exact_partition_and_pass_rate_match_bruteforce",
+            "test_product_subset_probabilities",
+            "test_weight_ratio_matches_exponent_and_remediation",
+            "test_quota_four_and_frozen_cap_on_all_hung_cases"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 70
+        }
+      ],
+      "imports": [
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "collections",
+          "specifiers": [
+            "Counter"
+          ]
+        },
+        {
+          "source": "itertools",
+          "specifiers": [
+            "combinations"
+          ]
+        },
+        {
+          "source": "math",
+          "specifiers": [
+            "exp",
+            "prod"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "Random"
+          ]
+        },
+        {
+          "source": "research_tools.weighted_sampling",
+          "specifiers": [
+            "ELEMENTS",
+            "Context",
+            "Distribution",
+            "ProductSubsetSampler",
+            "configurations",
+            "element_of",
+            "relation_score",
+            "select_context",
+            "validate_sample",
+            "weights_for"
+          ]
+        }
+      ],
+      "exports": [
+        "WeightedSamplingTest"
+      ],
+      "totalLines": 89,
+      "hasStructuralAnalysis": true
+    },
+    "web/app.js": {
+      "filePath": "web/app.js",
+      "contentHash": "f7007f89b9e4e2433ff89036c3ce745333a5e090cfb457c3c1de757ed2a56cb6",
+      "functions": [
+        {
+          "name": "$",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "vnNow",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "civil",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "setBusy",
+          "params": [
+            "busy"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "appendText",
+          "params": [
+            "parent",
+            "tag",
+            "value",
+            "className"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "render",
+          "params": [
+            "result"
+          ],
+          "exported": false,
+          "lineCount": 22
+        },
+        {
+          "name": "sourceLink",
+          "params": [
+            "parent",
+            "item"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "sourceCard",
+          "params": [
+            "parent",
+            "item"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "renderExplanation",
+          "params": [
+            "data"
+          ],
+          "exported": false,
+          "lineCount": 30
+        },
+        {
+          "name": "loadExplanation",
+          "params": [
+            "requestId"
+          ],
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "selectReadingTab",
+          "params": [
+            "tab"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "openSavedDraw",
+          "params": [
+            "requestId"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "history",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "send",
+          "params": [
+            "payload"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "perform",
+          "params": [
+            "makeNew"
+          ],
+          "exported": false,
+          "lineCount": 13
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 123,
+      "hasStructuralAnalysis": true
+    },
+    "web/index.html": {
+      "filePath": "web/index.html",
+      "contentHash": "6c803a1ec04446fb73cb2ddfb912825b4e4f8faceb6316c82578209e88bb0cf0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 20,
+      "hasStructuralAnalysis": false
+    },
+    "web/style.css": {
+      "filePath": "web/style.css",
+      "contentHash": "dd330b72a04eaa538c6aeb25b2c273fd251c2fac28b08207cee6a475b4484943",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    }
+  }
+}

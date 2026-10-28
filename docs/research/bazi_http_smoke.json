@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "request_id": "03b5f600-973f-44d7-9314-a4f318376ddd",
+  "reading_id": "ae2c6e9d-d691-4e4c-b393-8ede67009601",
+  "schema_version": "bazi-consultation-v1",
+  "rules_version": "bazi-natal-2026-10-26-v1",
+  "rules_sha256": "ec24edd1b6dbe7a9cdfd6c7803a86b8c4322d2984a18e8f57c19210933fb1005",
+  "chart_sha256": "2b07837f0296e1b091c44b36614d3ed27632577a248c8f9150cf8ee531e3f1f1",
+  "findings": 12,
+  "sections": 8,
+  "create_seconds": 0.010745,
+  "same_uuid_replay": true,
+  "changed_payload_409": true,
+  "reread_keeps_chart": true,
+  "original_snapshot_unchanged": true,
+  "other_histories_unchanged": true,
+  "model_called": false
+}

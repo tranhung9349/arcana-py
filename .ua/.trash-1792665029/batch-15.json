@@ -1,0 +1,245 @@
+{
+ "nodes": [
+  {
+   "id": "document:examples/README.md",
+   "type": "document",
+   "name": "README.md",
+   "filePath": "examples/README.md",
+   "summary": "Ghi chú ngắn mô tả các hồ sơ mẫu kiểm tra: draw_request.json là input tổng hợp, draw_response.json là phản hồi HTTP thật của server local, request_id cố định để thử idempotency theo rules v4, và source_explanation.json lấy từ GET /api/v1/interpretation/{request_id}.",
+   "tags": [
+    "documentation",
+    "examples",
+    "idempotency",
+    "test-fixture"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/date_search_request.json",
+   "type": "config",
+   "name": "date_search_request.json",
+   "filePath": "examples/date_search_request.json",
+   "summary": "Request mẫu cho POST /api/v2/auspicious-dates/search (MVP 2): tra ngày khai trương (BUSINESS_OPENING) cho một người sinh 1994-10-08 05:00 +07:00 trong khoảng 2026-10-12 đến 2026-11-11, không kèm chi tiết.",
+   "tags": [
+    "api-request",
+    "examples",
+    "mvp2",
+    "date-search",
+    "test-fixture"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/date_search_response.json",
+   "type": "config",
+   "name": "date_search_response.json",
+   "filePath": "examples/date_search_response.json",
+   "summary": "Response mẫu date-search-response-v1 (date rules mvp2-dates-2026-10-12-v1, lịch BEIJING_CIVIL_UTC8) cho hoạt động Khai trương: gồm subject_summaries (dụng/hỷ/kỵ thần, tứ trụ), danh sách days với điểm, grade, windows đã đánh giá và recommended_windows liệt kê đủ khung GOOD (start_at, end_at, hour_branch) kể cả khi windows chỉ trả top 3, cùng sources (6TAIL_CORPUS, TINIX_MONTH_TABLES, PRODUCT_PERSONAL_POLICY) và warnings.",
+   "tags": [
+    "api-response",
+    "examples",
+    "mvp2",
+    "date-search",
+    "auspicious-windows"
+   ],
+   "complexity": "complex",
+   "languageNotes": "File JSON lớn (~1700 dòng) chủ yếu do mỗi khung giờ mang đầy đủ penalties/hard_exclusions có rule_id và source_id để truy vết luật."
+  },
+  {
+   "id": "config:examples/draw_request.json",
+   "type": "config",
+   "name": "draw_request.json",
+   "filePath": "examples/draw_request.json",
+   "summary": "Request mẫu cho POST /api/v1/draw (MVP 1) với request_id UUID cố định, giờ sinh 1994-10-08 05:00 +07:00 và chế độ gieo CUSTOM tại 2026-10-11 10:00 +07:00, dùng để thử idempotency.",
+   "tags": [
+    "api-request",
+    "examples",
+    "mvp1",
+    "draw",
+    "idempotency"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/draw_response.json",
+   "type": "config",
+   "name": "draw_response.json",
+   "filePath": "examples/draw_response.json",
+   "summary": "Response HTTP thật draw-response-v2 (rules mvp1-logic-2026-10-11-v4) trả bộ sáu số với status OPTIMAL, score 81.6/ngưỡng 75, warnings, disclaimer và trace đầy đủ: thời điểm sinh/gieo quy đổi giờ Bắc Kinh, lịch âm, bát tự (dụng/hỷ/kỵ thần), Mai Hoa, sao, trọng số, lịch sử attempt, RNG và interpretation.",
+   "tags": [
+    "api-response",
+    "examples",
+    "mvp1",
+    "draw",
+    "traceability"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Trace minh bạch toàn bộ pipeline tính toán (calendar → bazi → maihoa → weights → sampling) để kiểm chứng tái lập kết quả."
+  },
+  {
+   "id": "config:examples/marriage_date_search_request.json",
+   "type": "config",
+   "name": "marriage_date_search_request.json",
+   "filePath": "examples/marriage_date_search_request.json",
+   "summary": "Request mẫu MVP 2 tra ngày cưới (MARRIAGE) cho hai người (person_1 sinh 1994-10-08, person_2 sinh 1990-06-15) trong khoảng 2026-10-12 đến 2027-01-12.",
+   "tags": [
+    "api-request",
+    "examples",
+    "mvp2",
+    "date-search",
+    "multi-subject"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/source_explanation.json",
+   "type": "config",
+   "name": "source_explanation.json",
+   "filePath": "examples/source_explanation.json",
+   "summary": "Response mẫu source-explanation-v1 cho phiên trong draw_response.json (GET /api/v1/interpretation/{request_id}): quẻ gốc 43 Trạch Thiên Quải với thẻ nguyên văn Hán từ open-iching (pin commit), bản dịch Việt gắn nhãn AI chưa duyệt, phần bazi, quẻ Hổ/Biến chỉ để hiển thị, limitations và disclaimer; model_called=false và không ảnh hưởng sinh/đánh giá số.",
+   "tags": [
+    "api-response",
+    "examples",
+    "interpretation",
+    "i-ching",
+    "provenance"
+   ],
+   "complexity": "complex"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:examples/README.md",
+   "target": "config:examples/draw_request.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:examples/README.md",
+   "target": "config:examples/draw_response.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:examples/README.md",
+   "target": "config:examples/source_explanation.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:examples/README.md",
+   "target": "schema:schemas/source_explanation.schema.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/date_search_request.json",
+   "target": "schema:schemas/date_search_request.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/marriage_date_search_request.json",
+   "target": "schema:schemas/date_search_request.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/date_search_response.json",
+   "target": "schema:schemas/date_search_response.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/source_explanation.json",
+   "target": "schema:schemas/source_explanation.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/date_search_response.json",
+   "target": "config:examples/date_search_request.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/draw_response.json",
+   "target": "config:examples/draw_request.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/source_explanation.json",
+   "target": "config:examples/draw_response.json",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:examples/date_search_request.json",
+   "target": "file:scripts/smoke_dates.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/marriage_date_search_request.json",
+   "target": "file:scripts/smoke_dates.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/date_search_response.json",
+   "target": "file:scripts/smoke_dates.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/draw_request.json",
+   "target": "file:scripts/smoke_mvp.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/draw_response.json",
+   "target": "file:scripts/smoke_mvp.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/draw_response.json",
+   "target": "file:scripts/smoke_source_explanations.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/source_explanation.json",
+   "target": "file:scripts/smoke_source_explanations.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:examples/draw_request.json",
+   "target": "file:tests/test_source_explanations.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

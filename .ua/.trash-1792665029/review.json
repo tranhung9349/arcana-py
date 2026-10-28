@@ -1,0 +1,41 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'file:randomyst/__init__.py' has no edges (orphan)",
+    "Node 'file:research_tools/__init__.py' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 328,
+    "totalEdges": 972,
+    "totalLayers": 10,
+    "tourSteps": 15,
+    "nodeTypes": {
+      "file": 54,
+      "function": 108,
+      "class": 57,
+      "document": 21,
+      "config": 47,
+      "schema": 31,
+      "resource": 1,
+      "endpoint": 8,
+      "table": 1
+    },
+    "edgeTypes": {
+      "contains": 199,
+      "exports": 149,
+      "imports": 73,
+      "calls": 138,
+      "tested_by": 20,
+      "inherits": 28,
+      "depends_on": 30,
+      "documents": 81,
+      "related": 185,
+      "configures": 21,
+      "defines_schema": 34,
+      "validates": 7,
+      "writes_to": 2,
+      "reads_from": 4,
+      "serves": 1
+    }
+  }
+}
