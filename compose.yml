@@ -1,0 +1,37 @@
+# Dokploy: Compose Path ./compose.yml; settings come from its Environment tab.
+# compose.yaml is the separate configuration for running directly on a VPS.
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    restart: unless-stopped
+    init: true
+    environment:
+      RANDOMYST_ENV: production
+      RANDOMYST_SIGNING_KEY: ${RANDOMYST_SIGNING_KEY:?Set RANDOMYST_SIGNING_KEY in Dokploy Environment}
+      RANDOMYST_PUBLIC_ORIGIN: ${RANDOMYST_PUBLIC_ORIGIN:?Set RANDOMYST_PUBLIC_ORIGIN to your HTTPS origin in Dokploy Environment}
+      RANDOMYST_ALLOWED_HOSTS: ${RANDOMYST_ALLOWED_HOSTS:-}
+      RANDOMYST_TRUSTED_PROXIES: ${RANDOMYST_TRUSTED_PROXIES:-}
+      RANDOMYST_AI_DAILY_LIMIT: ${RANDOMYST_AI_DAILY_LIMIT:-100}
+      RANDOMYST_AI_BASE_URL: ${RANDOMYST_AI_BASE_URL:-https://rexapf.com/v1}
+      RANDOMYST_AI_MODEL: ${RANDOMYST_AI_MODEL:-deepseek-v4.1-flash}
+      RANDOMYST_AI_API_KEY: ${RANDOMYST_AI_API_KEY:-}
+      RANDOMYST_AI_TIMEOUT_SECONDS: ${RANDOMYST_AI_TIMEOUT_SECONDS:-55}
+    expose:
+      - "8765"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 128
+    stop_grace_period: 190s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

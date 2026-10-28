@@ -5,7 +5,7 @@ import tarfile
 
 ROOT = Path(__file__).resolve().parents[1]
 FILES = (
-    "Dockerfile", ".dockerignore", "compose.yaml", "compose.https.yaml",
+    "Dockerfile", ".dockerignore", "compose.yaml", "compose.yml", "compose.https.yaml",
     ".env.production.example", "deploy/.env.https.example", "deploy/Caddyfile",
     "deploy/healthcheck.py", "requirements-runtime.lock",
     "package.json", "package-lock.json", "dan_gian_config.json", "README.md",
