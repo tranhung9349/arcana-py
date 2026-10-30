@@ -5,6 +5,7 @@ COPY package.json package-lock.json ./
 RUN npm ci --ignore-scripts --no-audit --no-fund
 COPY web ./web
 RUN npm run build:css
+RUN npm prune --omit=dev --ignore-scripts --no-audit --no-fund
 
 FROM python:3.13-slim-bookworm AS runtime
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -12,6 +13,10 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
     RANDOMYST_ENV=production
 WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends libstdc++6 \
+    && rm -rf /var/lib/apt/lists/*
+COPY --from=frontend /usr/local/bin/node /usr/local/bin/node
+COPY --from=frontend /build/node_modules ./node_modules
 
 COPY requirements-runtime.lock ./
 RUN pip install --no-cache-dir -r requirements-runtime.lock \
@@ -19,6 +24,7 @@ RUN pip install --no-cache-dir -r requirements-runtime.lock \
     && useradd --uid 10001 --gid arcana --no-create-home --no-log-init arcana
 
 COPY randomyst ./randomyst
+COPY vendor/tinix-bazi ./vendor/tinix-bazi
 COPY research_tools/__init__.py research_tools/interpretation_prompt.py research_tools/date_interpretation_prompt.py research_tools/reading_strategy.py ./research_tools/
 COPY config ./config
 COPY schemas ./schemas

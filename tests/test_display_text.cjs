@@ -45,6 +45,13 @@ test('unrecognized API errors and native exceptions use controlled Vietnamese me
   assert.equal(display.errorMessage(new Error('Cannot read properties of undefined'),'Hãy thử lại.'),'Hãy thử lại.');
   assert.equal(display.errorMessage(display.failure('Kết quả không khớp phiên đang mở.')),'Kết quả không khớp phiên đang mở.');
 });
+test('AI connection, format and validation failures have distinct recovery messages',()=>{
+  const codes=['AI_CONNECTION_FAILED','AI_RESPONSE_INVALID','AI_RESPONSE_UNBOUND'];
+  const messages=codes.map(code=>display.responseError({error:{code,message:'private-upstream-sentinel'}}).message);
+  assert.equal(new Set(messages).size,3);
+  assert.match(messages[0],/Kết nối/);assert.match(messages[1],/định dạng/);assert.match(messages[2],/kiểm tra/);
+  for(const message of messages)assert.doesNotMatch(message,/sentinel|dữ liệu bên dưới|schema|JSON/);
+});
 test('all UI renderers load the shared prose boundary before their scripts',()=>{
   const html=fs.readFileSync('web/index.html','utf8');
   const scripts=[...html.matchAll(/src="\/static\/([^?]+)\?/g)].map(m=>m[1]);

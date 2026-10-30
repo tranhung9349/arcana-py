@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-10-28T14:12:19.290621+00:00",
+  "synthetic_data_only": true,
+  "model_requested": "claude-sonnet-4-6",
+  "model_returned_in_connection_check": "claude-sonnet-4-6",
+  "json_connection_check": "PASSED",
+  "full_article_probe": {
+    "outcome": "AI_RESPONSE_UNBOUND",
+    "timeout_seconds": 180,
+    "elapsed_seconds": 473.04,
+    "generation_passes": 4,
+    "published": false,
+    "cached": false,
+    "analyst_seconds": [
+      172.13,
+      159.16
+    ],
+    "interpreter_seconds": [
+      74.65,
+      67.05
+    ],
+    "last_reader_words": 1291,
+    "last_reader_errors": [
+      "LIFE_DOMAIN_NOT_ANALYZED",
+      "SELECTED_PATTERN_CONTRADICTION_OMITTED",
+      "LIFE_READING_TOO_LONG"
+    ]
+  },
+  "tests": {
+    "python": {
+      "passed": 242
+    },
+    "javascript": {
+      "passed": 51
+    }
+  },
+  "ui": {
+    "name_input_removed": true,
+    "extra_reading_form_removed": true,
+    "session_reading_list_removed": true,
+    "coverage_section_removed": true,
+    "glossary": "NATIVE_DIALOG_NEXT_TO_CHART_DISCLOSURE",
+    "escape_and_focus_restore": "PASSED",
+    "mobile_scroll_close_visible": "PASSED",
+    "widths_checked": [
+      375,
+      1280
+    ],
+    "horizontal_overflow": false,
+    "technical_explanation_removed": true
+  },
+  "screenshots": [
+    "bazi_simplified_desktop.png",
+    "bazi_glossary_dialog.png",
+    "bazi_glossary_mobile.png",
+    "bazi_final_quality_ui.png"
+  ],
+  "quality_review": {
+    "verdict": "NOT_ACCEPTED",
+    "real_model_outputs_reviewed": true,
+    "initial_reader_words": 1610,
+    "revised_reader_words": [
+      1396,
+      1291
+    ],
+    "findings": [
+      "REPETITION",
+      "ABSTRACT_PROSE",
+      "UNSUPPORTED_ELABORATION",
+      "ANALYST_DOMAIN_ERRORS",
+      "REFERENCE_MISMATCH",
+      "TOO_LONG"
+    ],
+    "report": "bazi_output_quality_review.md",
+    "automatic_checks_are_not_semantic_proof": true,
+    "additional_qa_used_480_second_timeout": true,
+    "production_timeout_unchanged": true
+  }
+}

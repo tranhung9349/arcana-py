@@ -1,0 +1,612 @@
+{
+  "repository": "https://github.com/vhphuoc1102/tinix-bazi.git",
+  "commit": "80ff4463d0397c1b11db76f38d880255f55558bc",
+  "lunar_javascript": "1.7.7",
+  "files": [
+    {
+      "path": "runner.cjs",
+      "sha256": "cf2ae3ad33cbda0eb955bb138d0660deab9331de53568155c78a9504b7666203",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/calculator.js",
+      "sha256": "43647c3a3d3bd2ca16f26838c8e7a7257605965fd0f4b067c2fa8935dbc3b080",
+      "upstream_sha256": "0e0f69aefc0e01772293a4b53195cd7d6020a5168dcaaafff1ab398994ac01d6",
+      "modified": true
+    },
+    {
+      "path": "src/bazi/core.js",
+      "sha256": "2e5d6e92031027091ddf029ded523f5325c30900917c27e31126a9bf4b1a5a5d",
+      "upstream_sha256": "2e5d6e92031027091ddf029ded523f5325c30900917c27e31126a9bf4b1a5a5d",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/data/shensha_list.js",
+      "sha256": "9e6fc26a35f538bd11a75aa7234813818dceadbb2fe062da16b6bacaea169baa",
+      "upstream_sha256": "9e6fc26a35f538bd11a75aa7234813818dceadbb2fe062da16b6bacaea169baa",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/dayun.js",
+      "sha256": "f2173149750c8424eaa3e50288681a08aab7e6d6b567cfe59a70738835436ace",
+      "upstream_sha256": "f2173149750c8424eaa3e50288681a08aab7e6d6b567cfe59a70738835436ace",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/ganzhi.js",
+      "sha256": "d2f3db7c3c7a720b66e879cf85f377b28ac6b86df0b9bffaf020ea5f352d5bd8",
+      "upstream_sha256": "d2f3db7c3c7a720b66e879cf85f377b28ac6b86df0b9bffaf020ea5f352d5bd8",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/ganzhi_data.js",
+      "sha256": "836e4d49f46bb87f39b3b086f15798205cbc0c5cc13a1cd9a07b3ba56fb70ca5",
+      "upstream_sha256": "836e4d49f46bb87f39b3b086f15798205cbc0c5cc13a1cd9a07b3ba56fb70ca5",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/geju.js",
+      "sha256": "f8848a27dbeeedf9fee77d85fa7c94f918f68094d9fd6cc6c5b51cf289badb69",
+      "upstream_sha256": "f8848a27dbeeedf9fee77d85fa7c94f918f68094d9fd6cc6c5b51cf289badb69",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/hop_hon/data/interpretations.js",
+      "sha256": "ff99b444e78b90bc0043fa0006ae891a217bef8802c18cfa0baf36adda8693e2",
+      "upstream_sha256": "ff99b444e78b90bc0043fa0006ae891a217bef8802c18cfa0baf36adda8693e2",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/hop_hon/index.js",
+      "sha256": "b9126183a39fe0b681e8887d97b84c06c5e266ddd0ad291e81a6813d272c428d",
+      "upstream_sha256": "b9126183a39fe0b681e8887d97b84c06c5e266ddd0ad291e81a6813d272c428d",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/liunian.js",
+      "sha256": "7723533876596d46b8dd15e2ccd89ca7606dd518e43b89bd77e72457fdbde3c2",
+      "upstream_sha256": "7723533876596d46b8dd15e2ccd89ca7606dd518e43b89bd77e72457fdbde3c2",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/core.js",
+      "sha256": "d33861d63a3ea342975503157b6d13d4c6e9c54cfdf93f1f9ddcdf3ded51f8f9",
+      "upstream_sha256": "55a02bd51e38cee30c8c6ca88f669b7a5e6b7c281fea4f4dbce6990fa0a99d7f",
+      "modified": true
+    },
+    {
+      "path": "src/bazi/luan_giai/data/advice.js",
+      "sha256": "5b00ed97809db55d9d8608b39f43483df3e72eb59346652654a10cf233d86933",
+      "upstream_sha256": "5b00ed97809db55d9d8608b39f43483df3e72eb59346652654a10cf233d86933",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/branches.js",
+      "sha256": "37f1ae0bbe0636baad113c98e6f71b2bccdaf496873ac64d874a5de00384f26a",
+      "upstream_sha256": "37f1ae0bbe0636baad113c98e6f71b2bccdaf496873ac64d874a5de00384f26a",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/career_detail.js",
+      "sha256": "f11d6574eb233d042b34c89597b78377e3261de19fc7279afa8bd111c15a051a",
+      "upstream_sha256": "f11d6574eb233d042b34c89597b78377e3261de19fc7279afa8bd111c15a051a",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/classic_keywords.js",
+      "sha256": "9c31d0c656d939cb2d7ae28e8be26491dd281df2f66ed9414ac5e982dea8fb95",
+      "upstream_sha256": "9c31d0c656d939cb2d7ae28e8be26491dd281df2f66ed9414ac5e982dea8fb95",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/combinations.js",
+      "sha256": "bd8b86b5fb5f4e9608613a0f42212dc7278159642e36487e4b11aa6fd3f63907",
+      "upstream_sha256": "bd8b86b5fb5f4e9608613a0f42212dc7278159642e36487e4b11aa6fd3f63907",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/dayun_detail.js",
+      "sha256": "7b799c5bcad57edf00e7f6948051bcd8f8d81784737d484521cfb1e5e661590e",
+      "upstream_sha256": "7b799c5bcad57edf00e7f6948051bcd8f8d81784737d484521cfb1e5e661590e",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/extended.js",
+      "sha256": "6fcbb0b0a039ea372f67a5b6ff67e4db24a68ef087f6a9f95b7b21655ccc1908",
+      "upstream_sha256": "6fcbb0b0a039ea372f67a5b6ff67e4db24a68ef087f6a9f95b7b21655ccc1908",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/fortune_phases.js",
+      "sha256": "6549a4716dc59288c7f98df1df28d46cad14d7cf4e8dff88802b70d4b136cd3e",
+      "upstream_sha256": "6549a4716dc59288c7f98df1df28d46cad14d7cf4e8dff88802b70d4b136cd3e",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/fortunes.js",
+      "sha256": "8a21ce6ddec05d21a4263045c6f3254362698957d8d37c36df1afa8977e53ed9",
+      "upstream_sha256": "8a21ce6ddec05d21a4263045c6f3254362698957d8d37c36df1afa8977e53ed9",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/giga_variations.js",
+      "sha256": "442a23c6a98d0a59021e989c3737134196dc2b5cbe8defbca0d24afb980fef3e",
+      "upstream_sha256": "442a23c6a98d0a59021e989c3737134196dc2b5cbe8defbca0d24afb980fef3e",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/health_detail.js",
+      "sha256": "01011c7281582878da596c6e896e1a9b55f3b9d65f5c8e674aa82ab0bf4e45e1",
+      "upstream_sha256": "01011c7281582878da596c6e896e1a9b55f3b9d65f5c8e674aa82ab0bf4e45e1",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/index.js",
+      "sha256": "52214bca13140770d781dd75de9697bc5a4530763be3a1afcaade3a845840ba7",
+      "upstream_sha256": "52214bca13140770d781dd75de9697bc5a4530763be3a1afcaade3a845840ba7",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/life_events.js",
+      "sha256": "508677973aaa7ac0e73037dba771cd0e1cc2ff57df899f20d2e469d1e9f56c94",
+      "upstream_sha256": "508677973aaa7ac0e73037dba771cd0e1cc2ff57df899f20d2e469d1e9f56c94",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/massive_variations.js",
+      "sha256": "fc3a604837602226498a2994ae85954b5d056e1efa7ccb07bf3bd66a18f257bd",
+      "upstream_sha256": "fc3a604837602226498a2994ae85954b5d056e1efa7ccb07bf3bd66a18f257bd",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/mega_variations.js",
+      "sha256": "c925ba8fd048ad1053cac44ff0e3594de7d13d1ed799737a04a8da9a2f40978f",
+      "upstream_sha256": "c925ba8fd048ad1053cac44ff0e3594de7d13d1ed799737a04a8da9a2f40978f",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/nayin.js",
+      "sha256": "b849c131cbb4d8ba0ad6fb0624c7bee78d21121a71d610ef9af9cdfe8d417262",
+      "upstream_sha256": "b849c131cbb4d8ba0ad6fb0624c7bee78d21121a71d610ef9af9cdfe8d417262",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/patterns.js",
+      "sha256": "6b1d6d7be253daa7ed2554296d588d3447da2483757b8163ff0f44615fcbf9d3",
+      "upstream_sha256": "6b1d6d7be253daa7ed2554296d588d3447da2483757b8163ff0f44615fcbf9d3",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/personality.js",
+      "sha256": "a2ea39c40b8a72e3e50e8e6cd3f07a8311c63a7c19243b591196b6acb92a5210",
+      "upstream_sha256": "a2ea39c40b8a72e3e50e8e6cd3f07a8311c63a7c19243b591196b6acb92a5210",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/personality_variations.js",
+      "sha256": "48894d0ca01fc7fa294d42173c2b6c81dc00019a18c31dec520ddc833c3c1ac8",
+      "upstream_sha256": "48894d0ca01fc7fa294d42173c2b6c81dc00019a18c31dec520ddc833c3c1ac8",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/relationships.js",
+      "sha256": "14fd84cee0059b01b0bfbf1741627ef1713a4761d9ec384e67a06119163c5f87",
+      "upstream_sha256": "14fd84cee0059b01b0bfbf1741627ef1713a4761d9ec384e67a06119163c5f87",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/shensha_detail.js",
+      "sha256": "3ac9dfd2d6ae7f6311f559cf7b9c27dec2bd5207cdd0efdfc3470fad96116011",
+      "upstream_sha256": "3ac9dfd2d6ae7f6311f559cf7b9c27dec2bd5207cdd0efdfc3470fad96116011",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/stems.js",
+      "sha256": "8854ddc344a6e36e2f7f92e14dd3bc4efd7afc31d89a6f574361efecc16ea402",
+      "upstream_sha256": "8854ddc344a6e36e2f7f92e14dd3bc4efd7afc31d89a6f574361efecc16ea402",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/thap_than_deep.js",
+      "sha256": "8d6fee0f6bfe3ef00e19ef96f8da853aa6047b79effa42cb9b7e0bc0a5e9da0a",
+      "upstream_sha256": "8d6fee0f6bfe3ef00e19ef96f8da853aa6047b79effa42cb9b7e0bc0a5e9da0a",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/data/ultra_variations.js",
+      "sha256": "f4826debfb37265d85b7f0954cbb37fae37c1521dd889e73ede9a7b2f9923fd3",
+      "upstream_sha256": "f4826debfb37265d85b7f0954cbb37fae37c1521dd889e73ede9a7b2f9923fd3",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/luan_giai/index.js",
+      "sha256": "53505e69f5d0e12a6cf40ad87a158e68fcd596d8cab38606665d3b5cf5fe55e5",
+      "upstream_sha256": "53505e69f5d0e12a6cf40ad87a158e68fcd596d8cab38606665d3b5cf5fe55e5",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/output.js",
+      "sha256": "d4e1d5eda30addaa7ab1c341014b816771f68da326b51e44ca5513582f7c1e91",
+      "upstream_sha256": "0bf12c070315f0a9e666595ea59553f693b3f2c927e69351ec342bbd77135ec0",
+      "modified": true
+    },
+    {
+      "path": "src/bazi/phan_tich/benh_duoc.js",
+      "sha256": "50fc6af7a81e5cb864a0205f0bc12c123811f962521f75936de486e93187e221",
+      "upstream_sha256": "50fc6af7a81e5cb864a0205f0bc12c123811f962521f75936de486e93187e221",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/cung_thong_bao_giam.js",
+      "sha256": "1cbb73b4a906304c6e70eace1d575cf9047845abce332978fe928857d13012de",
+      "upstream_sha256": "1cbb73b4a906304c6e70eace1d575cf9047845abce332978fe928857d13012de",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/benh_duoc_data.js",
+      "sha256": "61b5fa5097ccc57edef9205eb499170d8ec8333ba8597b4b722ee727326cc6f2",
+      "upstream_sha256": "61b5fa5097ccc57edef9205eb499170d8ec8333ba8597b4b722ee727326cc6f2",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/cung_thong_data.js",
+      "sha256": "cb69e70a17959876de2f09267b6db32f939325ec342f22cd82a551dbceb83028",
+      "upstream_sha256": "cb69e70a17959876de2f09267b6db32f939325ec342f22cd82a551dbceb83028",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/dich_thien_tuy_data.js",
+      "sha256": "1108468d1d0a286d197567f11ee6965d63c5bba663502d995c596f25feae7bb8",
+      "upstream_sha256": "1108468d1d0a286d197567f11ee6965d63c5bba663502d995c596f25feae7bb8",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/hinh_hai_pha_data.js",
+      "sha256": "24f72abf26c36d8447f3a8a2508f1d9cc00c757f40517f99c44c70a98a2f15a7",
+      "upstream_sha256": "24f72abf26c36d8447f3a8a2508f1d9cc00c757f40517f99c44c70a98a2f15a7",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/kim_bat_hoan_data.js",
+      "sha256": "07654ff7e385fc942667fdafe9869225b85b56f50008c9715cfc9bc104281e4e",
+      "upstream_sha256": "07654ff7e385fc942667fdafe9869225b85b56f50008c9715cfc9bc104281e4e",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/luan_dong_data.js",
+      "sha256": "89d0d7a7a167dbb28a467aed362c08b5455175cbcbbcf426354cb8d1a68d48ba",
+      "upstream_sha256": "89d0d7a7a167dbb28a467aed362c08b5455175cbcbbcf426354cb8d1a68d48ba",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/luan_giai_lib.js",
+      "sha256": "72d214c6b0dff171c9a6b61df6b3174309351a77dd47c926cd56e868f69d29a9",
+      "upstream_sha256": "72d214c6b0dff171c9a6b61df6b3174309351a77dd47c926cd56e868f69d29a9",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/luan_tinh_data.js",
+      "sha256": "97fd5f6a5911be187b711836d67f2d140d37a98dde1990dbca2484a15f154494",
+      "upstream_sha256": "97fd5f6a5911be187b711836d67f2d140d37a98dde1990dbca2484a15f154494",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/nap_am_data.js",
+      "sha256": "1d1e8b1043644d393f21d36a78ad7185bc61758441b291e75c63ee3f10432f58",
+      "upstream_sha256": "1d1e8b1043644d393f21d36a78ad7185bc61758441b291e75c63ee3f10432f58",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/ngu_hanh_data.js",
+      "sha256": "3d0d7b87dfb141859f8b6e55d0abebc6f0ec4d8d30dafc0c05faac432b0bf739",
+      "upstream_sha256": "3d0d7b87dfb141859f8b6e55d0abebc6f0ec4d8d30dafc0c05faac432b0bf739",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/quan_he_text.js",
+      "sha256": "36b196b0ab75eab871563991123b93efa0fef42763722502438a3b00cbe96fad",
+      "upstream_sha256": "36b196b0ab75eab871563991123b93efa0fef42763722502438a3b00cbe96fad",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/tu_binh_data.js",
+      "sha256": "2e69dfcc18e0f59dda2060287e8dcb84673727044bf6b53021c43061830a9be0",
+      "upstream_sha256": "2e69dfcc18e0f59dda2060287e8dcb84673727044bf6b53021c43061830a9be0",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/data/vong_trang_sinh_data.js",
+      "sha256": "047427a8a88b16bceb2e85644106e4fc45d98c17f3008df4a417a7b65072ec06",
+      "upstream_sha256": "047427a8a88b16bceb2e85644106e4fc45d98c17f3008df4a417a7b65072ec06",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/dich_thien_tuy.js",
+      "sha256": "8b22be2b5c09a5f8b0d7712760d6deb0727f2d56812f774d8be3194f20c73938",
+      "upstream_sha256": "8b22be2b5c09a5f8b0d7712760d6deb0727f2d56812f774d8be3194f20c73938",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/dong_tinh_luan.js",
+      "sha256": "77a9a7b17378ab478cdf61b494b79832c5919e76d0b54fa0bb97012d3fae8421",
+      "upstream_sha256": "5a0f25595500ce2d03402e22cf60ceb5dd878281c4274126ff920c551b5e3906",
+      "modified": true
+    },
+    {
+      "path": "src/bazi/phan_tich/hinh_hai_pha.js",
+      "sha256": "9106a701c5c90aca9c2e5c41b0a7390a5902899297e431ae37bdc87e3d667689",
+      "upstream_sha256": "9106a701c5c90aca9c2e5c41b0a7390a5902899297e431ae37bdc87e3d667689",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/index.js",
+      "sha256": "3d995b6e69ed84c4de6374cb5ddceaf2ee7a1369ee63deda2cfb8e339d76c66a",
+      "upstream_sha256": "3d995b6e69ed84c4de6374cb5ddceaf2ee7a1369ee63deda2cfb8e339d76c66a",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/kim_bat_hoan.js",
+      "sha256": "a9267eb9b4866182fe98cca31b9a967b13bfa2526a2ccb93ccc9415e9878f99c",
+      "upstream_sha256": "a9267eb9b4866182fe98cca31b9a967b13bfa2526a2ccb93ccc9415e9878f99c",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/luan_dong.js",
+      "sha256": "63adb459da07fe95f0285744421e9cdf32a5c05af4c8cd999678311ba34e2ef2",
+      "upstream_sha256": "4c2faf408fd7e851021276fe5f1ed12a1ed2dc4b857592e3a16c05ac14734786",
+      "modified": true
+    },
+    {
+      "path": "src/bazi/phan_tich/luan_giai_quan_he.js",
+      "sha256": "b2c524914e0e60a7c5b24d00a6fc0e5712c17a891c60a530fac713ce6310e4b9",
+      "upstream_sha256": "b2c524914e0e60a7c5b24d00a6fc0e5712c17a891c60a530fac713ce6310e4b9",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/luan_tinh.js",
+      "sha256": "a52179ae919b77bf4305cffa12302055edc028d62294bfc4786739a34a8a391f",
+      "upstream_sha256": "a52179ae919b77bf4305cffa12302055edc028d62294bfc4786739a34a8a391f",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/nap_am_chuyen_sau.js",
+      "sha256": "7742cb4b38bc1230b27bb7cecc0ac53952d5b9008a2983d42662495e0684b041",
+      "upstream_sha256": "7742cb4b38bc1230b27bb7cecc0ac53952d5b9008a2983d42662495e0684b041",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/ngu_hanh.js",
+      "sha256": "3efb4f7b131c5ffa7475eb32e53bd0b662ee1deb9541a5e4f03207a0bfe4942b",
+      "upstream_sha256": "3efb4f7b131c5ffa7475eb32e53bd0b662ee1deb9541a5e4f03207a0bfe4942b",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/quan_he.js",
+      "sha256": "5b3e3c32f42417c543a0ce22ad6cd4d1b0ecae1f4963c57d4af21ecb932adb56",
+      "upstream_sha256": "2d040956500d3dfa353917d1a677f62456bf5ae8b17432431d1c38101fcda88a",
+      "modified": true
+    },
+    {
+      "path": "src/bazi/phan_tich/tu_binh_chan_thuyen.js",
+      "sha256": "eeac4306d45df33b4a5391da7c67ae33c4cd30fc76ac7cb12787634e4993aab5",
+      "upstream_sha256": "eeac4306d45df33b4a5391da7c67ae33c4cd30fc76ac7cb12787634e4993aab5",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/phan_tich/vong_trang_sinh.js",
+      "sha256": "0391cb06d5bbd2306cb7859ea1fa2be49f691e8b9c4c64223428557552179b3c",
+      "upstream_sha256": "0391cb06d5bbd2306cb7859ea1fa2be49f691e8b9c4c64223428557552179b3c",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/que_data/gua_64.js",
+      "sha256": "a357df2b12c1bf8082e15bf89fbb058f8ce9835daf54596334995c4e90a0153e",
+      "upstream_sha256": "a357df2b12c1bf8082e15bf89fbb058f8ce9835daf54596334995c4e90a0153e",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/que_data/interpretations.js",
+      "sha256": "797339a719a3cc696c65cbf0c5031f95adc8e497602c4a9b1464d228f5b60e5f",
+      "upstream_sha256": "797339a719a3cc696c65cbf0c5031f95adc8e497602c4a9b1464d228f5b60e5f",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/que_data/mapping.js",
+      "sha256": "f026ca71d7df72d7374a888133ae10f8124fe82865b25f733f423d94058f60d8",
+      "upstream_sha256": "f026ca71d7df72d7374a888133ae10f8124fe82865b25f733f423d94058f60d8",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/questions/data.js",
+      "sha256": "be6af9050e8d129953bd4e41cc2e249233cc91bd227e48f510fab514cf08496f",
+      "upstream_sha256": "be6af9050e8d129953bd4e41cc2e249233cc91bd227e48f510fab514cf08496f",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/questions/engine.js",
+      "sha256": "0224308ad80dd5ec72adb467b1729a46e0570092751822d031399571d8f17e32",
+      "upstream_sha256": "0224308ad80dd5ec72adb467b1729a46e0570092751822d031399571d8f17e32",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/questions/logic_atoms.js",
+      "sha256": "64b85eac2fecad1af4c0de4ccba8dd1dd64a5a759bfa3dc2437b182b8ccb7ecd",
+      "upstream_sha256": "64b85eac2fecad1af4c0de4ccba8dd1dd64a5a759bfa3dc2437b182b8ccb7ecd",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/questions/logic_atoms_extended.js",
+      "sha256": "d63efeca1174f91649607901718bef36f9939201c5ac56f6c254f46b1c6bbbcb",
+      "upstream_sha256": "d63efeca1174f91649607901718bef36f9939201c5ac56f6c254f46b1c6bbbcb",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/questions/logic_pool.js",
+      "sha256": "386a75aadef83041d055e16631524270a087e97c1df46ca473b57d5cae5332b2",
+      "upstream_sha256": "386a75aadef83041d055e16631524270a087e97c1df46ca473b57d5cae5332b2",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/questions/synonyms.js",
+      "sha256": "0d2899129bf5487d30670478d1c3a8fa43a1e020f0f0bc244742f4e64d07dd85",
+      "upstream_sha256": "0d2899129bf5487d30670478d1c3a8fa43a1e020f0f0bc244742f4e64d07dd85",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/questions/variations.js",
+      "sha256": "9d4b5d05f6ad6e8d8e5779b6a3541b0e7d53dac61be36e5df9cfb1c6dbe68a95",
+      "upstream_sha256": "9d4b5d05f6ad6e8d8e5779b6a3541b0e7d53dac61be36e5df9cfb1c6dbe68a95",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/scoring_data.js",
+      "sha256": "9f04064a6fdb59b5755dd92be73d562088859e1accb4fca64961476d40438f9e",
+      "upstream_sha256": "9f04064a6fdb59b5755dd92be73d562088859e1accb4fca64961476d40438f9e",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/shensha.js",
+      "sha256": "75aa8af1464fef4183addb384afe9f7d5375f3c2abb09958b20b98d1b42ab2fe",
+      "upstream_sha256": "75aa8af1464fef4183addb384afe9f7d5375f3c2abb09958b20b98d1b42ab2fe",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/shishen/bijie.js",
+      "sha256": "bb4ef45ad9acb23e1894211025d2edf75d18911ab6e389cb2bd0a364f4c90f5b",
+      "upstream_sha256": "bb4ef45ad9acb23e1894211025d2edf75d18911ab6e389cb2bd0a364f4c90f5b",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/shishen/cai.js",
+      "sha256": "766671e380c0fe1c0c302bb2052b5ae05a1a4a8f439eed953896486005854693",
+      "upstream_sha256": "766671e380c0fe1c0c302bb2052b5ae05a1a4a8f439eed953896486005854693",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/shishen/guansha.js",
+      "sha256": "83f9b5a9be2afa17d9539dbe79003b712c1acc41ba6c62c69125d3db1dd87d18",
+      "upstream_sha256": "83f9b5a9be2afa17d9539dbe79003b712c1acc41ba6c62c69125d3db1dd87d18",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/shishen/index.js",
+      "sha256": "d9fb88ac7f6be34478317cf441aac26f3b38d7bc9b3edd4c08cbe86bbee725e5",
+      "upstream_sha256": "d9fb88ac7f6be34478317cf441aac26f3b38d7bc9b3edd4c08cbe86bbee725e5",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/shishen/shishang.js",
+      "sha256": "4a2bdf11f27c3b4ce34f62ee5e4ecc0c7e2087d000425a0f22845b3148cf1bdb",
+      "upstream_sha256": "4a2bdf11f27c3b4ce34f62ee5e4ecc0c7e2087d000425a0f22845b3148cf1bdb",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/shishen/yinxiao.js",
+      "sha256": "2250fe0faf055d40d1851a73d6def3781cf4073d4bb63bb376e29b82ecd95527",
+      "upstream_sha256": "2250fe0faf055d40d1851a73d6def3781cf4073d4bb63bb376e29b82ecd95527",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/chon_ngay_data.js",
+      "sha256": "e4629327a6decd9418cd4c0c7a5c614a8fa28d92d12c9cb37cd7b9bca84d3a3e",
+      "upstream_sha256": "e4629327a6decd9418cd4c0c7a5c614a8fa28d92d12c9cb37cd7b9bca84d3a3e",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/index.js",
+      "sha256": "111307b0773523ddbb419ef3dab88d1fb11a8f5c4169449e7747d3effdd2d400",
+      "upstream_sha256": "111307b0773523ddbb419ef3dab88d1fb11a8f5c4169449e7747d3effdd2d400",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/liunian_data.js",
+      "sha256": "8fdc196a411c8af37dcdab6267d9033695b99e8021b71dd7c6be7337a99d8c2a",
+      "upstream_sha256": "8fdc196a411c8af37dcdab6267d9033695b99e8021b71dd7c6be7337a99d8c2a",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/mega_career.js",
+      "sha256": "17ddaa583a78ac6744c1cf47e1a89c74e2a202fa7a04ec05f70349a21d480721",
+      "upstream_sha256": "17ddaa583a78ac6744c1cf47e1a89c74e2a202fa7a04ec05f70349a21d480721",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/mega_chonngay.js",
+      "sha256": "42bc397c32c940683d1fb99afcaab0237b8936fa516ed65acb4bc1dea1e5d5ee",
+      "upstream_sha256": "42bc397c32c940683d1fb99afcaab0237b8936fa516ed65acb4bc1dea1e5d5ee",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/mega_health.js",
+      "sha256": "dd7bf7b3645c3a2fb1d0616d898879f8c76b9b8523621e8f283a242d1bfcd69b",
+      "upstream_sha256": "dd7bf7b3645c3a2fb1d0616d898879f8c76b9b8523621e8f283a242d1bfcd69b",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/mega_liunian.js",
+      "sha256": "247f076bcefc48557657224fcd6200327be7075b54f2fffc7f6c3264f73fb22a",
+      "upstream_sha256": "247f076bcefc48557657224fcd6200327be7075b54f2fffc7f6c3264f73fb22a",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/mega_love.js",
+      "sha256": "0140c1314b154dc083215d0d32447c184763514c3a91484e19a501a507804d15",
+      "upstream_sha256": "0140c1314b154dc083215d0d32447c184763514c3a91484e19a501a507804d15",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/mega_quan_he.js",
+      "sha256": "b3738f0277871591a6599cf531b3e811b70aa78914b679408c003006dfd6ee3c",
+      "upstream_sha256": "b3738f0277871591a6599cf531b3e811b70aa78914b679408c003006dfd6ee3c",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/mega_variations.js",
+      "sha256": "da03ccb3809925b9263e652c5d85662512139d76e2a8d575b025cde8a401ed3e",
+      "upstream_sha256": "da03ccb3809925b9263e652c5d85662512139d76e2a8d575b025cde8a401ed3e",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/mega_wealth.js",
+      "sha256": "96b0a44b90427593d1ecc938eff3f024514bea45b8cbce9843abc0871ff358dc",
+      "upstream_sha256": "96b0a44b90427593d1ecc938eff3f024514bea45b8cbce9843abc0871ff358dc",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/metadata_expanded.js",
+      "sha256": "9899242f7921554ab240a8ae902aadaf095ee4cd574278b42fe47b1964f819dd",
+      "upstream_sha256": "9899242f7921554ab240a8ae902aadaf095ee4cd574278b42fe47b1964f819dd",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/personalized_data.js",
+      "sha256": "f15eb5042a73002083e0bcd6a5b7bbbd2a5786b16b89b1856788a96974069b8e",
+      "upstream_sha256": "f15eb5042a73002083e0bcd6a5b7bbbd2a5786b16b89b1856788a96974069b8e",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/phrase_bank.js",
+      "sha256": "7b00afe61daad05c33c6bde6e0fe6ace6e2e893d4f97a51ba1d8885ce158c3d2",
+      "upstream_sha256": "7b00afe61daad05c33c6bde6e0fe6ace6e2e893d4f97a51ba1d8885ce158c3d2",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/data/variations_extended.js",
+      "sha256": "70cb0407f9ee601e031880be42421dcf34eed99a10a0225b31345bd458eed1ee",
+      "upstream_sha256": "70cb0407f9ee601e031880be42421dcf34eed99a10a0225b31345bd458eed1ee",
+      "modified": false
+    },
+    {
+      "path": "src/bazi/thoi_gian_luan/index.js",
+      "sha256": "1fce0948bf2136f21e4bc786b0f60cf9c4619d8b0d0e7353161ca456f0d7cbd5",
+      "upstream_sha256": "1fce0948bf2136f21e4bc786b0f60cf9c4619d8b0d0e7353161ca456f0d7cbd5",
+      "modified": false
+    },
+    {
+      "path": "src/utils/random.js",
+      "sha256": "ee86a8931d234bbd7c40d06d39267adba570cb5fdcb7c1bfd664e7f860b2e776",
+      "upstream_sha256": "ee86a8931d234bbd7c40d06d39267adba570cb5fdcb7c1bfd664e7f860b2e776",
+      "modified": false
+    }
+  ]
+}

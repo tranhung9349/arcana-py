@@ -7,75 +7,148 @@
     <meta name="theme-color" content="#0e0b14" />
     <title>Arcana</title>
     <link rel="icon" href="/static/arcana-mark.svg" type="image/svg+xml" />
-    <link rel="preload" href="/static/fonts/be-vietnam-pro-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="/static/fonts/be-vietnam-pro-normal-400-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="/static/fonts/fonts.css?v=20261027-arcana1" />
-    <link rel="stylesheet" href="/static/style.css?v=20261028-security1" />
-    <script src="/static/display_text.js?v=20261028-security1" defer></script>
-    <script src="/static/session_client.js?v=20261028-security1" defer></script>
+    <link rel="stylesheet" href="/static/style.css?v=20261030-coins-simple1" />
+    <script src="/static/display_text.js?v=20261030-stream2" defer></script>
+    <script src="/static/session_client.js?v=20261029-stream1" defer></script>
     <script src="/static/export_pdf.js?v=20261028-security1" defer></script>
-    <script src="/static/ai_reading.js?v=20261028-security1" defer></script>
-    <script src="/static/date_reading.js?v=20261028-security1" defer></script>
+    <script
+      src="/static/ai_reading.js?v=20261030-stream3"
+      defer
+    ></script>
+    <script src="/static/date_reading.js?v=20261028-plain1" defer></script>
     <script src="/static/draw_reading.js?v=20261026-draw6" defer></script>
     <script src="/static/app.js?v=20261028-security1" defer></script>
-    <script src="/static/dates.js?v=20261028-security1" defer></script>
+    <script src="/static/dates.js?v=20261028-library1" defer></script>
     <script src="/static/maihoa.js?v=20261028-security1" defer></script>
     <script src="/static/coin_intent.js?v=20261028-security1" defer></script>
-    <script src="/static/liuyao.js?v=20261028-security1" defer></script>
-    <script src="/static/coins.js?v=20261028-security1" defer></script>
-    <script src="/static/bazi.js?v=20261028-security1" defer></script>
-    <script src="/static/arcana_ui.js?v=20261027-arcana1" defer></script>
+    <script src="/static/liuyao.js?v=20261030-stream2" defer></script>
+    <script src="/static/coins.js?v=20261030-coins-simple2" defer></script>
+    <script src="/static/bazi_features.js?v=20261029-bazi-clean1" defer></script>
+    <script src="/static/bazi.js?v=20261029-bazi-clean1" defer></script>
+    <script src="/static/arcana_ui.js?v=20261028-library1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#workspace-start">Đến phần nhập thông tin</a>
-    <main class="mx-auto max-w-[1280px] px-4 pt-[22px] phone:px-[26px] phone:pt-[26px] wide:px-10 wide:pt-[30px]">
+    <main
+      class="mx-auto max-w-[1280px] px-4 pt-[22px] phone:px-[26px] phone:pt-[26px] wide:px-10 wide:pt-[30px]"
+    >
       <header class="app-header">
-        <img class="brand" src="/static/arcana-mark.svg" alt="" width="52" height="52" />
+        <img
+          class="brand"
+          src="/static/arcana-mark.svg"
+          alt=""
+          width="52"
+          height="52"
+        />
         <div class="brand-copy">
           <h1>Arcana</h1>
-          <p class="intro">
-            Nơi vận mệnh được khai phá bằng Thần - Thực.
-          </p>
+          <p class="intro">Where fate takes form.</p>
         </div>
-        <span class="header-signature">Bát Tự <span aria-hidden="true">✧</span> Kinh Dịch</span>
+        <span class="header-signature"
+          >Bát Tự <span aria-hidden="true">✧</span> Kinh Dịch</span
+        >
       </header>
-      <nav class="mode-tabs grid grid-cols-2 gap-1.5 desk:grid-cols-4" aria-label="Chức năng">
-        <button id="show-draw" type="button" aria-pressed="true">
-          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="8" cy="8" r=".8"/><circle cx="16" cy="16" r=".8"/><circle cx="12" cy="12" r=".8"/><circle cx="16" cy="8" r=".8"/><circle cx="8" cy="16" r=".8"/></svg>
-          <span>Gieo bộ số</span><small aria-hidden="true">I</small></button
-        ><button id="show-dates" type="button" aria-pressed="false">
-          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4m-8 7h3m2 3h3"/></svg>
-          <span>Tra ngày theo việc</span><small aria-hidden="true">II</small></button
-        ><button
+      <nav
+        class="mode-tabs grid grid-cols-2 gap-1.5 desk:grid-cols-4"
+        aria-label="Chức năng"
+      >
+        <button
+          id="show-bazi"
+          type="button"
+          aria-pressed="true"
+          aria-controls="bazi-workspace"
+        >
+          <svg
+            class="nav-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+          >
+            <path d="M5 20V9l7-6 7 6v11M8 20V11m4 9V8m4 12v-9M3 20h18" />
+          </svg>
+          <span>Luận giải Bát Tự</span><small aria-hidden="true">I</small>
+        </button>
+        <button
           id="show-iching"
           type="button"
           aria-pressed="false"
           aria-controls="iching-methods"
         >
-          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 5h16M4 9h6m4 0h6M4 13h16M4 17h6m4 0h6M4 21h16"/></svg>
-          <span>Luận Giải Kinh Dịch</span><small aria-hidden="true">III</small></button
-        ><button
-          id="show-bazi"
-          type="button"
-          aria-pressed="false"
-          aria-controls="bazi-workspace"
-        >
-          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 20V9l7-6 7 6v11M8 20V11m4 9V8m4 12v-9M3 20h18"/></svg>
-          <span>Luận Giải Bát Tự</span><small aria-hidden="true">IV</small>
-        </button>
+          <svg
+            class="nav-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+          >
+            <path d="M4 5h16M4 9h6m4 0h6M4 13h16M4 17h6m4 0h6M4 21h16" />
+          </svg>
+          <span>Luận giải Kinh Dịch</span><small aria-hidden="true">II</small></button>
+        <button id="show-dates" type="button" aria-pressed="false">
+          <svg
+            class="nav-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+          >
+            <rect x="4" y="5" width="16" height="16" rx="2" />
+            <path d="M4 10h16M8 3v4M16 3v4m-8 7h3m2 3h3" />
+          </svg>
+          <span>Tra việc theo ngày</span><small aria-hidden="true">III</small></button>
+        <button id="show-draw" type="button" aria-pressed="false">
+          <svg
+            class="nav-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+          >
+            <rect x="4" y="4" width="16" height="16" rx="3" />
+            <circle cx="8" cy="8" r=".8" />
+            <circle cx="16" cy="16" r=".8" />
+            <circle cx="12" cy="12" r=".8" />
+            <circle cx="16" cy="8" r=".8" />
+            <circle cx="8" cy="16" r=".8" />
+          </svg>
+          <span>Dãy số vận mệnh</span><small aria-hidden="true">IV</small></button>
       </nav>
       <section class="workspace-intro" aria-labelledby="workspace-title">
         <div class="workspace-intro-copy">
-          <p id="workspace-kicker" class="eyebrow" lang="en">THE NUMBER RITUAL</p>
-          <h2 id="workspace-title">Những con số,<br /><em>một dấu chỉ.</em></h2>
-          <p id="workspace-description">Gieo sáu con số từ quẻ Dịch và dấu ấn Bát Tự của bạn.</p>
+          <p id="workspace-kicker" class="eyebrow" lang="en">
+            THE FOUR PILLARS
+          </p>
+          <h2 id="workspace-title">Từ ngày sinh,<br /><em>thêm một góc nhìn.</em></h2>
+          <p id="workspace-description">
+            Đọc ý chính và điều cần cân nhắc theo câu hỏi của bạn.
+          </p>
         </div>
-        <img class="celestial-seal" src="/static/arcana-seal.svg" alt="" width="240" height="240" />
+        <img
+          class="celestial-seal"
+          src="/static/arcana-seal.svg"
+          alt=""
+          width="240"
+          height="240"
+        />
       </section>
       <div id="workspace-start" tabindex="-1"></div>
       <nav
         id="iching-methods"
         class="iching-methods"
-        aria-label="Phương pháp luận Kinh Dịch"
+        aria-label="Các mục Kinh Dịch"
         hidden
       >
         <button
@@ -93,14 +166,26 @@
         >
           Gieo 3 đồng · Lục Hào
         </button>
+        <button
+          id="show-library"
+          type="button"
+          aria-pressed="false"
+          aria-controls="library-workspace"
+        >
+          Thư viện 64 quẻ
+        </button>
       </nav>
-      <div class="workspace grid grid-cols-1 items-start gap-5 desk:grid-cols-[310px_minmax(0,1fr)] wide:grid-cols-[346px_minmax(0,1fr)] wide:gap-6" id="draw-workspace">
+      <div
+        class="workspace grid grid-cols-1 items-start gap-5 desk:grid-cols-[310px_minmax(0,1fr)] wide:grid-cols-[346px_minmax(0,1fr)] wide:gap-6"
+        id="draw-workspace"
+        hidden
+      >
         <section class="panel ritual-form-panel">
           <form autocomplete="off" id="draw-form">
-            <p class="eyebrow form-kicker">THIẾT LẬP PHIÊN GIEO</p>
+            <p class="eyebrow form-kicker">THIẾT LẬP PHIÊN</p>
             <h2>Hồ sơ sinh</h2>
             <label
-              >Ngày và giờ sinh<input
+              >Ngày/Tháng/Năm và giờ sinh<input
                 id="birth-date"
                 type="datetime-local"
                 step="1"
@@ -110,7 +195,7 @@
                 required
             /></label>
             <label
-              >Dụng Thần nhập đè<select id="override">
+              >Dụng Thần (Mệnh/Mạng)<select id="override">
                 <option value="">Tính từ hồ sơ Bát Tự</option>
                 <option>Mộc</option>
                 <option>Hỏa</option>
@@ -120,27 +205,8 @@
               </select></label
             >
             <div class="divider"></div>
-            <h2>Phiên gieo</h2>
-            <label
-              >Thời điểm<select id="casting-mode">
-                <option value="CURRENT">
-                  Hiện tại · Giờ Việt Nam
-                </option>
-                <option value="CUSTOM">Thời điểm tùy chọn</option>
-              </select></label
-            >
-            <label id="custom-field" hidden
-              >Ngày giờ gieo (Giờ Việt Nam)<input
-                id="custom-date"
-                title="Giờ Việt Nam"
-                type="datetime-local"
-                step="1"
-                min="2024-01-01T00:00"
-                max="2030-12-31T23:59:59"
-                value="2026-10-11T10:00:00"
-            /></label>
             <button type="submit" id="draw-button">
-              Gieo một bộ 6 số <span>↗</span></button
+              Gieo một bộ số <span>↗</span></button
             ><button type="button" class="secondary" id="retry-button" hidden>
               Thử lại cùng yêu cầu
             </button>
@@ -151,15 +217,19 @@
         <section class="result-panel">
           <div id="empty-result">
             <p class="eyebrow">KẾT QUẢ CỦA PHIÊN</p>
-            <div class="empty-arch" aria-hidden="true"><img src="/static/arcana-mark.svg" alt="" width="68" height="68" /></div>
+            <div class="empty-arch" aria-hidden="true">
+              <img
+                src="/static/arcana-mark.svg"
+                alt=""
+                width="68"
+                height="68"
+              />
+            </div>
             <h2 class="empty-title">Một khoảnh khắc.<br />Sáu dấu ấn riêng.</h2>
             <div class="placeholders">
               <span>00</span><span>—</span><span>—</span><span>—</span
               ><span>—</span><span>99</span>
             </div>
-            <p>
-              Mỗi lần gieo trả đúng một bộ.<br />Sáu số trong bộ luôn khác nhau.
-            </p>
           </div>
           <div id="result" hidden>
             <div class="result-title">
@@ -427,7 +497,18 @@
         </div>
         <div class="result-panel">
           <div id="date-empty" class="oracle-empty">
-            <div class="empty-arch" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="32" cy="32" r="22"/><path d="M32 4v10m0 36v10M4 32h10m36 0h10M32 18v15l9 6"/><circle cx="32" cy="32" r="3"/></svg></div>
+            <div class="empty-arch" aria-hidden="true">
+              <svg
+                viewBox="0 0 64 64"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.2"
+              >
+                <circle cx="32" cy="32" r="22" />
+                <path d="M32 4v10m0 36v10M4 32h10m36 0h10M32 18v15l9 6" />
+                <circle cx="32" cy="32" r="3" />
+              </svg>
+            </div>
             <h2>Ngày phù hợp với việc và người</h2>
             <p>
               Chọn nhóm việc, mốc hành động và hồ sơ để xem ngày phù hợp cùng lý
@@ -473,7 +554,10 @@
             aria-label="Các khung giờ đẹp"
           ></ul>
           <p id="date-good-hours-empty" class="hint" hidden></p>
-          <section id="date-reading" aria-label="Lời luận của ngày đã chọn"></section>
+          <section
+            id="date-reading"
+            aria-label="Lời luận của ngày đã chọn"
+          ></section>
           <details id="date-detail">
             <summary id="date-detail-label">
               Xem lý do đánh giá từng khung giờ
@@ -547,7 +631,23 @@
           </form>
         </div>
         <div class="result-panel explanations">
-          <div id="maihoa-empty" class="oracle-empty"><div class="empty-arch" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M14 13h36M14 21h14m8 0h14M14 29h36M14 37h14m8 0h14M14 45h36M14 53h14m8 0h14"/></svg></div><p class="eyebrow">MAI HOA DỊCH SỐ</p><h2>Một câu hỏi.<br />Những chuyển động mới.</h2><p>Chọn chủ đề và gửi gắm điều bạn đang muốn hiểu.</p></div>
+          <div id="maihoa-empty" class="oracle-empty">
+            <div class="empty-arch" aria-hidden="true">
+              <svg
+                viewBox="0 0 64 64"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+              >
+                <path
+                  d="M14 13h36M14 21h14m8 0h14M14 29h36M14 37h14m8 0h14M14 45h36M14 53h14m8 0h14"
+                />
+              </svg>
+            </div>
+            <p class="eyebrow">MAI HOA DỊCH SỐ</p>
+            <h2>Một câu hỏi.<br />Những chuyển động mới.</h2>
+            <p>Chọn chủ đề và gửi gắm điều bạn đang muốn hiểu.</p>
+          </div>
           <div
             id="maihoa-result"
             role="region"
@@ -557,7 +657,9 @@
         </div>
       </section>
       <section id="coins-workspace" hidden aria-labelledby="coins-heading">
-        <div class="date-workspace grid grid-cols-1 items-start gap-5 desk:grid-cols-[310px_minmax(0,1fr)] wide:grid-cols-[346px_minmax(0,1fr)] wide:gap-6">
+        <div
+          class="date-workspace grid grid-cols-1 items-start gap-5 desk:grid-cols-[310px_minmax(0,1fr)] wide:grid-cols-[346px_minmax(0,1fr)] wide:gap-6"
+        >
           <div class="panel">
             <form autocomplete="off" id="coins-form">
               <h2 id="coins-heading">Gieo 3 đồng · Lục Hào</h2>
@@ -586,35 +688,8 @@
                 ></textarea>
               </label>
               <div id="coins-intent" hidden></div>
-              <label
-                >Cách gieo<select id="coins-source">
-                  <option value="RANDOM">
-                    Gieo tự động · 6 lượt
-                  </option>
-                  <option value="MANUAL">Nhập 6 lượt đã gieo thật</option>
-                </select></label
-              >
-              <fieldset id="coins-manual" hidden>
-                <legend>Kết quả từ dưới lên · Lưng = 3, chữ = 2</legend>
-                <div id="coins-manual-rows"></div>
-              </fieldset>
-              <label
-                >Ngày giờ gieo (Giờ Việt Nam)<select id="coins-time-mode">
-                  <option value="CURRENT">Hiện tại</option>
-                  <option value="CUSTOM">Thời điểm tùy chọn</option>
-                </select></label
-              >
-              <label id="coins-custom-field" hidden
-                >Ngày giờ cụ thể<input
-                  id="coins-custom-time"
-                  title="Giờ Việt Nam"
-                  type="datetime-local"
-                  step="1"
-                  min="2024-01-01T00:00"
-                  max="2030-12-31T23:59:59"
-              /></label>
               <button id="coins-submit" type="submit">
-                Gieo 3 đồng × 6 lượt <span aria-hidden="true">↗</span></button
+                Gieo và lập quẻ</button
               ><button id="coins-retry" type="button" class="secondary" hidden>
                 Thử lại cùng phiên
               </button>
@@ -637,7 +712,14 @@
             ></div>
           </div>
         </div>
+      </section>
+      <section
+        id="library-workspace"
+        hidden
+        aria-labelledby="coins-library-title"
+      >
         <section
+          id="library-catalog-panel"
           class="panel coins-library"
           aria-labelledby="coins-library-title"
         >
@@ -645,6 +727,7 @@
             <div>
               <p class="eyebrow">THƯ VIỆN KINH DỊCH</p>
               <h2 id="coins-library-title">Khám phá 64 quẻ</h2>
+              <p class="hint">Chọn một quẻ để đọc ý nghĩa và kinh văn.</p>
             </div>
             <label
               >Tìm quẻ<input
@@ -667,27 +750,38 @@
           </button>
           <div id="coins-catalog" class="coins-catalog"></div>
         </section>
+        <section id="library-detail" class="result-panel" hidden>
+          <button
+            id="library-back"
+            class="secondary library-back"
+            type="button"
+          >
+            ← Trở lại danh sách 64 quẻ
+          </button>
+          <p id="library-progress" class="hint" role="status"></p>
+          <p id="library-error" role="alert" hidden></p>
+          <button id="library-retry" class="secondary" type="button" hidden>
+            Thử tải lại quẻ
+          </button>
+          <div
+            id="library-result"
+            role="region"
+            aria-labelledby="library-result-title"
+            hidden
+          ></div>
+        </section>
       </section>
       <section
         id="bazi-workspace"
         class="date-workspace grid grid-cols-1 items-start gap-5 desk:grid-cols-[310px_minmax(0,1fr)] wide:grid-cols-[346px_minmax(0,1fr)] wide:gap-6"
-        hidden
         aria-labelledby="bazi-heading"
       >
         <div class="panel">
           <form autocomplete="off" id="bazi-form">
             <p class="eyebrow">BÁT TỰ · TỨ TRỤ</p>
-            <h2 id="bazi-heading">Đọc mệnh cục của bạn</h2>
+            <h2 id="bazi-heading">Đọc lá số theo điều bạn muốn biết</h2>
             <label
-              >Tên gọi<input
-                id="bazi-name"
-                type="text"
-                maxlength="80"
-                autocomplete="off"
-                placeholder="Tùy chọn"
-            /></label>
-            <label
-              >Ngày giờ sinh (Giờ Việt Nam)<input
+              >Ngày giờ sinh dương lịch (Giờ Việt Nam)<input
                 id="bazi-birth"
                 title="Giờ Việt Nam"
                 type="datetime-local"
@@ -696,6 +790,12 @@
                 max="2026-12-31T23:59:59"
                 required
             /></label>
+            <div class="bazi-birth-options">
+              <label>Giới tính dùng để tính vận<select id="bazi-gender">
+                <option value="male">Nam</option><option value="female">Nữ</option>
+              </select></label>
+              <label>Năm xem Lưu niên<input id="bazi-year" type="number" min="1950" max="2150" value="2026" required /></label>
+            </div>
             <label
               >Chủ đề muốn xem<select id="bazi-topic">
                 <option value="GENERAL">Tổng quan</option>
@@ -726,7 +826,7 @@
               /></label>
             </details>
             <button id="bazi-submit" type="submit">
-              Lập lá số &amp; luận giải <span aria-hidden="true">↗</span>
+              Xem luận giải <span aria-hidden="true">↗</span>
             </button>
             <button id="bazi-retry" type="button" class="secondary" hidden>
               Thử lại cùng yêu cầu
@@ -734,15 +834,20 @@
             <p id="bazi-progress" role="status" aria-live="polite"></p>
             <p id="bazi-error" role="alert" hidden></p>
           </form>
+          <details id="bazi-history" class="bazi-history">
+            <summary>Lịch sử tư vấn</summary>
+            <p class="hint">Giữ tối đa 5 lá số trong phiên này. Tải lại hoặc đóng trang sẽ xóa lịch sử.</p>
+            <div id="bazi-history-list"><p>Chưa có lá số trong phiên này.</p></div>
+          </details>
         </div>
         <div class="result-panel bazi-result-panel">
           <div id="bazi-empty" class="bazi-empty">
             <div class="bazi-mark" aria-hidden="true">命</div>
-            <p class="eyebrow">BỐN TRỤ · MỘT MỆNH CỤC</p>
-            <h2>Đọc những lực đang tạo nên thế cân bằng.</h2>
+            <p class="eyebrow">BÁT TỰ · LỜI GIẢI DỄ HIỂU</p>
+            <h2>Hiểu kết quả, biết điều cần cân nhắc.</h2>
             <p>
-              Khám phá Nhật chủ, nguyệt lệnh và các quan hệ trong lá số sinh của
-              bạn.
+              Chọn một chủ đề để đọc ý chính và gợi ý có thể tự kiểm tra trong
+              cuộc sống.
             </p>
           </div>
           <div
@@ -753,8 +858,15 @@
           ></div>
         </div>
       </section>
-      <p class="hint privacy-note">Ứng dụng không lưu phiên hay lịch sử. Tải lại hoặc đóng trang sẽ mất kết quả; dùng Xuất PDF nếu bạn muốn giữ lại.</p>
-      <footer><span class="footer-brand">Arcana</span><span class="footer-rule" aria-hidden="true"></span><span>Bát Tự &amp; Kinh Dịch</span></footer>
+      <p class="hint privacy-note">
+        Kết quả và lịch sử chỉ giữ trong bộ nhớ của trang. Tải lại hoặc đóng trang sẽ mất kết
+        quả; dùng Xuất PDF nếu bạn muốn giữ lại.
+      </p>
+      <footer>
+        <span class="footer-brand">Arcana</span
+        ><span class="footer-rule" aria-hidden="true"></span
+        ><span>Bát Tự &amp; Kinh Dịch</span>
+      </footer>
     </main>
   </body>
 </html>

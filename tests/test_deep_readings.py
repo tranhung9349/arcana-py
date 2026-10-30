@@ -149,6 +149,8 @@ class DeepReadingTests(unittest.TestCase):
                 row.update(stem=STEMS[gan],stem_zh=STEMS_ZH[gan],branch=BRANCHES[zhi],branch_zh=BRANCHES_ZH[zhi])
             reading=self.repository.explain(saved)['readings']['bazi']
             self.assertEqual(reading['facts']['reason_code'],code)
-            self.assertIn(REASONS[code][0],[section['title'] for section in reading['sections']])
+            reason = next(e for e in reading['evidence'] if e['evidence_id'] == 'rules:reason')
+            self.assertEqual((reason['title'], reason['text']), REASONS[code])
+            self.assertTrue(any('rules:reason' in section['references'] for section in reading['sections']))
             if seen==set(REASONS):break
         self.assertEqual(seen,set(REASONS))

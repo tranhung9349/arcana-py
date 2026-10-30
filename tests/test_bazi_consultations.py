@@ -20,6 +20,7 @@ from randomyst.bazi_facts import chart_from_birth, facts_for, stem_fact, ten_god
 from randomyst.bazi_models import BaziRequest, BaziResponse, BaziReadingRequest, BaziReadingSnapshot, NatalChart
 from randomyst.bazi_rules import BaziRules, digest
 from randomyst.bazi_service import BaziService
+from randomyst.bazi_narrative import compose, NARRATIVE_VERSION
 from randomyst.engine import EngineError
 from randomyst.sampling import GENERATES, CONTROLS, ELEMENTS
 from randomyst.time_engine import STEMS_ZH, BRANCHES, BRANCHES_ZH
@@ -47,11 +48,13 @@ class BaziConsultationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.service = BaziService()
+        cls.legacy_rules = BaziRules()
 
     def assess(self, gans, zhis):
         chart = synthetic_chart(gans, zhis)
         facts = facts_for(chart, self.service.rules.config["tables"])
-        assessment, findings = self.service.rules.evaluate(chart, facts)
+        # Keep archived rule regressions separate from the new Tinix service.
+        assessment, findings = self.legacy_rules.evaluate(chart, facts)
         return chart, facts, assessment, {f.finding_id: f for f in findings}
 
     def test_ten_gods_all_100_pairs_against_independent_five_element_polarity_formula(self):
@@ -156,6 +159,32 @@ class BaziConsultationTests(unittest.TestCase):
             self.assertEqual(second["reading"]["question"],"<script>ghi chú</script>")
             BaziResponse.model_validate(second)
         self.assertEqual(p["question"],"")
+
+    def test_plain_takeaway_and_actions_cover_strength_states_without_personality_claims(self):
+        summaries = []
+        for gans, zhis, state in (([0,2,0,8],[2,2,4,0],"STRONG"),
+                                  ([0,2,6,8],[2,0,3,11],"WEAK"),
+                                  ([0,8,0,6],[2,9,4,6],"MIXED")):
+            chart, facts, assessment, by_id = self.assess(gans, zhis)
+            self.assertEqual(assessment.strength, state)
+            findings = list(by_id.values())
+            before = [value.model_dump() for value in (chart, facts, assessment, *findings)]
+            actions = set()
+            for topic in ("GENERAL", "CAREER", "WEALTH", "STUDY", "RELATIONSHIPS"):
+                reading = compose(chart, facts, assessment, findings, topic, "Câu hỏi đang mở")
+                self.assertEqual(reading.narrative_version, NARRATIVE_VERSION)
+                self.assertEqual(reading.question, "Câu hỏi đang mở")
+                takeaway = reading.summary + " " + reading.sections[0].text + " " + reading.sections[1].text
+                self.assertNotRegex(takeaway, r"Nhật chủ|Thập Thần|tàng can|phù ức|Điều hậu|sinh xuất|nguyệt lệnh|khí thế")
+                self.assertLessEqual(len(takeaway.split()), 130)
+                self.assertEqual(reading.sections[0].title, "Bạn có thể làm gì?")
+                self.assertIn("không phải dự báo", reading.sections[1].text)
+                self.assertTrue(all(set(section.finding_refs) <= by_id.keys() for section in reading.sections))
+                actions.add(reading.sections[0].text)
+            self.assertEqual(len(actions), 5)
+            summaries.append(reading.summary)
+            self.assertEqual([value.model_dump() for value in (chart, facts, assessment, *findings)], before)
+        self.assertEqual(len(set(summaries)), 3)
 
     def test_uncertainty_crossing_real_boundaries_is_rejected_without_silent_hour_choice(self):
         p=payload("2026-02-04T03:02:08+07:00");p["birth"]["clock_uncertainty_seconds"]=1

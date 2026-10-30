@@ -1,5 +1,11 @@
 # Luận giải AI dùng chung — 26/10/2026
 
+Cập nhật 29/10/2026: giao diện theo dõi tác vụ nền qua SSE và tự nối lại cùng
+tác vụ khi mất kết nối. LLM trả streaming; bài luận chỉ hiện sau khi kiểm tra.
+Xem [luồng streaming, cache RAM và giới hạn vận hành](ai_streaming_handoff.md).
+
+Cập nhật 28/10/2026: **Bát Tự sinh mới dùng Structural Analyst → Life Interpreter**, bản phân tích có cấu trúc giữ riêng, bài dành cho người đọc nhắm 700–1.000 từ. Hai tầng cùng model cấu hình hiện hành, mỗi tầng tối đa một lượt sửa; [hợp đồng, cache và phạm vi kiểm tra](bazi_two_stage_handoff.md). Mai Hoa/Lục Hào/Tra ngày giữ bố cục **Ý chính → Bạn có thể làm gì? → Cần lưu ý** và tối đa 300 từ. [Thay đổi chung](plain_reading_handoff.md), [bố cục Bát Tự](bazi_plain_reading_handoff.md). Các mục mô tả prompt Bát Tự một tầng và SQLite bên dưới ghi lại giai đoạn cũ; runtime public hiện dùng RAM như README.
+
 Cập nhật 27/10/2026: runtime dùng `plain-vietnamese-2026-10-27-v4.1`, 24 cặp mẫu, 29 trích đoạn/quy ước và bộ chọn trọng tâm theo trạng thái, chủ đề, mục đích câu hỏi. [Nghiên cứu mới và giới hạn đánh giá](research/masters_reading_dynamic_v4.md), [prompt](prompts/plain_vietnamese_v4.md). Kiểm thử hiện tại: 193 Python và 10 JavaScript đạt. Các số liệu cuối tài liệu về lần chạy 26/10 được giữ như lịch sử kiểm chứng.
 
 Kiểm tra thật và hiệu đính v4: [báo cáo](research/ai_readings_v4_http_smoke.json), [nhận xét biên tập và điểm còn yếu](research/ai_readings_v4_editorial_review.json). Adapter Lục Hào chỉ đưa các hào liên quan tới bài phân tích vào context, viết rõ chiều quan hệ đã lưu và thêm tín hiệu tóm tắt trạng thái Thế/điều kiện ứng kỳ để chọn cách trình bày. Giới hạn trả lời 12.000 token sau một ca v4 bị cắt ở 8.000; phản hồi bị cắt vẫn bị chặn, không hiển thị hoặc tự gọi lại.
@@ -13,7 +19,7 @@ Kiểm tra thật và hiệu đính v4: [báo cáo](research/ai_readings_v4_http
 - `RANDOMYST_AI_BASE_URL`: địa chỉ tới `/v1`, chưa gồm `/chat/completions`.
 - `RANDOMYST_AI_MODEL`: model do người dùng chọn.
 - `RANDOMYST_AI_API_KEY`: chỉ ở backend.
-- `RANDOMYST_AI_TIMEOUT_SECONDS`: mặc định 55, cho phép 5–90 giây.
+- `RANDOMYST_AI_TIMEOUT_SECONDS`: mặc định 55, cho phép 5–180 giây; cấu hình mẫu hiện tại là 180. Đây là timeout kết nối/đọc im lặng, không phải thời gian tối đa của cả bài luận streaming.
 
 Chạy như trước bằng `./scripts/run_mvp.sh`. Cấu hình đổi cần khởi động lại. Không ghi khóa vào JavaScript, HTML, SQLite, kết quả API hoặc tài liệu. Kết nối HTTPS kiểm chứng chứng chỉ; không chuyển tiếp Authorization theo redirect. Không có endpoint cho trình duyệt đổi URL hoặc gửi API key.
 

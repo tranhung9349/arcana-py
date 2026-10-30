@@ -101,7 +101,7 @@ class PublicSecurityTests(unittest.TestCase):
         first=self.client.post('/api/v1/ai/readings',json=request)
         self.assertEqual(first.status_code,200,first.text)
         self.assertEqual(self.client.post('/api/v1/ai/readings',json=request).json(),first.json())
-        self.assertEqual(self.fake.calls,1)
+        self.assertEqual(self.fake.calls,2)
         other=create_app(self.path,CONFIG,FakeAI(),self.config)
         with TestClient(other) as restarted:
             self.assertIsNone(restarted.post('/api/v1/ai/readings/lookup',json=request).json())

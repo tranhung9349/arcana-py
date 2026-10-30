@@ -1,0 +1,764 @@
+{
+  "$defs": {
+    "Basis": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 1200,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "fact_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "minItems": 1,
+          "title": "Fact Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "fact_refs",
+        "evidence_refs"
+      ],
+      "title": "Basis",
+      "type": "object"
+    },
+    "Condition": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^P0[1-5]-C0[1-5]$",
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 600,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "Condition",
+      "type": "object"
+    },
+    "Manifestation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^P0[1-5]-M0[1-5]$",
+          "title": "Id",
+          "type": "string"
+        },
+        "domain": {
+          "enum": [
+            "LEARNING",
+            "DECISIONS",
+            "ACTION",
+            "PRESSURE",
+            "WORK",
+            "COOPERATION",
+            "FINANCES",
+            "RELATIONSHIPS",
+            "ADAPTATION"
+          ],
+          "title": "Domain",
+          "type": "string"
+        },
+        "hypothesis": {
+          "maxLength": 800,
+          "minLength": 1,
+          "title": "Hypothesis",
+          "type": "string"
+        },
+        "everyday_example": {
+          "maxLength": 800,
+          "minLength": 1,
+          "title": "Everyday Example",
+          "type": "string"
+        },
+        "upside": {
+          "maxLength": 600,
+          "minLength": 1,
+          "title": "Upside",
+          "type": "string"
+        },
+        "downside": {
+          "maxLength": 600,
+          "minLength": 1,
+          "title": "Downside",
+          "type": "string"
+        },
+        "status": {
+          "const": "TRADITIONAL_HYPOTHESIS",
+          "default": "TRADITIONAL_HYPOTHESIS",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "domain",
+        "hypothesis",
+        "everyday_example",
+        "upside",
+        "downside"
+      ],
+      "title": "Manifestation",
+      "type": "object"
+    },
+    "PatternLimit": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^P0[1-5]-L0[1-5]$",
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 600,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "PatternLimit",
+      "type": "object"
+    },
+    "PatternRelationship": {
+      "additionalProperties": false,
+      "properties": {
+        "pattern_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "minItems": 2,
+          "title": "Pattern Ids",
+          "type": "array"
+        },
+        "kind": {
+          "enum": [
+            "SUPPORTS",
+            "TENSION",
+            "MODERATES",
+            "CONDITIONAL"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "explanation": {
+          "maxLength": 1200,
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "conditions": {
+          "maxLength": 800,
+          "minLength": 1,
+          "title": "Conditions",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pattern_ids",
+        "kind",
+        "explanation",
+        "conditions"
+      ],
+      "title": "PatternRelationship",
+      "type": "object"
+    },
+    "PortraitArea": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "SUPPORTED",
+            "LIMITED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 2400,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "opportunity": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Opportunity",
+          "type": "string"
+        },
+        "challenge": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Challenge",
+          "type": "string"
+        },
+        "condition": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Condition",
+          "type": "string"
+        },
+        "limit": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Limit",
+          "type": "string"
+        },
+        "fact_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "minItems": 2,
+          "title": "Fact Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "area": {
+          "enum": [
+            "CAREER",
+            "FINANCES",
+            "RELATIONSHIPS"
+          ],
+          "title": "Area",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "text",
+        "opportunity",
+        "challenge",
+        "condition",
+        "limit",
+        "fact_refs",
+        "evidence_refs",
+        "area"
+      ],
+      "title": "PortraitArea",
+      "type": "object"
+    },
+    "PortraitClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "SUPPORTED",
+            "LIMITED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 2400,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "opportunity": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Opportunity",
+          "type": "string"
+        },
+        "challenge": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Challenge",
+          "type": "string"
+        },
+        "condition": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Condition",
+          "type": "string"
+        },
+        "limit": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Limit",
+          "type": "string"
+        },
+        "fact_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "minItems": 2,
+          "title": "Fact Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "text",
+        "opportunity",
+        "challenge",
+        "condition",
+        "limit",
+        "fact_refs",
+        "evidence_refs"
+      ],
+      "title": "PortraitClaim",
+      "type": "object"
+    },
+    "PortraitPeriod": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "cycle_indices": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Cycle Indices",
+          "type": "array"
+        },
+        "start_year": {
+          "title": "Start Year",
+          "type": "integer"
+        },
+        "end_year": {
+          "title": "End Year",
+          "type": "integer"
+        },
+        "start_age": {
+          "title": "Start Age",
+          "type": "integer"
+        },
+        "end_age": {
+          "title": "End Age",
+          "type": "integer"
+        },
+        "status": {
+          "enum": [
+            "SUPPORTED",
+            "LIMITED"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 2400,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "opportunity": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Opportunity",
+          "type": "string"
+        },
+        "challenge": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Challenge",
+          "type": "string"
+        },
+        "condition": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Condition",
+          "type": "string"
+        },
+        "limit": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Limit",
+          "type": "string"
+        },
+        "fact_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20,
+          "minItems": 2,
+          "title": "Fact Refs",
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "cycle_indices",
+        "start_year",
+        "end_year",
+        "start_age",
+        "end_age",
+        "status",
+        "text",
+        "opportunity",
+        "challenge",
+        "condition",
+        "limit",
+        "fact_refs",
+        "evidence_refs"
+      ],
+      "title": "PortraitPeriod",
+      "type": "object"
+    },
+    "StructuralPattern": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^P0[1-5]$",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 150,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "thesis": {
+          "maxLength": 1200,
+          "minLength": 1,
+          "title": "Thesis",
+          "type": "string"
+        },
+        "basis": {
+          "items": {
+            "$ref": "#/$defs/Basis"
+          },
+          "maxItems": 6,
+          "minItems": 2,
+          "title": "Basis",
+          "type": "array"
+        },
+        "mechanism": {
+          "maxLength": 1600,
+          "minLength": 1,
+          "title": "Mechanism",
+          "type": "string"
+        },
+        "manifestations": {
+          "items": {
+            "$ref": "#/$defs/Manifestation"
+          },
+          "maxItems": 5,
+          "title": "Manifestations",
+          "type": "array"
+        },
+        "conditions": {
+          "items": {
+            "$ref": "#/$defs/Condition"
+          },
+          "maxItems": 5,
+          "minItems": 1,
+          "title": "Conditions",
+          "type": "array"
+        },
+        "limits": {
+          "items": {
+            "$ref": "#/$defs/PatternLimit"
+          },
+          "maxItems": 5,
+          "minItems": 1,
+          "title": "Limits",
+          "type": "array"
+        },
+        "counter_evidence": {
+          "maxLength": 1200,
+          "minLength": 1,
+          "title": "Counter Evidence",
+          "type": "string"
+        },
+        "alternative_explanation": {
+          "maxLength": 1200,
+          "minLength": 1,
+          "title": "Alternative Explanation",
+          "type": "string"
+        },
+        "argument_strength": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW"
+          ],
+          "title": "Argument Strength",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "thesis",
+        "basis",
+        "mechanism",
+        "manifestations",
+        "conditions",
+        "limits",
+        "counter_evidence",
+        "alternative_explanation",
+        "argument_strength"
+      ],
+      "title": "StructuralPattern",
+      "type": "object"
+    },
+    "Synthesis": {
+      "additionalProperties": false,
+      "properties": {
+        "central_theme": {
+          "maxLength": 1500,
+          "minLength": 1,
+          "title": "Central Theme",
+          "type": "string"
+        },
+        "key_tendencies": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "title": "Key Tendencies",
+          "type": "array"
+        },
+        "favorable_conditions": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "title": "Favorable Conditions",
+          "type": "array"
+        },
+        "unfavorable_conditions": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "title": "Unfavorable Conditions",
+          "type": "array"
+        },
+        "unresolved": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Unresolved",
+          "type": "array"
+        }
+      },
+      "required": [
+        "central_theme",
+        "key_tendencies",
+        "favorable_conditions",
+        "unfavorable_conditions",
+        "unresolved"
+      ],
+      "title": "Synthesis",
+      "type": "object"
+    },
+    "WholeLifeAnalysis": {
+      "additionalProperties": false,
+      "properties": {
+        "overview": {
+          "$ref": "#/$defs/PortraitClaim"
+        },
+        "areas": {
+          "items": {
+            "$ref": "#/$defs/PortraitArea"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Areas",
+          "type": "array"
+        },
+        "periods": {
+          "items": {
+            "$ref": "#/$defs/PortraitPeriod"
+          },
+          "maxItems": 3,
+          "title": "Periods",
+          "type": "array"
+        },
+        "timing_status": {
+          "enum": [
+            "AVAILABLE",
+            "NOT_AVAILABLE"
+          ],
+          "title": "Timing Status",
+          "type": "string"
+        },
+        "timing_note": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Timing Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "overview",
+        "areas",
+        "periods",
+        "timing_status",
+        "timing_note"
+      ],
+      "title": "WholeLifeAnalysis",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "bazi-structural-analysis-v1",
+      "default": "bazi-structural-analysis-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "context_id": {
+      "title": "Context Id",
+      "type": "string"
+    },
+    "topic": {
+      "title": "Topic",
+      "type": "string"
+    },
+    "question": {
+      "title": "Question",
+      "type": "string"
+    },
+    "sufficiency": {
+      "enum": [
+        "SUFFICIENT",
+        "LIMITED",
+        "INSUFFICIENT"
+      ],
+      "title": "Sufficiency",
+      "type": "string"
+    },
+    "technical_overview": {
+      "$ref": "#/$defs/Basis"
+    },
+    "patterns": {
+      "items": {
+        "$ref": "#/$defs/StructuralPattern"
+      },
+      "maxItems": 5,
+      "title": "Patterns",
+      "type": "array"
+    },
+    "relationships": {
+      "items": {
+        "$ref": "#/$defs/PatternRelationship"
+      },
+      "maxItems": 10,
+      "title": "Relationships",
+      "type": "array"
+    },
+    "synthesis": {
+      "$ref": "#/$defs/Synthesis"
+    },
+    "source_limitations": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Source Limitations",
+      "type": "array"
+    },
+    "whole_life": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/WholeLifeAnalysis"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "verified_structure": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Verified Structure"
+    }
+  },
+  "required": [
+    "context_id",
+    "topic",
+    "question",
+    "sufficiency",
+    "technical_overview",
+    "patterns",
+    "relationships",
+    "synthesis",
+    "source_limitations"
+  ],
+  "title": "StructuralAnalysis",
+  "type": "object"
+}

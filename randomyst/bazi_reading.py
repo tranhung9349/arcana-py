@@ -36,7 +36,7 @@ STRUCTURES = {
 
 
 class BaziInterpreter:
-    version = "bazi-reading-2026-10-26-v1"
+    version = "bazi-reading-2026-10-28-v2"
 
     def interpret(self, draw, source_reading):
         b = draw["trace"]["bazi"]
@@ -55,32 +55,35 @@ class BaziInterpreter:
                      "text": " · ".join(draw["numbers"]) + "; hành ưu tiên: " + primary}]
         evidence.extend({"evidence_id": card["evidence_id"], "kind": "SOURCE_ORIGINAL", "title": card["title"],
                          "text": card["text"], "url": card["source"]["url"]} for card in source_reading["cards"])
-        month_support = (f"Hành tháng sinh nằm trong nhóm cùng hành hoặc sinh {day_element}, nên được tính là có trợ lực theo tháng."
-                         if b["month_support"] else f"Hành tháng sinh không thuộc nhóm cùng hành hoặc sinh {day_element}, nên lá số không được tính là có trợ lực theo tháng.")
+        month_support = ("Mùa sinh được tính là một dấu hiệu hỗ trợ trong phép đối chiếu này."
+                         if b["month_support"] else "Mùa sinh không được tính là dấu hiệu hỗ trợ trong phép đối chiếu này.")
         reason = REASONS.get(b["reason_code"])
         reason_title, reason_text = reason or ("Lựa chọn được lưu trong lá số", "Phiên đã lưu chọn hành " + calculated + ". Chưa có lời diễn giải riêng khớp nhánh tính này.")
+        evidence.append({"evidence_id": "rules:reason", "kind": "IMPLEMENTATION_RULE", "title": reason_title,
+                         "text": reason_text, "url": evidence[1]["url"]})
         structure_refs = [card["evidence_id"] for card in source_reading["cards"] if card["text_type"] == "BAZI_STRUCTURE"]
         structure_text = STRUCTURES.get(b["structure"]) if structure_refs else None
         sections = [
-            {"title": "Nhật chủ và mùa sinh", "text": f"Nhật chủ {day['stem']} mang hành {day_element}, là điểm quy chiếu để đọc các quan hệ trong lá số. Bạn sinh tháng {month['branch']}, thuộc mùa {source_reading['birth_season']}; hành của tháng là {month_element}. " + month_support,
+            {"title": "Hồ sơ sinh được dùng thế nào?", "text": f"Ký hiệu ngày sinh {day['stem']} {day_element} được lấy làm điểm so với các phần còn lại của lá số. " + month_support + " Các ký hiệu này không tự mô tả tính cách hay năng lực của bạn.",
              "references": ["facts:bazi", "rules:bazi"]},
-            {"title": reason_title, "text": b["strength"] + ". " + reason_text + f" Dụng Thần được tính cho lá số này là {calculated}.",
-             "references": ["facts:bazi", "rules:bazi"]},
-            {"title": "Cách cục nói lên điều gì?", "text": b["structure"] + ". " + (structure_text or "Tập nguồn hiện chưa có mục khớp chính xác tên cách cục này, nên chưa diễn giải sâu thêm về cách cục."),
+            {"title": "Vì sao bộ số ưu tiên yếu tố này?", "text": f"Phép đối chiếu hồ sơ sinh chọn {calculated} làm yếu tố ưu tiên khi chấm bộ số. Đây là quy tắc chọn số của phiên gieo, chưa phải hướng dẫn chọn nghề, màu sắc hay vật phẩm.",
+             "references": ["facts:bazi", "rules:bazi", "rules:reason"]},
+            {"title": "Tên phân loại có ý nghĩa gì?", "text": "Bảng tra đặt tên nhóm của lá số là " + b["structure"] + ". Tên này mô tả cách nhóm các ký hiệu; nó không xác nhận bạn giàu nghèo, hợp nghề nào hay sẽ gặp sự kiện gì."
+             + ("" if structure_text else " Tập nguồn chưa có mục khớp chính xác tên nhóm này để giải thích thêm."),
              "references": ["facts:bazi", *structure_refs]},
-            {"title": "Hành ưu tiên, hành hỗ trợ và hành cần tiết chế",
-             "text": "Trong phép đọc lá số: Dụng Thần là nhóm được ưu tiên, Hỷ là nhóm hỗ trợ, Kỵ là nhóm cần tiết chế. Lá số này có Dụng: " + ", ".join(b["dung_than"]) + "; Hỷ: " + ", ".join(b["hy_than"]) + "; Kỵ: " + ", ".join(b["ky_than"]) + ". Những tên gọi này nói về quan hệ ngũ hành, không phải phán xét tốt xấu về con người.",
+            {"title": "Các yếu tố được dùng khi chọn số",
+             "text": "Ưu tiên: " + ", ".join(b["dung_than"]) + ". Hỗ trợ: " + ", ".join(b["hy_than"]) + ". Cần tiết chế: " + ", ".join(b["ky_than"]) + ". Đây là cách đối chiếu các nhóm số, không phải phán xét tốt xấu về con người.",
              "references": ["facts:bazi", "rules:bazi"]},
         ]
         if b["overridden"]:
             sections.append({"title": "Lựa chọn riêng cho phiên gieo", "text": f"Lá số tính ra hành {calculated}, còn bạn chọn {primary} làm hành ưu tiên cho bộ số. Phần luận lá số vẫn theo kết quả đã tính; phần giải thích bộ số dùng lựa chọn {primary} của bạn.", "references": ["facts:bazi", "facts:numbers"]})
         supportive = [n for n in draw["numbers"] if element_of(int(n)) == primary or GENERATES[element_of(int(n))] == primary]
-        link = (f"Các số {' · '.join(supportive)} cùng hành hoặc sinh hành {primary}, tạo phần liên hệ trực tiếp với trục ưu tiên của hồ sơ."
-                if supportive else f"Bộ này không có số cùng hành hoặc sinh hành {primary}; cần đọc thêm quan hệ với hành Thể của quẻ để hiểu tổng điểm.")
+        link = (f"Các số {' · '.join(supportive)} được xếp cùng nhóm hoặc nhóm hỗ trợ {primary}, nên có liên quan trực tiếp đến yếu tố được ưu tiên khi chọn số."
+                if supportive else f"Bộ này không có số thuộc nhóm {primary} hoặc nhóm hỗ trợ nó; điểm còn phụ thuộc các tiêu chí khác của phiên gieo.")
         sections.append({"title": "Lá số liên hệ với bộ số như thế nào?", "text": link + " Bộ số được xét đồng thời với lá số sinh và quẻ tại thời điểm gieo, nên không chỉ có một hành hiện diện.", "references": ["facts:numbers", "rules:bazi"]})
         return ModuleReading.model_validate({
-            "module": "BAZI", "version": self.version, "title": f"Nhật chủ {day['stem']} · trục cân bằng {calculated}",
-            "summary": f"Lá số {b['structure']}, thuộc nhóm {b['strength']}. {reason_title}: hành {calculated} là lựa chọn được tính từ thế lá số sinh.",
+            "module": "BAZI", "version": self.version, "title": "Hồ sơ sinh liên quan gì đến bộ số?",
+            "summary": f"Hồ sơ sinh được dùng để chọn {calculated} làm yếu tố ưu tiên khi chấm số. Kết quả này giải thích cách bộ số được chọn; chưa cho biết khả năng trúng hoặc vận may của bạn.",
             "sections": sections, "evidence": evidence,
             "facts": {"reason_code": b["reason_code"], "day_element": day_element, "birth_month_branch": month["branch"],
                       "birth_season": source_reading["birth_season"], "primary_calculated": calculated, "primary_used": primary,

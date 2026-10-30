@@ -63,6 +63,66 @@
       "title": "BalanceDirection",
       "type": "object"
     },
+    "BaziEngineResult": {
+      "additionalProperties": false,
+      "properties": {
+        "repository": {
+          "const": "vhphuoc1102/tinix-bazi",
+          "default": "vhphuoc1102/tinix-bazi",
+          "title": "Repository",
+          "type": "string"
+        },
+        "commit": {
+          "const": "80ff4463d0397c1b11db76f38d880255f55558bc",
+          "title": "Commit",
+          "type": "string"
+        },
+        "adapter_version": {
+          "title": "Adapter Version",
+          "type": "string"
+        },
+        "gender": {
+          "enum": [
+            "male",
+            "female"
+          ],
+          "title": "Gender",
+          "type": "string"
+        },
+        "target_year": {
+          "maximum": 2150,
+          "minimum": 1950,
+          "title": "Target Year",
+          "type": "integer"
+        },
+        "input_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Input Sha256",
+          "type": "string"
+        },
+        "result_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Result Sha256",
+          "type": "string"
+        },
+        "result": {
+          "additionalProperties": true,
+          "title": "Result",
+          "type": "object"
+        }
+      },
+      "required": [
+        "commit",
+        "adapter_version",
+        "gender",
+        "target_year",
+        "input_sha256",
+        "result_sha256",
+        "result"
+      ],
+      "title": "BaziEngineResult",
+      "type": "object"
+    },
     "BaziEvidence": {
       "additionalProperties": false,
       "properties": {
@@ -948,6 +1008,17 @@
       },
       "title": "Coverage",
       "type": "array"
+    },
+    "engine": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/BaziEngineResult"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
     },
     "model_called": {
       "const": false,

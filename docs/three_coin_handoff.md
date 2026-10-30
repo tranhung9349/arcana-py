@@ -1,5 +1,13 @@
 # Bàn giao gieo ba đồng · Lục Hào
 
+**30/10/2026 · giao diện tối giản:** form chỉ còn chủ đề, câu hỏi và nút **Gieo và lập quẻ**. Cố định `RANDOM` + `CURRENT`, thời điểm gửi đúng offset `+07:00`; retry giữ nguyên request ID và thời điểm. Hiển thị đủ 6 lượt tiền, quẻ chủ/biến và hào động trước lời luận AI. Bỏ hai mục “Xem căn cứ của lời giải”/“Thông tin bài luận” khỏi bài Lục Hào; bảng chuyên môn còn trong mục tham khảo đóng mặc định. API/snapshot lịch sử vẫn đọc được dữ kiện gieo tay, không đổi quẻ cũ.
+
+**30/10/2026 · v4.5:** request LLM gửi đủ quẻ đã gieo, lịch/bàn hào và nguyên văn nguồn đúng quẻ; system prompt Lục Hào riêng. Đã kiểm payload HTTP và chạy thật qua rexapf.com. [Chi tiết](liuyao_plain_reading_handoff.md).
+
+**30/10/2026:** bài dễ hiểu tự chạy sau khi lập quẻ, trả lời và giải thích ngắn đứng trước phần chuyên môn; kinh văn/bảng quẻ thu gọn. Prompt Lục Hào v4.4 tách các ý hỏi và giữ rõ giới hạn thời gian. [Chi tiết và kiểm tra](liuyao_plain_reading_handoff.md).
+
+**28/10/2026:** bảng tra cứu 64 quẻ chuyển sang submenu **Thư viện 64 quẻ** trong Kinh Dịch, có trang đọc kinh văn riêng. Tra cứu không thay nội dung phiên gieo đang mở. [Chi tiết và kiểm chứng](iching_library_handoff.md).
+
 Đã chọn phép **3 đồng × 6 lượt**, `BACK=3`, `INSCRIPTION=2`, từ dưới lên; phương pháp duy nhất của tính năng này. [Nghiên cứu và nguồn](research/three_coin_liuyao_research.md).
 
 Tab **Gieo 3 đồng · Lục Hào** có gieo tự động, nhập 18 mặt của sáu lượt gieo thật, thời điểm hiện tại/tùy chọn, quẻ chủ/biến, đủ hào động, bàn Nạp Giáp cơ bản, thư viện 64 quẻ và lịch sử riêng. Mở lại giữ snapshot của cả kinh văn và phần nghĩa Việt.

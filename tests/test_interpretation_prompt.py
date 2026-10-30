@@ -21,8 +21,8 @@ class InterpretationPromptTests(unittest.TestCase):
     def setUpClass(cls):
         cls.manifest, cls.sources, cls.cases = load_pack()
 
-    def test_all_twenty_four_pairs_match_schemas_and_bound_references(self):
-        self.assertEqual(len(self.cases), 24)
+    def test_all_twenty_five_pairs_match_schemas_and_bound_references(self):
+        self.assertEqual(len(self.cases), 25)
         self.assertEqual(len(self.sources), 29)
         context_schema = json.loads((ROOT / "schemas/plain_reading_context.schema.json").read_text())
         response_schema = json.loads((ROOT / "schemas/plain_reading_response.schema.json").read_text())
@@ -127,6 +127,36 @@ class InterpretationPromptTests(unittest.TestCase):
         with patch.object(Path, "read_bytes", lambda path: read(path) + (b"changed" if path == target else b"")):
             with self.assertRaisesRegex(ValueError, "Few-shot file changed"):
                 build_messages(self.cases[0]["context"])
+
+    def test_plain_bazi_examples_and_instruction_do_not_affect_other_methods(self):
+        from randomyst.reading_display import validate_bazi_language, validate_reading_brevity
+        target = ROOT / self.manifest["method_prompts"]["BAZI_NATAL_V1"]
+        instruction = target.read_text()
+        for case in self.cases:
+            system = build_messages(case["context"])["messages"][0]["content"]
+            bazi = case["context"]["method"] == "BAZI_NATAL_V1"
+            self.assertEqual(instruction in system, bazi)
+            if bazi:
+                validate_bazi_language(validate_reading_brevity(Response.model_validate(case["response"])))
+        read = Path.read_bytes
+        with patch.object(Path, "read_bytes", lambda path: read(path) + (b"changed" if path == target else b"")):
+            with self.assertRaisesRegex(ValueError, "Few-shot file changed"):
+                build_messages(self.cases[0]["context"])
+
+    def test_plain_liuyao_examples_and_instruction_are_scoped_and_hash_bound(self):
+        from randomyst.reading_display import validate_liuyao_language, validate_reading_brevity
+        target = ROOT / self.manifest['method_prompts']['LIUYAO_NAJIA']
+        instruction = target.read_text()
+        for case in self.cases:
+            system = build_messages(case['context'])['messages'][0]['content']
+            liuyao = case['context']['method'] == 'LIUYAO_NAJIA'
+            self.assertEqual(instruction in system, liuyao)
+            if liuyao:
+                validate_liuyao_language(validate_reading_brevity(Response.model_validate(case['response'])))
+        read = Path.read_bytes
+        with patch.object(Path, 'read_bytes', lambda path: read(path) + (b'changed' if path == target else b'')):
+            with self.assertRaisesRegex(ValueError, 'Few-shot file changed'):
+                build_messages(self.cases[0]['context'])
 
     def test_v2_remains_loadable_and_new_examples_do_not_enter_its_manifest(self):
         manifest, _, cases = load_pack(ROOT / "data/interpretation/plain_v2")

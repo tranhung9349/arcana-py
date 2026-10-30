@@ -1,0 +1,109 @@
+{
+  "$defs": {
+    "PortraitAreaProse": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "enum": [
+            "L01",
+            "L02",
+            "L03"
+          ],
+          "title": "Source Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 9000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "text"
+      ],
+      "title": "PortraitAreaProse",
+      "type": "object"
+    },
+    "PortraitPeriodProse": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "V01",
+            "V02",
+            "V03"
+          ],
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 9000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "title": "PortraitPeriodProse",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "bazi-whole-life-prose-v1",
+      "default": "bazi-whole-life-prose-v1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "overview": {
+      "maxLength": 9000,
+      "minLength": 1,
+      "title": "Overview",
+      "type": "string"
+    },
+    "areas": {
+      "items": {
+        "$ref": "#/$defs/PortraitAreaProse"
+      },
+      "maxItems": 3,
+      "minItems": 3,
+      "title": "Areas",
+      "type": "array"
+    },
+    "periods": {
+      "items": {
+        "$ref": "#/$defs/PortraitPeriodProse"
+      },
+      "maxItems": 3,
+      "title": "Periods",
+      "type": "array"
+    },
+    "takeaway": {
+      "maxLength": 9000,
+      "minLength": 1,
+      "title": "Takeaway",
+      "type": "string"
+    },
+    "limit": {
+      "maxLength": 1200,
+      "minLength": 1,
+      "title": "Limit",
+      "type": "string"
+    }
+  },
+  "required": [
+    "overview",
+    "areas",
+    "periods",
+    "takeaway",
+    "limit"
+  ],
+  "title": "WholeLifeProse",
+  "type": "object"
+}

@@ -4,39 +4,15 @@
   const text = (parent, tag, value = '', cls = '') => {
     const node = document.createElement(tag); node.textContent = window.DisplayText.plain(value); node.className = cls; parent.appendChild(node); return node;
   };
-  const lineNames = {6:'Lão âm · động ×', 7:'Thiếu dương · tĩnh', 8:'Thiếu âm · tĩnh', 9:'Lão dương · động ○'};
-  const localDate = value => new Date(value).toLocaleString('vi-VN', {timeZone:'Asia/Ho_Chi_Minh'});
+  const lineNames = {6:'Âm · hào động', 7:'Dương', 8:'Âm', 9:'Dương · hào động'};
   const normalize = value => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
   let catalog = null, catalogLoading = false, pending = null, pendingAnalysisContext = null, controller = null, revision = 0, posting = false, preparing = false;
+  let referenceController=null, referenceRevision=0, referenceId=null;
   const intent = window.CoinIntent.attach({container:el('coins-intent'), topic:el('coins-topic'), question:() => el('coins-question').value, questionInput:el('coins-question'), onResolved:() => {el('coins-error').hidden = true;}});
-
-  for (let i = 1; i <= 6; i++) {
-    const row = text(el('coins-manual-rows'), 'div', '', 'coins-manual-row');
-    text(row, 'strong', 'Hào ' + i + (i === 1 ? ' · đầu' : i === 6 ? ' · trên' : ''));
-    const faces = text(row, 'div', '', 'coins-manual-faces');
-    for (let j = 1; j <= 3; j++) {
-      const label = text(faces, 'label', 'Đồng ' + j);
-      const select = text(label, 'select', ''); select.id = `coins-face-${i}-${j}`;
-      select.setAttribute('aria-label', `Hào ${i}, đồng ${j}`);
-      for (const [value, name] of [['','Chọn mặt'], ['BACK','背 Lưng · 3'], ['INSCRIPTION','字 Chữ · 2']]) {
-        const option = text(select, 'option', name); option.value = value;
-      }
-      select.addEventListener('change', () => {
-        const values = [1,2,3].map(k => el(`coins-face-${i}-${k}`).value);
-        note.textContent = values.every(Boolean) ? lineNames[values.reduce((sum, face) => sum + (face === 'BACK' ? 3 : 2), 0)] : 'Chọn đủ ba mặt';
-      });
-    }
-    const note = text(row, 'small', 'Chọn đủ ba mặt', 'hint'); note.setAttribute('aria-live', 'polite');
-  }
-  el('coins-custom-time').value = new Date(Date.now() + 7*3600000).toISOString().slice(0,19);
 
   function updateFields() {
     el('coins-question').disabled = !el('coins-topic').value;
-    const manual = el('coins-source').value === 'MANUAL'; el('coins-manual').hidden = !manual;
-    for (const select of el('coins-manual').querySelectorAll('select')) {select.disabled = !manual; select.required = manual;}
-    const custom = el('coins-time-mode').value === 'CUSTOM'; el('coins-custom-field').hidden = !custom;
-    el('coins-custom-time').required = custom;
-    el('coins-submit').textContent = manual ? 'Lập quẻ từ 6 lượt đã gieo ↗' : 'Gieo 3 đồng × 6 lượt ↗';
+    el('coins-submit').textContent = 'Gieo và lập quẻ';
   }
   function busy(value) {
     for (const field of el('coins-form').elements) field.disabled = value;
@@ -85,24 +61,38 @@
       text(tr, 'td', row.moving ? `${row.changed_stem} ${row.changed_branch} · ${row.changed_relative}` : '—');
     }
   }
-  function render(reading, session = null, analysisContext = null,autoGenerate=false) {
-    window.LiuYaoPanel.reset();
-    const parent = el('coins-result'); parent.replaceChildren(); parent.hidden = false; el('coins-empty').hidden = true;
+  function render(reading, session = null, analysisContext = null,autoGenerate=false,parent=el('coins-result')) {
+    if(session){window.LiuYaoPanel.reset();el('coins-empty').hidden = true;}
+    parent.replaceChildren(); parent.hidden = false;
     text(parent, 'p', session ? 'PHIÊN GIEO BA ĐỒNG' : 'TRA CỨU KINH VĂN · KHÔNG TẠO PHIÊN', 'eyebrow');
-    const heading = text(parent, 'h2', session ? session.question : reading.chart.name_vi); heading.id = 'coins-result-title'; heading.tabIndex = -1;
-    if (session) text(parent, 'p', localDate(session.calendar.civil_datetime) + ' · giờ Việt Nam · ' + (session.casting.source === 'MANUAL' ? 'Nhập kết quả gieo thật' : 'Gieo trên app'), 'hint');
+    const heading = text(parent, 'h2', session ? session.question : reading.chart.name_vi); heading.id = session?'coins-result-title':'library-result-title'; heading.tabIndex = -1;
+    const resultParent = parent;
+    if (session) {
+      const casting = text(parent, 'section', '', 'coins-cast-result');
+      text(casting, 'h3', '6 lượt gieo');
+      text(casting, 'p', '背 Lưng = 3 điểm · 字 Chữ = 2 điểm. Lượt đầu là hào dưới cùng.', 'hint');
+      const throws = text(casting, 'div', '', 'coins-throws');
+      for (const [i, faces] of session.casting.throws_bottom_to_top.entries()) {
+        const row = text(throws, 'article', '', 'coins-throw-card'); text(row, 'strong', 'Lượt ' + (i+1));
+        const coins = text(row, 'div', '', 'coins-throw-faces');
+        for (const face of faces) {
+          const coin = text(coins, 'span', face === 'BACK' ? '背' : '字', 'coins-face ' + (face === 'BACK' ? 'back' : 'inscription'));
+          coin.setAttribute('aria-label', face === 'BACK' ? 'Lưng, 3 điểm' : 'Chữ, 2 điểm');
+        }
+        text(row, 'small', session.casting.totals_bottom_to_top[i] + ' điểm · ' + lineNames[session.casting.totals_bottom_to_top[i]]);
+      }
+    }
     const charts = text(parent, 'div', '', 'coins-hexagrams'); hexagram(charts, reading, session ? 'Quẻ chủ' : 'Quẻ đang tra', session?.moving_lines || []);
     if (session?.changed) hexagram(charts, session.changed, 'Quẻ biến');
     if (session) {
       text(parent, 'p', session.moving_lines.length ? `Hào động: ${session.moving_lines.join(', ')}. Lật đồng thời các hào này để được quẻ biến.` : 'Sáu hào đều tĩnh · không có quẻ biến riêng.', 'coins-state');
-      const throws = text(parent, 'details', '', 'coins-throw-record'); text(throws, 'summary', 'Xem đúng 6 lượt tiền đã gieo');
-      for (const [i, faces] of session.casting.throws_bottom_to_top.entries()) {
-        const row = text(throws, 'div', '', 'coins-saved-throw'); text(row, 'strong', 'Hào ' + (i+1));
-        for (const face of faces) text(row, 'span', face === 'BACK' ? '背 3' : '字 2', 'coins-face ' + (face === 'BACK' ? 'back' : 'inscription'));
-        text(row, 'small', session.casting.totals_bottom_to_top[i] + ' · ' + lineNames[session.casting.totals_bottom_to_top[i]]);
-      }
     }
-    if (session) window.LiuYaoPanel.mount(text(parent, 'section'), session, analysisContext,{autoGenerate});
+    let analysisHost = null, referenceParent = null;
+    if (session) {
+      analysisHost = text(parent, 'section');
+      parent = referenceParent = text(parent, 'details', '', 'coins-reference');
+      text(parent, 'summary', 'Chi tiết quẻ và nguồn tham khảo');
+    }
     const overview = text(parent, 'div', '', 'coins-overview'); text(overview, 'small', 'KINH VĂN THAM KHẢO · NGHĨA VIỆT CHƯA HIỆU ĐÍNH', 'reading-label'); text(overview, 'p', reading.text.overview.text);
     evidence(parent, reading.text.cards.find(card => card.text_type === 'HEXAGRAM_TEXT'));
     if (session?.moving_lines.length) {
@@ -124,8 +114,9 @@
       for (const note of [...session.reading_guide, ...session.limitations]) text(guide, 'p', note, 'hint');
       text(guide, 'p', session.calendar.policy, 'hint'); text(guide, 'p', session.casting.convention, 'hint');
       for (const source of session.sources) {sourceLink(guide, source, source.title + ' ↗'); text(guide, 'br', '');}
+      window.LiuYaoPanel.mount(analysisHost, session, analysisContext,{autoGenerate,referenceParent});
     }
-    window.ResultPDF?.mount(parent,session?'Gieo quẻ Lục Hào':'Kinh văn quẻ');
+    window.ResultPDF?.mount(resultParent,session?'Gieo quẻ Lục Hào':'Kinh văn quẻ');
     heading.focus({preventScroll:true});
     heading.scrollIntoView({behavior:'smooth', block:'start'});
   }
@@ -138,7 +129,7 @@
       const button = text(grid, 'button', '', 'coins-catalog-card'); button.type = 'button';
       text(button, 'span', row.symbol, 'coins-symbol'); text(button, 'small', '#' + row.hexagram_id); text(button, 'strong', row.name_vi);
       button.setAttribute('aria-label', `Quẻ ${row.hexagram_id}, ${row.name_vi}`);
-      button.addEventListener('click', () => perform('reading', row.hexagram_id));
+      button.addEventListener('click', () => openReference(row.hexagram_id));
     }
   }
   async function loadCatalog() {
@@ -146,9 +137,35 @@
     catalogLoading = true; el('coins-catalog-retry').hidden = true; el('coins-catalog-status').textContent = 'Đang tải 64 quẻ…';
     try {
       const response = await window.ArcanaClient.fetch('/api/v1/coins/hexagrams', {signal:AbortSignal.timeout(15000)});
-      if (!response.ok) throw new Error(); catalog = await response.json(); filterCatalog();
-    } catch {el('coins-catalog-status').textContent = 'Chưa tải được thư viện.'; el('coins-catalog-retry').hidden = false;}
+      if (!response.ok) throw new Error();
+      const data=await response.json();
+      if(!Array.isArray(data.hexagrams) || data.hexagrams.length!==64
+        || new Set(data.hexagrams.map(row=>row.hexagram_id)).size!==64
+        || data.hexagrams.some(row=>!Number.isInteger(row.hexagram_id) || row.hexagram_id<1 || row.hexagram_id>64
+          || typeof row.name_vi!=='string' || typeof row.name_zh!=='string'))throw new Error();
+      catalog = data; filterCatalog();
+    } catch {catalog=null;el('coins-catalog-status').textContent = 'Chưa tải được thư viện.'; el('coins-catalog-retry').hidden = false;}
     finally {catalogLoading = false;}
+  }
+  async function openReference(id) {
+    referenceController?.abort();referenceController=new AbortController();const requestController=referenceController,current=++referenceRevision;
+    referenceId=id;el('library-catalog-panel').hidden=true;el('library-detail').hidden=false;el('library-result').hidden=true;
+    el('library-error').hidden=true;el('library-retry').hidden=true;el('library-progress').textContent='Đang tải kinh văn quẻ '+id+'…';
+    el('library-back').focus();const timer=setTimeout(()=>requestController.abort(),20000);
+    try {
+      const response=await window.ArcanaClient.fetch('/api/v1/coins/hexagrams/'+id,{signal:requestController.signal});
+      const data=await response.json();
+      if(current!==referenceRevision)return;
+      el('library-result').hidden=true;
+      if(!response.ok)throw window.DisplayText.responseError(data,'Chưa tải được quẻ. Bạn có thể thử lại.');
+      if(data.chart?.hexagram_id!==id)throw window.DisplayText.failure('Kinh văn không khớp quẻ đã chọn.');
+      render(data,null,null,false,el('library-result'));el('library-progress').textContent='';
+    } catch(error) {
+      if(current!==referenceRevision)return;
+      el('library-result').hidden=true;
+      el('library-error').textContent=window.DisplayText.errorMessage(error,'Chưa tải được quẻ. Bạn có thể thử lại.');
+      el('library-error').hidden=false;el('library-retry').hidden=false;el('library-progress').textContent='';
+    } finally {clearTimeout(timer);}
   }
   async function perform(kind, target) {
     if (posting && (kind === 'new' || kind === 'retry')) return;
@@ -161,23 +178,19 @@
     let payload;
     try {
       if (kind === 'new') {
-        const casting = {mode:el('coins-time-mode').value};
-        if (casting.mode === 'CURRENT') casting.clicked_at = new Date(Date.now() + 7*3600000).toISOString().slice(0,-1) + '+07:00';
-        else {let value = el('coins-custom-time').value; if (value.length === 16) value += ':00'; casting.custom_timestamp = value + '+07:00';}
-        pending = {request_id:crypto.randomUUID(), question:el('coins-question').value.trim(), source:el('coins-source').value, casting};
+        const casting = {mode:'CURRENT',clicked_at:new Date(Date.now()+7*3600000).toISOString().slice(0,-1)+'+07:00'};
+        pending = {request_id:crypto.randomUUID(), question:el('coins-question').value.trim(), source:'RANDOM', casting};
         pendingAnalysisContext = target || {topic:el('coins-topic').value};
-        if (pending.source === 'MANUAL') pending.throws_bottom_to_top = Array.from({length:6}, (_,i) => [1,2,3].map(j => el(`coins-face-${i+1}-${j}`).value));
       }
       payload = isPost ? pending : null;
-      const path = kind === 'reading' ? 'hexagrams/' + target : kind === 'saved' ? 'consultations/' + encodeURIComponent(target) : 'consultations';
+      const path = kind === 'saved' ? 'consultations/' + encodeURIComponent(target) : 'consultations';
       const options = {signal:currentController.signal};
       if (isPost) Object.assign(options, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
       const response = await window.ArcanaClient.fetch('/api/v1/coins/' + path, options); const data = await response.json();
       if (!response.ok) throw window.DisplayText.responseError(data,'Chưa tải được kết quả.');
       if (generation !== revision) return;
       if (isPost && data.request_id !== payload.request_id || kind === 'saved' && data.request_id !== target) throw window.DisplayText.failure('Kết quả không khớp phiên đang mở.');
-      if (kind === 'reading') {render(data); el('coins-progress').textContent = 'Đang tra kinh văn; không tạo phiên gieo.';}
-      else {render(data.original, data, isPost ? pendingAnalysisContext : null,isPost); el('coins-progress').textContent = 'Đã có kết quả của phiên này. Bạn có thể xuất PDF để giữ lại.';}
+      render(data.original, data, isPost ? pendingAnalysisContext : null,isPost); el('coins-progress').textContent = 'Đã có kết quả của phiên này. Bạn có thể xuất PDF để giữ lại.';
       if (isPost) pending = null;
       
     } catch (error) {
@@ -197,11 +210,13 @@
     finally {preparing = false; if (!posting) el('coins-submit').disabled = false;}
   });
   el('coins-retry').addEventListener('click', () => perform('retry'));
-  el('coins-source').addEventListener('change', updateFields);
   el('coins-topic').addEventListener('change', updateFields);
-  el('coins-time-mode').addEventListener('change', updateFields);
   el('coins-search').addEventListener('input', filterCatalog);
   el('coins-catalog-retry').addEventListener('click', loadCatalog);
-  el('show-coins').addEventListener('click', () => {loadCatalog(); });
+  el('show-library').addEventListener('click', loadCatalog);
+  el('library-retry').addEventListener('click',()=>{if(referenceId!==null)openReference(referenceId);});
+  el('library-back').addEventListener('click',()=>{
+    referenceRevision++;referenceController?.abort();el('library-detail').hidden=true;el('library-catalog-panel').hidden=false;el('coins-search').focus();
+  });
   updateFields();
 })();

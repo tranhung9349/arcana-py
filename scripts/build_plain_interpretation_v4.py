@@ -7,10 +7,15 @@ from scripts import build_plain_interpretation_data as base
 
 ROOT = base.ROOT
 PACK = ROOT / "data/interpretation/plain_v4"
-VERSION = "plain-vietnamese-2026-10-27-v4.1"
+VERSION = "plain-vietnamese-2026-10-30-v4.6"
 PROMPT = "docs/prompts/plain_vietnamese_v4.system.txt"
 PLAYBOOK = "docs/prompts/reading_playbook_v4.json"
 GUIDES = "docs/prompts/interpretation_method_guides_v3.json"
+BAZI_PROMPT = "docs/prompts/bazi_plain_language_v1.system.txt"
+BAZI_EXAMPLES = "docs/prompts/bazi_plain_examples_v1.json"
+LIUYAO_PROMPT = "docs/prompts/liuyao_plain_language_v1.system.txt"
+LIUYAO_EXAMPLES = "docs/prompts/liuyao_plain_examples_v1.json"
+LIUYAO_SYSTEM = "docs/prompts/liuyao_interpreter_v1.system.txt"
 
 
 def build():
@@ -114,6 +119,51 @@ def build():
          ("Bạn có thể kiểm tra mã hồ sơ, bước đang xử lý và mốc phản hồi được công bố; dùng chúng để theo dõi thay vì mặc định ra khỏi tuần không là đã được duyệt.", [1,2,3]),
          "Chưa quy đổi ứng kỳ hoặc xác nhận đủ điều kiện thành việc; chưa có lịch xử lý thực tế.")
 
+    case("liuyao-07-career-continuation", l, "CAREER", ["SELECTED_USE", "DAY_MONTH_MIXED"],
+         "Công việc đang làm của tôi có tiếp tục vào tháng 8 năm sau không, và còn kéo dài bao lâu?",
+         ["Hào đại diện công việc đã được chọn; tháng gieo sinh trợ nhưng ngày gieo khắc, tổng hợp MIXED.",
+          "Chỉ phân tích ngày/tháng gieo; chưa có phân tích tháng 8 năm sau hoặc thời hạn kết thúc công việc.",
+          "Chưa có quyết định nhân sự hay thời hạn công việc được xác nhận trong câu hỏi."],
+         ["ly:day", "ly:month"],
+         ("Chưa xác định được bạn có tiếp tục công việc trong tháng 8 năm sau hay không. Quẻ có cả dấu nâng đỡ và trở ngại; cũng chưa cho biết công việc còn kéo dài bao lâu.", [1,2]),
+         [("Dấu hiệu đại diện công việc đang được một phía nâng đỡ nhưng đồng thời chịu tác động cản trở từ phía khác. Hai mặt này chưa được phân định, nên chưa thể coi quẻ là dấu xác nhận giữ việc hoặc mất việc. Đây cũng chưa phải thông tin về quyết định của công ty.", [1,3]),
+          ("Các tác động vừa nêu thuộc ngày và tháng gieo quẻ. Chúng chưa mô tả riêng tháng 8 năm sau, và chưa có căn cứ quy đổi thành số tháng làm việc còn lại. Vì vậy, chưa thể chỉ ra ngày kết thúc hay khẳng định công việc sẽ kéo dài qua mốc bạn hỏi.", [2])],
+         ("Bạn có thể hỏi người phụ trách về kế hoạch công việc đến tháng 8 năm sau và mốc nào sẽ có xác nhận chính thức.", [2,3]),
+         "Chưa xác định kết quả trong tháng được hỏi hoặc thời hạn công việc.")
+
+    # Keep the old source-bound contexts, but teach plain wording in Bazi examples.
+    plain = json.loads((ROOT / BAZI_EXAMPLES).read_text())
+    for row in base.CASES:
+        if row["context"]["method"] != b:
+            continue
+        wording, response = plain[row["id"]], row["response"]
+        old = response["analysis"]
+        second = deepcopy(old[1])
+        for key in ("fact_refs", "evidence_refs"):
+            second[key] = list(dict.fromkeys(ref for claim in old[1:] for ref in claim[key]))
+        response["summary"]["text"] = wording["summary"]
+        response["analysis"] = [deepcopy(old[0]), second]
+        for claim, value in zip(response["analysis"], wording["analysis"]):
+            claim["text"] = value
+        response["practical_options"][0]["text"] = wording["action"]
+        response["limits"] = [wording["limit"]]
+
+    plain_liuyao = json.loads((ROOT / LIUYAO_EXAMPLES).read_text())
+    for row in base.CASES:
+        if row['id'] not in plain_liuyao:
+            continue
+        wording, response = plain_liuyao[row['id']], row['response']
+        old = response['analysis']
+        second = deepcopy(old[1])
+        for key in ('fact_refs', 'evidence_refs'):
+            second[key] = list(dict.fromkeys(ref for claim in old[1:] for ref in claim[key]))
+        response['summary']['text'] = wording['summary']
+        response['analysis'] = [deepcopy(old[0]), second]
+        for claim, value in zip(response['analysis'], wording['analysis']):
+            claim['text'] = value
+        response['practical_options'][0]['text'] = wording['action']
+        response['limits'] = [wording['limit']]
+
     playbook = json.loads((ROOT / PLAYBOOK).read_text())
     for row in base.CASES:
         ctx = Context.model_validate(row["context"])
@@ -142,14 +192,18 @@ def build():
     base.write(PACK / "adaptive_probes.json", probes)
     paths = {ROOT / s["raw_path"] for s in base.SOURCES if s["raw_path"]}
     paths.update(PACK / name for name in ("sources.json", "cases.json", "evals.json", "adaptive_probes.json"))
-    paths.update(ROOT / name for name in (PROMPT, PLAYBOOK, GUIDES,
+    paths.update(ROOT / name for name in (PROMPT, PLAYBOOK, GUIDES, BAZI_PROMPT, BAZI_EXAMPLES, LIUYAO_PROMPT, LIUYAO_EXAMPLES, LIUYAO_SYSTEM,
+                 "randomyst/liuyao_sources.py", "randomyst/ai_context.py", "research_tools/interpretation_prompt.py",
+                 "data/reference/manifest.json", "data/reference/open-iching/iching.json",
+                 "data/reference/open-iching/tuan.json", "data/reference/open-iching/xiang.json",
                  "research_tools/reading_strategy.py", "schemas/plain_reading_context.schema.json", "schemas/plain_reading_response.schema.json"))
     # Retain v3's provenance, including exact source metadata already pinned.
     paths.update(ROOT / item["path"] for item in json.loads((ROOT / "data/interpretation/plain_v3/manifest.json").read_text())["files"]
                  if item["path"].endswith(".source.json"))
     paths.add(ROOT / "data/reference/interpretation/dtt_chanwei.source.json")
     base.write(PACK / "manifest.json", {"version":VERSION,"system_prompt":PROMPT,"method_guides":GUIDES,
-        "reading_playbook":PLAYBOOK,"model_called":False,"review_status":"EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+        "reading_playbook":PLAYBOOK,"method_prompts":{b:BAZI_PROMPT,l:LIUYAO_PROMPT},"method_system_prompts":{l:LIUYAO_SYSTEM},
+        "model_called":False,"review_status":"EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
         "case_count":len(base.CASES),"source_count":len(base.SOURCES),"heldout_count":len(evals),"adaptive_probe_count":len(probes),
         "files":[{"path":str(p.relative_to(ROOT)),"sha256":sha256(p.read_bytes()).hexdigest()} for p in sorted(paths)]})
     print(json.dumps({"version":VERSION,"cases":len(base.CASES),"sources":len(base.SOURCES),"heldout":len(evals),"probes":len(probes),"model_called":False}))

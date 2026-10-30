@@ -21,8 +21,8 @@
   let catalog = new Map(), catalogLoading = false;
   let ichingMethod = 'coins';
   function showWorkspace(mode) {
-    const iching = mode === 'maihoa' || mode === 'coins';
-    for (const name of ['draw','dates','maihoa','coins','bazi']) {
+    const iching = ['maihoa','coins','library'].includes(mode);
+    for (const name of ['draw','dates','maihoa','coins','library','bazi']) {
       el((name === 'dates' ? 'date' : name)+'-workspace').hidden = mode !== name;
       el('show-'+name).setAttribute('aria-pressed', String(mode === name));
     }
@@ -31,7 +31,7 @@
     if (iching) ichingMethod = mode;
     if (mode === 'dates' && !query) {el('date-birth-1').value = el('birth-date').value; el('date-override-1').value = el('override').value;}
   }
-  for (const mode of ['draw','dates','maihoa','coins','bazi']) el('show-'+mode).addEventListener('click', () => showWorkspace(mode));
+  for (const mode of ['draw','dates','maihoa','coins','library','bazi']) el('show-'+mode).addEventListener('click', () => showWorkspace(mode));
   el('show-iching').addEventListener('click', () => el('show-'+ichingMethod).click());
   function updateSubjectLabels() {
     const spec = catalog.get(el('date-activity').value), two = spec?.subject_count === 2;

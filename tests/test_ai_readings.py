@@ -1,6 +1,7 @@
 """Shared AI transport, immutable input, paid-call deduplication and API coverage."""
 from concurrent.futures import ThreadPoolExecutor
 from copy import deepcopy
+from dataclasses import replace
 from io import BytesIO
 import json
 from pathlib import Path
@@ -37,11 +38,21 @@ class FakeAI:
 
     def complete(self, messages):
         self.calls += 1
-        context = json.loads(messages[-1]["content"])
+        payload = json.loads(messages[-1]["content"])
+        context = payload.get("verified_context", payload.get("analysis_result", payload))
         self.contexts.append(context)
         if self.started:
             self.started.set()
             if not self.release.wait(5): raise RuntimeError("test gate timeout")
+        if payload.get("stage") in ("BAZI_STRUCTURAL_ANALYST", "BAZI_LIFE_INTERPRETER"):
+            from tests.bazi_pipeline_fixtures import analysis_for, life_for, prose_for
+            if payload["stage"] == "BAZI_STRUCTURAL_ANALYST":
+                output = analysis_for(context, whole_life=payload.get('reading_scope')=='WHOLE_LIFE')
+                if self.malformed or (self.fail_first and self.calls == 1):
+                    output["patterns"][0]["basis"][0]["fact_refs"] = ["invented:fact"]
+            else:
+                output = prose_for(context) if context.get('whole_life') else life_for(context)
+            return output, {"model": "test-model-returned", "usage": {"total_tokens": 100}}
         claim = {"label": "AI_INTERPRETATION", "text": "Dữ kiện được giữ nguyên để giải thích theo câu hỏi.",
                  "fact_refs": [context["facts"][0]["id"]], "evidence_refs": [context["evidence"][0]["id"]]}
         output = {"schema_version": "plain-reading-response-v2", "context_id": context["context_id"],
@@ -62,6 +73,8 @@ class AITransportTests(unittest.TestCase):
             self.assertEqual(config.model, "two")
             self.assertNotIn("sentinel-secret", repr(config))
             self.assertNotIn("sentinel-secret", json.dumps(config.public_status()))
+            self.assertEqual(AIConfig.load(path, {"RANDOMYST_AI_TIMEOUT_SECONDS":"180"}).timeout,180)
+            with self.assertRaises(ValueError):AIConfig.load(path, {"RANDOMYST_AI_TIMEOUT_SECONDS":"181"})
             for url in ("http://example.test/v1", "https://key@example.test/v1", "https://example.test/v1?key=bad"):
                 with self.assertRaises(ValueError):
                     AIConfig.load(path, {"RANDOMYST_AI_BASE_URL": url})
@@ -80,6 +93,12 @@ class AITransportTests(unittest.TestCase):
         self.assertEqual(result, {"ok": True})
         self.assertEqual(metadata["usage"], {"prompt_tokens": 12, "total_tokens": 14})
         self.assertIsNone(NoRedirect().redirect_request(request, None, 302, "", {}, "https://other.test"))
+
+    def test_reasoning_effort_is_sent_only_when_configured_without_temperature(self):
+        opener=Mock();opener.open.return_value=BytesIO(json.dumps({'choices':[{'message':{'content':'{}'}}]}).encode())
+        CompatibleAIClient(replace(CONFIG,reasoning_effort='low'),opener).complete([])
+        body=json.loads(opener.open.call_args.args[0].data)
+        self.assertEqual(body['reasoning_effort'],'low');self.assertNotIn('temperature',body)
 
     def test_timeout_and_auth_errors_do_not_echo_remote_body_or_retry_uncertain_call(self):
         opener = Mock()
@@ -132,7 +151,7 @@ class AIReadingTests(unittest.TestCase):
         self.assertEqual(first.status_code, 200, first.text)
         AIReadingResult.model_validate(first.json())
         self.assertEqual(self.client.post("/api/v1/ai/readings", json=request).json(), first.json())
-        self.assertEqual(self.fake.calls, 1)
+        self.assertEqual(self.fake.calls, 2)
         self.assertEqual(self.client.get('/api/v1/bazi/consultations/'+saved['request_id']).json(), saved)
         other = FakeAI()
         with TestClient(create_app(self.path, CONFIG, other), storage=self.client.storage) as c:
@@ -151,24 +170,24 @@ class AIReadingTests(unittest.TestCase):
         self.assertEqual(self.fake.contexts[-1]["question"], "Tôi nên chú ý gì khi nhận việc?")
         other, other_request = self.natal()
         self.assertEqual(self.client.post('/api/v1/ai/readings', json={**other_request, "bazi_reading_id": reading_id}).status_code, 404)
-        self.assertEqual(self.fake.calls, 1)
+        self.assertEqual(self.fake.calls, 2)
 
     def test_actual_prompt_message_change_invalidates_cache_without_overwriting_prior_reading(self):
         _, request = self.natal()
         first = self.client.post('/api/v1/ai/readings', json=request).json()
-        from randomyst.ai_service import build_messages
+        from randomyst.ai_service import prepare_analyst
         def changed(*args, **kwargs):
-            result = build_messages(*args, **kwargs)
+            result = prepare_analyst(*args, **kwargs)
             result['messages'][0]['content'] += '\nA trusted editorial change.'
             result['messages_sha256'] = 'f' * 64
             return result
-        with patch('randomyst.ai_service.build_messages', side_effect=changed):
+        with patch('randomyst.ai_service.prepare_analyst', side_effect=changed):
             packed=self.client.enrich(request)
             self.assertIsNone(self.app.state.ai.lookup(AIReadingRequest.model_validate(packed)))
             second = self.app.state.ai.execute(AIReadingRequest.model_validate(packed))
         self.assertNotEqual(first['reading_id'], second['reading_id'])
         self.assertEqual(self.client.post('/api/v1/ai/readings/lookup', json=request).json(), first)
-        self.assertEqual(self.fake.calls, 2)
+        self.assertEqual(self.fake.calls, 4)
 
     def test_source_guidance_enriches_natal_snapshot_without_new_assessment(self):
         saved, request = self.natal()
@@ -199,10 +218,33 @@ class AIReadingTests(unittest.TestCase):
         without_assessment = deepcopy(analysis)
         without_assessment['findings'] = [f for f in without_assessment['findings'] if f['rule'] != 'WORLD_CAPACITY']
         self.assertNotIn('WORLD_CONDITIONED', liuyao_context(coin, without_assessment).signals)
-        self.assertNotIn('line:L1', {f.id for f in ctx.facts})
+        self.assertIn('line:L1', {f.id for f in ctx.facts})
         for finding in ctx.findings:
             self.assertNotIn('line:L1', finding.fact_refs)
-        self.assertEqual({f.id for f in ctx.facts if f.id.startswith('line:')}, {'line:L3','line:L4','line:L6'})
+        self.assertTrue({'line:L'+str(i) for i in range(1,7)} <= {f.id for f in ctx.facts})
+        provenance = json.loads(next(f.text for f in ctx.facts if f.id == 'reading:provenance'))
+        self.assertEqual(set(provenance['assessed_line_keys']), {'L3','L4','L6'})
+
+    def test_liuyao_career_question_keeps_casting_conditions_separate_from_future_duration(self):
+        payload = coin_payload()
+        payload['question'] = 'Tôi sẽ tiếp tục được công việc hiện tại trong tháng 12/2026 hay không và công việc của tôi sẽ kéo dài bao lâu nữa?'
+        coin = self.client.post('/api/v1/coins/consultations', json=payload).json()
+        analysis = self.client.post('/api/v1/coins/consultations/'+coin['request_id']+'/analysis', json={'topic':'CAREER', 'intent_mode':'COMBINED'}).json()
+        before = deepcopy(analysis)
+        ctx = liuyao_context(coin, analysis)
+        self.assertEqual(ctx.question, payload['question'])
+        self.assertEqual(ctx.topic, 'CAREER')
+        self.assertIn('Chưa tính riêng', next(f.text for f in ctx.facts if f.id == 'reading:time_scope'))
+        scope = next(f for f in ctx.findings if f.id == 'scope:time')
+        self.assertEqual(scope.status, 'UNRESOLVED')
+        self.assertEqual(scope.fact_refs, ['reading:time_scope'])
+        self.assertEqual(analysis, before)
+        from research_tools.interpretation_prompt import build_messages
+        messages = build_messages(ctx)['messages']
+        self.assertIn('summary phải trả lời đủ hai ý', messages[0]['content'])
+        self.assertIn('không chuyển sang tuyển dụng', messages[0]['content'])
+        self.assertIn('không đổi chúng thành', messages[0]['content'])
+        self.assertEqual(json.loads(messages[-1]['content'])['question'], payload['question'])
 
     def test_maihoa_and_liuyao_adapters_preserve_methods_and_selected_focus(self):
         maihoa = self.client.post('/api/v1/maihoa/consultations', json=maihoa_payload()).json()
@@ -248,17 +290,17 @@ class AIReadingTests(unittest.TestCase):
             finally:
                 self.fake.release.set()
             first.result(timeout=5)
-        self.assertEqual(self.fake.calls, 1)
+        self.assertEqual(self.fake.calls, 2)
 
     def test_single_reference_repair_is_bounded_and_usage_is_accumulated(self):
         _,request=self.natal();self.fake.fail_first=True
         result=self.client.post('/api/v1/ai/readings',json=request)
         self.assertEqual(result.status_code,200,result.text)
-        self.assertEqual(self.fake.calls,2)
-        self.assertEqual(result.json()['generation_passes'],2)
-        self.assertEqual(result.json()['usage']['total_tokens'],200)
+        self.assertEqual(self.fake.calls,3)
+        self.assertEqual(result.json()['generation_passes'],3)
+        self.assertEqual(result.json()['usage']['total_tokens'],300)
         self.client.post('/api/v1/ai/readings',json=request).raise_for_status()
-        self.assertEqual(self.fake.calls,2)
+        self.assertEqual(self.fake.calls,3)
 
     def test_missing_or_wrong_context_rejected_before_model_call(self):
         self.assertEqual(self.client.post('/api/v1/ai/readings', json={'method':'BAZI','consultation_id':str(uuid4())}).status_code,422)

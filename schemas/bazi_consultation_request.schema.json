@@ -8,6 +8,15 @@
           "title": "Civil Datetime",
           "type": "string"
         },
+        "gender": {
+          "default": "male",
+          "enum": [
+            "male",
+            "female"
+          ],
+          "title": "Gender",
+          "type": "string"
+        },
         "clock_uncertainty_seconds": {
           "anyOf": [
             {
@@ -63,6 +72,20 @@
     },
     "birth": {
       "$ref": "#/$defs/BaziBirth"
+    },
+    "target_year": {
+      "anyOf": [
+        {
+          "maximum": 2150,
+          "minimum": 1950,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Target Year"
     }
   },
   "required": [

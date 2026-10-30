@@ -1,0 +1,56 @@
+{
+  "liuyao-01-money": {
+    "summary": "Chưa thể kết luận khoản tiền sẽ được trả hay không. Dấu hiệu đại diện khoản tiền có cả sự nâng đỡ và sức ép, còn yếu tố hỗ trợ chưa được xác nhận đủ tác dụng.",
+    "analysis": [
+      "Dấu hiệu đại diện khoản tiền được tháng gieo hỗ trợ nhưng đồng thời chịu tác động cản trở từ ngày gieo. Hai mặt cùng tồn tại và chưa có đánh giá cho phép bỏ qua một phía. Vì vậy, phần nâng đỡ chưa đủ để khẳng định tiền sẽ về.",
+      "Quẻ còn có một yếu tố có khả năng hỗ trợ, nhưng yếu tố này chưa chuyển động và chưa được xác nhận phát huy tác dụng. Có dấu hiệu hỗ trợ khác với đã giải được trở ngại. Các dữ kiện ấy cũng chưa cho biết thiện chí của người nợ hoặc ngày trả tiền."
+    ],
+    "action": "Bạn có thể xác nhận khoản trả đã được bên nợ đồng ý chưa, còn điều kiện nào chưa hoàn tất và có thời hạn bằng văn bản không.",
+    "limit": "Chưa xác định ngày nhận tiền hoặc hiệu lực của yếu tố hỗ trợ."
+  },
+  "liuyao-02-selection": {
+    "summary": "Chưa thể kết luận hồ sơ sẽ được duyệt hay không vì chưa xác định được dấu hiệu nào trong quẻ đại diện đúng hồ sơ đang hỏi. Hai dấu hiệu hiện có mang những điều kiện khác nhau.",
+    "analysis": [
+      "Một dấu hiệu được tháng gieo nâng đỡ nhưng chưa chuyển động; dấu hiệu còn lại có chuyển động nhưng chịu sức ép từ ngày gieo. Không thể ghép điểm thuận của hai dấu hiệu thành một kết quả chung, hoặc tự chọn phía có vẻ tốt hơn.",
+      "Phần cần làm rõ là đối tượng hoặc khâu hồ sơ đang được hỏi, từ đó xác định trọng tâm trên cùng quẻ. Hiện hai hướng vẫn phải được giữ riêng. Việc làm rõ này giúp đọc quẻ nhất quán, nhưng chưa phải bằng chứng hồ sơ đã được duyệt."
+    ],
+    "action": "Bạn có thể xác định rõ một hồ sơ hoặc một bước xét duyệt đang hỏi, rồi chọn lại trọng tâm trên quẻ đã gieo.",
+    "limit": "Chưa xác định dấu hiệu đại diện hồ sơ hoặc thời điểm được duyệt."
+  },
+  "liuyao-03-day-clash": {
+    "summary": "Dấu hiệu đang hỏi chưa đủ để kết luận công việc sẽ thất bại. Nó xuất hiện cùng điều kiện nâng đỡ, nên cần đọc cả hai mặt; cũng chưa thể từ đó khẳng định kết quả sẽ tốt.",
+    "analysis": [
+      "Dấu hiệu đại diện công việc được tháng gieo nâng đỡ, đồng thời gặp một tác động từ ngày gieo. Phần phân tích ghi nhận tác động này nổi lên trên nền đang được hỗ trợ. Vì vậy, không thể chỉ nhìn tác động gây xáo trộn rồi kết luận công việc hỏng.",
+      "Điều đã đọc được là ý nghĩa của dấu hiệu trong quẻ còn phụ thuộc nền hỗ trợ đi kèm. Nó chưa xác nhận kết quả tuyển chọn hoặc quyết định nhân sự. Những phần chưa phân tích thêm và thông tin thực tế về vị trí vẫn giới hạn câu trả lời."
+    ],
+    "action": "Bạn có thể đối chiếu tình trạng của vị trí và tiêu chí quyết định đã được bên phụ trách xác nhận, thay vì xem một dấu hiệu là kết quả cuối.",
+    "limit": "Chưa đủ căn cứ kết luận kết quả công việc hoặc thời điểm có quyết định."
+  },
+  "liuyao-04-document": {
+    "summary": "Quẻ có dấu nâng đỡ ở phía văn bản, nhưng phía đại diện người hỏi còn gặp trở ngại nên chưa thể kết luận thuận lợi trọn vẹn. Các dấu hiệu ấy chưa cho biết kế hoạch viết tốt hay sẽ được duyệt.",
+    "analysis": [
+      "Dấu hiệu đại diện bản kế hoạch được cả ngày và tháng gieo nâng đỡ. Quan hệ hỗ trợ cũng hướng từ dấu hiệu ấy về phía đại diện người hỏi. Đây là phần thuận đã được ghi nhận trong quẻ; nó không tương đương với việc nội dung văn bản đã được kiểm tra và đánh giá tốt.",
+      "Phía đại diện người hỏi đồng thời có biến chuyển gây cản trở, còn yếu tố hỗ trợ khác chưa được xác nhận đủ tác dụng. Vì vậy, phần thuận ở văn bản chưa xóa được trở ngại này. Quẻ cũng chưa xác nhận người hỏi đang quá tải hay thiếu người giúp; đó là những điều cần kiểm tra riêng."
+    ],
+    "action": "Bạn có thể kiểm tra nội dung kế hoạch và các điều kiện cần duy trì tới bước hoàn tất, ghi riêng điều đã xác nhận và điều còn phụ thuộc.",
+    "limit": "Chưa có nội dung văn bản hoặc căn cứ xác định kết quả và ngày được duyệt."
+  },
+  "liuyao-05-provisional": {
+    "summary": "Chưa thể xác nhận bạn sẽ nhận được khoản tiền. Dấu hiệu đang tạm dùng để xét vừa được nâng đỡ vừa chịu sức ép, và lựa chọn dấu hiệu đại diện khoản tiền cũng chưa chốt.",
+    "analysis": [
+      "Việc tạm chọn quan trọng vì những điều kiện đang đọc chỉ thuộc dấu hiệu ấy. Những dấu hiệu khác chưa được phân định nên không thể tự đổi sang phía có vẻ thuận hơn để chốt câu trả lời. Quẻ cần giữ rõ điều gì đã chọn và điều gì còn chưa chắc.",
+      "Trên dấu hiệu đang xét, ngày gieo nâng đỡ nhưng tháng gieo gây sức ép. Chưa có đánh giá cho biết bên nào lấn át hoặc trở ngại đã được giải. Đây là lý do kết quả còn để mở; việc thanh toán đã được duyệt hoặc chuyển khoản chưa vẫn cần thông tin ngoài đời."
+    ],
+    "action": "Bạn có thể xác nhận đang hỏi đúng một khoản nào, điều kiện thanh toán đã hoàn tất đến đâu và có thời hạn được bên trả tiền xác nhận chưa.",
+    "limit": "Lựa chọn dấu hiệu còn tạm thời; chưa xác định thời điểm hoặc kết quả thanh toán."
+  },
+  "liuyao-06-timing": {
+    "summary": "Chưa xác định được ngày hồ sơ có kết quả. Quẻ có một điều kiện còn chờ được làm rõ; dấu nâng đỡ hiện có chưa đủ để biến điều kiện ấy thành lời hẹn được duyệt.",
+    "analysis": [
+      "Dấu hiệu đại diện hồ sơ được tháng gieo nâng đỡ, nhưng đồng thời có điều kiện còn chờ để phát huy tác dụng. Giữ cả hai giúp tránh kết luận hồ sơ không tồn tại hoặc đã hoàn tất. Phần phân tích mới chỉ ghi điều kiện để theo dõi, chưa xác nhận kết quả.",
+      "Điều kiện ấy chưa được quy đổi thành một ngày cụ thể và chưa có đánh giá đủ để kết luận việc thành. Vì vậy, không thể lấy nó làm lịch đơn vị tiếp nhận sẽ trả lời. Thời điểm thực tế vẫn cần đối chiếu với bước xử lý và lịch phản hồi đã được xác nhận."
+    ],
+    "action": "Bạn có thể kiểm tra mã hồ sơ, bước đang xử lý và mốc phản hồi được công bố; dùng những thông tin đó để theo dõi kết quả.",
+    "limit": "Chưa quy đổi được thời điểm hoặc có lịch xử lý thực tế."
+  }
+}

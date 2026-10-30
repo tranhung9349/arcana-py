@@ -30,7 +30,7 @@
         for(const caution of reading.cautions)add(details,'p',caution);
         if(data.result.evaluation_mode==='DAY_ONLY')add(output,'p','Đã xét ngày; chưa chọn giờ đẹp cho việc này.','hint');
         const panel=add(output,'section');
-        ai=window.AIReading.mount(panel,{method:'DATE',consultation_id:data.request_id},{title:'Luận sâu về ngày đã chọn',emptyText:'Nối các căn cứ chọn ngày với việc bạn đang chuẩn bị.'});
+        ai=window.AIReading.mount(panel,{method:'DATE',consultation_id:data.request_id},{title:'Ngày này có phù hợp với việc của bạn?',emptyText:'Đọc kết luận ngắn và việc cần chuẩn bị cho ngày đã chọn.'});
         window.ResultPDF?.mount(parent,'Tra ngày '+search.date_range.start+' · '+data.result.activity_name);
         onLoad(data);
       } catch(error) {

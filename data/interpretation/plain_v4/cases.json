@@ -79,7 +79,7 @@
       "context_id": "example:bazi-01-strong",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Điểm chính của lá số là phần sinh trợ cho Giáp Mộc đã nổi bật; hướng điều tiết đang được đề xuất là Hỏa, tức phần Mộc sinh ra. Có thể dùng nhận định này để suy ngẫm về cách vận dụng điều đang có, chưa đủ để chọn nghề hoặc định tính cách.",
+        "text": "Các dấu hiệu hỗ trợ trong lá số đang khá rõ, nhưng chưa đủ để nói bạn nên chọn nghề hay phát huy năng lực nào. Bạn có thể bắt đầu từ một kỹ năng mình đã có và thử dùng nó vào một việc cụ thể.",
         "fact_refs": [
           "bazi-01-strong:f1",
           "bazi-01-strong:f2",
@@ -93,7 +93,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Nhật chủ là can ngày, ở đây là Giáp Mộc, làm điểm quy chiếu cho các quan hệ. Mộc vừa được mùa sinh trợ vừa có gốc trong chi và có can cùng hành hỗ trợ. Ba dấu hiệu cùng chiều là nền cho nhận định thiên vượng đã được cung cấp; kết luận này không dựa vào việc chỉ đếm số chữ Mộc.",
+          "text": "Phần phân tích ghi nhận ba dấu hiệu cùng hướng: mùa sinh, vị trí cùng yếu tố và ký hiệu hỗ trợ. Đây là lý do lá số được đọc là có nhiều hỗ trợ; không phải bằng chứng bạn khỏe hơn, giỏi hơn hoặc chắc thành công.",
           "fact_refs": [
             "bazi-01-strong:f1",
             "bazi-01-strong:f2"
@@ -105,20 +105,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Trên nền đó, Hỏa được đề xuất vì Mộc sinh Hỏa: quan hệ này đưa phần sinh trợ sang phía được Nhật chủ sinh ra. Nhận định vì vậy nối tiếp điều đã thấy ở mùa và căn, chứ không phải khuyết hành nào thì bổ hành đó. Đề xuất vẫn có điều kiện vì phần cách cục và nóng lạnh chưa được xét đủ.",
-          "fact_refs": [
-            "bazi-01-strong:f1",
-            "bazi-01-strong:f2",
-            "bazi-01-strong:f3"
-          ],
-          "evidence_refs": [
-            "dtt:strength",
-            "dtt:month"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Đọc gộp lại, điểm đáng giữ là phân biệt được hỗ trợ với sử dụng sự hỗ trợ ấy. Nếu liên hệ với công việc, có thể lấy đây làm câu hỏi về đầu ra cụ thể sau giai đoạn chuẩn bị. Lá số chưa chứng minh bạn đang chuẩn bị quá lâu hoặc hợp nghề thuộc Hỏa; những điều đó cần đối chiếu ngoài đời.",
+          "text": "Hỏa đang là yếu tố tạm được gợi ý để cân đối lá số. Gợi ý này còn cần xem xét thêm, nên chưa thể chuyển thành một nghề, màu sắc hay món đồ phù hợp với bạn. Phần có thể thử ngoài đời cần dựa vào kỹ năng và hoàn cảnh thật.",
           "fact_refs": [
             "bazi-01-strong:f1",
             "bazi-01-strong:f2",
@@ -133,7 +120,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể chọn một việc đã chuẩn bị tương đối đủ, hoàn thành một bản thử nhỏ rồi lấy phản hồi; so kết quả với việc tiếp tục chỉ bổ sung tài liệu.",
+          "text": "Bạn có thể chọn một kỹ năng đã dùng được, làm thử một việc nhỏ có kết quả rõ và xin phản hồi để biết cần cải thiện chỗ nào.",
           "fact_refs": [
             "bazi-01-strong:f1",
             "bazi-01-strong:f2"
@@ -141,7 +128,7 @@
         }
       ],
       "limits": [
-        "Hướng phù ức còn có điều kiện; chưa phân tích vận, cách cục đầy đủ hoặc nghề nghiệp thực tế."
+        "Chưa có thông tin công việc, kinh nghiệm hoặc phân tích theo từng giai đoạn để chọn hướng đi cụ thể."
       ]
     },
     "teaches_routes": [
@@ -219,7 +206,7 @@
       "context_id": "example:bazi-02-weak",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Nếu dùng lá số để đối chiếu lựa chọn này, nên làm rõ chỗ dựa trước khi tăng yêu cầu. Nền sinh trợ đang được đánh giá là mỏng, nhưng vẫn có Ấn trong phần tàng nên không thể đọc thành hoàn toàn không có trợ lực.",
+        "text": "Lá số chưa đủ để quyết định bạn có nên nhận thêm việc. Trước khi nhận, bạn có thể kiểm tra số giờ cần bỏ ra, hạn hoàn thành và người có thể hỗ trợ.",
         "fact_refs": [
           "bazi-02-weak:f1",
           "bazi-02-weak:f2"
@@ -231,7 +218,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Thân nhược ở đây là nhận định về mức sinh trợ cho can ngày, không phải yếu sức hoặc kém năng lực. Mùa, căn và can lộ đang cùng chỉ về phía ít hỗ trợ. Bởi vậy, nhánh phù ức đề xuất sinh trợ thay vì tiếp tục làm tăng phía tiết hao.",
+          "text": "Phần phân tích thấy ít dấu hiệu hỗ trợ rõ trong lá số. Đây là mô tả các ký hiệu, không có nghĩa bạn yếu đuối hoặc không đủ năng lực làm việc.",
           "fact_refs": [
             "bazi-02-weak:f1",
             "bazi-02-weak:f2"
@@ -242,18 +229,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Tuy nhiên, Ấn là nhóm sinh cho Nhật chủ và vẫn có trong tàng can. Dữ kiện này ngăn cách đọc tuyệt đối rằng lá số không có chỗ dựa. Nó chưa đủ để đảo kết luận thành vượng, cũng chưa xác nhận ngoài đời sẽ có người hướng dẫn hoặc giúp đỡ đúng lúc.",
-          "fact_refs": [
-            "bazi-02-weak:f1",
-            "bazi-02-weak:f2"
-          ],
-          "evidence_refs": [
-            "dtt:strength"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Với việc nhận thêm nhiệm vụ, ý nghĩa có thể đem đối chiếu là yêu cầu mới phải đi cùng điều kiện thực hiện. Chỗ cần kiểm tra là mức hỗ trợ có sẵn so với phần việc tăng thêm; không lấy chữ nhược làm câu trả lời nhận hay từ chối. Quyết định cụ thể còn thiếu khối lượng, kỹ năng và thời gian thực tế.",
+          "text": "Vẫn có dấu hiệu hỗ trợ ở phần ký hiệu bên trong, nên cũng không thể nói bạn hoàn toàn không được hỗ trợ. Các vị trí này chưa cho biết ai sẽ giúp bạn hoặc bạn còn bao nhiêu thời gian. Muốn quyết định nhận việc, cần kiểm tra những điều đó ngoài đời.",
           "fact_refs": [
             "bazi-02-weak:f1",
             "bazi-02-weak:f2",
@@ -267,7 +243,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể ghi phần việc tăng thêm, số giờ có thể dành và người hỗ trợ đã xác nhận; thử một giai đoạn nhỏ trước khi cam kết toàn bộ.",
+          "text": "Bạn có thể liệt kê việc đang làm, ước tính giờ cho việc mới và xác nhận ai hỗ trợ trước khi đồng ý.",
           "fact_refs": [
             "bazi-02-weak:f1",
             "bazi-02-weak:f2",
@@ -276,7 +252,7 @@
         }
       ],
       "limits": [
-        "Lá số chưa xác định năng lực đảm nhiệm hoặc kết quả của công việc cụ thể."
+        "Chưa có mô tả nhiệm vụ, thời hạn hoặc năng lực thực tế để đánh giá khả năng nhận thêm việc."
       ]
     },
     "teaches_routes": [
@@ -364,7 +340,7 @@
       "context_id": "example:bazi-03-mixed",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Lá số có cả phần nâng đỡ lẫn phần gây sức ép, nên chưa có cơ sở gộp thành tốt hoặc xấu. Điểm cần hiểu là hai phía chưa được phân định đủ rõ để chọn hướng điều tiết.",
+        "text": "Chưa có cơ sở gọi lá số của bạn là tốt hay xấu. Các dấu hiệu đang cho hai hướng khác nhau, nên phần phân tích chưa chọn được một hướng điều chỉnh rõ ràng.",
         "fact_refs": [
           "bazi-03-mixed:f1",
           "bazi-03-mixed:f2",
@@ -378,7 +354,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Tháng sinh không nâng đỡ Nhật chủ là một bất lợi trong nhánh xem mùa, nhưng chưa phải toàn bộ lá số. Căn cùng hành trong chi và can Ấn lại bổ sung sinh trợ. Nếu chỉ lấy một phía, nhận định sẽ bỏ mất chính những dấu hiệu khiến phần phân tích giữ trạng thái đan xen.",
+          "text": "Có những ký hiệu hỗ trợ yếu tố đại diện cho bạn, đồng thời cũng có ký hiệu đối nghịch. Mùa sinh và các vị trí hỗ trợ chưa cùng một hướng. Vì vậy, không thể chỉ chọn dấu thuận hoặc dấu bất lợi rồi kết luận cho cả cuộc đời.",
           "fact_refs": [
             "bazi-03-mixed:f1",
             "bazi-03-mixed:f2"
@@ -390,20 +366,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Phía khắc Nhật chủ cũng có mặt trên can, vì vậy có gốc và có trợ lực chưa đồng nghĩa đã thiên vượng. Bộ điều kiện hiện có chưa so được hiệu lực hai phía đến mức chốt vượng hay nhược. Đan xen không có nghĩa chúng đã cân bằng hoặc triệt tiêu nhau.",
-          "fact_refs": [
-            "bazi-03-mixed:f1",
-            "bazi-03-mixed:f2",
-            "bazi-03-mixed:f3"
-          ],
-          "evidence_refs": [
-            "dtt:strength",
-            "dtt:month"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Từ đó, kết luận hợp lý là giữ việc chọn hành ở trạng thái để mở. Phần đọc được vẫn hữu ích ở chỗ xác định những lực nào cần đặt cạnh nhau; phần chưa đọc được là lực nào đủ vai trò chủ đạo. Chọn một chủ đề cụ thể sẽ giúp tập trung phân tích, nhưng không tự bổ sung được vận hoặc điều kiện còn thiếu.",
+          "text": "Phần phân tích chưa chọn yếu tố nào để ưu tiên và chưa xét diễn biến theo thời gian. Điều đó có nghĩa câu trả lời còn giới hạn, không có nghĩa bạn đang gặp vận xấu. Một việc cụ thể vẫn cần được đối chiếu bằng thông tin thực tế của việc đó.",
           "fact_refs": [
             "bazi-03-mixed:f1",
             "bazi-03-mixed:f2",
@@ -418,7 +381,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể đặt một câu hỏi cụ thể về học tập hoặc công việc, rồi đối chiếu riêng điều đang hỗ trợ và điều đang đòi hỏi thêm ở tình huống đó.",
+          "text": "Bạn có thể chọn một câu hỏi cụ thể về công việc, học tập hoặc quan hệ và ghi lại điều đang thuận, điều đang vướng để đọc tiếp.",
           "fact_refs": [
             "bazi-03-mixed:f1",
             "bazi-03-mixed:f2"
@@ -426,7 +389,7 @@
         }
       ],
       "limits": [
-        "Chưa chốt hướng phù ức hoặc có dữ kiện vận để kết luận một thời kỳ thuận nghịch."
+        "Chưa đủ dữ kiện để kết luận một giai đoạn sẽ thuận lợi hay khó khăn."
       ]
     },
     "teaches_routes": [
@@ -522,7 +485,7 @@
       "context_id": "example:bazi-04-structure",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Chính Quan đang là một hướng để khảo sát cấu trúc lá số, chưa phải kết luận bạn hợp làm quản lý. Cần phân biệt dấu hiệu hình thành một cách cục với hiệu quả của nó khi phối hợp cả bốn trụ.",
+        "text": "Chưa thể kết luận bạn hợp làm quản lý chỉ từ tên một nhóm trong lá số. Khả năng quản lý cần được kiểm tra qua kinh nghiệm giao việc, theo dõi tiến độ và giải quyết bất đồng.",
         "fact_refs": [
           "bazi-04-structure:f1",
           "bazi-04-structure:f2"
@@ -536,7 +499,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Ứng viên này xuất phát từ quan hệ giữa can ngày với tháng sinh và việc có can thấu, tức yếu tố trong chi xuất hiện trên can. Đây là lý do nó được đưa vào phần khảo sát, thay vì chỉ vì thấy chữ Quan ở đâu đó. Dữ kiện xác nhận điểm xuất phát của phép đọc, chưa xác nhận một chức vụ.",
+          "text": "Chính Quan là tên một nhóm ký hiệu trong cách đọc Bát Tự, thường được bàn cùng khuôn phép và trách nhiệm. Phần phân tích mới ghi nhận nhóm này cần được xem xét; tên gọi chưa xác nhận bạn có kỹ năng quản lý.",
           "fact_refs": [
             "bazi-04-structure:f1"
           ],
@@ -548,20 +511,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Tử Bình Chân Thuyên tiếp tục đặt vấn đề thành bại và cứu ứng sau khi tìm dụng theo tháng. Một cấu trúc có yếu tố thuận vẫn có thể kèm điều kiện làm giảm hiệu lực; muốn nói có giải cứu cũng phải có yếu tố phối hợp cụ thể. Phần này chưa được xét đủ nên trạng thái ứng viên cần giữ nguyên.",
-          "fact_refs": [
-            "bazi-04-structure:f1",
-            "bazi-04-structure:f2"
-          ],
-          "evidence_refs": [
-            "ziping:use",
-            "ziping:formation",
-            "ziping:rescue"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Liên hệ với câu hỏi nghề nghiệp, điều còn thiếu không chỉ là tên cách cục mà là bằng chứng bạn thực hiện vai trò quản lý thế nào. Có thể dùng chủ đề Quan như một gợi ý để suy ngẫm về trách nhiệm và tổ chức, nhưng khả năng phân công, xử lý xung đột và theo dõi kết quả phải được quan sát thực tế. Chưa có cơ sở suy từ một nhãn sang lời khuyên chọn nghề.",
+          "text": "Tác dụng của nhóm đó khi đặt cùng toàn bộ lá số vẫn chưa được đánh giá đủ. Cũng chưa có thông tin về việc bạn từng điều phối ai hoặc chịu trách nhiệm cho kết quả nào. Vì vậy, hiện chưa thể khuyên bạn chọn một vị trí quản lý.",
           "fact_refs": [
             "bazi-04-structure:f1",
             "bazi-04-structure:f2",
@@ -577,7 +527,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể thử điều phối một nhiệm vụ nhỏ và xin phản hồi về cách giao việc, theo dõi tiến độ; dùng kết quả đó để đánh giá lựa chọn quản lý.",
+          "text": "Bạn có thể thử phụ trách một việc nhỏ có người cùng làm, rồi xin phản hồi về cách giao việc, theo dõi tiến độ và xử lý bất đồng.",
           "fact_refs": [
             "bazi-04-structure:f1",
             "bazi-04-structure:f3"
@@ -585,7 +535,7 @@
         }
       ],
       "limits": [
-        "Chưa xác nhận thành cách, khả năng nghề nghiệp hoặc thời điểm thăng tiến."
+        "Chưa có đánh giá kỹ năng nghề nghiệp hoặc thời điểm thăng tiến."
       ]
     },
     "teaches_routes": [
@@ -673,7 +623,7 @@
       "context_id": "example:bazi-05-climate",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Hai đề xuất khác hướng vì đang xét hai vấn đề: điều tiết quan hệ sinh trợ và điều hòa nóng lạnh. Phần phân tích đã nhận diện sự khác biệt nhưng chưa đủ dữ kiện để quyết định nhánh nào cần ưu tiên.",
+        "text": "Hai đoạn gợi ý khác nhau vì đang xét hai vấn đề khác nhau. Hiện chưa đủ căn cứ chọn Hỏa hay Thủy làm hướng ưu tiên chung cho bạn.",
         "fact_refs": [
           "bazi-05-climate:f1",
           "bazi-05-climate:f2",
@@ -687,7 +637,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Thủy ở đây thuộc nhánh phù ức, tức tìm hướng điều tiết phần sinh trợ và tiết hao trong mệnh cục. Đề xuất có điều kiện nên chỉ có giá trị trong phạm vi ấy. Nó chưa nói rằng mọi mặt của lá số đều cần thêm Thủy.",
+          "text": "Một phần xem quan hệ hỗ trợ và đối nghịch giữa các yếu tố, nên tạm gợi ý Thủy. Phần còn lại xem nóng lạnh theo mùa sinh, nên gợi ý Hỏa. Hai phần chưa đưa ra một lựa chọn thống nhất.",
           "fact_refs": [
             "bazi-05-climate:f1"
           ],
@@ -698,20 +648,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Hỏa lại được gợi ý ở nhánh Điều hậu, tức xem điều kiện nóng lạnh theo mùa. Tử Bình Chân Thuyên yêu cầu phối khí hậu với phép đọc theo tháng, nên không thể bỏ nhánh này chỉ vì đã có đề xuất phù ức. Tuy vậy, gợi ý mùa của ứng dụng chưa phải một kết luận Điều hậu đầy đủ.",
-          "fact_refs": [
-            "bazi-05-climate:f1",
-            "bazi-05-climate:f2",
-            "bazi-05-climate:f3"
-          ],
-          "evidence_refs": [
-            "dtt:climate",
-            "ziping:climate"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Đọc gộp lại, sự khác hướng chính là điểm phải làm rõ trước khi chốt một hành chung. Muốn đi xa hơn cần đánh giá Điều hậu cụ thể và quan hệ với cấu trúc lá số, rồi mới so thứ tự ưu tiên. Hiện chưa có cơ sở tự lấy một bên làm đúng hoặc lấy cả hai làm đơn thuốc áp dụng ngoài đời.",
+          "text": "Gợi ý theo mùa còn sơ bộ và hai cách đối chiếu chưa được kết hợp đầy đủ. Vì vậy, chưa nên chọn một bên chỉ vì nghe thuận tai, cũng chưa thể coi cả hai là hướng dẫn chọn nghề, màu sắc hoặc vật phẩm.",
           "fact_refs": [
             "bazi-05-climate:f1",
             "bazi-05-climate:f2",
@@ -726,7 +663,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể giữ riêng hai nhận định khi đọc lại lá số và yêu cầu làm rõ điều kiện của từng nhánh trước khi cân nhắc một ứng dụng theo hành.",
+          "text": "Bạn có thể yêu cầu giải thích mỗi gợi ý đang giải quyết vấn đề gì và còn thiếu điều kiện nào trước khi áp dụng.",
           "fact_refs": [
             "bazi-05-climate:f1",
             "bazi-05-climate:f2",
@@ -735,7 +672,7 @@
         }
       ],
       "limits": [
-        "Điều hậu mới là gợi ý mùa; chưa chốt hành ưu tiên dùng chung."
+        "Chưa có kết luận chung để ưu tiên một yếu tố."
       ]
     },
     "teaches_routes": [
@@ -824,7 +761,7 @@
       "context_id": "example:bazi-06-wealth",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Chính Tài lộ cho biết nhóm quan hệ về Tài có mặt rõ trên can, chưa cho biết kiếm tiền dễ hay khó. Vì sức Nhật chủ và sự phối hợp còn để mở, chưa thể chuyển sự hiện diện này thành kết luận tài chính.",
+        "text": "Chưa thể nói bạn dễ có tiền chỉ vì một dấu hiệu trong lá số. Kết quả hiện không cho biết số tiền, nguồn thu hoặc mức ổn định của thu nhập.",
         "fact_refs": [
           "bazi-06-wealth:f1",
           "bazi-06-wealth:f2",
@@ -838,7 +775,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Tài là nhóm bị Nhật chủ khắc trong quan hệ ngũ hành; Chính Tài ở đây xuất hiện trên can năm. Điều đó xác nhận vị trí của một nhóm trong lá số. Chữ Tài tự nó không chứa số tiền, mức ổn định hoặc chi phí để có được thu nhập.",
+          "text": "Chính Tài là tên một nhóm ký hiệu, không phải số tiền bạn sẽ có. Nhóm này hiện rõ ở một vị trí của lá số; điều đó chưa cho biết bạn sẽ kiếm tiền bằng cách nào.",
           "fact_refs": [
             "bazi-06-wealth:f1",
             "bazi-06-wealth:f3"
@@ -850,20 +787,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Khi đọc Tài cần đặt nó cạnh khả năng phối hợp của toàn cục, thay vì lấy một nhãn làm đáp án. Phần sinh trợ đang có dấu trái chiều nên chưa chốt mạnh yếu; Thực Thương vẫn tồn tại trong tàng can dù không lộ trên can. Không được từ đây kết luận rằng thiếu đường tạo ra thu nhập hoặc chắc đã có chuỗi sinh Tài hữu hiệu.",
-          "fact_refs": [
-            "bazi-06-wealth:f1",
-            "bazi-06-wealth:f2",
-            "bazi-06-wealth:f3"
-          ],
-          "evidence_refs": [
-            "dtt:strength",
-            "ziping:formation"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Như vậy, phần có thể nói là lá số cung cấp một điểm để khảo sát chuyện Tài; phần chưa thể nói là điểm đó vận hành thuận đến đâu. Nếu đem vào câu hỏi đời sống, nên đối chiếu cách tạo giá trị, điều kiện nhận tiền và khoản phải bỏ ra. Các thông tin này cần được hỏi hoặc kiểm tra, không nằm sẵn trong tên Chính Tài.",
+          "text": "Các phần còn lại chưa thống nhất và chưa chọn được hướng điều chỉnh. Một nhóm ký hiệu khác vẫn có mặt ở phần bên trong; việc không hiện rõ chưa có nghĩa bạn thiếu khả năng tạo thu nhập. Muốn đánh giá một khoản thu cụ thể, cần biết điều kiện được trả và chi phí thực tế.",
           "fact_refs": [
             "bazi-06-wealth:f1",
             "bazi-06-wealth:f2",
@@ -878,7 +802,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể mô tả một nguồn thu cụ thể: việc tạo ra giá trị, điều kiện được trả và chi phí đi kèm; đối chiếu từng khâu bằng số liệu đang có.",
+          "text": "Bạn có thể ghi lại một nguồn thu: việc cần hoàn thành, điều kiện nhận tiền và chi phí phải trả; kiểm tra từng mục bằng số liệu đang có.",
           "fact_refs": [
             "bazi-06-wealth:f1",
             "bazi-06-wealth:f2",
@@ -887,7 +811,7 @@
         }
       ],
       "limits": [
-        "Chưa có Đại vận/Lưu niên và dữ liệu tài chính thực tế để bàn một thời kỳ thu nhập."
+        "Chưa có số liệu tài chính hoặc phân tích theo thời gian để dự báo thu nhập."
       ]
     },
     "teaches_routes": [
@@ -976,7 +900,7 @@
       "context_id": "example:bazi-07-study",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Điểm có thể đem đối chiếu là cách nối phần tiếp nhận kiến thức với phần tự diễn đạt và thực hành. Lá số có cả hai nhóm quan hệ này; vị trí lộ hay tàng chưa xác định bạn học theo cách nào hiệu quả nhất.",
+        "text": "Lá số chưa xác định bạn nên học theo cách nào. Bạn có thể thử đọc một phần ngắn rồi đóng tài liệu, tự giải hoặc kể lại, sau đó so mức hiểu với cách học cũ.",
         "fact_refs": [
           "bazi-07-study:f1",
           "bazi-07-study:f2",
@@ -990,7 +914,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Canh Kim là điểm quy chiếu; Thổ sinh Kim nên nhóm Ấn thuộc phía sinh trợ. Ấn xuất hiện trên can tháng khiến nó là một dữ kiện liên quan khi bàn chủ đề học. Có thể dùng hình ảnh này để suy ngẫm về phần tiếp nhận kiến thức, nhưng chưa đủ để nói bạn nhớ tốt hoặc dựa nhiều vào sách vở.",
+          "text": "Lá số có nhóm ký hiệu thường được dùng để nói về tiếp nhận kiến thức. Sự hiện diện của nó chưa chứng minh bạn nhớ tốt, học giỏi hoặc phụ thuộc vào sách vở.",
           "fact_refs": [
             "bazi-07-study:f1",
             "bazi-07-study:f3"
@@ -1002,20 +926,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Kim sinh Thủy nên Thực Thương thuộc phía được Nhật chủ sinh ra, khác vai trò sinh trợ của Ấn. Nhóm này có trong tàng can, vì vậy không phải vắng khỏi lá số. Việc chưa lộ chỉ mô tả vị trí; không chứng minh bạn khó diễn đạt, thiếu sáng tạo hoặc ít thực hành.",
-          "fact_refs": [
-            "bazi-07-study:f1",
-            "bazi-07-study:f2",
-            "bazi-07-study:f3"
-          ],
-          "evidence_refs": [
-            "dtt:month",
-            "dtt:strength"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Nối hai phần lại, câu hỏi hữu ích là điều đã tiếp nhận có được kiểm tra bằng một đầu ra tự làm hay chưa. Đây là cách ứng dụng biểu tượng vào việc học để bạn tự thử, không phải chẩn đoán một điểm yếu. Vì hướng điều tiết của mệnh cục còn để mở, kết quả bài tập và phản hồi thực tế mới giúp chọn cách học phù hợp.",
+          "text": "Nhóm ký hiệu về diễn đạt và thực hành cũng có mặt, dù nằm ở phần bên trong. Vị trí đó chưa cho biết bạn diễn đạt tốt hay kém. Vì chưa có thông tin về thói quen học, bài làm và lỗi thực tế, cách hữu ích là thử một thay đổi nhỏ rồi so kết quả.",
           "fact_refs": [
             "bazi-07-study:f1",
             "bazi-07-study:f2",
@@ -1030,7 +941,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể thử một buổi học gồm phần đọc ngắn rồi tự giải hoặc trình bày lại khi đóng tài liệu; so độ hiểu và lỗi còn mắc với cách học cũ.",
+          "text": "Bạn có thể thử hai buổi cùng một nội dung: một buổi chỉ đọc, một buổi đọc rồi tự giải; so lỗi còn mắc khi làm bài không xem tài liệu.",
           "fact_refs": [
             "bazi-07-study:f1",
             "bazi-07-study:f2",
@@ -1039,7 +950,7 @@
         }
       ],
       "limits": [
-        "Những liên hệ với thói quen học là ứng dụng hiện đại; chưa có đánh giá năng lực hoặc vận học tập."
+        "Bài tập là gợi ý để tự thử, không phải kết luận bạn đang học sai hoặc thiếu năng lực."
       ]
     },
     "teaches_routes": [
@@ -1118,7 +1029,7 @@
       "context_id": "example:bazi-08-relations",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Tổ hợp được nhận diện chưa đủ để kết luận đổ vỡ. Nó là điểm cần khảo sát trong lá số, còn hiệu lực toàn cục và tình trạng mối quan hệ đều chưa được xác định.",
+        "text": "Chưa có cơ sở kết luận tình cảm sẽ đổ vỡ. Một tổ hợp ký hiệu trong lá số không cho biết hai người đang bất đồng chuyện gì hoặc người kia nghĩ gì.",
         "fact_refs": [
           "bazi-08-relations:f1",
           "bazi-08-relations:f2",
@@ -1131,7 +1042,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Hình là tên một kiểu tổ hợp giữa các Chi, ở đây có liên quan vị trí chi ngày. Tam Mệnh Thông Hội lưu ý không cứ thấy hình là luận hung. Vì vậy, bước nhận diện tổ hợp và bước kết luận sự kiện cần được giữ tách biệt.",
+          "text": "Hình là tên một kiểu quan hệ giữa các ký hiệu, không phải lời báo chắc về chia tay hay tai họa. Phần phân tích mới nhận diện quan hệ đó, chưa đánh giá đầy đủ tác dụng của nó khi đặt cùng những phần khác.",
           "fact_refs": [
             "bazi-08-relations:f1",
             "bazi-08-relations:f2"
@@ -1142,19 +1053,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Muốn nói tổ hợp ấy tác động thế nào còn phải xét sự phối hợp và khả năng giải trong toàn cục. Phần dữ kiện hiện tại chưa hoàn tất bước đó, nên không thể tự thêm một tai họa hay một lời giải cứu. Cũng không được dùng một lá số để xác định ý định hoặc sự chung thủy của người khác.",
-          "fact_refs": [
-            "bazi-08-relations:f1",
-            "bazi-08-relations:f2",
-            "bazi-08-relations:f3"
-          ],
-          "evidence_refs": [
-            "smt:relations"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Với câu hỏi tình cảm, phần hữu ích là đưa việc đối chiếu về tình huống hai người thực sự đang gặp. Một bất đồng cụ thể có thể được làm rõ bằng thông tin trao đổi; tên tổ hợp không cho biết bất đồng đó là gì. Như vậy, lá số chưa trả lời được kết cục nhưng cũng không tạo căn cứ để mặc định một kết cục xấu.",
+          "text": "Chưa có thông tin về tình huống của hai người hoặc dữ kiện của người còn lại. Vì vậy, không thể dự đoán sự chung thủy, ý định hoặc kết cục của mối quan hệ. Nếu đang có việc vướng, câu trả lời cần bắt đầu từ chính việc hai người có thể trao đổi.",
           "fact_refs": [
             "bazi-08-relations:f1",
             "bazi-08-relations:f2",
@@ -1168,7 +1067,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Nếu đang có việc vướng, bạn có thể nêu một tình huống và điều hai người muốn thống nhất, rồi kiểm tra mức đồng thuận qua cuộc trao đổi thực tế.",
+          "text": "Bạn có thể chọn một bất đồng cụ thể, nói rõ điều mình mong muốn và hỏi người kia có thể thống nhất điều gì.",
           "fact_refs": [
             "bazi-08-relations:f2",
             "bazi-08-relations:f3"
@@ -1176,7 +1075,7 @@
         }
       ],
       "limits": [
-        "Chưa luận hợp hai lá số, cứu giải toàn cục hoặc thời điểm hôn nhân."
+        "Chưa có đánh giá hai người hoặc thời điểm kết hôn, chia tay."
       ]
     },
     "teaches_routes": [
@@ -1925,7 +1824,7 @@
       "context_id": "example:liuyao-01-money",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Khoản tiền đang có cả nền nâng đỡ lẫn sức ép, còn nguồn trợ chưa được xác nhận đủ hiệu lực. Vì vậy, phần luận chưa nghiêng thành một kết luận chắc về trả hoặc không trả.",
+        "text": "Chưa thể kết luận khoản tiền sẽ được trả hay không. Dấu hiệu đại diện khoản tiền có cả sự nâng đỡ và sức ép, còn yếu tố hỗ trợ chưa được xác nhận đủ tác dụng.",
         "fact_refs": [
           "liuyao-01-money:f1",
           "liuyao-01-money:f2",
@@ -1940,7 +1839,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Thê tài được chọn làm hào đại diện khoản tiền, nên mọi sinh khắc ở đây phải quay về đối tượng đó. Tháng sinh Dụng là một nền hỗ trợ, còn ngày khắc Dụng là điều kiện gây sức ép. Hai mặt cùng tồn tại, không được lấy một mặt để xóa mặt còn lại.",
+          "text": "Dấu hiệu đại diện khoản tiền được tháng gieo hỗ trợ nhưng đồng thời chịu tác động cản trở từ ngày gieo. Hai mặt cùng tồn tại và chưa có đánh giá cho phép bỏ qua một phía. Vì vậy, phần nâng đỡ chưa đủ để khẳng định tiền sẽ về.",
           "fact_refs": [
             "liuyao-01-money:f1",
             "liuyao-01-money:f2"
@@ -1953,21 +1852,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Nguyên thần là nhóm sinh Dụng, nhưng có tên trong quẻ chưa đồng nghĩa đã sinh trợ hữu hiệu. Ở lát cắt này, nhóm ấy còn tĩnh và phần phân tích chưa xác nhận tác dụng. Theo Tăng San, phải xét sức và điều kiện hoạt động, nên chưa thể dùng sự hiện diện này để kết luận đã được cứu.",
-          "fact_refs": [
-            "liuyao-01-money:f1",
-            "liuyao-01-money:f2",
-            "liuyao-01-money:f3"
-          ],
-          "evidence_refs": [
-            "ly:wealth",
-            "ly:month",
-            "ly:effective"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Như vậy, kết luận để mở xuất phát từ điều kiện trợ lực chưa rõ, chứ không phải quẻ không có gì để đọc. Ngoài đời, điều cần đối chiếu là khoản trả đã có xác nhận và điều kiện thực hiện hay mới chỉ là dự định. Quẻ chưa xác định thiện chí của người nợ hoặc ngày tiền về.",
+          "text": "Quẻ còn có một yếu tố có khả năng hỗ trợ, nhưng yếu tố này chưa chuyển động và chưa được xác nhận phát huy tác dụng. Có dấu hiệu hỗ trợ khác với đã giải được trở ngại. Các dữ kiện ấy cũng chưa cho biết thiện chí của người nợ hoặc ngày trả tiền.",
           "fact_refs": [
             "liuyao-01-money:f1",
             "liuyao-01-money:f2",
@@ -1984,7 +1869,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể xin một lịch trả được xác nhận, gồm khoản trả và điều kiện còn chờ; dùng thông tin ấy để kiểm tra khả năng thu tiền thực tế.",
+          "text": "Bạn có thể xác nhận khoản trả đã được bên nợ đồng ý chưa, còn điều kiện nào chưa hoàn tất và có thời hạn bằng văn bản không.",
           "fact_refs": [
             "liuyao-01-money:f2",
             "liuyao-01-money:f3",
@@ -1993,7 +1878,7 @@
         }
       ],
       "limits": [
-        "Chưa có ứng kỳ, cam kết trả tiền và đánh giá đầy đủ hiệu lực trợ lực."
+        "Chưa xác định ngày nhận tiền hoặc hiệu lực của yếu tố hỗ trợ."
       ]
     },
     "teaches_routes": [
@@ -2080,7 +1965,7 @@
       "context_id": "example:liuyao-02-selection",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Vướng mắc chính là chưa khóa được hào đại diện hồ sơ, nên chưa thể gộp thành một kết luận được duyệt hay không. Hai ứng viên phải được giữ riêng vì điều kiện hỗ trợ và động tĩnh khác nhau.",
+        "text": "Chưa thể kết luận hồ sơ sẽ được duyệt hay không vì chưa xác định được dấu hiệu nào trong quẻ đại diện đúng hồ sơ đang hỏi. Hai dấu hiệu hiện có mang những điều kiện khác nhau.",
         "fact_refs": [
           "liuyao-02-selection:f1",
           "liuyao-02-selection:f2",
@@ -2094,7 +1979,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Phụ mẫu ở câu hỏi này đại diện văn thư, không phải cha mẹ. Cả hai hào đều thuộc nhóm ấy, còn phần phân tích chưa xác định hào nào sát đối tượng cần xét. Bước chọn trọng tâm chưa xong thì nhận định về kết quả cũng phải giữ mở.",
+          "text": "Một dấu hiệu được tháng gieo nâng đỡ nhưng chưa chuyển động; dấu hiệu còn lại có chuyển động nhưng chịu sức ép từ ngày gieo. Không thể ghép điểm thuận của hai dấu hiệu thành một kết quả chung, hoặc tự chọn phía có vẻ tốt hơn.",
           "fact_refs": [
             "liuyao-02-selection:f1",
             "liuyao-02-selection:f2"
@@ -2106,23 +1991,11 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Ứng viên thứ nhất có tháng sinh nhưng đang tĩnh; ứng viên thứ hai có động nhưng gặp sức ép từ ngày. Không được ghép tháng sinh của hào đầu với động của hào sau để tạo một hào vừa vượng vừa động. Cũng chưa có căn cứ tự chọn hào có vẻ thuận hơn.",
+          "text": "Phần cần làm rõ là đối tượng hoặc khâu hồ sơ đang được hỏi, từ đó xác định trọng tâm trên cùng quẻ. Hiện hai hướng vẫn phải được giữ riêng. Việc làm rõ này giúp đọc quẻ nhất quán, nhưng chưa phải bằng chứng hồ sơ đã được duyệt.",
           "fact_refs": [
             "liuyao-02-selection:f2",
-            "liuyao-02-selection:f3"
-          ],
-          "evidence_refs": [
-            "ly:document",
-            "ly:effective"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Phần có thể đọc lúc này là hai hướng khảo sát khác nhau: một bên có nền trợ, một bên có tác động nhưng kèm điều kiện cản. Muốn đi tiếp cần xác định đối tượng hoặc khâu hồ sơ và lựa chọn trọng tâm trên cùng quẻ. Bổ sung ngữ cảnh giúp làm rõ việc hỏi, chưa tự tạo bằng chứng hồ sơ đã được duyệt.",
-          "fact_refs": [
-            "liuyao-02-selection:f1",
-            "liuyao-02-selection:f2",
-            "liuyao-02-selection:f3"
+            "liuyao-02-selection:f3",
+            "liuyao-02-selection:f1"
           ],
           "evidence_refs": [
             "ly:document",
@@ -2133,7 +2006,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể xác định đang hỏi về văn bản đã nộp hay một khâu xử lý cụ thể, rồi đối chiếu riêng từng ứng viên trước khi chọn hào trọng tâm.",
+          "text": "Bạn có thể xác định rõ một hồ sơ hoặc một bước xét duyệt đang hỏi, rồi chọn lại trọng tâm trên quẻ đã gieo.",
           "fact_refs": [
             "liuyao-02-selection:f1",
             "liuyao-02-selection:f2",
@@ -2142,7 +2015,7 @@
         }
       ],
       "limits": [
-        "Dụng thần chưa được chọn; chưa luận được kết quả chung hoặc ngày duyệt."
+        "Chưa xác định dấu hiệu đại diện hồ sơ hoặc thời điểm được duyệt."
       ]
     },
     "teaches_routes": [
@@ -2230,7 +2103,7 @@
       "context_id": "example:liuyao-03-day-clash",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Ở dữ kiện này, ngày xung chưa được đọc thành hỏng việc: hào có tháng sinh nên đang được xét theo hướng ám động. Đó là một trạng thái tác động có điều kiện, chưa phải kết luận công việc thành hay bại.",
+        "text": "Dấu hiệu đang hỏi chưa đủ để kết luận công việc sẽ thất bại. Nó xuất hiện cùng điều kiện nâng đỡ, nên cần đọc cả hai mặt; cũng chưa thể từ đó khẳng định kết quả sẽ tốt.",
         "fact_refs": [
           "liuyao-03-day-clash:f1",
           "liuyao-03-day-clash:f2",
@@ -2244,7 +2117,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Quan quỷ là hào trọng tâm cho vị trí đang hỏi, còn tháng sinh cung cấp nền nâng đỡ cho hào. Khi hào vốn tĩnh gặp ngày xung trên nền đó, phần phân tích ghi nhận ám động, tức có tác động nổi lên dù không phải hào động từ lúc gieo. Cách đọc này giữ cả nền sức lẫn tác động của ngày.",
+          "text": "Dấu hiệu đại diện công việc được tháng gieo nâng đỡ, đồng thời gặp một tác động từ ngày gieo. Phần phân tích ghi nhận tác động này nổi lên trên nền đang được hỗ trợ. Vì vậy, không thể chỉ nhìn tác động gây xáo trộn rồi kết luận công việc hỏng.",
           "fact_refs": [
             "liuyao-03-day-clash:f1",
             "liuyao-03-day-clash:f2",
@@ -2257,23 +2130,11 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Tăng San phân biệt xung hào tĩnh có sức với xung hào tĩnh suy yếu. Vì vậy, cùng chữ xung nhưng điều kiện của hào khác nhau thì ý nghĩa không giống nhau. Không được bỏ phần được tháng sinh rồi gọi đây là Nhật phá, cũng không được lật thêm hào để tạo quẻ biến.",
+          "text": "Điều đã đọc được là ý nghĩa của dấu hiệu trong quẻ còn phụ thuộc nền hỗ trợ đi kèm. Nó chưa xác nhận kết quả tuyển chọn hoặc quyết định nhân sự. Những phần chưa phân tích thêm và thông tin thực tế về vị trí vẫn giới hạn câu trả lời.",
           "fact_refs": [
             "liuyao-03-day-clash:f2",
-            "liuyao-03-day-clash:f3"
-          ],
-          "evidence_refs": [
-            "ly:day",
-            "ly:month"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Đọc gộp lại, dữ kiện hiện tại bác cách kết luận chỉ từ một chữ xung; nó chưa xác định kết quả tuyển chọn hay quyết định nhân sự. Phần tiếp theo cần là các điều kiện sinh khắc và động biến đã được phân tích thêm, cùng tình trạng thực tế của vị trí. Không nên lấy ám động làm lời hẹn chắc chắn có biến chuyển tốt.",
-          "fact_refs": [
-            "liuyao-03-day-clash:f1",
-            "liuyao-03-day-clash:f2",
-            "liuyao-03-day-clash:f3"
+            "liuyao-03-day-clash:f3",
+            "liuyao-03-day-clash:f1"
           ],
           "evidence_refs": [
             "ly:day",
@@ -2284,7 +2145,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể xác nhận vị trí đang ở bước nào và điều kiện xét chọn còn thiếu, rồi đối chiếu với phần trợ lực và cản trở đã được ghi nhận.",
+          "text": "Bạn có thể đối chiếu tình trạng của vị trí và tiêu chí quyết định đã được bên phụ trách xác nhận, thay vì xem một dấu hiệu là kết quả cuối.",
           "fact_refs": [
             "liuyao-03-day-clash:f1",
             "liuyao-03-day-clash:f2",
@@ -2293,7 +2154,7 @@
         }
       ],
       "limits": [
-        "Ám động còn ở mức sơ bộ; chưa đủ động biến và ứng kỳ để chốt kết quả công việc."
+        "Chưa đủ căn cứ kết luận kết quả công việc hoặc thời điểm có quyết định."
       ]
     },
     "teaches_routes": [
@@ -2396,7 +2257,7 @@
       "context_id": "example:liuyao-04-document",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Hào đại diện văn bản có nền sinh phù, nhưng Thế còn gặp điều kiện động biến bất lợi, nên chưa đủ để kết luận thuận trọn vẹn cho người hỏi. Quẻ chưa xác nhận chất lượng bản kế hoạch hoặc kết quả phê duyệt.",
+        "text": "Quẻ có dấu nâng đỡ ở phía văn bản, nhưng phía đại diện người hỏi còn gặp trở ngại nên chưa thể kết luận thuận lợi trọn vẹn. Các dấu hiệu ấy chưa cho biết kế hoạch viết tốt hay sẽ được duyệt.",
         "fact_refs": [
           "liuyao-04-document:f1",
           "liuyao-04-document:f2",
@@ -2412,7 +2273,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Phụ mẫu đại diện bản kế hoạch, ở đây là Mộc được tháng sinh và ngày cùng hành. Hai điều kiện đó cùng nâng đỡ Dụng trong phép luận, nên không thể nói đối tượng hoàn toàn thiếu nền. Tuy vậy, sức hào không phải kết quả đọc và kiểm tra nội dung văn bản.",
+          "text": "Dấu hiệu đại diện bản kế hoạch được cả ngày và tháng gieo nâng đỡ. Quan hệ hỗ trợ cũng hướng từ dấu hiệu ấy về phía đại diện người hỏi. Đây là phần thuận đã được ghi nhận trong quẻ; nó không tương đương với việc nội dung văn bản đã được kiểm tra và đánh giá tốt.",
           "fact_refs": [
             "liuyao-04-document:f1",
             "liuyao-04-document:f4"
@@ -2425,21 +2286,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Dụng Mộc sinh Thế Hỏa, tức chiều sinh trợ hướng từ đối tượng về phía người hỏi. Nhưng Thế đang động và bị hồi đầu khắc, nghĩa là hào biến khắc lại hào gốc. Vì thế, Dụng có hỗ trợ và Thế có điều kiện bất lợi vẫn cùng tồn tại; không được đảo thành Thế sinh Dụng hoặc nói người hỏi đang hao lực nuôi văn bản.",
-          "fact_refs": [
-            "liuyao-04-document:f1",
-            "liuyao-04-document:f2",
-            "liuyao-04-document:f3"
-          ],
-          "evidence_refs": [
-            "ly:document",
-            "ly:month",
-            "ly:effective"
-          ]
-        },
-        {
-          "label": "AI_INTERPRETATION",
-          "text": "Nối hai phần lại, chưa thể lấy Dụng được sinh phù để bỏ qua điều kiện bất lợi đã ghi nhận ở Thế. Nguyên thần có mặt nhưng còn tĩnh cũng chưa đủ xác nhận đã giải được sức ép. Khi đối chiếu thực tế, có thể kiểm tra phần việc và điều kiện cần duy trì cho tới bước hoàn tất, nhưng chưa được kết luận chắc đang quá tải hoặc thiếu người hỗ trợ.",
+          "text": "Phía đại diện người hỏi đồng thời có biến chuyển gây cản trở, còn yếu tố hỗ trợ khác chưa được xác nhận đủ tác dụng. Vì vậy, phần thuận ở văn bản chưa xóa được trở ngại này. Quẻ cũng chưa xác nhận người hỏi đang quá tải hay thiếu người giúp; đó là những điều cần kiểm tra riêng.",
           "fact_refs": [
             "liuyao-04-document:f1",
             "liuyao-04-document:f2",
@@ -2456,7 +2303,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể rà yêu cầu phê duyệt bằng văn bản, phần việc mình phải theo tới cùng và thời gian có thể cam kết; kiểm tra từng mục thay vì mặc định nội dung đã đạt.",
+          "text": "Bạn có thể kiểm tra nội dung kế hoạch và các điều kiện cần duy trì tới bước hoàn tất, ghi riêng điều đã xác nhận và điều còn phụ thuộc.",
           "fact_refs": [
             "liuyao-04-document:f1",
             "liuyao-04-document:f2",
@@ -2465,7 +2312,7 @@
         }
       ],
       "limits": [
-        "Chưa có nội dung văn bản, cứu giải đầy đủ hoặc ứng kỳ để kết luận chất lượng và ngày được duyệt."
+        "Chưa có nội dung văn bản hoặc căn cứ xác định kết quả và ngày được duyệt."
       ]
     },
     "teaches_routes": [
@@ -2795,7 +2642,7 @@
       "context_id": "example:bazi-09-priority",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Điểm cần giải trước là vì sao hai nhánh đề xuất khác hành, chứ chưa phải chọn một hành để áp dụng. Nền mạnh yếu còn có dấu trái chiều và cách cục cũng mới là ứng viên, nên chưa có kết luận hợp nhất.",
+        "text": "Hiện chưa có một gợi ý thống nhất để bạn ưu tiên. Các phần đang xét những vấn đề khác nhau và chưa đủ căn cứ ghép thành một kết luận chung.",
         "fact_refs": [
           "bazi-09-priority:f1",
           "bazi-09-priority:f2",
@@ -2810,7 +2657,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Thủy đang được gợi ý để điều tiết quan hệ sinh trợ và tiết hao; Hỏa thuộc nhánh xem nóng lạnh theo mùa. Hai nhánh xét hai điều kiện khác nhau nên không thể xem chúng như hai đáp án loại trừ nhau. Dữ kiện hiện tại mới ghi nhận sự khác hướng, chưa phân định nhánh nào có hiệu lực ưu tiên trong toàn cục.",
+          "text": "Thủy được tạm gợi ý khi so quan hệ giữa các yếu tố; Hỏa được gợi ý khi xem nóng lạnh theo mùa sinh. Hai cách xét đang trả lời hai câu hỏi khác nhau, nên chưa thể chọn một bên làm đáp án cuối.",
           "fact_refs": [
             "bazi-09-priority:f1",
             "bazi-09-priority:f2"
@@ -2823,7 +2670,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Thêm tên một cách cục chưa giải được chỗ vướng ấy. Tử Bình Chân Thuyên còn xét yếu tố phối hợp giúp cách cục thành, trong khi phần này của phiên chưa được đánh giá đầy đủ. Vì vậy, cần giữ ba câu riêng: mạnh yếu còn chưa chốt, Điều hậu mới sơ bộ, cách cục chưa xác nhận thành; không lấy một nhãn nổi bật để phủ cả ba.",
+          "text": "Các dấu hiệu về mức hỗ trợ cũng chưa thống nhất. Việc nhận diện thêm một nhóm phân loại chưa giải được sự khác biệt đó, vì tác dụng khi kết hợp toàn bộ lá số còn chưa rõ. Phần cần làm rõ là điều kiện của mỗi gợi ý, không phải thêm tên gọi.",
           "fact_refs": [
             "bazi-09-priority:f2",
             "bazi-09-priority:f3"
@@ -2838,7 +2685,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể yêu cầu mỗi đề xuất nêu rõ nó thuộc nhánh nào, đang dựa vào dữ kiện gì và còn thiếu bước nào trước khi chốt hướng dùng chung.",
+          "text": "Bạn có thể yêu cầu mỗi gợi ý nêu rõ vấn đề đang xét, căn cứ đã có và điều kiện còn thiếu trước khi chọn hướng áp dụng.",
           "fact_refs": [
             "bazi-09-priority:f1",
             "bazi-09-priority:f2",
@@ -2847,7 +2694,7 @@
         }
       ],
       "limits": [
-        "Chưa có kết luận hợp nhất phù ức, Điều hậu và thành bại cách cục."
+        "Chưa có kết luận chung giữa các cách đối chiếu."
       ]
     },
     "teaches_routes": [
@@ -2938,7 +2785,7 @@
       "context_id": "example:bazi-10-timing",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Chưa xác định được thời điểm thăng chức từ dữ kiện hiện có. Phần đã đọc được là nền sinh trợ thiên vượng và một ứng viên Chính Quan, còn cả hiệu lực cách cục lẫn diễn biến theo năm đều chưa đủ.",
+        "text": "Chưa xác định được khi nào bạn sẽ thăng chức. Dữ kiện hiện có không bao gồm lịch xét duyệt của nơi làm việc hoặc phân tích theo từng giai đoạn.",
         "fact_refs": [
           "bazi-10-timing:f1",
           "bazi-10-timing:f2",
@@ -2952,7 +2799,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Chính Quan là điểm liên quan câu hỏi công việc, nhưng ứng viên chưa có nghĩa đã thành một cấu trúc thuận. Nền Nhật chủ có sinh trợ cũng không thay thế được bước xét các điều kiện phối hợp. Vì thế, hai dữ kiện này chưa cho phép kết luận bạn sẽ được bổ nhiệm.",
+          "text": "Lá số có những dấu hiệu hỗ trợ cùng một nhóm ký hiệu thường được bàn về trách nhiệm. Những điều đó chưa chứng minh bạn sẽ được bổ nhiệm hoặc đã đáp ứng tiêu chí thăng chức.",
           "fact_refs": [
             "bazi-10-timing:f1",
             "bazi-10-timing:f2"
@@ -2964,7 +2811,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Câu hỏi có chữ năm nay không bổ sung dữ kiện vận cho lá số. Muốn bàn một thời kỳ còn cần phần vận được tính và kiểm tra, còn việc thăng chức cụ thể cần điều kiện xét duyệt ngoài đời. Phần luận hiện tại dừng ở cấu trúc mệnh cục; không đổi nhãn Quan thành một lịch hẹn.",
+          "text": "Câu hỏi về năm nay không bổ sung thông tin còn thiếu. Phần phân tích chưa xét thời gian và chưa biết quy trình ở nơi làm việc, nên không thể đưa ra tháng hoặc ngày có quyết định. Bạn có thể theo dõi bằng các mốc đã được nơi làm việc xác nhận.",
           "fact_refs": [
             "bazi-10-timing:f2",
             "bazi-10-timing:f3"
@@ -2978,7 +2825,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể đối chiếu tiêu chí và lịch đánh giá đã được nơi làm việc xác nhận, rồi tách chúng khỏi phần mệnh cục đang đọc.",
+          "text": "Bạn có thể kiểm tra tiêu chí thăng chức, lịch đánh giá và phản hồi của người phụ trách để biết điều gì còn cần hoàn thành.",
           "fact_refs": [
             "bazi-10-timing:f2",
             "bazi-10-timing:f3"
@@ -2986,7 +2833,7 @@
         }
       ],
       "limits": [
-        "Chưa có Đại vận/Lưu niên hoặc dữ kiện quy trình thăng chức để luận thời điểm."
+        "Chưa có dữ kiện để dự báo thời điểm thăng chức."
       ]
     },
     "teaches_routes": [
@@ -3379,7 +3226,7 @@
       "context_id": "example:liuyao-05-provisional",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Theo hào Tài đang tạm chọn, có dấu được ngày nâng đỡ nhưng vẫn gặp sức ép từ tháng. Vì lựa chọn Dụng chưa chốt và hai mặt còn cùng tồn tại, chưa thể xác nhận khoản tiền sẽ được nhận.",
+        "text": "Chưa thể xác nhận bạn sẽ nhận được khoản tiền. Dấu hiệu đang tạm dùng để xét vừa được nâng đỡ vừa chịu sức ép, và lựa chọn dấu hiệu đại diện khoản tiền cũng chưa chốt.",
         "fact_refs": [
           "liuyao-05-provisional:f1",
           "liuyao-05-provisional:f2",
@@ -3395,7 +3242,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Điểm cần giữ trước là chữ tạm chọn: các điều kiện sau đây thuộc L2, không tự đại diện cho mọi ứng viên. Tăng San có bàn những trường hợp không thể máy móc chọn hào có vẻ thuận hơn. Trong phiên này, chưa có kết luận phân định thì không tự đổi sang một hào khác để làm câu trả lời rõ hơn.",
+          "text": "Việc tạm chọn quan trọng vì những điều kiện đang đọc chỉ thuộc dấu hiệu ấy. Những dấu hiệu khác chưa được phân định nên không thể tự đổi sang phía có vẻ thuận hơn để chốt câu trả lời. Quẻ cần giữ rõ điều gì đã chọn và điều gì còn chưa chắc.",
           "fact_refs": [
             "liuyao-05-provisional:f1"
           ],
@@ -3408,7 +3255,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Trên đúng L2, ngày sinh trợ và tháng khắc đang chỉ về hai phía. Chưa có đánh giá cho phép nói dấu nào đã lấn hoàn toàn dấu kia hoặc có cứu ứng hữu hiệu. Phần đọc được là điều kiện của hào Tài đang xét; tiền đã được duyệt, đến hạn hay chuyển khoản chưa vẫn phải theo dữ kiện thực tế.",
+          "text": "Trên dấu hiệu đang xét, ngày gieo nâng đỡ nhưng tháng gieo gây sức ép. Chưa có đánh giá cho biết bên nào lấn át hoặc trở ngại đã được giải. Đây là lý do kết quả còn để mở; việc thanh toán đã được duyệt hoặc chuyển khoản chưa vẫn cần thông tin ngoài đời.",
           "fact_refs": [
             "liuyao-05-provisional:f2",
             "liuyao-05-provisional:f3"
@@ -3424,7 +3271,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể xác nhận đang hỏi cùng một khoản nào, điều kiện thanh toán đã hoàn thành đến đâu và có xác nhận thời hạn bằng văn bản hay chưa.",
+          "text": "Bạn có thể xác nhận đang hỏi đúng một khoản nào, điều kiện thanh toán đã hoàn tất đến đâu và có thời hạn được bên trả tiền xác nhận chưa.",
           "fact_refs": [
             "liuyao-05-provisional:f1",
             "liuyao-05-provisional:f2",
@@ -3433,7 +3280,7 @@
         }
       ],
       "limits": [
-        "Dụng mới tạm chọn; chưa có cứu giải đầy đủ, ứng kỳ hoặc xác nhận thanh toán."
+        "Lựa chọn dấu hiệu còn tạm thời; chưa xác định thời điểm hoặc kết quả thanh toán."
       ]
     },
     "teaches_routes": [
@@ -3531,7 +3378,7 @@
       "context_id": "example:liuyao-06-timing",
       "summary": {
         "label": "AI_INTERPRETATION",
-        "text": "Hiện chỉ có một điều kiện để theo dõi là hào đại diện hồ sơ ra khỏi tuần không, chưa có ngày chắc chắn có kết quả. Nền tháng sinh trợ chưa đủ biến điều kiện ấy thành lời hẹn được duyệt.",
+        "text": "Chưa xác định được ngày hồ sơ có kết quả. Quẻ có một điều kiện còn chờ được làm rõ; dấu nâng đỡ hiện có chưa đủ để biến điều kiện ấy thành lời hẹn được duyệt.",
         "fact_refs": [
           "liuyao-06-timing:f1",
           "liuyao-06-timing:f2",
@@ -3546,7 +3393,7 @@
       "analysis": [
         {
           "label": "AI_INTERPRETATION",
-          "text": "Tuần không là trạng thái của hào đã được phần phân tích ghi nhận; ở đây nó đi cùng dấu tháng sinh trợ. Giữ cả hai giúp tránh coi Không là hồ sơ không tồn tại, hoặc coi được sinh trợ là mọi việc đã hoàn tất. Finding thời điểm mới nêu một điều kiện liên quan đến trạng thái ấy.",
+          "text": "Dấu hiệu đại diện hồ sơ được tháng gieo nâng đỡ, nhưng đồng thời có điều kiện còn chờ để phát huy tác dụng. Giữ cả hai giúp tránh kết luận hồ sơ không tồn tại hoặc đã hoàn tất. Phần phân tích mới chỉ ghi điều kiện để theo dõi, chưa xác nhận kết quả.",
           "fact_refs": [
             "liuyao-06-timing:f1",
             "liuyao-06-timing:f2"
@@ -3559,7 +3406,7 @@
         },
         {
           "label": "AI_INTERPRETATION",
-          "text": "Muốn chuyển điều kiện thành một mốc cụ thể cần phép quy đổi và đánh giá thành việc tương ứng. Phiên chưa có hai phần đó, nên không tự tra ngày từ trí nhớ hoặc suy ngày đơn vị tiếp nhận sẽ phản hồi. Phần có thể đem đối chiếu lúc này là trạng thái và lịch xử lý được nơi tiếp nhận xác nhận.",
+          "text": "Điều kiện ấy chưa được quy đổi thành một ngày cụ thể và chưa có đánh giá đủ để kết luận việc thành. Vì vậy, không thể lấy nó làm lịch đơn vị tiếp nhận sẽ trả lời. Thời điểm thực tế vẫn cần đối chiếu với bước xử lý và lịch phản hồi đã được xác nhận.",
           "fact_refs": [
             "liuyao-06-timing:f2",
             "liuyao-06-timing:f3"
@@ -3574,7 +3421,7 @@
       "practical_options": [
         {
           "kind": "MODERN_APPLICATION",
-          "text": "Bạn có thể kiểm tra mã hồ sơ, bước đang xử lý và mốc phản hồi được công bố; dùng chúng để theo dõi thay vì mặc định ra khỏi tuần không là đã được duyệt.",
+          "text": "Bạn có thể kiểm tra mã hồ sơ, bước đang xử lý và mốc phản hồi được công bố; dùng những thông tin đó để theo dõi kết quả.",
           "fact_refs": [
             "liuyao-06-timing:f1",
             "liuyao-06-timing:f2",
@@ -3583,12 +3430,145 @@
         }
       ],
       "limits": [
-        "Chưa quy đổi ứng kỳ hoặc xác nhận đủ điều kiện thành việc; chưa có lịch xử lý thực tế."
+        "Chưa quy đổi được thời điểm hoặc có lịch xử lý thực tế."
       ]
     },
     "teaches_routes": [
       "liuyao-use"
     ],
     "teaches_intent": "TIMING"
+  },
+  {
+    "id": "liuyao-07-career-continuation",
+    "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
+    "case_origin": "ORIGINAL_SYNTHETIC_EXAMPLE_NOT_HISTORICAL_CASE",
+    "context": {
+      "schema_version": "plain-reading-context-v2",
+      "context_id": "example:liuyao-07-career-continuation",
+      "method": "LIUYAO_NAJIA",
+      "analysis_profile": "SYNTHETIC_TEACHING_SLICE",
+      "topic": "CAREER",
+      "question": "Công việc đang làm của tôi có tiếp tục vào tháng 8 năm sau không, và còn kéo dài bao lâu?",
+      "signals": [
+        "SELECTED_USE",
+        "DAY_MONTH_MIXED"
+      ],
+      "facts": [
+        {
+          "id": "liuyao-07-career-continuation:f1",
+          "text": "Hào đại diện công việc đã được chọn; tháng gieo sinh trợ nhưng ngày gieo khắc, tổng hợp MIXED."
+        },
+        {
+          "id": "liuyao-07-career-continuation:f2",
+          "text": "Chỉ phân tích ngày/tháng gieo; chưa có phân tích tháng 8 năm sau hoặc thời hạn kết thúc công việc."
+        },
+        {
+          "id": "liuyao-07-career-continuation:f3",
+          "text": "Chưa có quyết định nhân sự hay thời hạn công việc được xác nhận trong câu hỏi."
+        }
+      ],
+      "findings": [
+        {
+          "id": "liuyao-07-career-continuation:finding",
+          "text": "Chưa xác định được bạn có tiếp tục công việc trong tháng 8 năm sau hay không. Quẻ có cả dấu nâng đỡ và trở ngại; cũng chưa cho biết công việc còn kéo dài bao lâu.",
+          "status": "CONDITIONAL",
+          "fact_refs": [
+            "liuyao-07-career-continuation:f1",
+            "liuyao-07-career-continuation:f2"
+          ],
+          "evidence_refs": [
+            "ly:day",
+            "ly:month"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ly:month",
+          "title": "Tăng San Bốc Dịch · Nguyệt tướng",
+          "text": "月將卽是月建又爲月令。掌一月之權，司三旬之令。",
+          "sha256": "6933a79f007770c732c5dc3bb9712be0e2e4506e62b4b7196208492ca011b94d",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100331",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "ly:day",
+          "title": "Tăng San Bốc Dịch · Nhật thần",
+          "text": "沖旺相之靜爻，旣爲暗動，沖衰弱之靜爻爲日破",
+          "sha256": "6d3623a2834828ff428848f02004e0e4a04a4fd8aa45ee083674f8a2fe7a984e",
+          "url": "https://zh.wikisource.org/w/index.php?oldid=2100338",
+          "kind": "PRIMARY_TEXT"
+        },
+        {
+          "id": "editorial:scope",
+          "title": "Quy ước biên tập và phạm vi ví dụ",
+          "text": "Các ca là lát cắt dữ kiện giả định do biên tập viên soạn để dạy cách diễn đạt; không phải mệnh lệ cổ hoặc dự báo đã nghiệm. Trạng thái phân tích là đầu vào được cung cấp, không được suy ngược từ ví dụ. Các gợi ý đời sống là ứng dụng hiện đại để tự đối chiếu, không phải lời cổ thư.",
+          "sha256": "75334b22c48d4309dedbfb359c8260a6286db15de7266f6286077c53204d6bd3",
+          "url": null,
+          "kind": "PRODUCT_POLICY"
+        }
+      ],
+      "limitations": [
+        "Chưa xác định kết quả trong tháng được hỏi hoặc thời hạn công việc."
+      ]
+    },
+    "response": {
+      "schema_version": "plain-reading-response-v2",
+      "context_id": "example:liuyao-07-career-continuation",
+      "summary": {
+        "label": "AI_INTERPRETATION",
+        "text": "Chưa xác định được bạn có tiếp tục công việc trong tháng 8 năm sau hay không. Quẻ có cả dấu nâng đỡ và trở ngại; cũng chưa cho biết công việc còn kéo dài bao lâu.",
+        "fact_refs": [
+          "liuyao-07-career-continuation:f1",
+          "liuyao-07-career-continuation:f2"
+        ],
+        "evidence_refs": [
+          "ly:day",
+          "ly:month"
+        ]
+      },
+      "analysis": [
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Dấu hiệu đại diện công việc đang được một phía nâng đỡ nhưng đồng thời chịu tác động cản trở từ phía khác. Hai mặt này chưa được phân định, nên chưa thể coi quẻ là dấu xác nhận giữ việc hoặc mất việc. Đây cũng chưa phải thông tin về quyết định của công ty.",
+          "fact_refs": [
+            "liuyao-07-career-continuation:f1",
+            "liuyao-07-career-continuation:f3"
+          ],
+          "evidence_refs": [
+            "ly:day",
+            "ly:month"
+          ]
+        },
+        {
+          "label": "AI_INTERPRETATION",
+          "text": "Các tác động vừa nêu thuộc ngày và tháng gieo quẻ. Chúng chưa mô tả riêng tháng 8 năm sau, và chưa có căn cứ quy đổi thành số tháng làm việc còn lại. Vì vậy, chưa thể chỉ ra ngày kết thúc hay khẳng định công việc sẽ kéo dài qua mốc bạn hỏi.",
+          "fact_refs": [
+            "liuyao-07-career-continuation:f2"
+          ],
+          "evidence_refs": [
+            "ly:day",
+            "ly:month"
+          ]
+        }
+      ],
+      "practical_options": [
+        {
+          "kind": "MODERN_APPLICATION",
+          "text": "Bạn có thể hỏi người phụ trách về kế hoạch công việc đến tháng 8 năm sau và mốc nào sẽ có xác nhận chính thức.",
+          "fact_refs": [
+            "liuyao-07-career-continuation:f2",
+            "liuyao-07-career-continuation:f3"
+          ]
+        }
+      ],
+      "limits": [
+        "Chưa xác định kết quả trong tháng được hỏi hoặc thời hạn công việc."
+      ]
+    },
+    "teaches_routes": [
+      "liuyao-mixed"
+    ],
+    "teaches_intent": "OUTCOME"
   }
 ]

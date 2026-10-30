@@ -193,18 +193,25 @@ def build_messages(context, limit=3):
     playbook = json.loads((ROOT / manifest["reading_playbook"]).read_text()) if manifest.get("reading_playbook") else None
     plan = plan_reading(ctx, playbook) if playbook else None
     selected = select_cases(ctx, cases, limit, playbook)
-    prompt = (ROOT / manifest.get("system_prompt", "docs/prompts/plain_vietnamese_v2.system.txt")).read_text()
+    system_path = manifest.get("method_system_prompts", {}).get(ctx.method) or manifest.get("system_prompt", "docs/prompts/plain_vietnamese_v2.system.txt")
+    prompt = (ROOT / system_path).read_text()
     if manifest.get("method_guides"):
         guides = json.loads((ROOT / manifest["method_guides"]).read_text())
         guide = guides[ctx.method]
         prompt += "\nHƯỚNG DẪN ĐÚNG PHƯƠNG PHÁP CỦA PHIÊN\n" + guide["instruction"]
     if plan:
         prompt += "\n" + plan["instruction"]
+    if method_prompt := manifest.get("method_prompts", {}).get(ctx.method):
+        prompt += "\n" + (ROOT / method_prompt).read_text()
     schema = json.dumps(Response.model_json_schema(), ensure_ascii=False)
     messages = [{"role": "system", "content": prompt + "\nresponse_schema=" + schema}]
     for case in selected:
         messages += [{"role": "user", "content": json.dumps(case["context"], ensure_ascii=False)},
                      {"role": "assistant", "content": json.dumps(case["response"], ensure_ascii=False)}]
+    if ctx.method == "LIUYAO_NAJIA":
+        messages.append({"role":"user", "content":json.dumps({"allowed_reference_catalog":{
+            "context_id":ctx.context_id, "fact_refs":[f.id for f in ctx.facts],
+            "evidence_refs":[e.id for e in ctx.evidence]}},ensure_ascii=False)})
     messages.append({"role": "user", "content": ctx.model_dump_json()})
     return {"pack_version": manifest["version"], "model_called": False,
             "reading_plan": {k: v for k, v in plan.items() if k != "instruction"} if plan else None,
@@ -230,7 +237,47 @@ def bazi_context(saved):
                  "fact_refs": list(f.fact_refs), "evidence_refs": list(f.evidence_refs)} for f in saved.findings]
     # Explicit assessment facts preserve categorical states that prose alone can obscure.
     rows.append({"id": "assessment:snapshot", "text": saved.assessment.model_dump_json()})
-    signals = [saved.assessment.strength, "NATAL_ONLY"]
+    signals = [saved.assessment.strength, "HAS_LUCK_CYCLES" if saved.engine else "NATAL_ONLY"]
+    if saved.engine:
+        from randomyst.bazi_engine import excerpts
+        result = saved.engine.result
+        year, day = saved.chart.pillars[0], saved.chart.pillars[2]
+        rows.append({"id": "facts:element_identity", "text": json.dumps({
+            "year_pillar": year.stem.name + " " + year.branch,
+            "year_na_yin": result["chart"][0]["nap_am"],
+            "day_pillar": day.stem.name + " " + day.branch,
+            "day_master": {"stem": day.stem.name, "element": day.stem.element, "polarity": day.stem.polarity},
+            "distinction": "Mệnh năm sinh là nạp âm trụ năm; Nhật chủ là Thiên can ngày sinh dùng để luận Bát Tự."
+        }, ensure_ascii=False)})
+        balance = result["analysis"]["can_bang_ngu_hanh"]
+        rows += [{"id": "engine:balance", "text": json.dumps({"nhan_dinh": balance["nhan_dinh"],
+            "dieu_hau": balance["dieu_hau"], **{key: balance[key]["ngu_hanh"]
+            for key in ("dung_than", "hy_than", "ky_than")}}, ensure_ascii=False)}]
+        # No birth date, name, or location is sent to the LLM. Cycles are already
+        # calculated and signed, with a bounded summary for each 10-year period.
+        cycles = [{k: cycle[k] for k in ("start", "end", "startAge", "endAge", "can_chi", "thap_than", "nap_am")}
+                  for cycle in result["luck_cycles"]]
+        if saved.reading.topic == "GENERAL":
+            rows.append({"id":"engine:structure_positions","text":json.dumps({
+                "visible_stems":[{"pillar":p.fact_id,"stem":p.stem.name,"ten_god":p.stem.ten_god_name,"fact_id":p.stem.fact_id} for p in saved.chart.pillars],
+                "hidden_stems":[{"pillar":p.fact_id,"stem":h.name,"ten_god":h.ten_god_name,"fact_id":h.fact_id} for p in saved.chart.pillars for h in p.hidden_stems],
+                "branch_clashes":[{"name":r.name,"pillars":list(r.pillar_refs),"fact_id":r.fact_id} for r in saved.facts.relations if r.kind=="CLASH"]
+            },ensure_ascii=False)})
+            for cycle, original in zip(cycles, result["luck_cycles"]):
+                cycle["engine_interpretation"] = excerpts(original.get("luan_giai", ""), 700)
+            rows.append({"id": "engine:natal_profile", "text": json.dumps({
+                "gender_used_for_cycles": saved.engine.gender,
+                "relationship_palace": {"pillar": "day", "stem": day.stem.name, "branch": day.branch,
+                                        "hidden_stems": [stem.model_dump() for stem in day.hidden_stems]},
+                "element_scores": result["scores"]["ngu_hanh_vn"],
+                "source_status": "TRADITIONAL_ENGINE_RULES_NOT_OBSERVED_LIFE_EVENTS"
+            }, ensure_ascii=False)})
+        rows.append({"id": "engine:luck_cycles", "text": json.dumps({"status": "AVAILABLE", "cycles": cycles,
+            "target_year": saved.engine.target_year, "annual": result["annual"]}, ensure_ascii=False)})
+        for key, value in result["analysis"]["phan_tich_nang_cao"].items():
+            rows.append({"id": "engine:" + key, "text": excerpts(value, 1800)})
+        rows.append({"id": "engine:provenance", "text": json.dumps({"repository": saved.engine.repository,
+            "commit": saved.engine.commit, "result_sha256": saved.engine.result_sha256}, ensure_ascii=False)})
     if saved.assessment.climate_conflict:
         signals.append("CLIMATE_CONFLICT")
     if saved.assessment.structures:

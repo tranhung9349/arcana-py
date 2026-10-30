@@ -1,5 +1,5 @@
 {
-  "version": "date-selection-2026-10-27-v1",
+  "version": "date-selection-2026-10-28-v1.1",
   "system_prompt": "docs/prompts/date_selection_v1.system.txt",
   "model_called": false,
   "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "docs/prompts/date_selection_v1.system.txt",
-      "sha256": "ca132a7a36036a00d55112273b868ba80dfa64bd5227f8f4d9ab4758b324ccb4"
+      "sha256": "000b7b5b1a0b58e4bb732f158e8723708e982532bc21df1c25707594259cb5dc"
     },
     {
       "path": "data/interpretation/date_v1/cases.json",

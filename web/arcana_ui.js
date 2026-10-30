@@ -5,7 +5,8 @@
     dates: ['THE ART OF TIMING', 'Chọn thời điểm,', 'mở một khởi đầu.', 'Tìm ngày và khung giờ phù hợp với việc bạn dự định.'],
     maihoa: ['THE BOOK OF CHANGES', 'Một câu hỏi,', 'muôn sự chuyển dời.', 'Đọc thế quẻ Mai Hoa để nhìn rõ điều thuận và điều cần cân nhắc.'],
     coins: ['THE SIX LINES', 'Tĩnh tâm gieo quẻ,', 'lắng nghe chuyển động.', 'Sáu lượt gieo. Một quẻ Dịch. Một góc nhìn cho điều bạn đang hỏi.'],
-    bazi: ['THE FOUR PILLARS', 'Từ bốn trụ,', 'hiểu mình sâu hơn.', 'Khám phá mệnh cục và các mối quan hệ trong lá số sinh của bạn.']
+    library: ['THE I CHING LIBRARY', 'Khám phá 64 quẻ,', 'đọc từng ý nghĩa.', 'Tra cứu quẻ từ, sáu hào và lời giải nghĩa trong một thư viện riêng.'],
+    bazi: ['THE FOUR PILLARS', 'Từ ngày sinh,', 'thêm một góc nhìn.', 'Đọc ý chính và điều cần cân nhắc theo câu hỏi của bạn.']
   };
   const title = document.getElementById('workspace-title');
   if (!title) return;
@@ -21,6 +22,6 @@
     document.getElementById('show-' + mode).addEventListener('click', () => update(mode));
   }
   document.getElementById('show-iching').addEventListener('click', () => {
-    update(document.getElementById('show-maihoa').getAttribute('aria-pressed') === 'true' ? 'maihoa' : 'coins');
+    update(['maihoa','coins','library'].find(mode=>document.getElementById('show-'+mode).getAttribute('aria-pressed') === 'true') || 'coins');
   });
 })();

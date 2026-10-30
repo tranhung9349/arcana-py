@@ -342,6 +342,419 @@
       "title": "Finding",
       "type": "object"
     },
+    "LifeReading": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "bazi-life-reading-v1",
+          "default": "bazi-life-reading-v1",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "context_id": {
+          "title": "Context Id",
+          "type": "string"
+        },
+        "analysis_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Analysis Sha256",
+          "type": "string"
+        },
+        "overview": {
+          "$ref": "#/$defs/NarrativeBlock"
+        },
+        "tendencies": {
+          "items": {
+            "$ref": "#/$defs/LifeTendency"
+          },
+          "maxItems": 5,
+          "title": "Tendencies",
+          "type": "array"
+        },
+        "in_life": {
+          "items": {
+            "$ref": "#/$defs/LifeSection"
+          },
+          "maxItems": 3,
+          "title": "In Life",
+          "type": "array"
+        },
+        "contradictions": {
+          "items": {
+            "$ref": "#/$defs/NarrativeBlock"
+          },
+          "maxItems": 3,
+          "title": "Contradictions",
+          "type": "array"
+        },
+        "takeaway": {
+          "$ref": "#/$defs/NarrativeBlock"
+        },
+        "limits": {
+          "items": {
+            "$ref": "#/$defs/ReaderLimit"
+          },
+          "maxItems": 5,
+          "minItems": 1,
+          "title": "Limits",
+          "type": "array"
+        },
+        "disclaimer": {
+          "const": "Đây là cách diễn giải theo hệ thống truyền thống, không phải đánh giá tính cách hay dự đoán khoa học.",
+          "default": "Đây là cách diễn giải theo hệ thống truyền thống, không phải đánh giá tính cách hay dự đoán khoa học.",
+          "title": "Disclaimer",
+          "type": "string"
+        },
+        "whole_life": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WholeLifeReading"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "context_id",
+        "analysis_sha256",
+        "overview",
+        "tendencies",
+        "in_life",
+        "contradictions",
+        "takeaway",
+        "limits"
+      ],
+      "title": "LifeReading",
+      "type": "object"
+    },
+    "LifeSection": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 9000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "pattern_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "title": "Pattern Refs",
+          "type": "array"
+        },
+        "manifestation_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Manifestation Refs",
+          "type": "array"
+        },
+        "condition_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Condition Refs",
+          "type": "array"
+        },
+        "limit_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Limit Refs",
+          "type": "array"
+        },
+        "title": {
+          "maxLength": 140,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "domains": {
+          "items": {
+            "enum": [
+              "LEARNING",
+              "DECISIONS",
+              "ACTION",
+              "PRESSURE",
+              "WORK",
+              "COOPERATION",
+              "FINANCES",
+              "RELATIONSHIPS",
+              "ADAPTATION"
+            ],
+            "type": "string"
+          },
+          "maxItems": 9,
+          "minItems": 1,
+          "title": "Domains",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "pattern_refs",
+        "manifestation_refs",
+        "condition_refs",
+        "limit_refs",
+        "title",
+        "domains"
+      ],
+      "title": "LifeSection",
+      "type": "object"
+    },
+    "LifeTendency": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 9000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "pattern_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "title": "Pattern Refs",
+          "type": "array"
+        },
+        "manifestation_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Manifestation Refs",
+          "type": "array"
+        },
+        "condition_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Condition Refs",
+          "type": "array"
+        },
+        "limit_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Limit Refs",
+          "type": "array"
+        },
+        "pattern_id": {
+          "pattern": "^P0[1-5]$",
+          "title": "Pattern Id",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 140,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "pattern_refs",
+        "manifestation_refs",
+        "condition_refs",
+        "limit_refs",
+        "pattern_id",
+        "title"
+      ],
+      "title": "LifeTendency",
+      "type": "object"
+    },
+    "NarrativeBlock": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 9000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "pattern_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5,
+          "title": "Pattern Refs",
+          "type": "array"
+        },
+        "manifestation_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Manifestation Refs",
+          "type": "array"
+        },
+        "condition_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Condition Refs",
+          "type": "array"
+        },
+        "limit_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Limit Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "pattern_refs",
+        "manifestation_refs",
+        "condition_refs",
+        "limit_refs"
+      ],
+      "title": "NarrativeBlock",
+      "type": "object"
+    },
+    "PipelineProvenance": {
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "const": "bazi-two-stage-tinix-2026-10-29-v5",
+          "default": "bazi-two-stage-tinix-2026-10-29-v5",
+          "title": "Version",
+          "type": "string"
+        },
+        "analysis_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Analysis Sha256",
+          "type": "string"
+        },
+        "analyst_passes": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Analyst Passes",
+          "type": "integer"
+        },
+        "interpreter_passes": {
+          "maximum": 2,
+          "minimum": 1,
+          "title": "Interpreter Passes",
+          "type": "integer"
+        },
+        "analyst_model": {
+          "title": "Analyst Model",
+          "type": "string"
+        },
+        "interpreter_model": {
+          "title": "Interpreter Model",
+          "type": "string"
+        }
+      },
+      "required": [
+        "analysis_sha256",
+        "analyst_passes",
+        "interpreter_passes",
+        "analyst_model",
+        "interpreter_model"
+      ],
+      "title": "PipelineProvenance",
+      "type": "object"
+    },
+    "PortraitAreaText": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "area": {
+          "enum": [
+            "CAREER",
+            "FINANCES",
+            "RELATIONSHIPS"
+          ],
+          "title": "Area",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 9000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "area",
+        "text"
+      ],
+      "title": "PortraitAreaText",
+      "type": "object"
+    },
+    "PortraitPeriodText": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^V0[1-3]$",
+          "title": "Id",
+          "type": "string"
+        },
+        "cycle_indices": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Cycle Indices",
+          "type": "array"
+        },
+        "start_year": {
+          "title": "Start Year",
+          "type": "integer"
+        },
+        "end_year": {
+          "title": "End Year",
+          "type": "integer"
+        },
+        "start_age": {
+          "title": "Start Age",
+          "type": "integer"
+        },
+        "end_age": {
+          "title": "End Age",
+          "type": "integer"
+        },
+        "text": {
+          "maxLength": 9000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "cycle_indices",
+        "start_year",
+        "end_year",
+        "start_age",
+        "end_age",
+        "text"
+      ],
+      "title": "PortraitPeriodText",
+      "type": "object"
+    },
     "PracticalOption": {
       "additionalProperties": false,
       "properties": {
@@ -371,6 +784,32 @@
         "fact_refs"
       ],
       "title": "PracticalOption",
+      "type": "object"
+    },
+    "ReaderLimit": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 1200,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "source_refs": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "minItems": 1,
+          "title": "Source Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "source_refs"
+      ],
+      "title": "ReaderLimit",
       "type": "object"
     },
     "Response": {
@@ -425,6 +864,50 @@
         "limits"
       ],
       "title": "Response",
+      "type": "object"
+    },
+    "WholeLifeReading": {
+      "additionalProperties": false,
+      "properties": {
+        "areas": {
+          "items": {
+            "$ref": "#/$defs/PortraitAreaText"
+          },
+          "maxItems": 3,
+          "minItems": 3,
+          "title": "Areas",
+          "type": "array"
+        },
+        "periods": {
+          "items": {
+            "$ref": "#/$defs/PortraitPeriodText"
+          },
+          "maxItems": 3,
+          "title": "Periods",
+          "type": "array"
+        },
+        "timing_status": {
+          "enum": [
+            "AVAILABLE",
+            "NOT_AVAILABLE"
+          ],
+          "title": "Timing Status",
+          "type": "string"
+        },
+        "timing_note": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Timing Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "areas",
+        "periods",
+        "timing_status",
+        "timing_note"
+      ],
+      "title": "WholeLifeReading",
       "type": "object"
     }
   },
@@ -508,10 +991,21 @@
     },
     "generation_passes": {
       "default": 1,
-      "maximum": 2,
+      "maximum": 4,
       "minimum": 1,
       "title": "Generation Passes",
       "type": "integer"
+    },
+    "pipeline": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/PipelineProvenance"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
     },
     "context": {
       "anyOf": [
@@ -525,7 +1019,22 @@
       "title": "Context"
     },
     "reading": {
-      "$ref": "#/$defs/Response"
+      "discriminator": {
+        "mapping": {
+          "bazi-life-reading-v1": "#/$defs/LifeReading",
+          "plain-reading-response-v2": "#/$defs/Response"
+        },
+        "propertyName": "schema_version"
+      },
+      "oneOf": [
+        {
+          "$ref": "#/$defs/Response"
+        },
+        {
+          "$ref": "#/$defs/LifeReading"
+        }
+      ],
+      "title": "Reading"
     }
   },
   "required": [

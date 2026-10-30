@@ -199,5 +199,30 @@ class CoinApiTests(unittest.TestCase):
         self.assertIn('/static/coins.js', html)
         self.assertEqual(self.client.get('/static/coins.js').status_code, 200)
 
+    def test_library_catalog_and_reference_are_outside_the_casting_workspace(self):
+        from html.parser import HTMLParser
+        class Structure(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.stack, self.parents = [], {}
+            def handle_starttag(self, tag, attrs):
+                identity = dict(attrs).get('id')
+                if identity:
+                    self.parents[identity] = [key for _, key in self.stack if key]
+                if tag not in {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'}:
+                    self.stack.append((tag, identity))
+            def handle_endtag(self, tag):
+                for index in range(len(self.stack)-1, -1, -1):
+                    if self.stack[index][0] == tag:
+                        del self.stack[index:]
+                        break
+        tree = Structure()
+        tree.feed(self.client.get('/').text)
+        self.assertIn('iching-methods', tree.parents['show-library'])
+        for key in ('coins-catalog', 'library-result'):
+            self.assertIn('library-workspace', tree.parents[key])
+            self.assertNotIn('coins-workspace', tree.parents[key])
+        self.assertIn('coins-workspace', tree.parents['coins-result'])
+
 
 if __name__ == '__main__': unittest.main()

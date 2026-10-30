@@ -1,11 +1,18 @@
 {
-  "version": "plain-vietnamese-2026-10-27-v4.1",
+  "version": "plain-vietnamese-2026-10-30-v4.6",
   "system_prompt": "docs/prompts/plain_vietnamese_v4.system.txt",
   "method_guides": "docs/prompts/interpretation_method_guides_v3.json",
   "reading_playbook": "docs/prompts/reading_playbook_v4.json",
+  "method_prompts": {
+    "BAZI_NATAL_V1": "docs/prompts/bazi_plain_language_v1.system.txt",
+    "LIUYAO_NAJIA": "docs/prompts/liuyao_plain_language_v1.system.txt"
+  },
+  "method_system_prompts": {
+    "LIUYAO_NAJIA": "docs/prompts/liuyao_interpreter_v1.system.txt"
+  },
   "model_called": false,
   "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED",
-  "case_count": 24,
+  "case_count": 25,
   "source_count": 29,
   "heldout_count": 11,
   "adaptive_probe_count": 3,
@@ -16,7 +23,7 @@
     },
     {
       "path": "data/interpretation/plain_v4/cases.json",
-      "sha256": "ac36aaadc0a6945dc7ab42897db72e1ab2fdf30fa7c98b6cfef69d84537f6c13"
+      "sha256": "cbe127a31dab704667903833ff9ef1e84f1a4173f11f17e27aa3d00bfcfabb06"
     },
     {
       "path": "data/interpretation/plain_v4/evals.json",
@@ -119,16 +126,64 @@
       "sha256": "2320fdff0b05335964a9f0c91d2a9870e11c9fbcddc32aecd822f90999fa45b4"
     },
     {
+      "path": "data/reference/manifest.json",
+      "sha256": "d1b41abf83f8d37a1dc894f7fed589acdf66ec116c650528cc611f881401a17f"
+    },
+    {
+      "path": "data/reference/open-iching/iching.json",
+      "sha256": "7fe029a32c51f2da39d702f8064825262cfd3a7d004353738cd893b0a017ab10"
+    },
+    {
+      "path": "data/reference/open-iching/tuan.json",
+      "sha256": "14453a0ef7d3b1dc05e65c0d272dd97104375ba315364b70105353ada73d1668"
+    },
+    {
+      "path": "data/reference/open-iching/xiang.json",
+      "sha256": "e346a62a41107f35f7e33955cf018b11749d80781847e681a088c2ee3412cc98"
+    },
+    {
+      "path": "docs/prompts/bazi_plain_examples_v1.json",
+      "sha256": "5a9f6788f1dd9a644de2d6eb9417d970ac1aaf35fec695fc1e63d97213ae307a"
+    },
+    {
+      "path": "docs/prompts/bazi_plain_language_v1.system.txt",
+      "sha256": "8a61a3022f77dba80dd45d0fc4463618371b112b98fc228fcc7e709798108d33"
+    },
+    {
       "path": "docs/prompts/interpretation_method_guides_v3.json",
       "sha256": "d470662f448d0a03cb4121a597a50437492b03ebebe9958b7ca78e5e4f84f08a"
     },
     {
+      "path": "docs/prompts/liuyao_interpreter_v1.system.txt",
+      "sha256": "d9a22ce70beb237b40610fbbdf3fe419258c0a1668354a5a3f72a56baf8bc92d"
+    },
+    {
+      "path": "docs/prompts/liuyao_plain_examples_v1.json",
+      "sha256": "be685200d60affe545925fd8b3e3f714fe69733ee26bafab0ce4ff14cbefb484"
+    },
+    {
+      "path": "docs/prompts/liuyao_plain_language_v1.system.txt",
+      "sha256": "f8afd3b8b2c067f3494bf21007c7f4378ac6566d647623f4b024e59e178fa712"
+    },
+    {
       "path": "docs/prompts/plain_vietnamese_v4.system.txt",
-      "sha256": "ddda10bc89b18f920a2a36df0a784f945cf271f78b09c3e33261fe810b83d4ec"
+      "sha256": "4f441a7e994cded161c746644aca8df13d17a8c2ae476efb50b8d033fe78f9c3"
     },
     {
       "path": "docs/prompts/reading_playbook_v4.json",
       "sha256": "aa7d7f87791f319c36a3116c801e019c76a8ef6c1c1f04481bb575ec276d0c71"
+    },
+    {
+      "path": "randomyst/ai_context.py",
+      "sha256": "8333bda782a98501de8fd5c6bceaba302cba1886c57b9e0c357babd86a0197ed"
+    },
+    {
+      "path": "randomyst/liuyao_sources.py",
+      "sha256": "1c4d08873c8980344e136a15b91c5269e04c5e27b009547c91f9dfb8c5ed9070"
+    },
+    {
+      "path": "research_tools/interpretation_prompt.py",
+      "sha256": "7ab744b315717bde72dfcba27f4e60aef3fa57a840367b333eb6ff14a0fb3339"
     },
     {
       "path": "research_tools/reading_strategy.py",

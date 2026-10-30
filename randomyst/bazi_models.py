@@ -17,6 +17,7 @@ PillarName = Literal["year", "month", "day", "hour"]
 
 class BaziBirth(StrictModel):
     civil_datetime: datetime
+    gender: Literal["male", "female"] = "male"
     clock_uncertainty_seconds: float | None = Field(default=None, ge=0, le=86400)
 
     @field_validator("civil_datetime")
@@ -42,6 +43,7 @@ class BaziRequest(ReadingContext):
     request_id: UUID
     display_name: str = Field(default="", max_length=80)
     birth: BaziBirth
+    target_year: int | None = Field(default=None, ge=1950, le=2150)
 
     @field_validator("display_name", mode="before")
     @classmethod
@@ -220,6 +222,24 @@ class CoverageItem(StrictModel):
     detail: str
 
 
+class BaziEngineResult(StrictModel):
+    repository: Literal["vhphuoc1102/tinix-bazi"] = "vhphuoc1102/tinix-bazi"
+    commit: Literal["80ff4463d0397c1b11db76f38d880255f55558bc"]
+    adapter_version: str
+    gender: Literal["male", "female"]
+    target_year: int = Field(ge=1950, le=2150)
+    input_sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
+    result_sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
+    result: dict
+
+    @model_validator(mode="after")
+    def binding(self):
+        from .bazi_rules import digest
+        if digest(self.result) != self.result_sha256:
+            raise ValueError("Bazi engine result hash mismatch")
+        return self
+
+
 class BaziResponse(StrictModel):
     schema_version: Literal["bazi-consultation-v1"]
     request_id: UUID
@@ -237,11 +257,14 @@ class BaziResponse(StrictModel):
     reading: NatalReading
     evidence: list[BaziEvidence] = Field(min_length=1)
     coverage: list[CoverageItem]
+    engine: BaziEngineResult | None = None
     model_called: Literal[False] = False
     review_status: Literal["RULES_TESTED_NOT_EXPERT_REVIEWED"] = "RULES_TESTED_NOT_EXPERT_REVIEWED"
 
     @model_validator(mode="after")
     def references(self):
+        if self.engine and self.engine.result.get("pillars") != [p.stem.zh + p.branch_zh for p in self.chart.pillars]:
+            raise ValueError("Bazi engine pillars differ from the calendar chart")
         evidence_ids = [e.evidence_id for e in self.evidence]
         finding_ids = [f.finding_id for f in self.findings]
         facts = ["facts:season", "facts:distribution"]

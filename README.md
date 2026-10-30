@@ -1,1 +1,1 @@
-Arcana 1.0.1
+Arcana 1.0.2

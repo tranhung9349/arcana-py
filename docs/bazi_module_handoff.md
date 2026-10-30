@@ -1,5 +1,7 @@
 # Luận Giải Bát Tự — bản natal v1
 
+Cập nhật **28/10/2026**: phần tóm tắt theo chủ đề dùng lời thường ngày, bảng lá số và giải thích thuật ngữ mở thêm. AI Bát Tự sinh mới dùng hai tầng **Structural Analyst → Life Interpreter** với prompt người dùng cung cấp; [thiết kế hiện hành](bazi_two_stage_handoff.md). Narrative v2, quy tắc và dữ kiện lá số giữ nguyên; [bố cục và định dạng cũ](bazi_plain_reading_handoff.md). Các mô tả lưu phiên dưới đây thuộc giai đoạn cũ; runtime hiện dùng RAM như README.
+
 Triển khai ngày **26/10/2026**, rules `bazi-natal-2026-10-26-v1`, profile `bazi_natal_v1`, corpus `bazi-corpus-2026-10-26-v1`.
 
 ## Người dùng có thể làm gì

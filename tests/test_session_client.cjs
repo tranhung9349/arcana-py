@@ -80,3 +80,20 @@ test('the strict transport permits both versioned date rules and v1 catalogs',as
  assert.equal((await s.api.fetch('/api/v2/private-admin')).status,404);
  assert.equal(s.calls.length,4);
 });
+test('Bazi keeps five signed profiles in memory and evicts dependent consultations with the oldest',async()=>{
+ const s=fixture((path,opts)=>{
+  const body=JSON.parse(opts.body);
+  if(path==='/api/v1/bazi/readings')return reply({reading_id:body.reading.reading_id,consultation_id:body.consultation.data.request_id,reading:{topic_name:'Công việc'}});
+  return reply({...body,chart:{civil_datetime:'1994-10-08T05:00:00+07:00'},reading:{topic_name:'Tổng quan'}});
+ });
+ await s.api.fetch('/api/v1/bazi/consultations',options({request_id:'chart-0'}));
+ await s.api.fetch('/api/v1/bazi/consultations/chart-0/readings',options({reading_id:'old-question',topic:'CAREER'}));
+ for(let i=1;i<6;i++)await s.api.fetch('/api/v1/bazi/consultations',options({request_id:'chart-'+i}));
+ const history=await (await s.api.fetch('/api/v1/bazi/history')).json();
+ assert.deepEqual(history.consultations.map(r=>r.request_id),['chart-5','chart-4','chart-3','chart-2','chart-1']);
+ assert.equal((await s.api.fetch('/api/v1/bazi/consultations/chart-0')).status,404);
+ assert.equal((await s.api.fetch('/api/v1/bazi/consultations/chart-1')).status,200);
+ assert.equal((await s.api.fetch('/api/v1/bazi/consultations/chart-0/readings')).status,404);
+ assert.deepEqual(await (await s.fresh().fetch('/api/v1/bazi/history')).json(),{consultations:[]});
+ assert.equal(s.calls.length,7);
+});

@@ -21,12 +21,14 @@
   function field(parent, label, aria) {
     const wrap = node(parent, 'label', label); const select = node(wrap, 'select'); select.setAttribute('aria-label', aria || label); return select;
   }
-  function drawReport(parent, data,autoGenerate=false) {
+  function drawReport(parent, data,autoGenerate=false,technicalParent=null) {
     aiPanel?.destroy();
     parent.replaceChildren(); parent.dataset.tendency = data.tendency;
     aiPanel=window.AIReading.mount(node(parent,'section'),{method:'LIUYAO',consultation_id:data.session_id,
-      analysis_context:data.context,analysis_rules_sha256:data.rules_sha256},{autoGenerate:false});
-    const technical=node(parent,'details','','ly-technical');node(technical,'summary','Phân tích Lục Hào và căn cứ');parent=technical;
+      analysis_context:data.context,analysis_rules_sha256:data.rules_sha256},{autoGenerate,title:'Lời giải cho câu hỏi của bạn',
+        emptyText:'Đọc câu trả lời theo quẻ này, bằng lời thường ngày.'});
+    if(technicalParent)technicalParent.replaceChildren();
+    const technical=node(technicalParent || parent,'details','','ly-technical');node(technical,'summary','Phân tích Lục Hào và căn cứ');parent=technical;
     node(parent, 'p', 'LỜI LUẬN THEO VIỆC HỎI · ' + data.topic_label.toLocaleUpperCase('vi'), 'eyebrow');
     node(parent, 'h3', data.headline, 'ly-headline');
     node(parent, 'p', 'Phân tích bằng quy tắc Lục Hào · ' + (data.selection.status === 'PROVISIONAL' ? 'Dụng thần tạm ưu tiên, có thể chọn lại' : data.selection.status === 'AMBIGUOUS' ? 'Đang đối chiếu nhiều Dụng thần' : 'Đã xác định hào trọng tâm'), 'hint');
@@ -85,12 +87,12 @@
     for (const line of data.limitations) node(scope, 'p', line, 'hint');
     for (const source of data.sources) {link(scope, source); node(scope, 'br');}
   }
-  function mount(parent, session, initialContext = null, {autoGenerate=false}={}) {
+  function mount(parent, session, initialContext = null, {autoGenerate=false,referenceParent=null}={}) {
     reset(); let current = generation, report = null, pendingContext = null, gate = null, preparing = false;
     parent.className = 'ly-panel'; parent.setAttribute('aria-label', 'Luận Lục Hào theo câu hỏi');
     const output = node(parent, 'div', '', 'ly-report');
-    const controls = node(parent, 'details', '', 'ly-controls'); node(controls, 'summary', 'Đổi chủ đề hoặc chọn Dụng thần · giữ nguyên quẻ');
-    parent.insertBefore(controls, output);
+    const technicalOutput = referenceParent ? node(referenceParent,'div','','ly-reference-analysis') : null;
+    const controls = node(referenceParent || parent, 'details', '', 'ly-controls'); node(controls, 'summary', 'Tùy chọn phân tích nâng cao · giữ nguyên quẻ');
     const form = node(controls, 'form');
     const topic = field(form, 'Chủ đề luận', 'Chủ đề luận lại');
     const intentPreview = node(form, 'div');
@@ -128,13 +130,13 @@
         }
         if (!active(version)) return;
         if (data.session_id !== session.request_id) throw window.DisplayText.failure('Lời luận không khớp phiên đang mở.');
-        sync(data); drawReport(output, data,autoGenerate || !loadSaved);autoGenerate=false; status.textContent = '';
-        if (data.selection.status === 'AMBIGUOUS') controls.open = true;
+        sync(data); drawReport(output, data,autoGenerate || !loadSaved,technicalOutput);autoGenerate=false; status.textContent = '';
       } catch (failure) {
         if (!active(version)) return;
         error.textContent = failure.name === 'AbortError' ? 'Chưa nhận được lời luận. Có thể thử lại trên cùng quẻ.' : window.DisplayText.errorMessage(failure,'Chưa tải được lời luận. Bạn có thể thử lại trên cùng quẻ.');
         error.hidden = false; retry.hidden = false; status.textContent = 'Quẻ đã được lưu; phần luận chưa tải thành công.';
         controls.open = true;
+        if(referenceParent)referenceParent.open = true;
       } finally {clearTimeout(timer); if (active(version)) setBusy(false);}
     }
     function clearFocus() {focus.replaceChildren(); option(focus, '', 'Luận theo nhóm mới để xem các ứng viên');}
@@ -145,7 +147,7 @@
       try {
         const context = await gate.ensure();
         if (before === current && before === generation && parent.isConnected) await run({...context, use_relative:relative.value || null, focus_line:focus.value ? Number(focus.value) : null});
-      } catch (failure) {if (parent.isConnected) {error.textContent = window.DisplayText.errorMessage(failure,'Chưa đối chiếu được câu hỏi. Bạn có thể thử lại.'); error.hidden = false; controls.open = true;}}
+      } catch (failure) {if (parent.isConnected) {error.textContent = window.DisplayText.errorMessage(failure,'Chưa đối chiếu được câu hỏi. Bạn có thể thử lại.'); error.hidden = false; controls.open = true;if(referenceParent)referenceParent.open=true;}}
       finally {preparing = false;}
     });
     retry.addEventListener('click', () => {if (!rulesPromise) initialize(); else run(pendingContext, !pendingContext);});

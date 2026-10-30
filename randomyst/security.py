@@ -185,7 +185,7 @@ class SecurityMiddleware:
         rules = [("global", self.config.global_per_minute, 60), (("api", client), self.config.api_per_minute, 60)]
         if scope["method"] == "POST":
             rules.append((("write", client), self.config.writes_per_minute, 60))
-        if path == "/api/v1/ai/readings":
+        if path in ("/api/v1/ai/readings", "/api/v1/ai/readings/start"):
             rules.append((("ai", client), self.config.ai_per_hour, 3600))
         retry = self.limits.allow(rules)
         if retry:

@@ -77,7 +77,7 @@ def main():
     files = ["docs/prompts/date_selection_v1.system.txt", "data/interpretation/date_v1/cases.json",
              "research_tools/date_interpretation_prompt.py", "randomyst/date_ai_context.py", "randomyst/date_reading.py",
              "config/mvp2_date_rules.json", "schemas/date_reading_context.schema.json"]
-    manifest = {"version": "date-selection-2026-10-27-v1", "system_prompt": files[0], "model_called": False,
+    manifest = {"version": "date-selection-2026-10-28-v1.1", "system_prompt": files[0], "model_called": False,
                 "review_status": "EDITORIAL_DRAFT_NOT_EXPERT_REVIEWED", "case_count": len(cases),
                 "files": [{"path": p, "sha256": sha256((ROOT / p).read_bytes()).hexdigest()} for p in files]}
     (PACK / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")

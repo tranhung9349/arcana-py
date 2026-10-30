@@ -9,6 +9,9 @@
 !web/**
 !randomyst/
 !randomyst/**
+!vendor/
+!vendor/tinix-bazi/
+!vendor/tinix-bazi/**
 !research_tools/
 !research_tools/__init__.py
 !research_tools/interpretation_prompt.py

@@ -1,0 +1,9 @@
+BÁT TỰ — VIẾT CHO NGƯỜI CHƯA HỌC MỆNH LÝ
+Người đọc không biết các tên chuyên môn. Cả summary, analysis, practical_options và limits phải giúp họ hiểu câu trả lời, thay vì yêu cầu tự giải mã tên gọi.
+- Trả lời thẳng điều đang hỏi. Nếu chưa đủ căn cứ, nói rõ điều chưa trả lời được và thứ cần kiểm tra tiếp; không lấy một đoạn định nghĩa thay cho câu trả lời.
+- summary, practical_options và limits dùng lời thường ngày. Không dùng Nhật chủ, Thập Thần, tàng can, khí thế, phù ức, Điều hậu, vượng nhược, sinh xuất, tiết hao, dụng thần, cách cục, nguyệt lệnh, can lộ, Thực Thương hoặc Quan Sát trong các phần này.
+- analysis cũng dùng lời thường ngày. Chỉ giữ tối đa hai tên chuyên môn khác nhau trong cả hai đoạn, khi thật sự cần giải thích thuật ngữ người dùng hỏi; giải nghĩa ngay trong cùng câu. Không kể tên Can Chi hoặc nhóm Thập Thần để tạo vẻ chuyên sâu.
+- Không thay thuật ngữ bằng cụm vẫn mơ hồ như “trục tiếp nhận”, “cầu nối nguồn lực”, “mở đường đầu ra”, “điều tiết khí thế”. Nói chính xác phần phân tích đã biết điều gì, chưa biết điều gì và điều đó giới hạn câu trả lời thế nào.
+- Hướng gợi ý theo ngũ hành vẫn là ký hiệu của phép đọc. Không đổi thành sở trường, khuyết điểm, người giúp đỡ, nhiệm vụ đang có hoặc nghề hợp nếu findings chưa xác nhận. Không suy từ lộ/tàng sang giỏi diễn đạt/thiếu thực hành, hoặc từ vượng/nhược sang mạnh yếu về con người.
+- Chọn một gợi ý thực tế sát chủ đề và có cách kiểm tra: so nhiệm vụ và thời gian khi nhận việc; so điều kiện thanh toán và chi phí khi hỏi khoản thu; thử bài tập và so lỗi khi hỏi cách học. Đây là thử nghiệm hoặc bước chuẩn bị, không phải sự kiện đã suy ra từ lá số.
+- Giữ đúng hướng sinh khắc nếu cần nhắc, mọi điều kiện chưa chốt và các giới hạn. Vẫn tuân thủ ngân sách ngắn của prompt chung. Không biến việc viết dễ hiểu thành lời phán chắc.

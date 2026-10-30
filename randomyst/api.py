@@ -6,7 +6,7 @@ import os
 from fastapi import FastAPI, Request
 from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
 from .time_engine import CalendarError
@@ -25,6 +25,7 @@ from .liuyao_models import AnalysisContext, QuestionIntentRequest
 from .bazi_models import BaziRequest, BaziReadingRequest
 from .bazi_service import BaziService
 from .ai_service import AIReadingService, AIReadingRequest, AIReadingResult
+from .ai_jobs import reading_events
 from .security import AIBudget, SecurityConfig, SecurityMiddleware, HEADERS
 from .snapshots import SignedSnapshot, SnapshotSigner
 
@@ -73,6 +74,19 @@ def create_app(db_path=None, ai_config=None, ai_client=None, security_config=Non
     @app.post("/api/v1/ai/readings", response_model=AIReadingResult)
     def ai_reading(payload: AIReadingRequest):
         return app.state.ai.execute(payload)
+
+    def reading_stream(payload, *, generate):
+        job = app.state.ai.subscribe(payload, generate=generate)
+        return StreamingResponse(reading_events(job), media_type="text/event-stream",
+                                 headers={"X-Accel-Buffering": "no", "Cache-Control": "no-store"})
+
+    @app.post("/api/v1/ai/readings/start")
+    def start_ai_reading(payload: AIReadingRequest):
+        return reading_stream(payload, generate=True)
+
+    @app.post("/api/v1/ai/readings/stream")
+    def observe_ai_reading(payload: AIReadingRequest):
+        return reading_stream(payload, generate=False)
 
     @app.get("/api/v1/bazi/rules")
     def bazi_rules():
