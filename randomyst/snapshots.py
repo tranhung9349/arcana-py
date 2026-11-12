@@ -11,7 +11,7 @@ from pydantic import Field
 from .engine import EngineError
 from .models import StrictModel
 
-SnapshotKind = Literal["DRAW", "BAZI", "BAZI_READING", "MAIHOA", "COINS", "LIUYAO", "DATE"]
+SnapshotKind = Literal["DRAW", "BAZI", "BAZI_READING", "ZIWEI", "MAIHOA", "COINS", "LIUYAO", "DATE"]
 DEVELOPMENT_KEY = secrets.token_bytes(32)
 
 

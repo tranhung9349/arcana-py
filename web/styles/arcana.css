@@ -64,7 +64,6 @@ button, summary, a { touch-action: manipulation; }
 .header-signature span { color: var(--gold); font-size: 24px; }
 .mode-tabs { border: 1px solid var(--border); border-radius: 6px; padding: 6px; background: #17111fd9; }
 .mode-tabs button { min-height: 58px; padding: 12px 17px; background: transparent; border: 1px solid transparent; color: var(--muted); gap: 12px; justify-content: flex-start; font-size: 13px; font-weight: 400; border-radius: 3px; text-align: left; }
-.mode-tabs button small { font: 400 14px var(--font-display); margin-left: auto; opacity: .65; }
 .mode-tabs button[aria-pressed=true] { color: var(--gold-bright); background: linear-gradient(110deg, #342638, #221b2b); border-color: var(--gold-border); box-shadow: inset 0 0 18px #d2b37a06; }
 .mode-tabs button[aria-pressed=false]:hover { color: var(--text); background: var(--surface-raised); border-color: var(--border); }
 .nav-icon { width: 23px; height: 23px; flex-shrink: 0; }
@@ -405,6 +404,31 @@ body.date-popup-open { overflow: hidden; }
 .bazi-life-section p { font-size: 16px; line-height: 1.85; margin-bottom: 16px; }
 .bazi-life-tendency { margin: 24px 0; }
 .bazi-life-disclaimer { font-size: 14px; line-height: 1.8; color: var(--muted); margin-top: 24px; }
+.natal-reading { margin: 24px 0; }
+.bazi-reading-details > summary { min-height: 44px; padding-block: 12px; cursor: pointer; color: var(--gold); }
+.bazi-overview-panel .ai-reading-lead + .ai-reading-lead { margin-top: 14px; }
+.natal-reading-lead { font-size: 17px; color: var(--text); line-height: 1.85; }
+.natal-reading-part { margin: 20px 0; }
+.natal-reading-part h3, .ziwei-palace-detail h3 { color: var(--gold); font-size: 17px; margin-bottom: 8px; }
+.natal-reading-part p, .ziwei-palace-detail p { line-height: 1.85; white-space: pre-line; overflow-wrap: anywhere; }
+.ziwei-board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 20px 0 12px; }
+.ziwei-board-center { grid-column: span 2; grid-row: span 2; display: grid; align-content: center; text-align: center; padding: 14px; background: var(--surface-raised); border: 1px solid var(--border); border-radius: 4px; }
+.ziwei-board-center strong { font: 500 26px/1.3 var(--font-display); color: var(--gold-bright); }
+.ziwei-board-center p { margin: 5px 0 0; color: var(--muted); }
+.ziwei-palace { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; min-width: 0; min-height: 88px; gap: 4px; padding: 9px; text-align: left; background: var(--field); color: var(--text); border: 1px solid var(--control-border); border-radius: 4px; }
+.ziwei-palace[aria-pressed=true] { border-color: var(--amethyst); background: var(--surface-raised); }
+.ziwei-palace strong { color: var(--gold-bright); }
+.ziwei-palace-stars { font-size: 12px; color: var(--amethyst); }
+.ziwei-palace-detail { padding: 14px; border: 1px solid var(--border); border-radius: 4px; }
+.ziwei-star-list { display: flex; flex-wrap: wrap; gap: 5px 12px; padding: 0; margin: 8px 0 0; list-style: none; color: var(--muted); }
+.ziwei-star-major { color: var(--text); font-weight: 600; }
+.ziwei-pattern { margin: 10px 0; overflow-wrap: anywhere; }
+.ziwei-pattern p { margin: 4px 0; }
+.ziwei-pattern-trace summary { min-height: 44px; align-content: center; }
+@media (max-width: 680px) {
+  .ziwei-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ziwei-board-center { order: -1; grid-column: 1 / -1; grid-row: auto; }
+}
 .ai-reading-panel { margin: 24px 0; padding: 26px; border: 1px solid #6c5079; border-radius: 5px; background: radial-gradient(ellipse at 100% 0%, #5b3b6d28, transparent 65%), var(--surface-soft); font-size: 16px; }
 .ai-reading-panel h3 { color: var(--gold); font: 500 31px/1.3 var(--font-display); margin: 0 0 22px; }
 .ai-reading-status.is-loading { color: var(--muted); }
@@ -644,6 +668,8 @@ footer > span:last-child { margin-left: auto; }
   #print-snapshot h2, #print-snapshot h3, #print-snapshot h4, #print-snapshot summary { break-after: avoid; }
   #print-snapshot p { orphans: 3; widows: 3; }
   #print-snapshot table, #print-snapshot tr, #print-snapshot .numbers, #print-snapshot .mh-hexagrams { break-inside: avoid; }
+  #print-snapshot .ziwei-board { break-inside: avoid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #print-snapshot .ziwei-board-center { grid-column: span 2; grid-row: span 2; order: 0; }
   #print-snapshot details, #print-snapshot form { display: block; }
   #print-snapshot .print-field-value { display: block; color: var(--text); font-size: 14px; }
   #print-snapshot .bazi-reread, #print-snapshot .ai-reading-button { display: none; }

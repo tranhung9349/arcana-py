@@ -10,7 +10,7 @@ import subprocess
 from threading import BoundedSemaphore
 from zoneinfo import ZoneInfo
 
-from .bazi_models import BaziEngineResult, BaziEvidence, BaziFinding, NatalAssessment, NatalReading
+from .bazi_models import BaziEngineResult, BaziEvidence, BaziFinding, NatalAssessment
 from .bazi_rules import BaziRules, digest
 from .engine import EngineError
 
@@ -19,7 +19,6 @@ VENDOR = ROOT / "vendor/tinix-bazi"
 COMMIT = "80ff4463d0397c1b11db76f38d880255f55558bc"
 VERSION = "tinix-bazi-2026-10-28-v2"
 SOURCE_URL = f"https://github.com/vhphuoc1102/tinix-bazi/tree/{COMMIT}/backendjs/src/bazi"
-TOPICS = {"GENERAL": "Tổng quan", "CAREER": "Công việc", "WEALTH": "Tài chính", "STUDY": "Học tập", "RELATIONSHIPS": "Quan hệ"}
 
 
 def prose(value):
@@ -131,14 +130,3 @@ class TinixBaziEngine:
             add(key, title, excerpts(result["analysis"][key]))
         add("luck_cycles", "Đại vận và Lưu niên", f"Engine đã tính {len(result['luck_cycles'])} đại vận; năm xem {engine.target_year}. " + excerpts(result["annual"], 1600))
         return assessment, findings
-
-    def compose(self, assessment, findings, topic, question):
-        selected = [f for f in findings if f.finding_id in {"natal_context", "strength", "structure", "balance", "relations", "luck_cycles"}]
-        priority = {"GENERAL": ["natal_context", "strength"], "CAREER": ["structure", "balance"],
-                    "WEALTH": ["balance", "luck_cycles"], "STUDY": ["strength", "structure"],
-                    "RELATIONSHIPS": ["relations", "natal_context"]}[topic]
-        selected.sort(key=lambda f: priority.index(f.finding_id) if f.finding_id in priority else len(priority))
-        return NatalReading(topic=topic, topic_name=TOPICS[topic], question=question, title="Bát Tự · " + TOPICS[topic],
-            summary="Lá số được phân tích bằng engine tinix-bazi: " + assessment.strength_name + ".",
-            highlights=["strength", "structure", "balance", "luck_cycles"],
-            sections=[{"title": f.title, "text": f.text, "finding_refs": [f.finding_id]} for f in selected], narrative_version=VERSION)

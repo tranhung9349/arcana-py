@@ -15,25 +15,29 @@
       crossorigin
     />
     <link rel="stylesheet" href="/static/fonts/fonts.css?v=20261027-arcana1" />
-    <link rel="stylesheet" href="/static/style.css?v=20261030-coins-simple1" />
+    <link rel="stylesheet" href="/static/style.css?v=20261112-bazi-overview1" />
     <script src="/static/display_text.js?v=20261030-stream2" defer></script>
-    <script src="/static/session_client.js?v=20261029-stream1" defer></script>
-    <script src="/static/export_pdf.js?v=20261028-security1" defer></script>
+    <script src="/static/session_client.js?v=20261112-ziwei1" defer></script>
+    <script src="/static/export_pdf.js?v=20261112-ziwei1" defer></script>
     <script
-      src="/static/ai_reading.js?v=20261030-stream3"
+      src="/static/ai_reading.js?v=20261112-bazi-whole-life1"
       defer
     ></script>
     <script src="/static/date_reading.js?v=20261028-plain1" defer></script>
     <script src="/static/draw_reading.js?v=20261026-draw6" defer></script>
     <script src="/static/app.js?v=20261028-security1" defer></script>
-    <script src="/static/dates.js?v=20261028-library1" defer></script>
+    <script src="/static/dates.js?v=20261112-ziwei1" defer></script>
     <script src="/static/maihoa.js?v=20261028-security1" defer></script>
     <script src="/static/coin_intent.js?v=20261028-security1" defer></script>
     <script src="/static/liuyao.js?v=20261030-stream2" defer></script>
     <script src="/static/coins.js?v=20261030-coins-simple2" defer></script>
-    <script src="/static/bazi_features.js?v=20261029-bazi-clean1" defer></script>
-    <script src="/static/bazi.js?v=20261029-bazi-clean1" defer></script>
-    <script src="/static/arcana_ui.js?v=20261028-library1" defer></script>
+    <script
+      src="/static/bazi_features.js?v=20261029-bazi-clean1"
+      defer
+    ></script>
+    <script src="/static/bazi.js?v=20261112-bazi-whole-life1" defer></script>
+    <script src="/static/ziwei.js?v=20261112-ziwei1" defer></script>
+    <script src="/static/arcana_ui.js?v=20261112-ziwei1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#workspace-start">Đến phần nhập thông tin</a>
@@ -57,7 +61,7 @@
         >
       </header>
       <nav
-        class="mode-tabs grid grid-cols-2 gap-1.5 desk:grid-cols-4"
+        class="mode-tabs grid grid-cols-2 gap-1.5 desk:grid-cols-5"
         aria-label="Chức năng"
       >
         <button
@@ -76,7 +80,26 @@
           >
             <path d="M5 20V9l7-6 7 6v11M8 20V11m4 9V8m4 12v-9M3 20h18" />
           </svg>
-          <span>Luận giải Bát Tự</span><small aria-hidden="true">I</small>
+          <span>Luận giải Bát Tự</span>
+        </button>
+        <button
+          id="show-ziwei"
+          type="button"
+          aria-pressed="false"
+          aria-controls="ziwei-workspace"
+        >
+          <svg
+            class="nav-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            aria-hidden="true"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <path d="M3 8h18M3 16h18M8 3v18M16 3v18m-4-11v4m-2-2h4" />
+          </svg>
+          <span>Lá số Tử Vi</span>
         </button>
         <button
           id="show-iching"
@@ -94,7 +117,8 @@
           >
             <path d="M4 5h16M4 9h6m4 0h6M4 13h16M4 17h6m4 0h6M4 21h16" />
           </svg>
-          <span>Luận giải Kinh Dịch</span><small aria-hidden="true">II</small></button>
+          <span>Luận giải Kinh Dịch</span>
+        </button>
         <button id="show-dates" type="button" aria-pressed="false">
           <svg
             class="nav-icon"
@@ -107,7 +131,8 @@
             <rect x="4" y="5" width="16" height="16" rx="2" />
             <path d="M4 10h16M8 3v4M16 3v4m-8 7h3m2 3h3" />
           </svg>
-          <span>Tra việc theo ngày</span><small aria-hidden="true">III</small></button>
+          <span>Tra việc theo ngày</span>
+        </button>
         <button id="show-draw" type="button" aria-pressed="false">
           <svg
             class="nav-icon"
@@ -124,16 +149,19 @@
             <circle cx="16" cy="8" r=".8" />
             <circle cx="8" cy="16" r=".8" />
           </svg>
-          <span>Dãy số vận mệnh</span><small aria-hidden="true">IV</small></button>
+          <span>Dãy số vận mệnh</span>
+        </button>
       </nav>
       <section class="workspace-intro" aria-labelledby="workspace-title">
         <div class="workspace-intro-copy">
           <p id="workspace-kicker" class="eyebrow" lang="en">
             THE FOUR PILLARS
           </p>
-          <h2 id="workspace-title">Từ ngày sinh,<br /><em>thêm một góc nhìn.</em></h2>
+          <h2 id="workspace-title">
+            Từ ngày sinh,<br /><em>thêm một góc nhìn.</em>
+          </h2>
           <p id="workspace-description">
-            Đọc ý chính và điều cần cân nhắc theo câu hỏi của bạn.
+            Đọc ý chính và căn cứ trong Tứ Trụ theo chủ đề bạn chọn.
           </p>
         </div>
         <img
@@ -688,8 +716,7 @@
                 ></textarea>
               </label>
               <div id="coins-intent" hidden></div>
-              <button id="coins-submit" type="submit">
-                Gieo và lập quẻ</button
+              <button id="coins-submit" type="submit">Gieo và lập quẻ</button
               ><button id="coins-retry" type="button" class="secondary" hidden>
                 Thử lại cùng phiên
               </button>
@@ -791,10 +818,21 @@
                 required
             /></label>
             <div class="bazi-birth-options">
-              <label>Giới tính dùng để tính vận<select id="bazi-gender">
-                <option value="male">Nam</option><option value="female">Nữ</option>
-              </select></label>
-              <label>Năm xem Lưu niên<input id="bazi-year" type="number" min="1950" max="2150" value="2026" required /></label>
+              <label
+                >Giới tính dùng để tính vận<select id="bazi-gender">
+                  <option value="male">Nam</option>
+                  <option value="female">Nữ</option>
+                </select></label
+              >
+              <label
+                >Năm xem Lưu niên<input
+                  id="bazi-year"
+                  type="number"
+                  min="1950"
+                  max="2150"
+                  value="2026"
+                  required
+              /></label>
             </div>
             <label
               >Chủ đề muốn xem<select id="bazi-topic">
@@ -805,26 +843,6 @@
                 <option value="RELATIONSHIPS">Quan hệ</option>
               </select></label
             >
-            <label
-              >Điều bạn muốn hiểu thêm<textarea
-                id="bazi-question"
-                rows="3"
-                maxlength="2000"
-                placeholder="Câu hỏi tùy chọn cho chủ đề bạn chọn"
-              ></textarea>
-            </label>
-            <details class="bazi-input-extra">
-              <summary>Độ chính xác giờ sinh</summary>
-              <label
-                >Sai số nếu biết (phút)<input
-                  id="bazi-uncertainty"
-                  type="number"
-                  min="0"
-                  max="1440"
-                  step="any"
-                  placeholder="Để trống nếu không biết"
-              /></label>
-            </details>
             <button id="bazi-submit" type="submit">
               Xem luận giải <span aria-hidden="true">↗</span>
             </button>
@@ -836,14 +854,18 @@
           </form>
           <details id="bazi-history" class="bazi-history">
             <summary>Lịch sử tư vấn</summary>
-            <p class="hint">Giữ tối đa 5 lá số trong phiên này. Tải lại hoặc đóng trang sẽ xóa lịch sử.</p>
-            <div id="bazi-history-list"><p>Chưa có lá số trong phiên này.</p></div>
+            <p class="hint">
+              Giữ tối đa 5 lá số trong phiên này. Tải lại hoặc đóng trang sẽ xóa
+              lịch sử.
+            </p>
+            <div id="bazi-history-list">
+              <p>Chưa có lá số trong phiên này.</p>
+            </div>
           </details>
         </div>
         <div class="result-panel bazi-result-panel">
           <div id="bazi-empty" class="bazi-empty">
             <div class="bazi-mark" aria-hidden="true">命</div>
-            <p class="eyebrow">BÁT TỰ · LỜI GIẢI DỄ HIỂU</p>
             <h2>Hiểu kết quả, biết điều cần cân nhắc.</h2>
             <p>
               Chọn một chủ đề để đọc ý chính và gợi ý có thể tự kiểm tra trong
@@ -858,9 +880,63 @@
           ></div>
         </div>
       </section>
+      <section
+        id="ziwei-workspace"
+        class="date-workspace grid grid-cols-1 items-start gap-5 desk:grid-cols-[310px_minmax(0,1fr)] wide:grid-cols-[346px_minmax(0,1fr)] wide:gap-6"
+        aria-labelledby="ziwei-heading"
+        hidden
+      >
+        <div class="panel">
+          <form id="ziwei-form" autocomplete="off">
+            <h2 id="ziwei-heading">Lập lá số Tử Vi</h2>
+            <label
+              >Ngày giờ sinh dương lịch (giờ Việt Nam)
+              <input
+                id="ziwei-birth"
+                type="datetime-local"
+                step="1"
+                min="1950-01-01T00:00"
+                max="2026-12-31T23:59:59"
+                aria-describedby="ziwei-time-note"
+                required
+              />
+            </label>
+            <p class="hint" id="ziwei-time-note">
+              Giờ Tý từ 23:00 được tính sang ngày kế tiếp.
+            </p>
+            <label
+              >Giới tính dùng để tính Đại Hạn
+              <select id="ziwei-gender">
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+              </select>
+            </label>
+            <button id="ziwei-submit" type="submit">
+              Xem lá số và luận giải <span aria-hidden="true">↗</span>
+            </button>
+            <p id="ziwei-progress" role="status"></p>
+            <p id="ziwei-error" role="alert" hidden></p>
+          </form>
+        </div>
+        <div class="result-panel bazi-result-panel">
+          <div id="ziwei-empty" class="bazi-empty">
+            <div class="bazi-mark" aria-hidden="true">紫</div>
+            <h2>Đọc lá số từ Mệnh đến mười hai cung.</h2>
+            <p>
+              Chọn một cung trên lá số để xem các sao và Đại Hạn của cung đó.
+            </p>
+          </div>
+          <div
+            id="ziwei-result"
+            role="region"
+            aria-labelledby="ziwei-result-title"
+            hidden
+          ></div>
+        </div>
+      </section>
       <p class="hint privacy-note">
-        Kết quả và lịch sử chỉ giữ trong bộ nhớ của trang. Tải lại hoặc đóng trang sẽ mất kết
-        quả; dùng Xuất PDF nếu bạn muốn giữ lại.
+        Kết quả và lịch sử chỉ giữ trong bộ nhớ của trang. Tải lại hoặc đóng
+        trang sẽ mất kết quả; dùng Xuất PDF nếu bạn muốn giữ lại.
       </p>
       <footer>
         <span class="footer-brand">Arcana</span

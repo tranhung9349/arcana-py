@@ -5,8 +5,10 @@
   };
   function mount(parent, request, {autoGenerate=false,title='Kết quả này có ý nghĩa gì với bạn?',emptyText='Đọc ý chính và gợi ý cụ thể từ lá số hoặc quẻ đang mở.',onLoad=()=>{}}={}) {
     let generation=0, controller=null, disposed=false;
+    const overview=request.method==='BAZI' && request.bazi_scope==='OVERVIEW';
     parent.className='ai-reading-panel';parent.setAttribute('aria-label','Lời luận AI của phiên đang mở');
-    add(parent,'p','LỜI LUẬN','eyebrow');add(parent,'h3',title);
+    if(overview){parent.className+=' bazi-overview-panel';parent.setAttribute('aria-label','Tổng quan Bát Tự');}
+    add(parent,'p',overview?'LUẬN GIẢI BÁT TỰ':'LỜI LUẬN','eyebrow');add(parent,'h3',title);
     const status=add(parent,'p','Đang mở bài luận…','ai-reading-status');status.setAttribute('role','status');
     const skeleton=add(parent,'div','','ai-reading-skeleton');skeleton.setAttribute('aria-hidden','true');skeleton.hidden=true;
     for(let paragraph=0;paragraph<2;paragraph++) {
@@ -21,7 +23,7 @@
       output.setAttribute('aria-busy',String(loading));
     }
     const error=add(parent,'p','','ai-reading-error');error.setAttribute('role','alert');error.hidden=true;
-    const button=add(parent,'button',request.method==='BAZI'?'Phân tích và viết bài luận':'Đọc lời giải dễ hiểu','ai-reading-button');button.type='button';button.hidden=true;
+    const button=add(parent,'button',overview?'Viết Tổng quan':request.method==='BAZI'?'Phân tích và viết bài luận':'Đọc lời giải dễ hiểu','ai-reading-button');button.type='button';button.hidden=true;
     const active=version=>!disposed && version===generation && parent.isConnected;
     const stages={QUEUED:'Đang chuẩn bị bài luận…',ANALYZING:'Đang phân tích lá số…',WRITING:'Đang viết bài luận cho bạn…',
       CHECKING:'Đang kiểm tra bài luận…',RECONNECTING:'Đang nối lại kết nối với bài luận…'};
@@ -41,6 +43,7 @@
       if(data.consultation_id!==request.consultation_id || data.method!==request.method)throw window.DisplayText.failure('Bài luận không khớp phiên đang mở.');
       const life=data.reading.schema_version==='bazi-life-reading-v1';
       const portrait=life && data.reading.whole_life;
+      if(overview && !portrait)throw window.DisplayText.failure('Chưa nhận được bài Tổng quan đầy đủ.');
       if(life && (request.method!=='BAZI' || data.reading.context_id!==request.consultation_id || !data.pipeline
         || data.reading.analysis_sha256!==data.pipeline.analysis_sha256))throw window.DisplayText.failure('Bài luận không khớp phần phân tích đã kiểm tra.');
       const blocks=life?[data.reading.overview,...data.reading.tendencies,...data.reading.in_life,...data.reading.contradictions,data.reading.takeaway]:[];
@@ -96,11 +99,11 @@
     }
     async function load(generate=false) {
       controller?.abort();controller=new AbortController();const signal=controller.signal,version=++generation;
-      const requestController=controller,timer=setTimeout(()=>requestController.abort(),request.method==='BAZI'?1500000:780000);
-      button.disabled=true;error.hidden=true;setStatus(generate?(request.method==='BAZI'?'Đang viết bài luận cho bạn…':'Đang viết lời luận theo câu hỏi của bạn…'):'Đang mở bài luận…',true);
+      const requestController=controller,timer=setTimeout(()=>requestController.abort(),overview?190000:request.method==='BAZI'?1500000:780000);
+      button.disabled=true;error.hidden=true;setStatus(overview?'Đang chuẩn bị Tổng quan…':generate?(request.method==='BAZI'?'Đang viết bài luận cho bạn…':'Đang viết lời luận theo câu hỏi của bạn…'):'Đang mở bài luận…',true);
       try {
         const data=await window.ArcanaClient.streamReading(request,{generate,signal,
-          onProgress:stage=>{if(active(version) && stages[stage])setStatus(stages[stage],true);}});
+          onProgress:stage=>{if(active(version) && stages[stage])setStatus(overview && stage==='WRITING'?'Đang viết Tổng quan…':stages[stage],true);}});
         if(!active(version))return;
         if(data)render(data);
         else if(autoGenerate) {autoGenerate=false;clearTimeout(timer);load(true);}
@@ -111,7 +114,8 @@
         error.setAttribute('data-error-code',failure.code || 'AI_DISPLAY_FAILED');
         const publicError=failure.code?window.DisplayText.responseError({error:{code:failure.code}},'Chưa tải được bài luận. Bạn có thể thử lại.'):failure;
         error.textContent=failure.name==='AbortError'?'Chưa nhận được bài luận. Bấm thử lại để nối với bài luận của phiên.':window.DisplayText.errorMessage(publicError,'Chưa tải được bài luận. Bạn có thể thử lại.');
-        error.hidden=false;button.textContent=request.method==='BAZI'?'Thử lại bài luận':'Thử lại phần luận AI';button.hidden=false;setStatus('');
+        if(overview)error.textContent='Chưa tải được Tổng quan. Bạn vẫn có thể đọc phần luận chi tiết bên dưới.';
+        error.hidden=false;button.textContent=overview?'Thử lại Tổng quan':request.method==='BAZI'?'Thử lại bài luận':'Thử lại phần luận AI';button.hidden=false;setStatus('');
       } finally {clearTimeout(timer);if(active(version))button.disabled=false;}
     }
     button.addEventListener('click',()=>load(true));load();

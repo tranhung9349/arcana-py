@@ -12,7 +12,7 @@
     function put(kind, key, data, signature, request) {
       const state=read();
       state.records=state.records.filter(r=>!(r.kind===kind && r.key===key));
-      if(['DRAW','MAIHOA','COINS','DATE'].includes(kind)) {
+      if(['DRAW','MAIHOA','COINS','DATE','ZIWEI'].includes(kind)) {
         const old=state.records.filter(r=>r.kind===kind).map(r=>r.key);
         state.records=state.records.filter(r=>r.kind!==kind && !old.includes(r.data.consultation_id || r.data.session_id)
           && !(r.kind==='EXPLANATION' && old.includes(r.key)));
@@ -139,6 +139,7 @@
       const created={
         '/api/v1/draw':'DRAW','/api/v1/bazi/consultations':'BAZI','/api/v1/maihoa/consultations':'MAIHOA',
         '/api/v1/coins/consultations':'COINS','/api/v2/auspicious-dates/consultations':'DATE',
+        '/api/v1/ziwei/consultations':'ZIWEI',
       };
       if(method==='POST' && created[path]) {
         const kind=created[path], key=body.request_id, existing=find(kind,key);
@@ -151,8 +152,8 @@
         civil_datetime:r.data.chart.civil_datetime,topic_name:r.data.reading.topic_name,
         gender:r.data.engine?.gender,target_year:r.data.engine?.target_year}))});
       if(method==='GET' && (match=path.match(/^\/api\/v1\/draw\/([^/]+)$/)))return responseOrMissing('DRAW',match[1]);
-      if(method==='GET' && (match=path.match(/^\/api\/(?:v1\/(bazi|maihoa|coins)|v2\/(auspicious-dates))\/consultations\/([^/]+)$/))) {
-        return responseOrMissing(({bazi:'BAZI',maihoa:'MAIHOA',coins:'COINS','auspicious-dates':'DATE'})[match[1]||match[2]],match[3]);
+      if(method==='GET' && (match=path.match(/^\/api\/(?:v1\/(bazi|maihoa|coins|ziwei)|v2\/(auspicious-dates))\/consultations\/([^/]+)$/))) {
+        return responseOrMissing(({bazi:'BAZI',maihoa:'MAIHOA',coins:'COINS',ziwei:'ZIWEI','auspicious-dates':'DATE'})[match[1]||match[2]],match[3]);
       }
       if(method==='GET' && (match=path.match(/^\/api\/v1\/interpretation\/([^/]+)$/))) {
         const key=match[1], saved=find('DRAW',key), cached=find('EXPLANATION',key);

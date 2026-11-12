@@ -1,6 +1,7 @@
 """Shared, cached AI prose on top of immutable Bazi/Mai Hoa/Liu Yao snapshots."""
 from datetime import datetime, timezone
 from collections import OrderedDict
+from dataclasses import replace
 from hashlib import sha256
 import json
 import logging
@@ -38,6 +39,7 @@ class AIReadingRequest(StrictModel):
     bazi_reading: SignedSnapshot | None = None
     analysis: SignedSnapshot | None = None
     bazi_reading_id: UUID | None = None
+    bazi_scope: Literal["OVERVIEW"] | None = None
     analysis_context: AnalysisContext | None = None
     analysis_rules_sha256: str | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
 
@@ -47,6 +49,8 @@ class AIReadingRequest(StrictModel):
             raise ValueError("Bazi reading ID requires the Bazi method")
         if self.method != "BAZI" and self.bazi_reading is not None:
             raise ValueError("Unexpected Bazi reading")
+        if self.bazi_scope and (self.method != "BAZI" or self.bazi_reading_id is not None or self.bazi_reading is not None):
+            raise ValueError("A Bazi overview only accepts the natal consultation")
         if self.method != "LIUYAO" and self.analysis is not None:
             raise ValueError("Unexpected Liu Yao analysis")
         if self.method == "LIUYAO":
@@ -124,11 +128,28 @@ def validate_liuyao_candidate(raw, context):
     return reading
 
 
+def whole_life_context(saved):
+    # Use the natal chart irrespective of the selected topic. The precomputed
+    # cycles already encode direction; the writer does not need the gender input
+    # or the free-form Tinix drafts that can repeat it and conflict with the chart.
+    context = natal_context({**saved, "reading": {**saved["reading"], "topic": "GENERAL", "question": ""}})
+    facts = []
+    for fact in context.facts:
+        if fact.id == "engine:natal_profile":
+            profile = json.loads(fact.text)
+            profile.pop("gender_used_for_cycles", None)
+            fact = fact.model_copy(update={"text": json.dumps(profile, ensure_ascii=False)})
+        facts.append(fact)
+    return context.model_copy(update={"facts": facts,
+        "findings": [f for f in context.findings if f.id not in {"luan_tinh", "luan_dong"}]})
+
+
 class AIReadingService:
     def __init__(self, app_state, config=None, client=None):
         self.state = app_state
         self.config = config if config is not None else AIConfig.load()
         self.client = client if client is not None else CompatibleAIClient(self.config)
+        self.overview_config = replace(self.config, model=self.config.bazi_overview_model, reasoning_effort="low")
         self._cache = OrderedDict()
         self._pending = set()
         self._jobs = OrderedDict()
@@ -136,6 +157,16 @@ class AIReadingService:
         # Counts are reserved for every actual outbound attempt, including retries.
         if isinstance(self.client, CompatibleAIClient):
             self.client.before_request = self.state.ai_budget.reserve
+            self.overview_client = CompatibleAIClient(self.overview_config, opener=self.client.opener,
+                                                       before_request=self.state.ai_budget.reserve)
+        else:
+            self.overview_client = self.client
+
+    def public_status(self):
+        return {**self.config.public_status(), "bazi_overview": self.overview_config.public_status()}
+
+    def config_for(self, request):
+        return self.overview_config if request.bazi_scope == "OVERVIEW" else self.config
 
     def context_for(self, request):
         key = str(request.consultation_id)
@@ -146,6 +177,8 @@ class AIReadingService:
         if request.method == "DATE":
             return date_context(saved)
         if request.method == "BAZI":
+            if request.bazi_scope == "OVERVIEW":
+                return whole_life_context(saved)
             reading = None
             if request.bazi_reading_id and str(request.bazi_reading_id) != key:
                 data = self.state.signer.verify(request.bazi_reading, "BAZI_READING") if request.bazi_reading else None
@@ -172,8 +205,9 @@ class AIReadingService:
         prepared = (prepare_analyst(context) if request.method == "BAZI" else
                     build_date_messages(context, limit=2) if request.method == "DATE" else build_messages(context, limit=2))
         pack = DATE_PACK if request.method == "DATE" else PACK
-        key = digest({"context": context.model_dump(mode="json"), "model": self.config.model, "endpoint": self.config.base_url,
-                      "reasoning_effort": self.config.reasoning_effort,
+        config = self.config_for(request)
+        key = digest({"context": context.model_dump(mode="json"), "model": config.model, "endpoint": config.base_url,
+                      "reasoning_effort": config.reasoning_effort, **({"bazi_scope": request.bazi_scope} if request.bazi_scope else {}),
                       "pack_sha256": prepared.get("pack_sha256") or sha256((pack / "manifest.json").read_bytes()).hexdigest(), "case_ids": prepared["case_ids"],
                       "messages_sha256": prepared["messages_sha256"], "ai_service": "ai-reading-v1"})
         return context, prepared, key
@@ -195,14 +229,16 @@ class AIReadingService:
 
     def execute_bazi(self, context, prepared, key, request, *, progress=lambda stage: None, stream=False, deadline=None):
         total_usage = {}
+        config = self.config_for(request)
+        client = self.overview_client if request.bazi_scope == "OVERVIEW" else self.client
 
         def stage(messages, validator, name, max_tokens):
             for attempt in range(1, 3):
                 progress("ANALYZING" if name == "ANALYST" else "WRITING")
-                if not isinstance(self.client, CompatibleAIClient):
+                if not isinstance(client, CompatibleAIClient):
                     self.state.ai_budget.reserve()
-                raw, metadata = (self.client.complete(messages, max_tokens=max_tokens, stream=stream, deadline=deadline) if isinstance(self.client, CompatibleAIClient)
-                                 else self.client.complete(messages))
+                raw, metadata = (client.complete(messages, max_tokens=max_tokens, stream=stream, deadline=deadline) if isinstance(client, CompatibleAIClient)
+                                 else client.complete(messages))
                 for token, count in metadata["usage"].items():
                     total_usage[token] = total_usage.get(token, 0) + count
                 try:
@@ -236,8 +272,8 @@ class AIReadingService:
             analyst_passes=analyst_passes, interpreter_passes=interpreter_passes,
             analyst_model=analyst_meta["model"], interpreter_model=interpreter_meta["model"])
         result = AIReadingResult(reading_id=key, consultation_id=request.consultation_id, method="BAZI",
-            created_at=datetime.now(timezone.utc), model_requested=self.config.model, model_returned=interpreter_meta["model"],
-            provider_host=self.config.public_status()["provider_host"], prompt_version=prepared["pack_version"], case_ids=[],
+            created_at=datetime.now(timezone.utc), model_requested=config.model, model_returned=interpreter_meta["model"],
+            provider_host=config.public_status()["provider_host"], prompt_version=prepared["pack_version"], case_ids=[],
             context_sha256=digest(context.model_dump(mode="json")), usage=total_usage,
             generation_passes=analyst_passes + interpreter_passes, pipeline=provenance, context=context, reading=reading).model_dump(mode="json")
         # Full technical content is cached privately to revalidate every replay.
@@ -270,10 +306,10 @@ class AIReadingService:
                 del self._cache[key]
         return None
 
-    def _reserve_job_locked(self, key):
+    def _reserve_job_locked(self, key, request):
         if len(self._pending) >= self.state.security.ai_concurrency:
             raise EngineError("AI_RATE_LIMITED", "Phần luận AI đang bận. Hãy thử lại sau.", 429)
-        if not self.config.configured:
+        if not self.config_for(request).configured:
             raise EngineError("AI_NOT_CONFIGURED", "Chưa cấu hình dịch vụ luận giải AI ở máy chủ.", 503)
         # Never evict active workers; completed jobs have the cache's 15-minute TTL.
         while len(self._jobs) >= 32:
@@ -282,6 +318,8 @@ class AIReadingService:
                 raise EngineError("AI_RATE_LIMITED", "Phần luận AI đang bận. Hãy thử lại sau.", 429)
             del self._jobs[old]
         job = ReadingJob()
+        if request.bazi_scope == "OVERVIEW":
+            job.deadline = time.monotonic() + 180
         self._jobs[key] = job
         self._pending.add(key)
         return job
@@ -303,7 +341,7 @@ class AIReadingService:
                     return None
             if not generate:
                 return None
-            job = self._reserve_job_locked(key)
+            job = self._reserve_job_locked(key, request)
             worker = Thread(target=self._run_job, args=(context, prepared, key, request, job),
                             kwargs={"stream": True}, name="arcana-reading", daemon=True)
             try:
@@ -336,7 +374,7 @@ class AIReadingService:
                 return cached
             if key in self._pending:
                 raise EngineError("AI_BUSY", "Bài luận này đang được viết. Bạn có thể đợi rồi mở lại.", 409)
-            job = self._reserve_job_locked(key)
+            job = self._reserve_job_locked(key, request)
         # Both public entry points consume the upstream stream. This endpoint
         # still returns one validated JSON article to older clients.
         return self._run_job(context, prepared, key, request, job, stream=True, propagate_errors=True)

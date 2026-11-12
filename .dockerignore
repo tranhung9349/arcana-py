@@ -12,6 +12,8 @@
 !vendor/
 !vendor/tinix-bazi/
 !vendor/tinix-bazi/**
+!vendor/ziwei-doushu/
+!vendor/ziwei-doushu/**
 !research_tools/
 !research_tools/__init__.py
 !research_tools/interpretation_prompt.py

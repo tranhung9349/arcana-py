@@ -18,6 +18,7 @@ Kiểm tra thật và hiệu đính v4: [báo cáo](research/ai_readings_v4_http
 
 - `RANDOMYST_AI_BASE_URL`: địa chỉ tới `/v1`, chưa gồm `/chat/completions`.
 - `RANDOMYST_AI_MODEL`: model do người dùng chọn.
+- `RANDOMYST_AI_BAZI_OVERVIEW_MODEL`: riêng cho Tổng quan Bát Tự, mặc định `gpt-5.6-terra`.
 - `RANDOMYST_AI_API_KEY`: chỉ ở backend.
 - `RANDOMYST_AI_TIMEOUT_SECONDS`: mặc định 55, cho phép 5–180 giây; cấu hình mẫu hiện tại là 180. Đây là timeout kết nối/đọc im lặng, không phải thời gian tối đa của cả bài luận streaming.
 
@@ -27,9 +28,9 @@ Chạy như trước bằng `./scripts/run_mvp.sh`. Cấu hình đổi cần kh�
 
 Lập/lưu phiên bằng engine hiện hành → adapter đọc snapshot → lấy nguồn và tối đa hai cặp few-shot → model viết lời luận → kiểm schema và dẫn chiếu → lưu bài luận riêng → hiển thị.
 
-Phiên mới và thao tác luận lại chủ đề/Dụng thần tự viết bài luận AI. Khi mở lịch sử, giao diện tra bài đã lưu trước; nếu chưa có thì hiện nút **Luận giải AI**. Phân tích quy tắc và nguyên văn nằm trong phần mở rộng bên dưới. Không render HTML từ model.
+Với Bát Tự, lá số và bài luận theo quy tắc hiện ngay. Tổng quan dùng lại [hai prompt toàn mệnh](bazi_whole_life_handoff.md) để phân tích và viết về sự nghiệp, tài chính, tình cảm/gia đình và các chặng Đại vận. Đổi chủ đề giữ nguyên Tổng quan, chỉ đọc lại phần quy tắc. Mở lá số từ lịch sử tra bài đã viết; nếu chưa có thì hiện nút **Viết Tổng quan**. Không render HTML từ model.
 
-- Bát Tự lấy đúng bài luận chủ đề đã lưu theo `bazi_reading_id`, kiểm tra nó thuộc lá số đang mở. Tên và ngày giờ sinh không được đưa vào payload AI; giữ dữ kiện Tứ Trụ và nhận định cần luận. Câu hỏi tự nhập vẫn được gửi làm ngữ cảnh.
+- Bát Tự với `bazi_scope: "OVERVIEW"` dùng snapshot lá số gốc đã ký và luôn chạy phạm vi toàn mệnh bằng model dành riêng cho Tổng quan, bất kể chủ đề đang chọn. Ngữ cảnh gửi các dữ kiện đã tính, không có tên, trường ngày giờ sinh, trường giới tính hay câu hỏi tự nhập. Client API cũ vẫn có thể gọi luồng theo chủ đề bằng `bazi_reading_id`.
 - Mai Hoa giữ quẻ, hào động, Thể/Dụng/Hỗ/Biến, thời khí và những quan hệ đã tính; không lập quẻ mới. Mốc giao tiết đã dẫn xuất vẫn có thể nằm trong dữ kiện mùa; không gửi toàn bộ hồ sơ nhập.
 - Lục Hào lấy đúng analysis đã lưu theo chủ đề/Lục thân/hào chọn và hash quy tắc. Không chọn Dụng khác. Nguồn cổ văn bổ sung có bản ghim; lời giải của engine được ghi **PRODUCT_POLICY**, không biến thư mục liên kết nguồn thành trích nguyên tác.
 
@@ -37,7 +38,7 @@ Few-shot ưu tiên đúng phương pháp, loại ví dụ có trạng thái đ�
 
 ## API
 
-- `GET /api/v1/ai/status`: trạng thái cấu hình, model và host, không có khóa.
+- `GET /api/v1/ai/status`: trạng thái cấu hình, model và host, gồm cấu hình riêng `bazi_overview`, không có khóa.
 - `POST /api/v1/ai/readings/lookup`: đọc cache, không gọi nhà cung cấp.
 - `POST /api/v1/ai/readings`: lấy bài đã lưu hoặc viết một bài mới.
 

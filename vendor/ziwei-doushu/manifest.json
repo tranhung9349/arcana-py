@@ -1,0 +1,17 @@
+{
+  "repository": "Renhuai123/ziwei-doushu",
+  "commit": "78eafbf54d4b571833c78b921b1898be256e7dac",
+  "files": {
+    "LICENSE": "c0214b387494be5b7a6d3e7bf62897e43dd425c2b77f42e20925029252275be4",
+    "lib/ziwei/algorithm.ts": "4734d6491010af6c553ca9c43509edbce11318467270668ca73129522e558021",
+    "lib/ziwei/constants.ts": "02f190b8e2718c202de239d57a7e26e0b7b8e1f5155ddce1dbfe92ca1d6eec4e",
+    "lib/ziwei/types.ts": "1b906035368cebc2e6a9dd90372b8b097421e8687752c7278d069b8c5451e755",
+    "lib/ziwei/school-config.ts": "cf1cb62502001c609a05d8386048d5cc23ea07fb24a21f2dd9dae0dec210d46f",
+    "lib/ziwei/school-data.ts": "029dc0b4491eecbcefa47002bae9bd2745260ff92d4f9765bd50ed8e4f851bd1",
+    "lib/ziwei/school-tables.generated.ts": "182a255d0121cd4f5f692ad2b29780c3fa36f3e1861768062c3b89b31fca196c",
+    "lib/ziwei/patterns.ts": "c4253e938f88b129118fee7218260cffc9cc3a78c5ff2f19eac540944f8eef17",
+    "lib/ziwei/patterns-dinggui.ts": "5b358b3d4dbe230dd83a48d6fdccb51690813c5eca7d7c137ce2ca157cc3b6a6",
+    "lib/ziwei/patterns-dingfu.ts": "1987bd0ebdf81792712a999817fbea1eaa33579f592280a10ae632df2b2a6425",
+    "lib/ziwei/patterns-dingpin.ts": "b5f194be716646cac02b3bde662624a2945570443d22bc389113028d003516b4"
+  }
+}

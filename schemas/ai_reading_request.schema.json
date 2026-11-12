@@ -77,6 +77,7 @@
             "DRAW",
             "BAZI",
             "BAZI_READING",
+            "ZIWEI",
             "MAIHOA",
             "COINS",
             "LIUYAO",
@@ -159,6 +160,19 @@
       ],
       "default": null,
       "title": "Bazi Reading Id"
+    },
+    "bazi_scope": {
+      "anyOf": [
+        {
+          "const": "OVERVIEW",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Bazi Scope"
     },
     "analysis_context": {
       "anyOf": [

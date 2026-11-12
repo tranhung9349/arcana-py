@@ -6,7 +6,8 @@
     maihoa: ['THE BOOK OF CHANGES', 'Một câu hỏi,', 'muôn sự chuyển dời.', 'Đọc thế quẻ Mai Hoa để nhìn rõ điều thuận và điều cần cân nhắc.'],
     coins: ['THE SIX LINES', 'Tĩnh tâm gieo quẻ,', 'lắng nghe chuyển động.', 'Sáu lượt gieo. Một quẻ Dịch. Một góc nhìn cho điều bạn đang hỏi.'],
     library: ['THE I CHING LIBRARY', 'Khám phá 64 quẻ,', 'đọc từng ý nghĩa.', 'Tra cứu quẻ từ, sáu hào và lời giải nghĩa trong một thư viện riêng.'],
-    bazi: ['THE FOUR PILLARS', 'Từ ngày sinh,', 'thêm một góc nhìn.', 'Đọc ý chính và điều cần cân nhắc theo câu hỏi của bạn.']
+    bazi: ['THE FOUR PILLARS', 'Từ ngày sinh,', 'thêm một góc nhìn.', 'Đọc ý chính và căn cứ trong Tứ Trụ theo chủ đề bạn chọn.'],
+    ziwei: ['ZI WEI DOU SHU', 'Mười hai cung,', 'một lá số Tử Vi.', 'Xem chính tinh, Tứ Hóa, Đại Hạn và các cách cục được nhận diện từ ngày giờ sinh.']
   };
   const title = document.getElementById('workspace-title');
   if (!title) return;

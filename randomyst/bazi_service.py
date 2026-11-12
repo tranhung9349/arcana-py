@@ -3,7 +3,7 @@ from datetime import datetime, timedelta, timezone
 
 from .bazi_facts import chart_from_birth, facts_for
 from .bazi_models import BaziResponse, BaziReadingSnapshot
-from .bazi_narrative import compose
+from .bazi_narrative import compose, compose_tinix
 from .bazi_rules import digest
 from .bazi_engine import TinixBaziEngine
 from .engine import EngineError
@@ -26,7 +26,7 @@ class BaziService:
         facts = facts_for(chart, self.rules.config["tables"])
         engine = self.rules.calculate(chart, payload.birth.gender, payload.target_year)
         assessment, findings = self.rules.evaluate(chart, facts, engine)
-        reading = self.rules.compose(assessment, findings, payload.topic, payload.question)
+        reading = compose_tinix(chart, facts, assessment, engine, payload.topic, payload.question)
         return BaziResponse.model_validate({"schema_version": "bazi-consultation-v1", "request_id": payload.request_id,
             "created_at": datetime.now(timezone.utc), "display_name": payload.display_name,
             "analysis_profile": "bazi_natal_v1", "rules_version": self.rules.version,
@@ -37,7 +37,7 @@ class BaziService:
 
     def reinterpret(self, session, payload):
         saved = BaziResponse.model_validate(session)
-        reading = (self.rules.compose(saved.assessment, saved.findings, payload.topic, payload.question) if saved.engine else
+        reading = (compose_tinix(saved.chart, saved.facts, saved.assessment, saved.engine, payload.topic, payload.question) if saved.engine else
                    compose(saved.chart, saved.facts, saved.assessment, saved.findings, payload.topic, payload.question))
         return BaziReadingSnapshot(reading_id=payload.reading_id, consultation_id=saved.request_id,
             created_at=datetime.now(timezone.utc), analysis_rules_version=saved.rules_version,

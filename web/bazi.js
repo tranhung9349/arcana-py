@@ -6,7 +6,8 @@
   };
   const dateVN = value => new Date(value).toLocaleString('vi-VN', {timeZone:'Asia/Ho_Chi_Minh'});
   let session = null, activeReading = null, pending = null, controller = null, revision = 0;
-  let aiPanel = null, glossaryDialog = null;
+  let chartInput = null, glossaryDialog = null;
+  let overview = null;
   const endpoint = '/api/v1/bazi';
 
   async function json(url, options={}) {
@@ -19,20 +20,35 @@
     for (const field of el('bazi-form').elements) field.disabled = value;
   }
   function showError(message) {el('bazi-error').textContent=window.DisplayText.plain(message);el('bazi-error').hidden=false;}
-  function render({historical=false}={}) {
-    aiPanel?.destroy();
+  function render(historical=false) {
     if(glossaryDialog?.open)glossaryDialog.close();
     const root=el('bazi-result');root.replaceChildren();el('bazi-empty').hidden=true;root.hidden=false;
-    const reading=activeReading, renderedId=session.request_id;
+    const reading=activeReading;
     text(root,'p','LÁ SỐ BÁT TỰ · '+reading.topic_name.toLocaleUpperCase('vi-VN'),'eyebrow');
     const title=text(root,'h2',session.display_name || reading.title,'bazi-result-heading');title.id='bazi-result-title';title.tabIndex=-1;
     text(root,'p','Sinh lúc '+dateVN(session.chart.civil_datetime)+' · Giờ Việt Nam','bazi-birth-caption');
     if(session.engine)text(root,'p',(session.engine.gender==='female'?'Nữ':'Nam')+' · Năm xem '+session.engine.target_year,'bazi-birth-caption');
+    if(overview?.id===session.request_id)root.appendChild(overview.node);
+    else {
+      overview?.panel.destroy();
+      const node=text(root,'section');
+      const panel=window.AIReading.mount(node,{method:'BAZI',consultation_id:session.request_id,bazi_scope:'OVERVIEW'},
+        {autoGenerate:!historical,title:'Tổng quan cuộc đời',emptyText:'Đọc về sự nghiệp, tài chính, tình cảm và các chặng đường của lá số này.'});
+      overview={id:session.request_id,node,panel};
+    }
     if(session.engine && window.BaziFeatures)window.BaziFeatures.renderIdentity(root,session);
     if(reading.question) {const q=text(root,'div','','bazi-question-saved');text(q,'small','Câu hỏi của bạn');text(q,'p',reading.question);}
-    aiPanel=window.AIReading.mount(text(root,'section',''),{method:'BAZI',consultation_id:renderedId,bazi_reading_id:renderedId},
-      {autoGenerate:!historical,title:'Luận giải của bạn',
-       onLoad:()=>{if(session.request_id===renderedId)el('bazi-progress').textContent='Đã có bài luận.';}});
+    const readingDetails=text(root,'details','','bazi-reading-details');readingDetails.open=reading.topic!=='GENERAL';
+    text(readingDetails,'summary',reading.topic==='GENERAL'?'Luận giải chi tiết':'Luận theo chủ đề · '+reading.topic_name);
+    const article=text(readingDetails,'article','','natal-reading');
+    text(article,'p',reading.summary,'natal-reading-lead');
+    for(const section of reading.sections) {
+      const part=text(article,'section','','natal-reading-part');
+      text(part,'h3',section.title);
+      text(part,'p',section.text);
+    }
+    const source=session.evidence.find(item=>item.evidence_id==='engine:tinix');
+    if(source?.url)window.DisplayText.sourceLink(article,'Nguồn quy tắc Bát Tự',source.url);
     const reference=text(root,'div','','bazi-reference-tools');
     const chartDetails=text(reference,'details','','bazi-chart-details');text(chartDetails,'summary','Xem lá số');
     const help=text(reference,'button','Thuật ngữ','bazi-glossary-trigger');help.type='button';
@@ -103,9 +119,10 @@
             el('bazi-birth').value=saved.chart.civil_datetime.slice(0,19);
             el('bazi-gender').value=saved.engine?.gender || 'male';
             if(saved.engine)el('bazi-year').value=saved.engine.target_year;
-            el('bazi-topic').value=saved.reading.topic;el('bazi-question').value=saved.reading.question;
+            el('bazi-topic').value=saved.reading.topic;
             el('bazi-uncertainty').value='';el('bazi-error').hidden=true;
-            render({historical:true});
+            chartInput=JSON.stringify(birthInput());
+            render(true);
             window.ResultPDF?.mount(el('bazi-result'),'Luận giải Bát Tự');el('bazi-result-title').focus();
             el('bazi-progress').textContent='';
           } catch(error){if(generation===revision){showError(window.DisplayText.errorMessage(error,'Không mở được lá số.'));el('bazi-progress').textContent='';}}
@@ -116,14 +133,21 @@
   async function perform(task) {
     controller?.abort();controller=new AbortController();const requestController=controller,generation=++revision;
     busy(true);el('bazi-error').hidden=true;el('bazi-retry').hidden=true;
-    el('bazi-progress').textContent='Đang lập lá số và luận giải…';
+    el('bazi-progress').textContent=task.consultationId?'Đang đọc theo chủ đề mới…':'Đang lập lá số và luận giải…';
     const timer=setTimeout(()=>requestController.abort(),20000);
     try {
-      const data=await json(endpoint+'/consultations',{signal:requestController.signal,method:'POST',
+      const path=task.consultationId?'/consultations/'+encodeURIComponent(task.consultationId)+'/readings':'/consultations';
+      const data=await json(endpoint+path,{signal:requestController.signal,method:'POST',
         headers:{'Content-Type':'application/json'},body:JSON.stringify(task.payload)});
       if(generation!==revision)return;
-      if(data.request_id!==task.payload.request_id)throw window.DisplayText.failure('Kết quả không khớp hồ sơ đang mở.');
-      session=data;activeReading=data.reading;
+      if(task.consultationId) {
+        if(data.consultation_id!==session.request_id || data.reading_id!==task.payload.reading_id)
+          throw window.DisplayText.failure('Bài luận không khớp lá số đang mở.');
+      } else {
+        if(data.request_id!==task.payload.request_id)throw window.DisplayText.failure('Kết quả không khớp hồ sơ đang mở.');
+        session=data;chartInput=task.chartInput;
+      }
+      activeReading=data.reading;
       pending=null;render();window.ResultPDF?.mount(el('bazi-result'),'Luận giải Bát Tự');el('bazi-result-title').focus();
       history();
       el('bazi-progress').textContent='';
@@ -133,12 +157,25 @@
       el('bazi-progress').textContent='';el('bazi-retry').hidden=!pending;
     } finally {clearTimeout(timer);if(generation===revision)busy(false);}
   }
-  el('bazi-form').addEventListener('submit',event=>{
-    event.preventDefault();let value=el('bazi-birth').value;if(value.length===16)value+=':00';
+  function birthInput() {
+    let value=el('bazi-birth').value;if(value.length===16)value+=':00';
     const birth={civil_datetime:value+'+07:00',gender:el('bazi-gender').value || 'male'},uncertainty=el('bazi-uncertainty').value;
     if(uncertainty!=='')birth.clock_uncertainty_seconds=Number(uncertainty)*60;
-    pending={payload:{request_id:crypto.randomUUID(),
-      birth,target_year:Number(el('bazi-year').value) || null,topic:el('bazi-topic').value,question:el('bazi-question').value.trim()}};perform(pending);
+    return {birth,target_year:Number(el('bazi-year').value) || null};
+  }
+  el('bazi-form').addEventListener('submit',event=>{
+    event.preventDefault();
+    const input=birthInput(), key=JSON.stringify(input), topic=el('bazi-topic').value;
+    if(session && key===chartInput) {
+      if(topic===activeReading.topic) {
+        el('bazi-result-title').focus();
+        return;
+      }
+      pending={consultationId:session.request_id,payload:{reading_id:crypto.randomUUID(),topic}};
+    } else {
+      pending={chartInput:key,payload:{request_id:crypto.randomUUID(),...input,topic}};
+    }
+    perform(pending);
   });
   el('bazi-form').addEventListener('input',()=>{pending=null;el('bazi-retry').hidden=true;});
   el('bazi-retry').addEventListener('click',()=>{if(pending)perform(pending);});

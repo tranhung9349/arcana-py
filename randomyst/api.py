@@ -24,6 +24,7 @@ from .liuyao_analysis import LiuYaoInterpreter, digest
 from .liuyao_models import AnalysisContext, QuestionIntentRequest
 from .bazi_models import BaziRequest, BaziReadingRequest
 from .bazi_service import BaziService
+from .ziwei import ZiweiRequest, ZiweiService
 from .ai_service import AIReadingService, AIReadingRequest, AIReadingResult
 from .ai_jobs import reading_events
 from .security import AIBudget, SecurityConfig, SecurityMiddleware, HEADERS
@@ -55,6 +56,7 @@ def create_app(db_path=None, ai_config=None, ai_client=None, security_config=Non
     app.state.coins = CoinService(app.state.explanations)
     app.state.liuyao = LiuYaoInterpreter(app.state.coins.najia)
     app.state.bazi = BaziService()
+    app.state.ziwei = ZiweiService()
     app.state.ai_budget = AIBudget(config.ai_daily_limit)
     app.state.ai = AIReadingService(app.state, ai_config, ai_client)
     app.add_middleware(SecurityMiddleware, config=config)
@@ -65,7 +67,7 @@ def create_app(db_path=None, ai_config=None, ai_client=None, security_config=Non
 
     @app.get("/api/v1/ai/status")
     def ai_status():
-        return app.state.ai.config.public_status()
+        return app.state.ai.public_status()
 
     @app.post("/api/v1/ai/readings/lookup", response_model=AIReadingResult | None)
     def lookup_ai_reading(payload: AIReadingRequest):
@@ -102,6 +104,10 @@ def create_app(db_path=None, ai_config=None, ai_client=None, security_config=Non
         if str(payload.reading.reading_id) == saved["request_id"]:
             raise EngineError("REQUEST_ID_CONFLICT", "Hãy dùng mã mới cho bài luận mới.", 409)
         return signed("BAZI_READING", app.state.bazi.reinterpret(saved, payload.reading))
+
+    @app.post("/api/v1/ziwei/consultations")
+    def ziwei_consultation(payload: ZiweiRequest):
+        return signed("ZIWEI", app.state.ziwei.consult(payload))
 
     @app.get("/api/v1/coins/analysis-rules")
     def coin_analysis_rules():

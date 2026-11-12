@@ -70,7 +70,7 @@ test('two-stage Bazi renders the complete reader article as paragraphs without t
   assert.doesNotMatch(content.textContent,/P01|G01|Phân tích kỹ thuật|analysis_sha256|schema_version|[{}]/);
   assert.equal(loaded,data);delete data.bazi_analysis;assert.equal(JSON.stringify(data),before);
 });
-test('whole-life Bazi opens with the full portrait, three life domains and saved life periods',async()=>{
+function portraitResult(){
   const data=lifeResult();data.reading.tendencies=[];data.reading.in_life=[];data.reading.contradictions=[];
   data.reading.overview.text='Đường phát triển sự nghiệp, việc tích lũy và các mối gắn bó được xem cùng những chặng vận đã tính.';
   data.reading.whole_life={areas:[
@@ -79,6 +79,10 @@ test('whole-life Bazi opens with the full portrait, three life domains and saved
     {source_id:'L03',area:'RELATIONSHIPS',text:'Các mối gắn bó trong gia đình được xem riêng với hợp tác công việc.'}],
     periods:[{id:'V01',cycle_indices:[0,1],start_year:2000,end_year:2019,start_age:6,end_age:25,text:'Chặng tạo nền được đối chiếu với các vận đã tính.'}],
     timing_status:'AVAILABLE',timing_note:'Các mốc là phạm vi vận đã tính.'};
+  return data;
+}
+test('whole-life Bazi opens with the full portrait, three life domains and saved life periods',async()=>{
+  const data=portraitResult();
   const s=setup(async()=>ok(data));s.api.mount(s.root,request);await tick();
   assert.deepEqual(s.root.find('h4').map(n=>n.textContent),['Bức tranh toàn cảnh','Sự nghiệp và đường phát triển','Tài chính và tích lũy',
     'Tình cảm, quan hệ và gia đình','Các chặng đường theo Đại vận','Điểm tựa và điều cần cân bằng']);
@@ -156,6 +160,21 @@ test('automatic Bazi generation carries the signed consultation through the real
   assert.equal(s.calls.length,3);
   assert.equal(s.calls[2].body.consultation.signature,'a'.repeat(64));
   assert.match(s.root.textContent,/Bức tranh chung.*Hiểu rõ rồi mới làm/);
+});
+test('Bazi overview requests and renders the full portrait from the signed consultation',async()=>{
+  const data=portraitResult();
+  const s=setup(async url=>url.endsWith('/consultations')?
+    new Response(JSON.stringify({request_id:request.consultation_id}),{headers:{'X-Arcana-Signature':'a'.repeat(64)}}):
+    new Response(url.endsWith('/stream')?'event: missing\ndata: {}\n\n':'event: result\ndata: '+JSON.stringify(data)+'\n\n',
+      {headers:{'Content-Type':'text/event-stream'}}),{realClient:true});
+  await s.client.fetch('/api/v1/bazi/consultations',{method:'POST',body:JSON.stringify({request_id:request.consultation_id})});
+  s.api.mount(s.root,{...request,bazi_scope:'OVERVIEW'},{autoGenerate:true,title:'Tổng quan cuộc đời'});
+  for(let i=0;i<12 && !s.root.textContent.includes('Bức tranh toàn cảnh');i++)await tick();
+  assert.equal(s.calls[2].body.bazi_scope,'OVERVIEW');
+  assert.equal(s.calls[2].body.consultation.signature,'a'.repeat(64));
+  assert.deepEqual(s.root.find('h4').map(n=>n.textContent),['Bức tranh toàn cảnh','Sự nghiệp và đường phát triển','Tài chính và tích lũy',
+    'Tình cảm, quan hệ và gia đình','Các chặng đường theo Đại vận','Điểm tựa và điều cần cân bằng']);
+  assert.match(s.root.textContent,/2000–2019 · 6–25 tuổi/);
 });
 test('live progress updates stay separate from the validated article and unknown stages never become prose',async()=>{
   let stream;

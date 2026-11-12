@@ -25,6 +25,7 @@ RUN pip install --no-cache-dir -r requirements-runtime.lock \
 
 COPY randomyst ./randomyst
 COPY vendor/tinix-bazi ./vendor/tinix-bazi
+COPY vendor/ziwei-doushu ./vendor/ziwei-doushu
 COPY research_tools/__init__.py research_tools/interpretation_prompt.py research_tools/date_interpretation_prompt.py research_tools/reading_strategy.py ./research_tools/
 COPY config ./config
 COPY schemas ./schemas

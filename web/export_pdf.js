@@ -20,7 +20,7 @@
           ['checkbox','radio'].includes(original.type)?(original.checked?'Có':'Không'):original.value || 'Chưa nhập';
         field.replaceWith(value);
       });
-      copy.querySelectorAll('button.date-tile').forEach(node=>{
+      copy.querySelectorAll('button.date-tile,button.ziwei-palace').forEach(node=>{
         const tile=document.createElement('article');tile.className=node.className;
         while(node.firstChild)tile.appendChild(node.firstChild);
         node.replaceWith(tile);

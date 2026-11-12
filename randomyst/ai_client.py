@@ -20,6 +20,7 @@ class AIConfig:
     api_key: str = field(default="", repr=False)
     timeout: float = 55
     reasoning_effort: str | None = None
+    bazi_overview_model: str = "gpt-5.6-terra"
 
     @classmethod
     def load(cls, path=None, environ=None):
@@ -43,7 +44,8 @@ class AIConfig:
         if effort not in (None, "none", "low", "medium", "high", "xhigh", "max"):
             raise ValueError("Invalid AI reasoning effort")
         result = cls(values.get("RANDOMYST_AI_BASE_URL", "").rstrip("/"), values.get("RANDOMYST_AI_MODEL", ""),
-                     values.get("RANDOMYST_AI_API_KEY", ""), timeout, effort)
+                     values.get("RANDOMYST_AI_API_KEY", ""), timeout, effort,
+                     values.get("RANDOMYST_AI_BAZI_OVERVIEW_MODEL", "gpt-5.6-terra"))
         if result.base_url:
             u = urlsplit(result.base_url)
             if u.scheme != "https" or not u.hostname or u.username or u.password or u.query or u.fragment:
@@ -145,13 +147,15 @@ class CompatibleAIClient:
             raise EngineError("AI_NOT_CONFIGURED", "Chưa cấu hình dịch vụ luận giải AI ở máy chủ.", 503)
         if type(max_tokens) is not int or not 1 <= max_tokens <= 24000:
             raise ValueError("Invalid server completion budget")
+        gpt56 = self.config.model.startswith("gpt-5.6")
+        token_field = "max_completion_tokens" if gpt56 else "max_tokens"
         payload = {"model": self.config.model, "messages": messages,
-                   "max_tokens": max_tokens, "response_format": {"type": "json_object"}, "stream": stream}
+                   token_field: max_tokens, "response_format": {"type": "json_object"}, "stream": stream}
         if stream:
             payload["stream_options"] = {"include_usage": True}
         if self.config.reasoning_effort:
             payload["reasoning_effort"] = self.config.reasoning_effort
-        else:
+        elif not gpt56:
             payload["temperature"] = 0.3
         body = json.dumps(payload, ensure_ascii=False).encode()
         request = Request(self.config.base_url + "/chat/completions", data=body, method="POST",
